@@ -1,0 +1,163 @@
+{
+  "seed": 1337,
+  "splits": {
+    "contradiction": {
+      "answer_distribution": {
+        "NONE": 64
+      },
+      "chain_lengths": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "count": 64,
+      "sha256": "b1dd2d627b75291b32877194468306897063da3fe4838337dd1c6c078f760f53"
+    },
+    "test_depth_16": {
+      "answer_distribution": {
+        "ABOVE": 1,
+        "AFTER": 1,
+        "BEFORE": 1,
+        "BELOW": 1,
+        "CONTAINS": 1,
+        "INSIDE": 1,
+        "LEFT": 1,
+        "RIGHT": 1
+      },
+      "chain_lengths": [
+        16
+      ],
+      "count": 8,
+      "sha256": "34424c61477ec7b897ff6142718c50aac82532928321dd8cd64bcd400d57f14c"
+    },
+    "test_depth_32": {
+      "answer_distribution": {
+        "ABOVE": 1,
+        "AFTER": 1,
+        "BEFORE": 1,
+        "BELOW": 1,
+        "CONTAINS": 1,
+        "INSIDE": 1,
+        "LEFT": 1,
+        "RIGHT": 1
+      },
+      "chain_lengths": [
+        32
+      ],
+      "count": 8,
+      "sha256": "d545e43f905eafd3cad6e7da4d575bbbea08d8c2fc8a3936a4d5b9ccaf07637c"
+    },
+    "test_depth_5": {
+      "answer_distribution": {
+        "ABOVE": 1,
+        "AFTER": 1,
+        "BEFORE": 1,
+        "BELOW": 1,
+        "CONTAINS": 1,
+        "INSIDE": 1,
+        "LEFT": 1,
+        "RIGHT": 1
+      },
+      "chain_lengths": [
+        5
+      ],
+      "count": 8,
+      "sha256": "b51d90153c409a2f70980079a84fffa7c287c2c51d1353eaf61602454f767c74"
+    },
+    "test_depth_64": {
+      "answer_distribution": {
+        "ABOVE": 1,
+        "AFTER": 1,
+        "BEFORE": 1,
+        "BELOW": 1,
+        "CONTAINS": 1,
+        "INSIDE": 1,
+        "LEFT": 1,
+        "RIGHT": 1
+      },
+      "chain_lengths": [
+        64
+      ],
+      "count": 8,
+      "sha256": "9d665c2ad98a579088d368855d263e1d15098752afd29cf37fe6a5305e6a6776"
+    },
+    "test_depth_8": {
+      "answer_distribution": {
+        "ABOVE": 1,
+        "AFTER": 1,
+        "BEFORE": 1,
+        "BELOW": 1,
+        "CONTAINS": 1,
+        "INSIDE": 1,
+        "LEFT": 1,
+        "RIGHT": 1
+      },
+      "chain_lengths": [
+        8
+      ],
+      "count": 8,
+      "sha256": "6f5971110290cb5993790abbedc6a4964d2bf49dfbe606c75190ad10eba95b28"
+    },
+    "test_iid": {
+      "answer_distribution": {
+        "ABOVE": 4,
+        "AFTER": 4,
+        "BEFORE": 4,
+        "BELOW": 4,
+        "CONTAINS": 4,
+        "INSIDE": 4,
+        "LEFT": 4,
+        "RIGHT": 4
+      },
+      "chain_lengths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "count": 32,
+      "sha256": "ed043313c979acfc1a2bb74459af0581ed2738007e6447db9fe5e8faf93438a8"
+    },
+    "train": {
+      "answer_distribution": {
+        "ABOVE": 16,
+        "AFTER": 16,
+        "BEFORE": 16,
+        "BELOW": 16,
+        "CONTAINS": 16,
+        "INSIDE": 16,
+        "LEFT": 16,
+        "RIGHT": 16
+      },
+      "chain_lengths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "count": 128,
+      "sha256": "558f90ba42930befc9e930a9bb43d342856efe1c51c0154b39b211bc9aa6baa6"
+    },
+    "validation": {
+      "answer_distribution": {
+        "ABOVE": 4,
+        "AFTER": 4,
+        "BEFORE": 4,
+        "BELOW": 4,
+        "CONTAINS": 4,
+        "INSIDE": 4,
+        "LEFT": 4,
+        "RIGHT": 4
+      },
+      "chain_lengths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "count": 32,
+      "sha256": "06a425512e200c09752df7a5d3968108929718fb124706e873bab2f4927eaae1"
+    }
+  }
+}
