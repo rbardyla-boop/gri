@@ -1,0 +1,16 @@
+{
+  "epochs": 20,
+  "extrapolation": {
+    "16": 0.5,
+    "32": 0.375,
+    "5": 1.0,
+    "64": 0.5,
+    "8": 1.0
+  },
+  "final_loss": 0.023385973880067468,
+  "model": "baseline",
+  "parameters": 29384,
+  "seed": 1337,
+  "train_accuracy": 1.0,
+  "validation_accuracy_t4": 1.0
+}
