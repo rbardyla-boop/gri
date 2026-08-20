@@ -1,0 +1,11 @@
+{
+  "source_commit": "1fa9208d3b5b2d61eb35cf117d61d5e0a4622693",
+  "rri01_evidence_commit": "0b0ebcb",
+  "baseline_source": "src/gri_models/baseline.py",
+  "baseline_source_sha256": "455d90a4d89c3de733cbf4065aca94f263c2974ea1507dfda7244707410172ad",
+  "hidden_dim": 49,
+  "message_dim": 51,
+  "trainable_parameters": 30912,
+  "baseline_equation_verified": true,
+  "candidate_implementation_created": false
+}

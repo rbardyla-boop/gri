@@ -1,0 +1,12 @@
+{
+  "unit": "RRI-02P",
+  "terminal_state": "RRI_02P_CAPACITY_MATCH_UNRESOLVED",
+  "tests": "40/40 PASS",
+  "world0": "GRI_02_WORLD0_PASS",
+  "world0_unchanged": true,
+  "baseline_parameters": 30912,
+  "anchor_exact_solutions": 0,
+  "training_performed": false,
+  "candidate_model_implemented": false,
+  "performance_evidence_generated": false
+}

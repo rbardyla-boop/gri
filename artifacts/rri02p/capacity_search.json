@@ -1,0 +1,22 @@
+{
+  "target_parameters": 30912,
+  "baseline_equation": "9*H^2 + 19*H + (3*H + 17)*M + 8",
+  "anchor_equation": "11*H^2 + 19*H + (3*H + 17)*M + 8",
+  "candidate_injection": "anchor concatenated into both gate and delta contexts",
+  "search_bounds": {
+    "hidden_dim": [1, 100],
+    "message_dim": [1, 1000]
+  },
+  "selection_rule": [
+    "minimize absolute hidden-width deviation from 49",
+    "then minimize absolute message-width deviation from 51",
+    "then minimize total changed legitimate width",
+    "then choose numerically smaller hidden width",
+    "then choose numerically smaller message width"
+  ],
+  "exact_solutions": [],
+  "exact_solution_count": 0,
+  "selected_configuration": null,
+  "natural_exact_match": false,
+  "result": "RRI_02P_CAPACITY_MATCH_UNRESOLVED"
+}

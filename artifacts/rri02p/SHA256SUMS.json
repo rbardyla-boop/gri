@@ -1,0 +1,8 @@
+{
+  "artifacts/rri02p/RRI02P_CONFIG.json": "b919092040398e003f1f983683aa5724bef81fe1cbc8ea638862e6ad351d76ad",
+  "artifacts/rri02p/RRI02P_CONTRACT.md": "f31ea1eb5ab558d991fcdba932dc090490fc6d0de1bf5045381855fb174c502b",
+  "artifacts/rri02p/RRI02P_RECEIPT.json": "cf1bc7e03ea7122cc8ac2d3aa7cd9fdc1e3547ac4b8ca4435a1d2760824579b0",
+  "artifacts/rri02p/baseline_identity.json": "f5d08c1fffbd015624695b4349099d074cb73efb2544e2fa78888e6da7b22f8c",
+  "artifacts/rri02p/capacity_search.json": "e40b5d239fcea1469d1fd730a18f66854b163c35f0628788b1a8dd68945485b6",
+  "artifacts/rri02p/world0_identity.json": "9aa4a11d29f069e1f8d074c06ff88bdb9b857514ffd9757fd0a1b746ad4e8253"
+}
