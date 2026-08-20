@@ -1,0 +1,485 @@
+{
+  "conditions": [
+    {
+      "balanced": true,
+      "condition": "load_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "load_4",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_1",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_4",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "load_0",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "load_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "current",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "supersession"
+    },
+    {
+      "balanced": true,
+      "condition": "history",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "supersession"
+    },
+    {
+      "balanced": true,
+      "condition": "load_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "load_4",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_1",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_4",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "load_0",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "load_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "current",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "supersession"
+    },
+    {
+      "balanced": true,
+      "condition": "history",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "supersession"
+    },
+    {
+      "balanced": true,
+      "condition": "load_1024",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "load_256",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "capacity_pressure"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_1024",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_256",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "delay_64",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "delayed_recall"
+    },
+    {
+      "balanced": true,
+      "condition": "load_1024",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "load_128",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "load_512",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "distractor_resistance"
+    },
+    {
+      "balanced": true,
+      "condition": "current",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "supersession"
+    },
+    {
+      "balanced": true,
+      "condition": "history",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "supersession"
+    }
+  ],
+  "pass": true
+}

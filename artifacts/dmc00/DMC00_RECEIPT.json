@@ -1,0 +1,8 @@
+{
+  "no_memory_architecture": true,
+  "no_training": true,
+  "terminal_state": "DMC_00_MEMORY_BENCHMARK_PASS",
+  "unit": "DMC-00",
+  "validation_checks_pass": true,
+  "world0_untouched": true
+}

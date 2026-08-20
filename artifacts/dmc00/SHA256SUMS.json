@@ -1,0 +1,15 @@
+{
+  "DMC00_CONFIG.json": "97ba5f094a9b99ccc2594ef34bf161b332d03effb36f6d3350921929a2c0f657",
+  "DMC00_CONTRACT.md": "5a0350f3d1a353c36ba7e9c2b35436131b7194da63e41e11801f4303f1d69a31",
+  "DMC00_RECEIPT.json": "42b35c2126ddd9015b7c0d99699de21549e83e025ae52213ad2186e174f9d1a3",
+  "balance_validation.json": "e8138ee0e60828ff43c29e1501952ce0136f531605cc86767831909a5369dc24",
+  "dataset_manifest.json": "69f06338805ad7ec78299ef1265078602fccfd78d1667ac8a5f57677c3d12354",
+  "datasets/extrapolation.jsonl": "06ed9d16a37b9fb07ee06a39f32e83c8ce8dc4f37645dc93ca7f80a40100fdd5",
+  "datasets/iid.jsonl": "24cedc3ec9712f9cf88e392684b49472454feed70be2628742ea1c3ab4fb0cf6",
+  "datasets/train.jsonl": "ab1d59b7fff3cb953db8f432a18e15d9d9846150a48553f3c96578b70d71a783",
+  "determinism_validation.json": "5f708cd592416dcd74f4fa7fcda79ef442f4312c52dece49b8011b190b83d315",
+  "leakage_validation.json": "9dd2ee67a7966bf928f2012c094a533e62abefc68dbf5bc7aa04a87aaa419428",
+  "malformed_validation.json": "307eaba65df8ce5c0543cce7ae367954c736cbdd0b13391fecd5695fa78b08f7",
+  "oracle_validation.json": "95b8ced9bd3c5e9f3c6922661642e451c13e8f60529fb36e563174909b330566",
+  "split_manifest.json": "d6790dd37912cfae8804e3428a5ee3f7f6dd59d88f3d3106c74f1e54eed98c7b"
+}

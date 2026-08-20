@@ -1,0 +1,63 @@
+{
+  "specification": {
+    "extrapolation": {
+      "capacities": [
+        256,
+        1024
+      ],
+      "delays": [
+        64,
+        256,
+        1024
+      ],
+      "distractors": [
+        128,
+        512,
+        1024
+      ]
+    },
+    "iid": {
+      "capacities": [
+        4,
+        16,
+        64
+      ],
+      "delays": [
+        1,
+        4,
+        16
+      ],
+      "distractors": [
+        0,
+        8,
+        32
+      ]
+    },
+    "train": {
+      "capacities": [
+        4,
+        16,
+        64
+      ],
+      "delays": [
+        1,
+        4,
+        16
+      ],
+      "distractors": [
+        0,
+        8,
+        32
+      ]
+    }
+  },
+  "validation": {
+    "case_counts": {
+      "extrapolation": 160,
+      "iid": 176,
+      "train": 176
+    },
+    "cross_split_collisions": [],
+    "pass": true
+  }
+}

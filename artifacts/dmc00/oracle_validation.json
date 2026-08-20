@@ -1,0 +1,33 @@
+{
+  "historical_records_preserved": true,
+  "pass": true,
+  "splits": [
+    {
+      "cases": 176,
+      "current_latest": true,
+      "history_preserved": true,
+      "ledger_entries_complete": true,
+      "oracle_accuracy": 1.0,
+      "oracle_correct": 176,
+      "split": "train"
+    },
+    {
+      "cases": 176,
+      "current_latest": true,
+      "history_preserved": true,
+      "ledger_entries_complete": true,
+      "oracle_accuracy": 1.0,
+      "oracle_correct": 176,
+      "split": "iid"
+    },
+    {
+      "cases": 160,
+      "current_latest": true,
+      "history_preserved": true,
+      "ledger_entries_complete": true,
+      "oracle_accuracy": 1.0,
+      "oracle_correct": 160,
+      "split": "extrapolation"
+    }
+  ]
+}

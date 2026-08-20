@@ -1,0 +1,76 @@
+{
+  "cases_per_condition": 16,
+  "future_primary_metric": "mean(R64,R256,R1024,C256,C1024,S_current,S_history,D512,D1024)",
+  "future_splits": {
+    "extrapolation": "delay 64/256/1024, capacity 256/1024, distractors 512/1024",
+    "iid": "same regime, unseen deterministic cases",
+    "train": "delay<=16, load<=64"
+  },
+  "generation_commit": "b0a99b6ab7ed1547a1eaae7204e590f7ab71434d",
+  "no_memory_architecture": true,
+  "no_training": true,
+  "split_specs": {
+    "extrapolation": {
+      "capacities": [
+        256,
+        1024
+      ],
+      "delays": [
+        64,
+        256,
+        1024
+      ],
+      "distractors": [
+        128,
+        512,
+        1024
+      ]
+    },
+    "iid": {
+      "capacities": [
+        4,
+        16,
+        64
+      ],
+      "delays": [
+        1,
+        4,
+        16
+      ],
+      "distractors": [
+        0,
+        8,
+        32
+      ]
+    },
+    "train": {
+      "capacities": [
+        4,
+        16,
+        64
+      ],
+      "delays": [
+        1,
+        4,
+        16
+      ],
+      "distractors": [
+        0,
+        8,
+        32
+      ]
+    }
+  },
+  "status": "memory_benchmark_only",
+  "unit": "DMC-00",
+  "values": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "YELLOW",
+    "ORANGE",
+    "PURPLE",
+    "BLACK",
+    "WHITE"
+  ]
+}

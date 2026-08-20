@@ -1,0 +1,74 @@
+{
+  "forbidden_answer_fields_in_query": true,
+  "notes": [
+    "query episodes contain no value, answer, memory_id, or case_id",
+    "labels are balanced within each current-query projection",
+    "episode-only control uses no prior episodes"
+  ],
+  "pass": true,
+  "splits": [
+    {
+      "current_episode_only_accuracy": 0.125,
+      "current_episode_only_at_class_prior": true,
+      "designed_class_prior": 0.125,
+      "projection_groups": 11,
+      "projection_groups_balanced_over_all_values": true,
+      "query_episode_event_lengths": [
+        1
+      ],
+      "query_event_key_shapes": [
+        [
+          "as_of_episode",
+          "entity",
+          "field",
+          "kind",
+          "mode"
+        ]
+      ],
+      "repeated_entity_groups_not_constant": true,
+      "split": "train"
+    },
+    {
+      "current_episode_only_accuracy": 0.125,
+      "current_episode_only_at_class_prior": true,
+      "designed_class_prior": 0.125,
+      "projection_groups": 11,
+      "projection_groups_balanced_over_all_values": true,
+      "query_episode_event_lengths": [
+        1
+      ],
+      "query_event_key_shapes": [
+        [
+          "as_of_episode",
+          "entity",
+          "field",
+          "kind",
+          "mode"
+        ]
+      ],
+      "repeated_entity_groups_not_constant": true,
+      "split": "iid"
+    },
+    {
+      "current_episode_only_accuracy": 0.125,
+      "current_episode_only_at_class_prior": true,
+      "designed_class_prior": 0.125,
+      "projection_groups": 10,
+      "projection_groups_balanced_over_all_values": true,
+      "query_episode_event_lengths": [
+        1
+      ],
+      "query_event_key_shapes": [
+        [
+          "as_of_episode",
+          "entity",
+          "field",
+          "kind",
+          "mode"
+        ]
+      ],
+      "repeated_entity_groups_not_constant": true,
+      "split": "extrapolation"
+    }
+  ]
+}

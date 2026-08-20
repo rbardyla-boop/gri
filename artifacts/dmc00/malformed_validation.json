@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "rejected": [
+    "missing_answer",
+    "query_value",
+    "bad_episode_index"
+  ]
+}
