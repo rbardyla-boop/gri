@@ -1,0 +1,170 @@
+{
+  "anchor": {
+    "mean_primary": 0.8546875,
+    "model_immutable_all": true,
+    "per_family_mean": {
+      "corruption": 0.85,
+      "depth": 0.75,
+      "scale": 0.975,
+      "structure": 0.84375
+    },
+    "per_scenario_mean": {
+      "branching_paths": 0.825,
+      "contradictory_distractors": 0.85,
+      "depth_128": 0.75,
+      "depth_256": 0.75,
+      "depth_512": 0.75,
+      "distractor_paths": 0.85,
+      "irrelevant_edges": 0.85,
+      "missing_irrelevant_facts": 0.85,
+      "new_compositions": 0.85,
+      "scale_1024": 0.975,
+      "scale_128": 0.975,
+      "scale_256": 0.975,
+      "scale_512": 0.975,
+      "simultaneous_chains": 0.85
+    },
+    "per_seed_primary": {
+      "1337": 0.8125,
+      "1338": 1.0,
+      "1339": 0.9921875,
+      "1340": 0.796875,
+      "1341": 0.671875
+    },
+    "primary_stdev": 0.1401467562280697
+  },
+  "baseline": {
+    "mean_primary": 0.6734375,
+    "model_immutable_all": true,
+    "per_family_mean": {
+      "corruption": 0.675,
+      "depth": 0.55,
+      "scale": 0.825,
+      "structure": 0.64375
+    },
+    "per_scenario_mean": {
+      "branching_paths": 0.55,
+      "contradictory_distractors": 0.675,
+      "depth_128": 0.55,
+      "depth_256": 0.55,
+      "depth_512": 0.55,
+      "distractor_paths": 0.675,
+      "irrelevant_edges": 0.675,
+      "missing_irrelevant_facts": 0.675,
+      "new_compositions": 0.675,
+      "scale_1024": 0.825,
+      "scale_128": 0.825,
+      "scale_256": 0.825,
+      "scale_512": 0.825,
+      "simultaneous_chains": 0.675
+    },
+    "per_seed_primary": {
+      "1337": 0.5390625,
+      "1338": 0.7083333333333334,
+      "1339": 0.6276041666666666,
+      "1340": 0.6953125,
+      "1341": 0.796875
+    },
+    "primary_stdev": 0.09629432263212903
+  },
+  "mean_family_differences": {
+    "corruption": 0.17499999999999993,
+    "depth": 0.19999999999999996,
+    "scale": 0.15000000000000002,
+    "structure": 0.19999999999999996
+  },
+  "mean_primary_difference": 0.18125,
+  "paired": [
+    {
+      "anchor_families": {
+        "corruption": 0.875,
+        "depth": 0.625,
+        "scale": 0.875,
+        "structure": 0.875
+      },
+      "anchor_minus_baseline": 0.2734375,
+      "anchor_primary": 0.8125,
+      "baseline_families": {
+        "corruption": 0.5,
+        "depth": 0.5,
+        "scale": 0.625,
+        "structure": 0.53125
+      },
+      "baseline_primary": 0.5390625,
+      "seed": 1337
+    },
+    {
+      "anchor_families": {
+        "corruption": 1.0,
+        "depth": 1.0,
+        "scale": 1.0,
+        "structure": 1.0
+      },
+      "anchor_minus_baseline": 0.29166666666666663,
+      "anchor_primary": 1.0,
+      "baseline_families": {
+        "corruption": 0.75,
+        "depth": 0.4583333333333333,
+        "scale": 0.875,
+        "structure": 0.75
+      },
+      "baseline_primary": 0.7083333333333334,
+      "seed": 1338
+    },
+    {
+      "anchor_families": {
+        "corruption": 1.0,
+        "depth": 1.0,
+        "scale": 1.0,
+        "structure": 0.96875
+      },
+      "anchor_minus_baseline": 0.36458333333333337,
+      "anchor_primary": 0.9921875,
+      "baseline_families": {
+        "corruption": 0.625,
+        "depth": 0.4166666666666667,
+        "scale": 0.875,
+        "structure": 0.59375
+      },
+      "baseline_primary": 0.6276041666666666,
+      "seed": 1339
+    },
+    {
+      "anchor_families": {
+        "corruption": 0.75,
+        "depth": 0.75,
+        "scale": 1.0,
+        "structure": 0.6875
+      },
+      "anchor_minus_baseline": 0.1015625,
+      "anchor_primary": 0.796875,
+      "baseline_families": {
+        "corruption": 0.75,
+        "depth": 0.625,
+        "scale": 0.75,
+        "structure": 0.65625
+      },
+      "baseline_primary": 0.6953125,
+      "seed": 1340
+    },
+    {
+      "anchor_families": {
+        "corruption": 0.625,
+        "depth": 0.375,
+        "scale": 1.0,
+        "structure": 0.6875
+      },
+      "anchor_minus_baseline": -0.125,
+      "anchor_primary": 0.671875,
+      "baseline_families": {
+        "corruption": 0.75,
+        "depth": 0.75,
+        "scale": 1.0,
+        "structure": 0.6875
+      },
+      "baseline_primary": 0.796875,
+      "seed": 1341
+    }
+  ],
+  "primary_wins": 4
+}

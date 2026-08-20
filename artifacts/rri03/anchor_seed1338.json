@@ -1,0 +1,726 @@
+{
+  "case_predictions": {
+    "branching_paths": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-branching_paths-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-branching_paths-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-branching_paths-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-branching_paths-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-branching_paths-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-branching_paths-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-branching_paths-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-branching_paths-7"
+      }
+    ],
+    "contradictory_distractors": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-contradictory_distractors-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-contradictory_distractors-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-contradictory_distractors-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-contradictory_distractors-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-contradictory_distractors-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-contradictory_distractors-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-contradictory_distractors-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-contradictory_distractors-7"
+      }
+    ],
+    "depth_128": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-depth_128-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-depth_128-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-depth_128-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-depth_128-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-depth_128-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-depth_128-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-depth_128-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-depth_128-7"
+      }
+    ],
+    "depth_256": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-depth_256-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-depth_256-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-depth_256-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-depth_256-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-depth_256-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-depth_256-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-depth_256-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-depth_256-7"
+      }
+    ],
+    "depth_512": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-depth_512-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-depth_512-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-depth_512-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-depth_512-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-depth_512-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-depth_512-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-depth_512-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-depth_512-7"
+      }
+    ],
+    "distractor_paths": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-distractor_paths-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-distractor_paths-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-distractor_paths-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-distractor_paths-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-distractor_paths-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-distractor_paths-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-distractor_paths-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-distractor_paths-7"
+      }
+    ],
+    "irrelevant_edges": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-irrelevant_edges-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-irrelevant_edges-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-irrelevant_edges-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-irrelevant_edges-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-irrelevant_edges-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-irrelevant_edges-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-irrelevant_edges-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-irrelevant_edges-7"
+      }
+    ],
+    "missing_irrelevant_facts": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-missing_irrelevant_facts-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-missing_irrelevant_facts-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-missing_irrelevant_facts-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-missing_irrelevant_facts-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-missing_irrelevant_facts-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-missing_irrelevant_facts-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-missing_irrelevant_facts-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-missing_irrelevant_facts-7"
+      }
+    ],
+    "new_compositions": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-new_compositions-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-new_compositions-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-new_compositions-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-new_compositions-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-new_compositions-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-new_compositions-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-new_compositions-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-new_compositions-7"
+      }
+    ],
+    "scale_1024": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-scale_1024-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-scale_1024-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-scale_1024-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-scale_1024-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-scale_1024-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-scale_1024-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-scale_1024-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-scale_1024-7"
+      }
+    ],
+    "scale_128": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-scale_128-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-scale_128-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-scale_128-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-scale_128-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-scale_128-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-scale_128-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-scale_128-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-scale_128-7"
+      }
+    ],
+    "scale_256": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-scale_256-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-scale_256-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-scale_256-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-scale_256-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-scale_256-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-scale_256-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-scale_256-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-scale_256-7"
+      }
+    ],
+    "scale_512": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-scale_512-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-scale_512-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-scale_512-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-scale_512-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-scale_512-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-scale_512-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-scale_512-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-scale_512-7"
+      }
+    ],
+    "simultaneous_chains": [
+      {
+        "answer": "ABOVE",
+        "correct": true,
+        "prediction": "ABOVE",
+        "sample_id": "rri03-simultaneous_chains-0"
+      },
+      {
+        "answer": "BELOW",
+        "correct": true,
+        "prediction": "BELOW",
+        "sample_id": "rri03-simultaneous_chains-1"
+      },
+      {
+        "answer": "LEFT",
+        "correct": true,
+        "prediction": "LEFT",
+        "sample_id": "rri03-simultaneous_chains-2"
+      },
+      {
+        "answer": "RIGHT",
+        "correct": true,
+        "prediction": "RIGHT",
+        "sample_id": "rri03-simultaneous_chains-3"
+      },
+      {
+        "answer": "BEFORE",
+        "correct": true,
+        "prediction": "BEFORE",
+        "sample_id": "rri03-simultaneous_chains-4"
+      },
+      {
+        "answer": "AFTER",
+        "correct": true,
+        "prediction": "AFTER",
+        "sample_id": "rri03-simultaneous_chains-5"
+      },
+      {
+        "answer": "INSIDE",
+        "correct": true,
+        "prediction": "INSIDE",
+        "sample_id": "rri03-simultaneous_chains-6"
+      },
+      {
+        "answer": "CONTAINS",
+        "correct": true,
+        "prediction": "CONTAINS",
+        "sample_id": "rri03-simultaneous_chains-7"
+      }
+    ]
+  },
+  "checkpoint_sha256": "5ec380b167b0d573f52a7ff1fa544dc50af183e0579d0e1ad324bfe90b7cec5b",
+  "model": "anchor",
+  "model_immutable": true,
+  "model_state_hash_after": "736e5c5a03919c8beb06b695303a2ccb31c7c2bfd6e8ee8b6333980e87c8de27",
+  "model_state_hash_before": "736e5c5a03919c8beb06b695303a2ccb31c7c2bfd6e8ee8b6333980e87c8de27",
+  "scenario_scores": {
+    "branching_paths": 1.0,
+    "contradictory_distractors": 1.0,
+    "depth_128": 1.0,
+    "depth_256": 1.0,
+    "depth_512": 1.0,
+    "distractor_paths": 1.0,
+    "irrelevant_edges": 1.0,
+    "missing_irrelevant_facts": 1.0,
+    "new_compositions": 1.0,
+    "scale_1024": 1.0,
+    "scale_128": 1.0,
+    "scale_256": 1.0,
+    "scale_512": 1.0,
+    "simultaneous_chains": 1.0
+  },
+  "seed": 1338
+}

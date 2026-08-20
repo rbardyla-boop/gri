@@ -1,0 +1,125 @@
+{
+  "analysis_commit": "cd221ab1a35b337df713db0eadfc85e085346be9",
+  "cases_per_scenario": 8,
+  "evaluation_only": true,
+  "families": {
+    "corruption": [
+      "irrelevant_edges",
+      "missing_irrelevant_facts",
+      "contradictory_distractors"
+    ],
+    "depth": [
+      "depth_128",
+      "depth_256",
+      "depth_512"
+    ],
+    "scale": [
+      "scale_128",
+      "scale_256",
+      "scale_512",
+      "scale_1024"
+    ],
+    "structure": [
+      "branching_paths",
+      "distractor_paths",
+      "simultaneous_chains",
+      "new_compositions"
+    ]
+  },
+  "fast_execution_equivalence": {
+    "checks": [
+      {
+        "equal": true,
+        "kind": "baseline",
+        "max_abs_error": 0.0,
+        "scenario": "scale_128",
+        "steps": 1
+      },
+      {
+        "equal": true,
+        "kind": "baseline",
+        "max_abs_error": 0.0,
+        "scenario": "scale_128",
+        "steps": 4
+      },
+      {
+        "equal": true,
+        "kind": "baseline",
+        "max_abs_error": 0.0,
+        "scenario": "branching_paths",
+        "steps": 1
+      },
+      {
+        "equal": true,
+        "kind": "baseline",
+        "max_abs_error": 0.0,
+        "scenario": "branching_paths",
+        "steps": 4
+      },
+      {
+        "equal": true,
+        "kind": "anchor",
+        "max_abs_error": 0.0,
+        "scenario": "scale_128",
+        "steps": 1
+      },
+      {
+        "equal": true,
+        "kind": "anchor",
+        "max_abs_error": 0.0,
+        "scenario": "scale_128",
+        "steps": 4
+      },
+      {
+        "equal": true,
+        "kind": "anchor",
+        "max_abs_error": 0.0,
+        "scenario": "branching_paths",
+        "steps": 1
+      },
+      {
+        "equal": true,
+        "kind": "anchor",
+        "max_abs_error": 0.0,
+        "scenario": "branching_paths",
+        "steps": 4
+      }
+    ],
+    "pass": true
+  },
+  "gates": {
+    "depth_delta": 0.05,
+    "non_depth_floor": -0.05,
+    "paired_wins": 4,
+    "primary_delta": 0.05
+  },
+  "input_evidence": "artifacts/rri02b",
+  "no_training": true,
+  "parameters": 30912,
+  "primary_metric": "mean(equal-weight depth, scale, structure, corruption family means)",
+  "scenario_count": 14,
+  "scenario_steps": {
+    "branching_paths": 32,
+    "contradictory_distractors": 32,
+    "depth_128": 128,
+    "depth_256": 256,
+    "depth_512": 512,
+    "distractor_paths": 32,
+    "irrelevant_edges": 32,
+    "missing_irrelevant_facts": 32,
+    "new_compositions": 32,
+    "scale_1024": 16,
+    "scale_128": 16,
+    "scale_256": 16,
+    "scale_512": 16,
+    "simultaneous_chains": 32
+  },
+  "seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "unit": "RRI-03"
+}

@@ -1,0 +1,86 @@
+{
+  "branching_paths": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/branching_paths.jsonl",
+    "sha256": "573f31a1909f8ed3b9fa29cbfb550e658c9c990f714ef79d071a3aed6ee50b28",
+    "steps": 32
+  },
+  "contradictory_distractors": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/contradictory_distractors.jsonl",
+    "sha256": "b8fc0cdae07f8e5d97c0b487ca72c1b933dcb60212550c0a584d547e6e58ca63",
+    "steps": 32
+  },
+  "depth_128": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/depth_128.jsonl",
+    "sha256": "c2fac667847ef5653fdf5a39446dc1da03a78039a8047033e3d79204a2dd5247",
+    "steps": 128
+  },
+  "depth_256": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/depth_256.jsonl",
+    "sha256": "35b0e141996d8db41d9a05af45b3d299c598e1cc710cc41342b89fee5d8b8f57",
+    "steps": 256
+  },
+  "depth_512": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/depth_512.jsonl",
+    "sha256": "d8f78171fc6765fcdc84ca54457b087f7be3ed938636086cccfabb3d4712cfdd",
+    "steps": 512
+  },
+  "distractor_paths": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/distractor_paths.jsonl",
+    "sha256": "97de2bfde7a6276d18c805e5aee580c204ec6b6a1f2ea53aaa458358ebc8a1a3",
+    "steps": 32
+  },
+  "irrelevant_edges": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/irrelevant_edges.jsonl",
+    "sha256": "9ba2cb80d8aedf7aace91837302348dab1592e69d2e114e631ed425bef8e6805",
+    "steps": 32
+  },
+  "missing_irrelevant_facts": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/missing_irrelevant_facts.jsonl",
+    "sha256": "9799e8abc69c2cfc3eadb69ef5a317e8e776e1139e1b1d15bdf4d49a36030b5a",
+    "steps": 32
+  },
+  "new_compositions": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/new_compositions.jsonl",
+    "sha256": "e38bdde10584121d4291a8fcc2f39dad9c0c4dab13a6ea05ab715f37585d46f5",
+    "steps": 32
+  },
+  "scale_1024": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/scale_1024.jsonl",
+    "sha256": "838e8736e0fd4c129f4f015e00ddd8cd2ca1e097392356931a4a7f0a3d87cead",
+    "steps": 16
+  },
+  "scale_128": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/scale_128.jsonl",
+    "sha256": "946d4287e4ff566719280e4271fa308aa9a3287aaf76d02e4035ad6d12e400f3",
+    "steps": 16
+  },
+  "scale_256": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/scale_256.jsonl",
+    "sha256": "80cd168ab2715338a52dc06ca526d544427536fb5ccdef4d1239dd20eb75809e",
+    "steps": 16
+  },
+  "scale_512": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/scale_512.jsonl",
+    "sha256": "a0fe1fe085dfa25ed21c0d71763da0843637659d77ff5eef200acb214a2a331d",
+    "steps": 16
+  },
+  "simultaneous_chains": {
+    "case_count": 8,
+    "path": "artifacts/rri03/scenarios/simultaneous_chains.jsonl",
+    "sha256": "24959553b82d1f523cc3265260b394c88aef799526e1a86fd83f7266dbd0cfff",
+    "steps": 32
+  }
+}

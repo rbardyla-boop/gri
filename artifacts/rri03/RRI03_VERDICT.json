@@ -1,0 +1,31 @@
+{
+  "gates": {
+    "depth_family_improvement_at_least_0.05": {
+      "observed": 0.19999999999999996,
+      "pass": true
+    },
+    "non_depth_families_not_more_than_0.05_below": {
+      "observed": {
+        "corruption": 0.17499999999999993,
+        "scale": 0.15000000000000002,
+        "structure": 0.19999999999999996
+      },
+      "pass": true
+    },
+    "optimized_execution_equivalence": {
+      "observed": true,
+      "pass": true
+    },
+    "paired_primary_wins_at_least_4": {
+      "observed": 4,
+      "pass": true
+    },
+    "stress_primary_improvement_at_least_0.05": {
+      "observed": 0.18125,
+      "pass": true
+    }
+  },
+  "no_training": true,
+  "terminal_verdict": "RRI_03_STRESS_ADVANTAGE",
+  "unit": "RRI-03"
+}

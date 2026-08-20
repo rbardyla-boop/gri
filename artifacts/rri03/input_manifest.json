@@ -1,0 +1,16 @@
+{
+  "checkpoints": {
+    "anchor_seed1337": "597232c2345f9af4e958b3faa8a2b8ff90e4acbc570a8edc00eb9aec27eed617",
+    "anchor_seed1338": "5ec380b167b0d573f52a7ff1fa544dc50af183e0579d0e1ad324bfe90b7cec5b",
+    "anchor_seed1339": "d7e4529da05a71e5ca64adf991c8fe4b4288c1a3d6415c978c71b69b52c5a494",
+    "anchor_seed1340": "51bc4deb8b11b6ead6f5f9502d49df465ee1591dd719f92199e4aef87c92b243",
+    "anchor_seed1341": "b6eb969498b85c60a710995846377ba80792968cdd659b478241b9aa1f0cbf72",
+    "baseline_seed1337": "5dc1dfddde6d829a2b24b1c2c2c3299aa90c5349c0f871a6aa927a3ef4b0cfe8",
+    "baseline_seed1338": "53bd7aea84f021dd46621b77fe09e177b63ed6ce19eb53dd059c69de662ffda4",
+    "baseline_seed1339": "820fda5571265fd43d4259aece95d2f047a6389b551b4dff11bca01f41d58ac7",
+    "baseline_seed1340": "9df5e13339b9eb52e8ffa1245181c5ab2e2d02f316585d129517b6a6becbe152",
+    "baseline_seed1341": "6cc5cd3ad549015b5de012533e2ad4dd345f045f8a9a40c9fb1814de70027778"
+  },
+  "path": "artifacts/rri02b/SHA256SUMS.json",
+  "sha256": "be7936deca811b2be4a8a7f1bd5ff88f72abfd02be84b8bae2018d25464482d1"
+}
