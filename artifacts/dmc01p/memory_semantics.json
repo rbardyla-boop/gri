@@ -1,0 +1,14 @@
+{
+  "append_only_entry_count_after_two_writes": 2,
+  "forbidden_symbolic_storage_fields": [],
+  "ledger_parameter_count": 0,
+  "no_compression_quantization_or_capacity_limit": true,
+  "no_memory_retains_write_state": false,
+  "no_oracle_call_in_ledger": true,
+  "pass": true,
+  "query_graph_relation_channel_sum": 0,
+  "stored_hidden_dtype": "torch.float32",
+  "stored_hidden_shape": [
+    49
+  ]
+}

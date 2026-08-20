@@ -1,0 +1,8 @@
+{
+  "byte_identity_against_dmc00_commit": true,
+  "dataset_manifest_sha256": "69f06338805ad7ec78299ef1265078602fccfd78d1667ac8a5f57677c3d12354",
+  "dmc00_commit": "0e5359d",
+  "pass": true,
+  "receipt_terminal_state": "DMC_00_MEMORY_BENCHMARK_PASS",
+  "sha256s_match": true
+}

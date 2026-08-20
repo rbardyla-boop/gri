@@ -1,0 +1,29 @@
+{
+  "anchor": "a = processor.make_anchor(h0); a is never written",
+  "dimensions": {
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "trainable_parameters": 30912
+  },
+  "dmc_event_adapter": "deterministic zero-parameter DMCEventGraph with the frozen [N,3]/[N,N,8] shape",
+  "initialize": "h0 = processor.initialize(event_graph)",
+  "input_shape": {
+    "edges": "[N,N,8]",
+    "node_features": "[N,3]",
+    "query_object": "int",
+    "query_subject": "int"
+  },
+  "new_trainable_modules": [],
+  "pass": true,
+  "processor": "gri_models.rri02pa.ImmutableRelationAnchorReasoner",
+  "query_injection": "retrieved hidden vector is added to query target workspace before recurrent steps",
+  "readout": "processor.readout_hidden(h, query_subject, query_object); mutable h only",
+  "recurrent_step": "h = processor.recurrent_step(h, edges, a), shared for 4 steps",
+  "source_sha256": {
+    "baseline_processor": "455d90a4d89c3de733cbf4065aca94f263c2974ea1507dfda7244707410172ad",
+    "dmc01_adapter": "1fa04974617e7275e3d58dc14bf179d325bfc95fdcbd4654563dc7c100bc948b",
+    "immutable_anchor_processor": "805f0c5af4a5c78ab190abcde8022e4cec162021ae0bb6d58966e7b602203c56",
+    "input_data": "9d1edfa16936199e899d2922d109a0eacb42c27d9d6c1dacd13fedeb2caa6883"
+  },
+  "write_representation": "target-node h after four recurrent steps"
+}

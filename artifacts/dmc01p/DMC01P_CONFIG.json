@@ -1,0 +1,46 @@
+{
+  "dmc00_commit": "0e5359d",
+  "evidence_seeds_frozen_but_not_executed": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "future_advancement_gates": {
+    "C1024": 0.9,
+    "D1024": 0.9,
+    "P_memory": 0.9,
+    "R1024": 0.9,
+    "S_current": 0.95,
+    "S_history": 0.95,
+    "exact_minus_no_memory": 0.6,
+    "iid": 0.95,
+    "paired_wins": "5/5",
+    "shuffled_gap": 0.4,
+    "train": 0.95
+  },
+  "future_optimizer": {
+    "batch_size": 16,
+    "device": "cpu",
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "lr": 0.003,
+    "optimizer": "AdamW",
+    "torch_threads": 1,
+    "weight_decay": 0.0001
+  },
+  "future_primary_metric": "mean(R64,R256,R1024,C256,C1024,S_current,S_history,D512,D1024)",
+  "generation_commit": "0e5359db7be50b1c5e10a9c8336a2be2a0ddfa05",
+  "hidden_dim": 49,
+  "message_dim": 51,
+  "persistent_store_trainable_parameters": 0,
+  "processor": "ImmutableRelationAnchorReasoner",
+  "scientific_training_executed": false,
+  "status": "preregistration_structural_only",
+  "structural_seed": 9091,
+  "train_depth": 4,
+  "trainable_parameters": 30912,
+  "unit": "DMC-01P",
+  "world0_frozen_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1"
+}

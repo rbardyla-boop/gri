@@ -1,0 +1,10 @@
+{
+  "evidence_seeds_executed": [],
+  "exact_memory_trainable_parameters": 30912,
+  "no_memory_trainable_parameters": 30912,
+  "pass": true,
+  "persistent_ledger_trainable_parameters": 0,
+  "same_processor_type": true,
+  "structural_seed": 9091,
+  "tensor_for_tensor_initialization_equal": true
+}

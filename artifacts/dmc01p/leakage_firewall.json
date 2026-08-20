@@ -1,0 +1,26 @@
+{
+  "forbidden_query_keys_present": [],
+  "no_memory_ledger_present": false,
+  "no_memory_query_accepts_case_object": false,
+  "oracle_visible_to_query_path": false,
+  "pass": true,
+  "query_event_keys": [
+    "as_of_episode",
+    "entity",
+    "field",
+    "kind",
+    "mode"
+  ],
+  "query_graph_relation_channel_sum": 0,
+  "readout_receives_anchor": false,
+  "readout_receives_raw_event": false,
+  "record_fields": [
+    "creation_episode",
+    "entity",
+    "field",
+    "hidden_value",
+    "memory_id",
+    "source_episode",
+    "supersedes"
+  ]
+}

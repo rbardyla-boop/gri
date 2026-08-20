@@ -1,0 +1,17 @@
+{
+  "dmc00_unchanged": true,
+  "evidence_seeds_executed": [],
+  "scientific_training_executed": false,
+  "terminal_state": "DMC_01P_PREREGISTERED",
+  "unit": "DMC-01P",
+  "validation_checks": {
+    "dmc00_identity": true,
+    "leakage_firewall": true,
+    "memory_semantics": true,
+    "parameter_identity": true,
+    "shuffle_control": true,
+    "supersession_validation": true,
+    "world0_identity": true
+  },
+  "world0_unchanged": true
+}

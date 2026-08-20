@@ -1,0 +1,13 @@
+{
+  "DMC01P_CONFIG.json": "2cd636a6bc4e1ac5b74bd71e985bb5223c964e2b8af5694a43529e1c455268cf",
+  "DMC01P_CONTRACT.md": "7287b9e454846ac1ba7951e9cf8b8a17a06a04207422a6994db45eb61db5fc18",
+  "DMC01P_RECEIPT.json": "22372ab7770c38447c24a52d23578e9f5be20d02ff9eecc4679584535183acba",
+  "dmc00_identity.json": "bb366f6281fc66f1e44d362ff67c4b1ce79f06bd85705ddded67fcec4aa53dc6",
+  "leakage_firewall.json": "94bb4d78521674ba4eb4fd761c5f45906d0ccc42a25d50bc6345e0a221fb4003",
+  "memory_semantics.json": "33c1c9ba1e501cac9c5005d914b0c211f224caa4eaa13a9dc1847e92caedd2d1",
+  "parameter_identity.json": "c94f9eb59e46efe36a1070be27dfdc47c7ba31cde9a47bf6461a2f41351e17c6",
+  "rri_interface.json": "79541874294b83b3421a2c409ec5bdb69b56a48cd4bde31e8519985b1f184b8c",
+  "shuffle_control.json": "427e63231aa3f8fd8e518160e652a28897b1d76463bd1728f0364d0e868cc9be",
+  "supersession_validation.json": "7d0a262e3835ad593129b9b22b0c83db75bf15d83fe92d97547ed86004502fc8",
+  "world0_identity.json": "ef2762900f329330607f931c6f809e5e9ec05b58f81dd74b110374c6cd160dc7"
+}

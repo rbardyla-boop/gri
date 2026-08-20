@@ -1,0 +1,10 @@
+{
+  "case_count": 176,
+  "evaluation_only": true,
+  "mapping_sha256": "730d4f2bff5077cedb481a13e9b0ea76d4199dad80ce68275f4826b3df008c1b",
+  "nonidentity": true,
+  "pass": true,
+  "retraining": false,
+  "rule": "lexicographically next case_id within the same family/condition group, cyclically",
+  "same_condition": true
+}

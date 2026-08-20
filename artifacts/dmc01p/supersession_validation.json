@@ -1,0 +1,12 @@
+{
+  "current_memory_id": "m-1",
+  "current_source_episode": 20,
+  "current_supersedes": "m-0",
+  "hidden_vectors_distinct": true,
+  "history_memory_id": "m-0",
+  "history_source_episode": 0,
+  "history_supersedes": null,
+  "pass": true,
+  "retained_entry_count": 2,
+  "symbolic_answers_observed_by_ledger": false
+}
