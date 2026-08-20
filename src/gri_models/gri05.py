@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from .baseline import WeightTiedGraphReasoner
 from .geometric import SO4GeometricReasoner
+from .rri02pa import ImmutableRelationAnchorReasoner
 from .train import set_seed
 
 SEEDS = (1337, 1338, 1339, 1340, 1341)
@@ -14,6 +15,8 @@ def build_model(kind: str, seed: int):
     set_seed(seed)
     if kind == "baseline":
         model = WeightTiedGraphReasoner(hidden_dim=49, message_dim=51)
+    elif kind == "anchor":
+        model = ImmutableRelationAnchorReasoner(hidden_dim=49, message_dim=51)
     elif kind == "so4":
         model = SO4GeometricReasoner(semantic_dim=39, channels=2, message_dim=44)
     else:

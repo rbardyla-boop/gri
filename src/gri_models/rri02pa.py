@@ -81,5 +81,9 @@ class ImmutableRelationAnchorReasoner(WeightTiedGraphReasoner):
         return logits, states, anchors
 
     def forward(self, example: GraphExample, steps: int = 4) -> torch.Tensor:
-        logits, _, _ = self.forward_with_anchor_trace(example, steps=steps)
-        return logits
+        h = self.initialize(example)
+        anchor = self.make_anchor(h)
+        edges = example.edges.to(h.device)
+        for _ in range(steps):
+            h = self.recurrent_step(h, edges, anchor)
+        return self.readout_hidden(h, example.query_subject, example.query_object)
