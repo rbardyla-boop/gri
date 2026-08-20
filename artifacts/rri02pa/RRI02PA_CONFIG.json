@@ -1,0 +1,57 @@
+{
+  "unit": "RRI-02P-A",
+  "status": "preregistered_structural_only",
+  "supersedes": "RRI-02P capacity-match-unresolved concatenated-anchor design",
+  "baseline": {
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "trainable_parameters": 30912
+  },
+  "candidate": {
+    "class": "gri_models.rri02pa.ImmutableRelationAnchorReasoner",
+    "anchor": "a = clone(h0), immutable per current example",
+    "injection": "h_anchor = (h + a) / 2; concat(h_anchor, aggregated_messages)",
+    "gate_context": "h_anchor and aggregated_messages",
+    "delta_context": "h_anchor and aggregated_messages",
+    "readout": "mutable h only; anchor excluded",
+    "selected_hidden_dim": 49,
+    "selected_message_dim": 51,
+    "trainable_parameters": 30912,
+    "dummy_parameters": false,
+    "frozen_parameters": false
+  },
+  "structural_validation": {
+    "training_authorized": false,
+    "evidence_seeds_executed": false,
+    "structural_seed": 9091,
+    "depths": [1, 2, 4, 8, 16, 32, 64, 128]
+  },
+  "future_training": {
+    "authorized_after_structural_pass": true,
+    "epochs": 80,
+    "train_steps": 4,
+    "batch_size": 16,
+    "optimizer": "AdamW",
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "device": "cpu",
+    "torch_threads": 1,
+    "seeds": [1337, 1338, 1339, 1340, 1341],
+    "evaluation_depths": [5, 8, 16, 32, 64]
+  },
+  "primary_metric": "mean(D8,D16,D32,D64)",
+  "advancement_gates": {
+    "mean_train_at_least": 0.95,
+    "mean_iid_at_least": 0.95,
+    "primary_improvement_at_least": 0.05,
+    "mean_d64_improvement_at_least": 0.1,
+    "paired_primary_wins_at_least": 4
+  },
+  "conditional_erosion_gate": {
+    "mean_cti_reduction_at_least": 0.2,
+    "paired_cti_wins_at_least": 4,
+    "sep_is_diagnostic_only": true
+  },
+  "terminal_state": "RRI_02PA_PREREGISTERED"
+}

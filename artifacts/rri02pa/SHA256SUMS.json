@@ -1,0 +1,12 @@
+{
+  "artifacts/rri02pa/RRI02PA_CONFIG.json": "d270f68ce09147290cd86de7c2dc2270e9376afa55d2ed2c5addebe1a739f007",
+  "artifacts/rri02pa/RRI02PA_CONTRACT.md": "b4e98fd9bf71a6b36febeb3a0f7d7926171770eb9ff4c2bafc3ae18f6067a190",
+  "artifacts/rri02pa/RRI02PA_RECEIPT.json": "ac7f636dfe8e3c563895cd1dba0a738c3ce6deba5e9f4854fa9d8a2295baa6dc",
+  "artifacts/rri02pa/anchor_immutability.json": "60d42b619d7724a3419e533670b46902c6e57d811fafd1fc8307b843843b7b9a",
+  "artifacts/rri02pa/baseline_identity.json": "875797a73fb90c51aaff89a64c03e89acbde6052b73ce74cd77e493cb8a129e5",
+  "artifacts/rri02pa/first_step_identity.json": "1f5cb6f7ba225b8cc4ae676a879b6b71e855b33cff1e84de89259eb35a3fbb0d",
+  "artifacts/rri02pa/initialization_identity_spec.json": "03c24c1dfbcf2d3766f82e1c9ceeca2a1455ecbeaf57262bd7bc5cd283d0bdd9",
+  "artifacts/rri02pa/parameter_identity.json": "e082f5ad96894f650cca4b3202d96e3d2680e7515ba0fbfb273d2c47adadc4e3",
+  "artifacts/rri02pa/readout_firewall.json": "8f4c93ad179c4d999190918a9f2098498349e045866e23dbc2496b57e1842671",
+  "artifacts/rri02pa/world0_identity.json": "9b8d05a6bc20dc794624e58d12f327721f16e1fb5b30ec79ad12970fccc1f99c"
+}

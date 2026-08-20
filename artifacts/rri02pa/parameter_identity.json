@@ -1,0 +1,19 @@
+{
+  "baseline": {
+    "class": "gri_models.baseline.WeightTiedGraphReasoner",
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "trainable_parameters": 30912
+  },
+  "candidate": {
+    "class": "gri_models.rri02pa.ImmutableRelationAnchorReasoner",
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "trainable_parameters": 30912,
+    "parameter_topology": "inherited unchanged from baseline",
+    "anchor_parameter_count": 0
+  },
+  "exact_match": true,
+  "dummy_parameters": false,
+  "disconnected_parameters": false
+}

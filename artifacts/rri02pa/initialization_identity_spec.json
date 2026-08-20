@@ -1,0 +1,9 @@
+{
+  "purpose": "structural precondition, not performance evidence",
+  "paired_future_seeds": [1337, 1338, 1339, 1340, 1341],
+  "structural_seed_used": 9091,
+  "required_check": "baseline and candidate state_dict keys and tensor values identical under paired initialization",
+  "evidence_seeds_run_now": false,
+  "torch_rng_reset_between_constructions": true,
+  "result": "PASS for structural seed 9091"
+}

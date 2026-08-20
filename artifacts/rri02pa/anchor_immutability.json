@@ -1,0 +1,11 @@
+{
+  "anchor_definition": "a = clone(h0)",
+  "mutation_policy": "no in-place operations and no reassignment during recurrent loop",
+  "tested_depths": [1, 2, 4, 8, 16, 32, 64, 128],
+  "checks": [
+    "anchor snapshots remain exactly equal",
+    "anchor storage is distinct from initial mutable-state storage",
+    "anchor is not a trainable parameter"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "unit": "RRI-02P-A",
+  "terminal_state": "RRI_02PA_PREREGISTERED",
+  "supersedes": "artifacts/rri02p/RRI02P_RECEIPT.json",
+  "historical_record_discrepancy": {
+    "prior_receipt_reported": "40/40 PASS",
+    "pre_amendment_verified_suite_reported": "42/42 PASS",
+    "current_verified_suite_reported": "46/46 PASS",
+    "handling": "historical receipt preserved; this receipt is explicit supersession"
+  },
+  "candidate_model_implemented": true,
+  "structural_checks_only": true,
+  "training_performed": false,
+  "evidence_seeds_executed": false,
+  "performance_evidence_generated": false,
+  "world0": "GRI_02_WORLD0_PASS",
+  "world0_unchanged": true,
+  "parameter_match": "PASS: 30912 vs 30912",
+  "initialization_identity": "PASS: structural seed 9091",
+  "first_step_identity": "PASS: exact state and logits",
+  "anchor_immutability": "PASS: depths 1,2,4,8,16,32,64,128",
+  "readout_firewall": "PASS: mutable state only"
+}

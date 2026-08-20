@@ -1,0 +1,7 @@
+{
+  "frozen_factor": "1/2",
+  "identity_reason": "at step zero h = a = h0, so (h+a)/2 = h0",
+  "required_check": "baseline and candidate recurrent state and one-step logits match under identical weights and input",
+  "comparison": "exact torch equality",
+  "result": "PASS"
+}

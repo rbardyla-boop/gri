@@ -1,0 +1,7 @@
+{
+  "readout_input": "mutable final h only",
+  "feature_expression": "concat(a, b, a-b, a*b)",
+  "anchor_argument": false,
+  "direct_anchor_shortcut": false,
+  "result": "PASS"
+}
