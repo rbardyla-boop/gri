@@ -1,0 +1,15 @@
+{
+  "anchor": {
+    "summary_byte_identical": true,
+    "summary_sha256": "cccea7815a27f1bf1c8453308af8aaa763265b4d5588ee2c5f18b48a2369fc81",
+    "trace_byte_identical": true,
+    "trace_sha256": "0337c3dcf5ce65e35aea25d6fb55478e4f2b6f93d90a9a28b13089ee04ec43e8"
+  },
+  "baseline": {
+    "summary_byte_identical": true,
+    "summary_sha256": "dc830891415acf3b737129b1d0568cf67242c7bedafa93449291d5534a294960",
+    "trace_byte_identical": true,
+    "trace_sha256": "e0c019921b694e58780a4dc0f651db575f6baafa78fb437db8eb7ca89df5ee7c"
+  },
+  "pass": true
+}

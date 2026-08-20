@@ -1,0 +1,79 @@
+{
+  "accuracy": {
+    "1": {
+      "equal": true,
+      "expected": 0.9472222222222222,
+      "observed": 0.9472222222222222
+    },
+    "128": {
+      "equal": true,
+      "expected": 0.5333333333333333,
+      "observed": 0.5333333333333333
+    },
+    "16": {
+      "equal": true,
+      "expected": 0.8111111111111111,
+      "observed": 0.8111111111111111
+    },
+    "32": {
+      "equal": true,
+      "expected": 0.6555555555555556,
+      "observed": 0.6555555555555556
+    },
+    "4": {
+      "equal": true,
+      "expected": 1.0,
+      "observed": 1
+    },
+    "64": {
+      "equal": true,
+      "expected": 0.6027777777777777,
+      "observed": 0.6027777777777777
+    },
+    "8": {
+      "equal": true,
+      "expected": 0.975,
+      "observed": 0.975
+    }
+  },
+  "model_immutability": true,
+  "pass": true,
+  "signature_counts": {
+    "dynamical_instability": {
+      "equal": true,
+      "expected": 0,
+      "observed": 0
+    },
+    "gradient_influence_decay": {
+      "equal": true,
+      "expected": 0,
+      "observed": 0
+    },
+    "oversmoothing": {
+      "equal": true,
+      "expected": 0,
+      "observed": 0
+    },
+    "overthinking_state_erosion": {
+      "equal": true,
+      "expected": 5,
+      "observed": 5
+    },
+    "readout_mismatch": {
+      "equal": true,
+      "expected": 1,
+      "observed": 1
+    },
+    "relation_erasure": {
+      "equal": true,
+      "expected": 5,
+      "observed": 5
+    },
+    "update_stall": {
+      "equal": true,
+      "expected": 4,
+      "observed": 4
+    }
+  },
+  "trace_equivalence": true
+}

@@ -1,0 +1,60 @@
+{
+  "m1_pass": true,
+  "m2_anchor_lower_seed_count": 4,
+  "m2_pass": true,
+  "mean_anchor_cti_rate": 0.275,
+  "mean_baseline_cti_rate": 0.5,
+  "mean_reduction_fraction": 0.44999999999999996,
+  "paired": [
+    {
+      "anchor_cti_rate": 0.375,
+      "anchor_cti_trajectory_fraction": 0.375,
+      "anchor_persistence_after_first_correct": 0.7559055118110236,
+      "baseline_cti_rate": 0.5,
+      "baseline_cti_trajectory_fraction": 0.5,
+      "baseline_persistence_after_first_correct": 0.5442913385826772,
+      "cti_rate_anchor_minus_baseline": -0.125,
+      "seed": 1337
+    },
+    {
+      "anchor_cti_rate": 0.0,
+      "anchor_cti_trajectory_fraction": 0.0,
+      "anchor_persistence_after_first_correct": 1.0,
+      "baseline_cti_rate": 0.625,
+      "baseline_cti_trajectory_fraction": 0.625,
+      "baseline_persistence_after_first_correct": 0.639763779527559,
+      "cti_rate_anchor_minus_baseline": -0.625,
+      "seed": 1338
+    },
+    {
+      "anchor_cti_rate": 0.0,
+      "anchor_cti_trajectory_fraction": 0.0,
+      "anchor_persistence_after_first_correct": 1.0,
+      "baseline_cti_rate": 0.75,
+      "baseline_cti_trajectory_fraction": 0.625,
+      "baseline_persistence_after_first_correct": 0.5767716535433071,
+      "cti_rate_anchor_minus_baseline": -0.75,
+      "seed": 1339
+    },
+    {
+      "anchor_cti_rate": 0.25,
+      "anchor_cti_trajectory_fraction": 0.25,
+      "anchor_persistence_after_first_correct": 0.7854330708661418,
+      "baseline_cti_rate": 0.375,
+      "baseline_cti_trajectory_fraction": 0.375,
+      "baseline_persistence_after_first_correct": 0.701263904511936,
+      "cti_rate_anchor_minus_baseline": -0.125,
+      "seed": 1340
+    },
+    {
+      "anchor_cti_rate": 0.75,
+      "anchor_cti_trajectory_fraction": 0.625,
+      "anchor_persistence_after_first_correct": 0.5856299212598425,
+      "baseline_cti_rate": 0.25,
+      "baseline_cti_trajectory_fraction": 0.25,
+      "baseline_persistence_after_first_correct": 0.7903543307086615,
+      "cti_rate_anchor_minus_baseline": 0.5,
+      "seed": 1341
+    }
+  ]
+}

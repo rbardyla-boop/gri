@@ -1,0 +1,31 @@
+{
+  "baseline_replication": "PASS",
+  "checkpoint_integrity": "PASS",
+  "m1": true,
+  "m2": true,
+  "mean_cti_reduction_fraction": 0.44999999999999996,
+  "model_immutability": true,
+  "no_training": true,
+  "replay": "PASS",
+  "signature_counts": {
+    "anchor": {
+      "dynamical_instability": 0,
+      "gradient_influence_decay": 0,
+      "oversmoothing": 0,
+      "overthinking_state_erosion": 3,
+      "readout_mismatch": 1,
+      "relation_erasure": 3,
+      "update_stall": 2
+    },
+    "baseline": {
+      "dynamical_instability": 0,
+      "gradient_influence_decay": 0,
+      "oversmoothing": 0,
+      "overthinking_state_erosion": 5,
+      "readout_mismatch": 1,
+      "relation_erasure": 5,
+      "update_stall": 4
+    }
+  },
+  "terminal_verdict": "RRI_02C_ANCHOR_MECHANISM_SUPPORTED"
+}
