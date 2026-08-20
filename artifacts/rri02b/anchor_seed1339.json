@@ -1,0 +1,55 @@
+{
+  "batch_size": 16,
+  "checkpoint": "artifacts/rri02b/checkpoints/anchor_seed1339_final.pt",
+  "checkpoint_sha256": "d7e4529da05a71e5ca64adf991c8fe4b4288c1a3d6415c978c71b69b52c5a494",
+  "elapsed_seconds": 73.17623543739319,
+  "epochs": 80,
+  "extrapolation": {
+    "16": 1.0,
+    "32": 1.0,
+    "5": 1.0,
+    "64": 1.0,
+    "8": 1.0
+  },
+  "final_loss": 0.0011404907854739577,
+  "final_state_hash": "898459892108d278164ee4db95ce25cb75aa2a9e49624ce6db5f7d649b74f7d8",
+  "gradient_clip": 1.0,
+  "iid_validation_accuracy": 1.0,
+  "initial_state_hash": "82072e2c3fa6ccaee0dd542978c468e342d9a2ef74d3608d3491f21f3a551ccc",
+  "learning_rate": 0.003,
+  "model": "anchor",
+  "optimizer": "AdamW",
+  "parameters": 30912,
+  "primary_metric": 1.0,
+  "resume_events": [
+    {
+      "from_epoch": 0,
+      "type": "fresh_start"
+    },
+    {
+      "epoch": 20,
+      "path": "/home/thebackhand/Downloads/grok/new-ai/gri-research/artifacts/rri02b/checkpoints/anchor_seed1339_final.pt",
+      "type": "checkpoint"
+    },
+    {
+      "epoch": 40,
+      "path": "/home/thebackhand/Downloads/grok/new-ai/gri-research/artifacts/rri02b/checkpoints/anchor_seed1339_final.pt",
+      "type": "checkpoint"
+    },
+    {
+      "epoch": 60,
+      "path": "/home/thebackhand/Downloads/grok/new-ai/gri-research/artifacts/rri02b/checkpoints/anchor_seed1339_final.pt",
+      "type": "checkpoint"
+    },
+    {
+      "epoch": 80,
+      "path": "/home/thebackhand/Downloads/grok/new-ai/gri-research/artifacts/rri02b/checkpoints/anchor_seed1339_final.pt",
+      "type": "checkpoint"
+    }
+  ],
+  "seed": 1339,
+  "source_commit": "ae0a0d34de1f97e842296e6dcb9af2acb9c34c84",
+  "train_accuracy": 1.0,
+  "train_steps": 4,
+  "weight_decay": 0.0001
+}

@@ -1,0 +1,40 @@
+{
+  "cpu": "x86_64",
+  "cuda_available": true,
+  "os": "Linux-6.8.0-63-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "pytorch": "2.8.0+cu128",
+  "repository_status": "pre-existing untracked user files preserved",
+  "resume_audit": [
+    {
+      "audit_seed": 9090,
+      "examples": 16,
+      "final_loss_equal": true,
+      "model": "baseline",
+      "model_state_equal": true,
+      "optimizer_state_equal": true,
+      "resumed_model_hash": "442b432856423ba94809a46148859e5b1f7192dae16dea79c659dff71b284068",
+      "rng_state_equal": true,
+      "split_epoch": 1,
+      "total_epochs": 3,
+      "uninterrupted_model_hash": "442b432856423ba94809a46148859e5b1f7192dae16dea79c659dff71b284068"
+    },
+    {
+      "audit_seed": 9090,
+      "examples": 16,
+      "final_loss_equal": true,
+      "model": "anchor",
+      "model_state_equal": true,
+      "optimizer_state_equal": true,
+      "resumed_model_hash": "05e44aacdc5ad673cd8c56615d7062dfceba268b0788db2304cfa74024c6f633",
+      "rng_state_equal": true,
+      "split_epoch": 1,
+      "total_epochs": 3,
+      "uninterrupted_model_hash": "05e44aacdc5ad673cd8c56615d7062dfceba268b0788db2304cfa74024c6f633"
+    }
+  ],
+  "selected_device": "CPU",
+  "source_commit": "ae0a0d34de1f97e842296e6dcb9af2acb9c34c84",
+  "torch_threads": 1,
+  "world0_validator": "GRI_02_WORLD0_PASS"
+}

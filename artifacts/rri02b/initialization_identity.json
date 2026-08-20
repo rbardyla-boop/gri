@@ -1,0 +1,30 @@
+{
+  "all_equal": true,
+  "evidence_seeds": {
+    "1337": {
+      "anchor_initial_hash": "513eadf7646ddadd9049c8928bafb68fe5bdfb575dc0b8b48504a7fc04fdf142",
+      "baseline_initial_hash": "513eadf7646ddadd9049c8928bafb68fe5bdfb575dc0b8b48504a7fc04fdf142",
+      "tensor_for_tensor_equal": true
+    },
+    "1338": {
+      "anchor_initial_hash": "30c3f399ce89821ef1fdb2ba89f2b6dfb073cba9dde45697516a57989efd4f16",
+      "baseline_initial_hash": "30c3f399ce89821ef1fdb2ba89f2b6dfb073cba9dde45697516a57989efd4f16",
+      "tensor_for_tensor_equal": true
+    },
+    "1339": {
+      "anchor_initial_hash": "82072e2c3fa6ccaee0dd542978c468e342d9a2ef74d3608d3491f21f3a551ccc",
+      "baseline_initial_hash": "82072e2c3fa6ccaee0dd542978c468e342d9a2ef74d3608d3491f21f3a551ccc",
+      "tensor_for_tensor_equal": true
+    },
+    "1340": {
+      "anchor_initial_hash": "f73d68ddeff1396e36e9ecc283bf53c09884f3163500c033c8c598c97fbc6d26",
+      "baseline_initial_hash": "f73d68ddeff1396e36e9ecc283bf53c09884f3163500c033c8c598c97fbc6d26",
+      "tensor_for_tensor_equal": true
+    },
+    "1341": {
+      "anchor_initial_hash": "019ab531cf4f6c075ea536f722f22d32b98c14519d278e66c6298fec59e97253",
+      "baseline_initial_hash": "019ab531cf4f6c075ea536f722f22d32b98c14519d278e66c6298fec59e97253",
+      "tensor_for_tensor_equal": true
+    }
+  }
+}

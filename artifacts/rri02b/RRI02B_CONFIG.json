@@ -1,0 +1,51 @@
+{
+  "anchor": {
+    "class": "gri_models.rri02pa.ImmutableRelationAnchorReasoner",
+    "formula": "h_anchor = (h + a) / 2",
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "readout": "mutable h only",
+    "trainable_parameters": 30912
+  },
+  "baseline": {
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "trainable_parameters": 30912
+  },
+  "batch_size": 16,
+  "chunk_epochs": 20,
+  "device": "CPU",
+  "epochs": 80,
+  "evaluation_depths": [
+    5,
+    8,
+    16,
+    32,
+    64
+  ],
+  "evidence_seeds_reused": false,
+  "gradient_clip": 1.0,
+  "learning_rate": 0.003,
+  "optimizer": "AdamW",
+  "primary_depths": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "primary_metric": "mean(D8,D16,D32,D64)",
+  "seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "source_commit": "ae0a0d34de1f97e842296e6dcb9af2acb9c34c84",
+  "status": "performance_evidence",
+  "torch_threads": 1,
+  "train_steps": 4,
+  "tuning": false,
+  "unit": "RRI-02B",
+  "weight_decay": 0.0001
+}

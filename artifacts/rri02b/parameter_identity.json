@@ -1,0 +1,12 @@
+{
+  "anchor_parameters": 30912,
+  "baseline_parameters": 30912,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "exact_match": true
+}

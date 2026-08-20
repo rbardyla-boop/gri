@@ -1,0 +1,34 @@
+{
+  "archaeology_run": false,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "gates": {
+    "A_mean_anchor_train_at_least_0.95": {
+      "observed": 1.0,
+      "pass": true
+    },
+    "B_mean_anchor_iid_at_least_0.95": {
+      "observed": 1.0,
+      "pass": true
+    },
+    "C_mean_primary_improvement_at_least_0.05": {
+      "observed": 0.1375,
+      "pass": true
+    },
+    "D_mean_d64_improvement_at_least_0.10": {
+      "observed": 0.2,
+      "pass": true
+    },
+    "E_paired_primary_wins_at_least_4": {
+      "observed": 4,
+      "pass": true
+    }
+  },
+  "terminal_verdict": "RRI_02B_ANCHOR_PERFORMANCE_ADVANCES",
+  "unit": "RRI-02B"
+}
