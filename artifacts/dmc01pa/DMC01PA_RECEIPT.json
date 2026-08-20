@@ -1,0 +1,19 @@
+{
+  "evidence_seeds_executed": [],
+  "historical_dmc01p_artifacts_rewritten": false,
+  "scientific_training_executed": false,
+  "terminal_state": "DMC_01PA_PREREGISTERED",
+  "unit": "DMC-01P-A",
+  "validation_checks": {
+    "answer_firewall": true,
+    "autograd_semantics": true,
+    "dmc00_identity": true,
+    "dmc01p_identity": true,
+    "loss_semantics": true,
+    "optimizer_cadence": true,
+    "ordering_spec": true,
+    "parameter_identity": true,
+    "resume_semantics": true,
+    "world0_identity": true
+  }
+}

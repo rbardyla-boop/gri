@@ -1,0 +1,33 @@
+{
+  "autograd": "stored hidden_value clone remains graph-connected; no detach",
+  "dmc00_commit": "0e5359d",
+  "dmc01p_commit": "ed15f71",
+  "evidence_seeds_frozen_but_not_executed": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "generation_commit": "ed15f71754925ebe44ba5db4b80ba25fa1d94a9e",
+  "historical_gates_unchanged": true,
+  "primary_metric": "mean(R64,R256,R1024,C256,C1024,S_current,S_history,D512,D1024)",
+  "scientific_training_executed": false,
+  "status": "training_semantics_amendment_structural_only",
+  "structural_seed": 9090,
+  "training_config": {
+    "batch_semantics": "complete cases",
+    "batch_size": 16,
+    "device": "cpu",
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.003,
+    "optimizer": "AdamW",
+    "scheduler": null,
+    "torch_threads": 1,
+    "train_depth": 4,
+    "weight_decay": 0.0001
+  },
+  "unit": "DMC-01P-A",
+  "world0_frozen_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1"
+}

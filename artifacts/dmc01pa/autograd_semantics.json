@@ -1,0 +1,13 @@
+{
+  "detach_used": false,
+  "exact_hidden_gradient_shape": [
+    49
+  ],
+  "exact_hidden_hook_called": true,
+  "exact_parameter_gradient_present": true,
+  "no_grad_used_on_write": false,
+  "no_memory_ledger_present": false,
+  "no_memory_prior_write_changes_query": false,
+  "pass": true,
+  "retain_graph_used": false
+}

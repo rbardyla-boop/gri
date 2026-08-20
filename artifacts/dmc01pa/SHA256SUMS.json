@@ -1,0 +1,15 @@
+{
+  "DMC01PA_CONFIG.json": "a93b511ea6c46fc5705f2ebd469c66e50df03d2b6025a2cffe4de5180efca050",
+  "DMC01PA_CONTRACT.md": "f2bc247aaf0847a46b0b8d417ddb5f4455693fcbad369d0238bac514c6e84ca1",
+  "DMC01PA_RECEIPT.json": "cb47ba3fb2969c452c571950a310464eb833f1e9b3b0308b662b608d2df70994",
+  "answer_firewall.json": "ac32cb4af9d201c33fa57e716dfd5b0da16d85ffcd15475ea23d1ea45fa89cb5",
+  "autograd_semantics.json": "aec07ca80104d943406971ddf135820527e2d4c194779a15794ca2b82796e12a",
+  "dmc00_identity.json": "bd6675cbdad7a8430bd9b319346f497d453a934c87d2eb5226ea4f1cd19322cc",
+  "loss_semantics.json": "c099f1edad968fe236da8310c73d0924b29f513878a0d846b3fae6958a4fb58b",
+  "optimizer_cadence.json": "70709ea00fdfe9e7896b3e0b16ea5cac17ce92ff730931c254b536bd73279a40",
+  "ordering_manifest.json": "10a4b665e1271a0081f4148ac1c8415158656d2108c283d1e5f611f40aef2429",
+  "ordering_spec.json": "aa57b86631fe003b8331126e4a354d6f5e4b203451ab945814ff16e660c0e4d2",
+  "parameter_identity.json": "75e90be16052fea3ff6a84dc75453615f45c66b3eb1b74c88d4d394bb4b00f30",
+  "resume_semantics.json": "32e2af4b45dd6d3d24dca7d41f62338323eee5e6c94e990285b77db6b85bed02",
+  "world0_identity.json": "ef2762900f329330607f931c6f809e5e9ec05b58f81dd74b110374c6cd160dc7"
+}

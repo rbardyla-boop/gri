@@ -1,0 +1,7 @@
+{
+  "byte_identity_against_commit": true,
+  "commit": "0e5359d",
+  "pass": true,
+  "receipt_terminal_state": "DMC_00_MEMORY_BENCHMARK_PASS",
+  "sha256s_match": true
+}

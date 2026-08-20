@@ -1,0 +1,21 @@
+{
+  "checkpoint_boundary": "immediately after one complete optimizer step",
+  "pass": true,
+  "repeated_or_skipped_batches_allowed": false,
+  "required_fields": [
+    "completed_epoch",
+    "dmc00_dataset_identity",
+    "final_loss",
+    "metrics",
+    "model_state_dict",
+    "next_batch_index",
+    "numpy_rng_state",
+    "optimizer_state",
+    "python_rng_state",
+    "seed",
+    "source_commit",
+    "torch_rng_state",
+    "training_config"
+  ],
+  "resume_order_reconstruction": "seed + epoch + case_id stateless SHA ordering"
+}

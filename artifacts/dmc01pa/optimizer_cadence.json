@@ -1,0 +1,10 @@
+{
+  "batch_case_count": 2,
+  "batch_loss_observed": 2.1225028038024902,
+  "gradient_clip": 1.0,
+  "no_gradient_accumulation": true,
+  "no_scheduler": true,
+  "optimizer_step_calls": 1,
+  "pass": true,
+  "zero_grad_set_to_none": true
+}

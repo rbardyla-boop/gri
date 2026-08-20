@@ -1,0 +1,8 @@
+{
+  "evidence_seeds_executed": [],
+  "exact_memory_parameters": 30912,
+  "no_memory_parameters": 30912,
+  "pass": true,
+  "structural_seed": 9090,
+  "tensor_for_tensor_initialization_equal": true
+}

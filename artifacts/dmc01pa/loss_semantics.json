@@ -1,0 +1,8 @@
+{
+  "auxiliary_losses": [],
+  "batch_reduction": "arithmetic mean of complete-case losses",
+  "class_condition_delay_weighting": false,
+  "function": "torch.nn.functional.cross_entropy",
+  "individual_reduction": "mean",
+  "pass": true
+}

@@ -1,0 +1,31 @@
+{
+  "algorithm": "SHA256('DMC01_ORDER|' + str(seed) + '|' + str(epoch) + '|' + case_id)",
+  "batch_size": 16,
+  "epoch_range": [
+    0,
+    79
+  ],
+  "ordering_validation": {
+    "batch_sizes": [
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16
+    ],
+    "different_epoch_changes_order": true,
+    "different_seed_changes_order": true,
+    "evidence_seeds_executed": [],
+    "paired_exact_no_memory_order_identical": true,
+    "pass": true,
+    "same_seed_epoch_byte_identical": true
+  },
+  "pass": true,
+  "sort": "ascending raw SHA-256 digest bytes"
+}

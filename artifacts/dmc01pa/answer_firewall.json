@@ -1,0 +1,7 @@
+{
+  "answer_parameter_in_query_api": false,
+  "event_path_reads_answer": false,
+  "oracle_visible_to_event_or_memory_path": false,
+  "pass": true,
+  "target_constructor_reads_answer": true
+}
