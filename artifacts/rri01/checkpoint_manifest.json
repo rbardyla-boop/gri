@@ -1,0 +1,22 @@
+{
+  "1337": {
+    "path": "artifacts/rri01r/checkpoints/baseline_seed1337_final.pt",
+    "sha256": "5089d045a92ce5423fdcb5fdfaf1f709b6165a77261e6cd74881459a3322d408"
+  },
+  "1338": {
+    "path": "artifacts/rri01r/checkpoints/baseline_seed1338_final.pt",
+    "sha256": "e6d493c6ae7a1c7723997257110167d4756e703f2e26ca1f7783186f05622928"
+  },
+  "1339": {
+    "path": "artifacts/rri01r/checkpoints/baseline_seed1339_final.pt",
+    "sha256": "f87f61d044fb8e48a5afaa6ca6147251f160170366a1b88b807ff2b7f7d876d0"
+  },
+  "1340": {
+    "path": "artifacts/rri01r/checkpoints/baseline_seed1340_final.pt",
+    "sha256": "a47149aa1ee287644836e4a716db09bd45520ef3299ad5ccf11b39923c7c2100"
+  },
+  "1341": {
+    "path": "artifacts/rri01r/checkpoints/baseline_seed1341_final.pt",
+    "sha256": "a0cb42e30ef6f75b0ccc9585e0ce2b326f51f09064a817e9b690e001240fa944"
+  }
+}

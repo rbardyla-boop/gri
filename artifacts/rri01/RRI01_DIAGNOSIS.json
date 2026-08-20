@@ -1,0 +1,66 @@
+{
+  "per_seed_signatures": [
+    {
+      "dynamical_instability": false,
+      "gradient_influence_decay": false,
+      "oversmoothing": false,
+      "overthinking_state_erosion": true,
+      "readout_mismatch": false,
+      "relation_erasure": true,
+      "seed": 1337,
+      "update_stall": true
+    },
+    {
+      "dynamical_instability": false,
+      "gradient_influence_decay": false,
+      "oversmoothing": false,
+      "overthinking_state_erosion": true,
+      "readout_mismatch": true,
+      "relation_erasure": true,
+      "seed": 1338,
+      "update_stall": false
+    },
+    {
+      "dynamical_instability": false,
+      "gradient_influence_decay": false,
+      "oversmoothing": false,
+      "overthinking_state_erosion": true,
+      "readout_mismatch": false,
+      "relation_erasure": true,
+      "seed": 1339,
+      "update_stall": true
+    },
+    {
+      "dynamical_instability": false,
+      "gradient_influence_decay": false,
+      "oversmoothing": false,
+      "overthinking_state_erosion": true,
+      "readout_mismatch": false,
+      "relation_erasure": true,
+      "seed": 1340,
+      "update_stall": true
+    },
+    {
+      "dynamical_instability": false,
+      "gradient_influence_decay": false,
+      "oversmoothing": false,
+      "overthinking_state_erosion": true,
+      "readout_mismatch": false,
+      "relation_erasure": true,
+      "seed": 1341,
+      "update_stall": true
+    }
+  ],
+  "primary_requires_4_of_5": true,
+  "primary_rationale": "Relation separation falls before or concurrently with long-depth accuracy loss in all five seeds; overthinking/state erosion is a co-occurring secondary signature, and update stall reaches four seeds.",
+  "signature_counts": {
+    "dynamical_instability": 0,
+    "gradient_influence_decay": 0,
+    "oversmoothing": 0,
+    "overthinking_state_erosion": 5,
+    "readout_mismatch": 1,
+    "relation_erasure": 5,
+    "update_stall": 4
+  },
+  "terminal_verdict": "RRI_01_RELATION_ERASURE"
+}
