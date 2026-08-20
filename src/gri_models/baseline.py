@@ -43,20 +43,23 @@ class WeightTiedGraphReasoner(nn.Module):
         return torch.tanh(self.node_in(example.node_features.to(next(self.parameters()).device)))
 
     def recurrent_step(self, h: torch.Tensor, edges: torch.Tensor) -> torch.Tensor:
-        n, d = h.shape
+        n, _ = h.shape
         edges = edges.to(h.device)
-        h_j = h[:, None, :].expand(n, n, d)  # [j, i, d]
-        h_i = h[None, :, :].expand(n, n, d)
-        e_ji = edges
-        e_ij = edges.transpose(0, 1)
-        pair = torch.cat([h_j, h_i, e_ji, e_ij], dim=-1)
-        messages = self.message(pair)
-        # Only graph-adjacent pairs may exchange messages. Both directions of
-        # an asserted fact are available as communication paths, but the
-        # receiver sees whether the assertion itself was j->i or i->j.
+        # Compute exactly the graph-adjacent ordered pairs that survived the
+        # original dense mask. This is an execution-only sparsification: pair
+        # features and aggregation semantics are unchanged.
         adjacency = (edges.sum(dim=-1) + edges.transpose(0, 1).sum(dim=-1)) > 0
-        mask = adjacency.unsqueeze(-1)
-        aggregated = (messages * mask).sum(dim=0)
+        senders, receivers = adjacency.nonzero(as_tuple=True)
+        aggregated = torch.zeros_like(h)
+        if senders.numel():
+            pair = torch.cat([
+                h[senders],
+                h[receivers],
+                edges[senders, receivers],
+                edges[receivers, senders],
+            ], dim=-1)
+            messages = self.message(pair)
+            aggregated.index_add_(0, receivers, messages)
         context = torch.cat([h, aggregated], dim=-1)
         gate = self.gate(context)
         delta = self.delta(context)

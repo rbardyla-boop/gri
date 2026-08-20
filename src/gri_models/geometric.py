@@ -72,40 +72,40 @@ class SO4GeometricReasoner(nn.Module):
         return torch.matmul(qi, qjt)
 
     def recurrent_step(self, s: torch.Tensor, v: torch.Tensor, edges: torch.Tensor, frames: torch.Tensor):
-        n, ds = s.shape
+        n, _ = s.shape
         c = self.channels
         edges = edges.to(s.device)
-        u = self.connections(frames)
-        # transported[j,i] = U[j,i] @ V[j]
-        transported = torch.einsum("jiab,jbc->jiac", u, v)
-
-        s_j = s[:, None, :].expand(n, n, ds)
-        s_i = s[None, :, :].expand(n, n, ds)
-        v_i = v[None, :, :, :].expand(n, n, self.dg, c)
-
-        g_ii = torch.einsum("jiac,jiad->jicd", v_i, v_i)
-        g_jj = torch.einsum("jiac,jiad->jicd", transported, transported)
-        g_ij = torch.einsum("jiac,jiad->jicd", v_i, transported)
-        invariant = torch.cat([
-            s_j,
-            s_i,
-            edges,
-            edges.transpose(0, 1),
-            g_ii.reshape(n, n, -1),
-            g_jj.reshape(n, n, -1),
-            g_ij.reshape(n, n, -1),
-        ], dim=-1)
-
-        ms = self.semantic_message(invariant)
-        coeff = self.geom_coeff(invariant).reshape(n, n, 2, c, c)
-        a = coeff[:, :, 0]
-        b = coeff[:, :, 1]
-        mv = torch.einsum("jiac,jicd->jiad", v_i, a) + torch.einsum("jiac,jicd->jiad", transported, b)
-
         adjacency = (edges.sum(dim=-1) + edges.transpose(0, 1).sum(dim=-1)) > 0
-        mask = adjacency.unsqueeze(-1)
-        agg_s = (ms * mask).sum(dim=0)
-        agg_v = (mv * mask.unsqueeze(-1)).sum(dim=0)
+        senders, receivers = adjacency.nonzero(as_tuple=True)
+
+        agg_s = torch.zeros_like(s)
+        agg_v = torch.zeros_like(v)
+        if senders.numel():
+            # U[j,i] = Q_i Q_j^T, evaluated only for adjacent ordered pairs.
+            u = torch.matmul(frames[receivers], frames[senders].transpose(-1, -2))
+            transported = torch.einsum("kab,kbc->kac", u, v[senders])
+            v_i = v[receivers]
+
+            g_ii = torch.einsum("kac,kad->kcd", v_i, v_i)
+            g_jj = torch.einsum("kac,kad->kcd", transported, transported)
+            g_ij = torch.einsum("kac,kad->kcd", v_i, transported)
+            invariant = torch.cat([
+                s[senders],
+                s[receivers],
+                edges[senders, receivers],
+                edges[receivers, senders],
+                g_ii.reshape(senders.numel(), -1),
+                g_jj.reshape(senders.numel(), -1),
+                g_ij.reshape(senders.numel(), -1),
+            ], dim=-1)
+
+            ms = self.semantic_message(invariant)
+            coeff = self.geom_coeff(invariant).reshape(senders.numel(), 2, c, c)
+            a = coeff[:, 0]
+            b = coeff[:, 1]
+            mv = torch.einsum("kac,kcd->kad", v_i, a) + torch.einsum("kac,kcd->kad", transported, b)
+            agg_s.index_add_(0, receivers, ms)
+            agg_v.index_add_(0, receivers, mv)
 
         local_gram = torch.einsum("nac,nad->ncd", v, v).reshape(n, -1)
         node_inv = torch.cat([s, agg_s, local_gram], dim=-1)
