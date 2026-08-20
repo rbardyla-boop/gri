@@ -1,0 +1,18 @@
+{
+  "artifacts/gri05/final/GRI05_REPORT.md": "cc2cffb3954cfa66c575446b046b33fbb22e3d69a1392931d250590c801fe406",
+  "artifacts/gri05/final/GRI05_VERDICT.json": "9dcf6894272346117714b4fdcd8dc2d0a96e04a33e4cc7f30fb19dd5fac6c5a8",
+  "artifacts/gri05/final/aggregate.json": "f8141487e99fb00853c31a30a1c961b9b025b03f9890cb8fe0db6f5b91d20b9c",
+  "artifacts/gri05/final/baseline_seed1337.json": "6fde18d7e90e6f16777407d93fe304561cc44a603f4b476eb3217fdbf2cf6429",
+  "artifacts/gri05/final/baseline_seed1338.json": "4c7dc82004715d668b4f014e6b05cc305bd39b9edad03c5d1e72ef1142703fa6",
+  "artifacts/gri05/final/baseline_seed1339.json": "ceaa124ce8a2754f575c634451b9f84ca33a403bfe8b4753256ce2b29ed56e06",
+  "artifacts/gri05/final/baseline_seed1340.json": "e35955254c23eb994e8ab0b45c768fb6efb18c0f94907c73c8d56072bdd64229",
+  "artifacts/gri05/final/baseline_seed1341.json": "b07715b9a964ded62e6ba11f57ab92be961bed11e0c00e8cb6d70b2cea080fdd",
+  "artifacts/gri05/final/config.json": "38f40f6f82a94e18d6c1ab3d7b18264c7b6f48aee7a2389e7354fb27e54fa924",
+  "artifacts/gri05/final/environment.json": "3f4faf2c1afb0f76c5e1d6b46d2696759e61e95c7ad8035be2d198a0c1fcc69c",
+  "artifacts/gri05/final/parameter_counts.json": "f037ee7f703885610632eb6d72e19a3deca8e684deb56ae273679f929e5fc694",
+  "artifacts/gri05/final/so4_seed1337.json": "4241fb0ec678a2823bb4dec351c2e23106bce93da10d0a57ef0205e23683b187",
+  "artifacts/gri05/final/so4_seed1338.json": "ee9a685235a867277b7b419831e52794be490b20047b3ca519486595a91ca378",
+  "artifacts/gri05/final/so4_seed1339.json": "2f5614e8860c41ea5e476f79911c98ad49682d9f31d60b25451d286175278d60",
+  "artifacts/gri05/final/so4_seed1340.json": "fff285374f7b5259e7a64423a6132d90d77b732fe9c1f59f15c1f0adc75d2573",
+  "artifacts/gri05/final/so4_seed1341.json": "c8ea154a40f78b1968af1b58aa3a18ec639497c0fe5cea07690f9a4fa62a5b9d"
+}

@@ -1,0 +1,24 @@
+{
+  "batch_size": 16,
+  "elapsed_seconds": 168.65020845399704,
+  "epochs": 80,
+  "extrapolation": {
+    "16": 0.125,
+    "32": 0.125,
+    "5": 0.25,
+    "64": 0.125,
+    "8": 0.125
+  },
+  "final_loss": 1.7611131966114044,
+  "gradient_clip": 1.0,
+  "learning_rate": 0.003,
+  "model": "so4",
+  "optimizer": "AdamW",
+  "parameters": 30912,
+  "primary_metric": 0.125,
+  "seed": 1340,
+  "train_accuracy": 0.3125,
+  "train_steps": 4,
+  "validation_accuracy_t4": 0.3125,
+  "weight_decay": 0.0001
+}

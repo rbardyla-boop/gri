@@ -1,0 +1,14 @@
+{
+  "epochs": 80,
+  "train_steps": 4,
+  "batch_size": 16,
+  "optimizer": "AdamW",
+  "learning_rate": 0.003,
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "seeds": [1337, 1338, 1339, 1340, 1341],
+  "primary_metric": "mean(D8,D16,D32,D64)",
+  "primary_depths": [8, 16, 32, 64],
+  "advancement_threshold": 0.05,
+  "stability_factor": 0.9
+}

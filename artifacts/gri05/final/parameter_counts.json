@@ -1,0 +1,14 @@
+{
+  "baseline": {
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "trainable_parameters": 30912
+  },
+  "so4": {
+    "semantic_dim": 39,
+    "channels": 2,
+    "message_dim": 44,
+    "trainable_parameters": 30912
+  },
+  "exact_match": true
+}

@@ -1,0 +1,13 @@
+{
+  "git_commit": "1fa9208d3b5b2d61eb35cf117d61d5e0a4622693",
+  "branch": "agent/gri-so4-capacity-match",
+  "python": "3.12.3",
+  "pytorch": "2.8.0+cu128",
+  "os": "Linux 6.8.0-63-generic x86_64",
+  "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
+  "cuda_available": true,
+  "selected_device": "CPU",
+  "torch_threads": 1,
+  "world0_validator": "GRI_02_WORLD0_PASS",
+  "repository_status": "untracked user files present; no tracked changes during experiment"
+}

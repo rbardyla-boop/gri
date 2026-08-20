@@ -1,0 +1,42 @@
+{
+  "baseline": {
+    "n": 5,
+    "mean_train_accuracy": 1.0,
+    "stdev_train_accuracy": 0.0,
+    "mean_validation_accuracy_t4": 1.0,
+    "stdev_validation_accuracy_t4": 0.0,
+    "mean_D5": 1.0,
+    "stdev_D5": 0.0,
+    "mean_D8": 0.975,
+    "stdev_D8": 0.05590169943749474,
+    "mean_D16": 0.825,
+    "stdev_D16": 0.14252192813739226,
+    "mean_D32": 0.675,
+    "stdev_D32": 0.11180339887498948,
+    "mean_D64": 0.625,
+    "stdev_D64": 0.08838834764831845,
+    "mean_primary_metric": 0.775,
+    "stdev_primary_metric": 0.0808886194096549
+  },
+  "so4": {
+    "n": 5,
+    "mean_train_accuracy": 0.70625,
+    "stdev_train_accuracy": 0.4035971072740735,
+    "mean_validation_accuracy_t4": 0.70625,
+    "stdev_validation_accuracy_t4": 0.4035971072740735,
+    "mean_D5": 0.675,
+    "stdev_D5": 0.4472135954999579,
+    "mean_D8": 0.6,
+    "stdev_D8": 0.4088856808449032,
+    "mean_D16": 0.3,
+    "stdev_D16": 0.14252192813739226,
+    "mean_D32": 0.2,
+    "stdev_D32": 0.06846531968814576,
+    "mean_D64": 0.2,
+    "stdev_D64": 0.11180339887498948,
+    "mean_primary_metric": 0.325,
+    "stdev_primary_metric": 0.16624295097837982
+  },
+  "primary_mean_difference_so4_minus_baseline": -0.45,
+  "baseline_stability_threshold_for_so4": 0.07279975746868941
+}

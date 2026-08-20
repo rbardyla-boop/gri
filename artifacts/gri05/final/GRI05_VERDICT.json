@@ -1,0 +1,26 @@
+{
+  "implementation_verified": true,
+  "resume_equivalence": "GRI_RESUME_EQUIVALENCE_PASS",
+  "world0_validator": "GRI_02_WORLD0_PASS",
+  "terminal_verdict": "GRI_05_SO4_NO_ADVANTAGE",
+  "gates": {
+    "mean_so4_train_at_least_0.95": {
+      "observed": 0.70625,
+      "pass": false
+    },
+    "mean_so4_iid_validation_at_least_0.95": {
+      "observed": 0.70625,
+      "pass": false
+    },
+    "so4_primary_beats_baseline_by_at_least_0.05": {
+      "observed_difference": -0.45,
+      "pass": false
+    },
+    "so4_primary_stdev_at_most_0.90_baseline_stdev": {
+      "so4_stdev": 0.16624295097837982,
+      "threshold": 0.07279975746868941,
+      "pass": false
+    }
+  },
+  "evidence_seeds": [1337, 1338, 1339, 1340, 1341]
+}
