@@ -290,7 +290,7 @@ def train_scorer(seed: int, examples: list[dict[str, Any]], *, checkpoint_path: 
         }
         checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
         torch.save(payload, checkpoint_path)
-        result["checkpoint"] = str(checkpoint_path.relative_to(ROOT))
+        result["checkpoint"] = str(checkpoint_path.relative_to(ROOT)) if checkpoint_path.is_relative_to(ROOT) else str(checkpoint_path)
         result["checkpoint_sha256"] = sha256_file(checkpoint_path)
     return result
 
