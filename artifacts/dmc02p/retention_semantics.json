@@ -1,0 +1,35 @@
+{
+  "allowed_metadata": [
+    "family",
+    "entity",
+    "field",
+    "creation_episode",
+    "salience",
+    "supersedes"
+  ],
+  "exact_policy": "EXACT_RETENTION_16",
+  "forbidden_retention_inputs": [
+    "value",
+    "answer",
+    "final_query",
+    "case_id",
+    "future_event",
+    "oracle_answer"
+  ],
+  "memory_parameter_count": 0,
+  "metadata_fields_firewall_pass": true,
+  "pass": true,
+  "policy_admits_signature": [
+    "self",
+    "metadata"
+  ],
+  "policy_source_firewall_pass": true,
+  "retention_metadata_fields": [
+    "family",
+    "entity",
+    "field",
+    "creation_episode",
+    "salience",
+    "supersedes"
+  ]
+}

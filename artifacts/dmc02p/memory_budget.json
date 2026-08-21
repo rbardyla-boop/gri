@@ -1,0 +1,7 @@
+{
+  "all_peaks_at_or_below_capacity": true,
+  "capacity": 16,
+  "forbidden_side_channel_attributes": [],
+  "max_observed_records": 16,
+  "pass": true
+}

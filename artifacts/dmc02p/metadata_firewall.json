@@ -1,0 +1,28 @@
+{
+  "forbidden_fields_absent": true,
+  "memory_record_fields": [
+    "memory_id",
+    "entity",
+    "field",
+    "creation_episode",
+    "supersedes",
+    "source_episode",
+    "hidden_value",
+    "salience"
+  ],
+  "no_final_query_argument": true,
+  "oracle_answer_source_absent": true,
+  "pass": true,
+  "policy_signature": [
+    "self",
+    "metadata"
+  ],
+  "retention_metadata_fields": [
+    "family",
+    "entity",
+    "field",
+    "creation_episode",
+    "salience",
+    "supersedes"
+  ]
+}

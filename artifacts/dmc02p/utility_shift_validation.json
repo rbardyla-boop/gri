@@ -1,0 +1,7 @@
+{
+  "after_phase_b_exact_active_set": true,
+  "before_update_all_phase_a": true,
+  "capacity": 16,
+  "obsolete_phase_a_evicted_after_update": true,
+  "pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "artifact_manifest": {
+    "entries": 20,
+    "errors": [],
+    "manifest": "SHA256SUMS.json",
+    "pass": true,
+    "root": "artifacts/dmc02a"
+  },
+  "dataset_manifest_hashes_match": true,
+  "expected_commit": "f10394d",
+  "pass": true,
+  "terminal_state": "DMC_02A_SELECTIVE_RETENTION_BENCHMARK_PASS",
+  "unchanged": true
+}

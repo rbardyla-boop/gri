@@ -1,0 +1,53 @@
+{
+  "backward_passes": 0,
+  "dmc01_commit": "48ae98f",
+  "dmc02a_commit": "f10394d",
+  "evidence_seeds": [],
+  "frozen_dmc01_evidence_seeds_for_future_unit": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "future_gates": {
+    "A_primary": 0.95,
+    "B_M1024": 0.95,
+    "C_SAL1024": 0.95,
+    "D_SUP_current_1024": 0.95,
+    "E_SUP_history_1024": 0.95,
+    "F_SHIFT": 0.95,
+    "G_FLOOD1024": 0.95,
+    "H_seed_consistency": {
+      "minimum_P_bounded": 0.9,
+      "required_checkpoints": "5/5"
+    },
+    "fifo_gap": 0.4,
+    "random_gap": 0.4
+  },
+  "future_primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "generation_commit": "4bd6c2b236096970eeda1256af1fe6707f4bd4c8",
+  "memory": {
+    "capacity": 16,
+    "controller_trainable_parameters": 0,
+    "modes": [
+      "EXACT_RETENTION_16",
+      "FIFO_16",
+      "RANDOM_16"
+    ],
+    "random_seed": 20260202
+  },
+  "optimizer": null,
+  "processor": {
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "name": "ImmutableRelationAnchorReasoner",
+    "train_depth": 4,
+    "trainable_parameters": 30912
+  },
+  "scientific_evaluation": false,
+  "scientific_training": false,
+  "status": "preregistered_structural_control_only",
+  "unit": "DMC-02P",
+  "world0_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1"
+}

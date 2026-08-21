@@ -1,0 +1,15 @@
+{
+  "DMC02P_CONFIG.json": "484309728c3de8ca60d1a0be6a01cc6206a4f137c0618aef8d341984bae44069",
+  "DMC02P_CONTRACT.md": "04b67b5bc01a10013ab8b10e94e3ea7868f1b342b349ec9e6d586b9e14925614",
+  "DMC02P_RECEIPT.json": "bfab5a5b74d72d11640d090450242f2b435637823e8452daa05a21cc184bbd35",
+  "dmc01_checkpoint_manifest.json": "5545361f77a8ec3a61ccfd2c1cb61f6d827bf49d1d73e8c7f8872cfdc95768ed",
+  "dmc02a_identity.json": "f469475a09f63d5530b886567c1824d99c59a736333beb4f546e612d8b1d49b7",
+  "hidden_vector_identity.json": "1b1878c6a12e2748dad97dab314cdc97c1732756422d0603281823a81e8a128c",
+  "memory_budget.json": "ec52e016d53898de6ba110a1ce140e280d2d75798871e6478fbe9e9d06372e20",
+  "metadata_firewall.json": "9dcadba5a636ddb49913bbd346451173d8a7eb9dd3876ca8b1f5d1b1fcd92ae6",
+  "parameter_identity.json": "f8427ca64cbe7dbc760cba52b38c52296f51bc435cb26bad3cc944d4f77812fe",
+  "retention_semantics.json": "bb68f177f63faf747cd04d36ebabda73d827cb3d3554d278db56b74ce7a69b97",
+  "supersession_validation.json": "7110b25f346fcd570209d489c4ae6e125888091a082e0f304e0a706a8f38084c",
+  "utility_shift_validation.json": "68a6c24a50f95d721b39f5bb637bf7581ef26c95bf57c07311b93e293983c494",
+  "world0_identity.json": "3eebe5f76b1e2783ee3d658fa80ee9bed37729991a37eac87d26fba89fd251c7"
+}

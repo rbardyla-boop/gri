@@ -1,0 +1,137 @@
+{
+  "memory_controller_parameters": 0,
+  "pass": true,
+  "rows": [
+    {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "completed_epoch": 80,
+      "controller_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "manifest_sha256_match": true,
+      "memory_parameters": [
+        0,
+        0,
+        0
+      ],
+      "parameter_count_in_checkpoint": 30912,
+      "pass": true,
+      "payload_model_type": "EXACT_MEMORY",
+      "processor_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "same_processor_state_across_modes": true,
+      "seed": 1337
+    },
+    {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1338_final.pt",
+      "checkpoint_sha256": "1c05cd6d5d9fc19e68afa8b03c753396c153aa8c8e62c82aeb42e4de3d547f0d",
+      "completed_epoch": 80,
+      "controller_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "manifest_sha256_match": true,
+      "memory_parameters": [
+        0,
+        0,
+        0
+      ],
+      "parameter_count_in_checkpoint": 30912,
+      "pass": true,
+      "payload_model_type": "EXACT_MEMORY",
+      "processor_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "same_processor_state_across_modes": true,
+      "seed": 1338
+    },
+    {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1339_final.pt",
+      "checkpoint_sha256": "a5cc2851cf64f2a289363ccaee63f0a64226fe854e2ab1d38feee10ef2ba3665",
+      "completed_epoch": 80,
+      "controller_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "manifest_sha256_match": true,
+      "memory_parameters": [
+        0,
+        0,
+        0
+      ],
+      "parameter_count_in_checkpoint": 30912,
+      "pass": true,
+      "payload_model_type": "EXACT_MEMORY",
+      "processor_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "same_processor_state_across_modes": true,
+      "seed": 1339
+    },
+    {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1340_final.pt",
+      "checkpoint_sha256": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+      "completed_epoch": 80,
+      "controller_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "manifest_sha256_match": true,
+      "memory_parameters": [
+        0,
+        0,
+        0
+      ],
+      "parameter_count_in_checkpoint": 30912,
+      "pass": true,
+      "payload_model_type": "EXACT_MEMORY",
+      "processor_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "same_processor_state_across_modes": true,
+      "seed": 1340
+    },
+    {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1341_final.pt",
+      "checkpoint_sha256": "58e9e88657883ee842700e2e7aabdb87ee822ebf96c8be48039a673856e7fd0d",
+      "completed_epoch": 80,
+      "controller_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "manifest_sha256_match": true,
+      "memory_parameters": [
+        0,
+        0,
+        0
+      ],
+      "parameter_count_in_checkpoint": 30912,
+      "pass": true,
+      "payload_model_type": "EXACT_MEMORY",
+      "processor_parameters": [
+        30912,
+        30912,
+        30912
+      ],
+      "same_processor_state_across_modes": true,
+      "seed": 1341
+    }
+  ],
+  "trainable_parameters": 30912
+}

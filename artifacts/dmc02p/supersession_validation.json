@@ -1,0 +1,8 @@
+{
+  "capacity": 16,
+  "current_memory_id": "structural-100",
+  "history_and_current_distinct": true,
+  "history_memory_id": "structural-0",
+  "pass": true,
+  "records_after_16_versions": 16
+}

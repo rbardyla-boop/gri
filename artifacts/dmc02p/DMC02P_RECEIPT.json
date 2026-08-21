@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "checkpoint_compatibility": true,
+    "dmc01_identity": true,
+    "dmc02a_identity": true,
+    "hidden_vector_identity": true,
+    "memory_budget": true,
+    "metadata_firewall": true,
+    "no_evidence": true,
+    "parameter_identity": true,
+    "retention_semantics": true,
+    "supersession": true,
+    "utility_shift": true,
+    "world0_identity": true
+  },
+  "evidence_seeds_executed": [],
+  "future_primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "scientific_evaluation": false,
+  "scientific_training": false,
+  "terminal_state": "DMC_02P_PREREGISTERED",
+  "unit": "DMC-02P"
+}

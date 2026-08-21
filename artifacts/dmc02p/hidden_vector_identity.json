@@ -1,0 +1,12 @@
+{
+  "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+  "compression": false,
+  "dtype": "torch.float32",
+  "pass": true,
+  "quantization": false,
+  "same_tensor_storage": true,
+  "shape": [
+    49
+  ],
+  "value_equal": true
+}
