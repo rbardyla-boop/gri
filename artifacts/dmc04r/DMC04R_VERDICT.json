@@ -1,0 +1,30 @@
+{
+  "unit": "DMC-04R",
+  "terminal_state": "DMC_04R_REPAIR_REQUIRED",
+  "execution_integrity": false,
+  "failure_stage": "control_evaluation",
+  "failure": {
+    "evidence_seed": 1337,
+    "evaluation_split": "extrapolation",
+    "mode": "a_only",
+    "exception": "ValueError",
+    "message": "selected descriptor group has no temporally eligible record",
+    "interpretation": "The frozen resolver should represent this control outcome as a retrieval miss; the runner aborted instead of recording the miss."
+  },
+  "preflight_pass": true,
+  "non_evidence_replay_pass": true,
+  "evidence_seeds_executed": [1337],
+  "evidence_seeds_not_executed": [1338, 1339, 1340, 1341],
+  "evidence_training_executed": true,
+  "scientific_retrieval_accuracy_measured": false,
+  "retrieval_metrics_computed": false,
+  "checkpoint": {
+    "path": "artifacts/dmc04r/checkpoints/retrieval_seed1337_final.pt",
+    "sha256": "ca4c457f7a37ad1a2b4394008c30450eb99d77741033883d8f40221b2fc49462"
+  },
+  "no_retry": true,
+  "no_seed_replacement": true,
+  "stop_required": true,
+  "frozen_protocol_changed": false,
+  "dmc03_integration_executed": false
+}

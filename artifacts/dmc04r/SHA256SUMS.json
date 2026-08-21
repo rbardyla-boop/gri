@@ -1,0 +1,6 @@
+{
+  "DMC04R_PREFLIGHT.json": "6c824a8fa1a8c3729fe5817edd450eea3ae1bf36c305aae4f9710ac2ec0f1f21",
+  "DMC04R_REPORT.md": "4da45462f051010494c771f2e24d6ab7bcbd514667cae81ebf0d6d0fb8b2c224",
+  "DMC04R_VERDICT.json": "7f818cee18e8581df2679d83d09d5e0b6a82fb227667ee773bfe1768a6af2fdc",
+  "checkpoints/retrieval_seed1337_final.pt": "ca4c457f7a37ad1a2b4394008c30450eb99d77741033883d8f40221b2fc49462"
+}
