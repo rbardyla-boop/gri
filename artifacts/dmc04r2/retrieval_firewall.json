@@ -1,0 +1,113 @@
+{
+  "forbidden_inputs": [
+    "logical_key",
+    "answer",
+    "answer class",
+    "correct candidate index",
+    "oracle retrieval decision",
+    "hidden_value",
+    "case ID",
+    "record ID",
+    "future events",
+    "entity",
+    "field"
+  ],
+  "pass": true,
+  "per_seed": {
+    "1337": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "calls": 10688,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "forbidden_fields_union": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1338": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "calls": 10688,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "forbidden_fields_union": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1339": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "calls": 10688,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "forbidden_fields_union": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1340": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "calls": 10688,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "forbidden_fields_union": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1341": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "calls": 10688,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "forbidden_fields_union": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    }
+  }
+}

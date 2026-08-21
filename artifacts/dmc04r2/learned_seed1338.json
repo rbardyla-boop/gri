@@ -1,0 +1,1204 @@
+{
+  "case_count": 112,
+  "components": {
+    "ALIAS16_A": 1.0,
+    "ALIAS16_H1": 1.0,
+    "COMP16_A": 1.0,
+    "COMP16_H1": 1.0,
+    "CURRENT16_A": 1.0,
+    "CURRENT16_H1": 1.0,
+    "HARD16_A": 1.0,
+    "HARD16_H1": 1.0,
+    "HISTORY16_A": 1.0,
+    "HISTORY16_H1": 1.0,
+    "NOISE32_A": 1.0,
+    "NOISE32_H1": 1.0,
+    "NOISE8_A": 1.0,
+    "NOISE8_H1": 1.0,
+    "P_answer": 1.0,
+    "P_retrieval": 1.0
+  },
+  "condition_metrics": [
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "family": "alias",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    },
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "family": "compositional",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    },
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "noise_32",
+      "family": "cue_noise",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    },
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "noise_8",
+      "family": "cue_noise",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    },
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "family": "hard_negative",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    },
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "current_candidate_16",
+      "family": "versioned",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    },
+    {
+      "answer_accuracy": 1.0,
+      "case_count": 16,
+      "condition": "history_candidate_16",
+      "family": "versioned",
+      "retrieval_errors": 0,
+      "retrieval_hit_at_1": 1.0
+    }
+  ],
+  "decisions": [
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0000",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-cab8f6a2b2c90073d189",
+      "target_record_id": "r-cab8f6a2b2c90073d189"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0001",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-f36a7c77e25342a05c67",
+      "target_record_id": "r-f36a7c77e25342a05c67"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0002",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1259b49f788a6bd4224e",
+      "target_record_id": "r-1259b49f788a6bd4224e"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0003",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c4f1f186dd5e65d113ad",
+      "target_record_id": "r-c4f1f186dd5e65d113ad"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0004",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3b1ddc31876f43b64849",
+      "target_record_id": "r-3b1ddc31876f43b64849"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0005",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-ab4ba40befe8031f6328",
+      "target_record_id": "r-ab4ba40befe8031f6328"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0006",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3e16d1cb85519610035f",
+      "target_record_id": "r-3e16d1cb85519610035f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0007",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-2a0dd9d0908b9e845978",
+      "target_record_id": "r-2a0dd9d0908b9e845978"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0008",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-6c67236428c4660cfdb1",
+      "target_record_id": "r-6c67236428c4660cfdb1"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0009",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1fba47522822cc5d572d",
+      "target_record_id": "r-1fba47522822cc5d572d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0010",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-6d741cdda4432b63da35",
+      "target_record_id": "r-6d741cdda4432b63da35"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0011",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-918926c637c18e247c5b",
+      "target_record_id": "r-918926c637c18e247c5b"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0012",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-f0dcb8f73d7fc7e4b329",
+      "target_record_id": "r-f0dcb8f73d7fc7e4b329"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0013",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-75b0f8089aa4d2700ecf",
+      "target_record_id": "r-75b0f8089aa4d2700ecf"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0014",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-0c3c30bdffc6a125f186",
+      "target_record_id": "r-0c3c30bdffc6a125f186"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-alias-candidate_16-0015",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-13b1d15c8e0e0d904372",
+      "target_record_id": "r-13b1d15c8e0e0d904372"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0000",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-151b2794da2cfab9fd6f",
+      "target_record_id": "r-151b2794da2cfab9fd6f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0001",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-6efbc06fa84ed86e421f",
+      "target_record_id": "r-6efbc06fa84ed86e421f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0002",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-9ddf43829f197a669aef",
+      "target_record_id": "r-9ddf43829f197a669aef"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0003",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-b5211649dec6684de74f",
+      "target_record_id": "r-b5211649dec6684de74f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0004",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-6110cb08bf9101681fad",
+      "target_record_id": "r-6110cb08bf9101681fad"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0005",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-90ee2093644aa3daa7b4",
+      "target_record_id": "r-90ee2093644aa3daa7b4"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0006",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-782b0f296bdd9ba0d0cd",
+      "target_record_id": "r-782b0f296bdd9ba0d0cd"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0007",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-01c58f54c7e830531e08",
+      "target_record_id": "r-01c58f54c7e830531e08"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0008",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-b8ecc8cd57d6f91e331b",
+      "target_record_id": "r-b8ecc8cd57d6f91e331b"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0009",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-e3e493c058b392b63154",
+      "target_record_id": "r-e3e493c058b392b63154"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0010",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-544a9a98224e473950a8",
+      "target_record_id": "r-544a9a98224e473950a8"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0011",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-e554a6eb464ebdd05468",
+      "target_record_id": "r-e554a6eb464ebdd05468"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0012",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-90c16e7ebdb19419bf7e",
+      "target_record_id": "r-90c16e7ebdb19419bf7e"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0013",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-463df0f50574ef030bcb",
+      "target_record_id": "r-463df0f50574ef030bcb"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0014",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3944d26ec0866fa016a9",
+      "target_record_id": "r-3944d26ec0866fa016a9"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-compositional-candidate_16-0015",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-309effca57dac3821a4f",
+      "target_record_id": "r-309effca57dac3821a4f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0000",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-cc19007d324256e07929",
+      "target_record_id": "r-cc19007d324256e07929"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0001",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-dab14b5afcc6a722fe80",
+      "target_record_id": "r-dab14b5afcc6a722fe80"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0002",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-351eab2f01718fa9229d",
+      "target_record_id": "r-351eab2f01718fa9229d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0003",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-69398818f95622231dd1",
+      "target_record_id": "r-69398818f95622231dd1"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0004",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-4fab060c7a46b438dca8",
+      "target_record_id": "r-4fab060c7a46b438dca8"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0005",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-e213b8e79f9b2229e727",
+      "target_record_id": "r-e213b8e79f9b2229e727"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0006",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-ab72a033955148d53279",
+      "target_record_id": "r-ab72a033955148d53279"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0007",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-afb679bae1646b9c4617",
+      "target_record_id": "r-afb679bae1646b9c4617"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0008",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1410d6de2b570f730fed",
+      "target_record_id": "r-1410d6de2b570f730fed"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0009",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-d1905a6579216414f4fd",
+      "target_record_id": "r-d1905a6579216414f4fd"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0010",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-f937fb3dc26e99572de1",
+      "target_record_id": "r-f937fb3dc26e99572de1"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0011",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-d94b681f6e206e22c2b8",
+      "target_record_id": "r-d94b681f6e206e22c2b8"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0012",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-8f0c2af32fe3b94207aa",
+      "target_record_id": "r-8f0c2af32fe3b94207aa"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0013",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-7049d4be2536cd1b5e17",
+      "target_record_id": "r-7049d4be2536cd1b5e17"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0014",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c42f6b3453c60bc9832e",
+      "target_record_id": "r-c42f6b3453c60bc9832e"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0015",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-6da3d06340fe71068c5b",
+      "target_record_id": "r-6da3d06340fe71068c5b"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0000",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c9d2532015bb4e0f2129",
+      "target_record_id": "r-c9d2532015bb4e0f2129"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0001",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-a7bb77f66dc9366153ea",
+      "target_record_id": "r-a7bb77f66dc9366153ea"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0002",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-8c546e1f570db651d3e6",
+      "target_record_id": "r-8c546e1f570db651d3e6"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0003",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-51b64d2b9b895bc30a96",
+      "target_record_id": "r-51b64d2b9b895bc30a96"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0004",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-27e28e5a612aea327b20",
+      "target_record_id": "r-27e28e5a612aea327b20"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0005",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-a32ff9121fea89d7f96d",
+      "target_record_id": "r-a32ff9121fea89d7f96d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0006",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-edaf795f3bf70fb9491d",
+      "target_record_id": "r-edaf795f3bf70fb9491d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0007",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-4fdcb62303dbc98394e2",
+      "target_record_id": "r-4fdcb62303dbc98394e2"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0008",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-5a7f130abb852afceb16",
+      "target_record_id": "r-5a7f130abb852afceb16"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0009",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-f8b32dbb84cafc595565",
+      "target_record_id": "r-f8b32dbb84cafc595565"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0010",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c6e9835b1449a8777d04",
+      "target_record_id": "r-c6e9835b1449a8777d04"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0011",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-b0acaefdec1ae71c7ac6",
+      "target_record_id": "r-b0acaefdec1ae71c7ac6"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0012",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1344793352242c7b6332",
+      "target_record_id": "r-1344793352242c7b6332"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0013",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-eb46efd48f12aaf86fad",
+      "target_record_id": "r-eb46efd48f12aaf86fad"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0014",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-7dcd73d0849feee96872",
+      "target_record_id": "r-7dcd73d0849feee96872"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0015",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-965546bf7082b9a52abd",
+      "target_record_id": "r-965546bf7082b9a52abd"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0000",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-865452ecbb54da69e6ec",
+      "target_record_id": "r-865452ecbb54da69e6ec"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0001",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c029b03f797a7a7165e5",
+      "target_record_id": "r-c029b03f797a7a7165e5"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0002",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-19b5221c325c27425b21",
+      "target_record_id": "r-19b5221c325c27425b21"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0003",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-164d972e4eed39cc51fa",
+      "target_record_id": "r-164d972e4eed39cc51fa"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0004",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-50d0fbb3c19d59d06cb4",
+      "target_record_id": "r-50d0fbb3c19d59d06cb4"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0005",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-49437b1197aae6475a5c",
+      "target_record_id": "r-49437b1197aae6475a5c"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0006",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-eec592b2c1cec8fd34f3",
+      "target_record_id": "r-eec592b2c1cec8fd34f3"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0007",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3476d91d205d495abc8a",
+      "target_record_id": "r-3476d91d205d495abc8a"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0008",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-bc3515ff20f8d72dc2c9",
+      "target_record_id": "r-bc3515ff20f8d72dc2c9"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0009",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-2ff767c694892ef00bb6",
+      "target_record_id": "r-2ff767c694892ef00bb6"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0010",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1d3773db35f5d5238a9d",
+      "target_record_id": "r-1d3773db35f5d5238a9d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0011",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c9dcc4b075854a59c215",
+      "target_record_id": "r-c9dcc4b075854a59c215"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0012",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-a0faa95bad0ab7d74e29",
+      "target_record_id": "r-a0faa95bad0ab7d74e29"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0013",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-b4c6a273d978504eb2b6",
+      "target_record_id": "r-b4c6a273d978504eb2b6"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0014",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1e6f219ea115082ede71",
+      "target_record_id": "r-1e6f219ea115082ede71"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0015",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3224cafdab7164d87790",
+      "target_record_id": "r-3224cafdab7164d87790"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0000",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-958f0401083832c87b51",
+      "target_record_id": "r-958f0401083832c87b51"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0001",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-9d2ee3252120a6ea3aa4",
+      "target_record_id": "r-9d2ee3252120a6ea3aa4"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0002",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-292d1ce03fac917e327f",
+      "target_record_id": "r-292d1ce03fac917e327f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0003",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3e4fcbad03b3999e3e7d",
+      "target_record_id": "r-3e4fcbad03b3999e3e7d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0004",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-082ea7aa1461c5de63a7",
+      "target_record_id": "r-082ea7aa1461c5de63a7"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0005",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1db5bb0a93fe08aed420",
+      "target_record_id": "r-1db5bb0a93fe08aed420"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0006",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-2e536ed507af3b03cb54",
+      "target_record_id": "r-2e536ed507af3b03cb54"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0007",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-96e58e983937c32fb52a",
+      "target_record_id": "r-96e58e983937c32fb52a"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0008",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-12bd25404f2e14e15aa4",
+      "target_record_id": "r-12bd25404f2e14e15aa4"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0009",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-4d80f265e7709d226f3f",
+      "target_record_id": "r-4d80f265e7709d226f3f"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0010",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-d0daac3717fe2e07fd9e",
+      "target_record_id": "r-d0daac3717fe2e07fd9e"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0011",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-4d5885243d187ccaeffa",
+      "target_record_id": "r-4d5885243d187ccaeffa"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0012",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-2fedd069f53a9008f5aa",
+      "target_record_id": "r-2fedd069f53a9008f5aa"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0013",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-7d86d31437fc0a1fd2b1",
+      "target_record_id": "r-7d86d31437fc0a1fd2b1"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0014",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-b0ba062dfb8e557b242a",
+      "target_record_id": "r-b0ba062dfb8e557b242a"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0015",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-8a8464c13f8318673bf8",
+      "target_record_id": "r-8a8464c13f8318673bf8"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0000",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-17d1ba9282dadea242ee",
+      "target_record_id": "r-17d1ba9282dadea242ee"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0001",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-8451739062d440247f19",
+      "target_record_id": "r-8451739062d440247f19"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0002",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-9eea520cbf5534e5b5ca",
+      "target_record_id": "r-9eea520cbf5534e5b5ca"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0003",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-3687e7ddb094e6fc5674",
+      "target_record_id": "r-3687e7ddb094e6fc5674"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0004",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-73f4914e2c108f9af308",
+      "target_record_id": "r-73f4914e2c108f9af308"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0005",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-707d4c3dd8512e526d29",
+      "target_record_id": "r-707d4c3dd8512e526d29"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0006",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-0f1d39a796c10ed51443",
+      "target_record_id": "r-0f1d39a796c10ed51443"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0007",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-cb7d4087d61d329461d8",
+      "target_record_id": "r-cb7d4087d61d329461d8"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0008",
+      "expected_answer": "ORANGE",
+      "missing_retrieval": false,
+      "predicted_answer": "ORANGE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-c9816966550790154296",
+      "target_record_id": "r-c9816966550790154296"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0009",
+      "expected_answer": "PURPLE",
+      "missing_retrieval": false,
+      "predicted_answer": "PURPLE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-78237b3b1d751a4b0f4d",
+      "target_record_id": "r-78237b3b1d751a4b0f4d"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0010",
+      "expected_answer": "BLACK",
+      "missing_retrieval": false,
+      "predicted_answer": "BLACK",
+      "retrieval_hit": true,
+      "selected_record_id": "r-1d495984efa9f6d63953",
+      "target_record_id": "r-1d495984efa9f6d63953"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0011",
+      "expected_answer": "WHITE",
+      "missing_retrieval": false,
+      "predicted_answer": "WHITE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-9f669a06455a22e37506",
+      "target_record_id": "r-9f669a06455a22e37506"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0012",
+      "expected_answer": "RED",
+      "missing_retrieval": false,
+      "predicted_answer": "RED",
+      "retrieval_hit": true,
+      "selected_record_id": "r-4b226db5d1f3eebfadd2",
+      "target_record_id": "r-4b226db5d1f3eebfadd2"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0013",
+      "expected_answer": "BLUE",
+      "missing_retrieval": false,
+      "predicted_answer": "BLUE",
+      "retrieval_hit": true,
+      "selected_record_id": "r-5b2b3c43c8bf1d6b60e5",
+      "target_record_id": "r-5b2b3c43c8bf1d6b60e5"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0014",
+      "expected_answer": "GREEN",
+      "missing_retrieval": false,
+      "predicted_answer": "GREEN",
+      "retrieval_hit": true,
+      "selected_record_id": "r-11b12cb7c2fc62e1761c",
+      "target_record_id": "r-11b12cb7c2fc62e1761c"
+    },
+    {
+      "answer_hit": true,
+      "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0015",
+      "expected_answer": "YELLOW",
+      "missing_retrieval": false,
+      "predicted_answer": "YELLOW",
+      "retrieval_hit": true,
+      "selected_record_id": "r-577ab3359368cf397a07",
+      "target_record_id": "r-577ab3359368cf397a07"
+    }
+  ],
+  "decisions_sha256": "879ec494e84262386f38c9e313c43bfe397a06814aab9f2fcecf5a78c1a16130",
+  "evaluation_split": "extrapolation",
+  "mode": "learned"
+}

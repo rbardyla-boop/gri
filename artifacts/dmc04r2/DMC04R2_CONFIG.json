@@ -1,0 +1,49 @@
+{
+  "dmc04a_commit": "90a30cb",
+  "dmc04p_commit": "61c9ab9",
+  "dmc04pa_commit": "c98e0a0",
+  "evaluation_semantics": "no temporally eligible record -> retrieval miss",
+  "evidence_training_executed": true,
+  "fixed_decoder": {
+    "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+    "seed": 1337,
+    "sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6"
+  },
+  "invalid_preflight_commit": "d6c9bb5",
+  "primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)",
+  "primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)",
+  "retrieval_evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "retriever": {
+    "W_A": [
+      8,
+      8
+    ],
+    "W_B": [
+      8,
+      8
+    ],
+    "class": "factorized_atomic_bilinear",
+    "trainable_parameters": 128
+  },
+  "scientific_retrieval_accuracy_measured": true,
+  "source_commit": "b46c7ee5315fe773782a91678c36de437870b826",
+  "status": "fixed_decoder_learned_associative_retrieval_evidence",
+  "training": {
+    "batch_size": 64,
+    "device": "cpu",
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.01,
+    "optimizer": "AdamW",
+    "stateless_order": "SHA256('DMC04_ORDER|' + str(seed) + '|' + str(epoch) + '|' + case_id)",
+    "torch_threads": 1,
+    "weight_decay": 0.0
+  },
+  "unit": "DMC-04R2"
+}

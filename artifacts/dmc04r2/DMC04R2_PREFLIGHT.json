@@ -1,0 +1,261 @@
+{
+  "all_hidden_vector_compatibility": {
+    "accuracy": 1.0,
+    "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+    "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+    "correctly_decoded": 4736,
+    "failures": [],
+    "incorrectly_decoded": 0,
+    "pass": true,
+    "processor": "DMC-01 exact seed 1337",
+    "rows": [
+      {
+        "accuracy": 1.0,
+        "correctly_decoded": 1472,
+        "hidden_vectors_checked": 1472,
+        "incorrectly_decoded": 0,
+        "split": "train"
+      },
+      {
+        "accuracy": 1.0,
+        "correctly_decoded": 1472,
+        "hidden_vectors_checked": 1472,
+        "incorrectly_decoded": 0,
+        "split": "iid"
+      },
+      {
+        "accuracy": 1.0,
+        "correctly_decoded": 1792,
+        "hidden_vectors_checked": 1792,
+        "incorrectly_decoded": 0,
+        "split": "extrapolation"
+      }
+    ],
+    "total_hidden_vectors_checked": 4736
+  },
+  "capacity_audit": {
+    "all_candidates_scored": true,
+    "case_count": 368,
+    "max_candidate_count": 16,
+    "pass": true,
+    "violations": []
+  },
+  "dmc04p_protocol_identity": {
+    "checks": {
+      "evidence_seeds": true,
+      "model_class": true,
+      "model_parameters": true,
+      "no_evidence_training": true,
+      "terminal": true,
+      "training": true
+    },
+    "config_sha256": "7fb5c38ea638d93bb27c26e6d5a17ab2f1951f1fb3a6c59400b23dbdb98519bc",
+    "pass": true,
+    "receipt_sha256": "1a6aeda3d914b843976fa6981e8c6d49bd24950dc78702bcc51fbcec0e27b1fe"
+  },
+  "evidence_seeds_executed": [],
+  "evidence_training_executed": false,
+  "fixed_decoder": {
+    "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+    "seed": 1337,
+    "sha256_after": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+    "sha256_before": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+    "trainable_parameters": 0
+  },
+  "full_tests": {
+    "command": "python3 -m pytest -q",
+    "last_output": "........................................................................ [ 57%]\n.....................................................                    [100%]\n",
+    "pass": true,
+    "returncode": 0
+  },
+  "identities": {
+    "DMC-01": {
+      "artifact_path": "artifacts/dmc01",
+      "expected_commit": "48ae98f",
+      "expected_terminal_state": "DMC_01_EXACT_MEMORY_ADVANCES",
+      "manifest": {
+        "entries": 36,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-01",
+      "observed_terminal_states": [
+        "DMC_01_EXACT_MEMORY_ADVANCES"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-03": {
+      "artifact_path": "artifacts/dmc03",
+      "expected_commit": "489ec45",
+      "expected_terminal_state": "DMC_03_LEARNED_RETENTION_ADVANCES",
+      "manifest": {
+        "entries": 51,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-03",
+      "observed_terminal_states": [
+        "DMC_03_LEARNED_RETENTION_ADVANCES"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04 invalid preflight": {
+      "artifact_path": "artifacts/dmc04",
+      "expected_commit": "d6c9bb5",
+      "expected_terminal_state": "DMC_04_INVALID",
+      "manifest": {
+        "entries": 1,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04 invalid preflight",
+      "observed_terminal_states": [
+        "DMC_04_INVALID"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04A": {
+      "artifact_path": "artifacts/dmc04a",
+      "expected_commit": "90a30cb",
+      "expected_terminal_state": "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS",
+      "manifest": {
+        "entries": 25,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04A",
+      "observed_terminal_states": [
+        "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04P": {
+      "artifact_path": "artifacts/dmc04p",
+      "expected_commit": "61c9ab9",
+      "expected_terminal_state": "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED",
+      "manifest": {
+        "entries": 22,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04P",
+      "observed_terminal_states": [
+        "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04P-A": {
+      "artifact_path": "artifacts/dmc04pa",
+      "expected_commit": "c98e0a0",
+      "expected_terminal_state": "DMC_04PA_FIXED_DECODER_PREREGISTERED",
+      "manifest": {
+        "entries": 13,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04P-A",
+      "observed_terminal_states": [
+        "DMC_04PA_FIXED_DECODER_PREREGISTERED"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "WORLD-0": {
+      "artifact_path": "artifacts/frozen/world0_v0_1",
+      "expected_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1",
+      "manifest": {
+        "entries": 0,
+        "errors": [],
+        "manifest_available": false,
+        "pass": true,
+        "verification_basis": "frozen_git_commit_boundary"
+      },
+      "name": "WORLD-0",
+      "pass": true,
+      "unchanged_since_expected_commit": true,
+      "validator_command": "python3 scripts/validate_world0.py artifacts/frozen/world0_v0_1",
+      "validator_pass": true,
+      "validator_terminal": "GRI_02_WORLD0_PASS"
+    }
+  },
+  "non_evidence_replay": {
+    "equal": {
+      "canonical_state_hash": true,
+      "final_W_A": true,
+      "final_W_B": true,
+      "final_loss": true,
+      "initial_state": true,
+      "training_order": true
+    },
+    "first": {
+      "final_loss": 0.3321077227592468,
+      "final_state_hash": "21f0bf604b242f0e5ce46f710d0db44a2e2bf6d1c4f145e4280452b8515c43ca",
+      "initial_state_hash": "88c62e45f283b0bd38c806bd5666315f83b9eff383ae23be592a45adc87d1487",
+      "training_order_hash": "50d2a86fbb8c5d8cf9a4d809f73617331cd597eea8000335ee3e01e0daa76291"
+    },
+    "pass": true,
+    "second": {
+      "final_loss": 0.3321077227592468,
+      "final_state_hash": "21f0bf604b242f0e5ce46f710d0db44a2e2bf6d1c4f145e4280452b8515c43ca",
+      "initial_state_hash": "88c62e45f283b0bd38c806bd5666315f83b9eff383ae23be592a45adc87d1487",
+      "training_order_hash": "50d2a86fbb8c5d8cf9a4d809f73617331cd597eea8000335ee3e01e0daa76291"
+    },
+    "seed": 9090
+  },
+  "non_evidence_replay_pass": true,
+  "oracle_end_to_end_validation": {
+    "pass": true,
+    "rows": [
+      {
+        "case_count": 128,
+        "final_answer_accuracy": 1.0,
+        "retrieval_hit_at_1": 1.0,
+        "split": "train"
+      },
+      {
+        "case_count": 128,
+        "final_answer_accuracy": 1.0,
+        "retrieval_hit_at_1": 1.0,
+        "split": "iid"
+      },
+      {
+        "case_count": 112,
+        "final_answer_accuracy": 1.0,
+        "retrieval_hit_at_1": 1.0,
+        "split": "extrapolation"
+      }
+    ],
+    "scientific_learned_retrieval_not_measured": true
+  },
+  "preflight_pass": true,
+  "scientific_retrieval_accuracy_measured": false,
+  "training_manifest_identity": {
+    "case_count": 128,
+    "frozen_manifest_sha256": "cbcd151651fadae0c744cfa7ef34219267348942134419a2fcc297c5e7146232",
+    "non_train_cases_used_for_training": 0,
+    "observed_manifest_sha256": "cbcd151651fadae0c744cfa7ef34219267348942134419a2fcc297c5e7146232",
+    "pass": true,
+    "split": "train",
+    "target_type": "retrieval_descriptor_group",
+    "train_dataset_jsonl_sha256": "65dfa0f2e37059293f46ee3973ce7b7f2573e0175abfc362d75dd52b17b17e09",
+    "train_only": true
+  },
+  "unit": "DMC-04R2"
+}

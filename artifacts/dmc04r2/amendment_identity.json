@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc04pa",
+  "expected_commit": "c98e0a0",
+  "expected_terminal_state": "DMC_04PA_FIXED_DECODER_PREREGISTERED",
+  "manifest": {
+    "entries": 13,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-04P-A",
+  "observed_terminal_states": [
+    "DMC_04PA_FIXED_DECODER_PREREGISTERED"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}

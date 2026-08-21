@@ -1,0 +1,11 @@
+{
+  "memory_parameters": 0,
+  "optimizer_parameters": [
+    "W_A",
+    "W_B"
+  ],
+  "pass": true,
+  "processor_parameters": 0,
+  "retention_parameters": 0,
+  "trainable_parameters": 128
+}

@@ -1,0 +1,34 @@
+{
+  "accuracy": 1.0,
+  "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+  "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+  "correctly_decoded": 4736,
+  "failures": [],
+  "incorrectly_decoded": 0,
+  "pass": true,
+  "processor": "DMC-01 exact seed 1337",
+  "rows": [
+    {
+      "accuracy": 1.0,
+      "correctly_decoded": 1472,
+      "hidden_vectors_checked": 1472,
+      "incorrectly_decoded": 0,
+      "split": "train"
+    },
+    {
+      "accuracy": 1.0,
+      "correctly_decoded": 1472,
+      "hidden_vectors_checked": 1472,
+      "incorrectly_decoded": 0,
+      "split": "iid"
+    },
+    {
+      "accuracy": 1.0,
+      "correctly_decoded": 1792,
+      "hidden_vectors_checked": 1792,
+      "incorrectly_decoded": 0,
+      "split": "extrapolation"
+    }
+  ],
+  "total_hidden_vectors_checked": 4736
+}
