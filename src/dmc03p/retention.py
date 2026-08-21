@@ -270,6 +270,8 @@ class LearnedRetention16Ledger:
         self.family = family
         self.active_entities: frozenset[str] | None = None
         self._records: list[MemoryRecord] = []
+        self._score_cache: dict[tuple[float, float], float] = {}
+        self._tie_cache: dict[str, str] = {}
 
     def __len__(self) -> int:
         return len(self._records)
@@ -280,6 +282,8 @@ class LearnedRetention16Ledger:
     def clear(self) -> None:
         self._records.clear()
         self.active_entities = None
+        self._score_cache.clear()
+        self._tie_cache.clear()
 
     @staticmethod
     def tie_key(memory_id: str) -> str:
@@ -288,15 +292,25 @@ class LearnedRetention16Ledger:
     def _score(self, record: MemoryRecord) -> float:
         metadata = record_metadata(record, self.family)
         features = retention_features(metadata, self.active_entities)
+        key = tuple(float(value) for value in features.tolist())
+        if key in self._score_cache:
+            return self._score_cache[key]
         with torch.no_grad():
-            return float(self.scorer(features).item())
+            score = float(self.scorer(features).item())
+        self._score_cache[key] = score
+        return score
+
+    def _tie_key(self, memory_id: str) -> str:
+        if memory_id not in self._tie_cache:
+            self._tie_cache[memory_id] = self.tie_key(memory_id)
+        return self._tie_cache[memory_id]
 
     def _rerank(self, candidates: Sequence[MemoryRecord]) -> None:
         if len(candidates) <= CAPACITY:
             self._records = list(candidates)
             self._assert_capacity()
             return
-        ranked = sorted(candidates, key=lambda record: (-self._score(record), self.tie_key(record.memory_id)))
+        ranked = sorted(candidates, key=lambda record: (-self._score(record), self._tie_key(record.memory_id)))
         self._records = ranked[:CAPACITY]
         self._assert_capacity()
 
@@ -440,4 +454,3 @@ def training_protocol() -> dict[str, Any]:
         "hyperparameter_search": False,
         "evidence_training_executed_in_DMC03P": False,
     }
-

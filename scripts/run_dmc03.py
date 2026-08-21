@@ -337,8 +337,13 @@ class ShuffledMetadataLedger(LearnedRetention16Ledger):
         source = self.feature_sources[record.memory_id]
         metadata = record_metadata(source, self.family)
         features = retention_features(metadata, self.active_entities)
+        key = tuple(float(value) for value in features.tolist())
+        if key in self._score_cache:
+            return self._score_cache[key]
         with torch.no_grad():
-            return float(self.scorer(features).item())
+            score = float(self.scorer(features).item())
+        self._score_cache[key] = score
+        return score
 
 
 def write_record_from_event(event: dict[str, Any], episode_index: int) -> MemoryRecord:
