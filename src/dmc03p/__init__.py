@@ -1,0 +1,43 @@
+"""DMC-03P learned selective-retention preregistration layer."""
+
+from .retention import (
+    AFFINE_PARAMETER_COUNT,
+    CAPACITY,
+    EVIDENCE_SEEDS,
+    FEATURE_DIM,
+    NON_EVIDENCE_SEED,
+    AffineRetentionScorer,
+    DMC03PController,
+    LearnedRetention16Ledger,
+    RetentionFeatureEncoder,
+    build_retention_optimizer,
+    freeze_processor,
+    initialize_scorer,
+    load_frozen_processor,
+    model_state_hash,
+    retention_features,
+    stateless_order,
+    shuffle_metadata_permutation,
+    trainable_parameter_count,
+)
+
+__all__ = [
+    "AFFINE_PARAMETER_COUNT",
+    "CAPACITY",
+    "EVIDENCE_SEEDS",
+    "FEATURE_DIM",
+    "NON_EVIDENCE_SEED",
+    "AffineRetentionScorer",
+    "DMC03PController",
+    "LearnedRetention16Ledger",
+    "RetentionFeatureEncoder",
+    "build_retention_optimizer",
+    "freeze_processor",
+    "initialize_scorer",
+    "load_frozen_processor",
+    "model_state_hash",
+    "retention_features",
+    "stateless_order",
+    "shuffle_metadata_permutation",
+    "trainable_parameter_count",
+]
