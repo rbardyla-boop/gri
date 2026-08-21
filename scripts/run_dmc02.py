@@ -50,6 +50,19 @@ def write_json(path: Path, value: object) -> None:
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
 
 
+def verify_manifest(root: Path) -> dict[str, Any]:
+    manifest_path = root / "SHA256SUMS.json"
+    manifest = json.loads(manifest_path.read_text())
+    errors = []
+    for relative, expected in manifest.items():
+        path = root / relative
+        if not path.exists():
+            errors.append({"path": relative, "error": "missing"})
+        elif sha256(path) != expected:
+            errors.append({"path": relative, "error": "sha256_mismatch"})
+    return {"root": str(root.relative_to(ROOT)), "entries": len(manifest), "pass": not errors, "errors": errors}
+
+
 def read_dataset() -> dict[str, list[dict[str, Any]]]:
     manifest = json.loads((DMC02A_DIR / "dataset_manifest.json").read_text())
     return {split: [json.loads(line) for line in (ROOT / row["path"]).read_text().splitlines() if line] for split, row in manifest.items()}
@@ -337,4 +350,3 @@ def run() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(run())
-
