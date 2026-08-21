@@ -1,0 +1,49 @@
+{
+  "corrected_rule": "selected descriptor group -> no temporally eligible record -> retrieval_hit=0 -> predicted_answer=null -> continue evaluation",
+  "evidence_training_executed": false,
+  "fresh_execution_required": true,
+  "fresh_execution_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "fresh_execution_unit": "DMC-04R2",
+  "historical_dmc04r_commit": "b057f10",
+  "historical_dmc04r_terminal": "DMC_04R_REPAIR_REQUIRED",
+  "prior_evidence_seed_consumption": [
+    1337
+  ],
+  "scientific_accuracy_measured": false,
+  "terminal_state": "DMC_04RA_FIXED_MISSING_RETRIEVAL_PREREGISTERED",
+  "unchanged_protocol": {
+    "evidence_seeds": [
+      1337,
+      1338,
+      1339,
+      1340,
+      1341
+    ],
+    "fixed_decoder_seed": 1337,
+    "no_architecture_change": true,
+    "no_data_change": true,
+    "no_hyperparameter_change": true,
+    "no_threshold_change": true,
+    "pass": true,
+    "retriever_parameters": 128,
+    "training": {
+      "batch_size": 64,
+      "device": "cpu",
+      "epochs": 80,
+      "gradient_clip": 1.0,
+      "group_level_cross_entropy": true,
+      "learning_rate": 0.01,
+      "optimizer": "AdamW",
+      "torch_threads": 1,
+      "train_split_only": true,
+      "weight_decay": 0.0
+    }
+  },
+  "unit": "DMC-04R-A"
+}

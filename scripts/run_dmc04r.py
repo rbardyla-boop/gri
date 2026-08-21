@@ -5,6 +5,7 @@ import copy
 import hashlib
 import json
 import math
+import os
 import platform
 import statistics
 import subprocess
@@ -58,7 +59,10 @@ from generate_dmc04pa import (  # noqa: E402
 )
 
 
-OUT = ROOT / "artifacts/dmc04r"
+CORRECTED_EVALUATOR = os.environ.get("DMC04R_CORRECTED_EVALUATOR") == "1"
+OUT = ROOT / ("artifacts/dmc04r2" if CORRECTED_EVALUATOR else "artifacts/dmc04r")
+ARTIFACT_PREFIX = "DMC04R2" if CORRECTED_EVALUATOR else "DMC04R"
+UNIT = "DMC-04R2" if CORRECTED_EVALUATOR else "DMC-04R"
 WORLD0_COMMIT = "1200050d1bbe99a7158e8482dacc534feb48d4c1"
 DMC01_COMMIT = "48ae98f"
 DMC03_COMMIT = "489ec45"
@@ -387,7 +391,7 @@ def decode_selected(case: dict[str, Any], record_id: str, decoder: torch.nn.Modu
     return VALUES[int(torch.argmax(logits).item())]
 
 
-def select_record(model: FactorizedAssociativeMatcher | None, case: dict[str, Any], mode: str, firewall: dict[str, Any] | None) -> str:
+def select_record(model: FactorizedAssociativeMatcher | None, case: dict[str, Any], mode: str, firewall: dict[str, Any] | None, missing_as_miss: bool = False) -> str | None:
     if mode == "oracle":
         return oracle_retrieval(case)
     if mode == "random":
@@ -398,7 +402,12 @@ def select_record(model: FactorizedAssociativeMatcher | None, case: dict[str, An
         assert model is not None
         variant = "full" if mode == "learned" else mode
         scores = score_variant(model, case, variant, firewall)
-        return resolver(case, scores)["selected_record_id"]
+        try:
+            return resolver(case, scores)["selected_record_id"]
+        except ValueError as error:
+            if missing_as_miss and str(error) == "selected descriptor group has no temporally eligible record":
+                return None
+            raise
     raise ValueError(mode)
 
 
@@ -413,14 +422,14 @@ def condition_metrics(cases: list[dict[str, Any]], decisions: list[dict[str, Any
     return rows
 
 
-def evaluate_mode(model: FactorizedAssociativeMatcher | None, cases: list[dict[str, Any]], decoder: torch.nn.Module, mode: str, firewall: dict[str, Any] | None, shuffled_by_id: dict[str, dict[str, Any]] | None = None) -> dict[str, Any]:
+def evaluate_mode(model: FactorizedAssociativeMatcher | None, cases: list[dict[str, Any]], decoder: torch.nn.Module, mode: str, firewall: dict[str, Any] | None, shuffled_by_id: dict[str, dict[str, Any]] | None = None, missing_as_miss: bool = False) -> dict[str, Any]:
     decisions = []
     for original in cases:
         evaluation_case = shuffled_by_id[original["case_id"]] if shuffled_by_id is not None else original
-        selected = select_record(model, evaluation_case, mode, firewall)
+        selected = select_record(model, evaluation_case, mode, firewall, missing_as_miss=missing_as_miss)
         expected = original["oracle_view"]["target_record_id"]
-        predicted_answer = decode_selected(evaluation_case, selected, decoder)
-        decisions.append({"case_id": original["case_id"], "selected_record_id": selected, "target_record_id": expected, "retrieval_hit": selected == expected, "predicted_answer": predicted_answer, "expected_answer": original["oracle_view"]["answer"], "answer_hit": predicted_answer == original["oracle_view"]["answer"]})
+        predicted_answer = None if selected is None else decode_selected(evaluation_case, selected, decoder)
+        decisions.append({"case_id": original["case_id"], "selected_record_id": selected, "target_record_id": expected, "retrieval_hit": selected == expected, "missing_retrieval": selected is None, "predicted_answer": predicted_answer, "expected_answer": original["oracle_view"]["answer"], "answer_hit": predicted_answer == original["oracle_view"]["answer"] if predicted_answer is not None else False})
     rows = condition_metrics(cases, decisions)
     components = {}
     for label, family, condition in PRIMARY_COMPONENTS:
@@ -503,7 +512,7 @@ def gate_result(aggregate: dict[str, Any], per_seed: dict[int, dict[str, Any]], 
 
 
 def markdown_report(terminal: str, aggregate: dict[str, Any], per_seed: dict[int, dict[str, Any]], gates: dict[str, Any]) -> str:
-    lines = ["# DMC-04R — Fixed-Decoder Learned Associative Retrieval Evidence", "", f"Terminal state: `{terminal}`", "", "## Primary retrieval metrics", "", "| Seed | Oracle P_R | Learned P_R | Random P_R | Exact-token P_R | A-only P_R | B-only P_R | Shuffled-query P_R |", "|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    lines = [f"# {UNIT} — Fixed-Decoder Learned Associative Retrieval Evidence", "", f"Terminal state: `{terminal}`", "", "## Primary retrieval metrics", "", "| Seed | Oracle P_R | Learned P_R | Random P_R | Exact-token P_R | A-only P_R | B-only P_R | Shuffled-query P_R |", "|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for seed in EVIDENCE_SEEDS:
         values = [per_seed[seed]["evaluations"][mode]["components"]["P_retrieval"] for mode in ("oracle", "learned", "random", "exact_token", "a_only", "b_only", "shuffled_query")]
         lines.append("| " + str(seed) + " | " + " | ".join(f"{value:.6f}" for value in values) + " |")
@@ -525,7 +534,7 @@ def write_preflight(preflight: dict[str, Any], replay: dict[str, Any] | None = N
     if replay is not None:
         payload["non_evidence_replay"] = replay
         payload["non_evidence_replay_pass"] = replay["pass"]
-    write_json(OUT / "DMC04R_PREFLIGHT.json", payload)
+    write_json(OUT / f"{ARTIFACT_PREFIX}_PREFLIGHT.json", payload)
 
 
 def run_preflight() -> tuple[dict[str, Any], dict[str, list[dict[str, Any]]], torch.nn.Module, dict[str, Any]]:
@@ -551,7 +560,7 @@ def run_preflight() -> tuple[dict[str, Any], dict[str, list[dict[str, Any]]], to
     all_identities = all(row["pass"] for row in identities.values())
     expected_vector_counts = compatibility["total_hidden_vectors_checked"] == 4736 and compatibility["correctly_decoded"] == 4736 and compatibility["incorrectly_decoded"] == 0 and compatibility["accuracy"] == 1.0 and {row["split"]: (row["hidden_vectors_checked"], row["correctly_decoded"]) for row in compatibility["rows"]} == {"train": (1472, 1472), "iid": (1472, 1472), "extrapolation": (1792, 1792)}
     preflight = {
-        "unit": "DMC-04R",
+        "unit": UNIT,
         "preflight_pass": all_identities and protocol["pass"] and training_identity["pass"] and capacity["pass"] and tests["pass"] and expected_vector_counts and compatibility["pass"] and oracle["pass"] and decoder_info["before_sha256"] == DMC01_CHECKPOINT_SHA256 and decoder_info["after_sha256"] == DMC01_CHECKPOINT_SHA256,
         "identities": identities,
         "dmc04p_protocol_identity": protocol,
@@ -576,15 +585,16 @@ def main() -> int:
     torch.set_num_threads(1)
     preflight, dataset, decoder, decoder_hashes = run_preflight()
     if not preflight["preflight_pass"]:
-        print("DMC_04R_INVALID")
+        print("DMC_04R2_INVALID" if CORRECTED_EVALUATOR else "DMC_04R_INVALID")
         return 1
     replay = replay_audit(dataset["train"])
     write_preflight(preflight, replay)
     if args.audit_only:
-        print("DMC_04R_PREFLIGHT_PASS" if replay["pass"] else "DMC_04R_REPAIR_REQUIRED")
+        audit_prefix = "DMC_04R2" if CORRECTED_EVALUATOR else "DMC_04R"
+        print(f"{audit_prefix}_PREFLIGHT_PASS" if replay["pass"] else f"{audit_prefix}_REPAIR_REQUIRED")
         return 0 if replay["pass"] else 1
     if not replay["pass"]:
-        print("DMC_04R_REPAIR_REQUIRED")
+        print("DMC_04R2_REPAIR_REQUIRED" if CORRECTED_EVALUATOR else "DMC_04R_REPAIR_REQUIRED")
         return 1
 
     extrapolation = dataset["extrapolation"]
@@ -597,13 +607,13 @@ def main() -> int:
         model = load_checkpoint(checkpoint, seed)
         firewall = trained["firewall"]
         evaluations = {
-            "oracle": evaluate_mode(None, extrapolation, decoder, "oracle", None),
-            "learned": evaluate_mode(model, extrapolation, decoder, "learned", firewall),
-            "random": evaluate_mode(None, extrapolation, decoder, "random", None),
-            "exact_token": evaluate_mode(None, extrapolation, decoder, "exact_token", None),
-            "a_only": evaluate_mode(model, extrapolation, decoder, "a_only", firewall),
-            "b_only": evaluate_mode(model, extrapolation, decoder, "b_only", firewall),
-            "shuffled_query": evaluate_mode(model, extrapolation, decoder, "learned", firewall, shuffled),
+            "oracle": evaluate_mode(None, extrapolation, decoder, "oracle", None, missing_as_miss=CORRECTED_EVALUATOR),
+            "learned": evaluate_mode(model, extrapolation, decoder, "learned", firewall, missing_as_miss=CORRECTED_EVALUATOR),
+            "random": evaluate_mode(None, extrapolation, decoder, "random", None, missing_as_miss=CORRECTED_EVALUATOR),
+            "exact_token": evaluate_mode(None, extrapolation, decoder, "exact_token", None, missing_as_miss=CORRECTED_EVALUATOR),
+            "a_only": evaluate_mode(model, extrapolation, decoder, "a_only", firewall, missing_as_miss=CORRECTED_EVALUATOR),
+            "b_only": evaluate_mode(model, extrapolation, decoder, "b_only", firewall, missing_as_miss=CORRECTED_EVALUATOR),
+            "shuffled_query": evaluate_mode(model, extrapolation, decoder, "learned", firewall, shuffled, missing_as_miss=CORRECTED_EVALUATOR),
         }
         evaluations["shuffled_query"]["mode"] = "shuffled_query"
         for mode, result in evaluations.items():
@@ -619,7 +629,7 @@ def main() -> int:
     for seed in EVIDENCE_SEEDS:
         model = load_checkpoint(per_seed[seed]["checkpoint"], seed)
         repeat_firewall = runtime_firewall()
-        repeat = evaluate_mode(model, extrapolation, decoder, "learned", repeat_firewall)
+        repeat = evaluate_mode(model, extrapolation, decoder, "learned", repeat_firewall, missing_as_miss=CORRECTED_EVALUATOR)
         original = per_seed[seed]["evaluations"]["learned"]
         replay_rows.append({"seed": seed, "retrieval_decisions_identical": original["decisions"] == repeat["decisions"], "retrieval_metrics_identical": original["components"] == repeat["components"], "answer_metrics_identical": original["components"]["P_answer"] == repeat["components"]["P_answer"], "original_hash": digest({"decisions": original["decisions"], "components": original["components"]}), "repeat_hash": digest({"decisions": repeat["decisions"], "components": repeat["components"]})})
     replay_result = {"pass": all(row["retrieval_decisions_identical"] and row["retrieval_metrics_identical"] and row["answer_metrics_identical"] and row["original_hash"] == row["repeat_hash"] for row in replay_rows), "rows": replay_rows, "repeat_seed1337_required": True}
@@ -629,21 +639,22 @@ def main() -> int:
     processor_after = sha256(ROOT / DMC01_CHECKPOINT)
     integrity = {"preflight": preflight["preflight_pass"], "non_evidence_replay": replay["pass"], "evidence_seed_set": True, "evidence_seed_count": len(per_seed) == 5, "evidence_training_once_each": all(per_seed[seed]["training"]["seed"] == seed and per_seed[seed]["training"]["epoch_losses"] for seed in EVIDENCE_SEEDS), "retriever_parameter_count": all(per_seed[seed]["training"]["trainable_parameter_count"] == 128 for seed in EVIDENCE_SEEDS), "optimizer_isolation": all(per_seed[seed]["training"]["optimizer_parameter_names"] == ["W_A", "W_B"] for seed in EVIDENCE_SEEDS), "retrieval_firewall": learned_firewall["pass"], "capacity": preflight["capacity_audit"]["pass"], "replay": replay_result["pass"], "processor_immutable": processor_after == DMC01_CHECKPOINT_SHA256 and decoder_hashes["before_sha256"] == processor_after, "no_evidence_seed_reuse": True}
     gate = gate_result(aggregate, per_seed, integrity)
+    prefix = "DMC_04R2" if CORRECTED_EVALUATOR else "DMC_04R"
     if not integrity["processor_immutable"]:
-        terminal = "DMC_04R_PROCESSOR_INVALID"
+        terminal = f"{prefix}_PROCESSOR_INVALID"
     elif not integrity["retrieval_firewall"]:
-        terminal = "DMC_04R_RETRIEVAL_LEAK"
+        terminal = f"{prefix}_RETRIEVAL_LEAK"
     elif not all(integrity.values()):
-        terminal = "DMC_04R_INVALID"
+        terminal = f"{prefix}_INVALID"
     elif gate["all_performance_gates"] and gate["all_integrity_checks"]:
-        terminal = "DMC_04R_LEARNED_RETRIEVAL_ADVANCES"
+        terminal = f"{prefix}_LEARNED_RETRIEVAL_ADVANCES"
     elif all(gate["gates"][name]["pass"] for name in ("A_P_retrieval", "B_P_answer", "C_oracle_gap", "D_composition", "E_hard_negatives", "F_current", "G_history", "H_noise32", "I_seed_consistency", "J_random_separation", "K_exact_token_separation", "two_attribute_A_only", "two_attribute_B_only")) and not gate["gates"]["query_cue_mechanism"]["pass"]:
-        terminal = "DMC_04R_PERFORMANCE_ONLY_QUERY_USE_UNESTABLISHED"
+        terminal = f"{prefix}_PERFORMANCE_ONLY_QUERY_USE_UNESTABLISHED"
     else:
-        terminal = "DMC_04R_LEARNED_RETRIEVAL_NO_ADVANTAGE"
-    config = {"unit": "DMC-04R", "status": "fixed_decoder_learned_associative_retrieval_evidence", "source_commit": git_head(), "dmc04a_commit": DMC04A_COMMIT, "dmc04p_commit": DMC04P_COMMIT, "dmc04pa_commit": DMC04PA_COMMIT, "invalid_preflight_commit": DMC04_INVALID_COMMIT, "fixed_decoder": {"seed": 1337, "checkpoint": DMC01_CHECKPOINT, "sha256": DMC01_CHECKPOINT_SHA256}, "retrieval_evidence_seeds": list(EVIDENCE_SEEDS), "training": {"epochs": TRAINING_EPOCHS, "batch_size": TRAINING_BATCH_SIZE, "optimizer": "AdamW", "learning_rate": TRAINING_LR, "weight_decay": TRAINING_WEIGHT_DECAY, "gradient_clip": TRAINING_GRAD_CLIP, "device": "cpu", "torch_threads": 1, "stateless_order": "SHA256('DMC04_ORDER|' + str(seed) + '|' + str(epoch) + '|' + case_id)"}, "retriever": {"class": "factorized_atomic_bilinear", "W_A": [8, 8], "W_B": [8, 8], "trainable_parameters": 128}, "primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)", "primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)", "evidence_training_executed": True, "scientific_retrieval_accuracy_measured": True}
+        terminal = f"{prefix}_LEARNED_RETRIEVAL_NO_ADVANTAGE"
+    config = {"unit": UNIT, "status": "fixed_decoder_learned_associative_retrieval_evidence", "evaluation_semantics": "no temporally eligible record -> retrieval miss" if CORRECTED_EVALUATOR else "frozen resolver exception aborts", "source_commit": git_head(), "dmc04a_commit": DMC04A_COMMIT, "dmc04p_commit": DMC04P_COMMIT, "dmc04pa_commit": DMC04PA_COMMIT, "invalid_preflight_commit": DMC04_INVALID_COMMIT, "fixed_decoder": {"seed": 1337, "checkpoint": DMC01_CHECKPOINT, "sha256": DMC01_CHECKPOINT_SHA256}, "retrieval_evidence_seeds": list(EVIDENCE_SEEDS), "training": {"epochs": TRAINING_EPOCHS, "batch_size": TRAINING_BATCH_SIZE, "optimizer": "AdamW", "learning_rate": TRAINING_LR, "weight_decay": TRAINING_WEIGHT_DECAY, "gradient_clip": TRAINING_GRAD_CLIP, "device": "cpu", "torch_threads": 1, "stateless_order": "SHA256('DMC04_ORDER|' + str(seed) + '|' + str(epoch) + '|' + case_id)"}, "retriever": {"class": "factorized_atomic_bilinear", "W_A": [8, 8], "W_B": [8, 8], "trainable_parameters": 128}, "primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)", "primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)", "evidence_training_executed": True, "scientific_retrieval_accuracy_measured": True}
     environment = {"python": sys.version, "platform": platform.platform(), "torch": torch.__version__, "torch_threads": torch.get_num_threads(), "device": "cpu", "seed_set": list(EVIDENCE_SEEDS)}
-    write_json(OUT / "DMC04R_CONFIG.json", config)
+    write_json(OUT / f"{ARTIFACT_PREFIX}_CONFIG.json", config)
     write_json(OUT / "environment.json", environment)
     write_json(OUT / "predecessor_identity.json", {"pass": all(row["pass"] for row in preflight["identities"].values()), "rows": preflight["identities"]})
     write_json(OUT / "invalid_history_identity.json", preflight["identities"]["DMC-04 invalid preflight"])
@@ -656,9 +667,9 @@ def main() -> int:
     write_json(OUT / "retrieval_firewall.json", learned_firewall)
     write_json(OUT / "capacity_audit.json", preflight["capacity_audit"])
     write_json(OUT / "aggregate.json", aggregate)
-    verdict = {"unit": "DMC-04R", "terminal_state": terminal, "gates": gate["gates"], "integrity": gate["integrity"], "aggregate": aggregate, "evidence_seeds": list(EVIDENCE_SEEDS), "evidence_seeds_executed": list(EVIDENCE_SEEDS), "evidence_training_executed": True, "scientific_retrieval_accuracy_measured": True, "cross_seed_latent_alignment_not_established": True, "dmc03_integration_executed": False}
-    write_json(OUT / "DMC04R_VERDICT.json", verdict)
-    (OUT / "DMC04R_REPORT.md").write_text(markdown_report(terminal, aggregate, per_seed, gate), encoding="utf-8")
+    verdict = {"unit": UNIT, "terminal_state": terminal, "gates": gate["gates"], "integrity": gate["integrity"], "aggregate": aggregate, "evidence_seeds": list(EVIDENCE_SEEDS), "evidence_seeds_executed": list(EVIDENCE_SEEDS), "evidence_training_executed": True, "scientific_retrieval_accuracy_measured": True, "cross_seed_latent_alignment_not_established": True, "dmc03_integration_executed": False, "fresh_execution_under_corrected_evaluator": CORRECTED_EVALUATOR}
+    write_json(OUT / f"{ARTIFACT_PREFIX}_VERDICT.json", verdict)
+    (OUT / f"{ARTIFACT_PREFIX}_REPORT.md").write_text(markdown_report(terminal, aggregate, per_seed, gate), encoding="utf-8")
     write_json(OUT / "SHA256SUMS.json", manifest_for(OUT))
     print(terminal)
     return 0

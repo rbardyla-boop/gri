@@ -1,0 +1,12 @@
+{
+  "artifact_path": "artifacts/dmc04r",
+  "commit": "b057f10",
+  "manifest": {
+    "entries": 4,
+    "errors": [],
+    "pass": true
+  },
+  "terminal": "DMC_04R_REPAIR_REQUIRED",
+  "terminal_present": true,
+  "unchanged_since_historical_commit": true
+}

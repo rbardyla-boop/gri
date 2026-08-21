@@ -1,0 +1,9 @@
+{
+  "DMC04RA_CONFIG.json": "58674bc92a7da20de8be9d5d560e0057c06e02d5bd02acac1afd4d324abc4526",
+  "DMC04RA_CONTRACT.md": "dbed3a641f3d95157fac8706ad7276f4518761ee95122cf4b06c4bf4ecad8618",
+  "DMC04RA_RECEIPT.json": "3ff886f4bafdd3a5fb942f78111722accedb8eb11153536c72c13ffc720bffd2",
+  "amendment_identity.json": "e2a21842a7ea63f5702ad064dbc209b9f3dc3b3a282648fd5baaa0aa20b26384",
+  "evaluator_semantics.json": "11b059e68c36b94b47c1e61cfcee6f62ecca0e5fdbe4ef7a3f7429fc9d204551",
+  "historical_dmc04r_identity.json": "19725e419eca30703b33bc464934c89a2b127e2c0ffcbeead0c9d12e0fae0a32",
+  "protocol_identity.json": "cab7f13dcb2e3bd68f86693e42389cdc44e691ff4320574b7e0d7a6c44f8f212"
+}

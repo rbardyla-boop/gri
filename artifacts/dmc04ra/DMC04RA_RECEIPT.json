@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "amendment_identity": true,
+    "evaluator_semantics": true,
+    "full_tests": true,
+    "historical_identity": true,
+    "protocol_identity": true
+  },
+  "evidence_training_executed": false,
+  "fresh_execution_authorized": true,
+  "fresh_execution_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "fresh_execution_unit": "DMC-04R2",
+  "scientific_accuracy_measured": false,
+  "terminal_state": "DMC_04RA_FIXED_MISSING_RETRIEVAL_PREREGISTERED",
+  "unit": "DMC-04R-A"
+}

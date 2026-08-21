@@ -1,0 +1,9 @@
+{
+  "caught_exception": "ValueError with exact message only",
+  "corrected_artifact_namespace": "artifacts/dmc04r2",
+  "corrected_execution_namespace": "DMC04R_CORRECTED_EVALUATOR=1",
+  "new": "selected descriptor group -> no temporally eligible record -> retrieval_hit=0 -> predicted_answer=null -> continue evaluation",
+  "old": "selected descriptor group -> no temporally eligible record -> raise ValueError -> abort experiment",
+  "other_exceptions_propagate": true,
+  "pass": true
+}
