@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc04",
+  "expected_commit": "d6c9bb5",
+  "expected_terminal_state": "DMC_04_INVALID",
+  "manifest": {
+    "entries": 1,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-04 invalid preflight",
+  "observed_terminal_states": [
+    "DMC_04_INVALID"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}

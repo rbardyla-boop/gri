@@ -1,0 +1,41 @@
+{
+  "all_hidden_vector_accuracy": 1.0,
+  "checks": {
+    "all_hidden_vector_compatibility": true,
+    "evidence_seed_semantics": true,
+    "evidence_training_not_executed": true,
+    "fixed_decoder_identity": true,
+    "full_tests": true,
+    "oracle_end_to_end_validation": true,
+    "original_dmc04a_identity": true,
+    "original_dmc04p_identity": true,
+    "original_invalid_preflight_identity": true,
+    "predecessor_identity": true,
+    "processor_freeze": true,
+    "retriever_identity": true,
+    "supersession_record": true,
+    "world0_identity": true
+  },
+  "cross_seed_latent_alignment_not_established": true,
+  "dmc03_integration_executed": false,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "evidence_seeds_executed": [],
+  "evidence_training_executed": false,
+  "fixed_decoder_seed": 1337,
+  "full_tests": {
+    "command": "python3 -m pytest -q",
+    "last_output": "........................................................................ [ 58%]\n...................................................                      [100%]\n",
+    "pass": true,
+    "returncode": 0
+  },
+  "scientific_retrieval_accuracy_measured": false,
+  "terminal_state": "DMC_04PA_FIXED_DECODER_PREREGISTERED",
+  "total_hidden_vectors_checked": 4736,
+  "unit": "DMC-04P-A"
+}

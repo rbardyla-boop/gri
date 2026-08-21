@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "case_count": 128,
+      "final_answer_accuracy": 1.0,
+      "retrieval_hit_at_1": 1.0,
+      "split": "train"
+    },
+    {
+      "case_count": 128,
+      "final_answer_accuracy": 1.0,
+      "retrieval_hit_at_1": 1.0,
+      "split": "iid"
+    },
+    {
+      "case_count": 112,
+      "final_answer_accuracy": 1.0,
+      "retrieval_hit_at_1": 1.0,
+      "split": "extrapolation"
+    }
+  ],
+  "scientific_learned_retrieval_not_measured": true
+}

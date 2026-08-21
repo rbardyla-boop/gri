@@ -1,0 +1,47 @@
+{
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "fixed_decoder": {
+    "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+    "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+    "seed": 1337,
+    "trainable_parameters": 0
+  },
+  "future_primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)",
+  "future_primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)",
+  "original_invalid_preflight_commit": "d6c9bb5",
+  "retriever": {
+    "W_A": [
+      8,
+      8
+    ],
+    "W_B": [
+      8,
+      8
+    ],
+    "model_class": "factorized_atomic_bilinear",
+    "trainable_parameters": 128
+  },
+  "scientific_accuracy_measured": false,
+  "status": "fixed_decoder_interface_structural_preregistration",
+  "terminal_state": "DMC_04PA_FIXED_DECODER_PREREGISTERED",
+  "training_executed": false,
+  "training_unchanged": {
+    "batch_size": 64,
+    "device": "cpu",
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.01,
+    "no_early_stopping": true,
+    "no_scheduler": true,
+    "optimizer": "AdamW",
+    "torch_threads": 1,
+    "weight_decay": 0.0
+  },
+  "unit": "DMC-04P-A"
+}

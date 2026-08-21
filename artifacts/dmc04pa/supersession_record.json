@@ -1,0 +1,19 @@
+{
+  "amendment": "DMC-04P-A",
+  "dmc03_integration": false,
+  "learn_alignment": false,
+  "pass": true,
+  "regenerate_hidden_vectors": false,
+  "replacement": "all retrieval evidence seeds use frozen DMC-01 seed-1337 processor",
+  "superseded_only": "DMC-04P clause requiring retrieval evidence seed N to use DMC-01 processor checkpoint N",
+  "unchanged_requirements": [
+    "DMC-04A candidate sets and hidden vectors",
+    "factorized matcher W_A/W_B, 128 trainable parameters",
+    "retrieval evidence seeds 1337-1341",
+    "80 epochs, batch size 64, AdamW lr 1e-2, weight decay 0, clip 1.0",
+    "CPU and Torch threads 1",
+    "stateless SHA-256 training order",
+    "primary retrieval and answer metrics",
+    "all DMC-04P gates and ablations"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "all_decoder_seed": 1337,
+  "evidence_seeds_executed": [],
+  "evidence_training_executed": false,
+  "non_evidence_structural_seed": 9090,
+  "pass": true,
+  "retrieval_evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "seed_controls": [
+    "W_A/W_B initialization",
+    "frozen stateless training order",
+    "retrieval optimizer trajectory"
+  ],
+  "seed_does_not_select_decoder": true
+}

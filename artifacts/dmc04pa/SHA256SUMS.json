@@ -1,0 +1,15 @@
+{
+  "DMC04PA_CONFIG.json": "870d95f5c0038abc06c75a2da37911e1f92441aaac078adaa18b5beb8c08fa3b",
+  "DMC04PA_CONTRACT.md": "c2a70d9fc007c166bb4f3e1f32cc1c90b02d00c91581de335c363f43114360a7",
+  "DMC04PA_RECEIPT.json": "e9662ff8922f91b3c5f118319d3f7aedd030c420383f74bd21f3ced6f904a48b",
+  "all_hidden_vector_compatibility.json": "693e18fd8aec949953f856661eb74b0b61150c08048a565a137c5d501e4d0557",
+  "evidence_seed_semantics.json": "d39d552bdea877f152f3532930725c196385e5d2c14bcbf5e35779eaa902c5e9",
+  "fixed_decoder_identity.json": "3b003873638008cc043e48b67bea3af4ab9bb9d9eb5f59100e7a4ac59011a33f",
+  "invalid_preflight_identity.json": "1f29bfcb0cd4594e209ada5eae07b4861e81f21355f108c76f9fb1389ae07517",
+  "oracle_end_to_end_validation.json": "29034644d1a38f6cba9e969de42c588d5f365149d16f84f5ce5c43cf1bc21c5a",
+  "predecessor_identity.json": "09ddd135d3396a817e58e35bafde4dbc01dbebd163d43bbcc10083c374185855",
+  "processor_freeze.json": "3b003873638008cc043e48b67bea3af4ab9bb9d9eb5f59100e7a4ac59011a33f",
+  "retriever_identity.json": "3f02435e309864f1872fca2e2c5733c16dde5990188d8173ce3e90b393f567d9",
+  "supersession_record.json": "2887ca74d70c8495c5e4a82c6bb711f1a6039069fe9ab9a1295149d8acf4cd34",
+  "world0_identity.json": "a790fb96f05e08a410797da157d26c242a7f116d766db33ff6fa0320526e6373"
+}

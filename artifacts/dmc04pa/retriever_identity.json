@@ -1,0 +1,24 @@
+{
+  "evidence_seeds_consumed": [],
+  "matrices": {
+    "W_A": [
+      8,
+      8
+    ],
+    "W_B": [
+      8,
+      8
+    ]
+  },
+  "memory_parameters_in_optimizer": false,
+  "model_class": "factorized_atomic_bilinear",
+  "optimizer_parameter_group_count": 1,
+  "optimizer_parameter_names": [
+    "W_A",
+    "W_B"
+  ],
+  "pass": true,
+  "processor_parameters_in_optimizer": false,
+  "structural_seed": 9090,
+  "trainable_parameter_count": 128
+}

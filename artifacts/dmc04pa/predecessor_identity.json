@@ -1,0 +1,95 @@
+{
+  "pass": true,
+  "rows": {
+    "DMC-01": {
+      "artifact_path": "artifacts/dmc01",
+      "expected_commit": "48ae98f",
+      "expected_terminal_state": "DMC_01_EXACT_MEMORY_ADVANCES",
+      "manifest": {
+        "entries": 36,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-01",
+      "observed_terminal_states": [
+        "DMC_01_EXACT_MEMORY_ADVANCES"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-03": {
+      "artifact_path": "artifacts/dmc03",
+      "expected_commit": "489ec45",
+      "expected_terminal_state": "DMC_03_LEARNED_RETENTION_ADVANCES",
+      "manifest": {
+        "entries": 51,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-03",
+      "observed_terminal_states": [
+        "DMC_03_LEARNED_RETENTION_ADVANCES"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04 invalid preflight": {
+      "artifact_path": "artifacts/dmc04",
+      "expected_commit": "d6c9bb5",
+      "expected_terminal_state": "DMC_04_INVALID",
+      "manifest": {
+        "entries": 1,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04 invalid preflight",
+      "observed_terminal_states": [
+        "DMC_04_INVALID"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04A": {
+      "artifact_path": "artifacts/dmc04a",
+      "expected_commit": "90a30cb",
+      "expected_terminal_state": "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS",
+      "manifest": {
+        "entries": 25,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04A",
+      "observed_terminal_states": [
+        "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    },
+    "DMC-04P": {
+      "artifact_path": "artifacts/dmc04p",
+      "expected_commit": "61c9ab9",
+      "expected_terminal_state": "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED",
+      "manifest": {
+        "entries": 22,
+        "errors": [],
+        "manifest_available": true,
+        "pass": true
+      },
+      "name": "DMC-04P",
+      "observed_terminal_states": [
+        "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED"
+      ],
+      "pass": true,
+      "receipt_valid": true,
+      "unchanged_since_expected_commit": true
+    }
+  }
+}

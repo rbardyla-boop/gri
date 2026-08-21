@@ -1,0 +1,36 @@
+{
+  "all_parameters_requires_grad_false": true,
+  "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+  "checkpoint_sha256_after": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+  "checkpoint_sha256_before": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+  "pass": true,
+  "processor_parameters_trainable": 0,
+  "retrieval_seed_to_decoder": {
+    "1337": {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "decoder_seed": 1337
+    },
+    "1338": {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "decoder_seed": 1337
+    },
+    "1339": {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "decoder_seed": 1337
+    },
+    "1340": {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "decoder_seed": 1337
+    },
+    "1341": {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "decoder_seed": 1337
+    }
+  },
+  "single_decoder_seed": 1337
+}
