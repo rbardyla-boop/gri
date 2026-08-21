@@ -53,6 +53,7 @@ from dmc03p.retention import (  # noqa: E402
     assert_processor_frozen,
     build_retention_optimizer,
     encode_hidden,
+    freeze_processor,
     initialize_scorer,
     model_state_hash,
     record_metadata,
@@ -488,6 +489,7 @@ def metrics_from_hits(hits: dict[tuple[str, str, str], list[bool]]) -> dict[str,
 def evaluate_seed(seed: int, scorer: AffineRetentionScorer, dataset: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
     checkpoint_path = DMC01_CHECKPOINT_DIR / f"exact_seed{seed}_final.pt"
     processor, payload = load_dmc01_checkpoint(checkpoint_path, family="mission_set", mode="exact16", case_id=f"dmc03-loader-{seed}")
+    freeze_processor(processor)
     assert_processor_frozen(processor)
     before_hash = model_state_hash(processor)
     controllers = new_controller_set(seed, scorer, processor)
@@ -773,6 +775,7 @@ def run_evidence() -> int:
     for seed in EVIDENCE_SEEDS:
         path = DMC01_CHECKPOINT_DIR / f"exact_seed{seed}_final.pt"
         processor, _ = load_dmc01_checkpoint(path, family="mission_set", mode="exact16", case_id=f"dmc03-immutability-{seed}")
+        freeze_processor(processor)
         before = model_state_hash(processor)
         processor_rows.append({
             "seed": seed,
@@ -839,6 +842,7 @@ def run_evidence() -> int:
     final_processor_rows = []
     for seed in EVIDENCE_SEEDS:
         processor, _ = load_dmc01_checkpoint(DMC01_CHECKPOINT_DIR / f"exact_seed{seed}_final.pt", family="mission_set", mode="exact16", case_id=f"dmc03-final-{seed}")
+        freeze_processor(processor)
         after = model_state_hash(processor)
         before = next(row["processor_state_hash_before_training"] for row in processor_rows if row["seed"] == seed)
         final_processor_rows.append({"seed": seed, "before": before, "after": after, "unchanged": before == after})
