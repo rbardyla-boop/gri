@@ -1,0 +1,7 @@
+{
+  "canonical_sha256_first": "f471032dd08394f7fc1eaae36b4b627b07be7fabc2877351497518ff2b92d8b5",
+  "canonical_sha256_second": "f471032dd08394f7fc1eaae36b4b627b07be7fabc2877351497518ff2b92d8b5",
+  "complete_evaluation_repeated": true,
+  "numeric_equal": true,
+  "seed": 1337
+}

@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "per_seed": [
+    {
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1337,
+      "stored_records_checked": 761088
+    },
+    {
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1338,
+      "stored_records_checked": 761088
+    },
+    {
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1339,
+      "stored_records_checked": 761088
+    },
+    {
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1340,
+      "stored_records_checked": 761088
+    },
+    {
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1341,
+      "stored_records_checked": 761088
+    }
+  ]
+}

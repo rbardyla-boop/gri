@@ -1,0 +1,41 @@
+{
+  "bounded_vs_unbounded_prediction_identity": true,
+  "diagnostic_only": true,
+  "per_seed": [
+    {
+      "cases_compared": 992,
+      "identity_count": 992,
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1337
+    },
+    {
+      "cases_compared": 992,
+      "identity_count": 992,
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1338
+    },
+    {
+      "cases_compared": 992,
+      "identity_count": 992,
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1339
+    },
+    {
+      "cases_compared": 992,
+      "identity_count": 992,
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1340
+    },
+    {
+      "cases_compared": 992,
+      "identity_count": 992,
+      "mismatches": 0,
+      "pass": true,
+      "seed": 1341
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "capacity": true,
+    "checkpoint_hashes": true,
+    "hidden_vector_integrity": true,
+    "metadata_firewall": true,
+    "model_immutable": true,
+    "predecessors": true,
+    "replay": true
+  },
+  "control_separation": {
+    "fifo": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.4
+    },
+    "random": {
+      "observed": 0.9738888888888889,
+      "pass": true,
+      "threshold": 0.4
+    }
+  },
+  "exact_minus_fifo": 1.0,
+  "exact_minus_random": 0.9738888888888889,
+  "gates": {
+    "A_primary": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "B_M1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "C_SAL1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "D_SUP_current_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "E_SUP_history_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "F_SHIFT": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "G_FLOOD1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "H_seed_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    }
+  },
+  "terminal_state": "DMC_02_BOUNDED_EXACT_RETENTION_ADVANCES",
+  "unit": "DMC-02"
+}

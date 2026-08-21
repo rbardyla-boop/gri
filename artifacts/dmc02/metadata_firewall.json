@@ -1,0 +1,94 @@
+{
+  "forbidden_inputs": [
+    "answer",
+    "answer_index",
+    "final_query_target",
+    "future_events",
+    "oracle_result",
+    "case_id",
+    "future_query_choice"
+  ],
+  "pass": true,
+  "per_seed": [
+    {
+      "decision_count": 253696,
+      "forbidden_fields_observed": [],
+      "observed_field_sets": [
+        [
+          "creation_episode",
+          "entity",
+          "family",
+          "field",
+          "salience",
+          "supersedes"
+        ]
+      ],
+      "pass": true,
+      "seed": 1337
+    },
+    {
+      "decision_count": 253696,
+      "forbidden_fields_observed": [],
+      "observed_field_sets": [
+        [
+          "creation_episode",
+          "entity",
+          "family",
+          "field",
+          "salience",
+          "supersedes"
+        ]
+      ],
+      "pass": true,
+      "seed": 1338
+    },
+    {
+      "decision_count": 253696,
+      "forbidden_fields_observed": [],
+      "observed_field_sets": [
+        [
+          "creation_episode",
+          "entity",
+          "family",
+          "field",
+          "salience",
+          "supersedes"
+        ]
+      ],
+      "pass": true,
+      "seed": 1339
+    },
+    {
+      "decision_count": 253696,
+      "forbidden_fields_observed": [],
+      "observed_field_sets": [
+        [
+          "creation_episode",
+          "entity",
+          "family",
+          "field",
+          "salience",
+          "supersedes"
+        ]
+      ],
+      "pass": true,
+      "seed": 1340
+    },
+    {
+      "decision_count": 253696,
+      "forbidden_fields_observed": [],
+      "observed_field_sets": [
+        [
+          "creation_episode",
+          "entity",
+          "family",
+          "field",
+          "salience",
+          "supersedes"
+        ]
+      ],
+      "pass": true,
+      "seed": 1341
+    }
+  ]
+}

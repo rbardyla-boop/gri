@@ -1,0 +1,27 @@
+{
+  "backward_passes": 0,
+  "capacity": 16,
+  "dmc01_commit": "48ae98f",
+  "dmc02a_commit": "f10394d",
+  "dmc02p_commit": "c8705cb",
+  "evaluation_only": true,
+  "modes": [
+    "EXACT_RETENTION_16",
+    "FIFO_16",
+    "RANDOM_16"
+  ],
+  "optimizer": null,
+  "primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "random_control_seed": 20260202,
+  "seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "source_commit": "f63a20d34324d7a0425bb51c35cf63c630587824",
+  "training": false,
+  "unit": "DMC-02",
+  "world0_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1"
+}

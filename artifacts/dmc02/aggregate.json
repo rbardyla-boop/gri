@@ -1,0 +1,142 @@
+{
+  "component_means": {
+    "FLOOD1024": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.025
+    },
+    "FLOOD512": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.025
+    },
+    "M1024": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.0
+    },
+    "M256": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.05
+    },
+    "SAL1024": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.0125
+    },
+    "SAL256": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.075
+    },
+    "SHIFT": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.01
+    },
+    "SUP_current_1024": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.025
+    },
+    "SUP_history_1024": {
+      "exact": 1.0,
+      "fifo": 0.0,
+      "random": 0.0125
+    }
+  },
+  "control_separation": {
+    "fifo": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.4
+    },
+    "random": {
+      "observed": 0.9738888888888889,
+      "pass": true,
+      "threshold": 0.4
+    }
+  },
+  "differences": {
+    "exact_minus_fifo": 1.0,
+    "exact_minus_random": 0.9738888888888889
+  },
+  "gates": {
+    "A_primary": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "B_M1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "C_SAL1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "D_SUP_current_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "E_SUP_history_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "F_SHIFT": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "G_FLOOD1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "H_seed_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    }
+  },
+  "per_mode": {
+    "exact": {
+      "mean": 1.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stdev": 0.0
+    },
+    "fifo": {
+      "mean": 0.0,
+      "per_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stdev": 0.0
+    },
+    "random": {
+      "mean": 0.02611111111111111,
+      "per_seed": [
+        0.02361111111111111,
+        0.013888888888888888,
+        0.041666666666666664,
+        0.027777777777777776,
+        0.02361111111111111
+      ],
+      "stdev": 0.010082606340489741
+    }
+  }
+}
