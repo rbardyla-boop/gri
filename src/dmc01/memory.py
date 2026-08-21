@@ -225,6 +225,18 @@ class DMC01Controller(nn.Module):
         state = self._run_graph(graph, injected=injected)
         return self.processor.readout_hidden(state, graph.query_subject, graph.query_object)
 
+    def answer_query_with_hidden(self, event: dict[str, Any], hidden_value: torch.Tensor) -> torch.Tensor:
+        """Evaluate the frozen query path with an externally selected vector.
+
+        This is used only by the preregistered SHUFFLED_MEMORY evaluation. It
+        bypasses symbolic address selection but preserves the same graph,
+        anchor, injection point, recurrent steps, and mutable-only readout.
+        """
+
+        graph = encode_event(event)
+        state = self._run_graph(graph, injected=hidden_value)
+        return self.processor.readout_hidden(state, graph.query_subject, graph.query_object)
+
 
 def build_paired_controllers(seed: int) -> tuple[DMC01Controller, DMC01Controller]:
     """Build exact/no-memory controllers with tensor-identical RRI weights."""
