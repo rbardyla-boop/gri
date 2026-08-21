@@ -265,6 +265,9 @@ def train_scorer(seed: int, examples: list[dict[str, Any]], *, checkpoint_path: 
         "processor_trainable_parameter_count": 0,
     }
     if checkpoint_path is not None:
+        processor_checkpoint_path = DMC01_CHECKPOINT_DIR / f"exact_seed{seed}_final.pt"
+        processor_checkpoint = str(processor_checkpoint_path.relative_to(ROOT)) if processor_checkpoint_path.exists() else None
+        processor_checkpoint_sha256 = sha256_file(processor_checkpoint_path) if processor_checkpoint_path.exists() else None
         payload = {
             "scorer_state_dict": scorer.state_dict(),
             "optimizer_state": optimizer.state_dict(),
@@ -281,8 +284,8 @@ def train_scorer(seed: int, examples: list[dict[str, Any]], *, checkpoint_path: 
             "source_commit": git_commit(),
             "model_class": "AffineRetentionScorer",
             "parameter_count": AFFINE_PARAMETER_COUNT,
-            "processor_checkpoint": str((DMC01_CHECKPOINT_DIR / f"exact_seed{seed}_final.pt").relative_to(ROOT)),
-            "processor_checkpoint_sha256": sha256_file(DMC01_CHECKPOINT_DIR / f"exact_seed{seed}_final.pt"),
+            "processor_checkpoint": processor_checkpoint,
+            "processor_checkpoint_sha256": processor_checkpoint_sha256,
             "training_config": training_protocol(),
         }
         checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
