@@ -1,0 +1,140 @@
+{
+  "by_seed": {
+    "1337": {
+      "answer_in_scorer": false,
+      "backward_calls": 0,
+      "calls": 2214208,
+      "case_id_in_scorer": false,
+      "feature_names": [
+        "mission_membership",
+        "high_salience"
+      ],
+      "forbidden_fields_observed": [],
+      "hidden_value_in_scorer": false,
+      "input_fields_observed": [
+        "active_entities",
+        "creation_episode",
+        "entity",
+        "family",
+        "field",
+        "salience",
+        "supersedes"
+      ],
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "oracle_decision_in_scorer": false,
+      "pass": true,
+      "query_in_scorer": false,
+      "unique_feature_vectors": []
+    },
+    "1338": {
+      "answer_in_scorer": false,
+      "backward_calls": 0,
+      "calls": 2214208,
+      "case_id_in_scorer": false,
+      "feature_names": [
+        "mission_membership",
+        "high_salience"
+      ],
+      "forbidden_fields_observed": [],
+      "hidden_value_in_scorer": false,
+      "input_fields_observed": [
+        "active_entities",
+        "creation_episode",
+        "entity",
+        "family",
+        "field",
+        "salience",
+        "supersedes"
+      ],
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "oracle_decision_in_scorer": false,
+      "pass": true,
+      "query_in_scorer": false,
+      "unique_feature_vectors": []
+    },
+    "1339": {
+      "answer_in_scorer": false,
+      "backward_calls": 0,
+      "calls": 2214208,
+      "case_id_in_scorer": false,
+      "feature_names": [
+        "mission_membership",
+        "high_salience"
+      ],
+      "forbidden_fields_observed": [],
+      "hidden_value_in_scorer": false,
+      "input_fields_observed": [
+        "active_entities",
+        "creation_episode",
+        "entity",
+        "family",
+        "field",
+        "salience",
+        "supersedes"
+      ],
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "oracle_decision_in_scorer": false,
+      "pass": true,
+      "query_in_scorer": false,
+      "unique_feature_vectors": []
+    },
+    "1340": {
+      "answer_in_scorer": false,
+      "backward_calls": 0,
+      "calls": 2214208,
+      "case_id_in_scorer": false,
+      "feature_names": [
+        "mission_membership",
+        "high_salience"
+      ],
+      "forbidden_fields_observed": [],
+      "hidden_value_in_scorer": false,
+      "input_fields_observed": [
+        "active_entities",
+        "creation_episode",
+        "entity",
+        "family",
+        "field",
+        "salience",
+        "supersedes"
+      ],
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "oracle_decision_in_scorer": false,
+      "pass": true,
+      "query_in_scorer": false,
+      "unique_feature_vectors": []
+    },
+    "1341": {
+      "answer_in_scorer": false,
+      "backward_calls": 0,
+      "calls": 2214208,
+      "case_id_in_scorer": false,
+      "feature_names": [
+        "mission_membership",
+        "high_salience"
+      ],
+      "forbidden_fields_observed": [],
+      "hidden_value_in_scorer": false,
+      "input_fields_observed": [
+        "active_entities",
+        "creation_episode",
+        "entity",
+        "family",
+        "field",
+        "salience",
+        "supersedes"
+      ],
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "oracle_decision_in_scorer": false,
+      "pass": true,
+      "query_in_scorer": false,
+      "unique_feature_vectors": []
+    }
+  },
+  "pass": true
+}

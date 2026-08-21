@@ -1,0 +1,39 @@
+{
+  "backward_calls": 0,
+  "benchmark_commit": "4eee7e6",
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "fixed_decoder": {
+    "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+    "seed": 1337,
+    "sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6"
+  },
+  "memory_budget": 16,
+  "modes": [
+    "oracle_oracle",
+    "oracle_retention_learned_retrieval",
+    "learned_retention_oracle_retrieval",
+    "learned_learned",
+    "fifo_learned",
+    "random_retention_learned",
+    "learned_random_retrieval"
+  ],
+  "no_adapters": true,
+  "no_dmc05": true,
+  "no_new_features": true,
+  "no_training": true,
+  "optimizer_objects_created": 0,
+  "optimizer_steps": 0,
+  "pairing": "retention seed N + retrieval seed N",
+  "primary_answer": "equal-weight corresponding final-answer mean",
+  "primary_retrieval": "mean(MISSION256_H1,MISSION1024_H1,SAL256_H1,SAL1024_H1,HARD1024_H1,SHIFT_H1,SUP_CURRENT1024_H1,SUP_HISTORY1024_H1,FLOOD512_H1,FLOOD1024_H1)",
+  "source_commit": "4eee7e6e37a1c9014eb20a3b969345004a0e455a",
+  "status": "frozen_learned_memory_integration_evidence",
+  "terminal_state": "DMC_04B_COMBINED_LEARNED_MEMORY_ADVANCES",
+  "unit": "DMC-04B"
+}

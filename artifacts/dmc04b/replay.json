@@ -1,0 +1,9 @@
+{
+  "first_canonical_sha256": "8c951f1abff33649ee04db16482b7e7143e2ab3cb6fa7c50fa67115fcba262b1",
+  "identical": true,
+  "metrics_identical": true,
+  "pass": true,
+  "retention_decisions_identical": true,
+  "second_canonical_sha256": "8c951f1abff33649ee04db16482b7e7143e2ab3cb6fa7c50fa67115fcba262b1",
+  "seed": 1337
+}

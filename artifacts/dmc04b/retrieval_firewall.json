@@ -1,0 +1,125 @@
+{
+  "by_seed": {
+    "1337": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "backward_calls": 0,
+      "calls": 2400,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "correct_candidate_index_in_actual_scorer": false,
+      "forbidden_fields_observed": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "pass": true,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1338": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "backward_calls": 0,
+      "calls": 2400,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "correct_candidate_index_in_actual_scorer": false,
+      "forbidden_fields_observed": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "pass": true,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1339": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "backward_calls": 0,
+      "calls": 2400,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "correct_candidate_index_in_actual_scorer": false,
+      "forbidden_fields_observed": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "pass": true,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1340": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "backward_calls": 0,
+      "calls": 2400,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "correct_candidate_index_in_actual_scorer": false,
+      "forbidden_fields_observed": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "pass": true,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    },
+    "1341": {
+      "all_candidates_scored": true,
+      "answer_in_actual_scorer": false,
+      "backward_calls": 0,
+      "calls": 2400,
+      "candidate_count_max": 16,
+      "candidate_fields_observed": [
+        "creation_episode",
+        "write_descriptor"
+      ],
+      "correct_candidate_index_in_actual_scorer": false,
+      "forbidden_fields_observed": [],
+      "hidden_value_in_actual_scorer": false,
+      "logical_key_in_actual_scorer": false,
+      "optimizer_objects_created": 0,
+      "optimizer_steps": 0,
+      "pass": true,
+      "query_fields_observed": [
+        "as_of_episode",
+        "mode",
+        "query_descriptor"
+      ],
+      "record_id_in_actual_scorer": false
+    }
+  },
+  "pass": true
+}

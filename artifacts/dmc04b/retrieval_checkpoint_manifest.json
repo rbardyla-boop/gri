@@ -1,0 +1,108 @@
+{
+  "errors": [],
+  "historical_parameter_count": 128,
+  "pass": true,
+  "seeds": {
+    "1337": {
+      "eval_mode": true,
+      "expected_sha256": "eb804e0c00ebf22bbf0c6857ec2bbf19cbde2373b25dedbb81d9e90ab230d07d",
+      "historical_parameter_count": 128,
+      "matrices": {
+        "W_A": [
+          8,
+          8
+        ],
+        "W_B": [
+          8,
+          8
+        ]
+      },
+      "observed_sha256": "eb804e0c00ebf22bbf0c6857ec2bbf19cbde2373b25dedbb81d9e90ab230d07d",
+      "path": "artifacts/dmc04r2/checkpoints/retrieval_seed1337_final.pt",
+      "payload_seed": 1337,
+      "requires_grad_false": true,
+      "trainable_parameters_now": 0
+    },
+    "1338": {
+      "eval_mode": true,
+      "expected_sha256": "8d646bef513bab0c76fbffda0a176b546c88bf5b87116658a66b527704f2fb71",
+      "historical_parameter_count": 128,
+      "matrices": {
+        "W_A": [
+          8,
+          8
+        ],
+        "W_B": [
+          8,
+          8
+        ]
+      },
+      "observed_sha256": "8d646bef513bab0c76fbffda0a176b546c88bf5b87116658a66b527704f2fb71",
+      "path": "artifacts/dmc04r2/checkpoints/retrieval_seed1338_final.pt",
+      "payload_seed": 1338,
+      "requires_grad_false": true,
+      "trainable_parameters_now": 0
+    },
+    "1339": {
+      "eval_mode": true,
+      "expected_sha256": "8be2550cac4049f72761be574fecf7370a3fda1b335708da6d6f085d956409ff",
+      "historical_parameter_count": 128,
+      "matrices": {
+        "W_A": [
+          8,
+          8
+        ],
+        "W_B": [
+          8,
+          8
+        ]
+      },
+      "observed_sha256": "8be2550cac4049f72761be574fecf7370a3fda1b335708da6d6f085d956409ff",
+      "path": "artifacts/dmc04r2/checkpoints/retrieval_seed1339_final.pt",
+      "payload_seed": 1339,
+      "requires_grad_false": true,
+      "trainable_parameters_now": 0
+    },
+    "1340": {
+      "eval_mode": true,
+      "expected_sha256": "074c97a0bf2f39b400c9d3238a91d0bc86714508fcce529b72a2245acefc230b",
+      "historical_parameter_count": 128,
+      "matrices": {
+        "W_A": [
+          8,
+          8
+        ],
+        "W_B": [
+          8,
+          8
+        ]
+      },
+      "observed_sha256": "074c97a0bf2f39b400c9d3238a91d0bc86714508fcce529b72a2245acefc230b",
+      "path": "artifacts/dmc04r2/checkpoints/retrieval_seed1340_final.pt",
+      "payload_seed": 1340,
+      "requires_grad_false": true,
+      "trainable_parameters_now": 0
+    },
+    "1341": {
+      "eval_mode": true,
+      "expected_sha256": "0c6f2a5374ba5fb3440f8c8f758887113e56af1bf29389120f29d1f9c88a34c3",
+      "historical_parameter_count": 128,
+      "matrices": {
+        "W_A": [
+          8,
+          8
+        ],
+        "W_B": [
+          8,
+          8
+        ]
+      },
+      "observed_sha256": "0c6f2a5374ba5fb3440f8c8f758887113e56af1bf29389120f29d1f9c88a34c3",
+      "path": "artifacts/dmc04r2/checkpoints/retrieval_seed1341_final.pt",
+      "payload_seed": 1341,
+      "requires_grad_false": true,
+      "trainable_parameters_now": 0
+    }
+  },
+  "trainable_parameters_now": 0
+}

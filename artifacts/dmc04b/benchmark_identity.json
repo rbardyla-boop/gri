@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "manifest": {
+    "extrapolation": {
+      "case_count": 264,
+      "expected_case_count": 264,
+      "expected_sha256": "c492cb59849b8e62bb74aa0d287af5b9a45962e2733c0adb516a4d203ad19240",
+      "observed_sha256": "c492cb59849b8e62bb74aa0d287af5b9a45962e2733c0adb516a4d203ad19240",
+      "path": "artifacts/dmc04ba/datasets/extrapolation.jsonl"
+    },
+    "iid": {
+      "case_count": 168,
+      "expected_case_count": 168,
+      "expected_sha256": "5a4549006f724df3a0b414263cfbd5f4f82284ed680f37a3a54bd26b6256e787",
+      "observed_sha256": "5a4549006f724df3a0b414263cfbd5f4f82284ed680f37a3a54bd26b6256e787",
+      "path": "artifacts/dmc04ba/datasets/iid.jsonl"
+    },
+    "train": {
+      "case_count": 168,
+      "expected_case_count": 168,
+      "expected_sha256": "7187d5a8beec81f5b18da5d434c809d1e8fd599967d8342641683e46ccb55830",
+      "observed_sha256": "7187d5a8beec81f5b18da5d434c809d1e8fd599967d8342641683e46ccb55830",
+      "path": "artifacts/dmc04ba/datasets/train.jsonl"
+    }
+  },
+  "pass": true,
+  "predecessor_identity": true,
+  "total_cases": 600
+}

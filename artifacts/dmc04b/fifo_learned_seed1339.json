@@ -1,0 +1,716 @@
+{
+  "decisions_sha256": {
+    "extrapolation": "b40eb704faa57ea915b1f16600b69e4030a124e1f64bc3b4339f056772fb02d4",
+    "iid": "76358c37d3602994f0db3700d751b1fbc34f0924495f56810ea46bbde098b1b3",
+    "train": "1b2729b2252032d6fd179a508212122518f385ddc0c4f488099c188816f6c7d0"
+  },
+  "mode": "fifo_learned",
+  "pair_seed": 1339,
+  "primary": {
+    "FLOOD1024_A": 0.125,
+    "FLOOD1024_H1": 0.0,
+    "FLOOD512_A": 0.125,
+    "FLOOD512_H1": 0.0,
+    "HARD1024_A": 0.375,
+    "HARD1024_H1": 0.0,
+    "MISSION1024_A": 0.375,
+    "MISSION1024_H1": 0.0,
+    "MISSION256_A": 0.375,
+    "MISSION256_H1": 0.0,
+    "P_integrated_answer": 0.21,
+    "P_integrated_retrieval": 0.0,
+    "SAL1024_A": 0.125,
+    "SAL1024_H1": 0.0,
+    "SAL256_A": 0.125,
+    "SAL256_H1": 0.0,
+    "SHIFT_A": 0.1,
+    "SHIFT_H1": 0.0,
+    "SUP_CURRENT1024_A": 0.125,
+    "SUP_CURRENT1024_H1": 0.0,
+    "SUP_HISTORY1024_A": 0.25,
+    "SUP_HISTORY1024_H1": 0.0
+  },
+  "splits": {
+    "extrapolation": [
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_1024",
+        "family": "distractor_flood",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_128",
+        "family": "distractor_flood",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_512",
+        "family": "distractor_flood",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.375,
+        "case_count": 8,
+        "condition": "load_1024",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.375,
+        "case_count": 8,
+        "condition": "load_128",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.375,
+        "case_count": 8,
+        "condition": "load_256",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.375,
+        "case_count": 8,
+        "condition": "load_1024",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.375,
+        "case_count": 8,
+        "condition": "load_128",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.375,
+        "case_count": 8,
+        "condition": "load_256",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_1024",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_128",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_256",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_1024",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_128",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_256",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "history_load_1024",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "history_load_128",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "history_load_256",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_1024",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_128",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_256",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_100_load_1024",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_100_load_128",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_100_load_256",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_25_load_1024",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_25_load_128",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_25_load_256",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_50_load_1024",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_50_load_128",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_50_load_256",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_75_load_1024",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_75_load_128",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_75_load_256",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      }
+    ],
+    "iid": [
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "distractor_flood",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_64",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "load_64",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_64",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_32",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_64",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "history_load_32",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "history_load_64",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_100_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_100_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_25_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_25_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_50_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_50_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_75_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_75_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      }
+    ],
+    "train": [
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "distractor_flood",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "load_64",
+        "family": "hard_negative",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "load_64",
+        "family": "mission_set",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "load_32",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "load_64",
+        "family": "salience",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_32",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "current_load_64",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "history_load_32",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "history_load_64",
+        "family": "supersession",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_0_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_100_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_100_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_25_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_25_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_50_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.125,
+        "case_count": 8,
+        "condition": "overlap_50_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.25,
+        "case_count": 8,
+        "condition": "overlap_75_load_32",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      },
+      {
+        "answer_accuracy": 0.0,
+        "case_count": 8,
+        "condition": "overlap_75_load_64",
+        "family": "utility_change",
+        "missing_retrieval": 0,
+        "retrieval_errors": 8,
+        "retrieval_hit_at_1": 0.0
+      }
+    ]
+  }
+}

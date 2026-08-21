@@ -1,0 +1,8 @@
+{
+  "device": "cpu",
+  "git_head": "4eee7e6e37a1c9014eb20a3b969345004a0e455a",
+  "platform": "Linux-6.8.0-63-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "torch": "2.8.0+cu128",
+  "torch_threads": 1
+}

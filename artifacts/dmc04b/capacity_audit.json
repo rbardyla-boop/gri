@@ -1,0 +1,136 @@
+{
+  "budget": 16,
+  "by_seed": {
+    "1337": {
+      "fifo": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "learned": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "oracle": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 2.0630208333333333
+      },
+      "random": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 8.125818684895833
+      }
+    },
+    "1338": {
+      "fifo": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "learned": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "oracle": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 2.0630208333333333
+      },
+      "random": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 8.125818684895833
+      }
+    },
+    "1339": {
+      "fifo": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "learned": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "oracle": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 2.0630208333333333
+      },
+      "random": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 8.125818684895833
+      }
+    },
+    "1340": {
+      "fifo": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "learned": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "oracle": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 2.0630208333333333
+      },
+      "random": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 8.125818684895833
+      }
+    },
+    "1341": {
+      "fifo": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "learned": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 14.1796875
+      },
+      "oracle": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 2.0630208333333333
+      },
+      "random": {
+        "capacity_violations": 0,
+        "case_count": 600,
+        "max_occupancy": 16,
+        "mean_occupancy": 8.125818684895833
+      }
+    }
+  },
+  "pass": true
+}
