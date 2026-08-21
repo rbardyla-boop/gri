@@ -1,0 +1,9 @@
+{
+  "archive_attribute": false,
+  "capacity": 16,
+  "final_records": 16,
+  "overflow_attribute": false,
+  "pass": true,
+  "peak_records": 16,
+  "records_considered": 64
+}

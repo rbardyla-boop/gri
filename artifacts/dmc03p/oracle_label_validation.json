@@ -1,0 +1,12 @@
+{
+  "affine_formula_matches_all_labels": true,
+  "examples": 11776,
+  "final_query_used_for_label": false,
+  "negative_labels": 6144,
+  "oracle_action_available_to_future_policy": false,
+  "oracle_source": "DMC-02A independent bounded admission trace",
+  "pass": true,
+  "positive_labels": 5632,
+  "retention_label_not_answer": true,
+  "source_split": "train"
+}

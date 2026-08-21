@@ -1,0 +1,20 @@
+{
+  "DMC03P_CONFIG.json": "c14d2a5d196685cd3e00334104cf160f60fc50c0c56c54e42ea4ec6b04a5502a",
+  "DMC03P_CONTRACT.md": "87b1cae171ecb571723831371845f78b22a592df7a4c3e95dc3a10edf9028e52",
+  "DMC03P_RECEIPT.json": "bba016760e8c34081b99cacb44057977a274840b1cfd77c2ed06e2561d71977c",
+  "capacity_validation.json": "18d62f4c0bcfc999720a5f8b04062c8bbc134e35d8bdf90e243501415d2445f9",
+  "dmc01_checkpoint_manifest.json": "d5d5f40dad58381c26e77cb47c8a5aab508805a4ad37c6f119f5dac0017dd482",
+  "dmc02_identity.json": "11afc6ee6eb59cafbf5899a7325d51e6ea0c86ec541d523dec4b074eb420559f",
+  "dmc02a_identity.json": "287f50193e8b1e60a1c397eaa6a8754f9b938dd068cfa2e6d2f2a3d01e37bb0a",
+  "feature_spec.json": "e611828f6bd4837fd14073bf7c0d4f97d000fb78e5809861ea1dfceccac01830",
+  "metadata_firewall.json": "a5267ad76bc942c50ca084892641bbee58aae30bc62e5f96f11eee47d2fd5927",
+  "oracle_label_validation.json": "0b5591668835ae73fd3bf2dec7601e2a4eb4c196d7b071bb2fe42418d81bb5b7",
+  "ordering_spec.json": "bfdf9f575d14460c4a0674ab341d314810b47a504b7adbb399c0846670ae0e8d",
+  "parameter_identity.json": "3b591fd9b2f3fe699c55410713c9ff2723c8a08a732414ad6b87c9561cbf8a3d",
+  "processor_freeze.json": "6ac5aa5c52e2e16b0b4f71b41f080abdcb91446a2d0ee9fb69d846fc8ee45092",
+  "shuffle_metadata_control.json": "823e0156214f9e06c08ec246f539c214010b9122bc07494c39b87bae7e677250",
+  "tie_break_spec.json": "4ea3a91c4e7223c4b5f03eaddf3c2d413a661a80d28c304afd26618f1d5b3542",
+  "training_example_manifest.json": "22ee52b1455c291d87572565bfa25925a85cf1f6b0ee7d2eb2f20da3c2d01194",
+  "training_examples.jsonl": "7d787f8f7de8993b9df980b04f72ba44eb13254dfcfa41f0960c5d855c234ad6",
+  "world0_identity.json": "0dfa4e488cb69bb08f075ea7802cc0df5e8641e8b6988883fe6f2a267a277a23"
+}

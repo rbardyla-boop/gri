@@ -1,0 +1,115 @@
+{
+  "capacity": 16,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "future_advancement_gates": {
+    "A_primary_mean": {
+      "metric": "mean(P_learned)",
+      "minimum": 0.9
+    },
+    "B_oracle_gap": {
+      "maximum": 0.1,
+      "metric": "mean(P_oracle) - mean(P_learned)"
+    },
+    "C_M1024": {
+      "metric": "mean(M1024)",
+      "minimum": 0.9
+    },
+    "D_SAL1024": {
+      "metric": "mean(SAL1024)",
+      "minimum": 0.9
+    },
+    "E_SUP_current_1024": {
+      "metric": "mean(SUP_current_1024)",
+      "minimum": 0.9
+    },
+    "F_SUP_history_1024": {
+      "metric": "mean(SUP_history_1024)",
+      "minimum": 0.9
+    },
+    "G_SHIFT": {
+      "metric": "mean(SHIFT)",
+      "minimum": 0.9
+    },
+    "H_FLOOD1024": {
+      "metric": "mean(FLOOD1024)",
+      "minimum": 0.9
+    },
+    "I_seed_consistency": {
+      "metric": "count(P_learned >= 0.85)",
+      "minimum": "5/5"
+    },
+    "J_FIFO_separation": {
+      "metric": "mean(P_learned) - mean(P_FIFO)",
+      "minimum": 0.6
+    },
+    "K_RANDOM_separation": {
+      "metric": "mean(P_learned) - mean(P_RANDOM)",
+      "minimum": 0.6
+    },
+    "metadata_mechanism": {
+      "metric": "mean(P_learned) - mean(P_shuffled_metadata)",
+      "minimum": 0.4
+    }
+  },
+  "future_evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "future_modes": [
+    "ORACLE_RETENTION_16",
+    "LEARNED_RETENTION_16",
+    "FIFO_16",
+    "RANDOM_16",
+    "SHUFFLED_METADATA_16"
+  ],
+  "future_primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "learned_retrieval": false,
+  "non_evidence_structural_seed": 9090,
+  "performance_results_present": false,
+  "processor": {
+    "class": "ImmutableRelationAnchorReasoner",
+    "frozen": true,
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "parameters": 30912,
+    "train_depth": 4
+  },
+  "retrieval": "DMC-02 exact entity-field current/history retrieval",
+  "scientific_question": "Can a small learned retention controller infer which records deserve a hard 16-slot memory from legitimate utility metadata?",
+  "scientific_training_executed": false,
+  "scorer": {
+    "class": "AffineRetentionScorer",
+    "feature_dim": 2,
+    "formula": "priority = w dot x + b",
+    "hidden_value_input": false,
+    "trainable_parameters": 3
+  },
+  "source_commit": "850e41373ca553cf62204549ea533fcfe32b0031",
+  "terminal_state": "DMC_03P_LEARNED_RETENTION_PREREGISTERED",
+  "training_protocol": {
+    "batch_size": 256,
+    "device": "cpu",
+    "early_stopping": false,
+    "epochs": 40,
+    "evidence_training_executed_in_DMC03P": false,
+    "gradient_clip": 1.0,
+    "hyperparameter_search": false,
+    "learning_rate": 0.01,
+    "optimizer": "AdamW",
+    "ordering": "ascending SHA256(DMC03P-order|seed|epoch|training_example_id), then example_id",
+    "scheduler": false,
+    "torch_threads": 1,
+    "weight_decay": 0.0
+  },
+  "training_split": "DMC-02A frozen TRAIN only",
+  "unit": "DMC-03P"
+}

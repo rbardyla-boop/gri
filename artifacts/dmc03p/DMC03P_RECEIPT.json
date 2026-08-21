@@ -1,0 +1,26 @@
+{
+  "benchmark_accuracy": null,
+  "checks": {
+    "capacity": true,
+    "dmc01_identity": true,
+    "dmc02_identity": true,
+    "dmc02a_identity": true,
+    "feature_spec": true,
+    "metadata_firewall": true,
+    "oracle_labels": true,
+    "ordering": true,
+    "parameters": true,
+    "processor_freeze": true,
+    "scientific_training_not_executed": true,
+    "shuffle_control": true,
+    "tie_break": true,
+    "training_examples": true,
+    "world0_identity": true
+  },
+  "evidence_seed_training_runs": [],
+  "next_authorized_unit": "DMC-03 scientific learned-retention training only after a separate evidence commit",
+  "performance_results_present": false,
+  "scientific_training_executed": false,
+  "terminal_state": "DMC_03P_LEARNED_RETENTION_PREREGISTERED",
+  "unit": "DMC-03P"
+}

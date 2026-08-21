@@ -1,0 +1,13 @@
+{
+  "artifact_manifest": {
+    "entries": 26,
+    "errors": [],
+    "pass": true,
+    "root": "artifacts/dmc02"
+  },
+  "expected_code_commit": "f63a20d",
+  "expected_evidence_commit": "4a9e2bf",
+  "pass": true,
+  "unchanged_since_evidence_commit": true,
+  "verdict": "DMC_02_BOUNDED_EXACT_RETENTION_ADVANCES"
+}

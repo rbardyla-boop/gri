@@ -1,0 +1,10 @@
+{
+  "affine_expected_parameters": 3,
+  "effective_trainable_parameters": 3,
+  "model_class": "AffineRetentionScorer",
+  "optimizer_parameters": 3,
+  "pass": true,
+  "processor_parameters": 30912,
+  "processor_trainable_parameters": 0,
+  "scorer_parameters": 3
+}

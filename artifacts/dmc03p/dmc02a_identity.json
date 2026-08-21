@@ -1,0 +1,12 @@
+{
+  "artifact_manifest": {
+    "entries": 20,
+    "errors": [],
+    "pass": true,
+    "root": "artifacts/dmc02a"
+  },
+  "dataset_sha256": "d7bb21dea7b81955fbaac46b1debfe9ff8a4ea504890f1400464fffef5606f46",
+  "expected_commit": "f10394d",
+  "pass": true,
+  "unchanged_since_predecessor_commit": true
+}

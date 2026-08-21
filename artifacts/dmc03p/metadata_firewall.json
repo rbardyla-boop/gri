@@ -1,0 +1,30 @@
+{
+  "feature_encoder_signature": "RetentionFeatureEncoder.encode(RetentionMetadata, active_entities)",
+  "feature_fields": [
+    "active_entities + entity",
+    "salience"
+  ],
+  "forbidden_input_names": [
+    "answer",
+    "answer_value",
+    "case_id",
+    "correctness",
+    "future_event",
+    "future_query",
+    "hidden_value",
+    "oracle_action",
+    "oracle_answer",
+    "query",
+    "value"
+  ],
+  "hidden_value_consumed": false,
+  "pass": true,
+  "retention_metadata_fields": [
+    "family",
+    "entity",
+    "field",
+    "creation_episode",
+    "salience",
+    "supersedes"
+  ]
+}

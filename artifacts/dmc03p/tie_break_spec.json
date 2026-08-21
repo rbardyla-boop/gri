@@ -1,0 +1,7 @@
+{
+  "hash": "SHA-256",
+  "memory_id_is_query_independent": true,
+  "pass": true,
+  "policy": "descending priority, then ascending SHA256(memory_id)",
+  "stochastic_evaluation": false
+}

@@ -1,0 +1,63 @@
+{
+  "artifact_manifest": {
+    "entries": 36,
+    "errors": [],
+    "pass": true,
+    "root": "artifacts/dmc01"
+  },
+  "expected_commit": "48ae98f",
+  "pass": true,
+  "rows": [
+    {
+      "checkpoint_parameter_count": 30912,
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "pass": true,
+      "path": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "processor_parameter_count": 30912,
+      "processor_state_hash": "9f4eeaf7c87040225c6b71cbc43e6f1e74a0b69768f9def029bee8edc9ac2d92",
+      "requires_grad_false": true,
+      "seed": 1337
+    },
+    {
+      "checkpoint_parameter_count": 30912,
+      "checkpoint_sha256": "1c05cd6d5d9fc19e68afa8b03c753396c153aa8c8e62c82aeb42e4de3d547f0d",
+      "pass": true,
+      "path": "artifacts/dmc01/checkpoints/exact_seed1338_final.pt",
+      "processor_parameter_count": 30912,
+      "processor_state_hash": "3fa8f34030fbf254432e08d2611afff6c754ca149fcecc954d45a6dda8787c60",
+      "requires_grad_false": true,
+      "seed": 1338
+    },
+    {
+      "checkpoint_parameter_count": 30912,
+      "checkpoint_sha256": "a5cc2851cf64f2a289363ccaee63f0a64226fe854e2ab1d38feee10ef2ba3665",
+      "pass": true,
+      "path": "artifacts/dmc01/checkpoints/exact_seed1339_final.pt",
+      "processor_parameter_count": 30912,
+      "processor_state_hash": "c275da184f2979775b1091f35b6182765e6dea7cbc636f241e66449f747b65a8",
+      "requires_grad_false": true,
+      "seed": 1339
+    },
+    {
+      "checkpoint_parameter_count": 30912,
+      "checkpoint_sha256": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+      "pass": true,
+      "path": "artifacts/dmc01/checkpoints/exact_seed1340_final.pt",
+      "processor_parameter_count": 30912,
+      "processor_state_hash": "d93b307b86cacd721b24129acdd7f52fae71718b4992407120b01fe8aa313cc6",
+      "requires_grad_false": true,
+      "seed": 1340
+    },
+    {
+      "checkpoint_parameter_count": 30912,
+      "checkpoint_sha256": "58e9e88657883ee842700e2e7aabdb87ee822ebf96c8be48039a673856e7fd0d",
+      "pass": true,
+      "path": "artifacts/dmc01/checkpoints/exact_seed1341_final.pt",
+      "processor_parameter_count": 30912,
+      "processor_state_hash": "6654d629b7cd10474d539e65aa14a335805d3b83a0d725bf82d83deb3f172df6",
+      "requires_grad_false": true,
+      "seed": 1341
+    }
+  ],
+  "unchanged_since_predecessor_commit": true
+}

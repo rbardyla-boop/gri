@@ -1,0 +1,58 @@
+{
+  "affine_sufficiency": "oracle_retain = 1 iff mission_membership == 1 or high_salience == 1; w=(1,1), b=-0.5 separates the two classes",
+  "excluded_authorized_fields": [
+    {
+      "field": "RetentionMetadata.supersedes",
+      "reason": "not needed because supersession records are already selected by current mission membership"
+    },
+    {
+      "field": "RetentionMetadata.creation_episode",
+      "reason": "not needed by the frozen DMC-02A bounded admission rule"
+    }
+  ],
+  "feature_dim": 2,
+  "features": [
+    {
+      "available_before_final_query": true,
+      "encoding": "1 iff family is mission_set, supersession, or utility_change and entity is in the current active mission scope; otherwise 0",
+      "name": "mission_membership",
+      "numeric_range": [
+        0,
+        1
+      ],
+      "source_field": "active_entities + RetentionMetadata.entity",
+      "type": "boolean",
+      "why_authorized": "DMC-02A mission membership is an explicit retention utility signal."
+    },
+    {
+      "available_before_final_query": true,
+      "encoding": "1 for HIGH and 0 for LOW or absent",
+      "name": "high_salience",
+      "numeric_range": [
+        0,
+        1
+      ],
+      "source_field": "RetentionMetadata.salience",
+      "type": "boolean",
+      "why_authorized": "DMC-02A salience and distractor-flood retention uses explicit HIGH/LOW salience."
+    }
+  ],
+  "forbidden_inputs": [
+    "answer",
+    "answer_value",
+    "case_id",
+    "correctness",
+    "future_event",
+    "future_events",
+    "hidden_answer",
+    "hidden_value",
+    "oracle_action",
+    "oracle_answer",
+    "query",
+    "query_entity",
+    "query_field",
+    "query_key",
+    "target",
+    "value"
+  ]
+}
