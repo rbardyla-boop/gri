@@ -1,0 +1,64 @@
+{
+  "exact_minus_nomemory_mean": 0.875,
+  "exact_minus_shuffled_mean": 1.0,
+  "gates": {
+    "A_train": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "B_iid": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "C_P_memory": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "D_exact_minus_nomemory": {
+      "observed": 0.875,
+      "pass": true,
+      "threshold": 0.6
+    },
+    "E_R1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "F_C1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "G_S_current": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "H_S_history": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "I_D1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "J_paired_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    }
+  },
+  "scientific_execution_valid": true,
+  "shuffled_content_gate": {
+    "observed": 1.0,
+    "pass": true,
+    "threshold": 0.4
+  },
+  "terminal_state": "DMC_01_EXACT_MEMORY_ADVANCES",
+  "unit": "DMC-01"
+}

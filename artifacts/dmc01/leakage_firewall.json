@@ -1,0 +1,8 @@
+{
+  "answer_access_in_event_path": false,
+  "case_reset_each_case": true,
+  "evidence_runtime": true,
+  "no_symbolic_answer_in_ledger": true,
+  "oracle_visible_to_memory_or_event_path": false,
+  "pass": true
+}

@@ -1,0 +1,90 @@
+{
+  "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1340_final.pt",
+  "checkpoint_sha256": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+  "completed_epoch": 80,
+  "final_loss": 0.0026026421692222357,
+  "final_model_state_hash": "440335f6fd5df15b2c1151be3755ba0fc057e4b829264f6e04fab67f23c315e0",
+  "initial_model_state_hash": "b4c2f28130268c9608d38c59279796434ff8ec7261b4e53d6255a748268a83ed",
+  "kind": "exact",
+  "metrics": {
+    "P_memory": 1.0,
+    "components": {
+      "C1024": 1.0,
+      "C16": 1.0,
+      "C256": 1.0,
+      "C4": 1.0,
+      "C64": 1.0,
+      "D0": 1.0,
+      "D1024": 1.0,
+      "D128": 1.0,
+      "D32": 1.0,
+      "D512": 1.0,
+      "D8": 1.0,
+      "R1": 1.0,
+      "R1024": 1.0,
+      "R16": 1.0,
+      "R256": 1.0,
+      "R4": 1.0,
+      "R64": 1.0,
+      "S_current": 1.0,
+      "S_history": 1.0
+    },
+    "iid_accuracy": 1.0,
+    "splits": {
+      "extrapolation": {
+        "accuracy": 1.0,
+        "case_count": 160,
+        "conditions": {
+          "capacity_pressure:load_1024": 1.0,
+          "capacity_pressure:load_256": 1.0,
+          "delayed_recall:delay_1024": 1.0,
+          "delayed_recall:delay_256": 1.0,
+          "delayed_recall:delay_64": 1.0,
+          "distractor_resistance:load_1024": 1.0,
+          "distractor_resistance:load_128": 1.0,
+          "distractor_resistance:load_512": 1.0,
+          "supersession:current": 1.0,
+          "supersession:history": 1.0
+        }
+      },
+      "iid": {
+        "accuracy": 1.0,
+        "case_count": 176,
+        "conditions": {
+          "capacity_pressure:load_16": 1.0,
+          "capacity_pressure:load_4": 1.0,
+          "capacity_pressure:load_64": 1.0,
+          "delayed_recall:delay_1": 1.0,
+          "delayed_recall:delay_16": 1.0,
+          "delayed_recall:delay_4": 1.0,
+          "distractor_resistance:load_0": 1.0,
+          "distractor_resistance:load_32": 1.0,
+          "distractor_resistance:load_8": 1.0,
+          "supersession:current": 1.0,
+          "supersession:history": 1.0
+        }
+      },
+      "train": {
+        "accuracy": 1.0,
+        "case_count": 176,
+        "conditions": {
+          "capacity_pressure:load_16": 1.0,
+          "capacity_pressure:load_4": 1.0,
+          "capacity_pressure:load_64": 1.0,
+          "delayed_recall:delay_1": 1.0,
+          "delayed_recall:delay_16": 1.0,
+          "delayed_recall:delay_4": 1.0,
+          "distractor_resistance:load_0": 1.0,
+          "distractor_resistance:load_32": 1.0,
+          "distractor_resistance:load_8": 1.0,
+          "supersession:current": 1.0,
+          "supersession:history": 1.0
+        }
+      }
+    },
+    "train_accuracy": 1.0
+  },
+  "next_batch_index": 0,
+  "parameter_count": 30912,
+  "seed": 1340
+}

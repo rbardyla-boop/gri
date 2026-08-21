@@ -1,0 +1,18 @@
+{
+  "algorithm": "SHA256('DMC01_ORDER|' + seed + '|' + epoch + '|' + case_id)",
+  "batch_size": 16,
+  "dmc01pa_ordering_manifest_sha256": "10a4b665e1271a0081f4148ac1c8415158656d2108c283d1e5f611f40aef2429",
+  "epoch_range": [
+    0,
+    79
+  ],
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "paired_ordering_identical": true,
+  "pass": true
+}

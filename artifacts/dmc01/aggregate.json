@@ -1,0 +1,371 @@
+{
+  "exact_memory": {
+    "C1024": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "C16": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "C256": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "C4": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "C64": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "D0": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "D1024": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "D128": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "D32": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "D512": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "D8": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "P_memory": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "R1": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "R1024": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "R16": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "R256": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "R4": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "R64": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "S_current": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "S_history": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "iid_accuracy": {
+      "mean": 1.0,
+      "stdev": 0.0
+    },
+    "train_accuracy": {
+      "mean": 1.0,
+      "stdev": 0.0
+    }
+  },
+  "gates": {
+    "A_train": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "B_iid": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "C_P_memory": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "D_exact_minus_nomemory": {
+      "observed": 0.875,
+      "pass": true,
+      "threshold": 0.6
+    },
+    "E_R1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "F_C1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "G_S_current": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "H_S_history": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "I_D1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "J_paired_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    }
+  },
+  "no_memory": {
+    "C1024": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "C16": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "C256": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "C4": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "C64": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "D0": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "D1024": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "D128": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "D32": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "D512": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "D8": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "P_memory": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "R1": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "R1024": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "R16": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "R256": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "R4": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "R64": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "S_current": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "S_history": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "iid_accuracy": {
+      "mean": 0.125,
+      "stdev": 0.0
+    },
+    "train_accuracy": {
+      "mean": 0.125,
+      "stdev": 0.0
+    }
+  },
+  "paired": [
+    {
+      "exact_P_memory": 1.0,
+      "exact_minus_nomemory": 0.875,
+      "exact_minus_shuffled": 1.0,
+      "nomemory_P_memory": 0.125,
+      "seed": 1337,
+      "shuffled_P_memory": 0.0
+    },
+    {
+      "exact_P_memory": 1.0,
+      "exact_minus_nomemory": 0.875,
+      "exact_minus_shuffled": 1.0,
+      "nomemory_P_memory": 0.125,
+      "seed": 1338,
+      "shuffled_P_memory": 0.0
+    },
+    {
+      "exact_P_memory": 1.0,
+      "exact_minus_nomemory": 0.875,
+      "exact_minus_shuffled": 1.0,
+      "nomemory_P_memory": 0.125,
+      "seed": 1339,
+      "shuffled_P_memory": 0.0
+    },
+    {
+      "exact_P_memory": 1.0,
+      "exact_minus_nomemory": 0.875,
+      "exact_minus_shuffled": 1.0,
+      "nomemory_P_memory": 0.125,
+      "seed": 1340,
+      "shuffled_P_memory": 0.0
+    },
+    {
+      "exact_P_memory": 1.0,
+      "exact_minus_nomemory": 0.875,
+      "exact_minus_shuffled": 1.0,
+      "nomemory_P_memory": 0.125,
+      "seed": 1341,
+      "shuffled_P_memory": 0.0
+    }
+  ],
+  "shuffled_content_gate": {
+    "observed": 1.0,
+    "pass": true,
+    "threshold": 0.4
+  },
+  "shuffled_memory": {
+    "C1024": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "C16": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "C256": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "C4": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "C64": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "D0": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "D1024": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "D128": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "D32": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "D512": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "D8": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "P_memory": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "R1": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "R1024": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "R16": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "R256": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "R4": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "R64": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "S_current": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "S_history": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "iid_accuracy": {
+      "mean": 0.0,
+      "stdev": 0.0
+    },
+    "train_accuracy": {
+      "mean": 0.0,
+      "stdev": 0.0
+    }
+  }
+}

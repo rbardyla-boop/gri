@@ -1,0 +1,82 @@
+{
+  "kind": "SHUFFLED_MEMORY",
+  "metrics": {
+    "P_memory": 0.0,
+    "components": {
+      "C1024": 0.0,
+      "C16": 0.0,
+      "C256": 0.0,
+      "C4": 0.0,
+      "C64": 0.0,
+      "D0": 0.0,
+      "D1024": 0.0,
+      "D128": 0.0,
+      "D32": 0.0,
+      "D512": 0.0,
+      "D8": 0.0,
+      "R1": 0.0,
+      "R1024": 0.0,
+      "R16": 0.0,
+      "R256": 0.0,
+      "R4": 0.0,
+      "R64": 0.0,
+      "S_current": 0.0,
+      "S_history": 0.0
+    },
+    "iid_accuracy": 0.0,
+    "splits": {
+      "extrapolation": {
+        "accuracy": 0.0,
+        "case_count": 160,
+        "conditions": {
+          "capacity_pressure:load_1024": 0.0,
+          "capacity_pressure:load_256": 0.0,
+          "delayed_recall:delay_1024": 0.0,
+          "delayed_recall:delay_256": 0.0,
+          "delayed_recall:delay_64": 0.0,
+          "distractor_resistance:load_1024": 0.0,
+          "distractor_resistance:load_128": 0.0,
+          "distractor_resistance:load_512": 0.0,
+          "supersession:current": 0.0,
+          "supersession:history": 0.0
+        }
+      },
+      "iid": {
+        "accuracy": 0.0,
+        "case_count": 176,
+        "conditions": {
+          "capacity_pressure:load_16": 0.0,
+          "capacity_pressure:load_4": 0.0,
+          "capacity_pressure:load_64": 0.0,
+          "delayed_recall:delay_1": 0.0,
+          "delayed_recall:delay_16": 0.0,
+          "delayed_recall:delay_4": 0.0,
+          "distractor_resistance:load_0": 0.0,
+          "distractor_resistance:load_32": 0.0,
+          "distractor_resistance:load_8": 0.0,
+          "supersession:current": 0.0,
+          "supersession:history": 0.0
+        }
+      },
+      "train": {
+        "accuracy": 0.0,
+        "case_count": 176,
+        "conditions": {
+          "capacity_pressure:load_16": 0.0,
+          "capacity_pressure:load_4": 0.0,
+          "capacity_pressure:load_64": 0.0,
+          "delayed_recall:delay_1": 0.0,
+          "delayed_recall:delay_16": 0.0,
+          "delayed_recall:delay_4": 0.0,
+          "distractor_resistance:load_0": 0.0,
+          "distractor_resistance:load_32": 0.0,
+          "distractor_resistance:load_8": 0.0,
+          "supersession:current": 0.0,
+          "supersession:history": 0.0
+        }
+      }
+    },
+    "train_accuracy": 0.0
+  },
+  "seed": 1337
+}

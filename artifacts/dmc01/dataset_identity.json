@@ -1,0 +1,22 @@
+{
+  "datasets": {
+    "extrapolation": {
+      "case_count": 160,
+      "path": "artifacts/dmc00/datasets/extrapolation.jsonl",
+      "sha256": "06ed9d16a37b9fb07ee06a39f32e83c8ce8dc4f37645dc93ca7f80a40100fdd5"
+    },
+    "iid": {
+      "case_count": 176,
+      "path": "artifacts/dmc00/datasets/iid.jsonl",
+      "sha256": "24cedc3ec9712f9cf88e392684b49472454feed70be2628742ea1c3ab4fb0cf6"
+    },
+    "train": {
+      "case_count": 176,
+      "path": "artifacts/dmc00/datasets/train.jsonl",
+      "sha256": "ab1d59b7fff3cb953db8f432a18e15d9d9846150a48553f3c96578b70d71a783"
+    }
+  },
+  "dmc00_artifact_manifest_sha256": "255a6a330c596b83c94418069ab10a9269857393a747015f22df8cc55de32e9b",
+  "dmc00_artifact_manifest_verified": true,
+  "dmc00_commit": "0e5359d"
+}

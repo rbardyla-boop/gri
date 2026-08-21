@@ -1,0 +1,52 @@
+{
+  "models": [
+    {
+      "checkpoint_boundary": {
+        "completed_epoch": 1,
+        "next_batch_index": 3
+      },
+      "evidence_seed_executed": false,
+      "final_loss_equal": true,
+      "final_position": {
+        "completed_epoch": 80,
+        "next_batch_index": 0
+      },
+      "kind": "exact",
+      "model_state_equal": true,
+      "optimizer_state_equal": true,
+      "pass": true,
+      "python_numpy_torch_rng_equal": true,
+      "resumed_final_loss": 0.001997811021283269,
+      "resumed_model_state_hash": "31d37f8c7f61aca032e763ab26b389bfb375c8efd4f47e7f29b77085ff30724c",
+      "seed": 9090,
+      "uninterrupted_final_loss": 0.001997811021283269,
+      "uninterrupted_model_state_hash": "31d37f8c7f61aca032e763ab26b389bfb375c8efd4f47e7f29b77085ff30724c"
+    },
+    {
+      "checkpoint_boundary": {
+        "completed_epoch": 1,
+        "next_batch_index": 3
+      },
+      "evidence_seed_executed": false,
+      "final_loss_equal": true,
+      "final_position": {
+        "completed_epoch": 80,
+        "next_batch_index": 0
+      },
+      "kind": "nomemory",
+      "model_state_equal": true,
+      "optimizer_state_equal": true,
+      "pass": true,
+      "python_numpy_torch_rng_equal": true,
+      "resumed_final_loss": 2.0940606594085693,
+      "resumed_model_state_hash": "a45b529ac029d4a4062a14aa36bcd9a0f0357eb1ea11a897bded8875d9a09c54",
+      "seed": 9090,
+      "uninterrupted_final_loss": 2.0940606594085693,
+      "uninterrupted_model_state_hash": "a45b529ac029d4a4062a14aa36bcd9a0f0357eb1ea11a897bded8875d9a09c54"
+    }
+  ],
+  "pass": true,
+  "scientific_evidence": false,
+  "seed": 9090,
+  "unit": "DMC-01"
+}

@@ -1,0 +1,90 @@
+{
+  "checkpoint": "artifacts/dmc01/checkpoints/nomemory_seed1339_final.pt",
+  "checkpoint_sha256": "6d5a73396fa3d99d64694e231052d3eb0b81a2accd044fff0ddfdcc5be3dc938",
+  "completed_epoch": 80,
+  "final_loss": 2.1050949096679688,
+  "final_model_state_hash": "4546db7e6b10d731dbc5118efac587bce3688482781e0084a013f2b4e5bbfdfc",
+  "initial_model_state_hash": "8e134a09162f05bb4a6d57518b90d4e34f5b4001a74dae35489bc777720c98a4",
+  "kind": "nomemory",
+  "metrics": {
+    "P_memory": 0.125,
+    "components": {
+      "C1024": 0.125,
+      "C16": 0.125,
+      "C256": 0.125,
+      "C4": 0.125,
+      "C64": 0.125,
+      "D0": 0.125,
+      "D1024": 0.125,
+      "D128": 0.125,
+      "D32": 0.125,
+      "D512": 0.125,
+      "D8": 0.125,
+      "R1": 0.125,
+      "R1024": 0.125,
+      "R16": 0.125,
+      "R256": 0.125,
+      "R4": 0.125,
+      "R64": 0.125,
+      "S_current": 0.125,
+      "S_history": 0.125
+    },
+    "iid_accuracy": 0.125,
+    "splits": {
+      "extrapolation": {
+        "accuracy": 0.125,
+        "case_count": 160,
+        "conditions": {
+          "capacity_pressure:load_1024": 0.125,
+          "capacity_pressure:load_256": 0.125,
+          "delayed_recall:delay_1024": 0.125,
+          "delayed_recall:delay_256": 0.125,
+          "delayed_recall:delay_64": 0.125,
+          "distractor_resistance:load_1024": 0.125,
+          "distractor_resistance:load_128": 0.125,
+          "distractor_resistance:load_512": 0.125,
+          "supersession:current": 0.125,
+          "supersession:history": 0.125
+        }
+      },
+      "iid": {
+        "accuracy": 0.125,
+        "case_count": 176,
+        "conditions": {
+          "capacity_pressure:load_16": 0.125,
+          "capacity_pressure:load_4": 0.125,
+          "capacity_pressure:load_64": 0.125,
+          "delayed_recall:delay_1": 0.125,
+          "delayed_recall:delay_16": 0.125,
+          "delayed_recall:delay_4": 0.125,
+          "distractor_resistance:load_0": 0.125,
+          "distractor_resistance:load_32": 0.125,
+          "distractor_resistance:load_8": 0.125,
+          "supersession:current": 0.125,
+          "supersession:history": 0.125
+        }
+      },
+      "train": {
+        "accuracy": 0.125,
+        "case_count": 176,
+        "conditions": {
+          "capacity_pressure:load_16": 0.125,
+          "capacity_pressure:load_4": 0.125,
+          "capacity_pressure:load_64": 0.125,
+          "delayed_recall:delay_1": 0.125,
+          "delayed_recall:delay_16": 0.125,
+          "delayed_recall:delay_4": 0.125,
+          "distractor_resistance:load_0": 0.125,
+          "distractor_resistance:load_32": 0.125,
+          "distractor_resistance:load_8": 0.125,
+          "supersession:current": 0.125,
+          "supersession:history": 0.125
+        }
+      }
+    },
+    "train_accuracy": 0.125
+  },
+  "next_batch_index": 0,
+  "parameter_count": 30912,
+  "seed": 1339
+}

@@ -1,0 +1,86 @@
+{
+  "dmc00_commit": "0e5359d",
+  "dmc01p_commit": "ed15f71",
+  "dmc01pa_commit": "ed861c3",
+  "gates": {
+    "A_train": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "B_iid": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "C_P_memory": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "D_exact_minus_nomemory": {
+      "observed": 0.875,
+      "pass": true,
+      "threshold": 0.6
+    },
+    "E_R1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "F_C1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "G_S_current": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "H_S_history": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.95
+    },
+    "I_D1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "J_paired_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    },
+    "shuffled_content": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.4
+    }
+  },
+  "primary_metric": "mean(R64,R256,R1024,C256,C1024,S_current,S_history,D512,D1024)",
+  "seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "source_commit": "ad2f210",
+  "training": {
+    "batch_semantics": "complete cases",
+    "batch_size": 16,
+    "device": "cpu",
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.003,
+    "optimizer": "AdamW",
+    "scheduler": null,
+    "torch_threads": 1,
+    "train_depth": 4,
+    "weight_decay": 0.0001
+  },
+  "unit": "DMC-01",
+  "world0_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1"
+}

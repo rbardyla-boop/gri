@@ -1,0 +1,9 @@
+{
+  "device": "cpu",
+  "numpy": "2.2.6",
+  "platform": "Linux-6.8.0-63-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "source_commit": "ad2f210",
+  "torch": "2.8.0+cu128",
+  "torch_threads": 1
+}

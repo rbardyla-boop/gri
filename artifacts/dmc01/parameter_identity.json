@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "exact_initial_hash": "258e8db6c76cdc8a799bc0a720848d05eb18547a6202ce1140d7a0f8f7935084",
+      "exact_parameters": 30912,
+      "no_memory_initial_hash": "258e8db6c76cdc8a799bc0a720848d05eb18547a6202ce1140d7a0f8f7935084",
+      "no_memory_parameters": 30912,
+      "seed": 1337,
+      "tensor_equal": true
+    },
+    {
+      "exact_initial_hash": "e6df8c12e83e8ba0989c326548d3de24aece92382cde8eb4d3e392564db782f2",
+      "exact_parameters": 30912,
+      "no_memory_initial_hash": "e6df8c12e83e8ba0989c326548d3de24aece92382cde8eb4d3e392564db782f2",
+      "no_memory_parameters": 30912,
+      "seed": 1338,
+      "tensor_equal": true
+    },
+    {
+      "exact_initial_hash": "8e134a09162f05bb4a6d57518b90d4e34f5b4001a74dae35489bc777720c98a4",
+      "exact_parameters": 30912,
+      "no_memory_initial_hash": "8e134a09162f05bb4a6d57518b90d4e34f5b4001a74dae35489bc777720c98a4",
+      "no_memory_parameters": 30912,
+      "seed": 1339,
+      "tensor_equal": true
+    },
+    {
+      "exact_initial_hash": "b4c2f28130268c9608d38c59279796434ff8ec7261b4e53d6255a748268a83ed",
+      "exact_parameters": 30912,
+      "no_memory_initial_hash": "b4c2f28130268c9608d38c59279796434ff8ec7261b4e53d6255a748268a83ed",
+      "no_memory_parameters": 30912,
+      "seed": 1340,
+      "tensor_equal": true
+    },
+    {
+      "exact_initial_hash": "50c83b6d974607b5ccc01c0bd857fb2f5ef34abde82f0e37d4bb40bc267f5ad2",
+      "exact_parameters": 30912,
+      "no_memory_initial_hash": "50c83b6d974607b5ccc01c0bd857fb2f5ef34abde82f0e37d4bb40bc267f5ad2",
+      "no_memory_parameters": 30912,
+      "seed": 1341,
+      "tensor_equal": true
+    }
+  ]
+}
