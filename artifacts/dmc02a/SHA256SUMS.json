@@ -1,0 +1,22 @@
+{
+  "DMC02A_CONFIG.json": "819b0227e1d008f42f67e22206c0b40be42e134cb94367b66d519ce0cb159fdd",
+  "DMC02A_CONTRACT.md": "f421a4189e8b38c186b17d77c809dd8de174e46aeab52e10c2a448e0a15b1b75",
+  "DMC02A_RECEIPT.json": "ae0112e2ad254c321613016141f3f77dbd6f5c4fdb1a116e30ba7430bd1fd8b4",
+  "balance_validation.json": "7b2ed10d3326dff8de5b2ef83ebd13c859e070b321d55493cc8ff6915aef799d",
+  "bounded_oracle.json": "47422978a92241902cdf7b1ef114a0f09fa847d2c6d1f3078e85709d90bdd368",
+  "capacity_accounting.json": "c697cd00f6a92e244603e3aca4266f7b24f8c76abfa37eb0d2f313aa2bfe6ddf",
+  "control_validation.json": "86566b3a21bea5000b9da9d72048dd11544f1712b50dc9854c30cc6dfdab7626",
+  "dataset_manifest.json": "9d197235eea0eb40e893875e0986a2e3d26e8b0e634c0b098d18fedad281fbce",
+  "datasets/extrapolation.jsonl": "5240e0788e1b820475e683240a44130ec30981cc197653931f78063828f514f8",
+  "datasets/iid.jsonl": "3375c69200f0b28494968fa79a59354802de76a8ebb74c413b21ca839d23a060",
+  "datasets/train.jsonl": "d7bb21dea7b81955fbaac46b1debfe9ff8a4ea504890f1400464fffef5606f46",
+  "determinism_validation.json": "73999ca4a2e24a6bc287b242de7c7896bc37f85368b4b1cbbd896e63dab58a8d",
+  "dmc00_identity.json": "30afd0b2aec2b22f94940424247734eea3250e10f32fe42d2cb4d8839b1cc99f",
+  "dmc01_identity.json": "dbf46e686b3270faf8399b01c4d324cff557fdada71f582d184b0f041af4059e",
+  "fifo_control.json": "0861565dc1c8ccffb31d038e8b3a87d8536a2ec9be9418ef5e7869493d8a322e",
+  "leakage_validation.json": "e7deeba5c97c9a94e9a5d15057eacf024ed3b5b5dbb62a557ed4450189390d06",
+  "random_control.json": "c843cb5569ecd709939d2e85c242849dc1aa1d832808824756fe6e1224aafb8d",
+  "split_manifest.json": "4d4dd092448bebbc3c6a3b9b7c24a6d68d76d1b6a4e5a5f537a1b47b876b599d",
+  "unbounded_oracle.json": "095345f6edf2d1c23649fa55eebe7288a3105f95a1942c771e5ddf7591167354",
+  "world0_identity.json": "49bf7f3bc87881ac9c8b49215c4098cc7dd653e3c1d59d0d351854eb55af462a"
+}

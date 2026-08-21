@@ -1,0 +1,103 @@
+{
+  "specification": {
+    "extrapolation": {
+      "flood_distractors": [
+        128,
+        512,
+        1024
+      ],
+      "mission_set_loads": [
+        128,
+        256,
+        1024
+      ],
+      "salience_loads": [
+        128,
+        256,
+        1024
+      ],
+      "supersession_loads": [
+        128,
+        256,
+        1024
+      ],
+      "utility_loads": [
+        128,
+        256,
+        1024
+      ],
+      "utility_overlaps": [
+        0,
+        25,
+        50,
+        75,
+        100
+      ]
+    },
+    "iid": {
+      "flood_distractors": [
+        0,
+        32
+      ],
+      "mission_set_loads": [
+        32,
+        64
+      ],
+      "salience_loads": [
+        32,
+        64
+      ],
+      "supersession_loads": [
+        32,
+        64
+      ],
+      "utility_loads": [
+        32,
+        64
+      ],
+      "utility_overlaps": [
+        0,
+        50,
+        100
+      ]
+    },
+    "train": {
+      "flood_distractors": [
+        0,
+        32
+      ],
+      "mission_set_loads": [
+        32,
+        64
+      ],
+      "salience_loads": [
+        32,
+        64
+      ],
+      "supersession_loads": [
+        32,
+        64
+      ],
+      "utility_loads": [
+        32,
+        64
+      ],
+      "utility_overlaps": [
+        0,
+        50,
+        100
+      ]
+    }
+  },
+  "validation": {
+    "case_counts": {
+      "extrapolation": 480,
+      "iid": 256,
+      "train": 256
+    },
+    "cross_split_collisions": [],
+    "pass": true,
+    "unique_case_ids": 992,
+    "unique_content_hashes": 992
+  }
+}

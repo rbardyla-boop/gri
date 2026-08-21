@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "balance": true,
+    "bounded_oracle": true,
+    "capacity": true,
+    "control_separation": true,
+    "determinism": true,
+    "leakage": true,
+    "predecessors": true,
+    "split_disjointness": true,
+    "unbounded_oracle": true
+  },
+  "evidence_seeds_executed": [],
+  "future_primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "no_memory_architecture": true,
+  "no_training": true,
+  "physical_memory_budget": 16,
+  "terminal_state": "DMC_02A_SELECTIVE_RETENTION_BENCHMARK_PASS",
+  "unit": "DMC-02A"
+}

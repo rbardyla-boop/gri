@@ -1,0 +1,1878 @@
+{
+  "capacity": 16,
+  "extrapolated_primary": {
+    "FLOOD1024": 0.0625,
+    "FLOOD512": 0.0625,
+    "M1024": 0.0,
+    "M256": 0.0,
+    "P": 0.037500000000000006,
+    "SAL1024": 0.0,
+    "SAL256": 0.125,
+    "SHIFT": 0.025,
+    "SUP_current_1024": 0.0,
+    "SUP_history_1024": 0.0625
+  },
+  "rows": [
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_1024",
+      "correct": 1,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1040
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_128",
+      "correct": 1,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        144
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_512",
+      "correct": 1,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        528
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024",
+      "correct": 0,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128",
+      "correct": 2,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256",
+      "correct": 0,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024",
+      "correct": 0,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.1875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128",
+      "correct": 3,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256",
+      "correct": 2,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_current",
+      "correct": 0,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_history",
+      "correct": 1,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.1875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_current",
+      "correct": 3,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_history",
+      "correct": 0,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_current",
+      "correct": 2,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_history",
+      "correct": 1,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_overlap_0",
+      "correct": 0,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_overlap_100",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_overlap_25",
+      "correct": 0,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_overlap_50",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_1024_overlap_75",
+      "correct": 0,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        1024
+      ]
+    },
+    {
+      "accuracy": 0.25,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_overlap_0",
+      "correct": 4,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_overlap_100",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_overlap_25",
+      "correct": 2,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_overlap_50",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_128_overlap_75",
+      "correct": 2,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        128
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_overlap_0",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_overlap_100",
+      "correct": 0,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_overlap_25",
+      "correct": 0,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_overlap_50",
+      "correct": 0,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_256_overlap_75",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "extrapolation",
+      "total_writes": [
+        256
+      ]
+    },
+    {
+      "accuracy": 1.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_0",
+      "correct": 16,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        16
+      ]
+    },
+    {
+      "accuracy": 0.4375,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_32",
+      "correct": 7,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        48
+      ]
+    },
+    {
+      "accuracy": 0.625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32",
+      "correct": 10,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.375,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64",
+      "correct": 6,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.6875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32",
+      "correct": 11,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.3125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64",
+      "correct": 5,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.3125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_current",
+      "correct": 5,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.5,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_history",
+      "correct": 8,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.3125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_current",
+      "correct": 5,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.3125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_history",
+      "correct": 5,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.5625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_overlap_0",
+      "correct": 9,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.375,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_overlap_100",
+      "correct": 6,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_overlap_50",
+      "correct": 10,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_overlap_0",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.25,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_overlap_100",
+      "correct": 4,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.25,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_overlap_50",
+      "correct": 4,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "iid",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 1.0,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_0",
+      "correct": 16,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        16
+      ]
+    },
+    {
+      "accuracy": 0.5,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "distractors_32",
+      "correct": 8,
+      "family": "distractor_flood",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        48
+      ]
+    },
+    {
+      "accuracy": 0.5625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32",
+      "correct": 9,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64",
+      "correct": 2,
+      "family": "mission_set",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.5,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32",
+      "correct": 8,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.25,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64",
+      "correct": 4,
+      "family": "salience",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.375,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_current",
+      "correct": 6,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.5,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_history",
+      "correct": 8,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.1875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_current",
+      "correct": 3,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.125,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_history",
+      "correct": 2,
+      "family": "supersession",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.5,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_overlap_0",
+      "correct": 8,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.4375,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_overlap_100",
+      "correct": 7,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.6875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_32_overlap_50",
+      "correct": 11,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        32
+      ]
+    },
+    {
+      "accuracy": 0.1875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_overlap_0",
+      "correct": 3,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.0625,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_overlap_100",
+      "correct": 1,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    },
+    {
+      "accuracy": 0.1875,
+      "answer_counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "case_count": 16,
+      "condition": "load_64_overlap_50",
+      "correct": 3,
+      "family": "utility_change",
+      "minimum_required_records": [
+        16
+      ],
+      "physical_memory_budget": [
+        16
+      ],
+      "query_eligible_records": [
+        16
+      ],
+      "split": "train",
+      "total_writes": [
+        64
+      ]
+    }
+  ],
+  "seed": 20260202
+}

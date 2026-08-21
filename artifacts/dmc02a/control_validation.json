@@ -1,0 +1,42 @@
+{
+  "bounded": {
+    "FLOOD1024": 1.0,
+    "FLOOD512": 1.0,
+    "M1024": 1.0,
+    "M256": 1.0,
+    "P": 1.0,
+    "SAL1024": 1.0,
+    "SAL256": 1.0,
+    "SHIFT": 1.0,
+    "SUP_current_1024": 1.0,
+    "SUP_history_1024": 1.0
+  },
+  "bounded_minus_fifo": 1.0,
+  "bounded_minus_random": 0.9625,
+  "fifo": {
+    "FLOOD1024": 0.0,
+    "FLOOD512": 0.0,
+    "M1024": 0.0,
+    "M256": 0.0,
+    "P": 0.0,
+    "SAL1024": 0.0,
+    "SAL256": 0.0,
+    "SHIFT": 0.0,
+    "SUP_current_1024": 0.0,
+    "SUP_history_1024": 0.0
+  },
+  "pass": true,
+  "random": {
+    "FLOOD1024": 0.0625,
+    "FLOOD512": 0.0625,
+    "M1024": 0.0,
+    "M256": 0.0,
+    "P": 0.037500000000000006,
+    "SAL1024": 0.0,
+    "SAL256": 0.125,
+    "SHIFT": 0.025,
+    "SUP_current_1024": 0.0,
+    "SUP_history_1024": 0.0625
+  },
+  "threshold": 0.4
+}

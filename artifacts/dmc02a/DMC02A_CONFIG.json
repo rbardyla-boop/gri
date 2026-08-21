@@ -1,0 +1,113 @@
+{
+  "cases_per_condition": 16,
+  "control_gap_threshold": 0.4,
+  "future_primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "generation_commit": "f340e3f6d52ee360efba998b83d7c06c47a64ff2",
+  "no_evidence_seeds": true,
+  "no_memory_architecture": true,
+  "no_training": true,
+  "physical_memory_budget": 16,
+  "random_control_seed": 20260202,
+  "split_specs": {
+    "extrapolation": {
+      "flood_distractors": [
+        128,
+        512,
+        1024
+      ],
+      "mission_set_loads": [
+        128,
+        256,
+        1024
+      ],
+      "salience_loads": [
+        128,
+        256,
+        1024
+      ],
+      "supersession_loads": [
+        128,
+        256,
+        1024
+      ],
+      "utility_loads": [
+        128,
+        256,
+        1024
+      ],
+      "utility_overlaps": [
+        0,
+        25,
+        50,
+        75,
+        100
+      ]
+    },
+    "iid": {
+      "flood_distractors": [
+        0,
+        32
+      ],
+      "mission_set_loads": [
+        32,
+        64
+      ],
+      "salience_loads": [
+        32,
+        64
+      ],
+      "supersession_loads": [
+        32,
+        64
+      ],
+      "utility_loads": [
+        32,
+        64
+      ],
+      "utility_overlaps": [
+        0,
+        50,
+        100
+      ]
+    },
+    "train": {
+      "flood_distractors": [
+        0,
+        32
+      ],
+      "mission_set_loads": [
+        32,
+        64
+      ],
+      "salience_loads": [
+        32,
+        64
+      ],
+      "supersession_loads": [
+        32,
+        64
+      ],
+      "utility_loads": [
+        32,
+        64
+      ],
+      "utility_overlaps": [
+        0,
+        50,
+        100
+      ]
+    }
+  },
+  "status": "selective_retention_benchmark_only",
+  "unit": "DMC-02A",
+  "values": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "YELLOW",
+    "ORANGE",
+    "PURPLE",
+    "BLACK",
+    "WHITE"
+  ]
+}
