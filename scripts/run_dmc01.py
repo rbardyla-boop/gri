@@ -34,7 +34,7 @@ from dmc01.training import (
 )
 
 
-SOURCE_COMMIT = "ed861c3"
+SOURCE_COMMIT = "ad2f210"
 DMC00_COMMIT = "0e5359d"
 DMC01P_COMMIT = "ed15f71"
 DMC01PA_COMMIT = "ed861c3"
