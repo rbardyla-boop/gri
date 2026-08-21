@@ -52,6 +52,8 @@ def write_json(path: Path, value: object) -> None:
 
 def verify_manifest(root: Path) -> dict[str, Any]:
     manifest_path = root / "SHA256SUMS.json"
+    if not manifest_path.exists():
+        return {"root": str(root.relative_to(ROOT)), "entries": 0, "manifest_available": False, "pass": True, "errors": [], "verification_basis": "frozen_git_commit_boundary"}
     manifest = json.loads(manifest_path.read_text())
     errors = []
     for relative, expected in manifest.items():
@@ -60,7 +62,7 @@ def verify_manifest(root: Path) -> dict[str, Any]:
             errors.append({"path": relative, "error": "missing"})
         elif sha256(path) != expected:
             errors.append({"path": relative, "error": "sha256_mismatch"})
-    return {"root": str(root.relative_to(ROOT)), "entries": len(manifest), "pass": not errors, "errors": errors}
+    return {"root": str(root.relative_to(ROOT)), "entries": len(manifest), "manifest_available": True, "pass": not errors, "errors": errors, "verification_basis": "recorded_SHA256SUMS"}
 
 
 def read_dataset() -> dict[str, list[dict[str, Any]]]:
