@@ -1,0 +1,18 @@
+{
+  "failures": [],
+  "pass": true,
+  "query_identity_not_used_to_define_scope": true,
+  "query_write_token_intersections": 0,
+  "retention_feature_names": [
+    "mission_membership",
+    "high_salience"
+  ],
+  "retention_forbidden_inputs": [
+    "value",
+    "hidden_value",
+    "answer",
+    "query",
+    "logical_key",
+    "record_id"
+  ]
+}

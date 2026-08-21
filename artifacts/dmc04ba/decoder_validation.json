@@ -1,0 +1,14 @@
+{
+  "accuracy": 1.0,
+  "backward_passes": 0,
+  "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+  "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+  "decoded_correctly": 9600,
+  "failure_count": 0,
+  "failures": [],
+  "hidden_vectors_checked": 9600,
+  "optimizer_steps": 0,
+  "pass": true,
+  "seed": 1337,
+  "trainable_parameters": 0
+}

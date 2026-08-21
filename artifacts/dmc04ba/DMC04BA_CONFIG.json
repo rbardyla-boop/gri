@@ -1,0 +1,76 @@
+{
+  "backward_passes": 0,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "evidence_training_executed": false,
+  "fixed_decoder_checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+  "fixed_decoder_seed": 1337,
+  "fixed_decoder_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+  "future_factorial_comparators": [
+    "oracle retention + oracle retrieval",
+    "learned DMC03 retention + learned DMC04R2 retrieval",
+    "oracle retention + learned retrieval",
+    "learned retention + oracle retrieval",
+    "FIFO + learned retrieval",
+    "random retention + learned retrieval",
+    "learned retention + random retrieval"
+  ],
+  "future_gates": {
+    "P_integrated_answer": 0.9,
+    "P_integrated_retrieval": 0.9,
+    "high_load_components": 0.85,
+    "learned_minus_fifo": 0.5,
+    "learned_minus_random_retention": 0.5,
+    "learned_minus_random_retrieval": 0.5,
+    "oracle_gap": 0.1,
+    "paired_component_seeds": "5/5"
+  },
+  "generation_commit": "f8796401ace3e50c264a18d3ccae0be25b7ed61f",
+  "loads": {
+    "extrapolation": [
+      128,
+      256,
+      1024
+    ],
+    "flood": {
+      "extrapolation": [
+        128,
+        512,
+        1024
+      ],
+      "iid": [
+        32
+      ],
+      "train": [
+        32
+      ]
+    },
+    "iid": [
+      32,
+      64
+    ],
+    "train": [
+      32,
+      64
+    ]
+  },
+  "non_evidence_seed": 9090,
+  "optimizer_steps": 0,
+  "physical_memory_budget": 16,
+  "primary_metric": "mean(MISSION256_H1,MISSION1024_H1,SAL256_H1,SAL1024_H1,HARD1024_H1,SHIFT_H1,SUP_CURRENT1024_H1,SUP_HISTORY1024_H1,FLOOD512_H1,FLOOD1024_H1)",
+  "retention_features": [
+    "mission_membership",
+    "high_salience"
+  ],
+  "retention_parameter_count": 3,
+  "retriever_parameter_count": 128,
+  "scientific_integrated_run_executed": false,
+  "status": "integrated_bounded_memory_benchmark_structural_only",
+  "terminal_state": "DMC_04BA_INTEGRATED_MEMORY_BENCHMARK_PASS",
+  "unit": "DMC-04B-A"
+}

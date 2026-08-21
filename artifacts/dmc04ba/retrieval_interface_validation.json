@@ -1,0 +1,13 @@
+{
+  "answer_input": false,
+  "backward_passes": 0,
+  "candidate_capacity": 16,
+  "cases_checked": 600,
+  "descriptor_fields_only": true,
+  "failures": [],
+  "hidden_value_input": false,
+  "logical_key_input": false,
+  "optimizer_steps": 0,
+  "pass": true,
+  "retriever_calls": 3000
+}

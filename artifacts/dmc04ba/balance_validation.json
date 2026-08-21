@@ -1,0 +1,1291 @@
+{
+  "answer_space": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "YELLOW",
+    "ORANGE",
+    "PURPLE",
+    "BLACK",
+    "WHITE"
+  ],
+  "pass": true,
+  "query_only_prior": 0.125,
+  "rows": [
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "distractor_flood",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "distractor_flood",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_32",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_64",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "distractor_flood",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "distractor_flood",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_512",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "distractor_flood",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "hard_negative",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "mission_set",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "salience",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "current_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "history_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "supersession",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_0_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_100_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_25_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_50_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_1024",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_128",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 8,
+      "condition": "overlap_75_load_256",
+      "counts": {
+        "BLACK": 1,
+        "BLUE": 1,
+        "GREEN": 1,
+        "ORANGE": 1,
+        "PURPLE": 1,
+        "RED": 1,
+        "WHITE": 1,
+        "YELLOW": 1
+      },
+      "family": "utility_change",
+      "split": "extrapolation"
+    }
+  ]
+}

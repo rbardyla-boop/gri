@@ -1,0 +1,27 @@
+{
+  "answer_accuracy": 1.0,
+  "pass": true,
+  "retention_set_accuracy": 1.0,
+  "retrieval_h1": 1.0,
+  "rows": [
+    {
+      "case_count": 168,
+      "final_answer_accuracy": 1.0,
+      "retrieval_hit_at_1": 1.0,
+      "split": "train"
+    },
+    {
+      "case_count": 168,
+      "final_answer_accuracy": 1.0,
+      "retrieval_hit_at_1": 1.0,
+      "split": "iid"
+    },
+    {
+      "case_count": 264,
+      "final_answer_accuracy": 1.0,
+      "retrieval_hit_at_1": 1.0,
+      "split": "extrapolation"
+    }
+  ],
+  "scientific_learned_performance_not_measured": true
+}

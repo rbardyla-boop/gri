@@ -1,0 +1,37 @@
+{
+  "backward_passes": 0,
+  "case_counts": {
+    "extrapolation": 264,
+    "iid": 168,
+    "train": 168
+  },
+  "checks": {
+    "balance": true,
+    "capacity": true,
+    "control_signal": true,
+    "decoder_interface": true,
+    "determinism": true,
+    "full_tests": true,
+    "leakage": true,
+    "no_training": true,
+    "oracle_pipeline": true,
+    "predecessor_identity": true,
+    "retention_interface": true,
+    "retrieval_interface": true,
+    "world0_identity": true
+  },
+  "evidence_seeds_executed": [],
+  "evidence_training_executed": false,
+  "full_tests": {
+    "command": "python3 -m pytest -q",
+    "last_output": "........................................................................ [ 57%]\n......................................................                   [100%]\n",
+    "pass": true,
+    "returncode": 0
+  },
+  "optimizer_steps": 0,
+  "primary_metric_frozen_not_measured": true,
+  "scientific_integrated_run_executed": false,
+  "terminal_state": "DMC_04BA_INTEGRATED_MEMORY_BENCHMARK_PASS",
+  "total_cases": 600,
+  "unit": "DMC-04B-A"
+}

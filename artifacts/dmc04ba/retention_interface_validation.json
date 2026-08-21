@@ -1,0 +1,20 @@
+{
+  "backward_passes": 0,
+  "failures": [],
+  "feature_counts": {
+    "(0.0, 0.0)": 127744,
+    "(0.0, 1.0)": 2432,
+    "(1.0, 0.0)": 11648
+  },
+  "feature_dim": 2,
+  "feature_names": [
+    "mission_membership",
+    "high_salience"
+  ],
+  "final_answer_input": false,
+  "hidden_value_input": false,
+  "optimizer_steps": 0,
+  "pass": true,
+  "query_input": false,
+  "records_checked": 141824
+}

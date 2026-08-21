@@ -1,0 +1,17 @@
+{
+  "extrapolation": {
+    "case_count": 264,
+    "path": "artifacts/dmc04ba/datasets/extrapolation.jsonl",
+    "sha256": "c492cb59849b8e62bb74aa0d287af5b9a45962e2733c0adb516a4d203ad19240"
+  },
+  "iid": {
+    "case_count": 168,
+    "path": "artifacts/dmc04ba/datasets/iid.jsonl",
+    "sha256": "5a4549006f724df3a0b414263cfbd5f4f82284ed680f37a3a54bd26b6256e787"
+  },
+  "train": {
+    "case_count": 168,
+    "path": "artifacts/dmc04ba/datasets/train.jsonl",
+    "sha256": "7187d5a8beec81f5b18da5d434c809d1e8fd599967d8342641683e46ccb55830"
+  }
+}

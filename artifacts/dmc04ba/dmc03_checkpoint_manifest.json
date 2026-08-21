@@ -1,0 +1,57 @@
+{
+  "evidence_training_reexecuted": false,
+  "feature_dim": 2,
+  "feature_names": [
+    "mission_membership",
+    "high_salience"
+  ],
+  "pass": true,
+  "scorer_parameters": 3,
+  "seeds": {
+    "1337": {
+      "model_class": "AffineRetentionScorer",
+      "parameter_count": 3,
+      "path": "artifacts/dmc03/checkpoints/retention_seed1337_final.pt",
+      "payload_seed": 1337,
+      "requires_grad_false": true,
+      "sha256": "04cb3b282316e3a334de2ee4e07ccbde176fe4333d56bdb1d7fe0ea3e006b5f7",
+      "trainable_parameters": 0
+    },
+    "1338": {
+      "model_class": "AffineRetentionScorer",
+      "parameter_count": 3,
+      "path": "artifacts/dmc03/checkpoints/retention_seed1338_final.pt",
+      "payload_seed": 1338,
+      "requires_grad_false": true,
+      "sha256": "7d7e70cbdb0c428ce2a05f2af8f86321940049cdb0d611831e082cfa2bd5435f",
+      "trainable_parameters": 0
+    },
+    "1339": {
+      "model_class": "AffineRetentionScorer",
+      "parameter_count": 3,
+      "path": "artifacts/dmc03/checkpoints/retention_seed1339_final.pt",
+      "payload_seed": 1339,
+      "requires_grad_false": true,
+      "sha256": "5e9246d5a2cb3c14a415031c66fa4ca27e27ae5898901507d7c4bdd5392a092f",
+      "trainable_parameters": 0
+    },
+    "1340": {
+      "model_class": "AffineRetentionScorer",
+      "parameter_count": 3,
+      "path": "artifacts/dmc03/checkpoints/retention_seed1340_final.pt",
+      "payload_seed": 1340,
+      "requires_grad_false": true,
+      "sha256": "ab2d18396f702d39f7a5c732cea584ff0aed375c6ee5977000572f9bd58dc461",
+      "trainable_parameters": 0
+    },
+    "1341": {
+      "model_class": "AffineRetentionScorer",
+      "parameter_count": 3,
+      "path": "artifacts/dmc03/checkpoints/retention_seed1341_final.pt",
+      "payload_seed": 1341,
+      "requires_grad_false": true,
+      "sha256": "23b1a9d9c4e6ad6002008b1a8113fe930c23875cb7a5442e9b4780b3824cf31b",
+      "trainable_parameters": 0
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "budget": 16,
+  "case_count": 600,
+  "failures": [],
+  "max_post_retention_candidate_count": 16,
+  "max_total_writes": 1024,
+  "min_total_writes": 32,
+  "pass": true
+}
