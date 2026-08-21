@@ -93,7 +93,7 @@
     "hidden_value_input": false,
     "trainable_parameters": 3
   },
-  "source_commit": "850e41373ca553cf62204549ea533fcfe32b0031",
+  "source_commit": "2d5a93417cc6239fae4501ae38219cf0119ff735",
   "terminal_state": "DMC_03P_LEARNED_RETENTION_PREREGISTERED",
   "training_protocol": {
     "batch_size": 256,
