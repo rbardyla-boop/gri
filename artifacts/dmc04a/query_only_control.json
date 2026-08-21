@@ -1,0 +1,6 @@
+{
+  "accuracy": 0.125,
+  "classifier": "always RED",
+  "designed_prior": 0.125,
+  "pass": true
+}

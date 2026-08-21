@@ -1,0 +1,66 @@
+{
+  "cases_per_condition": 16,
+  "frozen_processor": {
+    "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+    "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+    "dmc01_commit": "48ae98f"
+  },
+  "future_primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)",
+  "future_primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)",
+  "generation_commit": "489ec45b972a05d563a475b5f2eb003b3c0c54ab",
+  "hidden_dim": 49,
+  "no_evidence_seeds": true,
+  "no_learned_retrieval": true,
+  "no_training": true,
+  "physical_memory_budget": 16,
+  "random_control_seed": 20260404,
+  "split_specs": {
+    "extrapolation": {
+      "alias_candidate_counts": [
+        16
+      ],
+      "noise_levels": [
+        8,
+        32
+      ],
+      "pair_parity": 1,
+      "versioned_candidate_count": 16
+    },
+    "iid": {
+      "alias_candidate_counts": [
+        4,
+        8
+      ],
+      "noise_levels": [
+        0,
+        2
+      ],
+      "pair_parity": 0,
+      "versioned_candidate_count": 8
+    },
+    "train": {
+      "alias_candidate_counts": [
+        4,
+        8
+      ],
+      "noise_levels": [
+        0,
+        2
+      ],
+      "pair_parity": 0,
+      "versioned_candidate_count": 8
+    }
+  },
+  "status": "associative_retrieval_benchmark_only",
+  "unit": "DMC-04A",
+  "values": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "YELLOW",
+    "ORANGE",
+    "PURPLE",
+    "BLACK",
+    "WHITE"
+  ]
+}

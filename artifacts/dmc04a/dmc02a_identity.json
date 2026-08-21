@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc02a",
+  "expected_commit": "f10394d",
+  "expected_terminal_state": "DMC_02A_SELECTIVE_RETENTION_BENCHMARK_PASS",
+  "manifest": {
+    "entries": 20,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-02A",
+  "observed_terminal_states": [
+    "DMC_02A_SELECTIVE_RETENTION_BENCHMARK_PASS"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}

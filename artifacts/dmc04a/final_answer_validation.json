@@ -1,0 +1,23 @@
+{
+  "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+  "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+  "pass": true,
+  "processor": "DMC-01 exact seed 1337",
+  "rows": [
+    {
+      "accuracy": 1.0,
+      "case_count": 128,
+      "split": "train"
+    },
+    {
+      "accuracy": 1.0,
+      "case_count": 128,
+      "split": "iid"
+    },
+    {
+      "accuracy": 1.0,
+      "case_count": 112,
+      "split": "extrapolation"
+    }
+  ]
+}

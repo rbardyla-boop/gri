@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc00",
+  "expected_commit": "0e5359d",
+  "expected_terminal_state": "DMC_00_MEMORY_BENCHMARK_PASS",
+  "manifest": {
+    "entries": 13,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-00",
+  "observed_terminal_states": [
+    "DMC_00_MEMORY_BENCHMARK_PASS"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}

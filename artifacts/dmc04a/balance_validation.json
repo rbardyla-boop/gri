@@ -1,0 +1,396 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "alias",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "compositional",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "noise_32",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "cue_noise",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "noise_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "cue_noise",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "hard_negative",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "current_candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "versioned",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "history_candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "versioned",
+      "split": "extrapolation"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_4",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "alias",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "alias",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "compositional",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "noise_0",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "cue_noise",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "noise_2",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "cue_noise",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "hard_negative",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "current_candidate_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "versioned",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "history_candidate_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "versioned",
+      "split": "iid"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_4",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "alias",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "alias",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "compositional",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "noise_0",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "cue_noise",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "noise_2",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "cue_noise",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "candidate_16",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "hard_negative",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "current_candidate_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "versioned",
+      "split": "train"
+    },
+    {
+      "balanced": true,
+      "case_count": 16,
+      "condition": "history_candidate_8",
+      "counts": {
+        "BLACK": 2,
+        "BLUE": 2,
+        "GREEN": 2,
+        "ORANGE": 2,
+        "PURPLE": 2,
+        "RED": 2,
+        "WHITE": 2,
+        "YELLOW": 2
+      },
+      "family": "versioned",
+      "split": "train"
+    }
+  ]
+}

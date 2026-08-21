@@ -1,0 +1,55 @@
+{
+  "query": {
+    "A": [
+      "query_A_token_0",
+      "query_A_token_1",
+      "query_A_token_2",
+      "query_A_token_3",
+      "query_A_token_4",
+      "query_A_token_5",
+      "query_A_token_6",
+      "query_A_token_7"
+    ],
+    "B": [
+      "query_B_token_0",
+      "query_B_token_1",
+      "query_B_token_2",
+      "query_B_token_3",
+      "query_B_token_4",
+      "query_B_token_5",
+      "query_B_token_6",
+      "query_B_token_7"
+    ]
+  },
+  "query_order": [
+    "B",
+    "A"
+  ],
+  "write": {
+    "A": [
+      "write_A_token_0",
+      "write_A_token_1",
+      "write_A_token_2",
+      "write_A_token_3",
+      "write_A_token_4",
+      "write_A_token_5",
+      "write_A_token_6",
+      "write_A_token_7"
+    ],
+    "B": [
+      "write_B_token_0",
+      "write_B_token_1",
+      "write_B_token_2",
+      "write_B_token_3",
+      "write_B_token_4",
+      "write_B_token_5",
+      "write_B_token_6",
+      "write_B_token_7"
+    ]
+  },
+  "write_order": [
+    "A",
+    "B"
+  ],
+  "write_query_disjoint": true
+}

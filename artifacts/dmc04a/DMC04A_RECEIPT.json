@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "balance": true,
+    "capacity": true,
+    "determinism": true,
+    "exact_token_control": true,
+    "leakage": true,
+    "oracle": true,
+    "predecessors": true,
+    "random_control": true,
+    "single_attribute_controls": true,
+    "split_disjointness": true
+  },
+  "future_primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)",
+  "future_primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)",
+  "no_evidence_seeds": true,
+  "no_learned_retrieval": true,
+  "no_training": true,
+  "physical_memory_budget": 16,
+  "terminal_state": "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS",
+  "unit": "DMC-04A"
+}

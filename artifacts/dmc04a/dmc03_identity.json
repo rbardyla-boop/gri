@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc03",
+  "expected_commit": "489ec45",
+  "expected_terminal_state": "DMC_03_LEARNED_RETENTION_ADVANCES",
+  "manifest": {
+    "entries": 51,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-03",
+  "observed_terminal_states": [
+    "DMC_03_LEARNED_RETENTION_ADVANCES"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}
