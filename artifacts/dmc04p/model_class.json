@@ -1,0 +1,22 @@
+{
+  "attention": false,
+  "bias": false,
+  "class": "factorized_atomic_bilinear",
+  "cross_attribute_term": false,
+  "initial_state_sha256": "88c62e45f283b0bd38c806bd5666315f83b9eff383ae23be592a45adc87d1487",
+  "matrices": {
+    "W_A": [
+      8,
+      8
+    ],
+    "W_B": [
+      8,
+      8
+    ]
+  },
+  "mlp": false,
+  "pass": true,
+  "structural_seed": 9090,
+  "trainable_parameter_count": 128,
+  "whole_pair_embedding": false
+}

@@ -1,0 +1,17 @@
+{
+  "cross_attribute_interaction": false,
+  "fit_performed": false,
+  "formula": "q_A^T W_A w_A + q_B^T W_B w_B",
+  "matrices": {
+    "W_A": [
+      8,
+      8
+    ],
+    "W_B": [
+      8,
+      8
+    ]
+  },
+  "pass": true,
+  "statement": "Independent full 8x8 matrices represent arbitrary atomic codebook correspondences; their sum distinguishes full A+B matches from A-only/B-only matches."
+}

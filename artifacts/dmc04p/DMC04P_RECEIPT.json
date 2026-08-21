@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "capacity": true,
+    "dmc04a_structure": true,
+    "model_class": true,
+    "no_evidence_training": true,
+    "ordering": true,
+    "parameter_identity": true,
+    "predecessors": true,
+    "processor_freeze": true,
+    "retrieval_firewall": true,
+    "shuffle_control": true,
+    "target_firewall": true,
+    "tie_break": true,
+    "version_resolver": true
+  },
+  "dmc03_integration_executed": false,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "evidence_training_executed": false,
+  "scientific_retrieval_accuracy_measured": false,
+  "terminal_state": "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED",
+  "unit": "DMC-04P"
+}

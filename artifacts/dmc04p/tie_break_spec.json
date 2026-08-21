@@ -1,0 +1,7 @@
+{
+  "deterministic_replay": true,
+  "group_tie_break": "ascending SHA256(raw oracle record_id), external zero-parameter resolver metadata",
+  "pass": true,
+  "scorer_visibility_of_record_id": false,
+  "version_tie_break": "ascending SHA256(raw oracle record_id) after descending creation_episode"
+}

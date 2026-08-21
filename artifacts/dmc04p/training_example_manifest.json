@@ -1,0 +1,2442 @@
+{
+  "case_count": 128,
+  "forbidden_fields_found": [],
+  "manifest_sha256": "cbcd151651fadae0c744cfa7ef34219267348942134419a2fcc297c5e7146232",
+  "pass": true,
+  "rows": [
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0000",
+      "content_hash": "653120d2e27e4d4e42868041abaf42d6c80ffa695a7d115e7aee9d13c04f332b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0001",
+      "content_hash": "2d76b69b6aa4d3c0e1d7e81ad3576983b04078b14af4f8e39e87a33374f523b1",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0002",
+      "content_hash": "5588d9e98a608899c40561813d2ac27e4f0ff178c9b2a7365d2cfb75fc9d0526",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0003",
+      "content_hash": "23f6e054b379fb50df5a91439d8ccdf90459adcb97d52a69fb59fd693051a31b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0004",
+      "content_hash": "a181837febca5cee3e03696f3a286296f8cf5ab188a36d4634c1c8e907879c52",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0005",
+      "content_hash": "e6ac6da098cb81d9de7e9fb6ac146a3b9eff59213a8b896659348229f5821b64",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0006",
+      "content_hash": "8fe6616c5209326be20a31864b05ea5cdbdb5b6a9a382e66d18a3e6ea43a0c06",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0007",
+      "content_hash": "9544d53fed01765cd32f35a2d035861a119ce99e606dfd35ef724c15e50b6f7d",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0008",
+      "content_hash": "b40c3a0a1851b744016a505c4b5614425ac0d9534a292269a725dd6c0b82372f",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0009",
+      "content_hash": "57ab8e42625834b90aa78ee421e3dbf9e84bd7c2d80abb3efc3d823e86f4ef08",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0010",
+      "content_hash": "ed34f687cdc48c8c9ab944026bd0735a284d05fdcbe074f4d342320e6091941a",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0011",
+      "content_hash": "923f38f009f9c728e4e413b4a10a2fd3a330329093bdab7790f5a44601332dd2",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0012",
+      "content_hash": "e949c84cb8356c7282c179a0135e22a5f8f2c3446a91408d9df2a178ae1f7d13",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0013",
+      "content_hash": "c00a3cd38ae60c2ffd533f16ef7fcf0702f9d70c34284d56bc5684be6c3472e5",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0014",
+      "content_hash": "2dd9c341f67be69dfa68414228a4e7f2212f79733bdbec4bd7c6e624b216b53f",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 4,
+      "case_id": "dmc04a-train-alias-candidate_4-0015",
+      "content_hash": "0c5725564ceb48d86e1809fcba38fb2cb311542421db47643cf041a549b064a5",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0000",
+      "content_hash": "c9436480cd65a2467f68868be533f6378e6d1b9995d54691a3edc48cd37321ab",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0001",
+      "content_hash": "23c9675708e93ec2f644649fd79cc8c7aaea649d0ebf76e8d55e0e77ce04f363",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0002",
+      "content_hash": "4f08773ee27f415b908bf541ceaa884811ff6173d58e88628c83bdb33fc824c0",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0003",
+      "content_hash": "752303e93f78ec699dab8f304b8d8bce175f4630555cfe2bfe2c003d3429c33c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0004",
+      "content_hash": "80e6f8ba77ee2876100b7438c3f9f1469bcbbe786f7bf79aabe931f67c780ceb",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 4,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0005",
+      "content_hash": "cedd435d9c44676e50ae456ef2034ee1752e586e67254632a915496ee474727f",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 5,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0006",
+      "content_hash": "d5dc879a31679912354778dfa5fd88bd9cd8ec09e164dcc6952d4b65710a02d5",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 6,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0007",
+      "content_hash": "e0328a374a4ef91645dd87b55250b48355fe8b057b2501d3bdf7a1034a4b17ff",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 7,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0008",
+      "content_hash": "f29307f4f152cb65beeaa5654730a1469c86d977ce304af98d27d536b6c9b820",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0009",
+      "content_hash": "9e1acbef1961b61d83c02ea9ec3db656fdcb2d9321c09fc94045c509532c613b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0010",
+      "content_hash": "84cdc24c8c561828864bea19772342b9435327bb035813ee3b7113ecbe1e30fa",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0011",
+      "content_hash": "ef76361ccea6c5ab7e50f486eaf67f1d9c82ea9dbfb9031d294768764e452185",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0012",
+      "content_hash": "4fb1aeab9adaea653358a7e70980162353068a88d1b690a2ec846664e5a186ae",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 4,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0013",
+      "content_hash": "1ccae27a4d61ace4d5a21f1236e57e2756ea4b5282676e7e24e9e0948e2ebdd5",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 5,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0014",
+      "content_hash": "68526626d54c2589b99cb91a9745b2844293a505effc5ec8ac47606b3e7115e4",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 6,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-alias-candidate_8-0015",
+      "content_hash": "34014c5b193d10c688df4a66cc5a648457ebb83f76eba9585210d6e6418136e6",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 7,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0000",
+      "content_hash": "0f8c3010ce1e9b8322adb16021844a8a14a7395befc6343611007634e20b6f86",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0001",
+      "content_hash": "b5aec1dd6a16e71e1766a50af000f014d080c7388473c61c73cc7cc6b93a9498",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0002",
+      "content_hash": "0d15886f0de5fccb352f53c28ad521c7873d22ccb726fd291cc0199a3e31fa46",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0003",
+      "content_hash": "9fc0a4c1a97bade9803ba4252ec31596c95c49a55b147a9dc3053fb78848896d",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0004",
+      "content_hash": "c253ceba555bbdd6032f7bc0fe5253adc91b7348180bf7e93ae1c215ce966cd5",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 4,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0005",
+      "content_hash": "c7e3f553f8408aa19de4e8a3c902c9e997814d6eec6a3d002dd14ea10173cbcf",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 5,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0006",
+      "content_hash": "d86c6100efd11d0b0fbb4b69fbceb738249b3980184d25b9fa75330b7f70929c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 6,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0007",
+      "content_hash": "77315a92e3d50355c9295c30af7fec5b783e93831e9b0f3448c485e0012cbb72",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 7,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0008",
+      "content_hash": "697776113a73983b6e154c8d2be5c5e6a338a5f6b8e5ddbfc6c1bb8ec6bfa3ef",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 8,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 8,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0009",
+      "content_hash": "1a741a5dc47219142f3e204f5cb87732c4bda234085720aa08ae0317c17ccd5d",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 9,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 9,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0010",
+      "content_hash": "10b11fae827f0292f548e65823c864134c52d26062870833fe96c644a203b33e",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 10,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 10,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0011",
+      "content_hash": "334177f5728235dea860d07448814f47165490b02d1b14fb87009279e9072661",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 11,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 11,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0012",
+      "content_hash": "9cb0b51176cbefd5bb49734e7cf2977aa88f28271a6c3007c9aef4c7a5f07cde",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 12,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 12,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0013",
+      "content_hash": "149ff9f6a9e393aa10952cfff82b366eaf89edc890813c2de4dd4ee78bb7ad96",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 13,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 13,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0014",
+      "content_hash": "9ec8f4d9aed567d9a17ec2e3c377534762b6bb6ebee6e4f17334374582809a34",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 14,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 14,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-compositional-candidate_16-0015",
+      "content_hash": "e4765f4ecde58d48bd4b2ba2e7dd14ec322649684e00d531b3601fc323a8e80c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 15,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 15,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0000",
+      "content_hash": "8908b3b1b48ab279deb6d8d74bb40778a6adee99b1f6947ed3c11eb46a0e67c7",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0001",
+      "content_hash": "cfac203444007c7159a7421af0e3098e7d9246f241a23fc1b98d03a9f125abea",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0002",
+      "content_hash": "3f62324570df046a86c2b7ef6561db34a9e9f6af9e52b7235c1f084e3c50f636",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0003",
+      "content_hash": "42f29e7a76e9a5a3af010715f4d219c5d14f66842532cd9b26990b6193272591",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0004",
+      "content_hash": "97a59d3d31ea2dbd58d6abeee4360c376feb3b4ef321ac7da184d06770464826",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 4,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0005",
+      "content_hash": "314bb1c0e26d3d69453043fb1581296e88c06597db8545ec4896573a0c65b249",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 5,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0006",
+      "content_hash": "75032f782d8f1b976c04243d54267ca430a462b6d7db28712e714ada70095a3c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 6,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0007",
+      "content_hash": "73c6b35c3c99e5fd8a3c521c65f1c016748608ed1f672c427351bdf3cb4edffb",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 7,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0008",
+      "content_hash": "e8794f382f7e6d96d4be55741f82ea8ee44788d4c3abfa937386d0e1574a9311",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 8,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 8,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0009",
+      "content_hash": "89d555d638c3655c9e665549954fa81674671ba6a633f6b0351f04c1c0a561df",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 9,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 9,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0010",
+      "content_hash": "8f9cfc5f9840d47b771436345ebca4c8c896f1733585152df553f99f2b0ed920",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 10,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 10,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0011",
+      "content_hash": "f40896b39f4714a87fb64f63d96dd27fc6ec007530f53086a002f032260e7975",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 11,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 11,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0012",
+      "content_hash": "6f6e275f1e48be0ee64eb05875ca5cd4f2674c85ab81e5808b3b1dd5d184636b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 12,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 12,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0013",
+      "content_hash": "391d956bce38faeb8f1e26b7333490633b5471c61c5eb94979527b119c98dd8d",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 13,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 13,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0014",
+      "content_hash": "33944613558f88aaf0d145875bb3e03a371e9e9377fb039532dd34757988d489",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 14,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 14,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-hard_negative-candidate_16-0015",
+      "content_hash": "a67f1e792a5a491a590086ff9b028dce4e68841f7cd4eecb1a0582b672f3a499",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 15,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 15,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0000",
+      "content_hash": "193945b860b4d8d42fd5e5c7d819330f6a2e3e9949b397d5fc52835ea24f3687",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0001",
+      "content_hash": "12a779c13399cacf491c564b24b68de0a8ec1d19f7f1fd31ed5c1682a7e75e45",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0002",
+      "content_hash": "55ec3e03d5bb93ca41992c67dcd75c16b73b1a78049cea0a759e53f2aa6696f8",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0003",
+      "content_hash": "322fbef526e6c4703be13fdb1b8a0bd7e010ea302539127aec5bd999b1d8df07",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0004",
+      "content_hash": "179f99d6da107ea4898a51536ea4626a26a0f7be1314e21e4ea9f752ea23120a",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0005",
+      "content_hash": "307b6c2e2a67e764354df88b9914b9624bfecaaaa62f4bc0e106a40b90af8faa",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0006",
+      "content_hash": "67856449003df915097e33f14c2d0cc2b6269713e9fb86b7dd5f50f703d74bc6",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0007",
+      "content_hash": "47b57f5f4809c94354656efbfc558f659390fed1cb1709e89ed6033a405c5596",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0008",
+      "content_hash": "788c130b28737bb17dec4b0efec9be45c678a054cc9e879c5247484c702d2485",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0009",
+      "content_hash": "dfad12791415b4d4898257116f07d1dd6b401d29b1ed6859ac2e16904b3480e7",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0010",
+      "content_hash": "d738483ad0a7791f3b0d29e8c598ab35ca30f8c88981de5920d7774ebb768d43",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0011",
+      "content_hash": "6e5ab6c4c5c4cd15b69795b29888d732997ac8aad1e15dcc59a768201c360db8",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0012",
+      "content_hash": "b0b8e9fd1a5ccbc85e970007306b6a19ddb9c710c34482dac71d634323e5d814",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0013",
+      "content_hash": "44fa0916c61fba02ba33fa2426ead3784701be88c06c12490c6b2ecda1670335",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0014",
+      "content_hash": "73d1335d578f6219c91b5b2fc1d9c7f6a467c590bc96cbaa858cb68987bf0039",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-current_candidate_8-0015",
+      "content_hash": "1e9f820da2bffee460feebb0a7160f7550fca84bc3164e6985b47dfeadf00837",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0000",
+      "content_hash": "5268db0b02e1a16875396c77b2f01c56fd6c24aa45e730e13e3a166492ee1989",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0001",
+      "content_hash": "cf42e4e1fc8ed1cc0e1b74941bed774e64eea9ff7862f20166b4c8d249e1184c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0002",
+      "content_hash": "0d627024e93084e135373d2fca5155eae3d5900b8494854054c65c56bf5295ce",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0003",
+      "content_hash": "383df949d8d5f921815f64d75046f77744976de67ac8d97fb05f7eb51a5026be",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0004",
+      "content_hash": "54b02ee2d14a43dda248d919c678711158e789ac2cee8d82547b29842f0e0b93",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0005",
+      "content_hash": "9805a49d11f353d44e1c04049fdcb191e294a1657d0f3e73841488110366d3fd",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0006",
+      "content_hash": "1b7b56e9aee89cc1214ff998d298f95887a8dcee1268e494d8a19caea7fe76ba",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0007",
+      "content_hash": "c02e0fc50360f25229520d188a32298c1ede999bfe88495d1d7e6398d139dfc2",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0008",
+      "content_hash": "d0b1fd09d5ce565af6c64f4ec00d3a4f4dcbce2d51385878b38b194061838c5b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0009",
+      "content_hash": "9bca5c03812328195c7d29757e58d8576fc5f857068be47e5db5bf44bc89d0c0",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0010",
+      "content_hash": "5d7a2486815757200f31db499cb0f39b52c1eb898f341e75ab2dedb1b3ea15cb",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0011",
+      "content_hash": "7acf6cdda006fc07f1cf427923739e7f97dee9d1d60e28f589b9ca1eb83c7600",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0012",
+      "content_hash": "bfd426fb795b5d8a6e13f55dd1ba908420dee3ba0a647ce5348f73c6dd3baca9",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0013",
+      "content_hash": "86075ec6273d40b7a0dcd90955a890fa003f50da0f7585706245fb16ed1381f4",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0014",
+      "content_hash": "24ac1448a2c300f83fe3c8747fb21c880ad120878f0b467b581af8894d5f309c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 8,
+      "case_id": "dmc04a-train-versioned-history_candidate_8-0015",
+      "content_hash": "ff1c2e672454f86fc491f76824c9ab7fba10a864f9188de1011f16a51a4b6735",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0000",
+      "content_hash": "7ef2a4c11834cd9182447b91e25339ec9ee51b91666a8f0eaca48443cb0c353a",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0001",
+      "content_hash": "6ba4899f1253cb58a032408728515fea4f0b1c28c0d452842ae86917e0b87dfd",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0002",
+      "content_hash": "9a5ad7079fb104b4eadb93c75cfef2886578b46a793a7ddd3cdc6e219d698e87",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0003",
+      "content_hash": "0e4f9aef968791dfa1e320943b40ff38b93fa508f165f0af196b7e847435d708",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0004",
+      "content_hash": "b2e85970a49711253d5f27ad41d09654260f913c696e1cdc8dfb7651bea9b3b0",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 4,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0005",
+      "content_hash": "7540836b9c0b3e42c8638bfec911daab086e4c121451754255fbe8607cfd876c",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 5,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0006",
+      "content_hash": "14cd8f77482e06eccf2b259467d86819c21c3f3aee3fa6d0f5e59e315cc8fb8f",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 6,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0007",
+      "content_hash": "eabe9326d9e507b810b01fe3cd9a4751f1c4baf43350d91df0add2aef563b0cb",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 7,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0008",
+      "content_hash": "9d43152455de98f80c6042cef8230766cc2af1e171a2032437adc66177cecc2f",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 8,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 8,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0009",
+      "content_hash": "2751a12b6bdfdb0eb8aa641f823e87f8e551cc6239307e051c8e0c289f7e639b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 9,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 9,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0010",
+      "content_hash": "7f0801592abdb6b897d2f39db83b472faee2ce6577d1130bb7620aedac0a9f90",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 10,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 10,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0011",
+      "content_hash": "fa6f7ea67b774af7c473ca752f66337284e6b8ddd2c75e08915ca86c86b2d23a",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 11,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 11,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0012",
+      "content_hash": "84f8b2b6837f2d75b16bf842ce174fa3952037ba15137e8973a777dfeace643d",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 12,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 12,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0013",
+      "content_hash": "6869cdb92feaad5b326106f945c96c96b5b37445b010cc37aa0301dff7779ade",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 13,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 13,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0014",
+      "content_hash": "ecdcad7eaaa942300a95fa767d244dac08afb564f6d04cffcf10806840f830a3",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 14,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 14,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_0-0015",
+      "content_hash": "d3969c1e0941dfe526ddcd8067ab5f49b351810de044b894d9f144aef5faf32b",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 15,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 15,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0000",
+      "content_hash": "713473024b6af52d0f544d4adc0965d0a685e1a9f0c746a859ef0e689f0ab676",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 0,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 0,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0001",
+      "content_hash": "df1db4f56b5f277aedd48eef5d5cacd4dbba1319e752528767d42eeb50c5c713",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 1,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 1,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0002",
+      "content_hash": "77c71587c7fbb285ca15522a14d899a7bcdde18e7aff24424ff25e19e351d3d4",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 2,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 2,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0003",
+      "content_hash": "9472046190af97cfbb92d4e58afe7bd217fd438a302f5cacfdc7e1cfdd16f2ad",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 3,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 3,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0004",
+      "content_hash": "33cf0d90ee4944356b887e10af752a369ecde2e7f2dbd6a442e0b568f43c6d92",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 4,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 4,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0005",
+      "content_hash": "d4bb6e00e17f601aa1cba125ccf4511ae21e1753797635e29edb2f85a1491d11",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 5,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 5,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0006",
+      "content_hash": "f090a229c57d6d7020401a0393a2971141008ec7ea9608d8212cd723372f2229",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 6,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 6,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0007",
+      "content_hash": "56ee03bf4ba341b8a6ec0e1a25a306063adbc6c88a88b94703086237949d6d1e",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 7,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 7,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0008",
+      "content_hash": "3186aff78244468521538c0d12af61993d3a5d3f37c8dafd78c7b0f33dcbcb1f",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 8,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_0",
+          "write_B_token_2"
+        ]
+      },
+      "target_group_index": 8,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0009",
+      "content_hash": "7d95dafc2f5ec4c76c3592bf4f284f1213aba7a6ed534d010f77dd7e87d167f2",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 9,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_1",
+          "write_B_token_3"
+        ]
+      },
+      "target_group_index": 9,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0010",
+      "content_hash": "88f834d7c0caebced19b23b708b6328bab62e849fa3116c3c263e008cfe3ad72",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 10,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_2",
+          "write_B_token_4"
+        ]
+      },
+      "target_group_index": 10,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0011",
+      "content_hash": "d334630c39b5d57897f634f037a4587d63a82ea7f92ca6942e6b3a6c340dae92",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 11,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_3",
+          "write_B_token_5"
+        ]
+      },
+      "target_group_index": 11,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0012",
+      "content_hash": "769c4fb4697446e8b65f95d53a1cf22f3cdd4aec2607072feacc0e2975941bb0",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 12,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_4",
+          "write_B_token_6"
+        ]
+      },
+      "target_group_index": 12,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0013",
+      "content_hash": "8eeee18aa9d34b2fbd1c1ef1e21da158598b6441b53562934cf8a15ddee8a90d",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 13,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_5",
+          "write_B_token_7"
+        ]
+      },
+      "target_group_index": 13,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0014",
+      "content_hash": "4a100cdbba4ce91a0e5ab9104b25c58f21c910277989cc97dc6b4be5c45f9b2a",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 14,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_6",
+          "write_B_token_0"
+        ]
+      },
+      "target_group_index": 14,
+      "target_is_not_scorer_input": true
+    },
+    {
+      "candidate_count": 16,
+      "case_id": "dmc04a-train-cue_noise-noise_2-0015",
+      "content_hash": "ebb82b79425d490f6788a9d1bfc6436e0ee8069453e1332b5e0605c3df921539",
+      "loss_unit": "descriptor_group",
+      "target_candidate_index": 15,
+      "target_group_descriptor": {
+        "attribute_order": [
+          "A",
+          "B"
+        ],
+        "tokens": [
+          "write_A_token_7",
+          "write_B_token_1"
+        ]
+      },
+      "target_group_index": 15,
+      "target_is_not_scorer_input": true
+    }
+  ],
+  "split": "train",
+  "target_type": "retrieval_descriptor_group"
+}

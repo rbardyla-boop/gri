@@ -1,0 +1,41 @@
+"""DMC-04P structural factorized associative-retrieval preregistration."""
+
+from .matcher import (
+    CODEBOOKS,
+    EVIDENCE_SEEDS,
+    FactorizedAssociativeMatcher,
+    NON_EVIDENCE_SEED,
+    build_optimizer,
+    build_shuffle_query_mapping,
+    candidate_scores,
+    encode_query_descriptor,
+    encode_write_descriptor,
+    group_scores,
+    load_training_cases,
+    resolver,
+    scorer_view,
+    state_hash,
+    target_group,
+    training_order,
+    validate_scorer_view,
+)
+
+__all__ = [
+    "CODEBOOKS",
+    "EVIDENCE_SEEDS",
+    "FactorizedAssociativeMatcher",
+    "NON_EVIDENCE_SEED",
+    "build_optimizer",
+    "build_shuffle_query_mapping",
+    "candidate_scores",
+    "encode_query_descriptor",
+    "encode_write_descriptor",
+    "group_scores",
+    "load_training_cases",
+    "resolver",
+    "scorer_view",
+    "state_hash",
+    "target_group",
+    "training_order",
+    "validate_scorer_view",
+]

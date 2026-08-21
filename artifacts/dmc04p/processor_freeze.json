@@ -1,0 +1,63 @@
+{
+  "paired_by_seed": {
+    "1337": "exact_seed1337_final.pt",
+    "1338": "exact_seed1338_final.pt",
+    "1339": "exact_seed1339_final.pt",
+    "1340": "exact_seed1340_final.pt",
+    "1341": "exact_seed1341_final.pt"
+  },
+  "pass": true,
+  "processor_parameters_trainable": 0,
+  "rows": [
+    {
+      "after_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "before_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "file_unchanged": true,
+      "model_type": "ImmutableRelationAnchorReasoner",
+      "requires_grad_all_false": true,
+      "seed": 1337,
+      "trainable_parameters": 0
+    },
+    {
+      "after_sha256": "1c05cd6d5d9fc19e68afa8b03c753396c153aa8c8e62c82aeb42e4de3d547f0d",
+      "before_sha256": "1c05cd6d5d9fc19e68afa8b03c753396c153aa8c8e62c82aeb42e4de3d547f0d",
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1338_final.pt",
+      "file_unchanged": true,
+      "model_type": "ImmutableRelationAnchorReasoner",
+      "requires_grad_all_false": true,
+      "seed": 1338,
+      "trainable_parameters": 0
+    },
+    {
+      "after_sha256": "a5cc2851cf64f2a289363ccaee63f0a64226fe854e2ab1d38feee10ef2ba3665",
+      "before_sha256": "a5cc2851cf64f2a289363ccaee63f0a64226fe854e2ab1d38feee10ef2ba3665",
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1339_final.pt",
+      "file_unchanged": true,
+      "model_type": "ImmutableRelationAnchorReasoner",
+      "requires_grad_all_false": true,
+      "seed": 1339,
+      "trainable_parameters": 0
+    },
+    {
+      "after_sha256": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+      "before_sha256": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1340_final.pt",
+      "file_unchanged": true,
+      "model_type": "ImmutableRelationAnchorReasoner",
+      "requires_grad_all_false": true,
+      "seed": 1340,
+      "trainable_parameters": 0
+    },
+    {
+      "after_sha256": "58e9e88657883ee842700e2e7aabdb87ee822ebf96c8be48039a673856e7fd0d",
+      "before_sha256": "58e9e88657883ee842700e2e7aabdb87ee822ebf96c8be48039a673856e7fd0d",
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1341_final.pt",
+      "file_unchanged": true,
+      "model_type": "ImmutableRelationAnchorReasoner",
+      "requires_grad_all_false": true,
+      "seed": 1341,
+      "trainable_parameters": 0
+    }
+  ]
+}

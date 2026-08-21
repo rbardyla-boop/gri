@@ -1,0 +1,8 @@
+{
+  "A_ONLY_LEARNED": "q_A^T W_A w_A",
+  "B_ONLY_LEARNED": "q_B^T W_B w_B",
+  "full": "q_A^T W_A w_A + q_B^T W_B w_B",
+  "pass": true,
+  "scientific_ablation_accuracy_not_measured": true,
+  "trained_parameters_unchanged": true
+}

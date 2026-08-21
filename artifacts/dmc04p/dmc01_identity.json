@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc01",
+  "expected_commit": "48ae98f",
+  "expected_terminal_state": "DMC_01_EXACT_MEMORY_ADVANCES",
+  "manifest": {
+    "entries": 36,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-01",
+  "observed_terminal_states": [
+    "DMC_01_EXACT_MEMORY_ADVANCES"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}

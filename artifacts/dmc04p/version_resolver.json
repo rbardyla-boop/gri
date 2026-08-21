@@ -1,0 +1,23 @@
+{
+  "allowed_fields": [
+    "raw write descriptor equality",
+    "creation_episode",
+    "query mode",
+    "as_of_episode"
+  ],
+  "current": "latest creation_episode within selected descriptor group",
+  "forbidden_fields": [
+    "logical_key",
+    "answer",
+    "hidden_value",
+    "oracle decision"
+  ],
+  "group_selection": "highest factorized score among raw write descriptors",
+  "history": "latest creation_episode <= as_of_episode within selected descriptor group",
+  "learned_matcher_temporal_parameters": 0,
+  "pass": true,
+  "structural_validation": {
+    "resolver_replay_pass": true,
+    "scientific_accuracy_not_measured": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "answer_in_scorer": false,
+  "case_count": 368,
+  "forbidden_fields": [
+    "logical_key",
+    "correct_candidate_index",
+    "answer",
+    "answer_class",
+    "hidden_value",
+    "final_correctness",
+    "oracle_retrieval_decision",
+    "case_id",
+    "record_id",
+    "future_event_information",
+    "entity",
+    "field"
+  ],
+  "hidden_value_in_scorer": false,
+  "logical_key_in_scorer": false,
+  "oracle_decision_in_scorer": false,
+  "pass": true,
+  "scorer_input_fields": [
+    "query.query_descriptor",
+    "query.mode",
+    "query.as_of_episode",
+    "candidates[].write_descriptor",
+    "candidates[].creation_episode"
+  ]
+}

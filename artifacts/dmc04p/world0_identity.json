@@ -1,0 +1,16 @@
+{
+  "artifact_path": "artifacts/frozen/world0_v0_1",
+  "expected_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1",
+  "manifest": {
+    "entries": 0,
+    "errors": [],
+    "manifest_available": false,
+    "pass": true,
+    "verification_basis": "frozen_git_commit_boundary"
+  },
+  "name": "WORLD-0",
+  "pass": true,
+  "unchanged_since_expected_commit": true,
+  "validator_pass": true,
+  "validator_terminal": "GRI_02_WORLD0_PASS"
+}

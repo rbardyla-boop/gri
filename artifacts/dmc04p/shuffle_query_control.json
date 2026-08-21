@@ -1,0 +1,10 @@
+{
+  "all_nonidentity": true,
+  "case_count": 368,
+  "evaluation_only": true,
+  "mapping_algorithm": "lexicographically sorted case IDs within (split,family,condition), cyclic next source",
+  "mapping_sha256": "bcec8f0313de426e0cf6a695b433a2c0460868e118f71266d3de49b1c1ffe0e4",
+  "pass": true,
+  "retraining": false,
+  "same_replay": true
+}

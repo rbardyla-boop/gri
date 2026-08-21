@@ -1,0 +1,5566 @@
+{
+  "candidate_fields_authorized": [
+    "write_descriptor",
+    "creation_episode"
+  ],
+  "hidden_value_excluded": true,
+  "logical_key_excluded": true,
+  "query_attribute_order": [
+    "B",
+    "A"
+  ],
+  "query_descriptor_fields": [
+    "tokens",
+    "attribute_order",
+    "noise_token_count"
+  ],
+  "query_fields_authorized": [
+    "query_descriptor",
+    "mode",
+    "as_of_episode"
+  ],
+  "raw_structure_validation": {
+    "case_count": 368,
+    "expected_query_fields": [
+      "attribute_order",
+      "noise_token_count",
+      "tokens"
+    ],
+    "expected_write_fields": [
+      "attribute_order",
+      "tokens"
+    ],
+    "pass": true,
+    "rows": [
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-train-alias-candidate_4-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-alias-candidate_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-compositional-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-hard_negative-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-current_candidate_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-train-versioned-history_candidate_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_0-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-train-cue_noise-noise_2-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 4,
+        "case_id": "dmc04a-iid-alias-candidate_4-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-alias-candidate_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-compositional-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-hard_negative-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-current_candidate_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 8,
+        "case_id": "dmc04a-iid-versioned-history_candidate_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_0-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-iid-cue_noise-noise_2-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-alias-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-compositional-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-hard_negative-candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-current_candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-versioned-history_candidate_16-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_8-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0000",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0001",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0002",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0003",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0004",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0005",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0006",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0007",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0008",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0009",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0010",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0011",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0012",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0013",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0014",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      },
+      {
+        "candidate_count": 16,
+        "case_id": "dmc04a-extrapolation-cue_noise-noise_32-0015",
+        "query_fields": [
+          "attribute_order",
+          "noise_token_count",
+          "tokens"
+        ],
+        "scorer_view_pass": true,
+        "target_separate": true,
+        "write_fields": [
+          "attribute_order",
+          "tokens"
+        ]
+      }
+    ]
+  },
+  "source": "artifacts/dmc04a/codebook_spec.json",
+  "write_attribute_order": [
+    "A",
+    "B"
+  ],
+  "write_descriptor_fields": [
+    "tokens",
+    "attribute_order"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "artifact_path": "artifacts/dmc04a",
+  "expected_commit": "90a30cb",
+  "expected_terminal_state": "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS",
+  "manifest": {
+    "entries": 25,
+    "errors": [],
+    "manifest_available": true,
+    "pass": true
+  },
+  "name": "DMC-04A",
+  "observed_terminal_states": [
+    "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS"
+  ],
+  "pass": true,
+  "receipt_valid": true,
+  "unchanged_since_expected_commit": true
+}

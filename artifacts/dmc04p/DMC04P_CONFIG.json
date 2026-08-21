@@ -1,0 +1,55 @@
+{
+  "capacity": 16,
+  "codebook_atom_count": 8,
+  "dmc03_commit": "489ec45",
+  "dmc04a_commit": "90a30cb",
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "evidence_training_executed": false,
+  "future_gates": {
+    "A_P_retrieval": 0.9,
+    "B_P_answer": 0.9,
+    "C_oracle_gap_max": 0.1,
+    "D_composition": 0.9,
+    "E_hard_negatives": 0.9,
+    "F_current": 0.9,
+    "G_history": 0.9,
+    "H_noise32": 0.9,
+    "I_seed_consistency": {
+      "seeds": 5,
+      "threshold": 0.85
+    },
+    "J_random_separation": 0.6,
+    "K_exact_token_separation": 0.6,
+    "query_cue_shuffle_gap": 0.4,
+    "two_attribute_A_only_gap": 0.3,
+    "two_attribute_B_only_gap": 0.3
+  },
+  "future_primary_answer": "mean(ALIAS16_A,COMP16_A,HARD16_A,CURRENT16_A,HISTORY16_A,NOISE8_A,NOISE32_A)",
+  "future_primary_retrieval": "mean(ALIAS16_H1,COMP16_H1,HARD16_H1,CURRENT16_H1,HISTORY16_H1,NOISE8_H1,NOISE32_H1)",
+  "generation_commit": "90a30cb2034911b50cf60919d7c559f03aacd762",
+  "model_class": "factorized_atomic_bilinear",
+  "model_parameters": 128,
+  "no_dmc03_integration": true,
+  "no_scientific_accuracy_reported": true,
+  "non_evidence_structural_seed": 9090,
+  "status": "factorized_associative_retrieval_structural_preregistration",
+  "training": {
+    "batch_size": 64,
+    "device": "cpu",
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "group_level_cross_entropy": true,
+    "learning_rate": 0.01,
+    "optimizer": "AdamW",
+    "torch_threads": 1,
+    "train_split_only": true,
+    "weight_decay": 0.0
+  },
+  "unit": "DMC-04P"
+}

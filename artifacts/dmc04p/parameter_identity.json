@@ -1,0 +1,15 @@
+{
+  "memory_parameters_in_optimizer": false,
+  "optimizer_param_group_count": 1,
+  "optimizer_parameter_names": [
+    "W_A",
+    "W_B"
+  ],
+  "parameter_count": 128,
+  "pass": true,
+  "processor_parameters_in_optimizer": false,
+  "retriever_parameters": [
+    "W_A",
+    "W_B"
+  ]
+}
