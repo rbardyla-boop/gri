@@ -174,6 +174,16 @@ def unchanged_since(commit: str, path: str) -> bool:
     return result.returncode == 0
 
 
+def implementation_commit() -> str:
+    """Resolve the last implementation commit, stable across artifact commits."""
+
+    return subprocess.check_output(
+        ["git", "log", "-1", "--format=%H", "--", "src/dmc03p", "scripts/preregister_dmc03p.py"],
+        cwd=ROOT,
+        text=True,
+    ).strip()
+
+
 def checkpoint_rows() -> list[dict[str, Any]]:
     rows = []
     for seed in EVIDENCE_SEEDS:
@@ -331,7 +341,7 @@ def generate_artifacts() -> dict[str, Any]:
             "metadata_mechanism": {"metric": "mean(P_learned) - mean(P_shuffled_metadata)", "minimum": 0.40},
         },
         "future_evidence_seeds": list(EVIDENCE_SEEDS),
-        "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+        "source_commit": implementation_commit(),
     }
     write_json(ARTIFACT_DIR / "DMC03P_CONFIG.json", config)
 
