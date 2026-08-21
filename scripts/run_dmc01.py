@@ -357,7 +357,12 @@ def finalize_evidence(train_results: list[dict[str, Any]], shuffled_results: lis
 
     def aggregate(kind_results: dict[int, dict[str, Any]]) -> dict[str, Any]:
         names = ["train_accuracy", "iid_accuracy", "P_memory"] + list(exact_results[EVIDENCE_SEEDS[0]]["metrics"]["components"])
-        return {name: {"mean": statistics.mean(result["metrics"][name] for result in kind_results.values()) if name in result["metrics"] else statistics.mean(result["metrics"]["components"][name] for result in kind_results.values()), "stdev": statistics.stdev(result["metrics"][name] for result in kind_results.values()) if name in result["metrics"] else statistics.stdev(result["metrics"]["components"][name] for result in kind_results.values())} for name in names}
+        rows = list(kind_results.values())
+        aggregate_rows = {}
+        for name in names:
+            values = [row["metrics"][name] if name in row["metrics"] else row["metrics"]["components"][name] for row in rows]
+            aggregate_rows[name] = {"mean": statistics.mean(values), "stdev": statistics.stdev(values)}
+        return aggregate_rows
 
     exact_agg = aggregate(exact_results)
     no_memory_agg = aggregate(no_memory_results)
@@ -462,4 +467,18 @@ if __name__ == "__main__":
         raise SystemExit(0 if result["pass"] else 1)
     if "--evidence" in sys.argv:
         raise SystemExit(execute_evidence())
+    if "--finalize" in sys.argv:
+        existing_train = [json.loads((ARTIFACT_DIR / f"{prefix}_seed{seed}.json").read_text()) for prefix in ("exact", "nomemory") for seed in EVIDENCE_SEEDS]
+        existing_shuffled = [json.loads((ARTIFACT_DIR / f"shuffled_seed{seed}.json").read_text()) for seed in EVIDENCE_SEEDS]
+        splits = {split: read_jsonl(ROOT / "artifacts/dmc00/datasets" / f"{split}.jsonl") for split in ("train", "iid", "extrapolation")}
+        shuffle_maps = {split: shuffle_mapping(cases) for split, cases in splits.items()}
+        initialization_rows = json.loads((ARTIFACT_DIR / "initialization_identity.json").read_text())["rows"]
+        finalize_evidence(existing_train, existing_shuffled, splits, shuffle_maps, initialization_rows)
+        hashes = {}
+        for path in sorted(ARTIFACT_DIR.rglob("*")):
+            if path.is_file() and path.name != "SHA256SUMS.json":
+                hashes[str(path.relative_to(ARTIFACT_DIR))] = sha256(path)
+        write_json(ARTIFACT_DIR / "SHA256SUMS.json", hashes)
+        print(json.loads((ARTIFACT_DIR / "DMC01_VERDICT.json").read_text())["terminal_state"])
+        raise SystemExit(0)
     raise SystemExit("use --resume-audit or --evidence")
