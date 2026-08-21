@@ -1,0 +1,217 @@
+{
+  "checks": {
+    "full_tests": true,
+    "predecessor_identities": true,
+    "processor_checkpoint_files_compatible_with_frozen_dmc04a_hidden_values": false
+  },
+  "evidence_seeds_executed": [],
+  "evidence_training_executed": false,
+  "identities": {
+    "pass": true,
+    "rows": [
+      {
+        "artifact_path": "artifacts/frozen/world0_v0_1",
+        "expected_commit": "1200050d1bbe99a7158e8482dacc534feb48d4c1",
+        "manifest": {
+          "entries": 0,
+          "errors": [],
+          "manifest_available": false,
+          "pass": true,
+          "verification_basis": "frozen_git_commit_boundary"
+        },
+        "name": "WORLD-0",
+        "pass": true,
+        "unchanged_since_expected_commit": true,
+        "validator_pass": true,
+        "validator_terminal": "GRI_02_WORLD0_PASS"
+      },
+      {
+        "artifact_path": "artifacts/dmc01",
+        "expected_commit": "48ae98f",
+        "expected_terminal_state": "DMC_01_EXACT_MEMORY_ADVANCES",
+        "manifest": {
+          "entries": 36,
+          "errors": [],
+          "manifest_available": true,
+          "pass": true
+        },
+        "name": "DMC-01",
+        "observed_terminal_states": [
+          "DMC_01_EXACT_MEMORY_ADVANCES"
+        ],
+        "pass": true,
+        "receipt_valid": true,
+        "unchanged_since_expected_commit": true
+      },
+      {
+        "artifact_path": "artifacts/dmc03",
+        "expected_commit": "489ec45",
+        "expected_terminal_state": "DMC_03_LEARNED_RETENTION_ADVANCES",
+        "manifest": {
+          "entries": 51,
+          "errors": [],
+          "manifest_available": true,
+          "pass": true
+        },
+        "name": "DMC-03",
+        "observed_terminal_states": [
+          "DMC_03_LEARNED_RETENTION_ADVANCES"
+        ],
+        "pass": true,
+        "receipt_valid": true,
+        "unchanged_since_expected_commit": true
+      },
+      {
+        "artifact_path": "artifacts/dmc04a",
+        "expected_commit": "90a30cb",
+        "expected_terminal_state": "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS",
+        "manifest": {
+          "entries": 25,
+          "errors": [],
+          "manifest_available": true,
+          "pass": true
+        },
+        "name": "DMC-04A",
+        "observed_terminal_states": [
+          "DMC_04A_ASSOCIATIVE_RETRIEVAL_BENCHMARK_PASS"
+        ],
+        "pass": true,
+        "receipt_valid": true,
+        "unchanged_since_expected_commit": true
+      },
+      {
+        "artifact_path": "artifacts/dmc04p",
+        "expected_commit": "61c9ab9",
+        "expected_terminal_state": "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED",
+        "manifest": {
+          "entries": 22,
+          "errors": [],
+          "manifest_available": true,
+          "pass": true
+        },
+        "name": "DMC-04P",
+        "observed_terminal_states": [
+          "DMC_04P_LEARNED_RETRIEVAL_PREREGISTERED"
+        ],
+        "pass": true,
+        "receipt_valid": true,
+        "unchanged_since_expected_commit": true
+      }
+    ]
+  },
+  "processor_compatibility": {
+    "frozen_hidden_source": {
+      "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+      "checkpoint_sha256": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+      "dmc01_commit": "48ae98f"
+    },
+    "pass": false,
+    "reason_if_failed": "DMC-04A hidden vectors are frozen seed-1337 representations; mandated seed-matched processors 1338-1341 do not decode them consistently.",
+    "rows": [
+      {
+        "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1337_final.pt",
+        "checkpoint_sha256_after": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+        "checkpoint_sha256_before": "4d7dd38a53216b6c010fbfbea27c5e382b572ba229db7fadaf9dd125c99b35a6",
+        "checkpoint_unchanged": true,
+        "hidden_value_class_count": 8,
+        "hidden_value_decodes_correctly": 8,
+        "predictions": {
+          "BLACK": "BLACK",
+          "BLUE": "BLUE",
+          "GREEN": "GREEN",
+          "ORANGE": "ORANGE",
+          "PURPLE": "PURPLE",
+          "RED": "RED",
+          "WHITE": "WHITE",
+          "YELLOW": "YELLOW"
+        },
+        "processor_parameters_trainable": 0,
+        "seed": 1337
+      },
+      {
+        "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1338_final.pt",
+        "checkpoint_sha256_after": "1c05cd6d5d9fc19e68afa8b03c753396c153aa8c8e62c82aeb42e4de3d547f0d",
+        "checkpoint_sha256_before": "1c05cd6d5d9fc19e68afa8b03c753396c153aa8c8e62c82aeb42e4de3d547f0d",
+        "checkpoint_unchanged": true,
+        "hidden_value_class_count": 8,
+        "hidden_value_decodes_correctly": 2,
+        "predictions": {
+          "BLACK": "ORANGE",
+          "BLUE": "BLUE",
+          "GREEN": "PURPLE",
+          "ORANGE": "ORANGE",
+          "PURPLE": "BLACK",
+          "RED": "PURPLE",
+          "WHITE": "ORANGE",
+          "YELLOW": "ORANGE"
+        },
+        "processor_parameters_trainable": 0,
+        "seed": 1338
+      },
+      {
+        "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1339_final.pt",
+        "checkpoint_sha256_after": "a5cc2851cf64f2a289363ccaee63f0a64226fe854e2ab1d38feee10ef2ba3665",
+        "checkpoint_sha256_before": "a5cc2851cf64f2a289363ccaee63f0a64226fe854e2ab1d38feee10ef2ba3665",
+        "checkpoint_unchanged": true,
+        "hidden_value_class_count": 8,
+        "hidden_value_decodes_correctly": 1,
+        "predictions": {
+          "BLACK": "GREEN",
+          "BLUE": "GREEN",
+          "GREEN": "WHITE",
+          "ORANGE": "PURPLE",
+          "PURPLE": "BLACK",
+          "RED": "BLACK",
+          "WHITE": "BLACK",
+          "YELLOW": "YELLOW"
+        },
+        "processor_parameters_trainable": 0,
+        "seed": 1339
+      },
+      {
+        "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1340_final.pt",
+        "checkpoint_sha256_after": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+        "checkpoint_sha256_before": "99ec7410e74f177781616331aa90c7395892437e3fa8b22fdfe77ca8cfcb99e7",
+        "checkpoint_unchanged": true,
+        "hidden_value_class_count": 8,
+        "hidden_value_decodes_correctly": 1,
+        "predictions": {
+          "BLACK": "ORANGE",
+          "BLUE": "ORANGE",
+          "GREEN": "GREEN",
+          "ORANGE": "RED",
+          "PURPLE": "ORANGE",
+          "RED": "ORANGE",
+          "WHITE": "PURPLE",
+          "YELLOW": "ORANGE"
+        },
+        "processor_parameters_trainable": 0,
+        "seed": 1340
+      },
+      {
+        "checkpoint": "artifacts/dmc01/checkpoints/exact_seed1341_final.pt",
+        "checkpoint_sha256_after": "58e9e88657883ee842700e2e7aabdb87ee822ebf96c8be48039a673856e7fd0d",
+        "checkpoint_sha256_before": "58e9e88657883ee842700e2e7aabdb87ee822ebf96c8be48039a673856e7fd0d",
+        "checkpoint_unchanged": true,
+        "hidden_value_class_count": 8,
+        "hidden_value_decodes_correctly": 3,
+        "predictions": {
+          "BLACK": "RED",
+          "BLUE": "RED",
+          "GREEN": "YELLOW",
+          "ORANGE": "ORANGE",
+          "PURPLE": "RED",
+          "RED": "RED",
+          "WHITE": "BLUE",
+          "YELLOW": "YELLOW"
+        },
+        "processor_parameters_trainable": 0,
+        "seed": 1341
+      }
+    ]
+  },
+  "scientific_retrieval_accuracy_measured": false,
+  "stop_reason": "The frozen DMC-04A hidden representations are sourced from seed-1337, while the mandated seed-matched processors 1338-1341 cannot decode them; regenerating or replacing them would violate the frozen protocol.",
+  "terminal_state": "DMC_04_INVALID",
+  "unit": "DMC-04"
+}
