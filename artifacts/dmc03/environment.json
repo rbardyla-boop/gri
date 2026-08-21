@@ -1,0 +1,9 @@
+{
+  "device": "cpu",
+  "platform": "Linux-6.8.0-63-generic-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python": "3.12.3",
+  "source_commit": "4b9659cb73e4452231087c1fad9a89eeb527a45f",
+  "torch": "2.8.0+cu128",
+  "torch_threads": 1
+}

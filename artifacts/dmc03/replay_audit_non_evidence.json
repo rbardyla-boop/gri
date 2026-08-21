@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "checkpoint_round_trip_hash": true,
+    "checkpoint_round_trip_loss": true,
+    "same_epoch_losses": true,
+    "same_final_loss": true,
+    "same_final_state_hash": true,
+    "same_initial_state_hash": true,
+    "same_order_identity": true
+  },
+  "engineering_only": true,
+  "evidence_seed_training_executed": false,
+  "final_loss": 0.024092373519164066,
+  "final_state_hash": "ac0c894c0ef77196887afd3f3db67d48e694d0a32802abd16be09826758c050f",
+  "pass": true,
+  "seed": 9090
+}

@@ -1,0 +1,143 @@
+{
+  "capacity": 16,
+  "capacity_violations": 0,
+  "maximum_occupancy": 16,
+  "pass": true,
+  "per_seed": {
+    "1337": {
+      "fifo": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "learned": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "oracle": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "random": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "shuffled_metadata": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      }
+    },
+    "1338": {
+      "fifo": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "learned": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "oracle": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "random": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "shuffled_metadata": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      }
+    },
+    "1339": {
+      "fifo": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "learned": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "oracle": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "random": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "shuffled_metadata": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      }
+    },
+    "1340": {
+      "fifo": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "learned": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "oracle": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "random": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "shuffled_metadata": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      }
+    },
+    "1341": {
+      "fifo": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "learned": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "oracle": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "random": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      },
+      "shuffled_metadata": {
+        "maximum_peak": 16,
+        "mean_peak": 16,
+        "violations": 0
+      }
+    }
+  }
+}

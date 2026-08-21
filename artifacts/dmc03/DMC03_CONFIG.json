@@ -1,0 +1,130 @@
+{
+  "capacity": 16,
+  "evaluation_datasets": {
+    "extrapolation": "5240e0788e1b820475e683240a44130ec30981cc197653931f78063828f514f8",
+    "iid": "3375c69200f0b28494968fa79a59354802de76a8ebb74c413b21ca839d23a060"
+  },
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "evidence_training_executed": true,
+  "gates": {
+    "A_primary": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "B_oracle_gap": {
+      "observed": 0.0,
+      "pass": true,
+      "threshold": 0.1
+    },
+    "C_M1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "D_SAL1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "E_SUP_current_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "F_SUP_history_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "G_SHIFT": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "H_FLOOD1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "I_seed_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    },
+    "J_FIFO_separation": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.6
+    },
+    "K_RANDOM_separation": {
+      "observed": 0.9697222222222223,
+      "pass": true,
+      "threshold": 0.6
+    }
+  },
+  "metadata_use_mechanism_gate": {
+    "observed": 0.9791666666666666,
+    "pass": true,
+    "threshold": 0.4
+  },
+  "modes": [
+    "ORACLE_RETENTION_16",
+    "LEARNED_RETENTION_16",
+    "FIFO_16",
+    "RANDOM_16",
+    "SHUFFLED_METADATA_16"
+  ],
+  "preregistration_commit": "5d614a6",
+  "primary_metric": "mean(M256,M1024,SAL256,SAL1024,SUP_current_1024,SUP_history_1024,SHIFT,FLOOD512,FLOOD1024)",
+  "processor": {
+    "class": "ImmutableRelationAnchorReasoner",
+    "frozen": true,
+    "hidden_dim": 49,
+    "message_dim": 51,
+    "parameters": 30912,
+    "train_depth": 4
+  },
+  "processor_pairing": {
+    "1337": "1337",
+    "1338": "1338",
+    "1339": "1339",
+    "1340": "1340",
+    "1341": "1341"
+  },
+  "random_control_seed": 20260202,
+  "scorer": {
+    "class": "AffineRetentionScorer",
+    "features": [
+      "mission_membership",
+      "high_salience"
+    ],
+    "hidden_value_input": false,
+    "parameters": 3
+  },
+  "shuffle_algorithm": "DMC03P shuffle_metadata_permutation(seed=20260303, family, condition, width=case write count)",
+  "source_commit": "4b9659cb73e4452231087c1fad9a89eeb527a45f",
+  "training": {
+    "batch_size": 256,
+    "device": "cpu",
+    "early_stopping": false,
+    "epochs": 40,
+    "evidence_training_executed_in_DMC03P": false,
+    "gradient_clip": 1.0,
+    "hyperparameter_search": false,
+    "learning_rate": 0.01,
+    "optimizer": "AdamW",
+    "ordering": "ascending SHA256(DMC03P-order|seed|epoch|training_example_id), then example_id",
+    "scheduler": false,
+    "torch_threads": 1,
+    "weight_decay": 0.0
+  },
+  "training_examples_sha256": "7d787f8f7de8993b9df980b04f72ba44eb13254dfcfa41f0960c5d855c234ad6",
+  "unit": "DMC-03"
+}

@@ -1,0 +1,10 @@
+{
+  "answer_or_query_serialized": false,
+  "examples": 11776,
+  "pass": true,
+  "source_dataset_path": "artifacts/dmc02a/datasets/train.jsonl",
+  "source_dataset_sha256": "d7bb21dea7b81955fbaac46b1debfe9ff8a4ea504890f1400464fffef5606f46",
+  "split": "train",
+  "training_examples_path": "artifacts/dmc03p/training_examples.jsonl",
+  "training_examples_sha256": "7d787f8f7de8993b9df980b04f72ba44eb13254dfcfa41f0960c5d855c234ad6"
+}

@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "per_seed": [
+    {
+      "after": "9f4eeaf7c87040225c6b71cbc43e6f1e74a0b69768f9def029bee8edc9ac2d92",
+      "before": "9f4eeaf7c87040225c6b71cbc43e6f1e74a0b69768f9def029bee8edc9ac2d92",
+      "seed": 1337,
+      "unchanged": true
+    },
+    {
+      "after": "3fa8f34030fbf254432e08d2611afff6c754ca149fcecc954d45a6dda8787c60",
+      "before": "3fa8f34030fbf254432e08d2611afff6c754ca149fcecc954d45a6dda8787c60",
+      "seed": 1338,
+      "unchanged": true
+    },
+    {
+      "after": "c275da184f2979775b1091f35b6182765e6dea7cbc636f241e66449f747b65a8",
+      "before": "c275da184f2979775b1091f35b6182765e6dea7cbc636f241e66449f747b65a8",
+      "seed": 1339,
+      "unchanged": true
+    },
+    {
+      "after": "d93b307b86cacd721b24129acdd7f52fae71718b4992407120b01fe8aa313cc6",
+      "before": "d93b307b86cacd721b24129acdd7f52fae71718b4992407120b01fe8aa313cc6",
+      "seed": 1340,
+      "unchanged": true
+    },
+    {
+      "after": "6654d629b7cd10474d539e65aa14a335805d3b83a0d725bf82d83deb3f172df6",
+      "before": "6654d629b7cd10474d539e65aa14a335805d3b83a0d725bf82d83deb3f172df6",
+      "seed": 1341,
+      "unchanged": true
+    }
+  ],
+  "processor_trainable_parameters": 0
+}

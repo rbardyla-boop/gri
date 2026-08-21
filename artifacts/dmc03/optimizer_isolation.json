@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "per_seed": {
+    "1337": {
+      "optimizer": "AdamW",
+      "optimizer_contains_processor": false,
+      "optimizer_parameter_count": 3,
+      "pass": true,
+      "processor_trainable_parameter_count": 0,
+      "seed": 1337
+    },
+    "1338": {
+      "optimizer": "AdamW",
+      "optimizer_contains_processor": false,
+      "optimizer_parameter_count": 3,
+      "pass": true,
+      "processor_trainable_parameter_count": 0,
+      "seed": 1338
+    },
+    "1339": {
+      "optimizer": "AdamW",
+      "optimizer_contains_processor": false,
+      "optimizer_parameter_count": 3,
+      "pass": true,
+      "processor_trainable_parameter_count": 0,
+      "seed": 1339
+    },
+    "1340": {
+      "optimizer": "AdamW",
+      "optimizer_contains_processor": false,
+      "optimizer_parameter_count": 3,
+      "pass": true,
+      "processor_trainable_parameter_count": 0,
+      "seed": 1340
+    },
+    "1341": {
+      "optimizer": "AdamW",
+      "optimizer_contains_processor": false,
+      "optimizer_parameter_count": 3,
+      "pass": true,
+      "processor_trainable_parameter_count": 0,
+      "seed": 1341
+    }
+  }
+}

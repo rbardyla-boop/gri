@@ -1,0 +1,146 @@
+{
+  "checks": {
+    "capacity": true,
+    "metadata_firewall": true,
+    "optimizer_isolation": true,
+    "predecessors": true,
+    "processor_checkpoint_hashes": true,
+    "processor_immutable": true,
+    "replay": true,
+    "training_examples": true,
+    "training_order": true
+  },
+  "differences": {
+    "learned_minus_fifo": 1.0,
+    "learned_minus_random": 0.9697222222222223,
+    "learned_minus_shuffled_metadata": 0.9791666666666666,
+    "oracle_minus_learned": 0.0
+  },
+  "gates": {
+    "A_primary": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "B_oracle_gap": {
+      "observed": 0.0,
+      "pass": true,
+      "threshold": 0.1
+    },
+    "C_M1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "D_SAL1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "E_SUP_current_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "F_SUP_history_1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "G_SHIFT": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "H_FLOOD1024": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.9
+    },
+    "I_seed_consistency": {
+      "observed": 5,
+      "pass": true,
+      "threshold": "5/5"
+    },
+    "J_FIFO_separation": {
+      "observed": 1.0,
+      "pass": true,
+      "threshold": 0.6
+    },
+    "K_RANDOM_separation": {
+      "observed": 0.9697222222222223,
+      "pass": true,
+      "threshold": 0.6
+    }
+  },
+  "metadata_use_mechanism_gate": {
+    "observed": 0.9791666666666666,
+    "pass": true,
+    "threshold": 0.4
+  },
+  "per_mode": {
+    "fifo": {
+      "label": "FIFO_16",
+      "mean": 0.0,
+      "per_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stdev": 0.0
+    },
+    "learned": {
+      "label": "LEARNED_RETENTION_16",
+      "mean": 1.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stdev": 0.0
+    },
+    "oracle": {
+      "label": "ORACLE_RETENTION_16",
+      "mean": 1.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stdev": 0.0
+    },
+    "random": {
+      "label": "RANDOM_16",
+      "mean": 0.03027777777777778,
+      "per_seed": [
+        0.044444444444444446,
+        0.013888888888888888,
+        0.034722222222222224,
+        0.029166666666666667,
+        0.029166666666666667
+      ],
+      "stdev": 0.011085038855130508
+    },
+    "shuffled_metadata": {
+      "label": "SHUFFLED_METADATA_16",
+      "mean": 0.020833333333333332,
+      "per_seed": [
+        0.020833333333333332,
+        0.020833333333333332,
+        0.020833333333333332,
+        0.020833333333333332,
+        0.020833333333333332
+      ],
+      "stdev": 0.0
+    }
+  },
+  "scientific_training_executed": true,
+  "terminal_state": "DMC_03_LEARNED_RETENTION_ADVANCES",
+  "unit": "DMC-03"
+}

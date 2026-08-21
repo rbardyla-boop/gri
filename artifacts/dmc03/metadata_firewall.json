@@ -1,0 +1,140 @@
+{
+  "forbidden_inputs": [
+    "answer",
+    "answer_index",
+    "final_query_target",
+    "future_events",
+    "oracle_result",
+    "case_id",
+    "future_query_choice",
+    "hidden_value"
+  ],
+  "pass": true,
+  "per_seed": {
+    "1337": {
+      "calls": 3712,
+      "feature_values": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "forbidden_runtime_inputs": [],
+      "invalid_inputs": 0,
+      "pass": true,
+      "shapes": [
+        [
+          2
+        ]
+      ]
+    },
+    "1338": {
+      "calls": 3712,
+      "feature_values": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "forbidden_runtime_inputs": [],
+      "invalid_inputs": 0,
+      "pass": true,
+      "shapes": [
+        [
+          2
+        ]
+      ]
+    },
+    "1339": {
+      "calls": 3712,
+      "feature_values": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "forbidden_runtime_inputs": [],
+      "invalid_inputs": 0,
+      "pass": true,
+      "shapes": [
+        [
+          2
+        ]
+      ]
+    },
+    "1340": {
+      "calls": 3712,
+      "feature_values": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "forbidden_runtime_inputs": [],
+      "invalid_inputs": 0,
+      "pass": true,
+      "shapes": [
+        [
+          2
+        ]
+      ]
+    },
+    "1341": {
+      "calls": 3712,
+      "feature_values": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "forbidden_runtime_inputs": [],
+      "invalid_inputs": 0,
+      "pass": true,
+      "shapes": [
+        [
+          2
+        ]
+      ]
+    }
+  }
+}

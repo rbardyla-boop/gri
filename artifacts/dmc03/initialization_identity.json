@@ -1,0 +1,40 @@
+{
+  "pass": true,
+  "per_seed": {
+    "1337": {
+      "bias": 0.1740870475769043,
+      "initial_state_hash": "9d6cdccbb860aec1371da7518b7a58a6f30ec7024fbf8d30134f6e896c88a36c",
+      "seed": 1337,
+      "w_mission": -0.5963496565818787,
+      "w_salience": -0.006198874209076166
+    },
+    "1338": {
+      "bias": 0.4575546085834503,
+      "initial_state_hash": "3c1ae9541b62ab7761c3ae298d70600cb07eb1c91222ab3ad8871711c8807f2a",
+      "seed": 1338,
+      "w_mission": 0.32109153270721436,
+      "w_salience": -0.10803063213825226
+    },
+    "1339": {
+      "bias": -0.7018846273422241,
+      "initial_state_hash": "7347c535a63dfb1c8e312e4b54513d8b244bda07d5fc14ad19e7849451b16b50",
+      "seed": 1339,
+      "w_mission": 0.5896250605583191,
+      "w_salience": 0.39113160967826843
+    },
+    "1340": {
+      "bias": -0.21977093815803528,
+      "initial_state_hash": "f312dc712b6864af1aa824ccd02bc395c2bc69499aa94bdc1909a0a40d8fa34f",
+      "seed": 1340,
+      "w_mission": 0.09499857574701309,
+      "w_salience": -0.25998687744140625
+    },
+    "1341": {
+      "bias": -0.2513810694217682,
+      "initial_state_hash": "5a2ff2d00315faa1e77e506e9280e1e0c8db63b35df085c79313f003a3288082",
+      "seed": 1341,
+      "w_mission": 0.022068258374929428,
+      "w_salience": 0.703693687915802
+    }
+  }
+}
