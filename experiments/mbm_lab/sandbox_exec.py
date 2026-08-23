@@ -12,16 +12,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-def sha256_file(path: Path) -> str | None:
-    if not path.is_file():
-        return None
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for block in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(block)
-    return h.hexdigest()
-
-
 def limits(memory_mb: int, cpu_seconds: int, pids: int):
     def apply() -> None:
         if memory_mb > 0:
@@ -64,9 +54,12 @@ def build_podman(workspace: Path, command: list[str], network: bool, image: str,
         "--cap-drop=ALL",
         "--pids-limit", str(pids),
         "--memory", f"{memory_mb}m",
-        "-v", f"{workspace}:/work:rw,Z",
-        "-w", "/work",
+        "-v", f"{workspace}:{workspace}:rw,Z",
+        "-w", str(workspace),
     ]
+    broker = os.environ.get("TE0_MODEL_BROKER")
+    if broker:
+        cmd += ["-e", f"TE0_MODEL_BROKER={broker}"]
     cmd += ["--network", "slirp4netns"] if network else ["--network", "none"]
     return cmd + [image] + command
 
@@ -77,10 +70,10 @@ def main() -> None:
     ap.add_argument("--backend", choices=["auto", "bwrap", "podman"], default="auto")
     ap.add_argument("--image", default="python:3.12-slim")
     ap.add_argument("--network", action="store_true")
-    ap.add_argument("--memory-mb", type=int, default=2048)
-    ap.add_argument("--cpu-seconds", type=int, default=300)
+    ap.add_argument("--memory-mb", type=int, default=4096)
+    ap.add_argument("--cpu-seconds", type=int, default=900)
     ap.add_argument("--pids", type=int, default=128)
-    ap.add_argument("--timeout", type=float, default=330.0)
+    ap.add_argument("--timeout", type=float, default=1800.0)
     ap.add_argument("--receipt", type=Path, required=True)
     ap.add_argument("command", nargs=argparse.REMAINDER)
     args = ap.parse_args()
@@ -125,6 +118,7 @@ def main() -> None:
         "workspace": str(workspace),
         "command": command,
         "network": args.network,
+        "model_broker_socket": os.environ.get("TE0_MODEL_BROKER"),
         "started_at": started,
         "elapsed_seconds": elapsed,
         "returncode": proc.returncode,
@@ -136,7 +130,7 @@ def main() -> None:
     }
     args.receipt.parent.mkdir(parents=True, exist_ok=True)
     args.receipt.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({k: receipt[k] for k in ["status", "backend", "returncode", "elapsed_seconds"]}, indent=2))
+    print(json.dumps({k: receipt[k] for k in ["status", "backend", "returncode", "elapsed_seconds", "network"]}, indent=2))
     raise SystemExit(proc.returncode)
 
 
