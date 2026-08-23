@@ -14,6 +14,7 @@ OUTCOME_PRECEDENCE = (
     "CONFOUND_EXPLAINS_ADVANTAGE",
     "TRANSPARENT_NULL_DOMINATES",
     "COMPONENT_UNNECESSARY",
+    "STRONG_BASELINE_MISSING",
     "ABSOLUTE_QUALITY_FAILURE",
     "BASELINE_DOMINATES",
     "ADVANCE",
@@ -25,6 +26,7 @@ SIGNAL_TO_OUTCOME = {
     "confound": "CONFOUND_EXPLAINS_ADVANTAGE",
     "transparent_null": "TRANSPARENT_NULL_DOMINATES",
     "component_unnecessary": "COMPONENT_UNNECESSARY",
+    "strong_baseline_missing": "STRONG_BASELINE_MISSING",
     "absolute_quality_failure": "ABSOLUTE_QUALITY_FAILURE",
     "baseline_dominates": "BASELINE_DOMINATES",
     "advance": "ADVANCE",
@@ -36,6 +38,7 @@ CREDIT_DISPOSITION = {
     "CONFOUND_EXPLAINS_ADVANTAGE": "REMOVED",
     "TRANSPARENT_NULL_DOMINATES": "REMOVED",
     "COMPONENT_UNNECESSARY": "REMOVED",
+    "STRONG_BASELINE_MISSING": "WITHHELD",
     "ABSOLUTE_QUALITY_FAILURE": "WITHHELD",
     "BASELINE_DOMINATES": "REMOVED",
     "ADVANCE": "PROVISIONAL",
@@ -134,6 +137,7 @@ def _eval_predicate(predicate: dict[str, Any], sources: dict[str, Any]) -> dict[
             passed = left >= right
         elif op == "lt":
             passed = left < right
+
         elif op == "lte":
             passed = left <= right
         else:
