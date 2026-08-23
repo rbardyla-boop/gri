@@ -22,6 +22,8 @@ Do not run an untrusted subprocess-mode specification merely because it is wrapp
 
 Python mode can install a Python audit hook before running the declared entrypoint. Depending on the frozen policy it can block access to declared protected roots, subprocess creation, and network connections visible through the audited Python operations.
 
+Protected-root policy covers ordinary file opens plus common filesystem metadata/mutation operations such as directory listing/scanning, remove, rename, mkdir/rmdir, chdir, chmod/chown, link/symlink, truncate, and utime when those operations surface through Python audit events.
+
 The guard is launched with Python isolated mode before target-project import paths are exposed. This prevents a target repository's `src/gauntlet` package or inherited `PYTHONPATH` from replacing the installed guard during launch.
 
 This remains a **Python-level integrity guard, not hostile-code containment**. Native extensions, interpreter vulnerabilities, operating-system interfaces not covered by the audit policy, or other adversarial techniques are outside the current containment claim. Use an actual container/VM/sandbox when executing code you do not trust.
@@ -52,7 +54,7 @@ Do not place API keys, passwords, tokens, private keys, or other secrets in expe
 
 ## Dependency surface
 
-The distributable `gri-gauntlet` wheel intentionally contains only the `gauntlet` Python package. Historical GRI/DMC/MCO research modules and their heavier dependencies are excluded from the product wheel.
+The distributable `gri-gauntlet` wheel intentionally contains only the `gauntlet` Python package. Historical GRI/DMC/MCO research modules and their heavier dependencies are excluded from the product wheel and source distribution.
 
 The core Gauntlet package currently has no mandatory third-party runtime dependency.
 
