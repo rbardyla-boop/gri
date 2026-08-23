@@ -16,8 +16,13 @@ jobs:
           python-version: "3.11"
       - name: Install targeted test dependencies
         run: python -m pip install -e '.[test]'
-      - name: Run Gauntlet regression and manipulation tests
-        run: pytest tests/test_gauntlet.py tests/test_gauntlet_manipulations.py -q
+      - name: Run Gauntlet regression, manipulation, and foreign-log tests
+        run: |
+          pytest \
+            tests/test_gauntlet.py \
+            tests/test_gauntlet_manipulations.py \
+            tests/test_gauntlet_inspect_adapter.py \
+            -q
       - name: Preserve project terminal-verdict verifier
         run: pytest tests/test_project_terminal_verdict.py -q
       - name: Retrospective MCO-05 self-audit
@@ -33,4 +38,22 @@ jobs:
           assert value['state'] == 'NO_ESTABLISHED_ADVANTAGE'
           assert value['comparison']['pass'] is True
           assert value['required_gates_pass'] is False
+          PY
+      - name: End-to-end frozen demo
+        run: |
+          gauntlet freeze examples/gauntlet/demo.toml
+          gauntlet verify .gauntlet/freeze.json
+          gauntlet run .gauntlet/freeze.json --run-id live > /tmp/live.json
+          gauntlet replay .gauntlet/freeze.json .gauntlet/runs/live.json --run-id replay > /tmp/replay.json
+          gauntlet verdict \
+            .gauntlet/freeze.json \
+            .gauntlet/runs/live.json \
+            --replay .gauntlet/replays/replay.json \
+            > /tmp/verdict.json
+          python - <<'PY'
+          import json
+          value = json.load(open('/tmp/verdict.json'))
+          assert value['evidence_class'] == 'PREREGISTERED_RUN'
+          assert value['state'] == 'ADVANCE'
+          assert all(value['integrity'].values())
           PY
