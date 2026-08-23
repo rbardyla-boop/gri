@@ -4,7 +4,7 @@ import argparse
 import hashlib
 import json
 import math
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 
 import numpy as np
@@ -112,10 +112,9 @@ def score_feature(
     q75 = _percentile(pre, 75)
     scaled_mad = 1.4826 * mad
     scaled_iqr = (q75 - q25) / 1.349
-    if len(pre) >= 2:
-        scaled_diff_std = float(np.std(np.diff(pre), ddof=0) / math.sqrt(2.0))
-    else:
-        scaled_diff_std = 0.0
+    scaled_diff_std = (
+        float(np.std(np.diff(pre), ddof=0) / math.sqrt(2.0)) if len(pre) >= 2 else 0.0
+    )
     relative_median_floor = 0.01 * abs(pre_median)
     magnitude_floor = 0.001 * _percentile(np.abs(pre), 75)
     absolute_floor = 1e-8
@@ -164,25 +163,31 @@ def score_feature(
     )
 
 
-def service_rank(features: list[FeatureRecord]) -> tuple[list[str], dict[str, float], dict[str, list[FeatureRecord]]]:
+def service_rank(
+    features: list[FeatureRecord],
+) -> tuple[list[str], dict[str, float], dict[str, list[FeatureRecord]]]:
     grouped: dict[str, list[FeatureRecord]] = {}
     for feature in features:
         grouped.setdefault(feature.service, []).append(feature)
     scores: dict[str, float] = {}
     for service, values in grouped.items():
         resources = sorted(
-            (v for v in values if v.evidence_kind == "resource"),
-            key=lambda x: (-x.score, x.column),
+            (value for value in values if value.evidence_kind == "resource"),
+            key=lambda value: (-value.score, value.column),
         )
         symptoms = sorted(
-            (v for v in values if v.evidence_kind == "symptom"),
-            key=lambda x: (-x.score, x.column),
+            (value for value in values if value.evidence_kind == "symptom"),
+            key=lambda value: (-value.score, value.column),
         )
         resource_weights = (1.0, 1.0, 0.25, 0.25)
         symptom_weights = (0.20, 0.20)
-        value = sum(weight * item.score for weight, item in zip(resource_weights, resources[:4]))
-        value += sum(weight * item.score for weight, item in zip(symptom_weights, symptoms[:2]))
-        scores[service] = float(value)
+        aggregate = sum(
+            weight * item.score for weight, item in zip(resource_weights, resources[:4])
+        )
+        aggregate += sum(
+            weight * item.score for weight, item in zip(symptom_weights, symptoms[:2])
+        )
+        scores[service] = float(aggregate)
     ranking = sorted(scores, key=lambda service: (-scores[service], service))
     return ranking, scores, grouped
 
@@ -195,15 +200,14 @@ def build_packet(
     if not ranking:
         return [], sha256_text("[]")
     selected: list[FeatureRecord] = []
-    leading = ranking[0]
-    leader_values = grouped[leading]
+    leader_values = grouped[ranking[0]]
     resources = sorted(
-        (v for v in leader_values if v.evidence_kind == "resource"),
-        key=lambda x: (-x.score, x.column),
+        (value for value in leader_values if value.evidence_kind == "resource"),
+        key=lambda value: (-value.score, value.column),
     )
     symptoms = sorted(
-        (v for v in leader_values if v.evidence_kind == "symptom"),
-        key=lambda x: (-x.score, x.column),
+        (value for value in leader_values if value.evidence_kind == "symptom"),
+        key=lambda value: (-value.score, value.column),
     )
     selected.extend(resources[:4])
     selected.extend(symptoms[:2])
@@ -211,33 +215,32 @@ def build_packet(
     for service in ranking[1:]:
         if len(selected) >= PACKET_CAPACITY:
             break
-        values = sorted(grouped[service], key=lambda x: (-x.score, x.column))
+        values = sorted(grouped[service], key=lambda value: (-value.score, value.column))
         room = PACKET_CAPACITY - len(selected)
         selected.extend(values[: min(2, room)])
 
-    packet = []
+    packet: list[dict] = []
     for item in selected[:PACKET_CAPACITY]:
         row = asdict(item)
         row["opaque_id"] = opaque_id
         packet.append(row)
-    digest = sha256_text(canonical_json(packet))
-    return packet, digest
+    return packet, sha256_text(canonical_json(packet))
 
 
 def compile_case(metrics_path: Path, meta_path: Path) -> dict:
     metadata = json.loads(meta_path.read_text(encoding="utf-8"))
     if sha256_file(metrics_path) != metadata["staged_metrics_sha256"]:
         raise ValueError(f"staged metric digest mismatch for {metadata['opaque_id']}")
-    df = pd.read_parquet(metrics_path)
-    if "time" not in df.columns:
+    frame = pd.read_parquet(metrics_path)
+    if "time" not in frame.columns:
         raise ValueError("candidate metrics missing time")
-    times = pd.to_numeric(df["time"], errors="raise").to_numpy(dtype=np.int64)
+    times = pd.to_numeric(frame["time"], errors="raise").to_numpy(dtype=np.int64)
     inject_time = int(metadata["inject_time"])
     features: list[FeatureRecord] = []
-    for column in df.columns:
+    for column in frame.columns:
         if column == "time":
             continue
-        values = pd.to_numeric(df[column], errors="coerce").to_numpy(dtype=np.float64)
+        values = pd.to_numeric(frame[column], errors="coerce").to_numpy(dtype=np.float64)
         record = score_feature(
             metadata["opaque_id"],
             column,
@@ -253,7 +256,6 @@ def compile_case(metrics_path: Path, meta_path: Path) -> dict:
     packet, packet_sha = build_packet(metadata["opaque_id"], ranking, grouped)
     return {
         "opaque_id": metadata["opaque_id"],
-        "system": metadata["system"],
         "root_cause_service_ranking": ranking,
         "service_scores": service_scores,
         "feature_count": len(features),
@@ -290,7 +292,13 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     result = compile_directory(args.candidate_dir, args.output)
-    print(json.dumps({k: v for k, v in result.items() if k != "predictions"}, indent=2, sort_keys=True))
+    print(
+        json.dumps(
+            {key: value for key, value in result.items() if key != "predictions"},
+            indent=2,
+            sort_keys=True,
+        )
+    )
 
 
 if __name__ == "__main__":
