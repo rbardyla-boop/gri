@@ -1,0 +1,37 @@
+[experiment]
+id = "gauntlet-demo"
+require_clean_repo = true
+require_same_commit = true
+
+[freeze]
+inputs = ["examples/gauntlet/demo_eval.py"]
+
+[run]
+mode = "subprocess"
+command = ["python", "examples/gauntlet/demo_eval.py"]
+outputs = [".gauntlet/demo_result.json"]
+replay_compare_stdout = false
+
+[verdict]
+result_file = ".gauntlet/demo_result.json"
+require_replay = true
+
+[[gates]]
+name = "candidate_absolute_quality"
+path = "candidate.accuracy"
+op = ">="
+value = 0.70
+required = true
+
+[[gates]]
+name = "schema_valid"
+path = "integrity.schema_valid"
+op = "=="
+value = true
+required = true
+
+[comparison]
+candidate_path = "candidate.accuracy"
+baseline_path = "baseline.accuracy"
+direction = "greater"
+minimum_delta = 0.20
