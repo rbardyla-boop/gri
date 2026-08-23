@@ -1,0 +1,66 @@
+{
+  "approved": true,
+  "reviewer_statement": "I checked the selected Layer-1 rows, metric columns, direction, and the source-authored baseline limitation against the pinned README.",
+  "source_git_blob_sha1": "2abd5bf6edef93c6ec7db7684a780576d6f4762b",
+  "source_revision": "9146ffa044109166b5d61146ebbf1c89fa544608",
+  "table_headers_include": [
+    "Provider",
+    "Overall",
+    "Semantic",
+    "Temporal"
+  ],
+  "row_label_column": 0,
+  "candidate_label": "Central Intelligence",
+  "baseline_label": "In-Memory Baseline",
+  "required_source_phrases": [],
+  "metrics": [
+    {
+      "name": "overall",
+      "column": 1,
+      "value_index": 0,
+      "direction": "greater",
+      "minimum_improvement": 0.0
+    },
+    {
+      "name": "semantic",
+      "column": 3,
+      "value_index": 0,
+      "direction": "greater",
+      "minimum_improvement": 0.0
+    }
+  ],
+  "approved_facts": [
+    {
+      "name": "baseline_is_floor",
+      "value": true,
+      "source_phrase": "The in-memory baseline uses exact keyword matching, not embeddings. It's a floor, not a meaningful comparison for semantic capabilities."
+    },
+    {
+      "name": "baseline_is_meaningful_semantic_comparison",
+      "value": false,
+      "source_phrase": "The in-memory baseline uses exact keyword matching, not embeddings. It's a floor, not a meaningful comparison for semantic capabilities."
+    }
+  ],
+  "signals": [
+    {
+      "id": "source-discloses-weak-semantic-baseline",
+      "kind": "strong_baseline_missing",
+      "mode": "all",
+      "note": "Human-approved source evidence says the selected in-memory comparator is a lexical floor rather than a meaningful semantic comparison.",
+      "predicates": [
+        {
+          "fact": "baseline_is_floor",
+          "equals": true
+        },
+        {
+          "fact": "baseline_is_meaningful_semantic_comparison",
+          "equals": false
+        }
+      ]
+    }
+  ],
+  "autopsy_id": "external-amb-human-approved-markdown",
+  "credit_target": "semantic-memory architecture superiority from the published Layer-1 headline comparison",
+  "claim_if_advance": "the human-approved published Layer-1 comparison provides provisional architecture credit",
+  "claim_if_not_advance": "the published scores establish performance over the benchmark's lexical in-memory floor, but this comparison alone does not establish superiority over a strong semantic-memory baseline"
+}
