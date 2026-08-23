@@ -1,0 +1,3 @@
+{"case_id":"D01","input":" pass ","expected":"PASS"}
+{"case_id":"D02","input":"FAIL ","expected":"FAIL"}
+{"case_id":"D03","input":" InConClusive","expected":"INCONCLUSIVE"}
