@@ -47,7 +47,31 @@ jobs:
           sha256sum -c /tmp/sem0/SHA256SUMS
       - name: Preserve canonical project terminal verdict
         run: pytest tests/test_project_terminal_verdict.py -q
-      - name: Confirm no real model identity is committed
+      - name: Validate SEM-0 model binding state
         run: |
-          test ! -e experiments/sem0/SEM0_MODEL_IDENTITY.json
           grep -q 'TO_BE_BOUND' experiments/sem0/SEM0_MODEL_IDENTITY.example.json
+          if test -e experiments/sem0/SEM0_MODEL_IDENTITY.json; then
+            python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path('experiments/sem0/SEM0_MODEL_IDENTITY.json')
+          value = json.loads(p.read_text(encoding='utf-8'))
+          assert value['status'] == 'SEM0_MODEL_PREFLIGHT_PASS'
+          assert value['scientific_run_authorized'] is False
+          assert value['model_id'] == 'llama3.1:8b'
+          assert value['artifact_sha256'] == '667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29'
+          assert value['ollama_version'] == '0.21.2'
+          assert value['runtime'] == 'ollama-0.21.2-openai-compatible'
+          assert value['base_url'] == 'http://127.0.0.1:11434/v1'
+          checks = value['checks']
+          assert checks['model_name_exact'] is True
+          assert checks['historical_blob_exact'] is True
+          assert checks['historical_runtime_exact'] is True
+          assert checks['tag_digest_present'] is True
+          assert value['historical_source']['path'] == 'experiments/mco05/MCO05_CONFIG.json'
+          print('SEM0 model identity is exact historical binding; scientific run remains unauthorized')
+          PY
+          else
+            echo 'SEM0 model identity not yet bound; scientific run remains unauthorized'
+          fi
