@@ -1,0 +1,36 @@
+name: Gauntlet Rescue
+
+on:
+  push:
+    branches: [gauntlet-rescue-v0]
+  pull_request:
+    branches: [main]
+
+jobs:
+  integrity-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install targeted test dependencies
+        run: python -m pip install -e '.[test]'
+      - name: Run Gauntlet regression tests
+        run: pytest tests/test_gauntlet.py -q
+      - name: Preserve project terminal-verdict verifier
+        run: pytest tests/test_project_terminal_verdict.py -q
+      - name: Retrospective MCO-05 self-audit
+        run: |
+          python -m gauntlet audit-result \
+            examples/gauntlet/mco05_retrospective.toml \
+            artifacts/mco05/scientific/MCO05_VERDICT.json \
+            > /tmp/mco05-audit.json
+          python - <<'PY'
+          import json
+          value = json.load(open('/tmp/mco05-audit.json'))
+          assert value['evidence_class'] == 'RETROSPECTIVE_AUDIT'
+          assert value['state'] == 'NO_ESTABLISHED_ADVANTAGE'
+          assert value['comparison']['pass'] is True
+          assert value['required_gates_pass'] is False
+          PY
