@@ -4,8 +4,6 @@ import argparse
 import json
 from pathlib import Path
 
-from huggingface_hub import HfApi, hf_hub_download
-
 REPO_ID = "phamquiluan/RCAEval"
 REVISION = "92c773ab7bb79f525ec7d5dc53d96a74dbebce4d"
 EXPECTED_CASES = 90
@@ -26,12 +24,17 @@ def required_paths(repo_files: list[str]) -> tuple[list[str], list[str]]:
 
 
 def main() -> None:
+    # Runtime-only dependency. Keeping this import local lets the pure inventory
+    # selector remain testable in the pre-data gate without adding network/
+    # transport packages to that qualification environment.
+    from huggingface_hub import HfApi, hf_hub_download
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
 
-    # Avoid glob/filter semantics entirely.  Enumerate the exact pinned
+    # Avoid glob/filter semantics entirely. Enumerate the exact pinned
     # revision, assert the expected RE3 inventory, then download only those
     # explicit metric and injection-time files.
     api = HfApi()
