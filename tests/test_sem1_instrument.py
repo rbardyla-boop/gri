@@ -95,6 +95,23 @@ def test_sem1_invariance_distractors_are_context_counterbalanced() -> None:
     assert scalar[5] == ["CONTRADICTED", "CONTRADICTED"]
 
 
+def test_sem1_quantifier_revision_distractor_is_context_counterbalanced() -> None:
+    cases, gold = build_dataset()
+    case_by = {case["id"]: case for case in cases}
+    observed: dict[int, list[str]] = defaultdict(list)
+    for meta in gold:
+        if meta["family"] != "negation_quantifier" or meta["pair_kind"] != "REVISION":
+            continue
+        pair_index = int(meta["pair_id"].rsplit("-", 1)[1])
+        case = case_by[meta["id"]]
+        hits = [p for p in case["propositions"] if p["text"] == "The first QX1 lamp is lit."]
+        assert len(hits) == 1
+        observed[pair_index].append(meta["gold"][hits[0]["id"]]["label"])
+    assert observed[0] == ["UNKNOWN", "UNKNOWN"]
+    assert observed[1] == ["ASSERTED", "ASSERTED"]
+    assert observed[2] == ["CONTRADICTED", "CONTRADICTED"]
+
+
 def test_sem1_label_pattern_shortcut_not_fixed() -> None:
     _, gold = build_dataset()
     summary = dataset_summary(gold)
