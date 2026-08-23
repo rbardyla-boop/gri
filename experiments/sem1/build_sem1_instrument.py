@@ -156,14 +156,7 @@ def _counterbalance_scalar_invariance(case: dict[str, Any], meta: dict[str, Any]
 
 
 def _counterbalance_invariance_distractors(cases: list[dict[str, Any]], gold: list[dict[str, Any]]) -> None:
-    """Make repeated distractor form context-dependent by construction.
-
-    In each family, invariant pair index 3 retains an UNKNOWN distractor. Pair 4
-    adds a positive fact making the same proposition ASSERTED. Pair 5 adds an
-    explicit negative fact making it CONTRADICTED. This is a semantic
-    counterbalance: proposition wording alone no longer determines its label.
-    The added fact is identical in role across A/B, preserving invariance.
-    """
+    """Make repeated invariant distractor form context-dependent by construction."""
     case_by_id = {case["id"]: case for case in cases}
     specs = {
         "factive_presupposition": (
@@ -234,16 +227,45 @@ def _counterbalance_invariance_distractors(cases: list[dict[str, Any]], gold: li
             )
 
 
-def build_dataset() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Build the current pre-science SEM-1 candidate instrument.
+def _counterbalance_quantifier_revision_distractor(cases: list[dict[str, Any]], gold: list[dict[str, Any]]) -> None:
+    """Break a repeated REVISION label-cardinality signature semantically.
 
-    The base family builders intentionally make the pair logic easy to audit.
-    This deterministic finalization layer removes known construction shortcuts:
-    label-cardinality repetition, family-coded nonce spelling, and fixed-label
-    invariant distractors. The latter are counterbalanced through added context,
-    not through arbitrary relabeling: the same proposition becomes UNKNOWN,
-    ASSERTED, or CONTRADICTED according to what its paired world actually says.
+    The proposition `The first QX1 lamp is lit.` is UNKNOWN in revision pair 0.
+    Pair 1 explicitly makes it true; pair 2 explicitly makes it false. The same
+    added fact is applied to A and B within each pair, so the registered focus
+    revision relation is untouched while proposition wording alone no longer
+    determines this distractor's label.
     """
+    case_by_id = {case["id"]: case for case in cases}
+    for meta in gold:
+        if meta["family"] != "negation_quantifier" or meta["pair_kind"] != "REVISION":
+            continue
+        pair_index = int(meta["pair_id"].rsplit("-", 1)[1])
+        if pair_index == 0:
+            continue
+        case = case_by_id[meta["id"]]
+        if pair_index == 1:
+            _append_counterfact(
+                case,
+                meta,
+                proposition_text="The first QX1 lamp is lit.",
+                context_text="The first QX1 lamp is lit.",
+                label="ASSERTED",
+                tag="revision-first-lamp-positive",
+            )
+        elif pair_index == 2:
+            _append_counterfact(
+                case,
+                meta,
+                proposition_text="The first QX1 lamp is lit.",
+                context_text="The first QX1 lamp is not lit.",
+                label="CONTRADICTED",
+                tag="revision-first-lamp-negative",
+            )
+
+
+def build_dataset() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Build the current pre-science SEM-1 candidate instrument."""
     raw_cases, raw_gold = base.build_dataset()
     cases = deepcopy(raw_cases)
     gold = deepcopy(raw_gold)
@@ -288,6 +310,7 @@ def build_dataset() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
 
     _neutralize_family_nonces(cases, gold)
     _counterbalance_invariance_distractors(cases, gold)
+    _counterbalance_quantifier_revision_distractor(cases, gold)
     return cases, gold
 
 
@@ -309,6 +332,7 @@ def main() -> None:
     report["pattern_diversity_finalization"] = True
     report["family_nonce_prefix_neutralization"] = True
     report["invariance_distractor_counterbalancing"] = True
+    report["quantifier_revision_distractor_counterbalancing"] = True
     print(json.dumps(report, sort_keys=True))
 
 
