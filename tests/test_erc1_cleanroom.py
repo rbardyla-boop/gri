@@ -12,8 +12,15 @@ from experiments.erc1.compiler import (
     compile_case,
     score_feature,
 )
-from experiments.erc1.download_lossless_repack import required_paths
-from experiments.erc1.stage import parse_case_name, read_metrics
+from experiments.erc1.download_lossless_repack import REVISION as DOWNLOAD_REVISION, required_paths
+from experiments.erc1.stage import (
+    HISTORICAL_HF_REVISION,
+    LOSSLESS_REPACK_REVISION,
+    parse_case_name,
+    read_metrics,
+)
+
+VERIFIED_MCO04_DATASET_REVISION = "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e"
 
 
 def test_case_name_parser_matches_public_rcaeval_convention():
@@ -25,6 +32,12 @@ def test_case_name_parser_matches_public_rcaeval_convention():
         "fault": "f3",
         "repetition": 4,
     }
+
+
+def test_erc1b_transport_and_staging_share_verified_mco04_revision():
+    assert DOWNLOAD_REVISION == VERIFIED_MCO04_DATASET_REVISION
+    assert LOSSLESS_REPACK_REVISION == VERIFIED_MCO04_DATASET_REVISION
+    assert HISTORICAL_HF_REVISION == VERIFIED_MCO04_DATASET_REVISION
 
 
 def test_json_and_parquet_readers_are_value_equivalent(tmp_path: Path):
@@ -92,7 +105,6 @@ def test_resource_aggregation_and_packet_capacity(tmp_path: Path):
     digest = hashlib.sha256(metrics.read_bytes()).hexdigest()
     meta = {
         "opaque_id": "E1-test",
-        "system": "ob",
         "inject_time": 300,
         "source_metrics_sha256": "c" * 64,
         "staged_metrics_sha256": digest,
