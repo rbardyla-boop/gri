@@ -39,14 +39,17 @@ def main() -> None:
     if report.get("status") != "MBM_GRINDER_COMPLETE" or report.get("scientific_content") is not False:
         raise ValueError("not a valid non-scientific grinder report")
     ranking = report.get("ranking") or []
-    if not ranking:
-        raise ValueError("grinder report has no candidates")
-    winner = ranking[0]
+    promotable = [row for row in ranking if not row.get("harness_only")]
+    if not promotable:
+        raise ValueError("grinder report has no promotable candidates")
+    winner = promotable[0]
 
     gates = {
         "decision_count": winner.get("n", 0) >= args.min_decisions,
         "exact_rate": winner.get("exact_rate", 0.0) >= args.min_exact_rate,
         "structural_failures": winner.get("structural_failures", 10**9) <= args.max_structural_failures,
+        "not_harness_only": winner.get("harness_only") is False,
+        "gold_hidden": report.get("gold_visible_to_promotable_candidates") is False,
         "fixture_hash_bound": report.get("fixture_sha256") == file_sha256(args.fixtures),
         "candidate_spec_hash_bound": report.get("candidate_spec_sha256") == file_sha256(args.candidate_spec),
         "adapter_exists": args.selected_adapter.is_file(),
@@ -69,6 +72,7 @@ def main() -> None:
         "firewall": {
             "semantic_benchmark_used_for_selection": False,
             "gold_used_for_selection": False,
+            "harness_oracle_promotable": False,
             "future_science_must_bind_this_record": True,
         },
     }
