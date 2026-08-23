@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any, Sequence
 
 from . import __version__
+from .adapters.inspect_ai import audit_inspect_log
 from .core import audit_result, create_freeze, replay_run, run_frozen, verify_freeze, verdict_frozen
 
 
@@ -44,6 +45,16 @@ def _parser() -> argparse.ArgumentParser:
     audit.add_argument("spec")
     audit.add_argument("result")
 
+    inspect_audit = sub.add_parser(
+        "audit-inspect",
+        help="conservatively audit a JSON Inspect AI EvalLog created outside Gauntlet",
+    )
+    inspect_audit.add_argument("log", help="JSON log or JSON output from 'inspect log dump'")
+    inspect_audit.add_argument(
+        "--run-config",
+        help="optional JSON from 'inspect log export-config --format json'",
+    )
+
     verdict = sub.add_parser("verdict", help="bind freeze, run receipt, optional replay, and result gates")
     verdict.add_argument("manifest")
     verdict.add_argument("receipt")
@@ -73,6 +84,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0 if value["pass"] else 1
         if args.command == "audit-result":
             value = audit_result(Path(args.spec), Path(args.result))
+            _emit(value)
+            return 0
+        if args.command == "audit-inspect":
+            value = audit_inspect_log(Path(args.log), Path(args.run_config) if args.run_config else None)
             _emit(value)
             return 0
         if args.command == "verdict":
