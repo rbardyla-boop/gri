@@ -1,0 +1,58 @@
+name: ERC-2AR Source Inventory
+
+on:
+  pull_request:
+    branches: [erc2a-damadics-structural-transfer, erc1b-mco04-verified-data-binding, main]
+    paths:
+      - 'docs/ERC2AR-DAMADICS-NONOVERLAP-TRANSFER.md'
+      - 'experiments/erc2ar/**'
+      - '.github/workflows/erc2ar-source-inventory.yml'
+  workflow_dispatch:
+
+jobs:
+  archive-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Assert ERC-1B compiler remains byte-identical
+        run: |
+          expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
+          actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
+          test "$actual" = "$expected"
+      - name: Compile source inventory probe
+        run: python -m py_compile experiments/erc2ar/probe_official_telemetry_archives.py
+      - name: Inventory official telemetry ZIPs without reading member values
+        run: |
+          python -m experiments.erc2ar.probe_official_telemetry_archives \
+            --output /tmp/ERC2AR_SOURCE_INVENTORY.json \
+            | tee /tmp/ERC2AR_SOURCE_INVENTORY_STDOUT.txt
+      - name: Assert archive-only boundary
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ERC2AR_SOURCE_INVENTORY.json'))
+          assert p['status'] == 'ERC2AR_OFFICIAL_TELEMETRY_ARCHIVE_INVENTORY_CAPTURED'
+          assert p['telemetry_archives_downloaded'] is True
+          assert p['telemetry_member_values_read'] is False
+          assert p['event_windows_constructed'] is False
+          assert p['feature_scores_computed'] is False
+          assert p['scientific_predictions'] == 0
+          assert p['scorer_opened_after_prediction'] is False
+          assert p['archive_count'] == 4
+          print('ERC2AR_ARCHIVE_ONLY_BOUNDARY_PASS')
+          PY
+      - name: Preserve source inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC2AR_SOURCE_INVENTORY
+          path: |
+            /tmp/ERC2AR_SOURCE_INVENTORY.json
+            /tmp/ERC2AR_SOURCE_INVENTORY_STDOUT.txt
