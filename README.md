@@ -65,7 +65,7 @@ gri-gauntlet verdict \
   --replay .gauntlet/replays/replay.json
 ```
 
-A successful preregistered demo should end with an `ADVANCE` state only when the bound integrity checks and declared gates pass.
+A successful frozen demo should end with an `ADVANCE` state only when the bound integrity checks and declared gates pass. Its evidence class is `FROZEN_RUN`: the local freeze establishes specification/input binding for that run, **not** public preregistration timing. Public preregistration must be established separately if a claim depends on it.
 
 ## Mechanism-credit autopsy
 
@@ -187,14 +187,14 @@ pytest \
   tests/test_gauntlet_claim_draft.py
 ```
 
-Historical research modules remain in `src/` but are intentionally excluded from the `gri-gauntlet` wheel. Install research dependencies only when working on those archived/research paths:
+Historical research modules remain in `src/` but are intentionally excluded from the `gri-gauntlet` wheel and source distribution. Install research dependencies only when working on those archived/research paths:
 
 ```bash
 python -m pip install -e '.[test,research]'
 ```
 
-## Distribution status
+## Distribution and license
 
-A clean wheel/source-distribution gate, fresh-install smoke test, release checklist, and public distribution plan are being maintained in `docs/DISTRIBUTION-READINESS.md`.
+A clean wheel/source-distribution gate, fresh-install smoke test, release checklist, and public distribution plan are maintained in `docs/DISTRIBUTION-READINESS.md`.
 
-No license has been selected in this repository yet. That is a deliberate release blocker rather than something the tooling should silently decide for the project owner.
+GRI Gauntlet is licensed under the **Apache License 2.0**. See `LICENSE`.
