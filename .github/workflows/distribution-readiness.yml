@@ -44,7 +44,37 @@ jobs:
           assert package_files, names
           assert any(name.endswith('gauntlet/cli.py') for name in names)
           assert any('.dist-info/' in name for name in names)
+          assert any(name.endswith('.dist-info/licenses/LICENSE') for name in names), names
           print(f'wheel_files={len(names)} gauntlet_files={len(package_files)}')
+          PY
+      - name: Verify source archive is product-scoped
+        run: |
+          python - <<'PY'
+          import glob
+          import tarfile
+
+          archives = glob.glob('dist/*.tar.gz')
+          assert len(archives) == 1, archives
+          with tarfile.open(archives[0], 'r:gz') as tf:
+              names = sorted(member.name for member in tf.getmembers() if member.isfile())
+          relative = [name.split('/', 1)[1] for name in names if '/' in name]
+          forbidden_prefixes = (
+              'artifacts/',
+              'docs/',
+              'experiments/',
+              'scripts/',
+              'sim/',
+              'src/dmc',
+              'src/gri_models/',
+              'src/gri_world0/',
+          )
+          forbidden = [name for name in relative if name.startswith(forbidden_prefixes)]
+          assert not forbidden, forbidden
+          assert 'tests/test_project_terminal_verdict.py' not in relative
+          assert 'LICENSE' in relative
+          assert 'src/gauntlet/cli.py' in relative
+          assert any(name.startswith('tests/test_gauntlet') for name in relative)
+          print(f'sdist_files={len(relative)}')
           PY
       - name: Fresh-install smoke test outside repository
         run: |
