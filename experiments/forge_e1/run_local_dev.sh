@@ -77,7 +77,7 @@ export FORGE_MODEL_BROKER="$broker_socket"
 export FORGE_SANDBOX_BACKEND=bwrap
 export FORGE_SCRATCH="$(dirname "$scratch")"
 
-./experiments/forge/sandbox.sh \
+bash experiments/forge/sandbox.sh \
   python -B -m experiments.forge_e1.collect_te0_e1 \
   --phase BUILD \
   --pool "$build_pool" \
@@ -86,7 +86,7 @@ export FORGE_SCRATCH="$(dirname "$scratch")"
   --output "$build_raw" \
   --receipt "$build_receipt"
 
-./experiments/forge/sandbox.sh \
+bash experiments/forge/sandbox.sh \
   python -B -m experiments.forge_e1.collect_te0_e1 \
   --phase DEV \
   --pool "$dev_pool" \
@@ -95,7 +95,7 @@ export FORGE_SCRATCH="$(dirname "$scratch")"
   --output "$dev_raw" \
   --receipt "$dev_receipt"
 
-./experiments/forge/sandbox.sh \
+bash experiments/forge/sandbox.sh \
   python -B -m experiments.forge_e1.develop_te0_e1 \
   --build "$build_raw" \
   --dev "$dev_raw" \
