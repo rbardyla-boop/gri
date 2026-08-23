@@ -42,6 +42,8 @@ jobs:
           python -m experiments.sem1.validate_sem1_instrument | tee /tmp/SEM1_STRUCTURE_REPORT.json
       - name: Run preregistered transparent shortcut audit
         run: python -m experiments.sem1.shortcut_baselines | tee /tmp/SEM1_SHORTCUT_AUDIT.json
+      - name: Emit diagnostic-only proposition leakage breakdown
+        run: python -m experiments.sem1.diagnose_shortcut_leakage | tee /tmp/SEM1_SHORTCUT_DIAGNOSTIC.json
       - name: Verify pre-science boundary
         run: |
           python - <<'PY'
@@ -67,6 +69,11 @@ jobs:
           assert s['one_each_label_cases'] == 0
           assert s['max_label_pattern_frequency'] <= 12
           assert s['scientific_model_calls'] == 0
+
+          d = json.load(open('/tmp/SEM1_SHORTCUT_DIAGNOSTIC.json'))
+          assert d['status'] == 'SEM1_SHORTCUT_DIAGNOSTIC_ONLY'
+          assert d['scientific_model_calls'] == 0
+          assert d['changes_registered_gate'] is False
 
           b = json.load(open('/tmp/SEM1_SHORTCUT_AUDIT.json'))
           assert b['scientific_model_calls'] == 0
