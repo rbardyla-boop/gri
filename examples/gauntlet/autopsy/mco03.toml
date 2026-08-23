@@ -1,0 +1,20 @@
+[autopsy]
+id = "mco03-retrospective-credit"
+credit_target = "learned natural-language normalization component"
+claim_if_advance = "learned normalization retains independent mechanism credit"
+claim_if_not_advance = "transparent compilation produces equivalent structured state and downstream quality without learned extraction calls; learned component credit is removed"
+
+[sources]
+aggregate = "artifacts/mco03/aggregate.json"
+
+[[signals]]
+id = "transparent-replacement-makes-learned-component-unnecessary"
+kind = "component_unnecessary"
+mode = "all"
+note = "The transparent compiler produces identical history artifacts and equal relation accuracy while using zero extraction model calls."
+predicates = [
+  { source = "aggregate", path = "extraction.artifacts_identical_histories", op = "path_approx_eq", other_source = "aggregate", other_path = "extraction.history_count", tolerance = 0.0 },
+  { source = "aggregate", path = "extraction.learned.relation_accuracy", op = "path_approx_eq", other_source = "aggregate", other_path = "extraction.transparent.relation_accuracy", tolerance = 0.0 },
+  { source = "aggregate", path = "extraction.learned.usage.model_calls", op = "path_gt", other_source = "aggregate", other_path = "extraction.transparent.model_calls" },
+  { source = "aggregate", path = "planner.variants.learned_single.model_answer_accuracy", op = "path_approx_eq", other_source = "aggregate", other_path = "planner.variants.transparent_compiler.model_answer_accuracy", tolerance = 0.0 },
+]
