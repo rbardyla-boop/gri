@@ -1,5 +1,5 @@
 {
-  "candidate_record_sha256": "de63069731130925361c50b9b302e0f437df89c7fbacbe98c016b5a0fdda3a85",
+  "candidate_record_sha256": "f4daa667bfc2e1ac809a4591dfaa9913ce89ba15715e164dd319d451b5f8b60a",
   "cleanroom_target": "independent reproduction of MCO-04 direct compiler 63/63 scientific service localization",
   "expected_scientific_cases": 63,
   "expected_total_cases": 90,
@@ -12,18 +12,18 @@
   "historical_hf_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
   "historical_rcaeval_repository_commit": "4695aa69f4f1f57b9094ca04ff235908b73a8e24",
   "lossless_repack_revision": "92c773ab7bb79f525ec7d5dc53d96a74dbebce4d",
-  "qualification_artifact_id": 9500396771,
-  "qualification_artifact_zip_sha256": "92a9e8b489de5d4122062265d6d83cb44ce4603842498af9e2bdcc6ec76b69e2",
-  "qualification_head_sha": "9f709b07679d20773a333782ed4f9d8d55a6403d",
-  "qualification_workflow_run_id": 32667353214,
-  "record_sha256": "f10eb7e30324b737471c12847599719bd33a2512750be23ebd386eb3addb7c5b",
+  "qualification_artifact_id": 9500526732,
+  "qualification_artifact_zip_sha256": "62c2753539295e680fe8df797202f82b766bd20135b888c16f2d5f222c098739",
+  "qualification_head_sha": "7613828198f3a0ca562f5c7dbd4b6f5534d3e829",
+  "qualification_workflow_run_id": 32667844516,
+  "record_sha256": "78bd9b59173b54be2da28c0d49c49f357f9a517505ea756aa07af2db0cd4dd52",
   "scientific_model_calls": 0,
   "source_sha256": {
     ".github/workflows/erc1-cleanroom-gate.yml": "96fdcf9b73ff97e6fa09f9b444b2c8174dd033707f68869760636f7b7e048041",
     ".github/workflows/erc1-full-reproduction.yml": "7e2ab21db054813395c3d5705251db3559ad80e679f29e935999bd345711baa6",
     "docs/ERC1-MCO04-CLEANROOM-REPRODUCTION.md": "af9bf9d66189584f8702401fe70377b0c8d9824190a266c72b54f2d36355fbac",
     "experiments/erc1/compiler.py": "2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d",
-    "experiments/erc1/download_lossless_repack.py": "1de8ca9c727851e33bf27f4999e7d353b6d7a5afd90e54ffb26df300a8d2650f",
+    "experiments/erc1/download_lossless_repack.py": "168f3dc6e4603af6bb41220c49ae7f8fe00a942ffde3a4a880e74ee403ace22f",
     "experiments/erc1/freeze_candidate.py": "668cb77c585b82badfdbec51494af2c2dcbb194e2a8acb43b36cc4938e71a789",
     "experiments/erc1/run_lossless_repack.sh": "04cbf78d6c8ef74f6fe4b315ce2080feed7ce56f1e056ee1bb319bff1001ad5c",
     "experiments/erc1/score.py": "b3c579744debf4b1486e1f5a0422a7a0ea6a9f1ca9f78c136f3b7c6a8b534358",
@@ -31,5 +31,8 @@
     "tests/test_erc1_cleanroom.py": "b50d1f0889f7e4738bba8cd12bcca7fee05e71649a0a335e971367866183fea5"
   },
   "status": "ERC1_IMPLEMENTATION_FROZEN",
+  "supersedes_freeze_file_sha256": "5daa3ddd819ddd1cf50240fd2245657553a10226572d0944446712803b44ae0f",
+  "supersedes_freeze_record_sha256": "f10eb7e30324b737471c12847599719bd33a2512750be23ebd386eb3addb7c5b",
+  "transport_repair_from_attempt_1": "suite selector changed from nested glob to dataset-documented allow_patterns='re3*'; no staging/predictions/scoring occurred before repair",
   "unit": "ERC-1"
 }
