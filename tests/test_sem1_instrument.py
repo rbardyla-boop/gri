@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import re
 from collections import Counter
 
 from experiments.sem1.build_sem1_instrument import FAMILIES, build_dataset, dataset_summary
 from experiments.sem1.make_sem1_subsets import build_subsets
 from experiments.sem1.validate_sem1_instrument import validate
+
+
+FAMILY_NONCE = re.compile(r"\b(?:VEX|RAV|ZEL|NORI|TAL|DAX|EVR|EVS|NER|LUM|TOR|MURK|OBJ|KAV)\d{2}Q\b")
 
 
 def test_sem1_exact_structure() -> None:
@@ -38,6 +42,18 @@ def test_sem1_no_metadata_in_case_payload() -> None:
         assert set(case) == {"id", "context", "propositions"}
         assert not (set(case) & forbidden)
         assert len(case["propositions"]) == 6
+
+
+def test_sem1_family_nonce_prefixes_not_model_visible() -> None:
+    cases, _ = build_dataset()
+    visible = "\n".join(
+        item["text"]
+        for case in cases
+        for section in ("context", "propositions")
+        for item in case[section]
+    )
+    assert not FAMILY_NONCE.search(visible)
+    assert "QX1" in visible
 
 
 def test_sem1_label_pattern_shortcut_not_fixed() -> None:
