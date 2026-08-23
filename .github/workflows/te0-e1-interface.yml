@@ -81,7 +81,9 @@ jobs:
           ! grep -q 'authorize_te0_e1' experiments/forge_e1/run_local_dev.sh
           ! grep -q 'vault-seed-file' experiments/forge_e1/run_local_dev.sh
           grep -q 'vault_created.*False' experiments/forge_e1/run_local_dev.sh
-          grep -q 'FORGE_SANDBOX_BACKEND=bwrap' experiments/forge_e1/run_local_dev.sh
+          grep -q 'refs/remotes/origin/te0-e1-interface-repair' experiments/forge_e1/run_local_dev.sh
+          grep -q 'TE0_E1_HEAD_MISMATCH' experiments/forge_e1/run_local_dev.sh
+          grep -q 'FORGE_SANDBOX_BACKEND:-auto' experiments/forge_e1/run_local_dev.sh
       - name: Preserve TE0 foundation and terminal research verdict
         run: |
           pytest tests/test_project_terminal_verdict.py -q
