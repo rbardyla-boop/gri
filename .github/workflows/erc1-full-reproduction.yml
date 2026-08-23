@@ -1,0 +1,106 @@
+name: ERC-1 Full Clean-Room Reproduction
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/erc1/ERC1_FREEZE.json'
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen mechanical environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install \
+            numpy==2.4.6 \
+            pandas==3.0.2 \
+            pyarrow==25.0.1 \
+            huggingface_hub \
+            pytest
+          python - <<'PY'
+          import json, numpy, pandas, pyarrow, huggingface_hub, sys
+          print(json.dumps({
+              'python': sys.version,
+              'numpy': numpy.__version__,
+              'pandas': pandas.__version__,
+              'pyarrow': pyarrow.__version__,
+              'huggingface_hub': huggingface_hub.__version__,
+          }, sort_keys=True))
+          PY
+      - name: Verify authorized implementation freeze
+        run: |
+          python -m experiments.erc1.freeze_candidate \
+            --verify experiments/erc1/ERC1_FREEZE.json
+      - name: Re-run clean-room regressions before data
+        run: python -m pytest -q tests/test_erc1_cleanroom.py
+      - name: Download pinned lossless RCAEval RE3 metrics only
+        run: |
+          python -m experiments.erc1.download_lossless_repack --output /tmp/erc1-data
+      - name: Stage opaque candidate/scorer split
+        run: |
+          python -m experiments.erc1.stage \
+            --data-root /tmp/erc1-data \
+            --output-root /tmp/erc1-run/staged \
+            --evidence-class LOSSLESS_REPACK_REPRODUCTION \
+            --source-revision 92c773ab7bb79f525ec7d5dc53d96a74dbebce4d \
+            | tee /tmp/erc1-run/STAGE_STDOUT.txt
+      - name: Compile live predictions
+        run: |
+          python -m experiments.erc1.compiler \
+            --candidate-dir /tmp/erc1-run/staged/candidate \
+            --output /tmp/erc1-run/PREDICTIONS_LIVE.json \
+            | tee /tmp/erc1-run/LIVE_STDOUT.txt
+      - name: Compile independent deterministic replay
+        run: |
+          python -m experiments.erc1.compiler \
+            --candidate-dir /tmp/erc1-run/staged/candidate \
+            --output /tmp/erc1-run/PREDICTIONS_REPLAY.json \
+            | tee /tmp/erc1-run/REPLAY_STDOUT.txt
+          cmp /tmp/erc1-run/PREDICTIONS_LIVE.json /tmp/erc1-run/PREDICTIONS_REPLAY.json
+      - name: Score only after prediction seals exist
+        run: |
+          python -m experiments.erc1.score \
+            --staging-root /tmp/erc1-run/staged \
+            --live /tmp/erc1-run/PREDICTIONS_LIVE.json \
+            --replay /tmp/erc1-run/PREDICTIONS_REPLAY.json \
+            --output /tmp/erc1-run/ERC1_REPRODUCTION_REPORT.json \
+            | tee /tmp/erc1-run/SCORE_STDOUT.txt
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/erc1-run/ERC1_REPRODUCTION_REPORT.json'))
+          print('STATUS:', p['status'])
+          print('EVIDENCE_CLASS:', p['evidence_class'])
+          print('REPLAY_EXACT:', p['replay_exact'])
+          print('OPACITY_PROVENANCE:', p['opacity_provenance_ok'])
+          print('SCIENTIFIC_TOP1:', p['scientific']['top1_count'], '/', p['scientific']['n'])
+          print('SCIENTIFIC_TOP3:', p['scientific']['top3_count'], '/', p['scientific']['n'])
+          print('BY_SYSTEM:', p['scientific']['by_system'])
+          print('DISAGREEMENTS:', p['scientific']['disagreements'])
+          print('PREDICTION_SEAL_SHA256:', p['prediction_seal_sha256'])
+          print('RECORD_SHA256:', p['record_sha256'])
+          PY
+      - name: Preserve reproduction evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC1_REPRODUCTION_EVIDENCE
+          path: |
+            /tmp/erc1-run/ERC1_REPRODUCTION_REPORT.json
+            /tmp/erc1-run/PREDICTIONS_LIVE.json
+            /tmp/erc1-run/PREDICTIONS_REPLAY.json
+            /tmp/erc1-run/STAGE_STDOUT.txt
+            /tmp/erc1-run/LIVE_STDOUT.txt
+            /tmp/erc1-run/REPLAY_STDOUT.txt
+            /tmp/erc1-run/SCORE_STDOUT.txt
+            /tmp/erc1-run/staged/STAGING_MANIFEST.json

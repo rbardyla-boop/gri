@@ -1,0 +1,51 @@
+{
+  "candidate_record_sha256": "9a4ce254a050682712cdaf3cbc456d51a651d4bef51ae4aa66dca7d93d01b81a",
+  "cleanroom_target": "independent reproduction of MCO-04 direct compiler 63/63 scientific service localization",
+  "expected_scientific_cases": 63,
+  "expected_total_cases": 90,
+  "forbidden_implementation_sources": [
+    "scripts/run_mco04.py",
+    "tests/test_mco04.py"
+  ],
+  "freeze_authorized": true,
+  "full_reproduction_executed": false,
+  "historical_hf_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "historical_rcaeval_repository_commit": "4695aa69f4f1f57b9094ca04ff235908b73a8e24",
+  "lossless_repack_revision": "92c773ab7bb79f525ec7d5dc53d96a74dbebce4d",
+  "qualification_artifact_id": 9500582077,
+  "qualification_artifact_zip_sha256": "7ace2b560a7604baf1a121ee293e14bdb1930307d84269c207533df53a9ec0d0",
+  "qualification_head_sha": "100e33510999ee6cf6f3be765c5bde31afb59d6a",
+  "qualification_workflow_run_id": 32668043080,
+  "record_sha256": "1de1fc2c758494b816d19fd3d07130539eb225ce69cd2e1903d94c952d04e442",
+  "scientific_model_calls": 0,
+  "source_sha256": {
+    ".github/workflows/erc1-cleanroom-gate.yml": "96fdcf9b73ff97e6fa09f9b444b2c8174dd033707f68869760636f7b7e048041",
+    ".github/workflows/erc1-full-reproduction.yml": "7e2ab21db054813395c3d5705251db3559ad80e679f29e935999bd345711baa6",
+    "docs/ERC1-MCO04-CLEANROOM-REPRODUCTION.md": "af9bf9d66189584f8702401fe70377b0c8d9824190a266c72b54f2d36355fbac",
+    "experiments/erc1/compiler.py": "2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d",
+    "experiments/erc1/download_lossless_repack.py": "5ea00b3505ec13d84bf8eecb0fca949be9f0e005089df107018fb149aa058a85",
+    "experiments/erc1/freeze_candidate.py": "668cb77c585b82badfdbec51494af2c2dcbb194e2a8acb43b36cc4938e71a789",
+    "experiments/erc1/run_lossless_repack.sh": "04cbf78d6c8ef74f6fe4b315ce2080feed7ce56f1e056ee1bb319bff1001ad5c",
+    "experiments/erc1/score.py": "b3c579744debf4b1486e1f5a0422a7a0ea6a9f1ca9f78c136f3b7c6a8b534358",
+    "experiments/erc1/stage.py": "d01d0fea5f3a80252a676354706bcbbf11f9db27da8d34fb2dcce60b2a6b2579",
+    "tests/test_erc1_cleanroom.py": "64fe8a42dfd53ef16d253e217832e7fdf2267b1c095e1f4c4b80ade6a22338a5"
+  },
+  "status": "ERC1_IMPLEMENTATION_FROZEN",
+  "supersedes_freeze_record_sha256": "78bd9b59173b54be2da28c0d49c49f357f9a517505ea756aa07af2db0cd4dd52",
+  "transport_history": [
+    {
+      "attempt": 1,
+      "detail": "nested snapshot allow-pattern selected zero files",
+      "terminal": "PRE_DATA_TRANSPORT_FAILURE"
+    },
+    {
+      "attempt": 2,
+      "detail": "suite-level snapshot allow-pattern selected zero files",
+      "terminal": "PRE_DATA_TRANSPORT_FAILURE"
+    },
+    {
+      "qualification_only": "explicit pinned revision inventory + exact-file download; lazy runtime import; no benchmark bytes observed in qualification"
+    }
+  ],
+  "unit": "ERC-1"
+}
