@@ -1,0 +1,115 @@
+name: ERC-1B Full Clean-Room Reproduction
+
+on:
+  pull_request:
+    branches: [main, erc1-mco04-cleanroom]
+    paths:
+      - 'experiments/erc1/ERC1_FREEZE.json'
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen mechanical environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install \
+            numpy==2.4.6 \
+            pandas==3.0.2 \
+            pyarrow==25.0.1 \
+            huggingface_hub \
+            pytest
+          python - <<'PY'
+          import json, numpy, pandas, pyarrow, huggingface_hub, sys
+          print(json.dumps({
+              'python': sys.version,
+              'numpy': numpy.__version__,
+              'pandas': pandas.__version__,
+              'pyarrow': pyarrow.__version__,
+              'huggingface_hub': huggingface_hub.__version__,
+          }, sort_keys=True))
+          PY
+      - name: Verify authorized implementation and data freeze
+        run: |
+          python -m experiments.erc1.freeze_candidate \
+            --verify experiments/erc1/ERC1_FREEZE.json
+      - name: Assert compiler remains byte-identical before data
+        run: |
+          expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
+          actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
+          test "$actual" = "$expected"
+      - name: Re-run clean-room regressions before data
+        run: python -m pytest -q tests/test_erc1_cleanroom.py
+      - name: Download verified pinned RCAEval RE3 metrics only
+        run: |
+          python -m experiments.erc1.download_lossless_repack --output /tmp/erc1b-data
+      - name: Stage opaque candidate/scorer split
+        run: |
+          mkdir -p /tmp/erc1b-run
+          python -m experiments.erc1.stage \
+            --data-root /tmp/erc1b-data \
+            --output-root /tmp/erc1b-run/staged \
+            --evidence-class LOSSLESS_REPACK_REPRODUCTION \
+            --source-revision afeacb11bcc94dadfd1c8f483ee4377b2b8b614e \
+            | tee /tmp/erc1b-run/STAGE_STDOUT.txt
+      - name: Compile live predictions
+        run: |
+          python -m experiments.erc1.compiler \
+            --candidate-dir /tmp/erc1b-run/staged/candidate \
+            --output /tmp/erc1b-run/PREDICTIONS_LIVE.json \
+            | tee /tmp/erc1b-run/LIVE_STDOUT.txt
+      - name: Compile independent deterministic replay
+        run: |
+          python -m experiments.erc1.compiler \
+            --candidate-dir /tmp/erc1b-run/staged/candidate \
+            --output /tmp/erc1b-run/PREDICTIONS_REPLAY.json \
+            | tee /tmp/erc1b-run/REPLAY_STDOUT.txt
+          cmp /tmp/erc1b-run/PREDICTIONS_LIVE.json /tmp/erc1b-run/PREDICTIONS_REPLAY.json
+      - name: Score only after prediction seals exist
+        run: |
+          python -m experiments.erc1.score \
+            --staging-root /tmp/erc1b-run/staged \
+            --live /tmp/erc1b-run/PREDICTIONS_LIVE.json \
+            --replay /tmp/erc1b-run/PREDICTIONS_REPLAY.json \
+            --output /tmp/erc1b-run/ERC1B_REPRODUCTION_REPORT.json \
+            | tee /tmp/erc1b-run/SCORE_STDOUT.txt
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/erc1b-run/ERC1B_REPRODUCTION_REPORT.json'))
+          print('STATUS:', p['status'])
+          print('EVIDENCE_CLASS:', p['evidence_class'])
+          print('SOURCE_REVISION:', p['source_revision'])
+          print('REPLAY_EXACT:', p['replay_exact'])
+          print('OPACITY_PROVENANCE:', p['opacity_provenance_ok'])
+          print('SCIENTIFIC_TOP1:', p['scientific']['top1_count'], '/', p['scientific']['n'])
+          print('SCIENTIFIC_TOP3:', p['scientific']['top3_count'], '/', p['scientific']['n'])
+          print('BY_SYSTEM:', p['scientific']['by_system'])
+          print('DISAGREEMENTS:', p['scientific']['disagreements'])
+          print('PREDICTION_SEAL_SHA256:', p['prediction_seal_sha256'])
+          print('RECORD_SHA256:', p['record_sha256'])
+          PY
+      - name: Preserve reproduction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC1B_REPRODUCTION_EVIDENCE
+          if-no-files-found: warn
+          path: |
+            /tmp/erc1b-run/ERC1B_REPRODUCTION_REPORT.json
+            /tmp/erc1b-run/PREDICTIONS_LIVE.json
+            /tmp/erc1b-run/PREDICTIONS_REPLAY.json
+            /tmp/erc1b-run/STAGE_STDOUT.txt
+            /tmp/erc1b-run/LIVE_STDOUT.txt
+            /tmp/erc1b-run/REPLAY_STDOUT.txt
+            /tmp/erc1b-run/SCORE_STDOUT.txt
+            /tmp/erc1b-run/staged/STAGING_MANIFEST.json

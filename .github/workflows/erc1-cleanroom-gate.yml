@@ -1,0 +1,69 @@
+name: ERC-1B Clean-Room Gate
+
+on:
+  pull_request:
+    branches: [main, erc1-mco04-cleanroom]
+    paths:
+      - 'docs/ERC1-MCO04-CLEANROOM-REPRODUCTION.md'
+      - 'docs/ERC1B-MCO04-VERIFIED-DATA-BINDING.md'
+      - 'experiments/erc1/**'
+      - 'tests/test_erc1_cleanroom.py'
+      - '.github/workflows/erc1-cleanroom-gate.yml'
+      - '.github/workflows/erc1-full-reproduction.yml'
+  workflow_dispatch:
+
+jobs:
+  pre-data-gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install historical mechanical dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==2.4.6 pandas==3.0.2 pyarrow==25.0.1 pytest
+      - name: Compile clean-room implementation
+        run: |
+          python -m py_compile \
+            experiments/erc1/stage.py \
+            experiments/erc1/compiler.py \
+            experiments/erc1/score.py \
+            experiments/erc1/download_lossless_repack.py \
+            experiments/erc1/freeze_candidate.py
+      - name: Assert ERC-1B compiler is byte-identical to qualified ERC-1 compiler
+        run: |
+          expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
+          actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
+          echo "expected=$expected"
+          echo "actual=$actual"
+          test "$actual" = "$expected"
+      - name: Run clean-room regressions and implementation firewall
+        run: python -m pytest -q tests/test_erc1_cleanroom.py
+      - name: Assert compiler has no scorer or original-runner access
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          text=Path('experiments/erc1/compiler.py').read_text()
+          forbidden=('run_mco04','test_mco04','scorer_only','labels.json','source_case','root_cause_service\"')
+          bad=[x for x in forbidden if x in text]
+          if bad:
+              raise SystemExit(f'forbidden compiler references: {bad}')
+          print('ERC1B_COMPILER_FIREWALL_PASS')
+          PY
+      - name: Emit implementation freeze candidate before real-data run
+        run: |
+          python -m experiments.erc1.freeze_candidate --output /tmp/ERC1B_FREEZE_CANDIDATE.json \
+            | tee /tmp/ERC1B_FREEZE_CANDIDATE_STDOUT.txt
+      - name: Preserve freeze candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC1B_FREEZE_CANDIDATE
+          path: |
+            /tmp/ERC1B_FREEZE_CANDIDATE.json
+            /tmp/ERC1B_FREEZE_CANDIDATE_STDOUT.txt
