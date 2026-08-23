@@ -1,0 +1,56 @@
+name: SEM-1 Measurement Gate
+
+on:
+  push:
+    branches:
+      - sem1-measurement-qualified-semantic-control
+    paths:
+      - 'experiments/sem1/**'
+      - 'tests/test_sem1_measurement_adapter.py'
+      - '.github/workflows/sem1-measurement.yml'
+  pull_request:
+    paths:
+      - 'experiments/sem1/**'
+      - 'tests/test_sem1_measurement_adapter.py'
+      - '.github/workflows/sem1-measurement.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  measurement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Compile SEM-1 measurement layer
+        run: python -m py_compile experiments/sem1/measurement_adapter.py experiments/sem1/qualify_measurement_adapter.py
+      - name: Run measurement adapter regressions
+        run: pytest -q tests/test_sem1_measurement_adapter.py
+      - name: Run public non-semantic measurement qualification
+        run: python -m experiments.sem1.qualify_measurement_adapter --output /tmp/SEM1_MEASUREMENT_QUALIFICATION.json
+      - name: Verify pre-science boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = json.load(open('/tmp/SEM1_MEASUREMENT_QUALIFICATION.json'))
+          assert p['status'] == 'SEM1_MEASUREMENT_QUALIFICATION_PASS'
+          assert p['scientific_semantic_content'] is False
+          assert p['scientific_model_calls'] == 0
+          assert p['positive']['n'] == 72
+          assert p['negative']['n'] == 72
+          assert p['positive']['rate'] == 1.0
+          assert p['negative']['rate'] == 1.0
+
+          root = Path('experiments/sem1')
+          names = {x.name.lower() for x in root.iterdir() if x.is_file()}
+          forbidden = [name for name in names if any(token in name for token in ('gold', 'authorization', 'run_sem1', 'generate_sem1'))]
+          assert not forbidden, forbidden
+          print('SEM-1 pre-science measurement gate PASS')
+          PY
