@@ -43,6 +43,7 @@ class TE0EcologyTests(unittest.TestCase):
         self.assertIn("ts_strip", names)
         self.assertIn("ts_lower", names)
         self.assertIn("ts_build_lookup", names)
+        self.assertIn("ts_build_lookup_canonical", names)
 
     def test_composer_penalizes_complex_equal_score_recipe(self):
         reg = Registry()
@@ -58,7 +59,7 @@ class TE0EcologyTests(unittest.TestCase):
     def test_nullsmith_makes_simple_baselines_explicit(self):
         cases = [Case("a", 1, 0), Case("b", 2, 0), Case("c", 3, 1)]
         nulls = NullSmith.constant_null(cases)
-        self.assertEqual(nulls[0].score, 2 / 3)
+        self.assertAlmostEqual(nulls[0].score, 2 / 3)
         self.assertEqual(NullSmith.identity_null(cases).score, 0.0)
 
     def test_ablator_removes_credit_when_component_is_unnecessary(self):
