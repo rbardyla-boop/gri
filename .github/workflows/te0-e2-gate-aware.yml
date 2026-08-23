@@ -1,0 +1,70 @@
+name: TE0-E2 Gate-Aware Composer
+
+on:
+  push:
+    branches: [te0-e2-gate-aware-composer]
+  pull_request:
+    branches: [te0-e1-interface-repair]
+
+jobs:
+  pre-execution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install tests
+        run: python -m pip install -e '.[test]'
+      - name: Compile E2
+        run: python -m compileall -q experiments/forge_e2
+      - name: Run Forge E1 E2 regressions
+        run: |
+          pytest \
+            tests/test_forge.py \
+            tests/test_forge_ecology.py \
+            tests/test_forge_model_broker.py \
+            tests/test_forge_controller.py \
+            tests/test_forge_project_tools.py \
+            tests/test_te0_e1_interface.py \
+            tests/test_te0_e1_development.py \
+            tests/test_te0_e2_gate_aware.py \
+            -q
+      - name: Verify E2 fresh deterministic public pools
+        run: |
+          rm -rf /tmp/te0-e2 && mkdir -p /tmp/te0-e2/a /tmp/te0-e2/b
+          for d in a b; do
+            python -B -m experiments.forge_e2.generate_te0_e2 \
+              --seed-text TE0-E2-PUBLIC-BUILD-v1 --count 24 --prefix B2 \
+              --output /tmp/te0-e2/$d/build.jsonl
+            python -B -m experiments.forge_e2.generate_te0_e2 \
+              --seed-text TE0-E2-PUBLIC-DEV-v1 --count 24 --prefix D2 \
+              --output /tmp/te0-e2/$d/dev.jsonl
+          done
+          cmp /tmp/te0-e2/a/build.jsonl /tmp/te0-e2/b/build.jsonl
+          cmp /tmp/te0-e2/a/dev.jsonl /tmp/te0-e2/b/dev.jsonl
+          ! cmp -s /tmp/te0-e2/a/build.jsonl /tmp/te0-e2/a/dev.jsonl
+          sha256sum /tmp/te0-e2/a/build.jsonl /tmp/te0-e2/a/dev.jsonl
+      - name: Verify development surfaces expose no Vault
+        run: |
+          python -B -m experiments.forge_e2.collect_te0_e2 --help > /tmp/e2-collect.txt
+          python -B -m experiments.forge_e2.develop_te0_e2 --help > /tmp/e2-dev.txt
+          ! grep -Eiq -- '(^|[[:space:]])--vault([[:space:]=]|$)' /tmp/e2-collect.txt /tmp/e2-dev.txt
+          bash -n experiments/forge_e2/run_local_dev.sh
+          ! grep -q 'judge_te0' experiments/forge_e2/run_local_dev.sh
+          ! grep -q 'authorize_te0' experiments/forge_e2/run_local_dev.sh
+          ! grep -q 'vault-seed-file' experiments/forge_e2/run_local_dev.sh
+          grep -q 'vault_created.*False' experiments/forge_e2/run_local_dev.sh
+          grep -q 'TE0_E2_HEAD_MISMATCH' experiments/forge_e2/run_local_dev.sh
+          grep -q 'FORGE_SANDBOX_BACKEND:-auto' experiments/forge_e2/run_local_dev.sh
+      - name: Verify E2 extension remains pure and fail-closed
+        run: |
+          python - <<'PY'
+          from experiments.forge_e2.interface_tools import GateAwareInterfaceToolFactory
+          assert GateAwareInterfaceToolFactory.EXTRA_E2_OPS == {'canonicalize_label_evidence_schema'}
+          print('E2 extra operation is narrow and declarative')
+          PY
+      - name: Preserve predecessor and project terminal boundaries
+        run: |
+          grep -q 'TE0_E1_INTERFACE_REPAIR_FAIL' experiments/forge_e2/TE0_E2_PROTOCOL.md
+          pytest tests/test_project_terminal_verdict.py -q
