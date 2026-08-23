@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "purpose": "Compare the four DEV-perfect depth-2 interface recipes under deterministic TE0 stress fixtures.",
+  "scientific_content": false,
+  "vault_used": false,
+  "recipes": [
+    ["ollama_exp_plain_s0", "strict_extract"],
+    ["ollama_min_json_s0", "strict_extract"],
+    ["ollama_exp_json_s1", "strict_extract"],
+    ["ollama_exp_json_s0", "strict_extract"]
+  ]
+}
