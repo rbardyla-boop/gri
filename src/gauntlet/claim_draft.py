@@ -525,7 +525,7 @@ def materialize_approved_markdown_claim(
             lines.append(
                 "  { source = \"evidence\", path = "
                 + _toml_literal(f"comparison.metrics.{name}.improvement")
-                + ", op = \"gt\", value = "
+                + ", op = \"gte\", value = "
                 + _toml_literal(float(row["minimum_improvement"]))
                 + " },"
             )
