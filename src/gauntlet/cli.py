@@ -7,6 +7,7 @@ from typing import Any, Sequence
 
 from . import __version__
 from .adapters.inspect_ai import audit_inspect_log
+from .autopsy import autopsy_claim
 from .core import audit_result, create_freeze, replay_run, run_frozen, verify_freeze, verdict_frozen
 
 
@@ -17,7 +18,7 @@ def _emit(value: Any) -> None:
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="gauntlet",
-        description="Evaluation-integrity firewall: freeze, run, replay, and mechanically audit AI evaluations.",
+        description="Evaluation-integrity and mechanism-credit tooling for AI evaluations.",
     )
     parser.add_argument("--version", action="version", version=f"gauntlet {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -44,6 +45,12 @@ def _parser() -> argparse.ArgumentParser:
     )
     audit.add_argument("spec")
     audit.add_argument("result")
+
+    autopsy = sub.add_parser(
+        "autopsy",
+        help="apply generic mechanism-credit signals to existing evidence and emit the strongest surviving claim",
+    )
+    autopsy.add_argument("spec")
 
     inspect_audit = sub.add_parser(
         "audit-inspect",
@@ -84,6 +91,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0 if value["pass"] else 1
         if args.command == "audit-result":
             value = audit_result(Path(args.spec), Path(args.result))
+            _emit(value)
+            return 0
+        if args.command == "autopsy":
+            value = autopsy_claim(Path(args.spec))
             _emit(value)
             return 0
         if args.command == "audit-inspect":
