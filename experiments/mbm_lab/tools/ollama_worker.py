@@ -11,10 +11,18 @@ def system(style: str) -> str:
         return "Complete the synthetic task. Return only the requested JSON, with no explanation."
     if style == "explicit":
         return (
-            "This is a synthetic instruction-following and serialization task. The user prompt contains all information needed. "
-            "Do not infer extra facts. Return only JSON representing the requested answer, with no markdown or commentary."
+            "This is a synthetic instruction-following and serialization task. The user prompt contains all authoritative task information. "
+            "Optional upstream tool context may be supplied separately. Do not invent facts. Return only JSON representing the requested answer, with no markdown or commentary."
         )
     raise ValueError(style)
+
+
+def upstream_context(state: dict) -> dict:
+    allowed = {}
+    for key in ("retrieved", "memory_history", "parsed_candidates", "prediction", "consensus_count", "candidate_count"):
+        if key in state:
+            allowed[key] = state[key]
+    return allowed
 
 
 def main() -> None:
@@ -29,12 +37,16 @@ def main() -> None:
     env = json.load(sys.stdin)
     fixture = env["fixture"]
     state = dict(env.get("state") or {})
+    context = upstream_context(state)
+    user = fixture["prompt"]
+    if context:
+        user += "\n\nOPTIONAL UPSTREAM TOOL CONTEXT:\n" + json.dumps(context, sort_keys=True)
     body = {
         "model": args.model,
         "stream": False,
         "messages": [
             {"role": "system", "content": system(args.style)},
-            {"role": "user", "content": fixture["prompt"]},
+            {"role": "user", "content": user},
         ],
         "options": {"temperature": 0, "seed": 20260823 + args.seed_offset, "num_predict": 512},
     }
