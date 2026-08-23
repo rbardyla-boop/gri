@@ -1,6 +1,6 @@
 # SEM-1 — Measurement-Qualified Semantic Control
 
-Status: **PRE-SCIENCE DESIGN DRAFT**  
+Status: **PRE-SCIENCE INSTRUMENT CANDIDATE**  
 Scientific model calls under SEM-1: **0**
 
 ## 1. Purpose
@@ -75,18 +75,19 @@ Evidence is scientifically a set.
 
 ### 4.2 Frozen equivalent representations
 
-Before scientific freeze, the adapter may be designed to accept only a finite, explicitly documented family of representations that preserve the same information, including:
+The adapter accepts only a finite, explicitly documented family of representations that preserve the same information, including:
 
 - one balanced JSON object surrounded by non-JSON prose;
 - a direct proposition mapping or one top-level `predictions` wrapper;
 - evidence represented as a list/multiset, canonicalized by deduplication and ordering;
 - evidence represented as boolean membership over supplied statement IDs;
-- predeclared spelling aliases for evidence-container field names, including snake_case/camelCase variants established during pre-science engineering;
+- predeclared spelling aliases for evidence-container field names, including `evidence`, `evidenceArray`, `evidenceMultiset`, and `evidence_multiset`;
+- nested-label representation where the unique top-level nested label is registered;
 - label whitespace/case normalization only when it maps uniquely to one registered label.
 
-If multiple explicit fields encode different evidence sets, the adapter must fail closed as `MEASUREMENT_UNRESOLVED_CONFLICT`.
+If multiple explicit fields encode different evidence sets, the adapter fails closed as unresolved.
 
-If a label/evidence value is absent, foreign, ambiguous, or not recoverable without guessing, the adapter must fail closed.
+If a label/evidence value is absent, foreign, ambiguous, or not recoverable without guessing, the adapter fails closed.
 
 ### 4.3 Raw-first persistence
 
@@ -118,7 +119,7 @@ This prevents the adapter from hiding candidate failure while allowing a scienti
 
 ## 6. Measurement qualification before semantic freeze
 
-The measurement adapter must pass a non-semantic public qualification suite before SEM-1 cases/gold are frozen.
+The measurement adapter passed a public non-semantic qualification suite before semantic-instrument construction proceeded.
 
 Qualification content contains only synthetic serialization/mapping fixtures, not SEM-1 semantic benchmark material.
 
@@ -133,13 +134,21 @@ Required qualification gates:
 - no model/network/subprocess/tool call from the adapter;
 - raw-input hash preserved in every qualification record.
 
-Forge may be used during pre-science adapter development on BUILD/DEV serialization fixtures. Forge is not part of the frozen scientific scorer and may not modify the adapter after SEM-1 scientific freeze.
+Observed qualification on the current measurement grammar:
+
+- positive registered forms: `72/72`;
+- negative/conflict forms: `72/72`;
+- deterministic fixture/result SHA-256: `c13a5ae9c15a97016ee7c4b6847096c19105d8a971154250cdba0d7535726b58`;
+- qualification record SHA-256: `01680b7dc1eedc5a59ea6afa408981b2be978728fd18dd9438ecab5cb508bde1`;
+- scientific model calls: `0`.
+
+Forge is not part of the frozen scientific scorer and may not modify the adapter after SEM-1 scientific freeze.
 
 ## 7. Fresh SEM-1 instrument
 
 SEM-1 does not reuse SEM-0R gold or exact semantic cases.
 
-Target deterministic construction:
+The current deterministic candidate contains:
 
 - 96 full-context cases;
 - 48 controlled A/B pairs;
@@ -151,20 +160,33 @@ Target deterministic construction:
 - 24 exact replay cases;
 - 24 context-ablation cases.
 
-Each semantic family contributes 6 controlled pairs / 12 full-context cases.
+Each semantic family contributes 6 controlled pairs / 12 full-context cases, with 3 REVISION and 3 INVARIANCE pairs.
 
-Families remain conceptually aligned with the semantic-control construct but must use fresh worlds, names, nonce terms, surface forms, distractors, and proposition sets:
+Families are conceptually aligned with the semantic-control construct but use fresh worlds, names, nonce terms, surface forms, distractors, and proposition sets:
 
-1. scalar implicature and cancellation;
-2. presupposition/factivity;
-3. release-context reversal;
+1. scalar scope/implicature and cancellation;
+2. factive presupposition;
+3. exception/universal scope;
 4. invented temporal worlds;
 5. deixis/reference;
 6. negation/quantification;
 7. invented lexical meaning;
 8. abductive restraint / converse-fallacy traps.
 
-Generator construction must ensure no fixed one-of-each-label shortcut and must publish label-cardinality-pattern statistics before freeze.
+The first structural candidate was rejected pre-science because one six-label cardinality pattern appeared in 21/96 cases. The anti-shortcut cap was not weakened. Only non-focus distractors were deterministically diversified. The current candidate has:
+
+- 14 distinct label-cardinality patterns;
+- maximum pattern frequency: 12;
+- one-of-each-label cases: 0.
+
+Current structural bindings:
+
+- cases record SHA-256: `271c8faa410cc9fdc95817f99076270c88f8fd5ad3cc485c02889c9b10ac6268`;
+- gold record SHA-256: `355e34e7da416b4ee9b13e4da9f69a94eb52d2f43630e883c8c209eed0337659`;
+- replay record SHA-256: `4c5efafba89df465b8ca505839e90eb61c866a2af25d628b1978141ac5780c43`;
+- context-ablation record SHA-256: `b0f6972835cf7a7d9f783a3928b8f345af3fe13b428120c8b6b48afc5bba62be`.
+
+These are pre-freeze candidate bindings, not yet scientific authority.
 
 ## 8. Model-visible boundary
 
@@ -186,7 +208,7 @@ The candidate must not receive:
 - scorer state;
 - hidden semantic-generation metadata.
 
-The model-visible projection is frozen and hash-bound.
+The model-visible projection is frozen and hash-bound only at the later instrument-freeze transition.
 
 ## 9. Candidate system
 
@@ -212,14 +234,14 @@ The verdict is conjunctive.
 
 ## 11. Planned scientific gates
 
-The exact gates remain subject to pre-science power/baseline review, but no gate may be changed after candidate scientific execution begins.
+The exact gates remain subject to the pre-science baseline review below, but no gate may be changed after candidate scientific execution begins.
 
 Current preregistration target:
 
 | Metric | Gate |
 |---|---:|
 | Decision accuracy | >= 0.78 |
-| Six-class macro-F1 | >= 0.72 |
+| Six-class macro-F1 | >= 0.72 and >= strongest eligible baseline + 0.15 |
 | Revision-pair accuracy | >= 0.78 |
 | Invariance-pair accuracy | >= 0.78 |
 | UNKNOWN overclaim rate | <= 0.18 |
@@ -229,7 +251,6 @@ Current preregistration target:
 | Scalar-pragmatics accuracy | >= 0.75 |
 | Presupposition accuracy | >= 0.75 |
 | Abductive-restraint focus accuracy | >= 0.75 |
-| Margin over strongest frozen transparent baseline | >= 0.15 |
 | Matched context-dependency gap | >= 0.20 |
 | Exact semantic replay | = 1.00 |
 | Measurement resolution rate | >= 0.98 |
@@ -237,21 +258,45 @@ Current preregistration target:
 
 The resolution gate is additive; unresolved predictions are already penalized in the scientific metrics.
 
-## 12. Baselines
+## 12. Baselines and shortcut kill gates
 
-Transparent baselines are rebuilt on the exact fresh SEM-1 instrument before candidate execution.
+All baseline rules in this section are fixed **before** running the SEM-1 baseline script on the finalized candidate bytes.
 
-At minimum:
+### 12.1 Margin-eligible transparent baselines
 
-- always-UNKNOWN;
-- exact-overlap heuristic;
-- lexical/surface classifier under pair-aware held-out evaluation;
-- stronger hand-coded symbolic surface comparator;
-- context-free/proposition-only control.
+These comparators may define the candidate's `+0.15` macro-F1 margin because they do not contain hand-written task-specific semantic rules:
 
-The strongest eligible frozen comparator establishes the margin gate.
+- each constant-label baseline;
+- exact proposition/context text overlap;
+- opaque-ID hash and presentation-position controls;
+- proposition-only shallow lexical classifier evaluated leave-one-pair-out;
+- context+proposition shallow lexical classifier evaluated leave-one-pair-out.
 
-No historical SEM-0R baseline value is silently reused.
+For learned shallow baselines, hidden pair IDs may be used **only** to create held-out folds. Features may use only model-visible proposition/context text and generic length/overlap/token features. The held-out pair's gold is never used for fitting that fold.
+
+The strongest margin-eligible macro-F1 defines:
+
+`effective_candidate_macro_f1_floor = max(0.72, strongest_margin_eligible_macro_f1 + 0.15)`
+
+### 12.2 Pre-science shortcut kill conditions
+
+The instrument candidate is rejected before freeze if any of these occurs:
+
+- proposition-only pair-held-out lexical macro-F1 `>= 0.50`;
+- context+proposition pair-held-out lexical macro-F1 `>= 0.65`;
+- any opaque-ID/presentation-position control macro-F1 `>= 0.35`.
+
+These gates test whether labels can be recovered too easily from benchmark construction artifacts rather than semantic use of the supplied content.
+
+### 12.3 Symbolic surface red team
+
+A stronger transparent hand-coded comparator may use generic, model-visible semantic/syntactic cues such as exact assertion overlap, overt negation, factive wording, scalar wording, numeric relations, definitions, and explicit conditionals.
+
+It may **not** inspect family, pair kind, A/B side, focus metadata, case ID semantics, renderer, or gold at prediction time.
+
+Because this comparator intentionally encodes partial semantic rules, it is diagnostic rather than margin-eligible. If its macro-F1 is `>= 0.80`, the instrument candidate is rejected as too mechanically solvable by the registered surface rule set before freeze.
+
+No historical SEM-0R baseline value is reused.
 
 ## 13. Context dependency
 
@@ -286,11 +331,12 @@ A scientific execution requires, in order:
 1. exact-head green CI;
 2. measurement-adapter qualification PASS;
 3. deterministic instrument generation and audit;
-4. frozen model-visible projection;
-5. frozen fresh gold and baseline report;
-6. explicit SEM-1 instrument manifest/freeze;
-7. exact model/runtime preflight PASS;
-8. one-run authorization binding all above hashes.
+4. shortcut/baseline audit PASS;
+5. frozen model-visible projection;
+6. frozen fresh gold and baseline report;
+7. explicit SEM-1 instrument manifest/freeze;
+8. exact model/runtime preflight PASS;
+9. one-run authorization binding all above hashes.
 
 Authorization is consumed before scientific model request #1.
 
@@ -360,12 +406,17 @@ No SEM-1 result alone establishes:
 At this commit:
 
 - SEM-1 scientific model calls: 0;
-- SEM-1 cases: not generated;
-- SEM-1 gold: does not exist;
-- SEM-1 adapter: not implemented;
-- SEM-1 measurement qualification: not run;
-- SEM-1 instrument: not frozen;
+- measurement qualification: PASS, 72/72 positive and 72/72 negative;
+- fresh semantic candidate: structurally generated and audited, not frozen;
+- candidate full-context cases: 96;
+- candidate gold: generated deterministically for pre-science audit only, not frozen/opened by any candidate execution;
+- replay subset: 24;
+- context-ablation subset: 24;
+- structural gate: PASS on exact candidate bytes;
+- shortcut/baseline audit: NOT RUN on the finalized candidate;
+- model preflight: NOT RUN for SEM-1;
+- SEM-1 instrument: NOT FROZEN;
 - SEM-1 authorization: does not exist;
 - semantic verdict: NONE.
 
-The next task is to implement and adversarially qualify the measurement adapter using non-semantic serialization fixtures before any SEM-1 semantic generator is frozen.
+The next gate is the transparent shortcut/baseline audit under the thresholds in Section 12. No candidate-model call is authorized before that audit passes and the remaining pre-freeze review is complete.
