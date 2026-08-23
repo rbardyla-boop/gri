@@ -5,7 +5,7 @@ on:
     branches: [erc2a-damadics-structural-transfer, erc1b-mco04-verified-data-binding, main]
     paths:
       - 'docs/ERC2AR-DAMADICS-NONOVERLAP-TRANSFER.md'
-      - 'experiments/erc2ar/**'
+      - 'experiments/erc2ar/probe_official_telemetry_archives.py'
       - '.github/workflows/erc2ar-source-inventory.yml'
   workflow_dispatch:
 
