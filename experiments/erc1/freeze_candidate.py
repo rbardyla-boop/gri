@@ -12,7 +12,9 @@ FILES = (
     "experiments/erc1/score.py",
     "experiments/erc1/download_lossless_repack.py",
     "experiments/erc1/run_lossless_repack.sh",
+    "experiments/erc1/freeze_candidate.py",
     "tests/test_erc1_cleanroom.py",
+    ".github/workflows/erc1-cleanroom-gate.yml",
     ".github/workflows/erc1-full-reproduction.yml",
 )
 
@@ -77,7 +79,10 @@ def verify(repo: Path, freeze: Path) -> dict:
     ):
         if bound.get(field) != candidate.get(field):
             raise ValueError(f"freeze binding mismatch: {field}")
-    return {"status": "ERC1_IMPLEMENTATION_FREEZE_VERIFIED", "freeze_record_sha256": sha256_file(freeze)}
+    return {
+        "status": "ERC1_IMPLEMENTATION_FREEZE_VERIFIED",
+        "freeze_record_sha256": sha256_file(freeze),
+    }
 
 
 def main() -> None:
@@ -92,7 +97,9 @@ def main() -> None:
     else:
         result = build(repo)
         if args.output:
-            args.output.write_text(json.dumps(result, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+            args.output.write_text(
+                json.dumps(result, sort_keys=True, indent=2) + "\n", encoding="utf-8"
+            )
     print(json.dumps(result, sort_keys=True, indent=2))
 
 
