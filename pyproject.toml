@@ -9,6 +9,9 @@ description = "Geometric Recurrent Intelligence research scaffold and WORLD-0 be
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
 
+[project.scripts]
+gauntlet = "gauntlet.cli:main"
+
 [project.optional-dependencies]
 test = ["pytest>=8"]
 model = ["torch>=2.0"]
@@ -17,6 +20,9 @@ incident = [
     "pyarrow==25.0.1",
     "scikit-learn==1.8.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "."]
