@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 17,
+    "eval_duration_ns": 242785267,
+    "load_duration_ns": 168977215,
+    "prompt_eval_count": 194,
+    "prompt_eval_duration_ns": 124988723,
+    "total_duration_ns": 595863697,
+    "wall_time_seconds": 0.5970639589941129
+  },
+  "cache_hit": false,
+  "call_id": "iterative-mco02_n100_s2601-q_387df4b1ec273d62-step-0__3277194c8bb87c06",
+  "key": "iterative-mco02_n100_s2601-q_387df4b1ec273d62-step-0",
+  "purpose": "acquisition",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "You control demand-driven retrieval over an external structured store. Use only the question and records currently visible. Current truth rules: superseded records are inactive; source priority is AUTHORITY over CURATED over UNVERIFIED, then later event time; follow renames before upstream requirements. If another entity must be looked up, return exactly NEED|entity_id. Once a threshold is visible, return exactly ANSWER|terminal_entity|integer_threshold|YES_or_NO|comma_separated_ordered_record_ids. Do not guess an answer without complete evidence.",
+        "role": "system"
+      },
+      {
+        "content": "QUESTION\nEntity e_3e140db6e2909b5a is deployed at -6 C. Starting from that entity, follow its current name changes and upstream requirements until a temperature threshold is reached. Identify the terminal entity, threshold, whether inspection is required, and the ordered provenance record IDs.\n\nEVIDENCE\n(no evidence currently visible)",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 160,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "3277194c8bb87c06bf0e666350d595725505559edfacc7971864bb458f43daf9",
+  "response": {
+    "created_at": "2026-08-22T12:35:29.313912646Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 17,
+    "eval_duration": 242785267,
+    "load_duration": 168977215,
+    "message": {
+      "content": "NEED|e_3e140db6e2909b5a",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 194,
+    "prompt_eval_duration": 124988723,
+    "total_duration": 595863697
+  },
+  "response_content_sha256": "071ff64e9b1941cd44eb3d2cf1022562921c4e612a4562d25ca058848da33100",
+  "schema_version": 1
+}

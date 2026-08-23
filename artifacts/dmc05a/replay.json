@@ -1,0 +1,13 @@
+{
+  "dmc04b_seed1337": {
+    "first": "870ece611ace9bd30cc4169d9423d679546d6316013ea9c192e3ddddfbef8017",
+    "pass": true,
+    "second": "870ece611ace9bd30cc4169d9423d679546d6316013ea9c192e3ddddfbef8017"
+  },
+  "exact_structured": {
+    "first": "720c3778b31f25806cbb930bdaab01ae03a582b739a5418729f39cf6f627949d",
+    "pass": true,
+    "second": "720c3778b31f25806cbb930bdaab01ae03a582b739a5418729f39cf6f627949d"
+  },
+  "pass": true
+}

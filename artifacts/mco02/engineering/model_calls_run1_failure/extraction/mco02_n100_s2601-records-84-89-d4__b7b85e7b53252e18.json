@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 12,
+    "eval_duration_ns": 172457544,
+    "load_duration_ns": 145279552,
+    "prompt_eval_count": 606,
+    "prompt_eval_duration_ns": 31530215,
+    "total_duration_ns": 384914562,
+    "wall_time_seconds": 0.38621234497986734
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-84-89-d4__b7b85e7b53252e18",
+  "key": "mco02_n100_s2601-records-84-89-d4",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_31eeffeaba0684cd; source AUTHORITY; event 84] At event time 84, During a routine archive review, the ledger states: At -2 C, entity d_e6c99f8b4c269fc2 reaches its documented safety floor. This was recorded alongside unrelated scheduling notes.\n2. [Record r_886f25dfcf7d2a39; source AUTHORITY; event 85] At event time 85, the ledger states: The minimum safe temperature recorded for entity d_e3305ed6b0e04f8a is -39 C. No other part of the archival narrative changed this statement.\n3. [Record r_834a11f5ac6cbe83; source CURATED; event 86] At event time 86, the ledger states: For entity e_4b3e84aa52482e1f, staff now use the name entity e_a4096d174faa3209. No other part of the archival narrative changed this statement.\n4. [Record r_0f0ad7dc7cb34275; source AUTHORITY; event 87] At event time 87, the ledger states: For entity d_dbf43e500bb163e5, the supporting requirement is entity d_b13fce62a61b4e24.\n5. [Record r_ad566c4b8650d129; source AUTHORITY; event 88] At event time 88, After an unrelated maintenance discussion, the ledger states: Entity d_20d293fc2bb60807 is not rated for operation below -38 C. No other part of the archival narrative changed this statement.\n6. [Record r_feb577192485840e; source UNVERIFIED; event 89] At event time 89, the ledger states: For entity d_718507ae1e89edc8, the supporting requirement is entity d_4f20c8315b5a3985. The filing also mentioned routine paperwork with no operational consequence.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "b7b85e7b53252e180fdfae4c3bbd6d2de3fb5aa305a5ab1e66804a65dd0d3dd5",
+  "response": {
+    "created_at": "2026-08-22T12:31:07.367268066Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 12,
+    "eval_duration": 172457544,
+    "load_duration": 145279552,
+    "message": {
+      "content": "D\nT\nR\nD\nT\nD",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 606,
+    "prompt_eval_duration": 31530215,
+    "total_duration": 384914562
+  },
+  "response_content_sha256": "e489e9e20507801906656fc552f657120d4357b972a3921567bd7cb7b2dec25f",
+  "schema_version": 1
+}

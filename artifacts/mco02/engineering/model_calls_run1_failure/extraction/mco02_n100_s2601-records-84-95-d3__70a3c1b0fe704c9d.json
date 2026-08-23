@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 22,
+    "eval_duration_ns": 329871443,
+    "load_duration_ns": 168880286,
+    "prompt_eval_count": 1035,
+    "prompt_eval_duration_ns": 553440454,
+    "total_duration_ns": 1124207071,
+    "wall_time_seconds": 1.1255766719114035
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-84-95-d3__70a3c1b0fe704c9d",
+  "key": "mco02_n100_s2601-records-84-95-d3",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_31eeffeaba0684cd; source AUTHORITY; event 84] At event time 84, During a routine archive review, the ledger states: At -2 C, entity d_e6c99f8b4c269fc2 reaches its documented safety floor. This was recorded alongside unrelated scheduling notes.\n2. [Record r_886f25dfcf7d2a39; source AUTHORITY; event 85] At event time 85, the ledger states: The minimum safe temperature recorded for entity d_e3305ed6b0e04f8a is -39 C. No other part of the archival narrative changed this statement.\n3. [Record r_834a11f5ac6cbe83; source CURATED; event 86] At event time 86, the ledger states: For entity e_4b3e84aa52482e1f, staff now use the name entity e_a4096d174faa3209. No other part of the archival narrative changed this statement.\n4. [Record r_0f0ad7dc7cb34275; source AUTHORITY; event 87] At event time 87, the ledger states: For entity d_dbf43e500bb163e5, the supporting requirement is entity d_b13fce62a61b4e24.\n5. [Record r_ad566c4b8650d129; source AUTHORITY; event 88] At event time 88, After an unrelated maintenance discussion, the ledger states: Entity d_20d293fc2bb60807 is not rated for operation below -38 C. No other part of the archival narrative changed this statement.\n6. [Record r_feb577192485840e; source UNVERIFIED; event 89] At event time 89, the ledger states: For entity d_718507ae1e89edc8, the supporting requirement is entity d_4f20c8315b5a3985. The filing also mentioned routine paperwork with no operational consequence.\n7. [Record r_7f256b5579b55bdb; source AUTHORITY; event 90] At event time 90, After an unrelated maintenance discussion, the ledger states: At -25 C, entity e_9422991b193a78ef reaches its documented safety floor. No other part of the archival narrative changed this statement.\n8. [Record r_18389010bed35ce3; source AUTHORITY; event 91] At event time 91, After an unrelated maintenance discussion, the ledger states: At 2 C, entity e_8be78ec4a2cb3a45 reaches its documented safety floor.\n9. [Record r_b2110fe88641edde; source AUTHORITY; event 92] At event time 92, the ledger states: For entity d_86ce9927371d6bd9, the supporting requirement is entity d_8ed94578255ee0b5. The filing also mentioned routine paperwork with no operational consequence.\n10. [Record r_4aaeb661933e9472; source AUTHORITY; event 93] At event time 93, After an unrelated maintenance discussion, the ledger states: For entity d_133645a4fe8fe4f4, staff now use the name entity d_5b081eecfd9363bb. This was recorded alongside unrelated scheduling notes.\n11. [Record r_b54b6a199e781f94; source CURATED; event 94] At event time 94, In the ordinary course of plant reporting, the ledger states: For entity e_b07bd63f0266c767, the supporting requirement is entity e_a3dc79cd56ad6f97.\n12. [Record r_15e82dcaa1811314; source CURATED; event 95] At event time 95, the ledger states: Entity d_e44682139dbb5d4b relies on entity d_4fa944e812c2622a. This was recorded alongside unrelated scheduling notes.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 36,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "70a3c1b0fe704c9db614dbc3b976d454577b1fcccb0a2c97dff05dbbe3c5d14c",
+  "response": {
+    "created_at": "2026-08-22T12:31:06.979984888Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 22,
+    "eval_duration": 329871443,
+    "load_duration": 168880286,
+    "message": {
+      "content": "D\nT\nR\nD\nT\nD\nT\nD\nR\nD\nD",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 1035,
+    "prompt_eval_duration": 553440454,
+    "total_duration": 1124207071
+  },
+  "response_content_sha256": "2b0fc01c17dcf1b449a4af4ee142216045f2029966ab2075fe90ed9cb13cc73a",
+  "schema_version": 1
+}

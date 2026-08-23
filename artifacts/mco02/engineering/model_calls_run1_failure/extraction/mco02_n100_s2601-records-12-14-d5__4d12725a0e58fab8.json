@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 6,
+    "eval_duration_ns": 78516049,
+    "load_duration_ns": 176451346,
+    "prompt_eval_count": 418,
+    "prompt_eval_duration_ns": 31290038,
+    "total_duration_ns": 317827451,
+    "wall_time_seconds": 0.32036915596108884
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-12-14-d5__4d12725a0e58fab8",
+  "key": "mco02_n100_s2601-records-12-14-d5",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_86cde91742aa5b90; source CURATED; event 12] At event time 12, In the ordinary course of plant reporting, the ledger states: When entity e_c0c80e73458e3429 runs, it depends upon entity e_9422991b193a78ef. This was recorded alongside unrelated scheduling notes.\n2. [Record r_b352f850102eed30; source CURATED; event 13] At event time 13, In the ordinary course of plant reporting, the ledger states: The operations of entity e_4f0a5db1fc56cb2c draw on entity e_c0c80e73458e3429. The filing also mentioned routine paperwork with no operational consequence.\n3. [Record r_43121fbfec557390; source UNVERIFIED; event 14] At event time 14, During a routine archive review, the ledger states: Regarding entity d_ada2b811af3ef8ee, its upstream requirement is entity d_2c915f2d8138c3ad. No other part of the archival narrative changed this statement.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "4d12725a0e58fab83ae274de9ef60a261d5d5436400a36b4be3075bb1bf7029e",
+  "response": {
+    "created_at": "2026-08-22T12:30:52.211896498Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 6,
+    "eval_duration": 78516049,
+    "load_duration": 176451346,
+    "message": {
+      "content": "D\nD\nD",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 418,
+    "prompt_eval_duration": 31290038,
+    "total_duration": 317827451
+  },
+  "response_content_sha256": "306408709aeb5ee7ac2f372ddcbbafb2259dfa2cfedba48884c627351bf40730",
+  "schema_version": 1
+}

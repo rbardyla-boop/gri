@@ -1,0 +1,86 @@
+{
+  "accounting": {
+    "eval_count": 33,
+    "eval_duration_ns": 465134098,
+    "load_duration_ns": 169229476,
+    "prompt_eval_count": 314,
+    "prompt_eval_duration_ns": 160355324,
+    "total_duration_ns": 2095347938,
+    "wall_time_seconds": 2.097139919991605
+  },
+  "cache_hit": false,
+  "call_id": "q_387df4b1ec273d62__7b080364eff8f956",
+  "key": "q_387df4b1ec273d62",
+  "purpose": "final-schema-probe",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "failure_threshold": {
+          "type": "integer"
+        },
+        "path_record_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "ANSWER",
+            "UNKNOWN"
+          ],
+          "type": "string"
+        },
+        "terminal_entity": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "terminal_entity",
+        "failure_threshold",
+        "path_record_ids"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Answer only from supplied evidence. Resolve supersession, then source priority AUTHORITY over CURATED over UNVERIFIED, then later event. Follow renames before upstream requirements. The terminal_entity is the subject of the winning failure_threshold record. The failure_threshold is that record's integer object, not the deployment temperature. path_record_ids are the winning record IDs in traversal order. If any required path evidence is absent, use status UNKNOWN, terminal_entity UNKNOWN, failure_threshold 0, and an empty path. Return the required JSON schema.",
+        "role": "system"
+      },
+      {
+        "content": "QUESTION\nEntity e_3e140db6e2909b5a is deployed at -6 C. Starting from that entity, follow its current name changes and upstream requirements until a temperature threshold is reached. Identify the terminal entity, threshold, whether inspection is required, and the ordered provenance record IDs.\n\nEVIDENCE\n[Record r_18d1d005fe68c033; source CURATED; event 83] subject=e_3e140db6e2909b5a; relation=depends_on; object=e_1e746bfbcba30fcb; operation=correct; supersedes=r_5ada3d42f52ef597\n[Record r_07f6fbdf77ae343a; source AUTHORITY; event 23] subject=e_1e746bfbcba30fcb; relation=failure_threshold; object=-11; operation=assert; supersedes=None",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 192,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "7b080364eff8f95689ad51066efddd4a398b85f3c31d49c0a61e88e37b79bd33",
+  "response": {
+    "created_at": "2026-08-22T12:56:05.124504469Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 33,
+    "eval_duration": 465134098,
+    "load_duration": 169229476,
+    "message": {
+      "content": "{\n    \"status\": \"UNKNOWN\",\n    \"terminal_entity\": \"UNKNOWN\",\n    \"failure_threshold\": 0,\n    \"path_record_ids\": []\n}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 314,
+    "prompt_eval_duration": 160355324,
+    "total_duration": 2095347938
+  },
+  "response_content_sha256": "3957e674f6f42d079588dfc71042a4de54237ec905f57e94a7dc5ea2cf2e344e",
+  "schema_version": 1
+}

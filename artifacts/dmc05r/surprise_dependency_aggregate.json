@@ -1,0 +1,4305 @@
+{
+  "case_count_per_run": 24,
+  "status": "EXPLORATORY_NONTERMINAL",
+  "subset": "SURPRISE_DEPENDENCY",
+  "systems": {
+    "conventional_retrieval": {
+      "by_seed": {
+        "deterministic": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 5640204.0,
+              "mean": 2336448.875,
+              "min": 389244.0,
+              "p50": 1151059.0,
+              "p95": 5557743.0,
+              "std": 2058571.6857454085
+            },
+            "learned_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 5813592.0,
+              "mean": 2402283.2083333335,
+              "min": 453576.0,
+              "p50": 1196324.0,
+              "p95": 5683000.0,
+              "std": 2074846.27369423
+            },
+            "persistent_records": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "persistent_serialized_bytes": {
+              "max": 233377.0,
+              "mean": 106623.0,
+              "min": 28781.0,
+              "p50": 57711.0,
+              "p95": 233376.0,
+              "std": 90401.91526686073
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 173388.0,
+              "mean": 65834.33333333333,
+              "min": 29488.0,
+              "p50": 52090.0,
+              "p95": 129539.0,
+              "std": 35550.47671582228
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_accuracy": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 17.0,
+              "mean": 17.0,
+              "min": 17.0,
+              "p50": 17.0,
+              "p95": 17.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "working_set_serialized_bytes": {
+              "max": 3057.0,
+              "mean": 3045.0833333333335,
+              "min": 3037.0,
+              "p50": 3041.0,
+              "p95": 3057.0,
+              "std": 7.653521339154213
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "deterministic": 2336448.875
+          },
+          "max_seed_mean": 2336448.875,
+          "mean": 2336448.875,
+          "min_seed_mean": 2336448.875,
+          "std_across_seeds": 0.0
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "deterministic": 2402283.2083333335
+          },
+          "max_seed_mean": 2402283.2083333335,
+          "mean": 2402283.2083333335,
+          "min_seed_mean": 2402283.2083333335,
+          "std_across_seeds": 0.0
+        },
+        "persistent_records": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 106623.0
+          },
+          "max_seed_mean": 106623.0,
+          "mean": 106623.0,
+          "min_seed_mean": 106623.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "deterministic": 65834.33333333333
+          },
+          "max_seed_mean": 65834.33333333333,
+          "mean": 65834.33333333333,
+          "min_seed_mean": 65834.33333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "deterministic": 17.0
+          },
+          "max_seed_mean": 17.0,
+          "mean": 17.0,
+          "min_seed_mean": 17.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 3045.0833333333335
+          },
+          "max_seed_mean": 3045.0833333333335,
+          "mean": 3045.0833333333335,
+          "min_seed_mean": 3045.0833333333335,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 1
+    },
+    "dmc04b": {
+      "by_seed": {
+        "1337": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 75517157.0,
+              "mean": 33946875.291666664,
+              "min": 8177971.0,
+              "p50": 18326513.0,
+              "p95": 75433876.0,
+              "std": 29028186.04160124
+            },
+            "learned_forward_calls": {
+              "max": 3.0,
+              "mean": 3.0,
+              "min": 3.0,
+              "p50": 3.0,
+              "p95": 3.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 77662818.0,
+              "mean": 36011986.708333336,
+              "min": 10121403.0,
+              "p50": 20404900.0,
+              "p95": 77554495.0,
+              "std": 29122029.681800827
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 9989.0,
+              "mean": 9976.333333333334,
+              "min": 9969.0,
+              "p50": 9971.0,
+              "p95": 9988.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 3051038.0,
+              "mean": 2065111.4166666667,
+              "min": 1649914.0,
+              "p50": 1957818.0,
+              "p95": 2838793.0,
+              "std": 329409.54576635006
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 2.0,
+              "mean": 2.0,
+              "min": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 17152.0,
+              "mean": 7722.666666666667,
+              "min": 1920.0,
+              "p50": 4096.0,
+              "p95": 17152.0,
+              "std": 6726.464615399551
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 2145.0,
+              "mean": 2145.0,
+              "min": 2145.0,
+              "p50": 2145.0,
+              "p95": 2145.0,
+              "std": 0.0
+            }
+          }
+        },
+        "1338": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 76156548.0,
+              "mean": 33082188.333333332,
+              "min": 8510990.0,
+              "p50": 17026952.0,
+              "p95": 74434705.0,
+              "std": 28453739.83760245
+            },
+            "learned_forward_calls": {
+              "max": 3.0,
+              "mean": 3.0,
+              "min": 3.0,
+              "p50": 3.0,
+              "p95": 3.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 78206694.0,
+              "mean": 34950951.041666664,
+              "min": 10241276.0,
+              "p50": 18955176.0,
+              "p95": 76489331.0,
+              "std": 28542397.55058442
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 9989.0,
+              "mean": 9976.333333333334,
+              "min": 9969.0,
+              "p50": 9971.0,
+              "p95": 9988.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 2167408.0,
+              "mean": 1868762.7083333333,
+              "min": 1660632.0,
+              "p50": 1880156.0,
+              "p95": 2054626.0,
+              "std": 129031.21812197205
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 2.0,
+              "mean": 2.0,
+              "min": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 17152.0,
+              "mean": 7722.666666666667,
+              "min": 1920.0,
+              "p50": 4096.0,
+              "p95": 17152.0,
+              "std": 6726.464615399551
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 2145.0,
+              "mean": 2145.0,
+              "min": 2145.0,
+              "p50": 2145.0,
+              "p95": 2145.0,
+              "std": 0.0
+            }
+          }
+        },
+        "1339": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 73997936.0,
+              "mean": 32662084.0,
+              "min": 7829850.0,
+              "p50": 17542700.0,
+              "p95": 73366037.0,
+              "std": 28073386.715321906
+            },
+            "learned_forward_calls": {
+              "max": 3.0,
+              "mean": 3.0,
+              "min": 3.0,
+              "p50": 3.0,
+              "p95": 3.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 76042293.0,
+              "mean": 34602605.916666664,
+              "min": 9283526.0,
+              "p50": 19363221.0,
+              "p95": 75676589.0,
+              "std": 28113222.005189624
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 9989.0,
+              "mean": 9976.333333333334,
+              "min": 9969.0,
+              "p50": 9971.0,
+              "p95": 9988.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 2310552.0,
+              "mean": 1940521.9166666667,
+              "min": 1440915.0,
+              "p50": 1936597.0,
+              "p95": 2310537.0,
+              "std": 226372.49566660344
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 2.0,
+              "mean": 2.0,
+              "min": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 17152.0,
+              "mean": 7722.666666666667,
+              "min": 1920.0,
+              "p50": 4096.0,
+              "p95": 17152.0,
+              "std": 6726.464615399551
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 2145.0,
+              "mean": 2145.0,
+              "min": 2145.0,
+              "p50": 2145.0,
+              "p95": 2145.0,
+              "std": 0.0
+            }
+          }
+        },
+        "1340": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 76759295.0,
+              "mean": 34144808.958333336,
+              "min": 8401523.0,
+              "p50": 18549354.0,
+              "p95": 76261759.0,
+              "std": 29078000.80398187
+            },
+            "learned_forward_calls": {
+              "max": 3.0,
+              "mean": 3.0,
+              "min": 3.0,
+              "p50": 3.0,
+              "p95": 3.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 79059172.0,
+              "mean": 36185987.875,
+              "min": 10036865.0,
+              "p50": 20543346.0,
+              "p95": 78326355.0,
+              "std": 29048815.312795013
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 9989.0,
+              "mean": 9976.333333333334,
+              "min": 9969.0,
+              "p50": 9971.0,
+              "p95": 9988.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 2448752.0,
+              "mean": 2041178.9166666667,
+              "min": 1494155.0,
+              "p50": 2134818.0,
+              "p95": 2343137.0,
+              "std": 254168.25347475975
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 2.0,
+              "mean": 2.0,
+              "min": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 17152.0,
+              "mean": 7722.666666666667,
+              "min": 1920.0,
+              "p50": 4096.0,
+              "p95": 17152.0,
+              "std": 6726.464615399551
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 2145.0,
+              "mean": 2145.0,
+              "min": 2145.0,
+              "p50": 2145.0,
+              "p95": 2145.0,
+              "std": 0.0
+            }
+          }
+        },
+        "1341": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 81079544.0,
+              "mean": 33065274.291666668,
+              "min": 8142771.0,
+              "p50": 17366484.0,
+              "p95": 75526245.0,
+              "std": 28705054.48138207
+            },
+            "learned_forward_calls": {
+              "max": 3.0,
+              "mean": 3.0,
+              "min": 3.0,
+              "p50": 3.0,
+              "p95": 3.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 83554636.0,
+              "mean": 34992971.875,
+              "min": 9916738.0,
+              "p50": 19264754.0,
+              "p95": 77432633.0,
+              "std": 28750079.23048227
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 9989.0,
+              "mean": 9976.333333333334,
+              "min": 9969.0,
+              "p50": 9971.0,
+              "p95": 9988.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 2475092.0,
+              "mean": 1927697.5833333333,
+              "min": 1426672.0,
+              "p50": 1906388.0,
+              "p95": 2271375.0,
+              "std": 196986.4955252679
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 2.0,
+              "mean": 2.0,
+              "min": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 17152.0,
+              "mean": 7722.666666666667,
+              "min": 1920.0,
+              "p50": 4096.0,
+              "p95": 17152.0,
+              "std": 6726.464615399551
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 2145.0,
+              "mean": 2145.0,
+              "min": 2145.0,
+              "p50": 2145.0,
+              "p95": 2145.0,
+              "std": 0.0
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "1337": 1.0,
+            "1338": 1.0,
+            "1339": 1.0,
+            "1340": 1.0,
+            "1341": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "1337": 33946875.291666664,
+            "1338": 33082188.333333332,
+            "1339": 32662084.0,
+            "1340": 34144808.958333336,
+            "1341": 33065274.291666668
+          },
+          "max_seed_mean": 34144808.958333336,
+          "mean": 33380246.175,
+          "min_seed_mean": 32662084.0,
+          "std_across_seeds": 567349.535891787
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "1337": 3.0,
+            "1338": 3.0,
+            "1339": 3.0,
+            "1340": 3.0,
+            "1341": 3.0
+          },
+          "max_seed_mean": 3.0,
+          "mean": 3.0,
+          "min_seed_mean": 3.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "1337": 16.0,
+            "1338": 16.0,
+            "1339": 16.0,
+            "1340": 16.0,
+            "1341": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "1337": 36011986.708333336,
+            "1338": 34950951.041666664,
+            "1339": 34602605.916666664,
+            "1340": 36185987.875,
+            "1341": 34992971.875
+          },
+          "max_seed_mean": 36185987.875,
+          "mean": 35348900.68333333,
+          "min_seed_mean": 34602605.916666664,
+          "std_across_seeds": 629667.0796001592
+        },
+        "persistent_records": {
+          "by_seed": {
+            "1337": 16.0,
+            "1338": 16.0,
+            "1339": 16.0,
+            "1340": 16.0,
+            "1341": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "1337": 9976.333333333334,
+            "1338": 9976.333333333334,
+            "1339": 9976.333333333334,
+            "1340": 9976.333333333334,
+            "1341": 9976.333333333334
+          },
+          "max_seed_mean": 9976.333333333334,
+          "mean": 9976.333333333334,
+          "min_seed_mean": 9976.333333333334,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "1337": 469.3333333333333,
+            "1338": 469.3333333333333,
+            "1339": 469.3333333333333,
+            "1340": 469.3333333333333,
+            "1341": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "1337": 2065111.4166666667,
+            "1338": 1868762.7083333333,
+            "1339": 1940521.9166666667,
+            "1340": 2041178.9166666667,
+            "1341": 1927697.5833333333
+          },
+          "max_seed_mean": 2065111.4166666667,
+          "mean": 1968654.5083333333,
+          "min_seed_mean": 1868762.7083333333,
+          "std_across_seeds": 73499.67223859466
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "1337": 469.3333333333333,
+            "1338": 469.3333333333333,
+            "1339": 469.3333333333333,
+            "1340": 469.3333333333333,
+            "1341": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "1337": 16.0,
+            "1338": 16.0,
+            "1339": 16.0,
+            "1340": 16.0,
+            "1341": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "1337": 453.3333333333333,
+            "1338": 453.3333333333333,
+            "1339": 453.3333333333333,
+            "1340": 453.3333333333333,
+            "1341": 453.3333333333333
+          },
+          "max_seed_mean": 453.3333333333333,
+          "mean": 453.3333333333333,
+          "min_seed_mean": 453.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "1337": 2.0,
+            "1338": 2.0,
+            "1339": 2.0,
+            "1340": 2.0,
+            "1341": 2.0
+          },
+          "max_seed_mean": 2.0,
+          "mean": 2.0,
+          "min_seed_mean": 2.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "1337": 7722.666666666667,
+            "1338": 7722.666666666667,
+            "1339": 7722.666666666667,
+            "1340": 7722.666666666667,
+            "1341": 7722.666666666667
+          },
+          "max_seed_mean": 7722.666666666667,
+          "mean": 7722.666666666667,
+          "min_seed_mean": 7722.666666666667,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "1337": 16.0,
+            "1338": 16.0,
+            "1339": 16.0,
+            "1340": 16.0,
+            "1341": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "1337": 16.0,
+            "1338": 16.0,
+            "1339": 16.0,
+            "1340": 16.0,
+            "1341": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "1337": 1.0,
+            "1338": 1.0,
+            "1339": 1.0,
+            "1340": 1.0,
+            "1341": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "1337": 0.0,
+            "1338": 0.0,
+            "1339": 0.0,
+            "1340": 0.0,
+            "1341": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "1337": 2145.0,
+            "1338": 2145.0,
+            "1339": 2145.0,
+            "1340": 2145.0,
+            "1341": 2145.0
+          },
+          "max_seed_mean": 2145.0,
+          "mean": 2145.0,
+          "min_seed_mean": 2145.0,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 5
+    },
+    "exact_structured": {
+      "by_seed": {
+        "deterministic": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 5627635.0,
+              "mean": 2291515.5833333335,
+              "min": 448134.0,
+              "p50": 1107095.0,
+              "p95": 5592781.0,
+              "std": 2038735.2005913479
+            },
+            "learned_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 5682982.0,
+              "mean": 2317037.25,
+              "min": 455378.0,
+              "p50": 1124584.0,
+              "p95": 5670050.0,
+              "std": 2053596.0708078088
+            },
+            "persistent_records": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "persistent_serialized_bytes": {
+              "max": 233514.0,
+              "mean": 106760.0,
+              "min": 28918.0,
+              "p50": 57848.0,
+              "p95": 233513.0,
+              "std": 90401.91526686073
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 79302.0,
+              "mean": 25521.666666666668,
+              "min": 7244.0,
+              "p50": 17595.0,
+              "p95": 55347.0,
+              "std": 18077.647698347137
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_accuracy": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 2.0,
+              "mean": 2.0,
+              "min": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "working_set_serialized_bytes": {
+              "max": 197.0,
+              "mean": 195.33333333333334,
+              "min": 193.0,
+              "p50": 195.0,
+              "p95": 197.0,
+              "std": 1.1055415967851332
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "deterministic": 2291515.5833333335
+          },
+          "max_seed_mean": 2291515.5833333335,
+          "mean": 2291515.5833333335,
+          "min_seed_mean": 2291515.5833333335,
+          "std_across_seeds": 0.0
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "deterministic": 2317037.25
+          },
+          "max_seed_mean": 2317037.25,
+          "mean": 2317037.25,
+          "min_seed_mean": 2317037.25,
+          "std_across_seeds": 0.0
+        },
+        "persistent_records": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 106760.0
+          },
+          "max_seed_mean": 106760.0,
+          "mean": 106760.0,
+          "min_seed_mean": 106760.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "deterministic": 25521.666666666668
+          },
+          "max_seed_mean": 25521.666666666668,
+          "mean": 25521.666666666668,
+          "min_seed_mean": 25521.666666666668,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "deterministic": 2.0
+          },
+          "max_seed_mean": 2.0,
+          "mean": 2.0,
+          "min_seed_mean": 2.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 195.33333333333334
+          },
+          "max_seed_mean": 195.33333333333334,
+          "mean": 195.33333333333334,
+          "min_seed_mean": 195.33333333333334,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 1
+    },
+    "frozen_fifo_16": {
+      "by_seed": {
+        "deterministic": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 376528.0,
+              "mean": 106934.125,
+              "min": 30044.0,
+              "p50": 60092.0,
+              "p95": 326164.0,
+              "std": 95625.06057745902
+            },
+            "learned_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 411029.0,
+              "mean": 121733.0,
+              "min": 35093.0,
+              "p50": 67949.0,
+              "p95": 358682.0,
+              "std": 105954.64366101816
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 1453.0,
+              "mean": 1442.3333333333333,
+              "min": 1437.0,
+              "p50": 1437.0,
+              "p95": 1453.0,
+              "std": 7.542472332656507
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 51800.0,
+              "mean": 14798.875,
+              "min": 5049.0,
+              "p50": 7751.0,
+              "p95": 34621.0,
+              "std": 12420.18539284774
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_accuracy": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 1.0,
+              "mean": 1.0,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 1453.0,
+              "mean": 1442.3333333333333,
+              "min": 1437.0,
+              "p50": 1437.0,
+              "p95": 1453.0,
+              "std": 7.542472332656507
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "deterministic": 106934.125
+          },
+          "max_seed_mean": 106934.125,
+          "mean": 106934.125,
+          "min_seed_mean": 106934.125,
+          "std_across_seeds": 0.0
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "deterministic": 121733.0
+          },
+          "max_seed_mean": 121733.0,
+          "mean": 121733.0,
+          "min_seed_mean": 121733.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1442.3333333333333
+          },
+          "max_seed_mean": 1442.3333333333333,
+          "mean": 1442.3333333333333,
+          "min_seed_mean": 1442.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "deterministic": 14798.875
+          },
+          "max_seed_mean": 14798.875,
+          "mean": 14798.875,
+          "min_seed_mean": 14798.875,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "deterministic": 453.3333333333333
+          },
+          "max_seed_mean": 453.3333333333333,
+          "mean": 453.3333333333333,
+          "min_seed_mean": 453.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "deterministic": 1.0
+          },
+          "max_seed_mean": 1.0,
+          "mean": 1.0,
+          "min_seed_mean": 1.0,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1442.3333333333333
+          },
+          "max_seed_mean": 1442.3333333333333,
+          "mean": 1442.3333333333333,
+          "min_seed_mean": 1442.3333333333333,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 1
+    },
+    "random_16": {
+      "by_seed": {
+        "deterministic": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 1.0,
+              "mean": 0.08333333333333333,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.0,
+              "std": 0.2763853991962833
+            },
+            "critical_recall": {
+              "max": 1.0,
+              "mean": 0.08333333333333333,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.0,
+              "std": 0.2763853991962833
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 6171434.0,
+              "mean": 2440879.5416666665,
+              "min": 549816.0,
+              "p50": 1220545.0,
+              "p95": 5719897.0,
+              "std": 2106897.51579724
+            },
+            "learned_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 6181706.0,
+              "mean": 2448241.6666666665,
+              "min": 557150.0,
+              "p50": 1224540.0,
+              "p95": 5731620.0,
+              "std": 2109710.0352275837
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 1506.0,
+              "mean": 1478.2083333333333,
+              "min": 1454.0,
+              "p50": 1473.0,
+              "p95": 1503.0,
+              "std": 17.25296874614788
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 18744.0,
+              "mean": 7362.125,
+              "min": 3111.0,
+              "p50": 5686.0,
+              "p95": 12821.0,
+              "std": 4061.9274295226314
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_accuracy": {
+              "max": 1.0,
+              "mean": 0.08333333333333333,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.0,
+              "std": 0.2763853991962833
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 1.0,
+              "mean": 0.08333333333333333,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.0,
+              "std": 0.2763853991962833
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 1506.0,
+              "mean": 1478.2083333333333,
+              "min": 1454.0,
+              "p50": 1473.0,
+              "p95": 1503.0,
+              "std": 17.25296874614788
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "deterministic": 0.08333333333333333
+          },
+          "max_seed_mean": 0.08333333333333333,
+          "mean": 0.08333333333333333,
+          "min_seed_mean": 0.08333333333333333,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "deterministic": 0.08333333333333333
+          },
+          "max_seed_mean": 0.08333333333333333,
+          "mean": 0.08333333333333333,
+          "min_seed_mean": 0.08333333333333333,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "deterministic": 2440879.5416666665
+          },
+          "max_seed_mean": 2440879.5416666665,
+          "mean": 2440879.5416666665,
+          "min_seed_mean": 2440879.5416666665,
+          "std_across_seeds": 0.0
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "deterministic": 2448241.6666666665
+          },
+          "max_seed_mean": 2448241.6666666665,
+          "mean": 2448241.6666666665,
+          "min_seed_mean": 2448241.6666666665,
+          "std_across_seeds": 0.0
+        },
+        "persistent_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1478.2083333333333
+          },
+          "max_seed_mean": 1478.2083333333333,
+          "mean": 1478.2083333333333,
+          "min_seed_mean": 1478.2083333333333,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "deterministic": 7362.125
+          },
+          "max_seed_mean": 7362.125,
+          "mean": 7362.125,
+          "min_seed_mean": 7362.125,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "deterministic": 453.3333333333333
+          },
+          "max_seed_mean": 453.3333333333333,
+          "mean": 453.3333333333333,
+          "min_seed_mean": 453.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "deterministic": 0.08333333333333333
+          },
+          "max_seed_mean": 0.08333333333333333,
+          "mean": 0.08333333333333333,
+          "min_seed_mean": 0.08333333333333333,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "deterministic": 0.08333333333333333
+          },
+          "max_seed_mean": 0.08333333333333333,
+          "mean": 0.08333333333333333,
+          "min_seed_mean": 0.08333333333333333,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1478.2083333333333
+          },
+          "max_seed_mean": 1478.2083333333333,
+          "mean": 1478.2083333333333,
+          "min_seed_mean": 1478.2083333333333,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 1
+    },
+    "recent_window_16": {
+      "by_seed": {
+        "deterministic": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 4024483.0,
+              "mean": 1453115.9583333333,
+              "min": 239945.0,
+              "p50": 681761.0,
+              "p95": 3405867.0,
+              "std": 1324712.3077607732
+            },
+            "learned_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 4031951.0,
+              "mean": 1459184.0416666667,
+              "min": 242942.0,
+              "p50": 685009.0,
+              "p95": 3421619.0,
+              "std": 1326853.2007875652
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 1481.0,
+              "mean": 1468.3333333333333,
+              "min": 1461.0,
+              "p50": 1463.0,
+              "p95": 1480.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 15752.0,
+              "mean": 6068.083333333333,
+              "min": 2907.0,
+              "p50": 5163.0,
+              "p95": 11775.0,
+              "std": 3094.6021138517235
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "working_set_serialized_bytes": {
+              "max": 1481.0,
+              "mean": 1468.3333333333333,
+              "min": 1461.0,
+              "p50": 1463.0,
+              "p95": 1480.0,
+              "std": 7.624886155798583
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "deterministic": 1453115.9583333333
+          },
+          "max_seed_mean": 1453115.9583333333,
+          "mean": 1453115.9583333333,
+          "min_seed_mean": 1453115.9583333333,
+          "std_across_seeds": 0.0
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "deterministic": 1459184.0416666667
+          },
+          "max_seed_mean": 1459184.0416666667,
+          "mean": 1459184.0416666667,
+          "min_seed_mean": 1459184.0416666667,
+          "std_across_seeds": 0.0
+        },
+        "persistent_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1468.3333333333333
+          },
+          "max_seed_mean": 1468.3333333333333,
+          "mean": 1468.3333333333333,
+          "min_seed_mean": 1468.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "deterministic": 6068.083333333333
+          },
+          "max_seed_mean": 6068.083333333333,
+          "mean": 6068.083333333333,
+          "min_seed_mean": 6068.083333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "deterministic": 453.3333333333333
+          },
+          "max_seed_mean": 453.3333333333333,
+          "mean": 453.3333333333333,
+          "min_seed_mean": 453.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1468.3333333333333
+          },
+          "max_seed_mean": 1468.3333333333333,
+          "mean": 1468.3333333333333,
+          "min_seed_mean": 1468.3333333333333,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 1
+    },
+    "transparent_utility_index_16": {
+      "by_seed": {
+        "deterministic": {
+          "case_count": 24,
+          "metrics": {
+            "answer_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "critical_recall": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "declared_update_operations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "decoder_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "historical_training_required": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "ingestion_wall_ns": {
+              "max": 81655348.0,
+              "mean": 33784254.041666664,
+              "min": 8384753.0,
+              "p50": 17940931.0,
+              "p95": 78204105.0,
+              "std": 29075416.865976036
+            },
+            "learned_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "maximum_working_set_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "online_backward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_optimizer_steps": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "online_wall_ns": {
+              "max": 81667773.0,
+              "mean": 33798851.708333336,
+              "min": 8397475.0,
+              "p50": 17952747.0,
+              "p95": 78218054.0,
+              "std": 29075549.392882586
+            },
+            "persistent_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "persistent_serialized_bytes": {
+              "max": 4373.0,
+              "mean": 4360.333333333333,
+              "min": 4353.0,
+              "p50": 4355.0,
+              "p95": 4372.0,
+              "std": 7.624886155798583
+            },
+            "persistent_write_operations": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "query_wall_ns": {
+              "max": 53425.0,
+              "mean": 14597.666666666666,
+              "min": 7594.0,
+              "p50": 11816.0,
+              "p95": 36764.0,
+              "std": 9736.17267233668
+            },
+            "records_inspected_ingestion": {
+              "max": 1024.0,
+              "mean": 469.3333333333333,
+              "min": 128.0,
+              "p50": 256.0,
+              "p95": 1024.0,
+              "std": 395.67438914115
+            },
+            "records_inspected_query": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retention_discard_operations": {
+              "max": 1008.0,
+              "mean": 453.3333333333333,
+              "min": 112.0,
+              "p50": 240.0,
+              "p95": 1008.0,
+              "std": 395.67438914115
+            },
+            "retention_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retention_score_evaluations": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_accuracy": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieval_candidate_records": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_index_operations": {
+              "max": 16.0,
+              "mean": 16.0,
+              "min": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "std": 0.0
+            },
+            "retrieval_model_forward_calls": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "retrieved_records": {
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "std": 0.0
+            },
+            "utility_policy_evaluations": {
+              "max": 17152.0,
+              "mean": 7722.666666666667,
+              "min": 1920.0,
+              "p50": 4096.0,
+              "p95": 17152.0,
+              "std": 6726.464615399551
+            },
+            "working_set_serialized_bytes": {
+              "max": 1481.0,
+              "mean": 1468.3333333333333,
+              "min": 1461.0,
+              "p50": 1463.0,
+              "p95": 1480.0,
+              "std": 7.624886155798583
+            }
+          }
+        }
+      },
+      "case_count_per_run": 24,
+      "metrics": {
+        "answer_accuracy": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "critical_recall": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "declared_update_operations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "decoder_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "historical_training_required": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "ingestion_wall_ns": {
+          "by_seed": {
+            "deterministic": 33784254.041666664
+          },
+          "max_seed_mean": 33784254.041666664,
+          "mean": 33784254.041666664,
+          "min_seed_mean": 33784254.041666664,
+          "std_across_seeds": 0.0
+        },
+        "learned_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "maximum_working_set_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "online_backward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_optimizer_steps": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "online_wall_ns": {
+          "by_seed": {
+            "deterministic": 33798851.708333336
+          },
+          "max_seed_mean": 33798851.708333336,
+          "mean": 33798851.708333336,
+          "min_seed_mean": 33798851.708333336,
+          "std_across_seeds": 0.0
+        },
+        "persistent_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "persistent_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 4360.333333333333
+          },
+          "max_seed_mean": 4360.333333333333,
+          "mean": 4360.333333333333,
+          "min_seed_mean": 4360.333333333333,
+          "std_across_seeds": 0.0
+        },
+        "persistent_write_operations": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "query_wall_ns": {
+          "by_seed": {
+            "deterministic": 14597.666666666666
+          },
+          "max_seed_mean": 14597.666666666666,
+          "mean": 14597.666666666666,
+          "min_seed_mean": 14597.666666666666,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_ingestion": {
+          "by_seed": {
+            "deterministic": 469.3333333333333
+          },
+          "max_seed_mean": 469.3333333333333,
+          "mean": 469.3333333333333,
+          "min_seed_mean": 469.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "records_inspected_query": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_discard_operations": {
+          "by_seed": {
+            "deterministic": 453.3333333333333
+          },
+          "max_seed_mean": 453.3333333333333,
+          "mean": 453.3333333333333,
+          "min_seed_mean": 453.3333333333333,
+          "std_across_seeds": 0.0
+        },
+        "retention_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retention_score_evaluations": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_accuracy": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_candidate_records": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_index_operations": {
+          "by_seed": {
+            "deterministic": 16.0
+          },
+          "max_seed_mean": 16.0,
+          "mean": 16.0,
+          "min_seed_mean": 16.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieval_model_forward_calls": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "retrieved_records": {
+          "by_seed": {
+            "deterministic": 0.0
+          },
+          "max_seed_mean": 0.0,
+          "mean": 0.0,
+          "min_seed_mean": 0.0,
+          "std_across_seeds": 0.0
+        },
+        "utility_policy_evaluations": {
+          "by_seed": {
+            "deterministic": 7722.666666666667
+          },
+          "max_seed_mean": 7722.666666666667,
+          "mean": 7722.666666666667,
+          "min_seed_mean": 7722.666666666667,
+          "std_across_seeds": 0.0
+        },
+        "working_set_serialized_bytes": {
+          "by_seed": {
+            "deterministic": 1468.3333333333333
+          },
+          "max_seed_mean": 1468.3333333333333,
+          "mean": 1468.3333333333333,
+          "min_seed_mean": 1468.3333333333333,
+          "std_across_seeds": 0.0
+        }
+      },
+      "run_count": 1
+    }
+  },
+  "terminal_effect": false,
+  "unit": "DMC-05R"
+}

@@ -1,0 +1,23 @@
+{
+  "dataset_manifest_sha256": "734ba76ffe0ec1ce88bc6996a71da27a6556d6d15d19ce8779a0b281d335f4a3",
+  "experiment_id": "MCO-01",
+  "freeze_sha256": "86bbd6ee0211b1eb199c33d4c9b8dfff2e696263f9c9606674332ef5ee1d3b8d",
+  "history_count": 20,
+  "normalized_results_sha256": "461a87171a717e4af7cd5bf93e335394876543b48321b631ffccfe652d72366c",
+  "query_count": 160,
+  "results_sha256": "8cfb63b534c0081dd718249323c9b3b6f481ce3221ecc5b71c34b47f8c884bb9",
+  "row_count": 800,
+  "run_id": "run2",
+  "runtime_fields_excluded_from_replay": [
+    "wall_time_seconds"
+  ],
+  "status": "VALID_SCIENTIFIC_RUN",
+  "systems": [
+    "full_history_oracle",
+    "recent_16",
+    "exact_structured_lookup",
+    "conventional_one_shot_retrieval",
+    "iterative_need_retrieval"
+  ],
+  "total_wall_time_seconds": 37.025285082054324
+}

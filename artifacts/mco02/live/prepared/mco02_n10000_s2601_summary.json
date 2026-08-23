@@ -1,0 +1,349 @@
+{
+  "experiment_id": "MCO-02",
+  "history_id": "mco02_n10000_s2601",
+  "invalid_selection_events": [
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-0-255__2b95cec7e6b15bf5",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-256-511__5dee26d1c9e974ab",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-512-767__ce44ee76467dd409",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-768-1023__78668f84b34cf0a2",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-1024-1279__5fafee9db8f4c010",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-1280-1535__d98592ed34f21566",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-1536-1791__d8d9f3316130eced",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-1792-2047__8da443d52a56461e",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-2048-2303__e3771177c76521b7",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-2304-2559__70634e01df398d54",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-2560-2815__b8197061c429e78d",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-2816-3071__b89b2858a4f3191a",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-3072-3327__303d287ec1cd7a08",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-3328-3583__c578b5f9b88d46a3",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-3584-3839__720b887a150fe5ec",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-3840-4095__10c2fd90ef89a59d",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-4096-4351__8a2bfc41353076fc",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-4352-4607__d43b9f8bec7dcae6",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-4608-4863__3f1279377bbe29fa",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-4864-5119__8c182f3ec55cb08d",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-5120-5375__6196709ac838aada",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-5376-5631__aa0a05beae8d92d0",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-5632-5887__c3202e3ffdad8578",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-5888-6143__fa697f47a0d3b427",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-6144-6399__c0b27e61684eede5",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-6400-6655__885de456305ad33a",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-6656-6911__a58555c118d4986f",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-6912-7167__d44714546d8fd964",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-7168-7423__205474820985b57b",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-7424-7679__4a95b69304884f39",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-7680-7935__61086fec96e29d25",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-7936-8191__37b408d1ac2c6a42",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-8192-8447__4542aa0a723e5b44",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-8448-8703__6a66be828344f846",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-8704-8959__a7d484a418bf1f61",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-8960-9215__9e75adb341977dfc",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-9216-9471__4a60d05526005ed1",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-9472-9727__8bd5c91b66b04b57",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-9728-9983__65af6197af537c89",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n10000_s2601-chunk-9984-9999__f2cea97236ff2eb5",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    }
+  ],
+  "persistent_bytes": 1921,
+  "selected_record_ids": [
+    "r_02b9984cbcc51620",
+    "r_9ecde44f57a6bceb",
+    "r_e3a239cf85fd1938",
+    "r_6c4ea4ef33fd6a18",
+    "r_1c81a08cfd1bafeb",
+    "r_fb392f90c1e34f7d",
+    "r_1ac09b9988488af7",
+    "r_8b70a0ced09e29fd"
+  ],
+  "selected_records": [
+    {
+      "position": 254,
+      "record_id": "r_02b9984cbcc51620",
+      "text": "[Record r_02b9984cbcc51620; source AUTHORITY; event 254] At event time 254, the ledger states: Entity d_c0d654eae5965bb4 was redesignated as entity d_d09326d033a713e1. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 253,
+      "record_id": "r_9ecde44f57a6bceb",
+      "text": "[Record r_9ecde44f57a6bceb; source CURATED; event 253] At event time 253, the ledger states: Entity d_126d9fd5004b2e27 received the replacement name entity d_252703d0c1c9b4dc. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 9985,
+      "record_id": "r_e3a239cf85fd1938",
+      "text": "[Record r_e3a239cf85fd1938; source UNVERIFIED; event 9985] At event time 9985, In the ordinary course of plant reporting, the ledger states: Regarding entity d_ac7327aa1e878126, its upstream requirement is entity d_ee85e1b34cfd167e."
+    },
+    {
+      "position": 9986,
+      "record_id": "r_6c4ea4ef33fd6a18",
+      "text": "[Record r_6c4ea4ef33fd6a18; source AUTHORITY; event 9986] At event time 9986, During a routine archive review, the ledger states: For entity d_8d0343a64193c204, the supporting requirement is entity d_e390ddce4d8c6071. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 9988,
+      "record_id": "r_1c81a08cfd1bafeb",
+      "text": "[Record r_1c81a08cfd1bafeb; source AUTHORITY; event 9988] At event time 9988, After an unrelated maintenance discussion, the ledger states: For entity d_3d1f5558be7ffb25, staff now use the name entity d_2e1c14eeeebe76c4."
+    },
+    {
+      "position": 9996,
+      "record_id": "r_fb392f90c1e34f7d",
+      "text": "[Record r_fb392f90c1e34f7d; source AUTHORITY; event 9996] At event time 9996, the ledger states: When entity d_13a2b9b8656330db runs, it depends upon entity d_bec14bcaa1919393."
+    },
+    {
+      "position": 2032,
+      "record_id": "r_1ac09b9988488af7",
+      "text": "[Record r_1ac09b9988488af7; source AUTHORITY; event 2032] At event time 2032, the ledger states: Entity d_183f6cf2b1dba3bd is not rated for operation below -17 C. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 255,
+      "record_id": "r_8b70a0ced09e29fd",
+      "text": "[Record r_8b70a0ced09e29fd; source AUTHORITY; event 255] At event time 255, During a routine archive review, the ledger states: The minimum safe temperature recorded for entity d_f0e3cb14fbf73425 is -19 C. The filing also mentioned routine paperwork with no operational consequence."
+    }
+  ],
+  "usage": {
+    "call_ids": [
+      "summary/mco02_n10000_s2601-chunk-0-255__2b95cec7e6b15bf5",
+      "summary/mco02_n10000_s2601-chunk-256-511__5dee26d1c9e974ab",
+      "summary/mco02_n10000_s2601-chunk-512-767__ce44ee76467dd409",
+      "summary/mco02_n10000_s2601-chunk-768-1023__78668f84b34cf0a2",
+      "summary/mco02_n10000_s2601-chunk-1024-1279__5fafee9db8f4c010",
+      "summary/mco02_n10000_s2601-chunk-1280-1535__d98592ed34f21566",
+      "summary/mco02_n10000_s2601-chunk-1536-1791__d8d9f3316130eced",
+      "summary/mco02_n10000_s2601-chunk-1792-2047__8da443d52a56461e",
+      "summary/mco02_n10000_s2601-chunk-2048-2303__e3771177c76521b7",
+      "summary/mco02_n10000_s2601-chunk-2304-2559__70634e01df398d54",
+      "summary/mco02_n10000_s2601-chunk-2560-2815__b8197061c429e78d",
+      "summary/mco02_n10000_s2601-chunk-2816-3071__b89b2858a4f3191a",
+      "summary/mco02_n10000_s2601-chunk-3072-3327__303d287ec1cd7a08",
+      "summary/mco02_n10000_s2601-chunk-3328-3583__c578b5f9b88d46a3",
+      "summary/mco02_n10000_s2601-chunk-3584-3839__720b887a150fe5ec",
+      "summary/mco02_n10000_s2601-chunk-3840-4095__10c2fd90ef89a59d",
+      "summary/mco02_n10000_s2601-chunk-4096-4351__8a2bfc41353076fc",
+      "summary/mco02_n10000_s2601-chunk-4352-4607__d43b9f8bec7dcae6",
+      "summary/mco02_n10000_s2601-chunk-4608-4863__3f1279377bbe29fa",
+      "summary/mco02_n10000_s2601-chunk-4864-5119__8c182f3ec55cb08d",
+      "summary/mco02_n10000_s2601-chunk-5120-5375__6196709ac838aada",
+      "summary/mco02_n10000_s2601-chunk-5376-5631__aa0a05beae8d92d0",
+      "summary/mco02_n10000_s2601-chunk-5632-5887__c3202e3ffdad8578",
+      "summary/mco02_n10000_s2601-chunk-5888-6143__fa697f47a0d3b427",
+      "summary/mco02_n10000_s2601-chunk-6144-6399__c0b27e61684eede5",
+      "summary/mco02_n10000_s2601-chunk-6400-6655__885de456305ad33a",
+      "summary/mco02_n10000_s2601-chunk-6656-6911__a58555c118d4986f",
+      "summary/mco02_n10000_s2601-chunk-6912-7167__d44714546d8fd964",
+      "summary/mco02_n10000_s2601-chunk-7168-7423__205474820985b57b",
+      "summary/mco02_n10000_s2601-chunk-7424-7679__4a95b69304884f39",
+      "summary/mco02_n10000_s2601-chunk-7680-7935__61086fec96e29d25",
+      "summary/mco02_n10000_s2601-chunk-7936-8191__37b408d1ac2c6a42",
+      "summary/mco02_n10000_s2601-chunk-8192-8447__4542aa0a723e5b44",
+      "summary/mco02_n10000_s2601-chunk-8448-8703__6a66be828344f846",
+      "summary/mco02_n10000_s2601-chunk-8704-8959__a7d484a418bf1f61",
+      "summary/mco02_n10000_s2601-chunk-8960-9215__9e75adb341977dfc",
+      "summary/mco02_n10000_s2601-chunk-9216-9471__4a60d05526005ed1",
+      "summary/mco02_n10000_s2601-chunk-9472-9727__8bd5c91b66b04b57",
+      "summary/mco02_n10000_s2601-chunk-9728-9983__65af6197af537c89",
+      "summary/mco02_n10000_s2601-chunk-9984-9999__f2cea97236ff2eb5"
+    ],
+    "eval_duration_ns": 478612539623,
+    "input_tokens": 640858,
+    "model_calls": 40,
+    "output_tokens": 6256,
+    "prompt_eval_duration_ns": 621141188730,
+    "wall_time_seconds": 1126.1916110347956
+  }
+}

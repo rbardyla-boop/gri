@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 6,
+    "eval_duration_ns": 81097503,
+    "load_duration_ns": 200646871,
+    "prompt_eval_count": 262,
+    "prompt_eval_duration_ns": 30987840,
+    "total_duration_ns": 339615388,
+    "wall_time_seconds": 0.34129868797026575
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-84-86-d2__a7ecba977355f66e",
+  "key": "mco02_n100_s2601-records-84-86-d2",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. At -2 C, entity d_e6c99f8b4c269fc2 reaches its documented safety floor.\n2. The minimum safe temperature recorded for entity d_e3305ed6b0e04f8a is -39 C.\n3. For entity e_4b3e84aa52482e1f, staff now use the name entity e_a4096d174faa3209.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "a7ecba977355f66e95299b94889acd3d492eedf6c2013bf85faa2002cc0e1856",
+  "response": {
+    "created_at": "2026-08-22T12:40:54.73664314Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 6,
+    "eval_duration": 81097503,
+    "load_duration": 200646871,
+    "message": {
+      "content": "D\nT\nR",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 262,
+    "prompt_eval_duration": 30987840,
+    "total_duration": 339615388
+  },
+  "response_content_sha256": "f4d5b502c57599c575ccb80941d7c84a7aa5b20f73714499286c063e09a3824a",
+  "schema_version": 1
+}

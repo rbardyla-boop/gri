@@ -1,0 +1,80 @@
+{
+  "accounting": {
+    "eval_count": 63,
+    "eval_duration_ns": 996729768,
+    "load_duration_ns": 177959047,
+    "prompt_eval_count": 295,
+    "prompt_eval_duration_ns": 187231070,
+    "total_duration_ns": 3891849619,
+    "wall_time_seconds": 3.8934824829921126
+  },
+  "cache_hit": false,
+  "call_id": "q_387df4b1ec273d62__086e87f4b1d15f12",
+  "key": "q_387df4b1ec273d62",
+  "purpose": "final-schema-probe",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "failure_threshold": {
+          "type": "integer"
+        },
+        "path_record_ids": {
+          "items": {
+            "pattern": "^r_[0-9a-f]{16}$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "terminal_entity": {
+          "pattern": "^[ed]_[0-9a-f]{16}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "terminal_entity",
+        "failure_threshold",
+        "path_record_ids"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Answer only from supplied evidence. Resolve supersession, then source priority AUTHORITY over CURATED over UNVERIFIED, then later event. Follow renames before upstream requirements. The terminal_entity is the subject of the failure_threshold record at the end of the supplied path. The failure_threshold is that record's integer object, never the deployment temperature. path_record_ids are every supplied winning record ID in traversal order. Return the required JSON schema.",
+        "role": "system"
+      },
+      {
+        "content": "QUESTION\nEntity e_3e140db6e2909b5a is deployed at -6 C. Starting from that entity, follow its current name changes and upstream requirements until a temperature threshold is reached. Identify the terminal entity, threshold, whether inspection is required, and the ordered provenance record IDs.\n\nEVIDENCE\n[Record r_18d1d005fe68c033; source CURATED; event 83] subject=e_3e140db6e2909b5a; relation=depends_on; object=e_1e746bfbcba30fcb; operation=correct; supersedes=r_5ada3d42f52ef597\n[Record r_07f6fbdf77ae343a; source AUTHORITY; event 23] subject=e_1e746bfbcba30fcb; relation=failure_threshold; object=-11; operation=assert; supersedes=None",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 192,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "086e87f4b1d15f12147a1e8ac816b10fbc6f8dd7828b2318ba9c526bf68ee343",
+  "response": {
+    "created_at": "2026-08-22T12:56:28.453214511Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 63,
+    "eval_duration": 996729768,
+    "load_duration": 177959047,
+    "message": {
+      "content": "{\n  \"terminal_entity\": \"e_3e140db6e2909b5a\",\n  \"failure_threshold\": -11,\n  \"path_record_ids\": [\"r_18d1d005fe68c033\", \"r_07f6fbdf77ae343a\"]\n}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 295,
+    "prompt_eval_duration": 187231070,
+    "total_duration": 3891849619
+  },
+  "response_content_sha256": "2e07f750ac434f9be329aedf058baadf42c3d16a4ad0f9e96d753dc73c93034f",
+  "schema_version": 1
+}

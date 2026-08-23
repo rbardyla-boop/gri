@@ -1,0 +1,8 @@
+{
+  "file_count": 8,
+  "files_match": true,
+  "frozen_corpus_digest": "07630824709f3f1da291ebec512b361dc7c6788ab36b3ad23622c1ca47419bff",
+  "frozen_manifest_sha256": "690a33eb90fc30dfeec0ff8ca32bd9a69b33b6411b33b96fbd6d25c4ace60000",
+  "pass": true,
+  "replayed_corpus_digest": "07630824709f3f1da291ebec512b361dc7c6788ab36b3ad23622c1ca47419bff"
+}

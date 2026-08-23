@@ -1,0 +1,207 @@
+{
+  "experiment_id": "MCO-02",
+  "history_id": "mco02_n5000_s2602",
+  "invalid_selection_events": [
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-0-255__398be343965b5309",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-256-511__77bcce8b8a96cc01",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-512-767__183ab7b545dd1747",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-768-1023__a328f0a9e114175c",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-1024-1279__4ebb7c73f73f2dec",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-1280-1535__d4137a5f1d78c68e",
+      "fallback_used": true,
+      "invalid_ids": [
+        "r_1234567890abcdef"
+      ],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-1536-1791__cb741d411c8fb38f",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-1792-2047__cc83ef3a3a29f4e0",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-2048-2303__e54a9d371cde5482",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-2304-2559__0242ad9eb4f9586b",
+      "fallback_used": true,
+      "invalid_ids": [
+        "r_1234567890abcdef"
+      ],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-2560-2815__c96434b5c3a99ea8",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-2816-3071__21e9f2264ce24399",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-3072-3327__bbf4d22ec24c1b97",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-3328-3583__9c94f8a71ab03cfa",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-3584-3839__4e08621d4cf0fba7",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-3840-4095__3bdceb4773b19a08",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-4096-4351__c55ac53a401f6d6b",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-4352-4607__39302eeb816f2f02",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2602-chunk-4608-4863__8674fb608a55e342",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    }
+  ],
+  "persistent_bytes": 2138,
+  "selected_record_ids": [
+    "r_dc14f8ccb75838e2",
+    "r_abef7006ab0b7229",
+    "r_864a12e3df3270f2",
+    "r_f686272cf3eaa9b7",
+    "r_b1387ba482cbd1fa",
+    "r_31673a6ec99c2562",
+    "r_c4d679e7919f1346",
+    "r_d395b186bcb7d4b3"
+  ],
+  "selected_records": [
+    {
+      "position": 254,
+      "record_id": "r_dc14f8ccb75838e2",
+      "text": "[Record r_dc14f8ccb75838e2; source AUTHORITY; event 254] At event time 254, During a routine archive review, the ledger states: The old label entity d_26885f4b30c4da08 gave way to entity d_f4e369185d8e3b3d. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 251,
+      "record_id": "r_abef7006ab0b7229",
+      "text": "[Record r_abef7006ab0b7229; source UNVERIFIED; event 251] At event time 251, In the ordinary course of plant reporting, the ledger states: Entity d_8e6ffcb31db7e8b6 cannot proceed without entity d_1c49edce15fccf53. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 4868,
+      "record_id": "r_864a12e3df3270f2",
+      "text": "[Record r_864a12e3df3270f2; source AUTHORITY; event 4868] At event time 4868, the ledger states: Entity d_ad72a6dcaf6c1f66 relies on entity d_6e52104f3e2cedb4."
+    },
+    {
+      "position": 4865,
+      "record_id": "r_f686272cf3eaa9b7",
+      "text": "[Record r_f686272cf3eaa9b7; source CURATED; event 4865] At event time 4865, In the ordinary course of plant reporting, the ledger states: When entity d_1b6fe2e758416f65 runs, it depends upon entity d_262999c8f235cb7d. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 4875,
+      "record_id": "r_b1387ba482cbd1fa",
+      "text": "[Record r_b1387ba482cbd1fa; source AUTHORITY; event 4875] At event time 4875, In the ordinary course of plant reporting, the ledger states: The minimum safe temperature recorded for entity d_eb19849e4646fe73 is -56 C. This was recorded alongside unrelated scheduling notes."
+    },
+    {
+      "position": 4884,
+      "record_id": "r_31673a6ec99c2562",
+      "text": "[Record r_31673a6ec99c2562; source AUTHORITY; event 4884] At event time 4884, During a routine archive review, the ledger states: The minimum safe temperature recorded for entity d_0cdc1d7344c30bf1 is 12 C. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 4878,
+      "record_id": "r_c4d679e7919f1346",
+      "text": "[Record r_c4d679e7919f1346; source AUTHORITY; event 4878] At event time 4878, In the ordinary course of plant reporting, the ledger states: At -7 C, entity d_7b0f0d3c435c6013 reaches its documented safety floor. This was recorded alongside unrelated scheduling notes."
+    },
+    {
+      "position": 4922,
+      "record_id": "r_d395b186bcb7d4b3",
+      "text": "[Record r_d395b186bcb7d4b3; source UNVERIFIED; event 4922] At event time 4922, After an unrelated maintenance discussion, the ledger states: Entity d_4c901a56fe06b684 cannot proceed without entity d_4d95bdc8e5977f9b. The filing also mentioned routine paperwork with no operational consequence."
+    }
+  ],
+  "usage": {
+    "call_ids": [
+      "summary/mco02_n5000_s2602-chunk-0-255__398be343965b5309",
+      "summary/mco02_n5000_s2602-chunk-256-511__77bcce8b8a96cc01",
+      "summary/mco02_n5000_s2602-chunk-512-767__183ab7b545dd1747",
+      "summary/mco02_n5000_s2602-chunk-768-1023__a328f0a9e114175c",
+      "summary/mco02_n5000_s2602-chunk-1024-1279__4ebb7c73f73f2dec",
+      "summary/mco02_n5000_s2602-chunk-1280-1535__d4137a5f1d78c68e",
+      "summary/mco02_n5000_s2602-chunk-1536-1791__cb741d411c8fb38f",
+      "summary/mco02_n5000_s2602-chunk-1792-2047__cc83ef3a3a29f4e0",
+      "summary/mco02_n5000_s2602-chunk-2048-2303__e54a9d371cde5482",
+      "summary/mco02_n5000_s2602-chunk-2304-2559__0242ad9eb4f9586b",
+      "summary/mco02_n5000_s2602-chunk-2560-2815__c96434b5c3a99ea8",
+      "summary/mco02_n5000_s2602-chunk-2816-3071__21e9f2264ce24399",
+      "summary/mco02_n5000_s2602-chunk-3072-3327__bbf4d22ec24c1b97",
+      "summary/mco02_n5000_s2602-chunk-3328-3583__9c94f8a71ab03cfa",
+      "summary/mco02_n5000_s2602-chunk-3584-3839__4e08621d4cf0fba7",
+      "summary/mco02_n5000_s2602-chunk-3840-4095__3bdceb4773b19a08",
+      "summary/mco02_n5000_s2602-chunk-4096-4351__c55ac53a401f6d6b",
+      "summary/mco02_n5000_s2602-chunk-4352-4607__39302eeb816f2f02",
+      "summary/mco02_n5000_s2602-chunk-4608-4863__8674fb608a55e342",
+      "summary/mco02_n5000_s2602-chunk-4864-4999__32fc2c75668b8315"
+    ],
+    "eval_duration_ns": 228641729903,
+    "input_tokens": 322185,
+    "model_calls": 20,
+    "output_tokens": 3039,
+    "prompt_eval_duration_ns": 309669400083,
+    "wall_time_seconds": 553.4595086675836
+  }
+}

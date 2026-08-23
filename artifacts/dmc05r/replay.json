@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "systems": {
+    "dmc04b_seed1337": {
+      "first_sha256": "fb74449fb787be29c256353ebaf1b3a7a2e161e6a9b7ca4275401184db9defbf",
+      "pass": true,
+      "second_sha256": "fb74449fb787be29c256353ebaf1b3a7a2e161e6a9b7ca4275401184db9defbf"
+    },
+    "recent_window_16": {
+      "first_sha256": "0c193e8cccffabb9cd412d7b0db7cfa6090e81c4f494f7ffebf1a654b2756b0a",
+      "pass": true,
+      "second_sha256": "0c193e8cccffabb9cd412d7b0db7cfa6090e81c4f494f7ffebf1a654b2756b0a"
+    },
+    "transparent_utility_index_16": {
+      "first_sha256": "084254432282015425d8ab8b4705fd50e79a676d1d7dcde2a3ef39d0e1208614",
+      "pass": true,
+      "second_sha256": "084254432282015425d8ab8b4705fd50e79a676d1d7dcde2a3ef39d0e1208614"
+    }
+  }
+}

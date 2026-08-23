@@ -1,0 +1,77 @@
+{
+  "accounting": {
+    "eval_count": 70,
+    "eval_duration_ns": 981844870,
+    "load_duration_ns": 104006927,
+    "prompt_eval_count": 443,
+    "prompt_eval_duration_ns": 211917488,
+    "total_duration_ns": 2419893418,
+    "wall_time_seconds": 2.4204010060057044
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n10000_s2602-records-5940-5951-d0__adb6c6b38b61e167",
+  "key": "mco02_n10000_s2602-records-5940-5951-d0",
+  "purpose": "extraction",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "relations": {
+          "items": {
+            "enum": [
+              "depends_on",
+              "renamed_to",
+              "failure_threshold"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "type": "array"
+        }
+      },
+      "required": [
+        "relations"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify the semantic relationship expressed by every input sentence. Choose depends_on when one entity relies on, draws on, cannot proceed without, or has another entity as an upstream or supporting requirement. Choose renamed_to when an old entity label is replaced by a new entity name or designation. Choose failure_threshold when the sentence gives a failure, safety-floor, minimum-safe-temperature, or not-rated-below temperature for one entity. Return one relation for every sentence in the original order using the required JSON schema.",
+        "role": "system"
+      },
+      {
+        "content": "1. Regarding entity d_bd2264be4dd794b7, its upstream requirement is entity d_6ef537a22432d363.\n2. The archived temperature floor for entity d_ab5c971d799da3e0 is -46 C.\n3. Entity d_cc8104d54953e558 is not rated for operation below -19 C.\n4. Entity d_e280a0fa75711161 has a failure threshold of 4 C.\n5. Regarding entity d_1c265f530cdf4f73, its upstream requirement is entity d_76d9fe28723ab0fd.\n6. Entity d_94836194a2bb0922 is not rated for operation below -25 C.\n7. The operations of entity d_c12567011f99cb91 draw on entity d_25e73e5fcc6bd211.\n8. Entity d_298a2d0d39c392c6 cannot proceed without entity d_0704e81016f95c55.\n9. Regarding entity d_24a790bd25867e33, it ceases safe operation below 29 C.\n10. The minimum safe temperature recorded for entity d_5c8358a845e01ab8 is -7 C.\n11. Regarding entity d_b2904c5caa0b1cef, its upstream requirement is entity d_8ccd3c743cfe174a.\n12. When entity d_97d658bf61008afb runs, it depends upon entity d_f030fe408fe73494.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 144,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "adb6c6b38b61e167906a01b566a28a697234e2cab807617e9f99ddd3dab3c574",
+  "response": {
+    "created_at": "2026-08-22T17:52:35.264349246Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 70,
+    "eval_duration": 981844870,
+    "load_duration": 104006927,
+    "message": {
+      "content": "{\n  \"relations\": [\n    \"depends_on\",\n    \"failure_threshold\",\n    \"failure_threshold\",\n    \"failure_threshold\",\n    \"depends_on\",\n    \"failure_threshold\",\n    \"depends_on\",\n    \"depends_on\",\n    \"failure_threshold\",\n    \"failure_threshold\",\n    \"depends_on\",\n    \"depends_on\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 443,
+    "prompt_eval_duration": 211917488,
+    "total_duration": 2419893418
+  },
+  "response_content_sha256": "3b51ce92cc69edad94b5a738ccf49c9a4bd94a1cdbe05dac19d32a25be193dca",
+  "schema_version": 1
+}

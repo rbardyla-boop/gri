@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 24,
+    "eval_duration_ns": 352228237,
+    "load_duration_ns": 160067448,
+    "prompt_eval_count": 564,
+    "prompt_eval_duration_ns": 270125879,
+    "total_duration_ns": 866781276,
+    "wall_time_seconds": 0.8681743090273812
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-72-83-d0__ea048b86674af592",
+  "key": "mco02_n100_s2601-records-72-83-d0",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. Entity d_9a07d69d0a6d01df is now known as entity d_a6d3298e7c7f899a.\n2. At -14 C, entity d_91a61a0dac8a7e28 reaches its documented safety floor.\n3. Entity e_6877b9490c39710c relies on entity e_c309e1802409b093.\n4. The operations of entity e_147f02893686f6d4 draw on entity e_4f0a5db1fc56cb2c.\n5. When entity e_3b5398f761d8ff00 runs, it depends upon entity e_dc57ac9b8f00477f.\n6. Entity e_c0c80e73458e3429 relies on entity e_73816d72f2b20cd7.\n7. Regarding entity d_17f446446b7b9cb6, the registry changed its designation to entity d_4a76e22a4eae49ec.\n8. Entity d_936a373672206572 was redesignated as entity d_ec7af92632eb09f2.\n9. Regarding entity e_8072858756aac11f, its upstream requirement is entity e_5f5ea33480968495.\n10. When entity d_ee5eb1f4b2700d49 runs, it depends upon entity d_a588d3663e4d76b6.\n11. For entity e_c0c80e73458e3429, the supporting requirement is entity e_41b7a50e8bda1d00.\n12. Regarding entity e_3e140db6e2909b5a, its upstream requirement is entity e_1e746bfbcba30fcb.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 36,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "ea048b86674af5924ff8d17465caea2345f1088d2c47dbf2b6fefd37240201ee",
+  "response": {
+    "created_at": "2026-08-22T12:40:53.229561593Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 24,
+    "eval_duration": 352228237,
+    "load_duration": 160067448,
+    "message": {
+      "content": "D\nT\nD\nD\nD\nD\nR\nR\nD\nD\nD\nD",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 564,
+    "prompt_eval_duration": 270125879,
+    "total_duration": 866781276
+  },
+  "response_content_sha256": "c2891d9ad33ac4374455e8ecd0e9a3603464a135c3e00a69ecae158444aec1f5",
+  "schema_version": 1
+}

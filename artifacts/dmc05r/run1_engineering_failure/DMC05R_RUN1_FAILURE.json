@@ -1,0 +1,61 @@
+{
+  "unit": "DMC-05R",
+  "run": 1,
+  "classification": "ENGINEERING_FAILURE_NO_SCIENTIFIC_VERDICT",
+  "terminal_state": null,
+  "failure_stage": "DMC04B_SEED1337_SURPRISE_DEPENDENCY_QUERY_VALIDATION",
+  "exception": {
+    "type": "ValueError",
+    "message": "query descriptor order is not B,A",
+    "source": "src/dmc04p/matcher.py:103"
+  },
+  "cause": "The exploratory SURPRISE_DEPENDENCY adapter copied the frozen write descriptor order A,B into a query descriptor. The frozen DMC-04B query encoder requires normalized B,A order.",
+  "scientific_exposure": {
+    "dmc_worker_receipt_written": false,
+    "dmc_core_results_serialized": false,
+    "dmc_capability_values_inspected": false,
+    "aggregate_written": false,
+    "gate_result_written": false,
+    "scientific_terminal_written": false,
+    "deterministic_baseline_receipts_written": true,
+    "deterministic_baseline_capability_values_inspected": false
+  },
+  "training": {
+    "optimizer_objects_created": 0,
+    "optimizer_steps": 0,
+    "backward_calls": 0,
+    "training_executed": false
+  },
+  "frozen_harness": {
+    "runner_sha256": "bb480d888de0da5343473ad1b754296bdf4a0e6d19ce9e862838925a877a3102",
+    "test_sha256": "bed6f3038b3fb191f5386a7cc77325ba3ff77edb643e6b745918715932510328",
+    "config_sha256": "6d20750a69d86bd4683f2cb459322219cec22882fde643c85d3e54215278c67d",
+    "contract_sha256": "f976341643904baea635b6f2e67dab10c663bd368b7469a2c3e34b88837ee283",
+    "freeze_sha256": "3d50e9e59240374b266addcf5ac88b845b2326ac45bc5be2c68ca2a5b7e125a8"
+  },
+  "archived_receipts": {
+    "preflight.json": "278915bfc8c330020bb818be4a8e924fcabf3d41e346cc62760ebb115af787b2",
+    "variant_manifest.json": "82ba2054537949358543889b25b4f3e43c1cf6542c4505c3aab1cb673fd1c590",
+    "surprise_dependency_manifest.json": "908097a2d025e0204c5360047ea097329ba4b979f7710f54a34f27954fae0cbd",
+    "raw/recent_window_16.json": "0c1ededf32c8079a7a139662675b21c269eafbfa99ed15ad873d88739851dd22",
+    "raw/frozen_fifo_16.json": "4b98b163c2f4a71d03ccee7aa49d762c6a2062ef371ea9f545820afa7d50d825",
+    "raw/random_16.json": "f20393622e144cd87679e31898e1f4c50865e3f415d550a2cdcff554e9803eec",
+    "raw/exact_structured.json": "f3eea3fdea3055bfa1238fd8fed338c6d92179a02827f53bc315296e655a5c54",
+    "raw/conventional_retrieval.json": "766378cd55884ca1f94fed1dca7464aaa39c77926b8a89871d465f3e1ee70d3e",
+    "raw/transparent_utility_index_16.json": "b91bcbbaa5760284c6ae0c8e4e979be66c9202bf4c84cfc025f877c148921815"
+  },
+  "repair_boundary": {
+    "authorized": true,
+    "scope": "Normalize only the constructed exploratory query descriptor to frozen B,A order and add a scorer-view schema test.",
+    "primary_counterfactual_changed": false,
+    "source_data_changed": false,
+    "record_payload_changed": false,
+    "target_or_answer_changed": false,
+    "dmc_changed": false,
+    "checkpoints_changed": false,
+    "features_changed": false,
+    "capacity_changed": false,
+    "thresholds_changed": false,
+    "terminal_precedence_changed": false
+  }
+}

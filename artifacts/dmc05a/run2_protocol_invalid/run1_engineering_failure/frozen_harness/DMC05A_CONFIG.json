@@ -1,0 +1,63 @@
+{
+  "unit": "DMC-05A",
+  "status": "PREREGISTERED_BEFORE_EXECUTION",
+  "case_filter": {
+    "history_sizes": [32, 64, 128, 256, 1024],
+    "include_splits": ["train", "iid", "extrapolation"],
+    "expected_case_counts": {
+      "32": 176,
+      "64": 160,
+      "128": 88,
+      "256": 80,
+      "1024": 88
+    },
+    "expected_total_cases": 592
+  },
+  "evidence_seeds": [1337, 1338, 1339, 1340, 1341],
+  "capacity": 16,
+  "systems": [
+    "full_history_scan",
+    "recent_window_16",
+    "frozen_fifo_16",
+    "random_16",
+    "exact_structured",
+    "conventional_retrieval",
+    "dmc04b",
+    "dmc_retrieval_all_history"
+  ],
+  "dmc04b_anchors": {
+    "runner_sha256": "3185434b9546236f93b3e75b47f5f11c88e7e33d89985a2c545c36c0fa90cbec",
+    "verdict_sha256": "f62724ca065b166fbc00741f5097a24b85c36e1b232cfc67f6cccbb79c3ba902",
+    "aggregate_sha256": "ffcceabec39c9953ec4617aecabd461ed1c6933a34612df08871424d79adb7ab",
+    "dataset_manifest_sha256": "ee4afa55326205030a8600b079a0a484b6bfa39312d6127a80633e00c93274fc"
+  },
+  "timing": {
+    "clock": "perf_counter_ns",
+    "measured_passes": 1,
+    "online_excludes": [
+      "checkpoint_loading",
+      "fixture_parsing",
+      "receipt_serialization"
+    ]
+  },
+  "byte_accounting": "UTF-8 canonical JSON, sorted keys, compact separators",
+  "model_visible_tokens": "NOT_APPLICABLE_SYNTHETIC_RECORDS",
+  "gates": {
+    "dmc_capability_min": 0.99,
+    "strong_conventional_capability_min": 0.99,
+    "capability_match_gap_max": 0.01,
+    "dmc_persistent_byte_ratio_load1024_max": 0.1,
+    "bounded_query_working_set_records_max": 16,
+    "dmc_all_history_capability_gap_max": 0.01
+  },
+  "allowed_terminal_states": [
+    "DMC_05A_BOUNDED_MEMORY_ADVANTAGE",
+    "DMC_05A_STORAGE_ONLY_ADVANTAGE",
+    "DMC_05A_CONVENTIONAL_RETRIEVAL_DOMINATES",
+    "DMC_05A_TRADEOFF",
+    "DMC_05A_ACCOUNTING_INVALID"
+  ],
+  "architecture_changes_authorized": false,
+  "training_authorized": false,
+  "post_result_threshold_changes_authorized": false
+}

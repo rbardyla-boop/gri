@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 10,
+    "eval_duration_ns": 139319426,
+    "load_duration_ns": 160883506,
+    "prompt_eval_count": 352,
+    "prompt_eval_duration_ns": 31030855,
+    "total_duration_ns": 371216914,
+    "wall_time_seconds": 0.37274395290296525
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-84-89-d1__53484f9f1ca24e11",
+  "key": "mco02_n100_s2601-records-84-89-d1",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. At -2 C, entity d_e6c99f8b4c269fc2 reaches its documented safety floor.\n2. The minimum safe temperature recorded for entity d_e3305ed6b0e04f8a is -39 C.\n3. For entity e_4b3e84aa52482e1f, staff now use the name entity e_a4096d174faa3209.\n4. For entity d_dbf43e500bb163e5, the supporting requirement is entity d_b13fce62a61b4e24.\n5. Entity d_20d293fc2bb60807 is not rated for operation below -38 C.\n6. For entity d_718507ae1e89edc8, the supporting requirement is entity d_4f20c8315b5a3985.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "53484f9f1ca24e11049ed5dbaeace54f045a271987fe10a0d548ccdc0269b7d7",
+  "response": {
+    "created_at": "2026-08-22T12:40:54.394526037Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 10,
+    "eval_duration": 139319426,
+    "load_duration": 160883506,
+    "message": {
+      "content": "D\nT\nR\nD\nT",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 352,
+    "prompt_eval_duration": 31030855,
+    "total_duration": 371216914
+  },
+  "response_content_sha256": "c6a6ed855a5ee4443d9ea924174b3c61c8a42585f6dcd1a8f2ca4d6b7a8a819c",
+  "schema_version": 1
+}

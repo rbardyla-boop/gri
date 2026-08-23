@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 74,
+    "eval_duration_ns": 1148638251,
+    "load_duration_ns": 154472996,
+    "prompt_eval_count": 1338,
+    "prompt_eval_duration_ns": 744293359,
+    "total_duration_ns": 2302880247,
+    "wall_time_seconds": 2.3047253279946744
+  },
+  "cache_hit": false,
+  "call_id": "conventional_rag-mco02_n100_s2601-q_387df4b1ec273d62__d8310261254e5eee",
+  "key": "conventional_rag-mco02_n100_s2601-q_387df4b1ec273d62",
+  "purpose": "reasoning",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Answer only from the supplied evidence. Current truth rules: an explicitly replaced or superseded record is inactive; among remaining contradictions, source priority is AUTHORITY over CURATED over UNVERIFIED, then later event time. Follow renames before upstream requirements until reaching a temperature threshold. Inspection is required exactly when deployment temperature is lower than the threshold. Return one line: ANSWER|terminal_entity|integer_threshold|YES_or_NO|comma_separated_ordered_record_ids. If evidence is insufficient, return UNKNOWN.",
+        "role": "system"
+      },
+      {
+        "content": "QUESTION\nEntity e_3e140db6e2909b5a is deployed at -6 C. Starting from that entity, follow its current name changes and upstream requirements until a temperature threshold is reached. Identify the terminal entity, threshold, whether inspection is required, and the ordered provenance record IDs.\n\nEVIDENCE\n[Record r_18d1d005fe68c033; source CURATED; event 83] At event time 83, After an unrelated maintenance discussion, a correction replacing record r_5ada3d42f52ef597 states: Regarding entity e_3e140db6e2909b5a, its upstream requirement is entity e_1e746bfbcba30fcb. No other part of the archival narrative changed this statement.\n[Record r_5ada3d42f52ef597; source CURATED; event 32] At event time 32, During a routine archive review, the ledger states: Entity e_3e140db6e2909b5a relies on entity e_664c6ef6818375bb.\n[Record r_9dd715fcfea44d65; source CURATED; event 98] At event time 98, During a routine archive review, the ledger states: Entity d_2ab1fa9bd8004312 has a failure threshold of -53 C.\n[Record r_7bbc473cba092111; source AUTHORITY; event 3] At event time 3, the ledger states: Entity e_fc9f746eaef57ca8 has a failure threshold of -21 C. This was recorded alongside unrelated scheduling notes.\n[Record r_62f4278a6b91dc05; source AUTHORITY; event 43] At event time 43, After an unrelated maintenance discussion, the ledger states: Entity d_f74170286c500418 has a failure threshold of 30 C. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_a0cec9c718924a47; source CURATED; event 27] At event time 27, In the ordinary course of plant reporting, the ledger states: Entity d_458d6b587d124139 has a failure threshold of -19 C. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_08c74a4a473986a4; source AUTHORITY; event 35] At event time 35, In the ordinary course of plant reporting, the ledger states: Entity d_9bfaa114ebdcf390 has a failure threshold of -48 C. This was recorded alongside unrelated scheduling notes.\n[Record r_30b64165b0f64e0d; source CURATED; event 16] At event time 16, During a routine archive review, the ledger states: Regarding entity d_bca55b91b989108c, its upstream requirement is entity d_270005fdaa946cf9. No other part of the archival narrative changed this statement.\n[Record r_43121fbfec557390; source UNVERIFIED; event 14] At event time 14, During a routine archive review, the ledger states: Regarding entity d_ada2b811af3ef8ee, its upstream requirement is entity d_2c915f2d8138c3ad. No other part of the archival narrative changed this statement.\n[Record r_a4a6616d27bb6f04; source CURATED; event 80] At event time 80, After an unrelated maintenance discussion, the ledger states: Regarding entity e_8072858756aac11f, its upstream requirement is entity e_5f5ea33480968495.\n[Record r_ff9f5a347a6e5db8; source UNVERIFIED; event 51] At event time 51, the ledger states: Regarding entity d_7d1adf905ac2312b, its upstream requirement is entity d_580817447157a9e4. No other part of the archival narrative changed this statement.\n[Record r_fc0993afd4eea0a0; source AUTHORITY; event 38] At event time 38, After an unrelated maintenance discussion, the ledger states: Regarding entity d_cd6874c28f02ddc6, its upstream requirement is entity d_d22489d8e6fcc781.\n[Record r_ddbb246fcac94e71; source UNVERIFIED; event 33] At event time 33, After an unrelated maintenance discussion, the ledger states: Regarding entity d_c87518db5f10bac4, its upstream requirement is entity d_adf20cffe05f57ae. This was recorded alongside unrelated scheduling notes.\n[Record r_283714e248645e1c; source AUTHORITY; event 34] At event time 34, In the ordinary course of plant reporting, the ledger states: Regarding entity d_ef048f096a1f5803, its upstream requirement is entity d_afba5bf6c527e9c0. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_c7b2b29d8577d5f6; source AUTHORITY; event 24] At event time 24, During a routine archive review, the ledger states: The minimum safe temperature recorded for entity e_e0c6ead107d30a9e is -23 C. No other part of the archival narrative changed this statement.\n[Record r_07f6fbdf77ae343a; source AUTHORITY; event 23] At event time 23, After an unrelated maintenance discussion, the ledger states: The archived temperature floor for entity e_1e746bfbcba30fcb is -11 C. No other part of the archival narrative changed this statement.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 160,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "d8310261254e5eee0e321e61749d24fd22c549e562e727a72de752af17be1e8c",
+  "response": {
+    "created_at": "2026-08-22T12:35:27.675023722Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 74,
+    "eval_duration": 1148638251,
+    "load_duration": 154472996,
+    "message": {
+      "content": "ANSWER|d_2ab1fa9bd8004312|-53 YES_or_NO,r_9dd715fcfea44d65,r_18d1d005fe68c033,r_5ada3d42f52ef597,r_7bbc473cba092111,r_c7b2b29d8577d5f6",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 1338,
+    "prompt_eval_duration": 744293359,
+    "total_duration": 2302880247
+  },
+  "response_content_sha256": "f0bce43157bc4e31c06c97795c376aee17ac30d2c35610b2e34aef799c79679c",
+  "schema_version": 1
+}

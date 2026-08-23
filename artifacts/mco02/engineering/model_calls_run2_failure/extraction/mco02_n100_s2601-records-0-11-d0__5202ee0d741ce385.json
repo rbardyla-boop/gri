@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 24,
+    "eval_duration_ns": 349261353,
+    "load_duration_ns": 167354312,
+    "prompt_eval_count": 505,
+    "prompt_eval_duration_ns": 359224953,
+    "total_duration_ns": 960090848,
+    "wall_time_seconds": 0.9942175050964579
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-0-11-d0__5202ee0d741ce385",
+  "key": "mco02_n100_s2601-records-0-11-d0",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. Regarding entity e_82deb237b3b6109d, it ceases safe operation below 6 C.\n2. The operations of entity e_a4096d174faa3209 draw on entity e_cd058e8660fc0028.\n3. The operations of entity e_576aeaa8b0352792 draw on entity e_bd8023bdd200cf7a.\n4. Entity e_fc9f746eaef57ca8 has a failure threshold of -21 C.\n5. When entity e_ad12903c5618c9fa runs, it depends upon entity e_3b5398f761d8ff00.\n6. Regarding entity d_f881f75f29c266b7, it ceases safe operation below -53 C.\n7. Regarding entity d_25ce4606ed52fddd, the registry changed its designation to entity d_a24264219397b24e.\n8. The minimum safe temperature recorded for entity d_2b98dcf3a56a9a6b is -49 C.\n9. The archived temperature floor for entity e_d9266ac346b75feb is -25 C.\n10. Entity d_9f2ad116444e121f relies on entity d_cfe9f8cfeee599b8.\n11. The operations of entity e_4bdf1e221180abf1 draw on entity e_ab3d5196cc17b461.\n12. Entity d_228ee672626fc22f is not rated for operation below -50 C.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 36,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "5202ee0d741ce38589fbe7c32139b228587fb5955bbccfe21148dc370e3526d1",
+  "response": {
+    "created_at": "2026-08-22T12:40:46.757448809Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 24,
+    "eval_duration": 349261353,
+    "load_duration": 167354312,
+    "message": {
+      "content": "D\nD\nD\nT\nD\nT\nR\nT\nT\nD\nD\nT",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 505,
+    "prompt_eval_duration": 359224953,
+    "total_duration": 960090848
+  },
+  "response_content_sha256": "8f2c3342655f215e0ee7eb9a1b9c2431235ef7787bebc349a8bcdfed0fbc4761",
+  "schema_version": 1
+}

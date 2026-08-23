@@ -1,0 +1,120 @@
+{
+  "accounting": {
+    "eval_count": 84,
+    "eval_duration_ns": 1308736812,
+    "load_duration_ns": 165026018,
+    "prompt_eval_count": 1351,
+    "prompt_eval_duration_ns": 741703854,
+    "total_duration_ns": 5694221383,
+    "wall_time_seconds": 5.695049276924692
+  },
+  "cache_hit": false,
+  "call_id": "rolling_summary-mco02_n100_s2601-q_387df4b1ec273d62__25b4743048681641",
+  "key": "rolling_summary-mco02_n100_s2601-q_387df4b1ec273d62",
+  "purpose": "reasoning",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "failure_threshold": {
+          "enum": [
+            -53,
+            -30,
+            -20,
+            -5,
+            6
+          ],
+          "type": "integer"
+        },
+        "path_record_ids": {
+          "items": {
+            "enum": [
+              "r_15e82dcaa1811314",
+              "r_1956b274a614c1d6",
+              "r_387df4b1ec273d62",
+              "r_3eb2716c64f1e61d",
+              "r_43121fbfec557390",
+              "r_4aaeb661933e9472",
+              "r_7710139cdb277abe",
+              "r_7c7895064dda8c65",
+              "r_9545eda928bc163a",
+              "r_9dd715fcfea44d65",
+              "r_a8c7106ca67c8a09",
+              "r_af1880e5cfafbea2",
+              "r_b2110fe88641edde",
+              "r_b352f850102eed30",
+              "r_b54b6a199e781f94",
+              "r_d07533adf414623f"
+            ],
+            "type": "string"
+          },
+          "maxItems": 16,
+          "minItems": 0,
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "ANSWER"
+          ],
+          "type": "string"
+        },
+        "terminal_entity": {
+          "enum": [
+            "d_2ab1fa9bd8004312",
+            "d_f881f75f29c266b7",
+            "e_5f5ea33480968495",
+            "e_664c6ef6818375bb",
+            "e_6e67800909016920",
+            "e_82deb237b3b6109d"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "terminal_entity",
+        "failure_threshold",
+        "path_record_ids"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Answer only from the supplied evidence. Current truth rules: an explicitly replaced or superseded record is inactive; among remaining contradictions, source priority is AUTHORITY over CURATED over UNVERIFIED, then later event time. Follow renames before upstream requirements until reaching a temperature threshold. The terminal_entity is the subject of the winning failure-threshold record, and the failure_threshold is that record's integer value, never the deployment temperature. path_record_ids contains the winning record IDs in traversal order. Return only the required evidence-grounded JSON. Inspection is derived for every system by the same transparent integer comparison after this response.",
+        "role": "system"
+      },
+      {
+        "content": "QUESTION\nEntity e_3e140db6e2909b5a is deployed at -6 C. Starting from that entity, follow its current name changes and upstream requirements until a temperature threshold is reached. Identify the terminal entity, threshold, whether inspection is required, and the ordered provenance record IDs.\n\nEVIDENCE\n[Record r_a8c7106ca67c8a09; source AUTHORITY; event 6] At event time 6, During a routine archive review, the ledger states: Regarding entity d_25ce4606ed52fddd, the registry changed its designation to entity d_a24264219397b24e. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_3eb2716c64f1e61d; source CURATED; event 1] At event time 1, After an unrelated maintenance discussion, the ledger states: The operations of entity e_a4096d174faa3209 draw on entity e_cd058e8660fc0028. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_7c7895064dda8c65; source UNVERIFIED; event 5] At event time 5, During a routine archive review, the ledger states: Regarding entity d_f881f75f29c266b7, it ceases safe operation below -53 C. No other part of the archival narrative changed this statement.\n[Record r_af1880e5cfafbea2; source AUTHORITY; event 0] At event time 0, In the ordinary course of plant reporting, the ledger states: Regarding entity e_82deb237b3b6109d, it ceases safe operation below 6 C. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_1956b274a614c1d6; source AUTHORITY; event 30] At event time 30, the ledger states: For entity d_622e1e962c7474c0, staff now use the name entity d_b7e50b32eb02c1cb.\n[Record r_b352f850102eed30; source CURATED; event 13] At event time 13, In the ordinary course of plant reporting, the ledger states: The operations of entity e_4f0a5db1fc56cb2c draw on entity e_c0c80e73458e3429. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_43121fbfec557390; source UNVERIFIED; event 14] At event time 14, During a routine archive review, the ledger states: Regarding entity d_ada2b811af3ef8ee, its upstream requirement is entity d_2c915f2d8138c3ad. No other part of the archival narrative changed this statement.\n[Record r_9545eda928bc163a; source CURATED; event 39] At event time 39, the ledger states: Regarding entity e_ab3d5196cc17b461, the registry changed its designation to entity e_ad12903c5618c9fa. No other part of the archival narrative changed this statement.\n[Record r_b2110fe88641edde; source AUTHORITY; event 92] At event time 92, the ledger states: For entity d_86ce9927371d6bd9, the supporting requirement is entity d_8ed94578255ee0b5. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_4aaeb661933e9472; source AUTHORITY; event 93] At event time 93, After an unrelated maintenance discussion, the ledger states: For entity d_133645a4fe8fe4f4, staff now use the name entity d_5b081eecfd9363bb. This was recorded alongside unrelated scheduling notes.\n[Record r_b54b6a199e781f94; source CURATED; event 94] At event time 94, In the ordinary course of plant reporting, the ledger states: For entity e_b07bd63f0266c767, the supporting requirement is entity e_a3dc79cd56ad6f97.\n[Record r_15e82dcaa1811314; source CURATED; event 95] At event time 95, the ledger states: Entity d_e44682139dbb5d4b relies on entity d_4fa944e812c2622a. This was recorded alongside unrelated scheduling notes.\n[Record r_7710139cdb277abe; source AUTHORITY; event 96] At event time 96, During a routine archive review, the ledger states: The minimum safe temperature recorded for entity e_6e67800909016920 is -30 C. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_d07533adf414623f; source AUTHORITY; event 97] At event time 97, the ledger states: At -20 C, entity e_664c6ef6818375bb reaches its documented safety floor. The filing also mentioned routine paperwork with no operational consequence.\n[Record r_9dd715fcfea44d65; source CURATED; event 98] At event time 98, During a routine archive review, the ledger states: Entity d_2ab1fa9bd8004312 has a failure threshold of -53 C.\n[Record r_387df4b1ec273d62; source AUTHORITY; event 99] At event time 99, During a routine archive review, the ledger states: At -5 C, entity e_5f5ea33480968495 reaches its documented safety floor. This was recorded alongside unrelated scheduling notes.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 192,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "25b4743048681641cb1ca63ff6966b78559fc3becce6cefe569acd5b3b874c68",
+  "response": {
+    "created_at": "2026-08-22T13:02:17.002921266Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 84,
+    "eval_duration": 1308736812,
+    "load_duration": 165026018,
+    "message": {
+      "content": "{\n    \"status\": \"ANSWER\",\n    \"terminal_entity\": \"e_5f5ea33480968495\",\n    \"failure_threshold\": -53,\n    \"path_record_ids\": [\n        \"r_d07533adf414623f\",\n        \"r_9dd715fcfea44d65\",\n        \"r_387df4b1ec273d62\"\n    ]\n}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 1351,
+    "prompt_eval_duration": 741703854,
+    "total_duration": 5694221383
+  },
+  "response_content_sha256": "868abd38a6c5719e6af17a29921b3c36b77140091f087a78ab0a2a4ab6266e47",
+  "schema_version": 1
+}

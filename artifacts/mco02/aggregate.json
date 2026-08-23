@@ -1,0 +1,3718 @@
+{
+  "amortization": {
+    "by_history_size": {
+      "100": {
+        "conventional_rag": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1366.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 75.375
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1375.875,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 75.125
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1672.1875,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1446.4375,
+              "sensitivity_output_weight_10": 2123.6875
+            },
+            "128": {
+              "mean_expensive_token_units": 214040.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 185144.0,
+              "sensitivity_output_weight_10": 271832.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3344.375,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2892.875,
+              "sensitivity_output_weight_10": 4247.375
+            },
+            "32": {
+              "mean_expensive_token_units": 53510.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 46286.0,
+              "sensitivity_output_weight_10": 67958.0
+            },
+            "8": {
+              "mean_expensive_token_units": 13377.5,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 11571.5,
+              "sensitivity_output_weight_10": 16989.5
+            }
+          }
+        },
+        "full_context": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 7556.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 103.25
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 7498.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 99.625
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 7933.25,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 7628.9375,
+              "sensitivity_output_weight_10": 8541.875
+            },
+            "128": {
+              "mean_expensive_token_units": 1015456.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 976504.0,
+              "sensitivity_output_weight_10": 1093360.0
+            },
+            "2": {
+              "mean_expensive_token_units": 15866.5,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 15257.875,
+              "sensitivity_output_weight_10": 17083.75
+            },
+            "32": {
+              "mean_expensive_token_units": 253864.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 244126.0,
+              "sensitivity_output_weight_10": 273340.0
+            },
+            "8": {
+              "mean_expensive_token_units": 63466.0,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 61031.5,
+              "sensitivity_output_weight_10": 68335.0
+            }
+          }
+        },
+        "iterative_need_retrieval": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2601",
+              "ingestion_input_tokens": 4000.0,
+              "ingestion_model_calls": 9.0,
+              "ingestion_output_tokens": 611.0,
+              "mean_query_input_tokens": 870.875,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 177.625
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2602",
+              "ingestion_input_tokens": 4032.0,
+              "ingestion_model_calls": 9.0,
+              "ingestion_output_tokens": 615.0,
+              "mean_query_input_tokens": 629.0,
+              "mean_query_model_calls": 2.625,
+              "mean_query_output_tokens": 127.875
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 7828.9375,
+              "mean_model_calls": 12.0625,
+              "sensitivity_output_weight_1": 5531.6875,
+              "sensitivity_output_weight_10": 12423.4375
+            },
+            "128": {
+              "mean_expensive_token_units": 180668.0,
+              "mean_model_calls": 401.0,
+              "sensitivity_output_weight_1": 120173.0,
+              "sensitivity_output_weight_10": 301658.0
+            },
+            "2": {
+              "mean_expensive_token_units": 9189.875,
+              "mean_model_calls": 15.125,
+              "sensitivity_output_weight_1": 6434.375,
+              "sensitivity_output_weight_10": 14700.875
+            },
+            "32": {
+              "mean_expensive_token_units": 50018.0,
+              "mean_model_calls": 107.0,
+              "sensitivity_output_weight_1": 33515.0,
+              "sensitivity_output_weight_10": 83024.0
+            },
+            "8": {
+              "mean_expensive_token_units": 17355.5,
+              "mean_model_calls": 33.5,
+              "sensitivity_output_weight_1": 11850.5,
+              "sensitivity_output_weight_10": 28365.5
+            }
+          }
+        },
+        "recent_window": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1294.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 75.25
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1440.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 112.125
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1742.25,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1461.1875,
+              "sensitivity_output_weight_10": 2304.375
+            },
+            "128": {
+              "mean_expensive_token_units": 223008.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 187032.0,
+              "sensitivity_output_weight_10": 294960.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3484.5,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2922.375,
+              "sensitivity_output_weight_10": 4608.75
+            },
+            "32": {
+              "mean_expensive_token_units": 55752.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 46758.0,
+              "sensitivity_output_weight_10": 73740.0
+            },
+            "8": {
+              "mean_expensive_token_units": 13938.0,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 11689.5,
+              "sensitivity_output_weight_10": 18435.0
+            }
+          }
+        },
+        "rolling_summary": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2601",
+              "ingestion_input_tokens": 7440.0,
+              "ingestion_model_calls": 1.0,
+              "ingestion_output_tokens": 160.0,
+              "mean_query_input_tokens": 1348.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 85.25
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2602",
+              "ingestion_input_tokens": 7381.0,
+              "ingestion_model_calls": 1.0,
+              "ingestion_output_tokens": 160.0,
+              "mean_query_input_tokens": 1463.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 144.75
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 9916.5,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 9091.5,
+              "sensitivity_output_weight_10": 11566.5
+            },
+            "128": {
+              "mean_expensive_token_units": 246898.5,
+              "mean_model_calls": 129.0,
+              "sensitivity_output_weight_1": 202258.5,
+              "sensitivity_output_weight_10": 336178.5
+            },
+            "2": {
+              "mean_expensive_token_units": 11782.5,
+              "mean_model_calls": 3.0,
+              "sensitivity_output_weight_1": 10612.5,
+              "sensitivity_output_weight_10": 14122.5
+            },
+            "32": {
+              "mean_expensive_token_units": 67762.5,
+              "mean_model_calls": 33.0,
+              "sensitivity_output_weight_1": 56242.5,
+              "sensitivity_output_weight_10": 90802.5
+            },
+            "8": {
+              "mean_expensive_token_units": 22978.5,
+              "mean_model_calls": 9.0,
+              "sensitivity_output_weight_1": 19738.5,
+              "sensitivity_output_weight_10": 29458.5
+            }
+          }
+        },
+        "structured_exact_planner": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2601",
+              "ingestion_input_tokens": 4000.0,
+              "ingestion_model_calls": 9.0,
+              "ingestion_output_tokens": 611.0,
+              "mean_query_input_tokens": 414.0,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 79.125
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n100_s2602",
+              "ingestion_input_tokens": 4032.0,
+              "ingestion_model_calls": 9.0,
+              "ingestion_output_tokens": 615.0,
+              "mean_query_input_tokens": 364.625,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 60.5
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 7136.5625,
+              "mean_model_calls": 10.0,
+              "sensitivity_output_weight_1": 5088.125,
+              "sensitivity_output_weight_10": 11233.4375
+            },
+            "128": {
+              "mean_expensive_token_units": 92044.0,
+              "mean_model_calls": 137.0,
+              "sensitivity_output_weight_1": 63397.0,
+              "sensitivity_output_weight_10": 149338.0
+            },
+            "2": {
+              "mean_expensive_token_units": 7805.125,
+              "mean_model_calls": 11.0,
+              "sensitivity_output_weight_1": 5547.25,
+              "sensitivity_output_weight_10": 12320.875
+            },
+            "32": {
+              "mean_expensive_token_units": 27862.0,
+              "mean_model_calls": 41.0,
+              "sensitivity_output_weight_1": 19321.0,
+              "sensitivity_output_weight_10": 44944.0
+            },
+            "8": {
+              "mean_expensive_token_units": 11816.5,
+              "mean_model_calls": 17.0,
+              "sensitivity_output_weight_1": 8302.0,
+              "sensitivity_output_weight_10": 18845.5
+            }
+          }
+        }
+      },
+      "1000": {
+        "conventional_rag": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1291.75,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 79.375
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1279.875,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 89.25
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1623.0625,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1370.125,
+              "sensitivity_output_weight_10": 2128.9375
+            },
+            "128": {
+              "mean_expensive_token_units": 207752.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 175376.0,
+              "sensitivity_output_weight_10": 272504.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3246.125,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2740.25,
+              "sensitivity_output_weight_10": 4257.875
+            },
+            "32": {
+              "mean_expensive_token_units": 51938.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 43844.0,
+              "sensitivity_output_weight_10": 68126.0
+            },
+            "8": {
+              "mean_expensive_token_units": 12984.5,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 10961.0,
+              "sensitivity_output_weight_10": 17031.5
+            }
+          }
+        },
+        "full_context": {
+          "feasible_histories": 0,
+          "history_costs": [
+            {
+              "feasible": false,
+              "history_id": "mco02_n1000_s2601",
+              "ingestion_input_tokens": 0,
+              "ingestion_output_tokens": 0
+            },
+            {
+              "feasible": false,
+              "history_id": "mco02_n1000_s2602",
+              "ingestion_input_tokens": 0,
+              "ingestion_output_tokens": 0
+            }
+          ],
+          "query_horizons": {
+            "1": null,
+            "128": null,
+            "2": null,
+            "32": null,
+            "8": null
+          }
+        },
+        "iterative_need_retrieval": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2601",
+              "ingestion_input_tokens": 39792.0,
+              "ingestion_model_calls": 84.0,
+              "ingestion_output_tokens": 6145.0,
+              "mean_query_input_tokens": 920.125,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 188.5
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2602",
+              "ingestion_input_tokens": 39765.0,
+              "ingestion_model_calls": 84.0,
+              "ingestion_output_tokens": 6131.0,
+              "mean_query_input_tokens": 900.125,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 182.25
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 65982.125,
+              "mean_model_calls": 87.5,
+              "sensitivity_output_weight_1": 47012.0,
+              "sensitivity_output_weight_10": 103922.375
+            },
+            "128": {
+              "mean_expensive_token_units": 275738.5,
+              "mean_model_calls": 532.0,
+              "sensitivity_output_weight_1": 186140.5,
+              "sensitivity_output_weight_10": 454934.5
+            },
+            "2": {
+              "mean_expensive_token_units": 67633.75,
+              "mean_model_calls": 91.0,
+              "sensitivity_output_weight_1": 48107.5,
+              "sensitivity_output_weight_10": 106686.25
+            },
+            "32": {
+              "mean_expensive_token_units": 117182.5,
+              "mean_model_calls": 196.0,
+              "sensitivity_output_weight_1": 80972.5,
+              "sensitivity_output_weight_10": 189602.5
+            },
+            "8": {
+              "mean_expensive_token_units": 77543.5,
+              "mean_model_calls": 112.0,
+              "sensitivity_output_weight_1": 54680.5,
+              "sensitivity_output_weight_10": 123269.5
+            }
+          }
+        },
+        "recent_window": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1378.625,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 121.875
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1375.875,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 67.875
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1756.75,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1472.125,
+              "sensitivity_output_weight_10": 2326.0
+            },
+            "128": {
+              "mean_expensive_token_units": 224864.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 188432.0,
+              "sensitivity_output_weight_10": 297728.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3513.5,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2944.25,
+              "sensitivity_output_weight_10": 4652.0
+            },
+            "32": {
+              "mean_expensive_token_units": 56216.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 47108.0,
+              "sensitivity_output_weight_10": 74432.0
+            },
+            "8": {
+              "mean_expensive_token_units": 14054.0,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 11777.0,
+              "sensitivity_output_weight_10": 18608.0
+            }
+          }
+        },
+        "rolling_summary": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2601",
+              "ingestion_input_tokens": 65536.0,
+              "ingestion_model_calls": 4.0,
+              "ingestion_output_tokens": 640.0,
+              "mean_query_input_tokens": 1347.625,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 91.75
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2602",
+              "ingestion_input_tokens": 65536.0,
+              "ingestion_model_calls": 4.0,
+              "ingestion_output_tokens": 640.0,
+              "mean_query_input_tokens": 1362.875,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 76.0
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 69786.75,
+              "mean_model_calls": 5.0,
+              "sensitivity_output_weight_1": 67615.125,
+              "sensitivity_output_weight_10": 74130.0
+            },
+            "128": {
+              "mean_expensive_token_units": 284512.0,
+              "mean_model_calls": 132.0,
+              "sensitivity_output_weight_1": 250384.0,
+              "sensitivity_output_weight_10": 352768.0
+            },
+            "2": {
+              "mean_expensive_token_units": 71477.5,
+              "mean_model_calls": 6.0,
+              "sensitivity_output_weight_1": 69054.25,
+              "sensitivity_output_weight_10": 76324.0
+            },
+            "32": {
+              "mean_expensive_token_units": 122200.0,
+              "mean_model_calls": 36.0,
+              "sensitivity_output_weight_1": 112228.0,
+              "sensitivity_output_weight_10": 142144.0
+            },
+            "8": {
+              "mean_expensive_token_units": 81622.0,
+              "mean_model_calls": 12.0,
+              "sensitivity_output_weight_1": 77689.0,
+              "sensitivity_output_weight_10": 89488.0
+            }
+          }
+        },
+        "structured_exact_planner": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2601",
+              "ingestion_input_tokens": 39792.0,
+              "ingestion_model_calls": 84.0,
+              "ingestion_output_tokens": 6145.0,
+              "mean_query_input_tokens": 416.75,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 85.25
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n1000_s2602",
+              "ingestion_input_tokens": 39765.0,
+              "ingestion_model_calls": 84.0,
+              "ingestion_output_tokens": 6131.0,
+              "mean_query_input_tokens": 413.125,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 81.25
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 65078.4375,
+              "mean_model_calls": 85.0,
+              "sensitivity_output_weight_1": 46414.6875,
+              "sensitivity_output_weight_10": 102405.9375
+            },
+            "128": {
+              "mean_expensive_token_units": 160066.5,
+              "mean_model_calls": 212.0,
+              "sensitivity_output_weight_1": 109684.5,
+              "sensitivity_output_weight_10": 260830.5
+            },
+            "2": {
+              "mean_expensive_token_units": 65826.375,
+              "mean_model_calls": 86.0,
+              "sensitivity_output_weight_1": 46912.875,
+              "sensitivity_output_weight_10": 103653.375
+            },
+            "32": {
+              "mean_expensive_token_units": 88264.5,
+              "mean_model_calls": 116.0,
+              "sensitivity_output_weight_1": 61858.5,
+              "sensitivity_output_weight_10": 141076.5
+            },
+            "8": {
+              "mean_expensive_token_units": 70314.0,
+              "mean_model_calls": 92.0,
+              "sensitivity_output_weight_1": 49902.0,
+              "sensitivity_output_weight_10": 111138.0
+            }
+          }
+        }
+      },
+      "10000": {
+        "conventional_rag": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1302.375,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 86.125
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1295.0,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 79.25
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1629.4375,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1381.375,
+              "sensitivity_output_weight_10": 2125.5625
+            },
+            "128": {
+              "mean_expensive_token_units": 208568.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 176816.0,
+              "sensitivity_output_weight_10": 272072.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3258.875,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2762.75,
+              "sensitivity_output_weight_10": 4251.125
+            },
+            "32": {
+              "mean_expensive_token_units": 52142.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 44204.0,
+              "sensitivity_output_weight_10": 68018.0
+            },
+            "8": {
+              "mean_expensive_token_units": 13035.5,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 11051.0,
+              "sensitivity_output_weight_10": 17004.5
+            }
+          }
+        },
+        "full_context": {
+          "feasible_histories": 0,
+          "history_costs": [
+            {
+              "feasible": false,
+              "history_id": "mco02_n10000_s2601",
+              "ingestion_input_tokens": 0,
+              "ingestion_output_tokens": 0
+            },
+            {
+              "feasible": false,
+              "history_id": "mco02_n10000_s2602",
+              "ingestion_input_tokens": 0,
+              "ingestion_output_tokens": 0
+            }
+          ],
+          "query_horizons": {
+            "1": null,
+            "128": null,
+            "2": null,
+            "32": null,
+            "8": null
+          }
+        },
+        "iterative_need_retrieval": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2601",
+              "ingestion_input_tokens": 397758.0,
+              "ingestion_model_calls": 834.0,
+              "ingestion_output_tokens": 61343.0,
+              "mean_query_input_tokens": 913.625,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 187.25
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2602",
+              "ingestion_input_tokens": 398055.0,
+              "ingestion_model_calls": 834.0,
+              "ingestion_output_tokens": 61387.0,
+              "mean_query_input_tokens": 906.375,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 190.0
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 645031.0,
+              "mean_model_calls": 837.5,
+              "sensitivity_output_weight_1": 460370.125,
+              "sensitivity_output_weight_10": 1014352.75
+            },
+            "128": {
+              "mean_expensive_token_units": 856422.5,
+              "mean_model_calls": 1282.0,
+              "sensitivity_output_weight_1": 599895.5,
+              "sensitivity_output_weight_10": 1369476.5
+            },
+            "2": {
+              "mean_expensive_token_units": 646695.5,
+              "mean_model_calls": 841.0,
+              "sensitivity_output_weight_1": 461468.75,
+              "sensitivity_output_weight_10": 1017149.0
+            },
+            "32": {
+              "mean_expensive_token_units": 696630.5,
+              "mean_model_calls": 946.0,
+              "sensitivity_output_weight_1": 494427.5,
+              "sensitivity_output_weight_10": 1101036.5
+            },
+            "8": {
+              "mean_expensive_token_units": 656682.5,
+              "mean_model_calls": 862.0,
+              "sensitivity_output_weight_1": 468060.5,
+              "sensitivity_output_weight_10": 1033926.5
+            }
+          }
+        },
+        "recent_window": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1405.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 36.0
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1474.375,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 118.75
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1749.4375,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1517.3125,
+              "sensitivity_output_weight_10": 2213.6875
+            },
+            "128": {
+              "mean_expensive_token_units": 223928.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 194216.0,
+              "sensitivity_output_weight_10": 283352.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3498.875,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 3034.625,
+              "sensitivity_output_weight_10": 4427.375
+            },
+            "32": {
+              "mean_expensive_token_units": 55982.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 48554.0,
+              "sensitivity_output_weight_10": 70838.0
+            },
+            "8": {
+              "mean_expensive_token_units": 13995.5,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 12138.5,
+              "sensitivity_output_weight_10": 17709.5
+            }
+          }
+        },
+        "rolling_summary": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2601",
+              "ingestion_input_tokens": 640858.0,
+              "ingestion_model_calls": 40.0,
+              "ingestion_output_tokens": 6256.0,
+              "mean_query_input_tokens": 1316.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 121.0
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2602",
+              "ingestion_input_tokens": 640941.0,
+              "ingestion_model_calls": 40.0,
+              "ingestion_output_tokens": 6116.0,
+              "mean_query_input_tokens": 1447.375,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 79.75
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 667426.9375,
+              "mean_model_calls": 41.0,
+              "sensitivity_output_weight_1": 648567.8125,
+              "sensitivity_output_weight_10": 705145.1875
+            },
+            "128": {
+              "mean_expensive_token_units": 893923.5,
+              "mean_model_calls": 168.0,
+              "sensitivity_output_weight_1": 836821.5,
+              "sensitivity_output_weight_10": 1008127.5
+            },
+            "2": {
+              "mean_expensive_token_units": 669210.375,
+              "mean_model_calls": 42.0,
+              "sensitivity_output_weight_1": 650050.125,
+              "sensitivity_output_weight_10": 707530.875
+            },
+            "32": {
+              "mean_expensive_token_units": 722713.5,
+              "mean_model_calls": 72.0,
+              "sensitivity_output_weight_1": 694519.5,
+              "sensitivity_output_weight_10": 779101.5
+            },
+            "8": {
+              "mean_expensive_token_units": 679911.0,
+              "mean_model_calls": 48.0,
+              "sensitivity_output_weight_1": 658944.0,
+              "sensitivity_output_weight_10": 721845.0
+            }
+          }
+        },
+        "structured_exact_planner": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2601",
+              "ingestion_input_tokens": 397758.0,
+              "ingestion_model_calls": 834.0,
+              "ingestion_output_tokens": 61343.0,
+              "mean_query_input_tokens": 417.625,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 84.25
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n10000_s2602",
+              "ingestion_input_tokens": 398055.0,
+              "ingestion_model_calls": 834.0,
+              "ingestion_output_tokens": 61387.0,
+              "mean_query_input_tokens": 419.0,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 91.5
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 644136.3125,
+              "mean_model_calls": 835.0,
+              "sensitivity_output_weight_1": 459777.6875,
+              "sensitivity_output_weight_10": 1012853.5625
+            },
+            "128": {
+              "mean_expensive_token_units": 741902.5,
+              "mean_model_calls": 962.0,
+              "sensitivity_output_weight_1": 524063.5,
+              "sensitivity_output_weight_10": 1177580.5
+            },
+            "2": {
+              "mean_expensive_token_units": 644906.125,
+              "mean_model_calls": 836.0,
+              "sensitivity_output_weight_1": 460283.875,
+              "sensitivity_output_weight_10": 1014150.625
+            },
+            "32": {
+              "mean_expensive_token_units": 668000.5,
+              "mean_model_calls": 866.0,
+              "sensitivity_output_weight_1": 475469.5,
+              "sensitivity_output_weight_10": 1053062.5
+            },
+            "8": {
+              "mean_expensive_token_units": 649525.0,
+              "mean_model_calls": 842.0,
+              "sensitivity_output_weight_1": 463321.0,
+              "sensitivity_output_weight_10": 1021933.0
+            }
+          }
+        }
+      },
+      "5000": {
+        "conventional_rag": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1323.375,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 77.875
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1333.0,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 84.875
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1653.6875,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1409.5625,
+              "sensitivity_output_weight_10": 2141.9375
+            },
+            "128": {
+              "mean_expensive_token_units": 211672.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 180424.0,
+              "sensitivity_output_weight_10": 274168.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3307.375,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2819.125,
+              "sensitivity_output_weight_10": 4283.875
+            },
+            "32": {
+              "mean_expensive_token_units": 52918.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 45106.0,
+              "sensitivity_output_weight_10": 68542.0
+            },
+            "8": {
+              "mean_expensive_token_units": 13229.5,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 11276.5,
+              "sensitivity_output_weight_10": 17135.5
+            }
+          }
+        },
+        "full_context": {
+          "feasible_histories": 0,
+          "history_costs": [
+            {
+              "feasible": false,
+              "history_id": "mco02_n5000_s2601",
+              "ingestion_input_tokens": 0,
+              "ingestion_output_tokens": 0
+            },
+            {
+              "feasible": false,
+              "history_id": "mco02_n5000_s2602",
+              "ingestion_input_tokens": 0,
+              "ingestion_output_tokens": 0
+            }
+          ],
+          "query_horizons": {
+            "1": null,
+            "128": null,
+            "2": null,
+            "32": null,
+            "8": null
+          }
+        },
+        "iterative_need_retrieval": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2601",
+              "ingestion_input_tokens": 198222.0,
+              "ingestion_model_calls": 417.0,
+              "ingestion_output_tokens": 30728.0,
+              "mean_query_input_tokens": 885.875,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 176.375
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2602",
+              "ingestion_input_tokens": 199127.0,
+              "ingestion_model_calls": 417.0,
+              "ingestion_output_tokens": 30650.0,
+              "mean_query_input_tokens": 916.625,
+              "mean_query_model_calls": 3.5,
+              "mean_query_output_tokens": 190.0
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 323064.5,
+              "mean_model_calls": 420.5,
+              "sensitivity_output_weight_1": 230447.9375,
+              "sensitivity_output_weight_10": 508297.625
+            },
+            "128": {
+              "mean_expensive_token_units": 530582.5,
+              "mean_model_calls": 865.0,
+              "sensitivity_output_weight_1": 368171.5,
+              "sensitivity_output_weight_10": 855404.5
+            },
+            "2": {
+              "mean_expensive_token_units": 324698.5,
+              "mean_model_calls": 424.0,
+              "sensitivity_output_weight_1": 231532.375,
+              "sensitivity_output_weight_10": 511030.75
+            },
+            "32": {
+              "mean_expensive_token_units": 373718.5,
+              "mean_model_calls": 529.0,
+              "sensitivity_output_weight_1": 264065.5,
+              "sensitivity_output_weight_10": 593024.5
+            },
+            "8": {
+              "mean_expensive_token_units": 334502.5,
+              "mean_model_calls": 445.0,
+              "sensitivity_output_weight_1": 238039.0,
+              "sensitivity_output_weight_10": 527429.5
+            }
+          }
+        },
+        "recent_window": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2601",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1372.125,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 99.5
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2602",
+              "ingestion_input_tokens": 0.0,
+              "ingestion_model_calls": 0.0,
+              "ingestion_output_tokens": 0.0,
+              "mean_query_input_tokens": 1372.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 137.25
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 1845.8125,
+              "mean_model_calls": 1.0,
+              "sensitivity_output_weight_1": 1490.6875,
+              "sensitivity_output_weight_10": 2556.0625
+            },
+            "128": {
+              "mean_expensive_token_units": 236264.0,
+              "mean_model_calls": 128.0,
+              "sensitivity_output_weight_1": 190808.0,
+              "sensitivity_output_weight_10": 327176.0
+            },
+            "2": {
+              "mean_expensive_token_units": 3691.625,
+              "mean_model_calls": 2.0,
+              "sensitivity_output_weight_1": 2981.375,
+              "sensitivity_output_weight_10": 5112.125
+            },
+            "32": {
+              "mean_expensive_token_units": 59066.0,
+              "mean_model_calls": 32.0,
+              "sensitivity_output_weight_1": 47702.0,
+              "sensitivity_output_weight_10": 81794.0
+            },
+            "8": {
+              "mean_expensive_token_units": 14766.5,
+              "mean_model_calls": 8.0,
+              "sensitivity_output_weight_1": 11925.5,
+              "sensitivity_output_weight_10": 20448.5
+            }
+          }
+        },
+        "rolling_summary": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2601",
+              "ingestion_input_tokens": 322021.0,
+              "ingestion_model_calls": 20.0,
+              "ingestion_output_tokens": 3125.0,
+              "mean_query_input_tokens": 1355.125,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 87.0
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2602",
+              "ingestion_input_tokens": 322185.0,
+              "ingestion_model_calls": 20.0,
+              "ingestion_output_tokens": 3039.0,
+              "mean_query_input_tokens": 1412.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 99.75
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 336188.3125,
+              "mean_model_calls": 21.0,
+              "sensitivity_output_weight_1": 326662.1875,
+              "sensitivity_output_weight_10": 355240.5625
+            },
+            "128": {
+              "mean_expensive_token_units": 559367.0,
+              "mean_model_calls": 148.0,
+              "sensitivity_output_weight_1": 514265.0,
+              "sensitivity_output_weight_10": 649571.0
+            },
+            "2": {
+              "mean_expensive_token_units": 337945.625,
+              "mean_model_calls": 22.0,
+              "sensitivity_output_weight_1": 328139.375,
+              "sensitivity_output_weight_10": 357558.125
+            },
+            "32": {
+              "mean_expensive_token_units": 390665.0,
+              "mean_model_calls": 52.0,
+              "sensitivity_output_weight_1": 372455.0,
+              "sensitivity_output_weight_10": 427085.0
+            },
+            "8": {
+              "mean_expensive_token_units": 348489.5,
+              "mean_model_calls": 28.0,
+              "sensitivity_output_weight_1": 337002.5,
+              "sensitivity_output_weight_10": 371463.5
+            }
+          }
+        },
+        "structured_exact_planner": {
+          "feasible_histories": 2,
+          "history_costs": [
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2601",
+              "ingestion_input_tokens": 198222.0,
+              "ingestion_model_calls": 417.0,
+              "ingestion_output_tokens": 30728.0,
+              "mean_query_input_tokens": 415.25,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 76.375
+            },
+            {
+              "feasible": true,
+              "history_id": "mco02_n5000_s2602",
+              "ingestion_input_tokens": 199127.0,
+              "ingestion_model_calls": 417.0,
+              "ingestion_output_tokens": 30650.0,
+              "mean_query_input_tokens": 419.5,
+              "mean_query_model_calls": 1.0,
+              "mean_query_output_tokens": 86.625
+            }
+          ],
+          "query_horizons": {
+            "1": {
+              "mean_expensive_token_units": 322173.875,
+              "mean_model_calls": 418.0,
+              "sensitivity_output_weight_1": 229862.375,
+              "sensitivity_output_weight_10": 506796.875
+            },
+            "128": {
+              "mean_expensive_token_units": 416582.5,
+              "mean_model_calls": 545.0,
+              "sensitivity_output_weight_1": 293219.5,
+              "sensitivity_output_weight_10": 663308.5
+            },
+            "2": {
+              "mean_expensive_token_units": 322917.25,
+              "mean_model_calls": 419.0,
+              "sensitivity_output_weight_1": 230361.25,
+              "sensitivity_output_weight_10": 508029.25
+            },
+            "32": {
+              "mean_expensive_token_units": 345218.5,
+              "mean_model_calls": 449.0,
+              "sensitivity_output_weight_1": 245327.5,
+              "sensitivity_output_weight_10": 545000.5
+            },
+            "8": {
+              "mean_expensive_token_units": 327377.5,
+              "mean_model_calls": 425.0,
+              "sensitivity_output_weight_1": 233354.5,
+              "sensitivity_output_weight_10": 515423.5
+            }
+          }
+        }
+      }
+    },
+    "overall": {
+      "conventional_rag": {
+        "feasible_histories": 8,
+        "history_costs": [
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1302.375,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 86.125
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1295.0,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 79.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1291.75,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 79.375
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1279.875,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 89.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1366.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 75.375
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1375.875,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 75.125
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1323.375,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 77.875
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1333.0,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 84.875
+          }
+        ],
+        "query_horizons": {
+          "1": {
+            "mean_expensive_token_units": 1644.59375,
+            "mean_model_calls": 1.0,
+            "sensitivity_output_weight_1": 1401.875,
+            "sensitivity_output_weight_10": 2130.03125
+          },
+          "128": {
+            "mean_expensive_token_units": 210508.0,
+            "mean_model_calls": 128.0,
+            "sensitivity_output_weight_1": 179440.0,
+            "sensitivity_output_weight_10": 272644.0
+          },
+          "2": {
+            "mean_expensive_token_units": 3289.1875,
+            "mean_model_calls": 2.0,
+            "sensitivity_output_weight_1": 2803.75,
+            "sensitivity_output_weight_10": 4260.0625
+          },
+          "32": {
+            "mean_expensive_token_units": 52627.0,
+            "mean_model_calls": 32.0,
+            "sensitivity_output_weight_1": 44860.0,
+            "sensitivity_output_weight_10": 68161.0
+          },
+          "8": {
+            "mean_expensive_token_units": 13156.75,
+            "mean_model_calls": 8.0,
+            "sensitivity_output_weight_1": 11215.0,
+            "sensitivity_output_weight_10": 17040.25
+          }
+        }
+      },
+      "full_context": {
+        "feasible_histories": 2,
+        "history_costs": [
+          {
+            "feasible": false,
+            "history_id": "mco02_n10000_s2601",
+            "ingestion_input_tokens": 0,
+            "ingestion_output_tokens": 0
+          },
+          {
+            "feasible": false,
+            "history_id": "mco02_n10000_s2602",
+            "ingestion_input_tokens": 0,
+            "ingestion_output_tokens": 0
+          },
+          {
+            "feasible": false,
+            "history_id": "mco02_n1000_s2601",
+            "ingestion_input_tokens": 0,
+            "ingestion_output_tokens": 0
+          },
+          {
+            "feasible": false,
+            "history_id": "mco02_n1000_s2602",
+            "ingestion_input_tokens": 0,
+            "ingestion_output_tokens": 0
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 7556.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 103.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 7498.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 99.625
+          },
+          {
+            "feasible": false,
+            "history_id": "mco02_n5000_s2601",
+            "ingestion_input_tokens": 0,
+            "ingestion_output_tokens": 0
+          },
+          {
+            "feasible": false,
+            "history_id": "mco02_n5000_s2602",
+            "ingestion_input_tokens": 0,
+            "ingestion_output_tokens": 0
+          }
+        ],
+        "query_horizons": {
+          "1": {
+            "mean_expensive_token_units": 7933.25,
+            "mean_model_calls": 1.0,
+            "sensitivity_output_weight_1": 7628.9375,
+            "sensitivity_output_weight_10": 8541.875
+          },
+          "128": {
+            "mean_expensive_token_units": 1015456.0,
+            "mean_model_calls": 128.0,
+            "sensitivity_output_weight_1": 976504.0,
+            "sensitivity_output_weight_10": 1093360.0
+          },
+          "2": {
+            "mean_expensive_token_units": 15866.5,
+            "mean_model_calls": 2.0,
+            "sensitivity_output_weight_1": 15257.875,
+            "sensitivity_output_weight_10": 17083.75
+          },
+          "32": {
+            "mean_expensive_token_units": 253864.0,
+            "mean_model_calls": 32.0,
+            "sensitivity_output_weight_1": 244126.0,
+            "sensitivity_output_weight_10": 273340.0
+          },
+          "8": {
+            "mean_expensive_token_units": 63466.0,
+            "mean_model_calls": 8.0,
+            "sensitivity_output_weight_1": 61031.5,
+            "sensitivity_output_weight_10": 68335.0
+          }
+        }
+      },
+      "iterative_need_retrieval": {
+        "feasible_histories": 8,
+        "history_costs": [
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2601",
+            "ingestion_input_tokens": 397758.0,
+            "ingestion_model_calls": 834.0,
+            "ingestion_output_tokens": 61343.0,
+            "mean_query_input_tokens": 913.625,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 187.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2602",
+            "ingestion_input_tokens": 398055.0,
+            "ingestion_model_calls": 834.0,
+            "ingestion_output_tokens": 61387.0,
+            "mean_query_input_tokens": 906.375,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 190.0
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2601",
+            "ingestion_input_tokens": 39792.0,
+            "ingestion_model_calls": 84.0,
+            "ingestion_output_tokens": 6145.0,
+            "mean_query_input_tokens": 920.125,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 188.5
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2602",
+            "ingestion_input_tokens": 39765.0,
+            "ingestion_model_calls": 84.0,
+            "ingestion_output_tokens": 6131.0,
+            "mean_query_input_tokens": 900.125,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 182.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2601",
+            "ingestion_input_tokens": 4000.0,
+            "ingestion_model_calls": 9.0,
+            "ingestion_output_tokens": 611.0,
+            "mean_query_input_tokens": 870.875,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 177.625
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2602",
+            "ingestion_input_tokens": 4032.0,
+            "ingestion_model_calls": 9.0,
+            "ingestion_output_tokens": 615.0,
+            "mean_query_input_tokens": 629.0,
+            "mean_query_model_calls": 2.625,
+            "mean_query_output_tokens": 127.875
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2601",
+            "ingestion_input_tokens": 198222.0,
+            "ingestion_model_calls": 417.0,
+            "ingestion_output_tokens": 30728.0,
+            "mean_query_input_tokens": 885.875,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 176.375
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2602",
+            "ingestion_input_tokens": 199127.0,
+            "ingestion_model_calls": 417.0,
+            "ingestion_output_tokens": 30650.0,
+            "mean_query_input_tokens": 916.625,
+            "mean_query_model_calls": 3.5,
+            "mean_query_output_tokens": 190.0
+          }
+        ],
+        "query_horizons": {
+          "1": {
+            "mean_expensive_token_units": 260476.640625,
+            "mean_model_calls": 339.390625,
+            "sensitivity_output_weight_1": 185840.4375,
+            "sensitivity_output_weight_10": 409749.046875
+          },
+          "128": {
+            "mean_expensive_token_units": 460852.875,
+            "mean_model_calls": 770.0,
+            "sensitivity_output_weight_1": 318595.125,
+            "sensitivity_output_weight_10": 745368.375
+          },
+          "2": {
+            "mean_expensive_token_units": 262054.40625,
+            "mean_model_calls": 342.78125,
+            "sensitivity_output_weight_1": 186885.75,
+            "sensitivity_output_weight_10": 412391.71875
+          },
+          "32": {
+            "mean_expensive_token_units": 309387.375,
+            "mean_model_calls": 444.5,
+            "sensitivity_output_weight_1": 218245.125,
+            "sensitivity_output_weight_10": 491671.875
+          },
+          "8": {
+            "mean_expensive_token_units": 271521.0,
+            "mean_model_calls": 363.125,
+            "sensitivity_output_weight_1": 193157.625,
+            "sensitivity_output_weight_10": 428247.75
+          }
+        }
+      },
+      "recent_window": {
+        "feasible_histories": 8,
+        "history_costs": [
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1405.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 36.0
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1474.375,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 118.75
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1378.625,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 121.875
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1375.875,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 67.875
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1294.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 75.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1440.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 112.125
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2601",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1372.125,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 99.5
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2602",
+            "ingestion_input_tokens": 0.0,
+            "ingestion_model_calls": 0.0,
+            "ingestion_output_tokens": 0.0,
+            "mean_query_input_tokens": 1372.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 137.25
+          }
+        ],
+        "query_horizons": {
+          "1": {
+            "mean_expensive_token_units": 1773.5625,
+            "mean_model_calls": 1.0,
+            "sensitivity_output_weight_1": 1485.328125,
+            "sensitivity_output_weight_10": 2350.03125
+          },
+          "128": {
+            "mean_expensive_token_units": 227016.0,
+            "mean_model_calls": 128.0,
+            "sensitivity_output_weight_1": 190122.0,
+            "sensitivity_output_weight_10": 300804.0
+          },
+          "2": {
+            "mean_expensive_token_units": 3547.125,
+            "mean_model_calls": 2.0,
+            "sensitivity_output_weight_1": 2970.65625,
+            "sensitivity_output_weight_10": 4700.0625
+          },
+          "32": {
+            "mean_expensive_token_units": 56754.0,
+            "mean_model_calls": 32.0,
+            "sensitivity_output_weight_1": 47530.5,
+            "sensitivity_output_weight_10": 75201.0
+          },
+          "8": {
+            "mean_expensive_token_units": 14188.5,
+            "mean_model_calls": 8.0,
+            "sensitivity_output_weight_1": 11882.625,
+            "sensitivity_output_weight_10": 18800.25
+          }
+        }
+      },
+      "rolling_summary": {
+        "feasible_histories": 8,
+        "history_costs": [
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2601",
+            "ingestion_input_tokens": 640858.0,
+            "ingestion_model_calls": 40.0,
+            "ingestion_output_tokens": 6256.0,
+            "mean_query_input_tokens": 1316.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 121.0
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2602",
+            "ingestion_input_tokens": 640941.0,
+            "ingestion_model_calls": 40.0,
+            "ingestion_output_tokens": 6116.0,
+            "mean_query_input_tokens": 1447.375,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 79.75
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2601",
+            "ingestion_input_tokens": 65536.0,
+            "ingestion_model_calls": 4.0,
+            "ingestion_output_tokens": 640.0,
+            "mean_query_input_tokens": 1347.625,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 91.75
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2602",
+            "ingestion_input_tokens": 65536.0,
+            "ingestion_model_calls": 4.0,
+            "ingestion_output_tokens": 640.0,
+            "mean_query_input_tokens": 1362.875,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 76.0
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2601",
+            "ingestion_input_tokens": 7440.0,
+            "ingestion_model_calls": 1.0,
+            "ingestion_output_tokens": 160.0,
+            "mean_query_input_tokens": 1348.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 85.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2602",
+            "ingestion_input_tokens": 7381.0,
+            "ingestion_model_calls": 1.0,
+            "ingestion_output_tokens": 160.0,
+            "mean_query_input_tokens": 1463.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 144.75
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2601",
+            "ingestion_input_tokens": 322021.0,
+            "ingestion_model_calls": 20.0,
+            "ingestion_output_tokens": 3125.0,
+            "mean_query_input_tokens": 1355.125,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 87.0
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2602",
+            "ingestion_input_tokens": 322185.0,
+            "ingestion_model_calls": 20.0,
+            "ingestion_output_tokens": 3039.0,
+            "mean_query_input_tokens": 1412.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 99.75
+          }
+        ],
+        "query_horizons": {
+          "1": {
+            "mean_expensive_token_units": 270829.625,
+            "mean_model_calls": 17.25,
+            "sensitivity_output_weight_1": 262984.15625,
+            "sensitivity_output_weight_10": 286520.5625
+          },
+          "128": {
+            "mean_expensive_token_units": 496175.25,
+            "mean_model_calls": 144.25,
+            "sensitivity_output_weight_1": 450932.25,
+            "sensitivity_output_weight_10": 586661.25
+          },
+          "2": {
+            "mean_expensive_token_units": 272604.0,
+            "mean_model_calls": 18.25,
+            "sensitivity_output_weight_1": 264464.0625,
+            "sensitivity_output_weight_10": 288883.875
+          },
+          "32": {
+            "mean_expensive_token_units": 325835.25,
+            "mean_model_calls": 48.25,
+            "sensitivity_output_weight_1": 308861.25,
+            "sensitivity_output_weight_10": 359783.25
+          },
+          "8": {
+            "mean_expensive_token_units": 283250.25,
+            "mean_model_calls": 24.25,
+            "sensitivity_output_weight_1": 273343.5,
+            "sensitivity_output_weight_10": 303063.75
+          }
+        }
+      },
+      "structured_exact_planner": {
+        "feasible_histories": 8,
+        "history_costs": [
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2601",
+            "ingestion_input_tokens": 397758.0,
+            "ingestion_model_calls": 834.0,
+            "ingestion_output_tokens": 61343.0,
+            "mean_query_input_tokens": 417.625,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 84.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n10000_s2602",
+            "ingestion_input_tokens": 398055.0,
+            "ingestion_model_calls": 834.0,
+            "ingestion_output_tokens": 61387.0,
+            "mean_query_input_tokens": 419.0,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 91.5
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2601",
+            "ingestion_input_tokens": 39792.0,
+            "ingestion_model_calls": 84.0,
+            "ingestion_output_tokens": 6145.0,
+            "mean_query_input_tokens": 416.75,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 85.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n1000_s2602",
+            "ingestion_input_tokens": 39765.0,
+            "ingestion_model_calls": 84.0,
+            "ingestion_output_tokens": 6131.0,
+            "mean_query_input_tokens": 413.125,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 81.25
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2601",
+            "ingestion_input_tokens": 4000.0,
+            "ingestion_model_calls": 9.0,
+            "ingestion_output_tokens": 611.0,
+            "mean_query_input_tokens": 414.0,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 79.125
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n100_s2602",
+            "ingestion_input_tokens": 4032.0,
+            "ingestion_model_calls": 9.0,
+            "ingestion_output_tokens": 615.0,
+            "mean_query_input_tokens": 364.625,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 60.5
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2601",
+            "ingestion_input_tokens": 198222.0,
+            "ingestion_model_calls": 417.0,
+            "ingestion_output_tokens": 30728.0,
+            "mean_query_input_tokens": 415.25,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 76.375
+          },
+          {
+            "feasible": true,
+            "history_id": "mco02_n5000_s2602",
+            "ingestion_input_tokens": 199127.0,
+            "ingestion_model_calls": 417.0,
+            "ingestion_output_tokens": 30650.0,
+            "mean_query_input_tokens": 419.5,
+            "mean_query_model_calls": 1.0,
+            "mean_query_output_tokens": 86.625
+          }
+        ],
+        "query_horizons": {
+          "1": {
+            "mean_expensive_token_units": 259631.296875,
+            "mean_model_calls": 337.0,
+            "sensitivity_output_weight_1": 185285.71875,
+            "sensitivity_output_weight_10": 408322.453125
+          },
+          "128": {
+            "mean_expensive_token_units": 352648.875,
+            "mean_model_calls": 464.0,
+            "sensitivity_output_weight_1": 247591.125,
+            "sensitivity_output_weight_10": 562764.375
+          },
+          "2": {
+            "mean_expensive_token_units": 260363.71875,
+            "mean_model_calls": 338.0,
+            "sensitivity_output_weight_1": 185776.3125,
+            "sensitivity_output_weight_10": 409538.53125
+          },
+          "32": {
+            "mean_expensive_token_units": 282336.375,
+            "mean_model_calls": 368.0,
+            "sensitivity_output_weight_1": 200494.125,
+            "sensitivity_output_weight_10": 446020.875
+          },
+          "8": {
+            "mean_expensive_token_units": 264758.25,
+            "mean_model_calls": 344.0,
+            "sensitivity_output_weight_1": 188719.875,
+            "sensitivity_output_weight_10": 416835.0
+          }
+        }
+      }
+    }
+  },
+  "by_dependency_hops": {
+    "2": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.5,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "REASONING_FAILURE": 2,
+          "RETRIEVAL_FAILURE": 14
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1394,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 26265947.375,
+        "mean_query_expensive_token_units": 1651.75,
+        "mean_query_input_tokens": 1325.5,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 81.5625,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0625,
+        "retrieval_recall": 0.5,
+        "temporal_update_accuracy": 0.125
+      },
+      "full_context": {
+        "answer_accuracy": 0.5,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.5,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "PROVENANCE_FAILURE": 2,
+          "REASONING_FAILURE": 2
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 100,
+        "maximum_model_visible_tokens": 7559,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 1018132.75,
+        "mean_query_expensive_token_units": 7882.25,
+        "mean_query_input_tokens": 7527.25,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 88.75,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 100.0,
+        "n_infeasible": 12,
+        "n_scored": 4,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.02,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.5
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.9375,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.9375,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 1,
+          "PROVENANCE_FAILURE": 2
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 2,
+        "maximum_model_visible_tokens": 334,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 952.0625,
+        "mean_query_input_tokens": 520.3125,
+        "mean_query_model_calls": 2.0,
+        "mean_query_output_tokens": 107.9375,
+        "mean_retrieval_rounds": 2.0625,
+        "mean_retrieved_records": 2.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.8125,
+        "retrieval_precision": 0.8333333333333333,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.875
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.03125,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1474,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 3987.375,
+        "mean_query_expensive_token_units": 1735.8125,
+        "mean_query_input_tokens": 1388.8125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 86.75,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.00390625,
+        "retrieval_recall": 0.03125,
+        "temporal_update_accuracy": 0.0
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.03125,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1463,
+        "mean_ingestion_expensive_token_units_per_history": 269055.25,
+        "mean_ingestion_input_tokens_per_history": 258987.25,
+        "mean_ingestion_model_calls_per_history": 16.25,
+        "mean_ingestion_output_tokens_per_history": 2517.0,
+        "mean_persistent_bytes": 3985.75,
+        "mean_query_expensive_token_units": 1788.3125,
+        "mean_query_input_tokens": 1381.3125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 101.75,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 15.875,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.00390625,
+        "retrieval_recall": 0.03125,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.9375,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.9375,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 1,
+          "PROVENANCE_FAILURE": 2
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 2,
+        "maximum_model_visible_tokens": 334,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 590.4375,
+        "mean_query_input_tokens": 321.1875,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 67.3125,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 2.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.8125,
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.875
+      }
+    },
+    "3": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.3333333333333333,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1387,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 26265947.375,
+        "mean_query_expensive_token_units": 1655.0,
+        "mean_query_input_tokens": 1322.0,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 83.25,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0625,
+        "retrieval_recall": 0.3333333333333333,
+        "temporal_update_accuracy": 0.0
+      },
+      "full_context": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "REASONING_FAILURE": 4
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 100,
+        "maximum_model_visible_tokens": 7557,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 1018132.75,
+        "mean_query_expensive_token_units": 8022.75,
+        "mean_query_input_tokens": 7527.75,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 123.75,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 100.0,
+        "n_infeasible": 12,
+        "n_scored": 4,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.03,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.8125,
+        "critical_recall": 0.9791666666666666,
+        "dependency_chain_accuracy": 0.8125,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 3,
+          "PROVENANCE_FAILURE": 5
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 3,
+        "maximum_model_visible_tokens": 400,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 1360.8125,
+        "mean_query_input_tokens": 736.3125,
+        "mean_query_model_calls": 3.0,
+        "mean_query_output_tokens": 156.125,
+        "mean_retrieval_rounds": 3.125,
+        "mean_retrieved_records": 3.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.5,
+        "retrieval_precision": 0.859375,
+        "retrieval_recall": 0.9791666666666666,
+        "temporal_update_accuracy": 0.625
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.041666666666666664,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1476,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 3987.375,
+        "mean_query_expensive_token_units": 1774.5625,
+        "mean_query_input_tokens": 1389.3125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 96.3125,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0078125,
+        "retrieval_recall": 0.041666666666666664,
+        "temporal_update_accuracy": 0.0
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0625,
+        "critical_recall": 0.0625,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1464,
+        "mean_ingestion_expensive_token_units_per_history": 269055.25,
+        "mean_ingestion_input_tokens_per_history": 258987.25,
+        "mean_ingestion_model_calls_per_history": 16.25,
+        "mean_ingestion_output_tokens_per_history": 2517.0,
+        "mean_persistent_bytes": 3985.75,
+        "mean_query_expensive_token_units": 1778.0625,
+        "mean_query_input_tokens": 1381.8125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 99.0625,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 15.875,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.01171875,
+        "retrieval_recall": 0.0625,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.8125,
+        "critical_recall": 0.9583333333333334,
+        "dependency_chain_accuracy": 0.8125,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 3,
+          "PROVENANCE_FAILURE": 5
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 3,
+        "maximum_model_visible_tokens": 400,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 687.4375,
+        "mean_query_input_tokens": 383.6875,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 75.9375,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 3.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.5,
+        "retrieval_precision": 0.9583333333333334,
+        "retrieval_recall": 0.9583333333333334,
+        "temporal_update_accuracy": 0.625
+      }
+    },
+    "4": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.265625,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1384,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 26265947.375,
+        "mean_query_expensive_token_units": 1643.375,
+        "mean_query_input_tokens": 1316.375,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 81.75,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.06640625,
+        "retrieval_recall": 0.265625,
+        "temporal_update_accuracy": 0.0
+      },
+      "full_context": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "REASONING_FAILURE": 4
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 100,
+        "maximum_model_visible_tokens": 7556,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 1018132.75,
+        "mean_query_expensive_token_units": 7847.0,
+        "mean_query_input_tokens": 7527.0,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 80.0,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 100.0,
+        "n_infeasible": 12,
+        "n_scored": 4,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.04,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.8125,
+        "critical_recall": 0.9375,
+        "dependency_chain_accuracy": 0.5,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 5,
+          "PROVENANCE_FAILURE": 6
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 4,
+        "maximum_model_visible_tokens": 457,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 1773.4375,
+        "mean_query_input_tokens": 969.1875,
+        "mean_query_model_calls": 3.8125,
+        "mean_query_output_tokens": 201.0625,
+        "mean_retrieval_rounds": 3.875,
+        "mean_retrieved_records": 4.75,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.3125,
+        "retrieval_precision": 0.8,
+        "retrieval_recall": 0.9375,
+        "temporal_update_accuracy": 0.75
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.046875,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1475,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 3987.375,
+        "mean_query_expensive_token_units": 1794.0,
+        "mean_query_input_tokens": 1389.5,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 101.125,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.01171875,
+        "retrieval_recall": 0.046875,
+        "temporal_update_accuracy": 0.0625
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.03125,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1464,
+        "mean_ingestion_expensive_token_units_per_history": 269055.25,
+        "mean_ingestion_input_tokens_per_history": 258987.25,
+        "mean_ingestion_model_calls_per_history": 16.25,
+        "mean_ingestion_output_tokens_per_history": 2517.0,
+        "mean_persistent_bytes": 3985.75,
+        "mean_query_expensive_token_units": 1771.25,
+        "mean_query_input_tokens": 1382.0,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 97.3125,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 15.875,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0078125,
+        "retrieval_recall": 0.03125,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.8125,
+        "critical_recall": 0.921875,
+        "dependency_chain_accuracy": 0.5,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 5,
+          "PROVENANCE_FAILURE": 6
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 4,
+        "maximum_model_visible_tokens": 457,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 778.3125,
+        "mean_query_input_tokens": 436.5625,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 85.4375,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 3.8125,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.3125,
+        "retrieval_precision": 0.96875,
+        "retrieval_recall": 0.921875,
+        "temporal_update_accuracy": 0.75
+      }
+    },
+    "5": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.15000000000000002,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1378,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 26265947.375,
+        "mean_query_expensive_token_units": 1628.25,
+        "mean_query_input_tokens": 1320.0,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 77.0625,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.046875,
+        "retrieval_recall": 0.15000000000000002,
+        "temporal_update_accuracy": 0.0
+      },
+      "full_context": {
+        "answer_accuracy": 0.25,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "PROVENANCE_FAILURE": 1,
+          "REASONING_FAILURE": 3
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 100,
+        "maximum_model_visible_tokens": 7558,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 1018132.75,
+        "mean_query_expensive_token_units": 7981.0,
+        "mean_query_input_tokens": 7528.0,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 113.25,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 100.0,
+        "n_infeasible": 12,
+        "n_scored": 4,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.05,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.6875,
+        "critical_recall": 0.9,
+        "dependency_chain_accuracy": 0.0625,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 5,
+          "PROVENANCE_FAILURE": 9,
+          "RETRIEVAL_FAILURE": 2
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 6,
+        "maximum_model_visible_tokens": 527,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 2224.75,
+        "mean_query_input_tokens": 1245.5,
+        "mean_query_model_calls": 4.75,
+        "mean_query_output_tokens": 244.8125,
+        "mean_retrieval_rounds": 4.75,
+        "mean_retrieved_records": 6.625,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.6964285714285714,
+        "retrieval_recall": 0.9,
+        "temporal_update_accuracy": 0.6875
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.037500000000000006,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1474,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 3987.375,
+        "mean_query_expensive_token_units": 1789.875,
+        "mean_query_input_tokens": 1389.375,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 100.125,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.01171875,
+        "retrieval_recall": 0.037500000000000006,
+        "temporal_update_accuracy": 0.0625
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.07500000000000001,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1466,
+        "mean_ingestion_expensive_token_units_per_history": 269055.25,
+        "mean_ingestion_input_tokens_per_history": 258987.25,
+        "mean_ingestion_model_calls_per_history": 16.25,
+        "mean_ingestion_output_tokens_per_history": 2517.0,
+        "mean_persistent_bytes": 3985.75,
+        "mean_query_expensive_token_units": 1759.875,
+        "mean_query_input_tokens": 1381.875,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 94.5,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 15.875,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0234375,
+        "retrieval_recall": 0.07500000000000001,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.6875,
+        "critical_recall": 0.85,
+        "dependency_chain_accuracy": 0.1875,
+        "extraction_precision": 0.9340625,
+        "extraction_recall": 0.9340625,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 5,
+          "PROVENANCE_FAILURE": 8,
+          "RETRIEVAL_FAILURE": 2
+        },
+        "histories": 8,
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 527,
+        "mean_ingestion_expensive_token_units_per_history": 258898.875,
+        "mean_ingestion_input_tokens_per_history": 160093.875,
+        "mean_ingestion_model_calls_per_history": 336.0,
+        "mean_ingestion_output_tokens_per_history": 24701.25,
+        "mean_persistent_bytes": 847868.625,
+        "mean_query_expensive_token_units": 873.5,
+        "mean_query_input_tokens": 498.5,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 93.75,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 4.75,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0625,
+        "retrieval_precision": 0.9,
+        "retrieval_recall": 0.85,
+        "temporal_update_accuracy": 0.6875
+      }
+    }
+  },
+  "by_history_size": {
+    "100": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.4354166666666667,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "REASONING_FAILURE": 1,
+          "RETRIEVAL_FAILURE": 15
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1394,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 900090.0,
+        "mean_query_expensive_token_units": 1672.1875,
+        "mean_query_input_tokens": 1371.1875,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 75.25,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0859375,
+        "retrieval_recall": 0.4354166666666667,
+        "temporal_update_accuracy": 0.0625
+      },
+      "full_context": {
+        "answer_accuracy": 0.1875,
+        "critical_recall": 1.0,
+        "dependency_chain_accuracy": 0.125,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "PROVENANCE_FAILURE": 3,
+          "REASONING_FAILURE": 13
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 100,
+        "maximum_model_visible_tokens": 7559,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 25079.0,
+        "mean_query_expensive_token_units": 7933.25,
+        "mean_query_input_tokens": 7527.5,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 101.4375,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 100.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.035,
+        "retrieval_recall": 1.0,
+        "temporal_update_accuracy": 0.125
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.625,
+        "critical_recall": 0.890625,
+        "dependency_chain_accuracy": 0.375,
+        "extraction_precision": 0.875,
+        "extraction_recall": 0.875,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 8,
+          "PROVENANCE_FAILURE": 2,
+          "RETRIEVAL_FAILURE": 1
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 6,
+        "maximum_model_visible_tokens": 517,
+        "mean_ingestion_expensive_token_units_per_history": 6468.0,
+        "mean_ingestion_input_tokens_per_history": 4016.0,
+        "mean_ingestion_model_calls_per_history": 9.0,
+        "mean_ingestion_output_tokens_per_history": 613.0,
+        "mean_persistent_bytes": 20700.5,
+        "mean_query_expensive_token_units": 1360.9375,
+        "mean_query_input_tokens": 749.9375,
+        "mean_query_model_calls": 3.0625,
+        "mean_query_output_tokens": 152.75,
+        "mean_retrieval_rounds": 3.25,
+        "mean_retrieved_records": 3.875,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.3125,
+        "retrieval_precision": 0.8270833333333334,
+        "retrieval_recall": 0.890625,
+        "temporal_update_accuracy": 0.5
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.15729166666666666,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1443,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 4022.5,
+        "mean_query_expensive_token_units": 1742.25,
+        "mean_query_input_tokens": 1367.5,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 93.6875,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.03515625,
+        "retrieval_recall": 0.15729166666666666,
+        "temporal_update_accuracy": 0.125
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0625,
+        "critical_recall": 0.2,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1466,
+        "mean_ingestion_expensive_token_units_per_history": 8050.5,
+        "mean_ingestion_input_tokens_per_history": 7410.5,
+        "mean_ingestion_model_calls_per_history": 1.0,
+        "mean_ingestion_output_tokens_per_history": 160.0,
+        "mean_persistent_bytes": 4180.5,
+        "mean_query_expensive_token_units": 1866.0,
+        "mean_query_input_tokens": 1406.0,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 115.0,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.046875,
+        "retrieval_recall": 0.2,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.625,
+        "critical_recall": 0.878125,
+        "dependency_chain_accuracy": 0.4375,
+        "extraction_precision": 0.875,
+        "extraction_recall": 0.875,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 8,
+          "PROVENANCE_FAILURE": 2,
+          "RETRIEVAL_FAILURE": 1
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 517,
+        "mean_ingestion_expensive_token_units_per_history": 6468.0,
+        "mean_ingestion_input_tokens_per_history": 4016.0,
+        "mean_ingestion_model_calls_per_history": 9.0,
+        "mean_ingestion_output_tokens_per_history": 613.0,
+        "mean_persistent_bytes": 20700.5,
+        "mean_query_expensive_token_units": 668.5625,
+        "mean_query_input_tokens": 389.3125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 69.8125,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 3.0625,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.3125,
+        "retrieval_precision": 0.975,
+        "retrieval_recall": 0.878125,
+        "temporal_update_accuracy": 0.5
+      }
+    },
+    "1000": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.3208333333333333,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1323,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 7493451.0,
+        "mean_query_expensive_token_units": 1623.0625,
+        "mean_query_input_tokens": 1285.8125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 84.3125,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0625,
+        "retrieval_recall": 0.3208333333333333,
+        "temporal_update_accuracy": 0.0625
+      },
+      "full_context": {
+        "answer_accuracy": null,
+        "critical_recall": null,
+        "dependency_chain_accuracy": null,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {},
+        "histories": 2,
+        "maximum_model_visible_records": null,
+        "maximum_model_visible_tokens": null,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 251111.0,
+        "mean_query_expensive_token_units": null,
+        "mean_query_input_tokens": null,
+        "mean_query_model_calls": null,
+        "mean_query_output_tokens": null,
+        "mean_retrieval_rounds": null,
+        "mean_retrieved_records": null,
+        "n_infeasible": 16,
+        "n_scored": 0,
+        "n_total": 16,
+        "provenance_accuracy": null,
+        "retrieval_precision": null,
+        "retrieval_recall": null,
+        "temporal_update_accuracy": null
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.9375,
+        "critical_recall": 0.9875,
+        "dependency_chain_accuracy": 0.625,
+        "extraction_precision": 0.953,
+        "extraction_recall": 0.953,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 1,
+          "PROVENANCE_FAILURE": 6,
+          "RETRIEVAL_FAILURE": 1
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 6,
+        "maximum_model_visible_tokens": 516,
+        "mean_ingestion_expensive_token_units_per_history": 64330.5,
+        "mean_ingestion_input_tokens_per_history": 39778.5,
+        "mean_ingestion_model_calls_per_history": 84.0,
+        "mean_ingestion_output_tokens_per_history": 6138.0,
+        "mean_persistent_bytes": 208872.5,
+        "mean_query_expensive_token_units": 1651.625,
+        "mean_query_input_tokens": 910.125,
+        "mean_query_model_calls": 3.5,
+        "mean_query_output_tokens": 185.375,
+        "mean_retrieval_rounds": 3.5,
+        "mean_retrieved_records": 4.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.5,
+        "retrieval_precision": 0.7967261904761905,
+        "retrieval_recall": 0.9875,
+        "temporal_update_accuracy": 0.875
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1379,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 3994.0,
+        "mean_query_expensive_token_units": 1756.75,
+        "mean_query_input_tokens": 1377.25,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 94.875,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1365,
+        "mean_ingestion_expensive_token_units_per_history": 68096.0,
+        "mean_ingestion_input_tokens_per_history": 65536.0,
+        "mean_ingestion_model_calls_per_history": 4.0,
+        "mean_ingestion_output_tokens_per_history": 640.0,
+        "mean_persistent_bytes": 3919.5,
+        "mean_query_expensive_token_units": 1690.75,
+        "mean_query_input_tokens": 1355.25,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 83.875,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.9375,
+        "critical_recall": 0.975,
+        "dependency_chain_accuracy": 0.625,
+        "extraction_precision": 0.953,
+        "extraction_recall": 0.953,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 1,
+          "PROVENANCE_FAILURE": 6,
+          "RETRIEVAL_FAILURE": 1
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 516,
+        "mean_ingestion_expensive_token_units_per_history": 64330.5,
+        "mean_ingestion_input_tokens_per_history": 39778.5,
+        "mean_ingestion_model_calls_per_history": 84.0,
+        "mean_ingestion_output_tokens_per_history": 6138.0,
+        "mean_persistent_bytes": 208872.5,
+        "mean_query_expensive_token_units": 747.9375,
+        "mean_query_input_tokens": 414.9375,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 83.25,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 3.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.5,
+        "retrieval_precision": 0.975,
+        "retrieval_recall": 0.975,
+        "temporal_update_accuracy": 0.875
+      }
+    },
+    "10000": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.140625,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1320,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 63455858.5,
+        "mean_query_expensive_token_units": 1629.4375,
+        "mean_query_input_tokens": 1298.6875,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 82.6875,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0234375,
+        "retrieval_recall": 0.140625,
+        "temporal_update_accuracy": 0.0
+      },
+      "full_context": {
+        "answer_accuracy": null,
+        "critical_recall": null,
+        "dependency_chain_accuracy": null,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {},
+        "histories": 2,
+        "maximum_model_visible_records": null,
+        "maximum_model_visible_tokens": null,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 2532303.5,
+        "mean_query_expensive_token_units": null,
+        "mean_query_input_tokens": null,
+        "mean_query_model_calls": null,
+        "mean_query_output_tokens": null,
+        "mean_retrieval_rounds": null,
+        "mean_retrieved_records": null,
+        "n_infeasible": 16,
+        "n_scored": 0,
+        "n_total": 16,
+        "provenance_accuracy": null,
+        "retrieval_precision": null,
+        "retrieval_recall": null,
+        "temporal_update_accuracy": null
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.8125,
+        "critical_recall": 0.959375,
+        "dependency_chain_accuracy": 0.6875,
+        "extraction_precision": 0.9532499999999999,
+        "extraction_recall": 0.9532499999999999,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 3,
+          "PROVENANCE_FAILURE": 6
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 6,
+        "maximum_model_visible_tokens": 520,
+        "mean_ingestion_expensive_token_units_per_history": 643366.5,
+        "mean_ingestion_input_tokens_per_history": 397906.5,
+        "mean_ingestion_model_calls_per_history": 834.0,
+        "mean_ingestion_output_tokens_per_history": 61365.0,
+        "mean_persistent_bytes": 2108816.0,
+        "mean_query_expensive_token_units": 1664.5,
+        "mean_query_input_tokens": 910.0,
+        "mean_query_model_calls": 3.5,
+        "mean_query_output_tokens": 188.625,
+        "mean_retrieval_rounds": 3.5,
+        "mean_retrieved_records": 4.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.4375,
+        "retrieval_precision": 0.7752976190476191,
+        "retrieval_recall": 0.959375,
+        "temporal_update_accuracy": 0.75
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1476,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 4070.5,
+        "mean_query_expensive_token_units": 1749.4375,
+        "mean_query_input_tokens": 1439.9375,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 77.375,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1449,
+        "mean_ingestion_expensive_token_units_per_history": 665643.5,
+        "mean_ingestion_input_tokens_per_history": 640899.5,
+        "mean_ingestion_model_calls_per_history": 40.0,
+        "mean_ingestion_output_tokens_per_history": 6186.0,
+        "mean_persistent_bytes": 3926.5,
+        "mean_query_expensive_token_units": 1783.4375,
+        "mean_query_input_tokens": 1381.9375,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 100.375,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 15.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.8125,
+        "critical_recall": 0.91875,
+        "dependency_chain_accuracy": 0.75,
+        "extraction_precision": 0.9532499999999999,
+        "extraction_recall": 0.9532499999999999,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 3,
+          "PROVENANCE_FAILURE": 5
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 520,
+        "mean_ingestion_expensive_token_units_per_history": 643366.5,
+        "mean_ingestion_input_tokens_per_history": 397906.5,
+        "mean_ingestion_model_calls_per_history": 834.0,
+        "mean_ingestion_output_tokens_per_history": 61365.0,
+        "mean_persistent_bytes": 2108816.0,
+        "mean_query_expensive_token_units": 769.8125,
+        "mean_query_input_tokens": 418.3125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 87.875,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 3.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.5,
+        "retrieval_precision": 0.91875,
+        "retrieval_recall": 0.91875,
+        "temporal_update_accuracy": 0.75
+      }
+    },
+    "5000": {
+      "conventional_rag": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.3520833333333333,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "REASONING_FAILURE": 1,
+          "RETRIEVAL_FAILURE": 15
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1365,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 33214390.0,
+        "mean_query_expensive_token_units": 1653.6875,
+        "mean_query_input_tokens": 1328.1875,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 81.375,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.06640625,
+        "retrieval_recall": 0.3520833333333333,
+        "temporal_update_accuracy": 0.0
+      },
+      "full_context": {
+        "answer_accuracy": null,
+        "critical_recall": null,
+        "dependency_chain_accuracy": null,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {},
+        "histories": 2,
+        "maximum_model_visible_records": null,
+        "maximum_model_visible_tokens": null,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 1264037.5,
+        "mean_query_expensive_token_units": null,
+        "mean_query_input_tokens": null,
+        "mean_query_model_calls": null,
+        "mean_query_output_tokens": null,
+        "mean_retrieval_rounds": null,
+        "mean_retrieved_records": null,
+        "n_infeasible": 16,
+        "n_scored": 0,
+        "n_total": 16,
+        "provenance_accuracy": null,
+        "retrieval_precision": null,
+        "retrieval_recall": null,
+        "temporal_update_accuracy": null
+      },
+      "iterative_need_retrieval": {
+        "answer_accuracy": 0.875,
+        "critical_recall": 0.9791666666666666,
+        "dependency_chain_accuracy": 0.625,
+        "extraction_precision": 0.9550000000000001,
+        "extraction_recall": 0.9550000000000001,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 2,
+          "PROVENANCE_FAILURE": 8
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 6,
+        "maximum_model_visible_tokens": 527,
+        "mean_ingestion_expensive_token_units_per_history": 321430.5,
+        "mean_ingestion_input_tokens_per_history": 198674.5,
+        "mean_ingestion_model_calls_per_history": 417.0,
+        "mean_ingestion_output_tokens_per_history": 30689.0,
+        "mean_persistent_bytes": 1053085.5,
+        "mean_query_expensive_token_units": 1634.0,
+        "mean_query_input_tokens": 901.25,
+        "mean_query_model_calls": 3.5,
+        "mean_query_output_tokens": 183.1875,
+        "mean_retrieval_rounds": 3.5625,
+        "mean_retrieved_records": 4.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.375,
+        "retrieval_precision": 0.7900297619047619,
+        "retrieval_recall": 0.9791666666666666,
+        "temporal_update_accuracy": 0.8125
+      },
+      "recent_window": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1374,
+        "mean_ingestion_expensive_token_units_per_history": 0.0,
+        "mean_ingestion_input_tokens_per_history": 0.0,
+        "mean_ingestion_model_calls_per_history": 0.0,
+        "mean_ingestion_output_tokens_per_history": 0.0,
+        "mean_persistent_bytes": 3862.5,
+        "mean_query_expensive_token_units": 1845.8125,
+        "mean_query_input_tokens": 1372.3125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 118.375,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "rolling_summary": {
+        "answer_accuracy": 0.0,
+        "critical_recall": 0.0,
+        "dependency_chain_accuracy": 0.0,
+        "extraction_precision": null,
+        "extraction_recall": null,
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 16
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1414,
+        "mean_ingestion_expensive_token_units_per_history": 334431.0,
+        "mean_ingestion_input_tokens_per_history": 322103.0,
+        "mean_ingestion_model_calls_per_history": 20.0,
+        "mean_ingestion_output_tokens_per_history": 3082.0,
+        "mean_persistent_bytes": 3916.5,
+        "mean_query_expensive_token_units": 1757.3125,
+        "mean_query_input_tokens": 1383.8125,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 93.375,
+        "mean_retrieval_rounds": 0.0,
+        "mean_retrieved_records": 16.0,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.0,
+        "retrieval_precision": 0.0,
+        "retrieval_recall": 0.0,
+        "temporal_update_accuracy": 0.0
+      },
+      "structured_exact_planner": {
+        "answer_accuracy": 0.875,
+        "critical_recall": 0.9583333333333334,
+        "dependency_chain_accuracy": 0.625,
+        "extraction_precision": 0.9550000000000001,
+        "extraction_recall": 0.9550000000000001,
+        "failure_counts": {
+          "LANGUAGE_EXTRACTION_FAILURE": 2,
+          "PROVENANCE_FAILURE": 8
+        },
+        "histories": 2,
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 527,
+        "mean_ingestion_expensive_token_units_per_history": 321430.5,
+        "mean_ingestion_input_tokens_per_history": 198674.5,
+        "mean_ingestion_model_calls_per_history": 417.0,
+        "mean_ingestion_output_tokens_per_history": 30689.0,
+        "mean_persistent_bytes": 1053085.5,
+        "mean_query_expensive_token_units": 743.375,
+        "mean_query_input_tokens": 417.375,
+        "mean_query_model_calls": 1.0,
+        "mean_query_output_tokens": 81.5,
+        "mean_retrieval_rounds": 1.0,
+        "mean_retrieved_records": 3.5,
+        "n_infeasible": 0,
+        "n_scored": 16,
+        "n_total": 16,
+        "provenance_accuracy": 0.375,
+        "retrieval_precision": 0.9583333333333334,
+        "retrieval_recall": 0.9583333333333334,
+        "temporal_update_accuracy": 0.8125
+      }
+    }
+  },
+  "experiment_id": "MCO-02",
+  "extraction": {
+    "all_indexes_pass": true,
+    "exact_records": 30696,
+    "extraction_precision": 0.9532919254658385,
+    "extraction_recall": 0.9532919254658385,
+    "record_count": 32200,
+    "shared_artifact_hashes": {
+      "mco02_n10000_s2601": "fb4bd0898df61482b2535334359c84d7fed7e9259b205a7d7ab4c971b1dfe9b5",
+      "mco02_n10000_s2602": "88ea91e9d09a44c4d66e81311c875c4334f7c9f2a4cdc26085538fa669247b0c",
+      "mco02_n1000_s2601": "ae4b33dfe4979cb5811c1b19ff55dd44cdf0aaada5e1a77bf278de0c3e119641",
+      "mco02_n1000_s2602": "a3b4713b32c0ca50cf14c6d6d13bcfe21eed75656ac22f95742a8ede21e53dd2",
+      "mco02_n100_s2601": "af20ac61e240832503fbeb23d2f1aed6e6525749e24aee4176f6809d3f3e89b2",
+      "mco02_n100_s2602": "0ae71d3b6a7c8fb7c0b70b6d8321c8b37e14595d7121f3085043318edbbe4f56",
+      "mco02_n5000_s2601": "d9196d53deff06d9b3db04dd3d493610b99d09fad4a0ab416a48c8bfb7ffe440",
+      "mco02_n5000_s2602": "065b5ae392f9b17087dcf592dac1f82677cd97358f267893d0ff31a32a5ebf3c"
+    }
+  },
+  "overall": {
+    "conventional_rag": {
+      "answer_accuracy": 0.0,
+      "critical_recall": 0.31223958333333335,
+      "dependency_chain_accuracy": 0.0,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "failure_counts": {
+        "REASONING_FAILURE": 2,
+        "RETRIEVAL_FAILURE": 62
+      },
+      "histories": 8,
+      "maximum_model_visible_records": 16,
+      "maximum_model_visible_tokens": 1394,
+      "mean_ingestion_expensive_token_units_per_history": 0.0,
+      "mean_ingestion_input_tokens_per_history": 0.0,
+      "mean_ingestion_model_calls_per_history": 0.0,
+      "mean_ingestion_output_tokens_per_history": 0.0,
+      "mean_persistent_bytes": 26265947.375,
+      "mean_query_expensive_token_units": 1644.59375,
+      "mean_query_input_tokens": 1320.96875,
+      "mean_query_model_calls": 1.0,
+      "mean_query_output_tokens": 80.90625,
+      "mean_retrieval_rounds": 1.0,
+      "mean_retrieved_records": 16.0,
+      "n_infeasible": 0,
+      "n_scored": 64,
+      "n_total": 64,
+      "provenance_accuracy": 0.0,
+      "retrieval_precision": 0.0595703125,
+      "retrieval_recall": 0.31223958333333335,
+      "temporal_update_accuracy": 0.03125
+    },
+    "full_context": {
+      "answer_accuracy": 0.1875,
+      "critical_recall": 1.0,
+      "dependency_chain_accuracy": 0.125,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "failure_counts": {
+        "PROVENANCE_FAILURE": 3,
+        "REASONING_FAILURE": 13
+      },
+      "histories": 8,
+      "maximum_model_visible_records": 100,
+      "maximum_model_visible_tokens": 7559,
+      "mean_ingestion_expensive_token_units_per_history": 0.0,
+      "mean_ingestion_input_tokens_per_history": 0.0,
+      "mean_ingestion_model_calls_per_history": 0.0,
+      "mean_ingestion_output_tokens_per_history": 0.0,
+      "mean_persistent_bytes": 1018132.75,
+      "mean_query_expensive_token_units": 7933.25,
+      "mean_query_input_tokens": 7527.5,
+      "mean_query_model_calls": 1.0,
+      "mean_query_output_tokens": 101.4375,
+      "mean_retrieval_rounds": 0.0,
+      "mean_retrieved_records": 100.0,
+      "n_infeasible": 48,
+      "n_scored": 16,
+      "n_total": 64,
+      "provenance_accuracy": 0.0,
+      "retrieval_precision": 0.035,
+      "retrieval_recall": 1.0,
+      "temporal_update_accuracy": 0.125
+    },
+    "iterative_need_retrieval": {
+      "answer_accuracy": 0.8125,
+      "critical_recall": 0.9541666666666667,
+      "dependency_chain_accuracy": 0.578125,
+      "extraction_precision": 0.9340625,
+      "extraction_recall": 0.9340625,
+      "failure_counts": {
+        "LANGUAGE_EXTRACTION_FAILURE": 14,
+        "PROVENANCE_FAILURE": 22,
+        "RETRIEVAL_FAILURE": 2
+      },
+      "histories": 8,
+      "maximum_model_visible_records": 6,
+      "maximum_model_visible_tokens": 527,
+      "mean_ingestion_expensive_token_units_per_history": 258898.875,
+      "mean_ingestion_input_tokens_per_history": 160093.875,
+      "mean_ingestion_model_calls_per_history": 336.0,
+      "mean_ingestion_output_tokens_per_history": 24701.25,
+      "mean_persistent_bytes": 847868.625,
+      "mean_query_expensive_token_units": 1577.765625,
+      "mean_query_input_tokens": 867.828125,
+      "mean_query_model_calls": 3.390625,
+      "mean_query_output_tokens": 177.484375,
+      "mean_retrieval_rounds": 3.453125,
+      "mean_retrieved_records": 4.34375,
+      "n_infeasible": 0,
+      "n_scored": 64,
+      "n_total": 64,
+      "provenance_accuracy": 0.40625,
+      "retrieval_precision": 0.7972842261904762,
+      "retrieval_recall": 0.9541666666666667,
+      "temporal_update_accuracy": 0.734375
+    },
+    "recent_window": {
+      "answer_accuracy": 0.0,
+      "critical_recall": 0.039322916666666666,
+      "dependency_chain_accuracy": 0.0,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "failure_counts": {
+        "RETRIEVAL_FAILURE": 64
+      },
+      "histories": 8,
+      "maximum_model_visible_records": 16,
+      "maximum_model_visible_tokens": 1476,
+      "mean_ingestion_expensive_token_units_per_history": 0.0,
+      "mean_ingestion_input_tokens_per_history": 0.0,
+      "mean_ingestion_model_calls_per_history": 0.0,
+      "mean_ingestion_output_tokens_per_history": 0.0,
+      "mean_persistent_bytes": 3987.375,
+      "mean_query_expensive_token_units": 1773.5625,
+      "mean_query_input_tokens": 1389.25,
+      "mean_query_model_calls": 1.0,
+      "mean_query_output_tokens": 96.078125,
+      "mean_retrieval_rounds": 0.0,
+      "mean_retrieved_records": 16.0,
+      "n_infeasible": 0,
+      "n_scored": 64,
+      "n_total": 64,
+      "provenance_accuracy": 0.0,
+      "retrieval_precision": 0.0087890625,
+      "retrieval_recall": 0.039322916666666666,
+      "temporal_update_accuracy": 0.03125
+    },
+    "rolling_summary": {
+      "answer_accuracy": 0.015625,
+      "critical_recall": 0.05,
+      "dependency_chain_accuracy": 0.0,
+      "extraction_precision": null,
+      "extraction_recall": null,
+      "failure_counts": {
+        "RETRIEVAL_FAILURE": 64
+      },
+      "histories": 8,
+      "maximum_model_visible_records": 16,
+      "maximum_model_visible_tokens": 1466,
+      "mean_ingestion_expensive_token_units_per_history": 269055.25,
+      "mean_ingestion_input_tokens_per_history": 258987.25,
+      "mean_ingestion_model_calls_per_history": 16.25,
+      "mean_ingestion_output_tokens_per_history": 2517.0,
+      "mean_persistent_bytes": 3985.75,
+      "mean_query_expensive_token_units": 1774.375,
+      "mean_query_input_tokens": 1381.75,
+      "mean_query_model_calls": 1.0,
+      "mean_query_output_tokens": 98.15625,
+      "mean_retrieval_rounds": 0.0,
+      "mean_retrieved_records": 15.875,
+      "n_infeasible": 0,
+      "n_scored": 64,
+      "n_total": 64,
+      "provenance_accuracy": 0.0,
+      "retrieval_precision": 0.01171875,
+      "retrieval_recall": 0.05,
+      "temporal_update_accuracy": 0.0
+    },
+    "structured_exact_planner": {
+      "answer_accuracy": 0.8125,
+      "critical_recall": 0.9325520833333333,
+      "dependency_chain_accuracy": 0.609375,
+      "extraction_precision": 0.9340625,
+      "extraction_recall": 0.9340625,
+      "failure_counts": {
+        "LANGUAGE_EXTRACTION_FAILURE": 14,
+        "PROVENANCE_FAILURE": 21,
+        "RETRIEVAL_FAILURE": 2
+      },
+      "histories": 8,
+      "maximum_model_visible_records": 5,
+      "maximum_model_visible_tokens": 527,
+      "mean_ingestion_expensive_token_units_per_history": 258898.875,
+      "mean_ingestion_input_tokens_per_history": 160093.875,
+      "mean_ingestion_model_calls_per_history": 336.0,
+      "mean_ingestion_output_tokens_per_history": 24701.25,
+      "mean_persistent_bytes": 847868.625,
+      "mean_query_expensive_token_units": 732.421875,
+      "mean_query_input_tokens": 409.984375,
+      "mean_query_model_calls": 1.0,
+      "mean_query_output_tokens": 80.609375,
+      "mean_retrieval_rounds": 1.0,
+      "mean_retrieved_records": 3.390625,
+      "n_infeasible": 0,
+      "n_scored": 64,
+      "n_total": 64,
+      "provenance_accuracy": 0.421875,
+      "retrieval_precision": 0.9567708333333333,
+      "retrieval_recall": 0.9325520833333333,
+      "temporal_update_accuracy": 0.734375
+    }
+  },
+  "population": {
+    "histories": 8,
+    "queries": 64,
+    "rows": 384,
+    "systems": [
+      "conventional_rag",
+      "full_context",
+      "iterative_need_retrieval",
+      "recent_window",
+      "rolling_summary",
+      "structured_exact_planner"
+    ]
+  }
+}

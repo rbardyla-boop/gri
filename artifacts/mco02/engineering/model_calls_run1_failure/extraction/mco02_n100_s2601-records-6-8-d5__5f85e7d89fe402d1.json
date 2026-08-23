@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 6,
+    "eval_duration_ns": 80196213,
+    "load_duration_ns": 162620077,
+    "prompt_eval_count": 403,
+    "prompt_eval_duration_ns": 31000160,
+    "total_duration_ns": 296544560,
+    "wall_time_seconds": 0.2978995320154354
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-6-8-d5__5f85e7d89fe402d1",
+  "key": "mco02_n100_s2601-records-6-8-d5",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_a8c7106ca67c8a09; source AUTHORITY; event 6] At event time 6, During a routine archive review, the ledger states: Regarding entity d_25ce4606ed52fddd, the registry changed its designation to entity d_a24264219397b24e. The filing also mentioned routine paperwork with no operational consequence.\n2. [Record r_06446b6b128de730; source AUTHORITY; event 7] At event time 7, In the ordinary course of plant reporting, the ledger states: The minimum safe temperature recorded for entity d_2b98dcf3a56a9a6b is -49 C. This was recorded alongside unrelated scheduling notes.\n3. [Record r_5e51b948432cac02; source AUTHORITY; event 8] At event time 8, In the ordinary course of plant reporting, the ledger states: The archived temperature floor for entity e_d9266ac346b75feb is -25 C. The filing also mentioned routine paperwork with no operational consequence.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "5f85e7d89fe402d1568f86d37e051ebc96074189f98e81e9be6a56a167d44cd8",
+  "response": {
+    "created_at": "2026-08-22T12:30:50.011773347Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 6,
+    "eval_duration": 80196213,
+    "load_duration": 162620077,
+    "message": {
+      "content": "D\nT\nD",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 403,
+    "prompt_eval_duration": 31000160,
+    "total_duration": 296544560
+  },
+  "response_content_sha256": "21305d5cd81bc2492dab50f22af258007d2577257cca3d9d9ed590c54b495a37",
+  "schema_version": 1
+}

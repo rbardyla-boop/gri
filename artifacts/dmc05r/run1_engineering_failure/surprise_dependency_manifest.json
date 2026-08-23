@@ -1,0 +1,588 @@
+{
+  "case_count": 24,
+  "cases": [
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target0",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target0|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target1",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target1|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target2",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target2|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target3",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target3|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target4",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target4|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target5",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target5|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target6",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target6|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 1024,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_1024|target7",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_1024_d12",
+      "variant_id": "extrapolation|mission_set|load_1024|target7|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target0",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target0|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target1",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target1|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target2",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target2|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target3",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target3|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target4",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target4|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target5",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target5|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target6",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target6|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 128,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_128|target7",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_128_d12",
+      "variant_id": "extrapolation|mission_set|load_128|target7|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target0",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target0|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target1",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target1|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target2",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target2|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target3",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target3|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target4",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target4|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target5",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target5|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target6",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target6|SURPRISE_DEPENDENCY"
+    },
+    {
+      "history_size": 256,
+      "invariant": {
+        "checks": {
+          "history_query_targets_record_write": true,
+          "one_initial_entity_replaced": true,
+          "query_answer_matches_target": true,
+          "scope_capacity_unchanged": true,
+          "source_record_stream_unchanged": true,
+          "target_in_late_scope": true,
+          "target_is_old": true,
+          "target_not_in_initial_scope": true,
+          "target_was_certified_irrelevant": true
+        },
+        "pass": true
+      },
+      "late_scope_sha256": "e34df6485a81107610656a7aa171d65fec325f3b16ffc03d3f54870f68e45865",
+      "replaced_entity": "entity_15",
+      "source_case_id": "extrapolation|mission_set|load_256|target7",
+      "target_entity": "distractor_12",
+      "target_episode": 12,
+      "target_id": "mission_set_load_256_d12",
+      "variant_id": "extrapolation|mission_set|load_256|target7|SURPRISE_DEPENDENCY"
+    }
+  ],
+  "expected_case_count": 24,
+  "failures": [],
+  "pass": true,
+  "projection_sha256": "63c0d99ce5f443ebc87c382c08ed3523b2faeab5b4a1073c9e32726c5f6bc0c1",
+  "status": "EXPLORATORY_NONTERMINAL",
+  "subset": "SURPRISE_DEPENDENCY",
+  "unit": "DMC-05R"
+}

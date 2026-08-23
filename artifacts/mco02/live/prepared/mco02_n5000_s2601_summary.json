@@ -1,0 +1,203 @@
+{
+  "experiment_id": "MCO-02",
+  "history_id": "mco02_n5000_s2601",
+  "invalid_selection_events": [
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-0-255__33dd32f731e67bab",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-256-511__0d2fc656d100ed3c",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-512-767__e8b435f25c57b262",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-768-1023__a812b39a80d5d3d0",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-1024-1279__143decd945526413",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-1280-1535__b49e1bd198465aff",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-1536-1791__230465733980ae4e",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-1792-2047__49ebfba0d3896891",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-2048-2303__55f3ee2a15424e67",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-2304-2559__31912a7c86ef6b64",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-2560-2815__5f6ade7a7636e17c",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-2816-3071__99282bf5b8161edf",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-3072-3327__b21b5afc3106ec41",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-3328-3583__dbd34b35dd2fb31f",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-3584-3839__16fb025df25aab99",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-3840-4095__166048a6c0d24d5e",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-4096-4351__fb9e165f11d6c783",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-4352-4607__f3a05c8a044bd7ad",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n5000_s2601-chunk-4608-4863__50823f93f87dd9e1",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    }
+  ],
+  "persistent_bytes": 1860,
+  "selected_record_ids": [
+    "r_e6e1145ae2dab0d8",
+    "r_c121bd0de82531cc",
+    "r_859a9080e2f2199b",
+    "r_a16764581d1f787c",
+    "r_30286e4d6633d60c",
+    "r_7465c74201c23275",
+    "r_15d099f3f2b33af4",
+    "r_f483d1fffb623af6"
+  ],
+  "selected_records": [
+    {
+      "position": 254,
+      "record_id": "r_e6e1145ae2dab0d8",
+      "text": "[Record r_e6e1145ae2dab0d8; source UNVERIFIED; event 254] At event time 254, During a routine archive review, the ledger states: Entity d_88d074eee80735e9 relies on entity d_99688bd19e7e1ff1. This was recorded alongside unrelated scheduling notes."
+    },
+    {
+      "position": 253,
+      "record_id": "r_c121bd0de82531cc",
+      "text": "[Record r_c121bd0de82531cc; source UNVERIFIED; event 253] At event time 253, In the ordinary course of plant reporting, the ledger states: Entity d_c97914be62e6a0e7 relies on entity d_574340afe31a9b7b. This was recorded alongside unrelated scheduling notes."
+    },
+    {
+      "position": 251,
+      "record_id": "r_859a9080e2f2199b",
+      "text": "[Record r_859a9080e2f2199b; source CURATED; event 251] At event time 251, the ledger states: At -47 C, entity d_9306b55446eb6b22 reaches its documented safety floor."
+    },
+    {
+      "position": 250,
+      "record_id": "r_a16764581d1f787c",
+      "text": "[Record r_a16764581d1f787c; source AUTHORITY; event 250] At event time 250, During a routine archive review, the ledger states: Regarding entity d_afbfa70ccab3d4dd, the registry changed its designation to entity d_8d746b1383eab374."
+    },
+    {
+      "position": 4864,
+      "record_id": "r_30286e4d6633d60c",
+      "text": "[Record r_30286e4d6633d60c; source UNVERIFIED; event 4864] At event time 4864, the ledger states: When entity d_63ad970c084d12d7 runs, it depends upon entity d_87f8799b10a749e4. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 4866,
+      "record_id": "r_7465c74201c23275",
+      "text": "[Record r_7465c74201c23275; source UNVERIFIED; event 4866] At event time 4866, During a routine archive review, the ledger states: Entity d_f160eae6d6664670 cannot proceed without entity d_ebe3b2aaafa00560. This was recorded alongside unrelated scheduling notes."
+    },
+    {
+      "position": 4877,
+      "record_id": "r_15d099f3f2b33af4",
+      "text": "[Record r_15d099f3f2b33af4; source AUTHORITY; event 4877] At event time 4877, After an unrelated maintenance discussion, the ledger states: When entity d_e55480555b81ec59 runs, it depends upon entity d_466499b7b5a4d3d8."
+    },
+    {
+      "position": 4878,
+      "record_id": "r_f483d1fffb623af6",
+      "text": "[Record r_f483d1fffb623af6; source AUTHORITY; event 4878] At event time 4878, the ledger states: Entity d_7bc6b7202fe81ece is not rated for operation below 18 C. This was recorded alongside unrelated scheduling notes."
+    }
+  ],
+  "usage": {
+    "call_ids": [
+      "summary/mco02_n5000_s2601-chunk-0-255__33dd32f731e67bab",
+      "summary/mco02_n5000_s2601-chunk-256-511__0d2fc656d100ed3c",
+      "summary/mco02_n5000_s2601-chunk-512-767__e8b435f25c57b262",
+      "summary/mco02_n5000_s2601-chunk-768-1023__a812b39a80d5d3d0",
+      "summary/mco02_n5000_s2601-chunk-1024-1279__143decd945526413",
+      "summary/mco02_n5000_s2601-chunk-1280-1535__b49e1bd198465aff",
+      "summary/mco02_n5000_s2601-chunk-1536-1791__230465733980ae4e",
+      "summary/mco02_n5000_s2601-chunk-1792-2047__49ebfba0d3896891",
+      "summary/mco02_n5000_s2601-chunk-2048-2303__55f3ee2a15424e67",
+      "summary/mco02_n5000_s2601-chunk-2304-2559__31912a7c86ef6b64",
+      "summary/mco02_n5000_s2601-chunk-2560-2815__5f6ade7a7636e17c",
+      "summary/mco02_n5000_s2601-chunk-2816-3071__99282bf5b8161edf",
+      "summary/mco02_n5000_s2601-chunk-3072-3327__b21b5afc3106ec41",
+      "summary/mco02_n5000_s2601-chunk-3328-3583__dbd34b35dd2fb31f",
+      "summary/mco02_n5000_s2601-chunk-3584-3839__16fb025df25aab99",
+      "summary/mco02_n5000_s2601-chunk-3840-4095__166048a6c0d24d5e",
+      "summary/mco02_n5000_s2601-chunk-4096-4351__fb9e165f11d6c783",
+      "summary/mco02_n5000_s2601-chunk-4352-4607__f3a05c8a044bd7ad",
+      "summary/mco02_n5000_s2601-chunk-4608-4863__50823f93f87dd9e1",
+      "summary/mco02_n5000_s2601-chunk-4864-4999__ca96740abd29fffb"
+    ],
+    "eval_duration_ns": 348134486154,
+    "input_tokens": 322021,
+    "model_calls": 20,
+    "output_tokens": 3125,
+    "prompt_eval_duration_ns": 338524188172,
+    "wall_time_seconds": 708.5466850182274
+  }
+}

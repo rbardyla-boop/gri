@@ -1,0 +1,83 @@
+{
+  "dmc_feature_names": [
+    "mission_membership",
+    "high_salience"
+  ],
+  "frozen_classifier_fields": [
+    "active_entities",
+    "creation_episode",
+    "entity",
+    "family",
+    "field",
+    "salience",
+    "supersedes"
+  ],
+  "pass": true,
+  "record_id_policy": "RESOLVER_TIE_BREAK_ONLY_NOT_CLASSIFIER_INPUT",
+  "rows": [
+    {
+      "case_count": 2400,
+      "classifier_fields_exact": true,
+      "metadata_firewall": true,
+      "no_forbidden_classifier_fields": true,
+      "pass": true,
+      "record_id_tie_break_only": true,
+      "seed": null,
+      "system": "transparent_utility_index_16"
+    },
+    {
+      "case_count": 2400,
+      "classifier_fields_exact": true,
+      "metadata_firewall": true,
+      "no_forbidden_classifier_fields": true,
+      "pass": true,
+      "record_id_tie_break_only": true,
+      "seed": 1337,
+      "system": "dmc04b"
+    },
+    {
+      "case_count": 2400,
+      "classifier_fields_exact": true,
+      "metadata_firewall": true,
+      "no_forbidden_classifier_fields": true,
+      "pass": true,
+      "record_id_tie_break_only": true,
+      "seed": 1338,
+      "system": "dmc04b"
+    },
+    {
+      "case_count": 2400,
+      "classifier_fields_exact": true,
+      "metadata_firewall": true,
+      "no_forbidden_classifier_fields": true,
+      "pass": true,
+      "record_id_tie_break_only": true,
+      "seed": 1339,
+      "system": "dmc04b"
+    },
+    {
+      "case_count": 2400,
+      "classifier_fields_exact": true,
+      "metadata_firewall": true,
+      "no_forbidden_classifier_fields": true,
+      "pass": true,
+      "record_id_tie_break_only": true,
+      "seed": 1340,
+      "system": "dmc04b"
+    },
+    {
+      "case_count": 2400,
+      "classifier_fields_exact": true,
+      "metadata_firewall": true,
+      "no_forbidden_classifier_fields": true,
+      "pass": true,
+      "record_id_tie_break_only": true,
+      "seed": 1341,
+      "system": "dmc04b"
+    }
+  ],
+  "transparent_feature_names": [
+    "mission_membership",
+    "high_salience"
+  ]
+}

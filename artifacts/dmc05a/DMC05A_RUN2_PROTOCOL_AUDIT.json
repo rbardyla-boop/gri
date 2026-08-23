@@ -1,0 +1,80 @@
+{
+  "unit": "DMC-05A",
+  "run": 2,
+  "machine_terminal_state": "DMC_05A_BOUNDED_MEMORY_ADVANTAGE",
+  "audited_terminal_state": "DMC_05A_ACCOUNTING_INVALID",
+  "status": "PROTOCOL_INVALID_NO_SCIENTIFIC_VERDICT",
+  "verification": "SELF_VERIFIED_NO_INDEPENDENT_AGENT",
+  "claim": "Run 2 validly establishes a bounded-memory advantage over competent conventional systems.",
+  "verdict": "FAIL",
+  "invalidators": [
+    {
+      "id": "STRONG_EXACT_BASELINE_CRIPPLED",
+      "requirement": "The exact structured baseline must exploit the existing entity/field/update and utility structure available to a competent indexed store.",
+      "observed": "The implementation indexed only the 64-way normalized A/B address and creation episode, omitting entity, field, supersession, salience, and active-scope utility. Irrelevant records that reused an address were therefore treated as valid temporal versions.",
+      "effect": "Exact structured answer accuracy fell from 1.0 at load 64 to 0.113636 at load 1024 for a representation-induced reason, not a conventional-memory limitation."
+    },
+    {
+      "id": "VERDICT_IGNORED_MATCHING_RECENT_WINDOW",
+      "requirement": "A bounded-memory advantage cannot be declared when any included simple conventional system matches capability and is no worse on the relevant bounded resources.",
+      "observed": "The mechanical bounded-advantage gate checked only exact_structured and conventional_retrieval. It did not check recent_window_16, which achieved 1.0 answer accuracy at every history size with 16 persistent and 16 query-working records.",
+      "effect": "The emitted terminal state is not implied by the full baseline table."
+    },
+    {
+      "id": "BOUNDARY_RECALL_MISACCOUNTED",
+      "requirement": "For externally persisted systems with bounded retrieval, critical recall is target presence in the bounded retrieved candidate set.",
+      "observed": "exact_structured counted the target anywhere in all persistent index buckets while reporting only the selected record as its bounded candidate set.",
+      "effect": "Its reported critical recall remained 1.0 even when retrieval selected the wrong record."
+    }
+  ],
+  "decisive_run2_observations": {
+    "recent_window_16": {
+      "answer_accuracy_all_history_sizes": 1.0,
+      "load_1024_persistent_records": 16.0,
+      "load_1024_query_working_records": 16.0,
+      "load_1024_ingestion_wall_ns_mean": 122202.13636363637,
+      "load_1024_query_wall_ns_mean": 120329.875,
+      "historical_training_required": false
+    },
+    "dmc04b": {
+      "answer_accuracy_all_history_sizes": 1.0,
+      "load_1024_persistent_records": 16.0,
+      "load_1024_query_working_records": 16.0,
+      "load_1024_ingestion_wall_ns_mean": 291683644.84318185,
+      "load_1024_query_wall_ns_mean": 4128636.8772727274,
+      "load_1024_retention_score_evaluations_mean": 17081.454545454544,
+      "historical_training_cost": "TRAINING_COST_UNKNOWN"
+    },
+    "exact_structured": {
+      "answer_accuracy_load_64": 1.0,
+      "answer_accuracy_load_1024": 0.11363636363636363
+    },
+    "dmc_retrieval_all_history": {
+      "answer_accuracy_load_64": 1.0,
+      "answer_accuracy_load_1024": 0.11363636363636363,
+      "interpretation": "The frozen learned retriever cannot disambiguate utility-irrelevant records that alias a relevant A/B address when learned retention is removed."
+    }
+  },
+  "artifact_identity": {
+    "machine_verdict_sha256": "bbc44d9e052c846203fa1e4887a7ee548f6dded0c6ee0ac8488c19439aae83bf",
+    "aggregate_sha256": "6c39717502ef549530d448f3392fd961808afb0e4091998a31de35d0641f6dda",
+    "report_sha256": "936b4eb7bebcb065b7cda0ea9aac45cb6f0e703361fb32a5e0d1432309e32764",
+    "manifest_sha256": "944835465ca28e546585fdd16d11e3023cb182f7b82444233a1518c9b012e445",
+    "replay_sha256": "bb5d5a4e2fd38ba20638cdc0614364f7a5765ffb5ea40a0324ec6d0c9e6ef565",
+    "scaling_svg_sha256": "60b4b5667e83d2fe7a3ce96dba9dd3ffb9ac818d4438d44f95223a7bdb84d024"
+  },
+  "preservation": {
+    "directory": "artifacts/dmc05a/run2_protocol_invalid",
+    "original_manifest_entries": 45,
+    "original_manifest_verified_before_archive": true,
+    "run2_outputs_will_not_be_used_as_run3_results": true
+  },
+  "authorized_correction_scope": [
+    "Use the existing explicit active-scope, salience, entity, field, and supersession metadata to build competent conventional indexes without target IDs, answers, oracle views, or case IDs.",
+    "Count bounded critical recall at the retrieved-candidate boundary.",
+    "Compact conventional retained records to the fields actually required after ingestion and count every persisted record/index byte.",
+    "Evaluate conventional dominance across every included conventional baseline, including recent_window_16, using capability, persistent bytes, bounded working bytes, query work, total online wall time, and zero training.",
+    "Do not alter DMC, cases, thresholds, training accounting, all-history scorer adapter, or result values from prior runs."
+  ],
+  "stop_or_continue": "CONTINUE_WITH_ONE_PROTOCOL_CORRECTION_RUN"
+}

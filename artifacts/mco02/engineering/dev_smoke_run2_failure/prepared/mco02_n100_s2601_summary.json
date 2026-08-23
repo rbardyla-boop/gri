@@ -1,0 +1,69 @@
+{
+  "experiment_id": "MCO-02",
+  "history_id": "mco02_n100_s2601",
+  "invalid_selection_events": [],
+  "persistent_bytes": 2147,
+  "selected_record_ids": [
+    "r_a8c7106ca67c8a09",
+    "r_3eb2716c64f1e61d",
+    "r_7c7895064dda8c65",
+    "r_af1880e5cfafbea2",
+    "r_1956b274a614c1d6",
+    "r_b352f850102eed30",
+    "r_43121fbfec557390",
+    "r_9545eda928bc163a"
+  ],
+  "selected_records": [
+    {
+      "position": 6,
+      "record_id": "r_a8c7106ca67c8a09",
+      "text": "[Record r_a8c7106ca67c8a09; source AUTHORITY; event 6] At event time 6, During a routine archive review, the ledger states: Regarding entity d_25ce4606ed52fddd, the registry changed its designation to entity d_a24264219397b24e. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 1,
+      "record_id": "r_3eb2716c64f1e61d",
+      "text": "[Record r_3eb2716c64f1e61d; source CURATED; event 1] At event time 1, After an unrelated maintenance discussion, the ledger states: The operations of entity e_a4096d174faa3209 draw on entity e_cd058e8660fc0028. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 5,
+      "record_id": "r_7c7895064dda8c65",
+      "text": "[Record r_7c7895064dda8c65; source UNVERIFIED; event 5] At event time 5, During a routine archive review, the ledger states: Regarding entity d_f881f75f29c266b7, it ceases safe operation below -53 C. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 0,
+      "record_id": "r_af1880e5cfafbea2",
+      "text": "[Record r_af1880e5cfafbea2; source AUTHORITY; event 0] At event time 0, In the ordinary course of plant reporting, the ledger states: Regarding entity e_82deb237b3b6109d, it ceases safe operation below 6 C. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 30,
+      "record_id": "r_1956b274a614c1d6",
+      "text": "[Record r_1956b274a614c1d6; source AUTHORITY; event 30] At event time 30, the ledger states: For entity d_622e1e962c7474c0, staff now use the name entity d_b7e50b32eb02c1cb."
+    },
+    {
+      "position": 13,
+      "record_id": "r_b352f850102eed30",
+      "text": "[Record r_b352f850102eed30; source CURATED; event 13] At event time 13, In the ordinary course of plant reporting, the ledger states: The operations of entity e_4f0a5db1fc56cb2c draw on entity e_c0c80e73458e3429. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 14,
+      "record_id": "r_43121fbfec557390",
+      "text": "[Record r_43121fbfec557390; source UNVERIFIED; event 14] At event time 14, During a routine archive review, the ledger states: Regarding entity d_ada2b811af3ef8ee, its upstream requirement is entity d_2c915f2d8138c3ad. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 39,
+      "record_id": "r_9545eda928bc163a",
+      "text": "[Record r_9545eda928bc163a; source CURATED; event 39] At event time 39, the ledger states: Regarding entity e_ab3d5196cc17b461, the registry changed its designation to entity e_ad12903c5618c9fa. No other part of the archival narrative changed this statement."
+    }
+  ],
+  "usage": {
+    "call_ids": [
+      "summary/mco02_n100_s2601-chunk-0-99__6ab7215b843af416"
+    ],
+    "eval_duration_ns": 17580549215,
+    "input_tokens": 7440,
+    "model_calls": 1,
+    "output_tokens": 160,
+    "prompt_eval_duration_ns": 6543813667,
+    "wall_time_seconds": 29.875225336989388
+  }
+}

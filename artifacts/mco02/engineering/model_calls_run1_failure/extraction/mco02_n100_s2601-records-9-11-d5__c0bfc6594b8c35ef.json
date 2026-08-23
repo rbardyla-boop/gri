@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 6,
+    "eval_duration_ns": 76901167,
+    "load_duration_ns": 192103290,
+    "prompt_eval_count": 389,
+    "prompt_eval_duration_ns": 141979270,
+    "total_duration_ns": 438161716,
+    "wall_time_seconds": 0.4401464799884707
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-9-11-d5__c0bfc6594b8c35ef",
+  "key": "mco02_n100_s2601-records-9-11-d5",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_10a747b58a79e05b; source AUTHORITY; event 9] At event time 9, In the ordinary course of plant reporting, the ledger states: Entity d_9f2ad116444e121f relies on entity d_cfe9f8cfeee599b8.\n2. [Record r_94df6ae96f6145dd; source CURATED; event 10] At event time 10, In the ordinary course of plant reporting, the ledger states: The operations of entity e_4bdf1e221180abf1 draw on entity e_ab3d5196cc17b461. No other part of the archival narrative changed this statement.\n3. [Record r_878a4036abc5a38d; source AUTHORITY; event 11] At event time 11, In the ordinary course of plant reporting, the ledger states: Entity d_228ee672626fc22f is not rated for operation below -50 C.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "c0bfc6594b8c35ef9725fe24b4c0e2125969d1fad67ee6b9a99a8435424183ce",
+  "response": {
+    "created_at": "2026-08-22T12:30:50.452594161Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 6,
+    "eval_duration": 76901167,
+    "load_duration": 192103290,
+    "message": {
+      "content": "D\nD\nT",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 389,
+    "prompt_eval_duration": 141979270,
+    "total_duration": 438161716
+  },
+  "response_content_sha256": "59caa176a4c64c195b15e66e132507a9500c5f54700a412395aee2e8d1ae534a",
+  "schema_version": 1
+}

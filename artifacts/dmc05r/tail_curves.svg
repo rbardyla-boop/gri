@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="500" y="30" text-anchor="middle" font-family="sans-serif" font-size="20">DMC-05R critical recall versus irrelevant trailing writes</text>
+<line x1="90" y1="440.00" x2="960" y2="440.00" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="445.00" text-anchor="end" font-family="sans-serif" font-size="13">0.0</text>
+<line x1="90" y1="364.00" x2="960" y2="364.00" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="369.00" text-anchor="end" font-family="sans-serif" font-size="13">0.2</text>
+<line x1="90" y1="288.00" x2="960" y2="288.00" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="293.00" text-anchor="end" font-family="sans-serif" font-size="13">0.4</text>
+<line x1="90" y1="212.00" x2="960" y2="212.00" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="217.00" text-anchor="end" font-family="sans-serif" font-size="13">0.6</text>
+<line x1="90" y1="136.00" x2="960" y2="136.00" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="141.00" text-anchor="end" font-family="sans-serif" font-size="13">0.8</text>
+<line x1="90" y1="60.00" x2="960" y2="60.00" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="65.00" text-anchor="end" font-family="sans-serif" font-size="13">1.0</text>
+<line x1="90" y1="60" x2="90" y2="440" stroke="#222" stroke-width="1.5"/>
+<line x1="90" y1="440" x2="960" y2="440" stroke="#222" stroke-width="1.5"/>
+<text x="90.00" y="465" text-anchor="middle" font-family="sans-serif" font-size="13">0</text>
+<text x="264.00" y="465" text-anchor="middle" font-family="sans-serif" font-size="13">8</text>
+<text x="438.00" y="465" text-anchor="middle" font-family="sans-serif" font-size="13">16</text>
+<text x="612.00" y="465" text-anchor="middle" font-family="sans-serif" font-size="13">32</text>
+<text x="786.00" y="465" text-anchor="middle" font-family="sans-serif" font-size="13">64</text>
+<text x="960.00" y="465" text-anchor="middle" font-family="sans-serif" font-size="13">256</text>
+<text x="525.00" y="500" text-anchor="middle" font-family="sans-serif" font-size="15">Certified irrelevant trailing writes</text>
+<text x="22" y="250.00" transform="rotate(-90 22 250.00)" text-anchor="middle" font-family="sans-serif" font-size="15">Critical recall</text>
+<polyline points="90.00,60.00 264.00,437.03 438.00,440.00 612.00,440.00 786.00,440.00 960.00,440.00" fill="none" stroke="#d1495b" stroke-width="3"/>
+<circle cx="90.00" cy="60.00" r="4" fill="#d1495b"/>
+<circle cx="264.00" cy="437.03" r="4" fill="#d1495b"/>
+<circle cx="438.00" cy="440.00" r="4" fill="#d1495b"/>
+<circle cx="612.00" cy="440.00" r="4" fill="#d1495b"/>
+<circle cx="786.00" cy="440.00" r="4" fill="#d1495b"/>
+<circle cx="960.00" cy="440.00" r="4" fill="#d1495b"/>
+<line x1="90" y1="472" x2="118" y2="472" stroke="#d1495b" stroke-width="3"/>
+<text x="126" y="477" font-family="sans-serif" font-size="13">Recent-16</text>
+<polyline points="90.00,60.00 264.00,60.00 438.00,60.00 612.00,60.00 786.00,60.00 960.00,60.00" fill="none" stroke="#2a9d8f" stroke-width="3"/>
+<circle cx="90.00" cy="60.00" r="4" fill="#2a9d8f"/>
+<circle cx="264.00" cy="60.00" r="4" fill="#2a9d8f"/>
+<circle cx="438.00" cy="60.00" r="4" fill="#2a9d8f"/>
+<circle cx="612.00" cy="60.00" r="4" fill="#2a9d8f"/>
+<circle cx="786.00" cy="60.00" r="4" fill="#2a9d8f"/>
+<circle cx="960.00" cy="60.00" r="4" fill="#2a9d8f"/>
+<line x1="360" y1="472" x2="388" y2="472" stroke="#2a9d8f" stroke-width="3"/>
+<text x="396" y="477" font-family="sans-serif" font-size="13">Transparent utility-16</text>
+<polyline points="90.00,60.00 264.00,60.00 438.00,60.00 612.00,60.00 786.00,60.00 960.00,60.00" fill="none" stroke="#355cde" stroke-width="3"/>
+<circle cx="90.00" cy="60.00" r="4" fill="#355cde"/>
+<circle cx="264.00" cy="60.00" r="4" fill="#355cde"/>
+<circle cx="438.00" cy="60.00" r="4" fill="#355cde"/>
+<circle cx="612.00" cy="60.00" r="4" fill="#355cde"/>
+<circle cx="786.00" cy="60.00" r="4" fill="#355cde"/>
+<circle cx="960.00" cy="60.00" r="4" fill="#355cde"/>
+<line x1="630" y1="472" x2="658" y2="472" stroke="#355cde" stroke-width="3"/>
+<text x="666" y="477" font-family="sans-serif" font-size="13">DMC-04B frozen</text>
+</svg>

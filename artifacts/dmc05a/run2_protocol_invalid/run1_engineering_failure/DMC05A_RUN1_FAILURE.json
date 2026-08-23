@@ -1,0 +1,55 @@
+{
+  "unit": "DMC-05A",
+  "run": 1,
+  "status": "ENGINEERING_FAILURE_NO_SCIENTIFIC_VERDICT",
+  "terminal_state": "DMC_05A_ACCOUNTING_INVALID",
+  "command": "python3 scripts/run_dmc05a.py",
+  "exit_code": 1,
+  "observed_at": "2026-08-21T19:56:23-03:00",
+  "failure_stage": "first dmc_retrieval_all_history worker, seed 1337",
+  "failure_case_completion": {
+    "conventional_system_workers": 6,
+    "dmc04b_workers": 5,
+    "dmc_retrieval_all_history_workers": 0,
+    "replays": 0,
+    "verdict_generated": false
+  },
+  "classification": {
+    "scientific_evidence": false,
+    "candidate_failure": false,
+    "implementation_failure": true,
+    "reason": "The all-history ablation sent more than the frozen 16-candidate scorer-view capacity in one call. The frozen firewall rejected the malformed call before a worker receipt or aggregate verdict was produced."
+  },
+  "exception": {
+    "type": "ValueError",
+    "message": "retrieval scorer candidate capacity violation",
+    "worker": "dmc_retrieval_all_history/1337",
+    "origin": "src/dmc04p/matcher.py:validate_scorer_view"
+  },
+  "frozen_identity": {
+    "runner_sha256": "096c29a63308a7903f0df577f42b1f5ab0c9ef20150832570c3f889a94680eee",
+    "tests_sha256": "0620cdac000cc23eb53ea92e04359a17c2ca125fdf710083c9205bd690e0802c",
+    "config_sha256": "c5e41f29ae4140448d0df9070fb8aa32658174220a611d88326f76870a66fe25",
+    "contract_sha256": "dda1f38513066d129d6190e24a567d81503e90cde357f623fccdc47d4d7ef296",
+    "freeze_sha256": "4e880a6ef004a2606f4a9cb175faa84a756654c564338e050946ed92df3f874e"
+  },
+  "preserved_raw_receipts": {
+    "conventional_retrieval.json": "514187b5ccd84e1f754ec8be387a3da83ba562107c48804cffc8298eebe40a36",
+    "dmc04b_seed1337.json": "e356019f02973ec2df31c1564247bc29acea0d61526b0ad85f7fe0f461847897",
+    "dmc04b_seed1338.json": "8589bb27a1c6ac99d859ebac49317236793c8daa777c7adb9d7609d9d233dfc9",
+    "dmc04b_seed1339.json": "3f98a6a093c5db2655e64f9e412fc90d0dc838e64ed82532454943f8a4c801",
+    "dmc04b_seed1340.json": "f673bca8a11b494fc76469f95d8e3b4ad6814cfd7f028ed9e8afea3d7cd8cc37",
+    "dmc04b_seed1341.json": "d7d4e26b03934798fff46b7c396b143c084ff4368c5fda9de9add17a57ddeb2e",
+    "exact_structured.json": "ae81659f7870020731f627fc157c95f008dec8ab3af4806f2cb6ea7d92c9ce31",
+    "frozen_fifo_16.json": "3732ac266ac6e884bd4364461e261e656451b1850570f5792cd7f4f5c5d8f6c4",
+    "full_history_scan.json": "79b3e19b57115740dee0c5a901f033aca0bf3e3443aec5b0de162a0b5bcbc832",
+    "random_16.json": "66b2247e7d21b67a4c59d5c29745aaa07db2bc497733f0c17efc1d5500c40b20",
+    "recent_window_16.json": "a258d81646d29ebd346daa65b8f8e4b606d8d40400d0f232584179ecf691fe3e"
+  },
+  "preservation": {
+    "raw_directory": "artifacts/dmc05a/run1_engineering_failure/raw",
+    "harness_directory": "artifacts/dmc05a/run1_engineering_failure/frozen_harness",
+    "completed_receipts_will_not_be_used_as_run_2_results": true
+  },
+  "authorized_repair_scope": "Batch complete-history candidates into ordered groups of at most 16, call the unchanged frozen learned scorer on each group, concatenate scores in original order, and apply the unchanged learned resolver globally. Add direct equivalence and firewall tests; do not alter checkpoints, weights, features, score equations, tie breaks, benchmark cases, thresholds, or candidate outputs."
+}

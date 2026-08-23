@@ -1,0 +1,22 @@
+{
+  "unit": "DMC-05A",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_RUN",
+  "source_sha256": "096c29a63308a7903f0df577f42b1f5ab0c9ef20150832570c3f889a94680eee",
+  "test_sha256": "0620cdac000cc23eb53ea92e04359a17c2ca125fdf710083c9205bd690e0802c",
+  "config_sha256": "c5e41f29ae4140448d0df9070fb8aa32658174220a611d88326f76870a66fe25",
+  "contract_sha256": "dda1f38513066d129d6190e24a567d81503e90cde357f623fccdc47d4d7ef296",
+  "dmc04b_runner_sha256": "3185434b9546236f93b3e75b47f5f11c88e7e33d89985a2c545c36c0fa90cbec",
+  "dmc04b_verdict_sha256": "f62724ca065b166fbc00741f5097a24b85c36e1b232cfc67f6cccbb79c3ba902",
+  "dmc04b_aggregate_sha256": "ffcceabec39c9953ec4617aecabd461ed1c6933a34612df08871424d79adb7ab",
+  "dmc04ba_dataset_manifest_sha256": "ee4afa55326205030a8600b079a0a484b6bfa39312d6127a80633e00c93274fc",
+  "preflight": {
+    "compile_pass": true,
+    "targeted_tests_pass": true,
+    "targeted_test_count": 6,
+    "diff_check_pass": true,
+    "scientific_results_observed_before_freeze": false
+  },
+  "architecture_changes_authorized": false,
+  "training_authorized": false,
+  "post_result_changes_authorized": false
+}

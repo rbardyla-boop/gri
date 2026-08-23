@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 1199, in <module>
+    raise SystemExit(main())
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 1195, in main
+    return run_parent()
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 1070, in run_parent
+    worker_runs[system].append(run_one_worker(system, seed, output))
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 1028, in run_one_worker
+    raise RuntimeError(f"worker failed: {system}/{seed}\n{run.stdout[-4000:]}")
+RuntimeError: worker failed: dmc_retrieval_all_history/1337
+Traceback (most recent call last):
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 1199, in <module>
+    raise SystemExit(main())
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 1189, in main
+    payload = run_worker(args.worker, args.seed)
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 560, in run_worker
+    row = dmc_case(system, case, models, module)
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc05a.py", line 449, in dmc_case
+    selected = module.learned_retrieve(models["retriever"], case, candidates, retrieval_audit)
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc04b.py", line 422, in learned_retrieve
+    scores = learned_scores(model, case, candidates, audit)
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/scripts/run_dmc04b.py", line 396, in learned_scores
+    validation = validate_scorer_view(scorer_view_payload)
+  File "/home/thebackhand/Downloads/grok/new-ai/gri-research/src/dmc04p/matcher.py", line 203, in validate_scorer_view
+    raise ValueError("retrieval scorer candidate capacity violation")
+ValueError: retrieval scorer candidate capacity violation

@@ -1,0 +1,63 @@
+{
+  "experiment_id": "MCO-02",
+  "gate_pass": false,
+  "gates": {
+    "extraction_cost_dominates": false,
+    "extraction_precision": 0.9532919254658385,
+    "extraction_recall": 0.9532919254658385,
+    "integrity_pass": false,
+    "iterative_answer_accuracy": 0.8125,
+    "iterative_query_expensive_token_units": 1577.765625,
+    "iterative_query_model_calls": 3.390625,
+    "material_cost_advantage_pairs": [],
+    "planner_answer_accuracy": 0.8125,
+    "planner_each_load": {
+      "100": 0.625,
+      "1000": 0.9375,
+      "10000": 0.8125,
+      "5000": 0.875
+    },
+    "planner_matches_or_beats_iterative": true,
+    "planner_query_cheaper": true,
+    "planner_query_expensive_token_units": 732.421875,
+    "planner_query_model_calls": 1.0,
+    "qualified_nonstructured_pairs": [],
+    "rag_answer_accuracy": 0.0,
+    "rag_cost_ratios_q128": {
+      "100": 2.325409586719395,
+      "1000": 1.2979105559251936,
+      "10000": 0.28112588918355175,
+      "5000": 0.5081154393187424
+    },
+    "rag_dominates": false,
+    "rag_quality_equivalent": false,
+    "structured_quality": false
+  },
+  "overall_verification": "FAIL",
+  "population": {
+    "histories": 8,
+    "queries": 64,
+    "rows": 384,
+    "systems": [
+      "conventional_rag",
+      "full_context",
+      "iterative_need_retrieval",
+      "recent_window",
+      "rolling_summary",
+      "structured_exact_planner"
+    ]
+  },
+  "status": "TERMINAL_INVALID",
+  "stop_decision": "STOP at the frozen terminal verdict and follow only its smallest named repair.",
+  "training_accounting": {
+    "backward_calls": 0,
+    "dmc_historical_optimizer_steps_preserved": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN",
+    "frozen_pretrained_model": "llama3.1:8b",
+    "learned_retention_components": 0,
+    "optimizer_steps": 0
+  },
+  "verdict": "MCO_02_ACCOUNTING_INVALID",
+  "world_impact_disposition": "NOT_ESTABLISHED",
+  "world_impact_reason": "Controlled mechanism evidence cannot establish novelty, independent replication, real demand, production reliability, adoption, or long-horizon societal impact."
+}

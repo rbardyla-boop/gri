@@ -1,0 +1,69 @@
+{
+  "experiment_id": "MCO-02",
+  "history_id": "mco02_n100_s2602",
+  "invalid_selection_events": [],
+  "persistent_bytes": 2072,
+  "selected_record_ids": [
+    "r_8368197b0580f2ad",
+    "r_d2533297ea77bce8",
+    "r_c04765450419d6f4",
+    "r_10785878a8369b30",
+    "r_75b671be7426f501",
+    "r_af650dfa83c11f32",
+    "r_4b4168bf72edcbdd",
+    "r_a5f040fdf4529f3f"
+  ],
+  "selected_records": [
+    {
+      "position": 0,
+      "record_id": "r_8368197b0580f2ad",
+      "text": "[Record r_8368197b0580f2ad; source CURATED; event 0] At event time 0, the ledger states: Entity e_a206bbe207b2ebf0 was redesignated as entity e_01dd0e56d592c8b2. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 2,
+      "record_id": "r_d2533297ea77bce8",
+      "text": "[Record r_d2533297ea77bce8; source CURATED; event 2] At event time 2, After an unrelated maintenance discussion, the ledger states: Regarding entity e_ed6e11679793c16a, the registry changed its designation to entity e_b7c98d436632bdf6."
+    },
+    {
+      "position": 3,
+      "record_id": "r_c04765450419d6f4",
+      "text": "[Record r_c04765450419d6f4; source CURATED; event 3] At event time 3, In the ordinary course of plant reporting, the ledger states: Entity e_b2f41ec544316f1c cannot proceed without entity e_1a0a2822b81e4273. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 5,
+      "record_id": "r_10785878a8369b30",
+      "text": "[Record r_10785878a8369b30; source UNVERIFIED; event 5] At event time 5, During a routine archive review, the ledger states: The minimum safe temperature recorded for entity d_63087d722a717497 is 1 C. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 6,
+      "record_id": "r_75b671be7426f501",
+      "text": "[Record r_75b671be7426f501; source AUTHORITY; event 6] At event time 6, In the ordinary course of plant reporting, the ledger states: For entity d_4e79301564e0a896, staff now use the name entity d_d7ce4181d4594c14."
+    },
+    {
+      "position": 7,
+      "record_id": "r_af650dfa83c11f32",
+      "text": "[Record r_af650dfa83c11f32; source UNVERIFIED; event 7] At event time 7, In the ordinary course of plant reporting, an observation states: For entity e_342872e2e5c98fae, the supporting requirement is entity e_9969540adb4cd86c. This was recorded alongside unrelated scheduling notes."
+    },
+    {
+      "position": 8,
+      "record_id": "r_4b4168bf72edcbdd",
+      "text": "[Record r_4b4168bf72edcbdd; source CURATED; event 8] At event time 8, During a routine archive review, the ledger states: For entity d_5b22942533b4e760, the supporting requirement is entity d_290a67a8b38a13d7. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 9,
+      "record_id": "r_a5f040fdf4529f3f",
+      "text": "[Record r_a5f040fdf4529f3f; source CURATED; event 9] At event time 9, During a routine archive review, the ledger states: Entity e_01dd0e56d592c8b2 cannot proceed without entity e_0fb2e630f18d29b1. The filing also mentioned routine paperwork with no operational consequence."
+    }
+  ],
+  "usage": {
+    "call_ids": [
+      "summary/mco02_n100_s2602-chunk-0-99__df11d44f0fcca123"
+    ],
+    "eval_duration_ns": 14128357659,
+    "input_tokens": 7381,
+    "model_calls": 1,
+    "output_tokens": 160,
+    "prompt_eval_duration_ns": 6287321512,
+    "wall_time_seconds": 25.5241339240456
+  }
+}

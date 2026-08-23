@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 6,
+    "eval_duration_ns": 76392086,
+    "load_duration_ns": 174022297,
+    "prompt_eval_count": 260,
+    "prompt_eval_duration_ns": 65363986,
+    "total_duration_ns": 342403331,
+    "wall_time_seconds": 0.34333613596390933
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-27-29-d2__b6dc96644c761986",
+  "key": "mco02_n100_s2601-records-27-29-d2",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. Entity d_458d6b587d124139 has a failure threshold of -19 C.\n2. When entity e_a4096d174faa3209 runs, it depends upon entity e_d9266ac346b75feb.\n3. Regarding entity d_01cf61cf11ab3028, the registry changed its designation to entity d_a8410f93d25e6ee2.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "b6dc96644c7619865ecd8b78d4b4db53127b5575644415a000ff44b79622d76e",
+  "response": {
+    "created_at": "2026-08-22T12:40:49.371673572Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 6,
+    "eval_duration": 76392086,
+    "load_duration": 174022297,
+    "message": {
+      "content": "D\nD\nR",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 260,
+    "prompt_eval_duration": 65363986,
+    "total_duration": 342403331
+  },
+  "response_content_sha256": "9ef9411e5ad39e84ab2c06677182e1142744aa1fc0af8f4abcaff59a8dc980fa",
+  "schema_version": 1
+}

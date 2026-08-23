@@ -1,0 +1,77 @@
+{
+  "accounting": {
+    "eval_count": 42,
+    "eval_duration_ns": 579958644,
+    "load_duration_ns": 123552052,
+    "prompt_eval_count": 175,
+    "prompt_eval_duration_ns": 126411805,
+    "total_duration_ns": 1814868378,
+    "wall_time_seconds": 1.8154214669484645
+  },
+  "cache_hit": false,
+  "call_id": "iterative-mco02_n10000_s2601-q_b804c080b7ecf64f-step-0__c6348a1e6f7a4f17",
+  "key": "iterative-mco02_n10000_s2601-q_b804c080b7ecf64f-step-0",
+  "purpose": "acquisition",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "needed_entity": {
+          "enum": [
+            "e_5d7e266b3ed1e101"
+          ],
+          "type": "string"
+        },
+        "record_id": {
+          "enum": [
+            "r_cf9e0eedff135d19"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "needed_entity"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Select the winning continuation for demand-driven retrieval from only the supplied candidate records. An explicitly superseded record is inactive. Among remaining contradictions, source priority is AUTHORITY over CURATED over UNVERIFIED, then later event time. Return the winning record ID and its object entity through the required JSON schema. The two fields must describe the same visible record. Do not invent IDs.",
+        "role": "system"
+      },
+      {
+        "content": "CURRENT ENTITY\ne_19920b073f1dbcf6\n\nCANDIDATE RECORDS\n[Record r_cf9e0eedff135d19; source CURATED; event 5382] subject=e_19920b073f1dbcf6; relation=depends_on; object=e_5d7e266b3ed1e101; operation=assert; supersedes=None",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 96,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "c6348a1e6f7a4f17c78826d9769452b09ba800b421f8abeb5ef958da19ecae0a",
+  "response": {
+    "created_at": "2026-08-22T17:25:12.673460081Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 42,
+    "eval_duration": 579958644,
+    "load_duration": 123552052,
+    "message": {
+      "content": "{\n  \"record_id\": \"r_cf9e0eedff135d19\",\n  \"needed_entity\": \"e_5d7e266b3ed1e101\"\n}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 175,
+    "prompt_eval_duration": 126411805,
+    "total_duration": 1814868378
+  },
+  "response_content_sha256": "0563e1ee08921601c986292357dc63cf49536613c041fb378c94b204561cdb17",
+  "schema_version": 1
+}

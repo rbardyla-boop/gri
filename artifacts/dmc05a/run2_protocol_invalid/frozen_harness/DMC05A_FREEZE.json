@@ -1,0 +1,48 @@
+{
+  "unit": "DMC-05A",
+  "run": 2,
+  "status": "FROZEN_BEFORE_SCIENTIFIC_RERUN",
+  "source_sha256": "c347bc51ba5187965343f5cd7c500169351aa20174e248d8599a1ba38023b01c",
+  "test_sha256": "69f925a60a443e0ea0d72e77f030ab35d2c23bc2b45c21028b9ce00c5b406858",
+  "config_sha256": "c5e41f29ae4140448d0df9070fb8aa32658174220a611d88326f76870a66fe25",
+  "contract_sha256": "dda1f38513066d129d6190e24a567d81503e90cde357f623fccdc47d4d7ef296",
+  "amendment_sha256": "635156458a357b3ec499e1141defa102b34a15cd4805d36ba81f0d1534c47102",
+  "dmc04b_runner_sha256": "3185434b9546236f93b3e75b47f5f11c88e7e33d89985a2c545c36c0fa90cbec",
+  "dmc04b_verdict_sha256": "f62724ca065b166fbc00741f5097a24b85c36e1b232cfc67f6cccbb79c3ba902",
+  "dmc04b_aggregate_sha256": "ffcceabec39c9953ec4617aecabd461ed1c6933a34612df08871424d79adb7ab",
+  "dmc04ba_dataset_manifest_sha256": "ee4afa55326205030a8600b079a0a484b6bfa39312d6127a80633e00c93274fc",
+  "run1": {
+    "predecessor_freeze_sha256": "4e880a6ef004a2606f4a9cb175faa84a756654c564338e050946ed92df3f874e",
+    "failure_receipt": "artifacts/dmc05a/run1_engineering_failure/DMC05A_RUN1_FAILURE.json",
+    "failure_receipt_sha256": "951bc474e73a6e1f7446c1a0df198a02394751f8e54127492ce375f1148975b8",
+    "classification": "ENGINEERING_FAILURE_NO_SCIENTIFIC_VERDICT",
+    "partial_worker_receipts_generated": true,
+    "capability_values_inspected_for_repair": false
+  },
+  "repair": {
+    "scope": "capacity-legal batched calls to the unchanged candidate-independent scorer, unchanged global resolver transcription, and external replay-path serialization",
+    "result_independent": true,
+    "criteria_changed": false,
+    "data_changed": false,
+    "checkpoints_changed": false,
+    "weights_changed": false,
+    "features_changed": false,
+    "score_equation_changed": false,
+    "resolver_changed": false,
+    "training_executed": false
+  },
+  "preflight": {
+    "compile_pass": true,
+    "targeted_tests_pass": true,
+    "targeted_test_count": 9,
+    "batched_legal_capacity_equivalence_pass": true,
+    "direct_full_history_equivalence_pass": true,
+    "external_replay_path_pass": true,
+    "run1_archive_identity_pass": true,
+    "diff_check_pass": true
+  },
+  "architecture_changes_authorized": false,
+  "training_authorized": false,
+  "post_scientific_result_changes_authorized": false,
+  "engineering_rerun_authorized_by_preregistered_invalid_accounting_precedence": true
+}

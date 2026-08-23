@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 6,
+    "eval_duration_ns": 77833500,
+    "load_duration_ns": 166519432,
+    "prompt_eval_count": 392,
+    "prompt_eval_duration_ns": 144495760,
+    "total_duration_ns": 417666226,
+    "wall_time_seconds": 0.419024053029716
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-93-95-d5__0a5485c49ce418d1",
+  "key": "mco02_n100_s2601-records-93-95-d5",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_4aaeb661933e9472; source AUTHORITY; event 93] At event time 93, After an unrelated maintenance discussion, the ledger states: For entity d_133645a4fe8fe4f4, staff now use the name entity d_5b081eecfd9363bb. This was recorded alongside unrelated scheduling notes.\n2. [Record r_b54b6a199e781f94; source CURATED; event 94] At event time 94, In the ordinary course of plant reporting, the ledger states: For entity e_b07bd63f0266c767, the supporting requirement is entity e_a3dc79cd56ad6f97.\n3. [Record r_15e82dcaa1811314; source CURATED; event 95] At event time 95, the ledger states: Entity d_e44682139dbb5d4b relies on entity d_4fa944e812c2622a. This was recorded alongside unrelated scheduling notes.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "0a5485c49ce418d14a3c70863fb2d549178a541f5eb772be6c86a2852f04f3b3",
+  "response": {
+    "created_at": "2026-08-22T12:31:08.680862309Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 6,
+    "eval_duration": 77833500,
+    "load_duration": 166519432,
+    "message": {
+      "content": "R\nD\nD",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 392,
+    "prompt_eval_duration": 144495760,
+    "total_duration": 417666226
+  },
+  "response_content_sha256": "94095deeccf3f4e1a0a27c18a711a7993fd0a93b8caf4c56baa599bcacd4bbaf",
+  "schema_version": 1
+}

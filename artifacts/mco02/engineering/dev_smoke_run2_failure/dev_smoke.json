@@ -1,0 +1,81 @@
+{
+  "extraction": {
+    "exact_records": 88,
+    "extraction_precision": 0.88,
+    "extraction_recall": 0.88,
+    "malformed_model_calls": 4,
+    "nonrelation_scaffold_accuracy": 1.0,
+    "record_count": 100,
+    "relation_accuracy": 0.88,
+    "template_accuracy": {
+      "depends_on:0": 1.0,
+      "depends_on:1": 1.0,
+      "depends_on:2": 0.875,
+      "depends_on:3": 1.0,
+      "depends_on:4": 0.8888888888888888,
+      "depends_on:5": 1.0,
+      "failure_threshold:0": 0.6,
+      "failure_threshold:1": 0.8333333333333334,
+      "failure_threshold:2": 0.6,
+      "failure_threshold:3": 0.7142857142857143,
+      "failure_threshold:4": 1.0,
+      "failure_threshold:5": 1.0,
+      "renamed_to:0": 0.0,
+      "renamed_to:1": 1.0,
+      "renamed_to:2": 1.0,
+      "renamed_to:3": 0.5,
+      "renamed_to:4": 1.0,
+      "renamed_to:5": 0.8
+    },
+    "unresolved_records": 0
+  },
+  "history_id": "mco02_n100_s2601",
+  "query_count": 2,
+  "row_count": 12,
+  "status": "ENGINEERING_ONLY_NOT_SCIENTIFIC",
+  "systems": {
+    "conventional_rag": {
+      "answer_accuracy": 0.0,
+      "failure_classes": {
+        "REASONING_FAILURE": 1,
+        "RETRIEVAL_FAILURE": 1
+      },
+      "maximum_model_visible_records": 16
+    },
+    "full_context": {
+      "answer_accuracy": 0.0,
+      "failure_classes": {
+        "REASONING_FAILURE": 2
+      },
+      "maximum_model_visible_records": 100
+    },
+    "iterative_need_retrieval": {
+      "answer_accuracy": 0.0,
+      "failure_classes": {
+        "RETRIEVAL_FAILURE": 2
+      },
+      "maximum_model_visible_records": 0
+    },
+    "recent_window": {
+      "answer_accuracy": 0.0,
+      "failure_classes": {
+        "RETRIEVAL_FAILURE": 2
+      },
+      "maximum_model_visible_records": 16
+    },
+    "rolling_summary": {
+      "answer_accuracy": 0.0,
+      "failure_classes": {
+        "RETRIEVAL_FAILURE": 2
+      },
+      "maximum_model_visible_records": 16
+    },
+    "structured_exact_planner": {
+      "answer_accuracy": 0.5,
+      "failure_classes": {
+        "REASONING_FAILURE": 1
+      },
+      "maximum_model_visible_records": 2
+    }
+  }
+}

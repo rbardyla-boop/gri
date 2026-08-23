@@ -1,0 +1,58 @@
+{
+  "unit": "DMC-05R",
+  "run": 1,
+  "status": "FROZEN_BEFORE_SCIENTIFIC_EXECUTION",
+  "freeze_date": "2026-08-21",
+  "runner_sha256": "bb480d888de0da5343473ad1b754296bdf4a0e6d19ce9e862838925a877a3102",
+  "test_sha256": "bed6f3038b3fb191f5386a7cc77325ba3ff77edb643e6b745918715932510328",
+  "config_sha256": "6d20750a69d86bd4683f2cb459322219cec22882fde643c85d3e54215278c67d",
+  "contract_sha256": "f976341643904baea635b6f2e67dab10c663bd368b7469a2c3e34b88837ee283",
+  "dmc05a_terminal_receipt_sha256": "cba6627c8b22a3e563629f09fe05e221a0fb5cefd9613fd7a99c8a460d58a1ba",
+  "predecessor_anchors": {
+    "dmc04b_runner_sha256": "3185434b9546236f93b3e75b47f5f11c88e7e33d89985a2c545c36c0fa90cbec",
+    "dmc04b_verdict_sha256": "f62724ca065b166fbc00741f5097a24b85c36e1b232cfc67f6cccbb79c3ba902",
+    "dmc04b_aggregate_sha256": "ffcceabec39c9953ec4617aecabd461ed1c6933a34612df08871424d79adb7ab",
+    "dmc04ba_dataset_manifest_sha256": "ee4afa55326205030a8600b079a0a484b6bfa39312d6127a80633e00c93274fc",
+    "dmc05a_runner_sha256": "ab32d7b6bb8ec48b98d109499b4543a80e0de15130a4b113fa31fbb3d4695a13",
+    "dmc05a_verdict_sha256": "7a86a756603f61b4d6f4c02385af850e919a06788c4f9b94f1d684808982b225",
+    "dmc05a_aggregate_sha256": "26dfdc54c58261472ab9ee46a29743827d4645f345928c0540b5bc1c8f8daa0c",
+    "dmc05a_benchmark_ordering_sha256": "faca17577e013660e11dc285a8dd2f1cb78f5c0b65456170daada54b52cd932d",
+    "dmc05a_training_accounting_sha256": "62b3c0360c05dc6151693297ea0081e176a5c2e20aa686407107872ed6d684c0"
+  },
+  "fixture_geometry": {
+    "source_cases": 592,
+    "tail_sizes": [0, 8, 16, 32, 64, 256],
+    "variant_count_by_tail": {
+      "0": 592,
+      "8": 512,
+      "16": 512,
+      "32": 416,
+      "64": 256,
+      "256": 88
+    },
+    "total_core_variants": 2376,
+    "surprise_dependency_cases": 24
+  },
+  "execution_optimization": {
+    "scope": "Cache the frozen affine scorer by its exact two-bit feature vector while preserving frozen ranking, lifecycle, tie breaking, retrieval, decoder, and logical score-evaluation accounting.",
+    "tail_zero_equivalence": "All 592 cases against frozen DMC-05A receipts for all five seeds.",
+    "nonzero_direct_equivalence": "Lexicographically first and last valid variant at every nonzero tail for all five seeds.",
+    "mechanism_changed": false,
+    "logical_score_work_underreported": false
+  },
+  "training_accounting": {
+    "unique_suite_optimizer_steps": 10880,
+    "historical_wall_time": "TRAINING_COST_UNKNOWN",
+    "historical_energy": "TRAINING_COST_UNKNOWN",
+    "historical_dollar_cost": "TRAINING_COST_UNKNOWN",
+    "online_training_authorized": false
+  },
+  "compile_pass_before_freeze": true,
+  "scientific_results_observed_before_freeze": false,
+  "architecture_changes_authorized": false,
+  "training_authorized": false,
+  "threshold_changes_authorized": false,
+  "capacity_changes_authorized": false,
+  "feature_changes_authorized": false,
+  "real_language_evaluation_authorized": false
+}

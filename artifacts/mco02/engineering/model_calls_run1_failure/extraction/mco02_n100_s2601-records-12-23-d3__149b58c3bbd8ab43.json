@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 18,
+    "eval_duration_ns": 262536700,
+    "load_duration_ns": 156920106,
+    "prompt_eval_count": 1097,
+    "prompt_eval_duration_ns": 587551837,
+    "total_duration_ns": 1072343658,
+    "wall_time_seconds": 1.074033471988514
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-12-23-d3__149b58c3bbd8ab43",
+  "key": "mco02_n100_s2601-records-12-23-d3",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. [Record r_86cde91742aa5b90; source CURATED; event 12] At event time 12, In the ordinary course of plant reporting, the ledger states: When entity e_c0c80e73458e3429 runs, it depends upon entity e_9422991b193a78ef. This was recorded alongside unrelated scheduling notes.\n2. [Record r_b352f850102eed30; source CURATED; event 13] At event time 13, In the ordinary course of plant reporting, the ledger states: The operations of entity e_4f0a5db1fc56cb2c draw on entity e_c0c80e73458e3429. The filing also mentioned routine paperwork with no operational consequence.\n3. [Record r_43121fbfec557390; source UNVERIFIED; event 14] At event time 14, During a routine archive review, the ledger states: Regarding entity d_ada2b811af3ef8ee, its upstream requirement is entity d_2c915f2d8138c3ad. No other part of the archival narrative changed this statement.\n4. [Record r_ca87c09bfdc6cdc2; source UNVERIFIED; event 15] At event time 15, During a routine archive review, the ledger states: For entity d_8dda288d68f073f8, staff now use the name entity d_5a5c140d26dc7fe5. This was recorded alongside unrelated scheduling notes.\n5. [Record r_30b64165b0f64e0d; source CURATED; event 16] At event time 16, During a routine archive review, the ledger states: Regarding entity d_bca55b91b989108c, its upstream requirement is entity d_270005fdaa946cf9. No other part of the archival narrative changed this statement.\n6. [Record r_ba56c62dbcbae8ea; source UNVERIFIED; event 17] At event time 17, In the ordinary course of plant reporting, the ledger states: Entity d_230f73028793a51a cannot proceed without entity d_e581ab86074b58a8. The filing also mentioned routine paperwork with no operational consequence.\n7. [Record r_6c6d33bd82966b5d; source AUTHORITY; event 18] At event time 18, the ledger states: For entity d_cb9343f4494ed210, the supporting requirement is entity d_aaa4749f7b71db23.\n8. [Record r_21186af34b1c2493; source CURATED; event 19] At event time 19, In the ordinary course of plant reporting, the ledger states: When entity d_4e28e8e830119706 runs, it depends upon entity d_c2c4cf22848cc049. This was recorded alongside unrelated scheduling notes.\n9. [Record r_11e83f4d2f8f83f6; source UNVERIFIED; event 20] At event time 20, After an unrelated maintenance discussion, the ledger states: Entity d_2ffa1916ae0a6860 cannot proceed without entity d_12c5f74243b41ae0.\n10. [Record r_900bd338664fa4c0; source CURATED; event 21] At event time 21, the ledger states: When entity e_a3dc79cd56ad6f97 runs, it depends upon entity e_406ebee8d15399b7. This was recorded alongside unrelated scheduling notes.\n11. [Record r_40053540fbf3770e; source UNVERIFIED; event 22] At event time 22, the ledger states: Entity d_5eec4a27124abdbd received the replacement name entity d_da2de17c35d6093d. This was recorded alongside unrelated scheduling notes.\n12. [Record r_07f6fbdf77ae343a; source AUTHORITY; event 23] At event time 23, After an unrelated maintenance discussion, the ledger states: The archived temperature floor for entity e_1e746bfbcba30fcb is -11 C. No other part of the archival narrative changed this statement.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 36,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "149b58c3bbd8ab434a665dfa5cb3505d050d89dc8e15464be8d4e1db7d95bbdd",
+  "response": {
+    "created_at": "2026-08-22T12:30:51.527347387Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 18,
+    "eval_duration": 262536700,
+    "load_duration": 156920106,
+    "message": {
+      "content": "D\nD\nD\nR\nD\nD\nD\nD\nT",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 1097,
+    "prompt_eval_duration": 587551837,
+    "total_duration": 1072343658
+  },
+  "response_content_sha256": "103274aae3d3d16bb70ce9fbe53c8fd9c1735ba823c2c8a8a776bf04a28f434e",
+  "schema_version": 1
+}

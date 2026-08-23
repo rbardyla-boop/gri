@@ -1,0 +1,130 @@
+{
+  "experiment_id": "MCO-01",
+  "gate_pass": true,
+  "gates": {
+    "exact_bounded_quality": {
+      "accuracy_drop_100_to_100000": 0.0,
+      "checks": {
+        "active_cap": true,
+        "answer_accuracy": true,
+        "critical_recall": true,
+        "dependency_chain_accuracy": true,
+        "provenance_accuracy": true,
+        "scaling": true,
+        "temporal_update_accuracy": true
+      },
+      "maximum_active_records": 5,
+      "pass": true,
+      "thresholds": {
+        "answer_accuracy": 0.99,
+        "critical_recall": 0.99,
+        "dependency_chain_accuracy": 0.99,
+        "provenance_accuracy": 0.99,
+        "temporal_update_accuracy": 0.99
+      }
+    },
+    "exact_external_viability": {
+      "accuracy_drop_100_to_100000": 0.0,
+      "checks": {
+        "accuracy_floor_each_load": true,
+        "active_cap": true,
+        "scaling": true
+      },
+      "load_answer_accuracy": {
+        "100": 1.0,
+        "1000": 1.0,
+        "10000": 1.0,
+        "100000": 1.0
+      },
+      "maximum_active_records": 5,
+      "pass": true
+    },
+    "integrity_pass": true,
+    "iterative_bounded_quality": {
+      "accuracy_drop_100_to_100000": 0.0,
+      "checks": {
+        "active_cap": true,
+        "answer_accuracy": true,
+        "critical_recall": true,
+        "dependency_chain_accuracy": true,
+        "provenance_accuracy": true,
+        "scaling": true,
+        "temporal_update_accuracy": true
+      },
+      "maximum_active_records": 6,
+      "pass": true,
+      "thresholds": {
+        "answer_accuracy": 0.99,
+        "critical_recall": 0.99,
+        "dependency_chain_accuracy": 0.99,
+        "provenance_accuracy": 0.99,
+        "temporal_update_accuracy": 0.99
+      }
+    },
+    "iterative_external_viability": {
+      "accuracy_drop_100_to_100000": 0.0,
+      "checks": {
+        "accuracy_floor_each_load": true,
+        "active_cap": true,
+        "scaling": true
+      },
+      "load_answer_accuracy": {
+        "100": 1.0,
+        "1000": 1.0,
+        "10000": 1.0,
+        "100000": 1.0
+      },
+      "maximum_active_records": 6,
+      "pass": true
+    },
+    "iterative_material_advantage": true,
+    "iterative_minus_one_shot_hop_3_to_5_answer_accuracy": 1.0,
+    "iterative_minus_one_shot_overall_answer_accuracy": 0.95,
+    "one_shot_bounded_quality": {
+      "accuracy_drop_100_to_100000": 0.15,
+      "checks": {
+        "active_cap": true,
+        "answer_accuracy": false,
+        "critical_recall": false,
+        "dependency_chain_accuracy": false,
+        "provenance_accuracy": false,
+        "scaling": false,
+        "temporal_update_accuracy": false
+      },
+      "maximum_active_records": 16,
+      "pass": false,
+      "thresholds": {
+        "answer_accuracy": 0.99,
+        "critical_recall": 0.99,
+        "dependency_chain_accuracy": 0.99,
+        "provenance_accuracy": 0.99,
+        "temporal_update_accuracy": 0.99
+      }
+    },
+    "one_shot_close_to_iterative": false,
+    "oracle_each_load": true
+  },
+  "population": {
+    "histories": 20,
+    "queries": 160,
+    "rows": 800,
+    "systems": [
+      "conventional_one_shot_retrieval",
+      "exact_structured_lookup",
+      "full_history_oracle",
+      "iterative_need_retrieval",
+      "recent_16"
+    ]
+  },
+  "scientific_claim": "complete structured history supports bounded attention",
+  "status": "TERMINAL_VALID",
+  "stop_rule_applied": true,
+  "training_accounting": {
+    "backward_calls": 0,
+    "dmc_historical_optimizer_steps_preserved": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN",
+    "learned_components": 0,
+    "optimizer_steps": 0
+  },
+  "verdict": "MCO_01_ITERATIVE_ACQUISITION_ADVANCES"
+}

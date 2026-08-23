@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 41,
+    "eval_duration_ns": 611817258,
+    "load_duration_ns": 137505385,
+    "prompt_eval_count": 377,
+    "prompt_eval_duration_ns": 76221117,
+    "total_duration_ns": 956676131,
+    "wall_time_seconds": 0.957369047915563
+  },
+  "cache_hit": false,
+  "call_id": "structured_exact_planner-mco02_n100_s2601-q_387df4b1ec273d62__d5409450955b0add",
+  "key": "structured_exact_planner-mco02_n100_s2601-q_387df4b1ec273d62",
+  "purpose": "reasoning",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Answer only from the supplied evidence. Current truth rules: an explicitly replaced or superseded record is inactive; among remaining contradictions, source priority is AUTHORITY over CURATED over UNVERIFIED, then later event time. Follow renames before upstream requirements until reaching a temperature threshold. Inspection is required exactly when deployment temperature is numerically lower than the threshold: deployment_temperature < threshold. Compare signed integers on the number line; for example, -6 is not lower than -11 (NO), while -12 is lower than -5 (YES). Return exactly one line and no explanation: ANSWER|terminal_entity|integer_threshold|YES_or_NO|comma_separated_ordered_record_ids. The provenance field contains record IDs beginning r_, in traversal order, never entity IDs. If the threshold or any required path evidence is absent, return exactly UNKNOWN.",
+        "role": "system"
+      },
+      {
+        "content": "QUESTION\nEntity e_3e140db6e2909b5a is deployed at -6 C. Starting from that entity, follow its current name changes and upstream requirements until a temperature threshold is reached. Identify the terminal entity, threshold, whether inspection is required, and the ordered provenance record IDs.\n\nEVIDENCE\n[Record r_18d1d005fe68c033; source CURATED; event 83] subject=e_3e140db6e2909b5a; relation=depends_on; object=e_1e746bfbcba30fcb; operation=correct; supersedes=r_5ada3d42f52ef597\n[Record r_07f6fbdf77ae343a; source AUTHORITY; event 23] subject=e_1e746bfbcba30fcb; relation=failure_threshold; object=-11; operation=assert; supersedes=None",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 160,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "d5409450955b0addb1020f151dc1b1d1d0065dba74d28c1583651d0ae84e5257",
+  "response": {
+    "created_at": "2026-08-22T12:43:46.68551144Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 41,
+    "eval_duration": 611817258,
+    "load_duration": 137505385,
+    "message": {
+      "content": "ANSWER|e_1e746bfbcba30fcb|-11|YES|r_18d1d005fe68c033,r_07f6fbdf77ae343a",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 377,
+    "prompt_eval_duration": 76221117,
+    "total_duration": 956676131
+  },
+  "response_content_sha256": "405937ab4433d0196c76b5423b80c52892e97da01204f25550bcf8b7f951b055",
+  "schema_version": 1
+}

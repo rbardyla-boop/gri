@@ -1,0 +1,97 @@
+{
+  "experiment_id": "MCO-02",
+  "history_id": "mco02_n1000_s2601",
+  "invalid_selection_events": [
+    {
+      "call_id": "summary/mco02_n1000_s2601-chunk-0-255__78cc7ecce7697a03",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n1000_s2601-chunk-256-511__61a721e2166369ba",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n1000_s2601-chunk-512-767__b55c790af11c15ef",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    },
+    {
+      "call_id": "summary/mco02_n1000_s2601-chunk-768-999__b49fcc6466f36d3f",
+      "fallback_used": true,
+      "invalid_ids": [],
+      "valid_model_selections": 7
+    }
+  ],
+  "persistent_bytes": 1933,
+  "selected_record_ids": [
+    "r_3b46b63d8bf4d209",
+    "r_11d3acedd6e4261c",
+    "r_e9420454b1d93e80",
+    "r_1fc72f4acce9e7a8",
+    "r_7992b5e6971dd86f",
+    "r_e6fd0699d4625d2e",
+    "r_6dd50a0a2481f9f8",
+    "r_f7ca55fec43d1cca"
+  ],
+  "selected_records": [
+    {
+      "position": 255,
+      "record_id": "r_3b46b63d8bf4d209",
+      "text": "[Record r_3b46b63d8bf4d209; source CURATED; event 255] At event time 255, In the ordinary course of plant reporting, the ledger states: Entity d_bbfe4e13048bf711 is not rated for operation below 29 C."
+    },
+    {
+      "position": 254,
+      "record_id": "r_11d3acedd6e4261c",
+      "text": "[Record r_11d3acedd6e4261c; source UNVERIFIED; event 254] At event time 254, During a routine archive review, the ledger states: The archived temperature floor for entity d_1ace9435335832ef is 18 C. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 253,
+      "record_id": "r_e9420454b1d93e80",
+      "text": "[Record r_e9420454b1d93e80; source AUTHORITY; event 253] At event time 253, the ledger states: The minimum safe temperature recorded for entity d_5eab6e3d2c481d4e is -23 C."
+    },
+    {
+      "position": 252,
+      "record_id": "r_1fc72f4acce9e7a8",
+      "text": "[Record r_1fc72f4acce9e7a8; source UNVERIFIED; event 252] At event time 252, the ledger states: Entity d_dc688a449aef53b7 relies on entity d_4733b9a67d8db204. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 251,
+      "record_id": "r_7992b5e6971dd86f",
+      "text": "[Record r_7992b5e6971dd86f; source CURATED; event 251] At event time 251, the ledger states: The archived temperature floor for entity d_3e37427c022d5551 is -38 C. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 250,
+      "record_id": "r_e6fd0699d4625d2e",
+      "text": "[Record r_e6fd0699d4625d2e; source UNVERIFIED; event 250] At event time 250, the ledger states: Entity d_b90b04531f880624 was redesignated as entity d_489e73c702aa847e. No other part of the archival narrative changed this statement."
+    },
+    {
+      "position": 249,
+      "record_id": "r_6dd50a0a2481f9f8",
+      "text": "[Record r_6dd50a0a2481f9f8; source UNVERIFIED; event 249] At event time 249, After an unrelated maintenance discussion, the ledger states: The operations of entity d_102b65febdaf6dbf draw on entity d_7f7d773d93b45317. The filing also mentioned routine paperwork with no operational consequence."
+    },
+    {
+      "position": 248,
+      "record_id": "r_f7ca55fec43d1cca",
+      "text": "[Record r_f7ca55fec43d1cca; source UNVERIFIED; event 248] At event time 248, In the ordinary course of plant reporting, the ledger states: Regarding entity d_61e354283b6cabd6, it ceases safe operation below -38 C. The filing also mentioned routine paperwork with no operational consequence."
+    }
+  ],
+  "usage": {
+    "call_ids": [
+      "summary/mco02_n1000_s2601-chunk-0-255__78cc7ecce7697a03",
+      "summary/mco02_n1000_s2601-chunk-256-511__61a721e2166369ba",
+      "summary/mco02_n1000_s2601-chunk-512-767__b55c790af11c15ef",
+      "summary/mco02_n1000_s2601-chunk-768-999__b49fcc6466f36d3f"
+    ],
+    "eval_duration_ns": 56746504962,
+    "input_tokens": 65536,
+    "model_calls": 4,
+    "output_tokens": 640,
+    "prompt_eval_duration_ns": 64139900703,
+    "wall_time_seconds": 126.34385637904052
+  }
+}

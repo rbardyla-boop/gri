@@ -1,0 +1,55 @@
+{
+  "accounting": {
+    "eval_count": 24,
+    "eval_duration_ns": 347147816,
+    "load_duration_ns": 147672803,
+    "prompt_eval_count": 526,
+    "prompt_eval_duration_ns": 234119804,
+    "total_duration_ns": 802452389,
+    "wall_time_seconds": 0.803920901962556
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n100_s2601-records-36-47-d0__9dd2c8626e74b5d1",
+  "key": "mco02_n100_s2601-records-36-47-d0",
+  "purpose": "extraction",
+  "request": {
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify only the semantic relationship in each numbered event. Ignore administrative words such as correction, replacing, update, superseding, source, authority, note, and observation. Return exactly one letter on its own line per input event, preserving order: D means an entity relies on or has an upstream requirement/supporting entity; R means an entity was renamed or redesignated; T means a failure, safety, or minimum-temperature threshold. Examples: 'Correcting an old note, entity a actually relies on entity b' -> D. 'An update superseding an old note says entity a has entity b upstream' -> D. 'Entity a is now called entity b' -> R. 'Entity a fails below 4 C' -> T. No numbering, punctuation, or explanation.",
+        "role": "system"
+      },
+      {
+        "content": "1. The old label entity d_95a4a9eca6ba89da gave way to entity d_fe3a6a1f272e1cff.\n2. When entity d_817606257e2be3e4 runs, it depends upon entity d_d3d5829497207fe4.\n3. Regarding entity d_cd6874c28f02ddc6, its upstream requirement is entity d_d22489d8e6fcc781.\n4. Regarding entity e_ab3d5196cc17b461, the registry changed its designation to entity e_ad12903c5618c9fa.\n5. Entity d_17452fccff9afef3 cannot proceed without entity d_0cbe056b6c690b98.\n6. For entity d_1dffad5322b4264f, staff now use the name entity d_1bcaf9fdf0e313dd.\n7. Entity e_454a561bcfd3b913 cannot proceed without entity e_147f02893686f6d4.\n8. Entity d_f74170286c500418 has a failure threshold of 30 C.\n9. Regarding entity d_aa347ff50396bfab, it ceases safe operation below -40 C.\n10. The archived temperature floor for entity d_c1c78ad636fdc236 is -50 C.\n11. The minimum safe temperature recorded for entity e_41b7a50e8bda1d00 is -29 C.\n12. The old label entity d_9b5aa1443c8a766c gave way to entity d_7a5947f795d48789.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 36,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "9dd2c8626e74b5d1d8f4f3333b999fd7ad0247ba5bb74d4622a1bfa4bdf4f6b8",
+  "response": {
+    "created_at": "2026-08-22T12:40:50.676193528Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 24,
+    "eval_duration": 347147816,
+    "load_duration": 147672803,
+    "message": {
+      "content": "D\nD\nD\nR\nD\nD\nT\nT\nT\nT\nT\nR",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 526,
+    "prompt_eval_duration": 234119804,
+    "total_duration": 802452389
+  },
+  "response_content_sha256": "3467595c7313fbc54596861bba164bd7cb2b47d17b7606f15c63ff8579ed24dc",
+  "schema_version": 1
+}

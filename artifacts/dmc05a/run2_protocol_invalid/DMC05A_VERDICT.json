@@ -1,0 +1,95 @@
+{
+  "case_count_per_run": 592,
+  "claim": "frozen DMC-04B retains a meaningful resource advantage over conventional all-history external memory with bounded retrieval",
+  "gates": {
+    "accounting_valid": true,
+    "bounded_advantage": true,
+    "conventional_pareto_dominance": false,
+    "gates": {
+      "all_history_retention_ablation": {
+        "observed_gap": 0.23479729729729726,
+        "pass": false,
+        "threshold_max": 0.01
+      },
+      "capability_match": {
+        "observed_max_gap": 0.23479729729729726,
+        "pass": false,
+        "threshold_max": 0.01
+      },
+      "conventional_bounded_working_set": {
+        "observed_max": 16.0,
+        "pass": true,
+        "threshold_max": 16
+      },
+      "conventional_retrieval_capability": {
+        "observed": 0.7652027027027027,
+        "pass": false,
+        "threshold": 0.99
+      },
+      "dmc_capability": {
+        "observed": 1.0,
+        "pass": true,
+        "threshold": 0.99
+      },
+      "dmc_storage_ratio_1024": {
+        "observed": 0.09088751823574295,
+        "pass": true,
+        "threshold_max": 0.1
+      },
+      "exact_structured_capability": {
+        "observed": 0.7652027027027027,
+        "pass": false,
+        "threshold": 0.99
+      }
+    },
+    "storage_only_conditions": false,
+    "terminal_state": "DMC_05A_BOUNDED_MEMORY_ADVANTAGE"
+  },
+  "history_sizes": [
+    32,
+    64,
+    128,
+    256,
+    1024
+  ],
+  "integrity": {
+    "all_history_record_counts": true,
+    "bounded_persistent_capacity": true,
+    "component_immutability": true,
+    "dataset": true,
+    "dmc04b_anchors": true,
+    "freeze": true,
+    "replay": true,
+    "required_metrics": true,
+    "targeted_tests": true,
+    "token_status_explicit": true,
+    "training_cost_not_silently_zero": true,
+    "training_manifests": true,
+    "worker_case_counts": true
+  },
+  "interpretation_boundary": [
+    "synthetic structured benchmark only",
+    "no actual language tokenizer or expensive language-model calls",
+    "historical training wall time, energy, and dollar cost unknown",
+    "absolute resources preserved without a composite winner score"
+  ],
+  "model_visible_tokens": "NOT_APPLICABLE_SYNTHETIC_RECORDS",
+  "plots": {
+    "csv": "artifacts/dmc05a/scaling_curves.csv",
+    "json": "artifacts/dmc05a/scaling_curves.json",
+    "svg": "artifacts/dmc05a/scaling_curves.svg"
+  },
+  "systems": [
+    "full_history_scan",
+    "recent_window_16",
+    "frozen_fifo_16",
+    "random_16",
+    "exact_structured",
+    "conventional_retrieval",
+    "dmc04b",
+    "dmc_retrieval_all_history"
+  ],
+  "terminal_state": "DMC_05A_BOUNDED_MEMORY_ADVANTAGE",
+  "training_cost_status": "TRAINING_COST_UNKNOWN",
+  "unit": "DMC-05A"
+}

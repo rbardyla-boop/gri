@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "scripts/run_dmc05r.py", line 2485, in <module>
+    raise SystemExit(main())
+  File "scripts/run_dmc05r.py", line 2475, in main
+    payload = run_worker(args.worker, args.seed)
+  File "scripts/run_dmc05r.py", line 1065, in run_worker
+    row = evaluate_dmc(...)
+  File "scripts/run_dmc05r.py", line 937, in evaluate_dmc
+    selected = d04b.learned_retrieve(...)
+  File "scripts/run_dmc04b.py", line 422, in learned_retrieve
+    scores = learned_scores(model, case, candidates, audit)
+  File "scripts/run_dmc04b.py", line 396, in learned_scores
+    validation = validate_scorer_view(scorer_view_payload)
+  File "src/dmc04p/matcher.py", line 210, in validate_scorer_view
+    encode_query_descriptor(view["query"]["query_descriptor"])
+  File "src/dmc04p/matcher.py", line 103, in encode_query_descriptor
+    raise ValueError("query descriptor order is not B,A")
+ValueError: query descriptor order is not B,A
+
+Classification: ENGINEERING_FAILURE_NO_SCIENTIFIC_VERDICT
+The failing DMC worker did not write a receipt. No aggregate, gate result, or
+scientific terminal was produced.

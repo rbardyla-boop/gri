@@ -1,0 +1,98 @@
+{
+  "dmc04b": {
+    "amortized_heterogeneous_optimizer_steps_per_core_seed_case": 0.9158249158249159,
+    "evaluated_core_seed_case_pairs": 11880,
+    "historical_dollar_cost": "TRAINING_COST_UNKNOWN",
+    "historical_energy": "TRAINING_COST_UNKNOWN",
+    "historical_wall_time": "TRAINING_COST_UNKNOWN",
+    "optimizer_steps_per_paired_seed_excluding_shared_decoder": 2000,
+    "shared_decoder_optimizer_steps": 880,
+    "unique_suite_optimizer_steps": 10880,
+    "warning": "Optimizer steps span different model sizes and batch semantics and are not equivalent compute units."
+  },
+  "reason": "Historical wall time, energy, and dollar cost were not recorded by DMC-01, DMC-03, or DMC-04R2.",
+  "scientific_run": {
+    "backward_calls": 0,
+    "optimizer_objects_created": 0,
+    "optimizer_steps": 0,
+    "training_executed": false
+  },
+  "source": "artifacts/dmc05a/training_accounting.json",
+  "source_components": {
+    "decoder_dmc01_seed1337": {
+      "backward_passes": 880,
+      "batch_size": 16,
+      "case_presentations": 14080,
+      "epochs": 80,
+      "optimizer_steps": 880,
+      "parameters": 30912,
+      "training_cases": 176
+    },
+    "retention_dmc03_per_seed": {
+      "backward_passes": 1840,
+      "batch_size": 256,
+      "epochs": 40,
+      "evidence_seed_count": 5,
+      "example_presentations": 471040,
+      "optimizer_steps": 1840,
+      "parameters": 3,
+      "training_examples": 11776
+    },
+    "retrieval_dmc04r2_per_seed": {
+      "backward_passes": 160,
+      "batch_size": 64,
+      "by_seed": {
+        "1337": {
+          "case_presentations": 10240,
+          "optimizer_steps": 160
+        },
+        "1338": {
+          "case_presentations": 10240,
+          "optimizer_steps": 160
+        },
+        "1339": {
+          "case_presentations": 10240,
+          "optimizer_steps": 160
+        },
+        "1340": {
+          "case_presentations": 10240,
+          "optimizer_steps": 160
+        },
+        "1341": {
+          "case_presentations": 10240,
+          "optimizer_steps": 160
+        }
+      },
+      "case_presentations": 10240,
+      "epochs": 80,
+      "evidence_seed_count": 5,
+      "optimizer_steps": 160,
+      "parameters": 128,
+      "training_cases_per_epoch": 128
+    }
+  },
+  "source_manifests": {
+    "dmc01": {
+      "entries": 36,
+      "errors": [],
+      "pass": true
+    },
+    "dmc03": {
+      "entries": 51,
+      "errors": [],
+      "pass": true
+    },
+    "dmc04r2": {
+      "entries": 72,
+      "errors": [],
+      "pass": true
+    }
+  },
+  "source_sha256": "62b3c0360c05dc6151693297ea0081e176a5c2e20aa686407107872ed6d684c0",
+  "status": "TRAINING_COST_UNKNOWN",
+  "transparent_and_conventional_systems": {
+    "historical_training_required": false,
+    "optimizer_steps": 0
+  },
+  "unit": "DMC-05R"
+}

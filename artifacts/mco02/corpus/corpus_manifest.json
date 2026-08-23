@@ -1,0 +1,172 @@
+{
+  "config_sha256": "2b490e04835850412f80a7db12ff848e4c1c7c2f33894ca0094d3bca8da690e8",
+  "contract_sha256": "c3be937ce887b78bb1c8cbdeab58f1298b17473fddb63180dc40be289a15a6fd",
+  "corpus_digest": "07630824709f3f1da291ebec512b361dc7c6788ab36b3ad23622c1ca47419bff",
+  "counts": {
+    "histories": 8,
+    "queries": 64,
+    "semantic_records": 32200
+  },
+  "experiment_id": "MCO-02",
+  "files": [
+    {
+      "history_id": "mco02_n100_s2601",
+      "history_size": 100,
+      "oracle_bytes": 40755,
+      "oracle_path": "oracle/history_n100_s2601.json",
+      "oracle_sha256": "ecbcbfb87e94ed3607490683fb8171361f0165a3942acf5a314b66280f8966f8",
+      "public_bytes": 34642,
+      "public_path": "public/history_n100_s2601.json",
+      "public_sha256": "58194257b1e54091944e4fab5cc0caedb671c3a49abfd7c57a8eef980c2d295b",
+      "query_count": 8,
+      "seed": 2601,
+      "semantic_history_sha256": "fb238f2119f85f28a9b0bfe08c6f39b2276be9266ad70d87cd23f229a1fa2094"
+    },
+    {
+      "history_id": "mco02_n100_s2602",
+      "history_size": 100,
+      "oracle_bytes": 40771,
+      "oracle_path": "oracle/history_n100_s2602.json",
+      "oracle_sha256": "f175b0743f274d08da2935f0930f4044d5e6c7ecf22ec4d0cb086c7f81ea0da9",
+      "public_bytes": 33808,
+      "public_path": "public/history_n100_s2602.json",
+      "public_sha256": "ea8bb07832ab0cb6fa81fe990b4cad78382873077a4d18f29c9c2a97e6330b06",
+      "query_count": 8,
+      "seed": 2602,
+      "semantic_history_sha256": "394ca2a75c9cd96ee67cffabce4330686675e56c3d7f7e72350ae19630c6f91d"
+    },
+    {
+      "history_id": "mco02_n1000_s2601",
+      "history_size": 1000,
+      "oracle_bytes": 374258,
+      "oracle_path": "oracle/history_n1000_s2601.json",
+      "oracle_sha256": "be0460590f919bdbc6be66d634bcad260b729bc6e25443a11b72e952ae3a4168",
+      "public_bytes": 313491,
+      "public_path": "public/history_n1000_s2601.json",
+      "public_sha256": "aee41ef3080f266add27b6c3e2956f05b1f674d550af0c589824e19df4ba14c1",
+      "query_count": 8,
+      "seed": 2601,
+      "semantic_history_sha256": "de46a66776f4413dbced8e25931a76107be99f1181e4f0da89aa249fad70874f"
+    },
+    {
+      "history_id": "mco02_n1000_s2602",
+      "history_size": 1000,
+      "oracle_bytes": 374296,
+      "oracle_path": "oracle/history_n1000_s2602.json",
+      "oracle_sha256": "7b15b73a472200c9b33a39a8ab53937d55e6fad2815908cd086cef0c3bc125cc",
+      "public_bytes": 313229,
+      "public_path": "public/history_n1000_s2602.json",
+      "public_sha256": "09094b154ed0a8931c68c3d316ccf372c1390dc58e23af3e33a7bcbcb68c5d5d",
+      "query_count": 8,
+      "seed": 2602,
+      "semantic_history_sha256": "db2d5f27dd97619788ca3a392971ab0258b3111a5efc5418a2e6727af08c92d0"
+    },
+    {
+      "history_id": "mco02_n5000_s2601",
+      "history_size": 5000,
+      "oracle_bytes": 1864419,
+      "oracle_path": "oracle/history_n5000_s2601.json",
+      "oracle_sha256": "38470da9432479e5fadcc8f73ae3f68dac1ebf02d2492824651eb511b47b14d9",
+      "public_bytes": 1562910,
+      "public_path": "public/history_n5000_s2601.json",
+      "public_sha256": "d456be8aa3849745284f13b029ff84c0998667717bcf251621693a1bc801d552",
+      "query_count": 8,
+      "seed": 2601,
+      "semantic_history_sha256": "b8c6cd611283ba2ccfa4d5c7b23c582db86348bbeff1235e4821fbe61ad85673"
+    },
+    {
+      "history_id": "mco02_n5000_s2602",
+      "history_size": 5000,
+      "oracle_bytes": 1864483,
+      "oracle_path": "oracle/history_n5000_s2602.json",
+      "oracle_sha256": "57e3d4a413cd139c275536b9c58d7e5e45d9078cb26bb7f5b3ff28af632b5738",
+      "public_bytes": 1569659,
+      "public_path": "public/history_n5000_s2602.json",
+      "public_sha256": "786adb4233f964bf213cf293cab326ff9a2512aee956a03e8b5cb09ec2c3aca8",
+      "query_count": 8,
+      "seed": 2602,
+      "semantic_history_sha256": "b30f65544bb32d62196ed70137d9a54f8b1acf67437537a22c947e841d650b99"
+    },
+    {
+      "history_id": "mco02_n10000_s2601",
+      "history_size": 10000,
+      "oracle_bytes": 3727289,
+      "oracle_path": "oracle/history_n10000_s2601.json",
+      "oracle_sha256": "c1958b0ee8eb6bdc87ed58494ec43e2fd4d95263569fada06538d4661d675064",
+      "public_bytes": 3135534,
+      "public_path": "public/history_n10000_s2601.json",
+      "public_sha256": "3f7e0a3d4c51d20ff5102663a7187939fc78323e73c5d6f313cd0699ec21b277",
+      "query_count": 8,
+      "seed": 2601,
+      "semantic_history_sha256": "5ff6276930f5f4559bda05065703c2bf23c31eeac6e2ce75ee40454ed93ec2a0"
+    },
+    {
+      "history_id": "mco02_n10000_s2602",
+      "history_size": 10000,
+      "oracle_bytes": 3727469,
+      "oracle_path": "oracle/history_n10000_s2602.json",
+      "oracle_sha256": "adeff6ee1c15fb78fd53c403953c4287013cb1bea5910f8bd4732fe4c219404a",
+      "public_bytes": 3133573,
+      "public_path": "public/history_n10000_s2602.json",
+      "public_sha256": "de3c9e387c7f54be77a899145afc82ac2a22334faf91eef0be90331ed25bb27f",
+      "query_count": 8,
+      "seed": 2602,
+      "semantic_history_sha256": "49a7243c140eaa0a490c10d3f5e7385576b22e44a56156fd6f47eb05fdab744e"
+    }
+  ],
+  "history_sizes": [
+    100,
+    1000,
+    5000,
+    10000
+  ],
+  "integrity": {
+    "forbidden_language_markers": [
+      "depends_on",
+      "renamed_to",
+      "failure_threshold",
+      "utility_label",
+      "answer_label",
+      "critical_record",
+      "query_id"
+    ],
+    "history_checks_expected": 8,
+    "history_checks_passed": 8,
+    "irrelevant_narrative_records": 30156,
+    "local_pronoun_records": 9419,
+    "pass": true,
+    "relation_template_coverage": {
+      "depends_on": 6,
+      "failure_threshold": 6,
+      "renamed_to": 6
+    },
+    "template_counts": {
+      "depends_on:0": 2655,
+      "depends_on:1": 2718,
+      "depends_on:2": 2723,
+      "depends_on:3": 2673,
+      "depends_on:4": 2706,
+      "depends_on:5": 2676,
+      "failure_threshold:0": 1355,
+      "failure_threshold:1": 1339,
+      "failure_threshold:2": 1314,
+      "failure_threshold:3": 1348,
+      "failure_threshold:4": 1358,
+      "failure_threshold:5": 1349,
+      "renamed_to:0": 1300,
+      "renamed_to:1": 1341,
+      "renamed_to:2": 1317,
+      "renamed_to:3": 1369,
+      "renamed_to:4": 1305,
+      "renamed_to:5": 1354
+    }
+  },
+  "mco01_runner_sha256": "28b4eeec55713b923bf6da2c725db81803e1c616770b3ad508e90dfc09bcba92",
+  "mco02_generator_sha256": "17752a6ef8a63001c02ffa9903de59068d746a10e5a0db8144197308f77044d6",
+  "schema_version": 1,
+  "seeds": [
+    2601,
+    2602
+  ],
+  "status": "FROZEN_CORPUS_CANDIDATE"
+}

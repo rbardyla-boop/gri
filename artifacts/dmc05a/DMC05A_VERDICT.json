@@ -1,0 +1,271 @@
+{
+  "benchmark_ordering": {
+    "by_seed": {
+      "1337": {
+        "case_count": 592,
+        "matching_persistent_sets": 592,
+        "pass": true
+      },
+      "1338": {
+        "case_count": 592,
+        "matching_persistent_sets": 592,
+        "pass": true
+      },
+      "1339": {
+        "case_count": 592,
+        "matching_persistent_sets": 592,
+        "pass": true
+      },
+      "1340": {
+        "case_count": 592,
+        "matching_persistent_sets": 592,
+        "pass": true
+      },
+      "1341": {
+        "case_count": 592,
+        "matching_persistent_sets": 592,
+        "pass": true
+      }
+    },
+    "interpretation": "The frozen generator appends its utility-eligible records after distractors; this is a benchmark ordering property, not a general recency claim.",
+    "recent_window_16_equals_dmc04b_persistent_set": true
+  },
+  "case_count_per_run": 592,
+  "claim": "frozen DMC-04B retains a meaningful resource advantage over conventional all-history external memory with bounded retrieval",
+  "gates": {
+    "accounting_valid": true,
+    "bounded_advantage": false,
+    "conventional_dominators": [
+      "recent_window_16"
+    ],
+    "conventional_pareto_dominance": true,
+    "dominance_checks": {
+      "conventional_retrieval": {
+        "comparisons": {
+          "bounded_working_records": true,
+          "capability": true,
+          "learned_forward_calls": true,
+          "no_historical_training": true,
+          "persistent_bytes": false,
+          "persistent_records": false,
+          "query_records_inspected": false,
+          "retrieval_operations": false,
+          "total_online_wall_time": true,
+          "working_bytes": false
+        },
+        "load_1024": {
+          "answer_accuracy": 1.0,
+          "online_wall_ns": 8306647.363636364,
+          "persistent_bytes": 250464.07954545456,
+          "persistent_records": 1024.0,
+          "query_records_inspected": 19.636363636363637,
+          "retrieval_operations": 20.636363636363637,
+          "working_bytes": 3215.75,
+          "working_records": 16.0
+        },
+        "pass": false
+      },
+      "exact_structured": {
+        "comparisons": {
+          "bounded_working_records": true,
+          "capability": true,
+          "learned_forward_calls": true,
+          "no_historical_training": true,
+          "persistent_bytes": false,
+          "persistent_records": false,
+          "query_records_inspected": true,
+          "retrieval_operations": true,
+          "total_online_wall_time": true,
+          "working_bytes": true
+        },
+        "load_1024": {
+          "answer_accuracy": 1.0,
+          "online_wall_ns": 8950884.818181818,
+          "persistent_bytes": 250588.35227272726,
+          "persistent_records": 1024.0,
+          "query_records_inspected": 1.5568181818181819,
+          "retrieval_operations": 2.5568181818181817,
+          "working_bytes": 317.6818181818182,
+          "working_records": 1.5568181818181819
+        },
+        "pass": false
+      },
+      "frozen_fifo_16": {
+        "comparisons": {
+          "bounded_working_records": true,
+          "capability": false,
+          "learned_forward_calls": true,
+          "no_historical_training": true,
+          "persistent_bytes": true,
+          "persistent_records": true,
+          "query_records_inspected": true,
+          "retrieval_operations": true,
+          "total_online_wall_time": true,
+          "working_bytes": true
+        },
+        "load_1024": {
+          "answer_accuracy": 0.011363636363636364,
+          "online_wall_ns": 217368.32954545456,
+          "persistent_bytes": 1586.8181818181818,
+          "persistent_records": 16.0,
+          "query_records_inspected": 16.0,
+          "retrieval_operations": 16.0,
+          "working_bytes": 1586.8181818181818,
+          "working_records": 16.0
+        },
+        "pass": false
+      },
+      "random_16": {
+        "comparisons": {
+          "bounded_working_records": true,
+          "capability": false,
+          "learned_forward_calls": true,
+          "no_historical_training": true,
+          "persistent_bytes": true,
+          "persistent_records": true,
+          "query_records_inspected": true,
+          "retrieval_operations": true,
+          "total_online_wall_time": true,
+          "working_bytes": true
+        },
+        "load_1024": {
+          "answer_accuracy": 0.056818181818181816,
+          "online_wall_ns": 6567933.136363636,
+          "persistent_bytes": 1632.4545454545455,
+          "persistent_records": 16.0,
+          "query_records_inspected": 16.0,
+          "retrieval_operations": 16.0,
+          "working_bytes": 1632.4545454545455,
+          "working_records": 16.0
+        },
+        "pass": false
+      },
+      "recent_window_16": {
+        "comparisons": {
+          "bounded_working_records": true,
+          "capability": true,
+          "learned_forward_calls": true,
+          "no_historical_training": true,
+          "persistent_bytes": true,
+          "persistent_records": true,
+          "query_records_inspected": true,
+          "retrieval_operations": true,
+          "total_online_wall_time": true,
+          "working_bytes": true
+        },
+        "load_1024": {
+          "answer_accuracy": 1.0,
+          "online_wall_ns": 3681826.0,
+          "persistent_bytes": 1531.715909090909,
+          "persistent_records": 16.0,
+          "query_records_inspected": 16.0,
+          "retrieval_operations": 16.0,
+          "working_bytes": 1531.715909090909,
+          "working_records": 16.0
+        },
+        "pass": true
+      }
+    },
+    "gates": {
+      "all_history_retention_ablation": {
+        "observed_gap": 0.23479729729729726,
+        "pass": false,
+        "threshold_max": 0.01
+      },
+      "capability_match": {
+        "observed_max_gap": 0.0,
+        "pass": true,
+        "threshold_max": 0.01
+      },
+      "conventional_bounded_working_set": {
+        "observed_max": 16.0,
+        "pass": true,
+        "threshold_max": 16
+      },
+      "conventional_retrieval_capability": {
+        "observed": 1.0,
+        "pass": true,
+        "threshold": 0.99
+      },
+      "dmc_capability": {
+        "observed": 1.0,
+        "pass": true,
+        "threshold": 0.99
+      },
+      "dmc_storage_ratio_1024": {
+        "observed": 0.03796769194316558,
+        "pass": true,
+        "threshold_max": 0.1
+      },
+      "exact_structured_capability": {
+        "observed": 1.0,
+        "pass": true,
+        "threshold": 0.99
+      },
+      "matching_bounded_conventional_system": {
+        "observed": [
+          "recent_window_16",
+          "exact_structured",
+          "conventional_retrieval"
+        ],
+        "pass": true,
+        "threshold_min_count": 1
+      }
+    },
+    "storage_only_conditions": false,
+    "terminal_state": "DMC_05A_CONVENTIONAL_RETRIEVAL_DOMINATES"
+  },
+  "history_sizes": [
+    32,
+    64,
+    128,
+    256,
+    1024
+  ],
+  "integrity": {
+    "all_history_record_counts": true,
+    "bounded_persistent_capacity": true,
+    "component_immutability": true,
+    "dataset": true,
+    "dmc04b_anchors": true,
+    "freeze": true,
+    "replay": true,
+    "required_metrics": true,
+    "targeted_tests": true,
+    "token_status_explicit": true,
+    "training_cost_not_silently_zero": true,
+    "training_manifests": true,
+    "worker_case_counts": true
+  },
+  "interpretation_boundary": [
+    "synthetic structured benchmark only",
+    "no actual language tokenizer or expensive language-model calls",
+    "historical training wall time, energy, and dollar cost unknown",
+    "absolute resources preserved without a composite winner score"
+  ],
+  "model_visible_tokens": "NOT_APPLICABLE_SYNTHETIC_RECORDS",
+  "plots": {
+    "csv": "artifacts/dmc05a/scaling_curves.csv",
+    "json": "artifacts/dmc05a/scaling_curves.json",
+    "svg": "artifacts/dmc05a/scaling_curves.svg"
+  },
+  "protocol_history": {
+    "run1": "ENGINEERING_FAILURE_NO_SCIENTIFIC_VERDICT",
+    "run2": "DMC_05A_ACCOUNTING_INVALID",
+    "run2_machine_label_overridden": "DMC_05A_BOUNDED_MEMORY_ADVANTAGE",
+    "run3": "current corrected evidence run"
+  },
+  "systems": [
+    "full_history_scan",
+    "recent_window_16",
+    "frozen_fifo_16",
+    "random_16",
+    "exact_structured",
+    "conventional_retrieval",
+    "dmc04b",
+    "dmc_retrieval_all_history"
+  ],
+  "terminal_state": "DMC_05A_CONVENTIONAL_RETRIEVAL_DOMINATES",
+  "training_cost_status": "TRAINING_COST_UNKNOWN",
+  "unit": "DMC-05A"
+}

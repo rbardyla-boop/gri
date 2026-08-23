@@ -1,0 +1,77 @@
+{
+  "accounting": {
+    "eval_count": 33,
+    "eval_duration_ns": 499644215,
+    "load_duration_ns": 135098250,
+    "prompt_eval_count": 204,
+    "prompt_eval_duration_ns": 99242328,
+    "total_duration_ns": 1963843100,
+    "wall_time_seconds": 1.965127238072455
+  },
+  "cache_hit": false,
+  "call_id": "batch-96-99__459940149522b801",
+  "key": "batch-96-99",
+  "purpose": "schema-probe",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "relations": {
+          "items": {
+            "enum": [
+              "depends_on",
+              "renamed_to",
+              "failure_threshold"
+            ],
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "relations"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify the semantic relationship expressed by every input sentence. Choose depends_on when one entity relies on, draws on, cannot proceed without, or has another entity as an upstream/supporting requirement. Choose renamed_to when an old entity label is replaced by a new entity name or designation. Choose failure_threshold when the sentence gives a failure, safety-floor, minimum-safe-temperature, or not-rated-below temperature for one entity. Return one relation for every sentence in the original order.",
+        "role": "system"
+      },
+      {
+        "content": "1. The minimum safe temperature recorded for entity e_6e67800909016920 is -30 C.\n2. At -20 C, entity e_664c6ef6818375bb reaches its documented safety floor.\n3. Entity d_2ab1fa9bd8004312 has a failure threshold of -53 C.\n4. At -5 C, entity e_5f5ea33480968495 reaches its documented safety floor.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 256,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "459940149522b80193988b7512ffa24be2b5fc157af61f53ff3b22e02ef9fd7d",
+  "response": {
+    "created_at": "2026-08-22T12:46:37.185611943Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 33,
+    "eval_duration": 499644215,
+    "load_duration": 135098250,
+    "message": {
+      "content": "{ \"relations\": [\n \t\"failure_threshold\",\n \t\"failure_threshold\",\n \t\"failure_threshold\",\n \t\"failure_threshold\"\n ]}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 204,
+    "prompt_eval_duration": 99242328,
+    "total_duration": 1963843100
+  },
+  "response_content_sha256": "1d4abd0834bf27acd8bf3fce4b2179363c1d6c9061094063b3531dcd56538f2d",
+  "schema_version": 1
+}

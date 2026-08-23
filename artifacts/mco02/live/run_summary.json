@@ -1,0 +1,29 @@
+{
+  "corpus_manifest_sha256": "690a33eb90fc30dfeec0ff8ca32bd9a69b33b6411b33b96fbd6d25c4ace60000",
+  "experiment_id": "MCO-02",
+  "freeze_sha256": "1aa821c9135886ebdbc9ecc750146500c5f2f9839b9df0b63b2b427a0c8a5e3c",
+  "history_count": 8,
+  "history_summaries_sha256": "dddf0070532ae2c73367eac292c89e3ddbff20c6dfdd71f2577b05e571c41a86",
+  "mode": "live",
+  "normalized_results_sha256": "a15827a6802249714cb24cad953367a5a75ff5b6d716c89b304268963fa5d646",
+  "query_count": 64,
+  "results_sha256": "40427ac35486d74fa89378e9b2bc3ff9b4d3d897f70bf946fe638861cff6d08b",
+  "row_count": 384,
+  "run_id": "live",
+  "runtime_fields_excluded_from_replay": [
+    "index_wall_time_seconds",
+    "ingestion_wall_time_seconds",
+    "query_wall_time_seconds",
+    "wall_time_seconds"
+  ],
+  "status": "VALID_LIVE_MODEL_RUN",
+  "systems": [
+    "full_context",
+    "recent_window",
+    "rolling_summary",
+    "conventional_rag",
+    "structured_exact_planner",
+    "iterative_need_retrieval"
+  ],
+  "total_wall_time_seconds": 4907.883013441926
+}

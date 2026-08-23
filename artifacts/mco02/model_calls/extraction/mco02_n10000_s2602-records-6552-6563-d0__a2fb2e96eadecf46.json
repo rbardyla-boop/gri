@@ -1,0 +1,77 @@
+{
+  "accounting": {
+    "eval_count": 73,
+    "eval_duration_ns": 1029267110,
+    "load_duration_ns": 107578993,
+    "prompt_eval_count": 489,
+    "prompt_eval_duration_ns": 237887719,
+    "total_duration_ns": 2709956642,
+    "wall_time_seconds": 2.710481257061474
+  },
+  "cache_hit": false,
+  "call_id": "mco02_n10000_s2602-records-6552-6563-d0__a2fb2e96eadecf46",
+  "key": "mco02_n10000_s2602-records-6552-6563-d0",
+  "purpose": "extraction",
+  "request": {
+    "format": {
+      "additionalProperties": false,
+      "properties": {
+        "relations": {
+          "items": {
+            "enum": [
+              "depends_on",
+              "renamed_to",
+              "failure_threshold"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "type": "array"
+        }
+      },
+      "required": [
+        "relations"
+      ],
+      "type": "object"
+    },
+    "keep_alive": "30m",
+    "messages": [
+      {
+        "content": "Classify the semantic relationship expressed by every input sentence. Choose depends_on when one entity relies on, draws on, cannot proceed without, or has another entity as an upstream or supporting requirement. Choose renamed_to when an old entity label is replaced by a new entity name or designation. Choose failure_threshold when the sentence gives a failure, safety-floor, minimum-safe-temperature, or not-rated-below temperature for one entity. Return one relation for every sentence in the original order using the required JSON schema.",
+        "role": "system"
+      },
+      {
+        "content": "1. Entity d_2f9aea507b919dab cannot proceed without entity d_454a428acf325300.\n2. The operations of entity d_b2970906ce364074 draw on entity d_7e83eba54d951590.\n3. When entity d_08559a68f2a341cc runs, it depends upon entity d_3a29a7811bb1dad2.\n4. When entity d_0c5e7410b8f11838 runs, it depends upon entity d_7906246f00b1c241.\n5. Regarding entity d_c53c19ef12bc667f, the registry changed its designation to entity d_31f3d3bc397bbef6.\n6. For entity d_0022a81ff8c02b0a, the supporting requirement is entity d_2bce09c1ed4fb5f8.\n7. Entity d_6c1f24a0c9f40c15 relies on entity d_69a623b89d0d0fff.\n8. Entity d_c27990d89fbb46a0 relies on entity d_53d3db34ee5df343.\n9. Entity d_ecd56e67102eba2b has a failure threshold of 25 C.\n10. When entity d_1572eb89b5d69df8 runs, it depends upon entity d_0c0e8c462ad52899.\n11. The minimum safe temperature recorded for entity d_0004331c25817326 is -48 C.\n12. The operations of entity d_2d1f70cb11b1d917 draw on entity d_88aaf0dd94135d43.",
+        "role": "user"
+      }
+    ],
+    "model": "llama3.1:8b",
+    "options": {
+      "num_ctx": 8192,
+      "num_predict": 144,
+      "seed": 20260822,
+      "temperature": 0
+    },
+    "stream": false
+  },
+  "request_sha256": "a2fb2e96eadecf469c4c6f293e6a4711d1d887615913a64869c0072dd2233cd8",
+  "response": {
+    "created_at": "2026-08-22T17:55:02.10236984Z",
+    "done": true,
+    "done_reason": "stop",
+    "eval_count": 73,
+    "eval_duration": 1029267110,
+    "load_duration": 107578993,
+    "message": {
+      "content": "{\n  \"relations\": [\n    \"depends_on\",\n    \"depends_on\",\n    \"depends_on\",\n    \"depends_on\",\n    \"renamed_to\",\n    \"failure_threshold\",\n    \"depends_on\",\n    \"depends_on\",\n    \"failure_threshold\",\n    \"depends_on\",\n    \"failure_threshold\"\n  ,\n    \"depends_on\"\n  ]\n}",
+      "role": "assistant"
+    },
+    "model": "llama3.1:8b",
+    "prompt_eval_count": 489,
+    "prompt_eval_duration": 237887719,
+    "total_duration": 2709956642
+  },
+  "response_content_sha256": "2d8aa30549bf1215464c59b4ee1d6a7c844f4471bb82f88a811709ed59316f2a",
+  "schema_version": 1
+}

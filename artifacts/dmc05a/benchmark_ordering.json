@@ -1,0 +1,31 @@
+{
+  "by_seed": {
+    "1337": {
+      "case_count": 592,
+      "matching_persistent_sets": 592,
+      "pass": true
+    },
+    "1338": {
+      "case_count": 592,
+      "matching_persistent_sets": 592,
+      "pass": true
+    },
+    "1339": {
+      "case_count": 592,
+      "matching_persistent_sets": 592,
+      "pass": true
+    },
+    "1340": {
+      "case_count": 592,
+      "matching_persistent_sets": 592,
+      "pass": true
+    },
+    "1341": {
+      "case_count": 592,
+      "matching_persistent_sets": 592,
+      "pass": true
+    }
+  },
+  "interpretation": "The frozen generator appends its utility-eligible records after distractors; this is a benchmark ordering property, not a general recency claim.",
+  "recent_window_16_equals_dmc04b_persistent_set": true
+}

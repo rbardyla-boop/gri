@@ -1,0 +1,245 @@
+{
+  "claim": "When certified irrelevant writes are deterministically relocated behind the last task-relevant write, frozen DMC-04B preserves useful older state materially better than Recent-16.",
+  "core_variant_count_per_deterministic_run": 2376,
+  "dmc05b_status": "BLOCKED_PENDING_DMC05R_TRANSPARENT_BASELINE_SURVIVAL",
+  "dmc_seed_case_evaluations": 11880,
+  "evidence_seeds": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341
+  ],
+  "gates": {
+    "accounting_valid": true,
+    "gates": {
+      "all_history_answer_invariance": {
+        "observed": {
+          "conventional_retrieval": {
+            "0": 1.0,
+            "16": 1.0,
+            "256": 1.0,
+            "32": 1.0,
+            "64": 1.0,
+            "8": 1.0
+          },
+          "exact_structured": {
+            "0": 1.0,
+            "16": 1.0,
+            "256": 1.0,
+            "32": 1.0,
+            "64": 1.0,
+            "8": 1.0
+          }
+        },
+        "pass": true,
+        "threshold_min": 0.99
+      },
+      "dmc_primary_survival": {
+        "observed": {
+          "answer_accuracy": 1.0,
+          "critical_recall": 1.0
+        },
+        "pass": true,
+        "threshold_min": 0.9
+      },
+      "material_nonrecency_gap": {
+        "observed": 1.0,
+        "pass": true,
+        "threshold_min": 0.5
+      },
+      "nonrecency_retention_pass": {
+        "observed": {
+          "dmc_critical_recall": 1.0,
+          "gap": 1.0,
+          "recent_critical_recall": 0.0
+        },
+        "pass": true
+      },
+      "recent_primary_collapse": {
+        "observed": 0.0,
+        "pass": true,
+        "threshold_max": 0.01
+      },
+      "selection_advantage": {
+        "observed": {
+          "answer_accuracy_gap": 0.0,
+          "critical_recall_gap": 0.0
+        },
+        "pass": false,
+        "threshold_min": 0.05
+      },
+      "tail_zero_anchor": {
+        "observed": {
+          "dmc04b": 1.0,
+          "recent_window_16": 1.0,
+          "transparent_utility_index_16": 1.0
+        },
+        "pass": true,
+        "threshold_min": 0.99
+      },
+      "transparent_capability_match": {
+        "observed": {
+          "dmc_answer_accuracy": 1.0,
+          "dmc_critical_recall": 1.0,
+          "transparent_answer_accuracy": 1.0,
+          "transparent_critical_recall": 1.0
+        },
+        "pass": true,
+        "strong_capability_min": 0.99,
+        "threshold_gap_max": 0.01
+      },
+      "transparent_index_dominates": {
+        "pass": true
+      },
+      "transparent_resource_dominance": {
+        "dimensions": {
+          "historical_training_required": {
+            "dmc04b": 1.0,
+            "pass": true,
+            "transparent": 0.0
+          },
+          "learned_forward_calls": {
+            "dmc04b": 4.0,
+            "pass": true,
+            "transparent": 0.0
+          },
+          "maximum_working_set_records": {
+            "dmc04b": 16.0,
+            "pass": true,
+            "transparent": 16.0
+          },
+          "online_wall_ns": {
+            "dmc04b": 30449030.245125785,
+            "pass": true,
+            "transparent": 25437051.02044025
+          },
+          "persistent_records": {
+            "dmc04b": 16.0,
+            "pass": true,
+            "transparent": 16.0
+          },
+          "persistent_serialized_bytes": {
+            "dmc04b": 9487.110849056604,
+            "pass": true,
+            "transparent": 4581.148584905661
+          },
+          "records_inspected_query": {
+            "dmc04b": 16.0,
+            "pass": true,
+            "transparent": 16.0
+          },
+          "working_set_serialized_bytes": {
+            "dmc04b": 3111.8993710691825,
+            "pass": true,
+            "transparent": 1511.9913522012578
+          }
+        },
+        "pass": true
+      }
+    },
+    "integrity": {
+      "all_history_record_counts": true,
+      "bounded_capacity": true,
+      "component_immutability": true,
+      "dataset": true,
+      "dmc_seed_set": true,
+      "freeze": true,
+      "information_parity": true,
+      "no_online_training": true,
+      "optimized_dmc_equivalence": true,
+      "preregistered_anchors": true,
+      "random_set_order_invariance": true,
+      "replay": true,
+      "required_metrics": true,
+      "source_training_manifests": true,
+      "surprise_manifest": true,
+      "targeted_tests": true,
+      "training_cost_not_silently_zero": true,
+      "training_steps_preserved": true,
+      "variant_manifest": true,
+      "worker_case_counts": true,
+      "worker_fixture_identity": true
+    },
+    "outcome_precedence": [
+      "DMC_05R_ACCOUNTING_INVALID",
+      "DMC_05R_RECENCY_ONLY_FAILURE",
+      "DMC_05R_SELECTION_ADVANTAGE",
+      "DMC_05R_TRANSPARENT_INDEX_DOMINATES",
+      "DMC_05R_NONRECENCY_RETENTION_ADVANCE"
+    ],
+    "terminal_state": "DMC_05R_TRANSPARENT_INDEX_DOMINATES"
+  },
+  "integrity": {
+    "all_history_record_counts": true,
+    "bounded_capacity": true,
+    "component_immutability": true,
+    "dataset": true,
+    "dmc_seed_set": true,
+    "freeze": true,
+    "information_parity": true,
+    "no_online_training": true,
+    "optimized_dmc_equivalence": true,
+    "preregistered_anchors": true,
+    "random_set_order_invariance": true,
+    "replay": true,
+    "required_metrics": true,
+    "source_training_manifests": true,
+    "surprise_manifest": true,
+    "targeted_tests": true,
+    "training_cost_not_silently_zero": true,
+    "training_steps_preserved": true,
+    "variant_manifest": true,
+    "worker_case_counts": true,
+    "worker_fixture_identity": true
+  },
+  "interpretation_boundary": [
+    "synthetic structured benchmark only",
+    "no real language, tokenizer, or language-model inference",
+    "historical training wall time, energy, and dollar cost unknown",
+    "SURPRISE_DEPENDENCY is exploratory and nonterminal",
+    "absolute resource dimensions retained without a composite score"
+  ],
+  "plots": {
+    "csv": "artifacts/dmc05r/tail_curves.csv",
+    "json": "artifacts/dmc05r/tail_curves.json",
+    "svg": "artifacts/dmc05r/tail_curves.svg"
+  },
+  "primary_tail_sizes": [
+    16,
+    32,
+    64,
+    256
+  ],
+  "source_case_count": 592,
+  "surprise_dependency": {
+    "aggregate": "artifacts/dmc05r/surprise_dependency_aggregate.json",
+    "case_count_per_run": 24,
+    "status": "EXPLORATORY_NONTERMINAL",
+    "terminal_effect": false
+  },
+  "systems": [
+    "recent_window_16",
+    "frozen_fifo_16",
+    "random_16",
+    "exact_structured",
+    "conventional_retrieval",
+    "transparent_utility_index_16",
+    "dmc04b"
+  ],
+  "tail_sizes": [
+    0,
+    8,
+    16,
+    32,
+    64,
+    256
+  ],
+  "terminal_state": "DMC_05R_TRANSPARENT_INDEX_DOMINATES",
+  "title": "RECENCY CONFOUND REPAIR",
+  "training_cost_status": "TRAINING_COST_UNKNOWN",
+  "training_optimizer_steps_reconstructed": 10880,
+  "unit": "DMC-05R",
+  "verification_scope": "SELF_VERIFIED_LOCAL_REPLAY_NO_INDEPENDENT_AGENT_CONTEXT",
+  "verification_verdict": "PASS"
+}
