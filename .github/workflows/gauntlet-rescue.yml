@@ -16,12 +16,13 @@ jobs:
           python-version: "3.11"
       - name: Install targeted test dependencies
         run: python -m pip install -e '.[test]'
-      - name: Run Gauntlet regression, manipulation, and foreign-log tests
+      - name: Run Gauntlet regression, manipulation, foreign-log, and autopsy tests
         run: |
           pytest \
             tests/test_gauntlet.py \
             tests/test_gauntlet_manipulations.py \
             tests/test_gauntlet_inspect_adapter.py \
+            tests/test_gauntlet_autopsy.py \
             -q
       - name: Preserve project terminal-verdict verifier
         run: pytest tests/test_project_terminal_verdict.py -q
@@ -38,6 +39,29 @@ jobs:
           assert value['state'] == 'NO_ESTABLISHED_ADVANTAGE'
           assert value['comparison']['pass'] is True
           assert value['required_gates_pass'] is False
+          PY
+      - name: Historical mechanism-credit autopsy
+        run: |
+          gauntlet autopsy examples/gauntlet/autopsy/dmc05a.toml > /tmp/dmc05a.json
+          gauntlet autopsy examples/gauntlet/autopsy/dmc05r.toml > /tmp/dmc05r.json
+          gauntlet autopsy examples/gauntlet/autopsy/mco03.toml > /tmp/mco03.json
+          gauntlet autopsy examples/gauntlet/autopsy/mco05.toml > /tmp/mco05.json
+          python - <<'PY'
+          import json
+          expected = {
+              '/tmp/dmc05a.json': 'CONFOUND_EXPLAINS_ADVANTAGE',
+              '/tmp/dmc05r.json': 'TRANSPARENT_NULL_DOMINATES',
+              '/tmp/mco03.json': 'COMPONENT_UNNECESSARY',
+              '/tmp/mco05.json': 'TRANSFER_FAILURE',
+          }
+          for path, outcome in expected.items():
+              value = json.load(open(path))
+              assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
+              assert value['outcome'] == outcome, (path, value['outcome'])
+              assert value['boundary']['prospective_credit'] is False
+          mco05 = json.load(open('/tmp/mco05.json'))
+          assert 'ADVANCE' in mco05['triggered_outcomes']
+          assert mco05['outcome'] == 'TRANSFER_FAILURE'
           PY
       - name: End-to-end frozen demo
         run: |
