@@ -76,8 +76,12 @@ jobs:
           probe = json.load(open('/tmp/amb-probe.json'))
           value = json.load(open('/tmp/amb-autopsy.json'))
           assert probe['source']['commit'] == '9146ffa044109166b5d61146ebbf1c89fa544608'
-          assert probe['published']['central_intelligence_overall'] == 90
-          assert probe['published']['in_memory_overall'] == 55
+          assert probe['published']['candidate']['overall'] == 90.0
+          assert probe['published']['baseline']['overall'] == 55.0
+          assert probe['published']['candidate']['semantic'] == 100.0
+          assert probe['published']['baseline']['semantic'] == 0.0
+          assert probe['comparison']['overall_advantage_points'] == 35.0
+          assert probe['comparison']['semantic_advantage_points'] == 100.0
           assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
           assert value['outcome'] == 'STRONG_BASELINE_MISSING'
           assert value['credit_disposition'] == 'WITHHELD'
