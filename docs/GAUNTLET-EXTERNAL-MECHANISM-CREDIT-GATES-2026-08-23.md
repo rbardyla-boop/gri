@@ -8,15 +8,18 @@ HISTORICAL SELF-TESTS:          PASS
 EXTERNAL WITHHOLD CASE:         PASS
 EXTERNAL PROVISIONAL-CREDIT:    PASS
 EXTERNAL LINEAGE-HOLD CASE:     PASS
-FULL CI RUN:                    PASS
-CI RUN ID:                      32636109010
-CI JOB ID:                      97186005246
+SEMI-AUTOMATIC MARKDOWN DRAFT:  PASS
+HUMAN APPROVAL FIREWALL:        PASS
+LATEST FULL CI RUN:             PASS
+CI RUN ID:                      32636333877
+CI JOB ID:                      97186558009
 MERGE AUTHORIZATION:            NO
 PRODUCT-MARKET FIT:             NOT ESTABLISHED
 ```
 
-This record freezes the first external mechanism-credit discriminator set for
-Gauntlet. It does not alter any GRI/DMC/MCO scientific verdict.
+This record freezes the first external mechanism-credit discriminator set and
+the first semi-automatic claim-extraction gate for Gauntlet. It does not alter
+any GRI/DMC/MCO scientific verdict.
 
 ## Product thesis under test
 
@@ -26,15 +29,15 @@ Gauntlet. It does not alter any GRI/DMC/MCO scientific verdict.
 > the strongest claim that survives.
 
 The purpose of these gates is to establish that the engine can do more than
-reject claims. A useful credit-assignment mechanism must be able to distinguish
-at least three situations:
+reject claims. A useful credit-assignment mechanism must distinguish at least:
 
 1. a large score lead over an inadequate baseline;
 2. a controlled ablation that supports narrow provisional credit;
 3. an attractive comparison whose evidence lineage is not internally
-   reconcilable.
+   reconcilable;
+4. unapproved machine extraction from human-authorized evidence.
 
-All three external cases are retrospective. None creates new preregistered
+All external cases here are retrospective. None creates new preregistered
 scientific evidence.
 
 ---
@@ -93,6 +96,7 @@ the limitation is explicitly disclosed in the source.
 ```text
 repository: ZJU-OmniAI/Embodied-Navigator
 commit:     2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d
+README git blob: 404bc01c1d55eba1d644b742361ec356f3257ded
 ```
 
 The pinned README states that the controlled component-attribution variants use
@@ -204,10 +208,102 @@ CREDIT_DISPOSITION:  UNASSESSED
 
 ---
 
-## Why the three-case result matters
+## Gate D — semi-automatic Markdown claim extraction
 
-The same generic engine now produces three different outcomes on disjoint public
-claims without embedding project-specific names in the decision code:
+The manual external probes above establish the expected dispositions but are
+not a scalable product interface. Gate D tests whether Gauntlet can ingest a
+foreign source with **generic** extraction code, preserve human authority over
+claim interpretation, and reproduce a manually verified disposition.
+
+### New generic commands
+
+```text
+gauntlet draft-markdown
+gauntlet approve-markdown
+gauntlet autopsy
+```
+
+`draft-markdown` performs no credit assignment. It:
+
+- hashes the source bytes and computes the Git blob identity;
+- verifies an expected Git blob when supplied;
+- catalogs Markdown numeric tables;
+- records headings, line ranges, cells, numeric vectors and nearby context;
+- marks likely control-language terms only as hints;
+- explicitly refuses to infer candidate, baseline, metric direction or credit.
+
+Its output authority is:
+
+```text
+UNAPPROVED_MARKDOWN_CLAIM_DRAFT
+HUMAN_APPROVAL_REQUIRED
+```
+
+`approve-markdown` fails closed unless a human approval artifact:
+
+- sets `approved=true`;
+- binds the exact scanned Git blob and source revision;
+- selects exactly one table;
+- selects candidate and baseline rows;
+- selects metric columns/vector positions and direction;
+- binds required control phrases back to the source context.
+
+Only then does it materialize a content-addressed evidence record and declarative
+autopsy spec for the **unchanged** generic credit engine.
+
+### Live foreign-source test
+
+The CI gate downloads the pinned Embodied-Navigator README directly. No
+Embodied-specific parser or probe is used in this path.
+
+The generic scanner catalogs the source. A committed human approval artifact
+selects:
+
+```text
+heading:          Controlled component attribution
+candidate:        Full AT-Mem
+baseline:         Full history
+R2R SR:           metric vector index 2
+RxR SR:           metric vector index 1
+direction:        higher is better
+```
+
+The approval also binds the exact source statement that all variants share the
+same policy, sensing inputs, validation splits, fixed SLAM controller and
+evaluation protocol, with each block changing only the named component.
+
+The generated evidence reproduces:
+
+```text
+R2R: 66.2 vs 61.9 -> +4.3
+RxR: 65.7 vs 61.1 -> +4.6
+```
+
+The unchanged autopsy engine then returns:
+
+```text
+OUTCOME:             ADVANCE
+CREDIT_DISPOSITION:  PROVISIONAL
+PROSPECTIVE_CREDIT:  FALSE
+```
+
+### Failure controls
+
+The regression suite verifies that materialization fails when:
+
+- explicit approval is absent;
+- approval is bound to the wrong source blob;
+- an approved control sentence is not present in the source context.
+
+This is the first successful transition from hand-written external probes to a
+generic source-ingestion path with a human authorization boundary.
+
+---
+
+## Why the result matters
+
+The same generic engine now produces three different external outcomes without
+embedding project-specific names in decision code:
 
 ```text
 large win + weak comparator
@@ -220,21 +316,36 @@ large matched-budget win + unresolved source lineage
     -> INTEGRITY_INVALID / UNASSESSED
 ```
 
-This is evidence that Gauntlet is not merely a score threshold tool and not a
-hard-coded rejection machine. It is performing rule-bound claim-credit
-assignment over externally sourced evidence.
+The semi-automatic layer additionally demonstrates:
+
+```text
+machine source extraction
+    -> NO AUTHORITY
+
+content-bound human selection + verified source controls
+    -> evidence/spec materialization
+
+unchanged generic autopsy engine
+    -> mechanical disposition
+```
+
+This is evidence that Gauntlet is not merely a score threshold tool, not a
+hard-coded rejection machine, and not an autonomous model allowed to decide what
+a paper means. It is becoming a rule-bound claim-credit workflow.
 
 ## What remains unproven
 
-The external gates do not establish:
+The current gates do not establish:
 
-- automatic extraction from arbitrary papers or repositories;
-- independent reproduction of the external experiments;
+- reliable extraction from arbitrary PDF layouts, prose-only papers or complex
+  nested tables;
+- automatic identification of the *right* candidate, baseline or metric;
+- automatic detection of every confound or missing control;
+- independent reproduction of external experiments;
 - correctness of every author-reported metric;
 - benchmark external validity;
-- causal attribution beyond the registered controlled comparison;
-- customer demand;
-- willingness to pay;
+- causal attribution beyond the approved controlled comparison;
+- customer demand or willingness to pay;
 - superiority over adjacent evaluation, audit, or research-review products;
 - a durable commercial moat.
 
@@ -246,20 +357,28 @@ autopsy**, not generic eval logging.
 
 Do not build a dashboard yet.
 
-The next discriminator is a semi-automatic claim autopsy that starts from a
-foreign public repository or evaluation artifact and produces a candidate
-credit graph with evidence requests, while requiring human approval before any
-mechanical signal becomes authoritative.
+The next discriminator is **evidence-request generation and negative-case
+semi-automation**.
 
-Minimum next gate:
+Gauntlet should scan a foreign source, build a generic checklist for the claim,
+and explicitly mark unresolved fields such as:
 
-1. ingest one public claim without a hand-written experiment-specific probe;
-2. identify candidate, baseline, metric, budget and component delta;
-3. identify at least one missing or conflicting evidence item when present;
-4. emit a draft declarative autopsy spec;
-5. require human confirmation of extracted facts;
-6. run the unchanged generic credit engine;
-7. reproduce the manually verified disposition.
+```text
+candidate identity
+baseline strength
+model parity
+budget parity
+dataset/split parity
+metric direction
+ablation isolation
+source lineage
+uncertainty / replication
+```
 
-If that cannot be done reliably, keep Gauntlet as a rigorous internal research
-tool rather than expanding it into a product.
+Then it must reproduce the AMB `STRONG_BASELINE_MISSING` disposition and the
+PRO-LONG lineage hold through the generic drafting path, using human approval
+only to confirm source interpretation—not hand-written case-specific Python.
+
+If the evidence-request layer cannot surface those deficiencies reliably, keep
+Gauntlet as a rigorous internal research tool rather than expanding it into a
+product.
