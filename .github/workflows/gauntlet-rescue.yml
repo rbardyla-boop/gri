@@ -90,6 +90,34 @@ jobs:
           assert 'strong semantic-memory baseline' in value['strongest_claim']
           assert value['boundary']['prospective_credit'] is False
           PY
+      - name: External controlled positive mechanism-credit autopsy
+        run: |
+          python scripts/probe_external_embodied_navigator.py > /tmp/embodied-probe.json
+          if ! gauntlet autopsy examples/gauntlet/autopsy/external_embodied_navigator.toml > /tmp/embodied-autopsy.json; then
+            echo 'Gauntlet positive external autopsy failed:'
+            cat /tmp/embodied-autopsy.json
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          probe = json.load(open('/tmp/embodied-probe.json'))
+          value = json.load(open('/tmp/embodied-autopsy.json'))
+          assert probe['source']['commit'] == '2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d'
+          assert probe['controls']['same_policy'] is True
+          assert probe['controls']['authors_state_each_block_changes_only_named_component'] is True
+          assert probe['memory_block']['full_atmem']['r2r_sr'] == 66.2
+          assert probe['memory_block']['full_history']['r2r_sr'] == 61.9
+          assert probe['memory_block']['full_atmem']['rxr_sr'] == 65.7
+          assert probe['memory_block']['full_history']['rxr_sr'] == 61.1
+          assert probe['memory_block']['full_atmem_minus_full_history']['r2r_sr_points'] == 4.3
+          assert probe['memory_block']['full_atmem_minus_full_history']['rxr_sr_points'] == 4.6
+          assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
+          assert value['outcome'] == 'ADVANCE'
+          assert value['credit_disposition'] == 'PROVISIONAL'
+          assert value['triggered_outcomes'] == ['ADVANCE']
+          assert 'does not establish general memory superiority' in value['strongest_claim']
+          assert value['boundary']['prospective_credit'] is False
+          PY
       - name: End-to-end frozen demo
         run: |
           gauntlet freeze examples/gauntlet/demo.toml
