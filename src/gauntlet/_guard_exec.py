@@ -9,12 +9,39 @@ from typing import Any
 from .core import read_json
 
 
+_PATH_EVENTS = {
+    "open",
+    "os.chdir",
+    "os.chmod",
+    "os.chown",
+    "os.link",
+    "os.listdir",
+    "os.mkdir",
+    "os.remove",
+    "os.rename",
+    "os.rmdir",
+    "os.scandir",
+    "os.symlink",
+    "os.truncate",
+    "os.utime",
+}
+
+
 def _is_within(path: Path, root: Path) -> bool:
     try:
         path.resolve().relative_to(root.resolve())
         return True
     except (OSError, ValueError):
         return False
+
+
+def _path_from_arg(raw: Any) -> Path | None:
+    if not isinstance(raw, (str, bytes, os.PathLike)):
+        return None
+    try:
+        return Path(raw).resolve()
+    except (OSError, TypeError, ValueError):
+        return None
 
 
 def _install_guard(manifest: dict[str, Any]) -> None:
@@ -25,15 +52,15 @@ def _install_guard(manifest: dict[str, Any]) -> None:
     deny_network = bool(run_cfg.get("deny_network", False))
 
     def audit(event: str, args: tuple[Any, ...]) -> None:
-        if event == "open" and args:
-            raw = args[0]
-            if isinstance(raw, (str, bytes, os.PathLike)):
-                try:
-                    candidate = Path(raw).resolve()
-                except (OSError, TypeError, ValueError):
-                    candidate = None
-                if candidate is not None and any(_is_within(candidate, protected_root) for protected_root in protected):
-                    raise PermissionError(f"GAUNTLET_HOLDOUT_VIOLATION: open blocked: {candidate}")
+        if protected and event in _PATH_EVENTS:
+            for raw in args:
+                candidate = _path_from_arg(raw)
+                if candidate is not None and any(
+                    _is_within(candidate, protected_root) for protected_root in protected
+                ):
+                    raise PermissionError(
+                        f"GAUNTLET_HOLDOUT_VIOLATION: {event} blocked: {candidate}"
+                    )
 
         if deny_subprocess and (
             event.startswith("subprocess.")
