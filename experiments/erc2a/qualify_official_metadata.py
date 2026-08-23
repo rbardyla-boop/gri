@@ -49,27 +49,67 @@ def iso_date(value: str) -> str:
     return datetime.strptime(value, "%B %d, %Y").date().isoformat()
 
 
-def parse_events(text: str) -> list[dict]:
-    events: list[dict] = []
+def _table_rows(text: str) -> list[tuple[str, str]]:
+    """Reconstruct logical fault-table rows from PDF-extracted wrapped lines.
+
+    The official PDF wraps ordinary descriptions and, for item 10, even
+    separates the item/fault prefix from the sample/date onto the next line.
+    A logical row therefore begins only at an item-number + fault-tag prefix
+    and continues until another such prefix or a new actuator table begins.
+    """
+    rows: list[tuple[str, str]] = []
     actuator: str | None = None
+    pending: list[str] = []
+
+    def flush() -> None:
+        nonlocal pending
+        if actuator is not None and pending:
+            row = " ".join(pending).strip()
+            if any(date in row for date in DATES):
+                rows.append((actuator, row))
+        pending = []
+
     for raw in text.splitlines():
         line = " ".join(raw.split())
         if "Table 3. Index of artificial faults introduced in Actuator 1" in line:
+            flush()
             actuator = "A1"
             continue
         if "Table 4. Index of artificial faults introduced in Actuator 2" in line:
+            flush()
             actuator = "A2"
             continue
         if "Table 5. Index of artificial faults introduced in Actuator 3" in line:
+            flush()
             actuator = "A3"
             continue
         if actuator is None:
             continue
-        date_match = next((date for date in DATES if date in line), None)
-        if not date_match:
+        if line.startswith("=====") or line.startswith("Item Fault tag"):
             continue
+
+        is_new_row = re.match(r"^\d+\s+f\d+", line, flags=re.I) is not None
+        if is_new_row:
+            flush()
+            pending = [line]
+        elif pending:
+            pending.append(line)
+
+    flush()
+    return rows
+
+
+def parse_events(text: str) -> list[dict]:
+    events: list[dict] = []
+    for actuator, line in _table_rows(text):
+        date_match = next((date for date in DATES if date in line), None)
+        if date_match is None:
+            raise ValueError(f"fault row missing expected date: {line}")
+        # The official PDF renders the f19 footnote marker as `f194)`.
+        # Limit the actual fault number to two digits, then consume optional
+        # footnote `4)` separately.
         match = re.match(
-            r"^(?P<item>\d+)\s+f(?P<fault>\d+)(?:4\))?\s+"
+            r"^(?P<item>\d+)\s+f(?P<fault>\d{1,2})(?:4\))?\s+"
             r"(?P<sample>(?:\d+\s*-\s*\d+)|(?:start at\s+\d+))\s+",
             line,
             flags=re.I,
@@ -96,6 +136,7 @@ def parse_events(text: str) -> list[dict]:
                 "open_ended": open_ended,
             }
         )
+
     events.sort(key=lambda row: row["item"])
     if len(events) != EXPECTED_EVENTS or [row["item"] for row in events] != list(range(1, EXPECTED_EVENTS + 1)):
         raise ValueError(f"expected items 1..19, parsed {len(events)} rows: {[r['item'] for r in events]}")
