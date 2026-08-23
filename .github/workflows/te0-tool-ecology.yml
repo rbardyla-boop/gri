@@ -1,0 +1,45 @@
+name: TE0 Tool Ecology Gate
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/mbm_lab/**'
+      - 'tests/test_te0_lab.py'
+      - '.github/workflows/te0-tool-ecology.yml'
+  push:
+    branches:
+      - mbm-bench-shop
+    paths:
+      - 'experiments/mbm_lab/**'
+      - 'tests/test_te0_lab.py'
+      - '.github/workflows/te0-tool-ecology.yml'
+
+jobs:
+  te0-lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install pytest
+      - name: Compile TE0 lab
+        run: |
+          python -m py_compile experiments/mbm_lab/*.py
+          python -m py_compile experiments/mbm_lab/tools/*.py
+          python -m py_compile experiments/mbm_lab/adapters/*.py
+      - name: Run TE0 regressions
+        run: pytest -q tests/test_te0_lab.py
+      - name: Assert retired SEM cases are not referenced by TE0 source
+        run: |
+          if grep -R -n -E 'SEM0R_CASES|SEM0R_GOLD|SEM0R_REPLAY_CASES|SEM0R_CONTEXT_ABLATION_CASES' experiments/mbm_lab; then
+            echo 'TE0 source references retired SEM scientific artifacts'
+            exit 1
+          fi
+      - name: Assert starter catalog contains no harness oracle
+        run: |
+          if grep -q 'echo_target' experiments/mbm_lab/starter_catalog.json; then
+            echo 'starter catalog illegally contains harness oracle'
+            exit 1
+          fi
