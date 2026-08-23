@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 
 from experiments.sem1.build_sem1_instrument import FAMILIES, build_dataset, dataset_summary
 from experiments.sem1.make_sem1_subsets import build_subsets
@@ -54,6 +54,45 @@ def test_sem1_family_nonce_prefixes_not_model_visible() -> None:
     )
     assert not FAMILY_NONCE.search(visible)
     assert "QX1" in visible
+
+
+def test_sem1_invariance_distractors_are_context_counterbalanced() -> None:
+    cases, gold = build_dataset()
+    case_by = {case["id"]: case for case in cases}
+    target_text = {
+        "factive_presupposition": "QX2 cracked permanently.",
+        "exception_scope": "QX2 is heavy.",
+        "nonce_temporal": "QX3 was caused by QX2.",
+        "deixis_reference": "The marker is blue.",
+        "negation_quantifier": "The seventh QX1 lamp is lit.",
+        "invented_lexicon": "QX2 is glass.",
+        "abductive_restraint": "QX1 contains iron.",
+    }
+    observed: dict[tuple[str, int], list[str]] = defaultdict(list)
+    scalar: dict[int, list[str]] = defaultdict(list)
+
+    for meta in gold:
+        if meta["pair_kind"] != "INVARIANCE":
+            continue
+        pair_index = int(meta["pair_id"].rsplit("-", 1)[1])
+        case = case_by[meta["id"]]
+        if meta["family"] == "scalar_scope":
+            hits = [p for p in case["propositions"] if p["text"] == "Not all six QX1 trials stabilized."]
+            assert len(hits) == 1
+            scalar[pair_index].append(meta["gold"][hits[0]["id"]]["label"])
+            continue
+        text = target_text[meta["family"]]
+        hits = [p for p in case["propositions"] if p["text"] == text]
+        assert len(hits) == 1
+        observed[(meta["family"], pair_index)].append(meta["gold"][hits[0]["id"]]["label"])
+
+    for family in target_text:
+        assert observed[(family, 3)] == ["UNKNOWN", "UNKNOWN"]
+        assert observed[(family, 4)] == ["ASSERTED", "ASSERTED"]
+        assert observed[(family, 5)] == ["CONTRADICTED", "CONTRADICTED"]
+    assert scalar[3] == ["IMPLICATED", "IMPLICATED"]
+    assert scalar[4] == ["ENTAILED", "ENTAILED"]
+    assert scalar[5] == ["CONTRADICTED", "CONTRADICTED"]
 
 
 def test_sem1_label_pattern_shortcut_not_fixed() -> None:
