@@ -1,0 +1,40 @@
+{
+  "schema": "KC-1D-D-CAPACITY-SATURATION-1",
+  "unit": "KC-1D-D",
+  "status": "DEV_CHARACTERIZATION_ONLY",
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "stored_packets_by_slot": {
+    "0": "p007",
+    "1": "p000",
+    "2": "p001",
+    "3": "p002",
+    "4": "p003",
+    "5": "p004",
+    "6": "p005",
+    "7": "p006"
+  },
+  "collision_packets": ["p008", "p009", "p010", "p011", "p012", "p013", "p014", "p015"],
+  "load_sizes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16],
+  "under_capacity_order_variants": {
+    "abc": ["p007", "p000", "p001"],
+    "cba": ["p001", "p000", "p007"],
+    "bac": ["p000", "p007", "p001"]
+  },
+  "over_capacity_order_variants": {
+    "collision_first": ["p008", "p007", "p000", "p001", "p002", "p003", "p004", "p005", "p006"],
+    "collision_middle": ["p007", "p000", "p001", "p002", "p008", "p003", "p004", "p005", "p006"],
+    "collision_last": ["p007", "p000", "p001", "p002", "p003", "p004", "p005", "p006", "p008"]
+  },
+  "recency_sequences": {
+    "a1_a2_a3": ["p000", "p008", "p016"],
+    "a1_a2_a3_a1": ["p000", "p008", "p016", "p000"],
+    "a3_a2_a1": ["p016", "p008", "p000"]
+  },
+  "metrics": ["simultaneous_capacity", "saturation_boundary", "order_sensitivity", "recency_law", "historical_recoverability", "whole_bank_restart"],
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "post_result_cell_modification": false
+}
+

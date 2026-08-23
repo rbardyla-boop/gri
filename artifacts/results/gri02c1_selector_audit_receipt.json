@@ -1,0 +1,97 @@
+{
+  "accounting": {
+    "current_candidate": {
+      "budget_pass": false,
+      "preserve_path_operations": 1,
+      "transform_plus_query_operations": 119,
+      "transform_state_operations": 98
+    },
+    "external_dispatch_counterfactual": {
+      "budget_pass": true,
+      "preserve_path_operations": 0,
+      "transform_plus_query_operations": 118,
+      "transform_state_operations": 97
+    },
+    "selector_charge_per_active_transition": 1
+  },
+  "artifact_hashes": {
+    "audit_source_sha256": "8da90a325d0ea8197842438185b5bfc8ad68f4f1fa554edee5a210927ecec256",
+    "candidate_receipt_sha256": "6344a2a8240a7572ef0554a8b5bd2765fd9d64f676a293245fc3b8d75a622ebf",
+    "config_sha256": "d7eb0736e531251e7bdeba68e47036be3f8dbc5465d37d8cfc4bfceba28eba9c",
+    "implementation_sha256": "d446f99a52118bf6d56eeb4dfe11938f0ef6779ad050820863c49a619e09af79",
+    "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3"
+  },
+  "frozen_budget_reference": {
+    "comparison_definition": "one scalar comparison or branch predicate",
+    "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+    "parent_recurrent_operations_max": 97,
+    "parent_recurrent_plus_query_operations_max": 118,
+    "query_readout_operations": 21
+  },
+  "question": "Whether token-semantic transition dispatch is external to GRI-02C or computed by its executable candidate.",
+  "scope": {
+    "architecture_modified": false,
+    "ceiling_modified": false,
+    "disputed_selector_only": true,
+    "evaluation_performed": false,
+    "excluded_existing_plumbing": [
+      "active/padding mask",
+      "query framing"
+    ],
+    "exclusion_reason": "This audit closes only the selector ambiguity; charging additional plumbing cannot restore the budget.",
+    "training_performed": false
+  },
+  "selector_determination": {
+    "candidate_computes_wait_classification": true,
+    "executable_external_transition_class_argument": false,
+    "finding": "INTERNAL_TO_CANDIDATE",
+    "protocol_declares_semantic_source": "frozen token semantics only",
+    "reason": "The candidate receives token ids and executes ids == self.wait_index; no transition_class argument is supplied before candidate execution."
+  },
+  "source_evidence": {
+    "external_transition_class_argument": false,
+    "forward_arguments": [
+      "self",
+      "tokens",
+      "lengths",
+      "behavior",
+      "q8",
+      "return_states"
+    ],
+    "occurrences": [
+      {
+        "branch_context": [
+          "body: behavior == 'candidate'"
+        ],
+        "candidate_branch": true,
+        "column": 27,
+        "line": 91,
+        "no_recurrence_branch": false,
+        "source": "preserve = ids == self.wait_index"
+      },
+      {
+        "branch_context": [
+          "orelse: behavior == 'candidate'",
+          "orelse: behavior in ('parent', 'no_preserve')",
+          "orelse: behavior == 'no_transform'",
+          "body: behavior == 'no_recurrence'"
+        ],
+        "candidate_branch": false,
+        "column": 27,
+        "line": 98,
+        "no_recurrence_branch": true,
+        "source": "preserve = ids == self.wait_index"
+      }
+    ]
+  },
+  "status": "CLOSED",
+  "timestamp_utc": "2026-08-20T18:30:59.042832+00:00",
+  "unit": "GRI-02C.1-TRANSITION-SELECTOR-ACCOUNTING-AUDIT",
+  "verdict": {
+    "algorithmic_result_preserved": true,
+    "formal_budget_verdict": "GRI02_NO_ADVANTAGE",
+    "formal_verdict_reason": "The internally executed selector adds one comparison, producing 98 recurrent and 119 recurrent-plus-query operations against frozen ceilings of 97 and 118.",
+    "raw_algorithmic_finding": "SUPPORTED",
+    "raw_candidate_receipt_verdict": "GRI02_ADVANTAGE"
+  }
+}

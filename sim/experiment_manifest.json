@@ -1,0 +1,40 @@
+{
+  "schema": "GRI-SIM-0-EXPERIMENT-1",
+  "experiment_id": "GRI-02B-REFERENCE-ENVIRONMENT",
+  "status": "REFERENCE_ONLY_NO_SUCCESSOR_AUTHORIZED",
+  "source": {
+    "contract_sha256": "22d2a4a147d7e829f9cbcab246f6dba05bebffea6abdfa5b377aeef3171d660c",
+    "gri02b_config_sha256": "a8bf002449646151e32474b0b88d88f37e1cd9893bc4c9a90080c4495b1c693b",
+    "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+    "fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960",
+    "gri02b_harness_sha256": "3d17031568614e6ec8043af10c7f71443f4ddfd8d35dea4bbcf578c12d38f217"
+  },
+  "fixtures": {
+    "total": 558,
+    "fit": 350,
+    "held_out": 208,
+    "fit_delays": [0, 1, 2, 4, 8, 16, 32],
+    "held_out_delays": [64, 128]
+  },
+  "budgets": {
+    "persistent_state_slots_max": 8,
+    "trainable_parameters_max": 170,
+    "recurrent_operations_max": 97,
+    "recurrent_plus_query_operations_max": 118,
+    "matched_gru_parameters": 506,
+    "matched_gru_recurrent_plus_query_operations": 526
+  },
+  "precision": {
+    "required": ["float64", "float32", "q8"],
+    "stress": ["float16", "bfloat16"],
+    "q8": "float32 transition; quantize persistent state after every recurrent step using signed 1/127 grid and round-to-nearest-even"
+  },
+  "scientific_run_requires": [
+    "separate_candidate_authorization",
+    "frozen_candidate_manifest",
+    "candidate_source_hash",
+    "accounting_audit_pass",
+    "deterministic_replay_pass",
+    "no_post_result_tuning"
+  ]
+}

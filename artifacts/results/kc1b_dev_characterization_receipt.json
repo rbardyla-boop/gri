@@ -1,0 +1,4532 @@
+{
+  "anchor_errors": [],
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "canonical_receipt_sha256": "c1c78e057a92af14bf7d73589fdb3c864cd4c5d209abf355044d495b02fd72b0",
+  "characterization": [
+    {
+      "condition": "correct_packet",
+      "delay": 0,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "ba53a248b0c361c41a83925aac85e2fc15dadf8524dd383d703052bb816370a4",
+        "split": 1,
+        "tokens": [
+          1
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 0,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "249dfe28233baea54fc3b1c69544688be25a646bc6d69473f75d5d0c4d9b9213",
+        "split": 0,
+        "tokens": [],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 0,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "0133ca816846caaa43342f258517435129ff78431dc1a525707330052e053fc5",
+        "split": 1,
+        "tokens": [
+          2
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 0,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "ba53a248b0c361c41a83925aac85e2fc15dadf8524dd383d703052bb816370a4",
+        "split": 1,
+        "tokens": [
+          1
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 0,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "249dfe28233baea54fc3b1c69544688be25a646bc6d69473f75d5d0c4d9b9213",
+        "split": 0,
+        "tokens": [],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8802f656d2ed92053d81fa35f23ce5302123c2e8d5565dbfcc60aea51601b46a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 0,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "0133ca816846caaa43342f258517435129ff78431dc1a525707330052e053fc5",
+        "split": 1,
+        "tokens": [
+          2
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "7e36fc520a7f179ad3f727c12775769f6eff36fac5d293b8ecd50e54f3d7937d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 1,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "c5000edc2e00f7182daf06375f351c8d254f1f3ea63f0867f91a30f3a3d6f1d8",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "c5000edc2e00f7182daf06375f351c8d254f1f3ea63f0867f91a30f3a3d6f1d8",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "ba53a248b0c361c41a83925aac85e2fc15dadf8524dd383d703052bb816370a4",
+        "split": 1,
+        "tokens": [
+          1,
+          3
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "c5000edc2e00f7182daf06375f351c8d254f1f3ea63f0867f91a30f3a3d6f1d8",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "c5000edc2e00f7182daf06375f351c8d254f1f3ea63f0867f91a30f3a3d6f1d8",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 1,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "b027decaf53d4986c09494026feb832f34daa09cf328d63cd9cb0fe20db44867",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "b027decaf53d4986c09494026feb832f34daa09cf328d63cd9cb0fe20db44867",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "249dfe28233baea54fc3b1c69544688be25a646bc6d69473f75d5d0c4d9b9213",
+        "split": 0,
+        "tokens": [
+          3
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "b027decaf53d4986c09494026feb832f34daa09cf328d63cd9cb0fe20db44867",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "b027decaf53d4986c09494026feb832f34daa09cf328d63cd9cb0fe20db44867",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 1,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "bd386db81a9ded18140d96385e73713a6f078d0ac7b66727601033e31f941ee3",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "bd386db81a9ded18140d96385e73713a6f078d0ac7b66727601033e31f941ee3",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "0133ca816846caaa43342f258517435129ff78431dc1a525707330052e053fc5",
+        "split": 1,
+        "tokens": [
+          2,
+          3
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "bd386db81a9ded18140d96385e73713a6f078d0ac7b66727601033e31f941ee3",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "bd386db81a9ded18140d96385e73713a6f078d0ac7b66727601033e31f941ee3",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 1,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "state": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "ba53a248b0c361c41a83925aac85e2fc15dadf8524dd383d703052bb816370a4",
+        "split": 1,
+        "tokens": [
+          1,
+          9
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "state": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 1,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "state": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "249dfe28233baea54fc3b1c69544688be25a646bc6d69473f75d5d0c4d9b9213",
+        "split": 0,
+        "tokens": [
+          9
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "state": [
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "574aca4b24abff9c68d187b0107da22c8ff443db0bd4bb0d25a60d0d61676f3b",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 1,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "bf1d0c4f963110fec5cb1fc68c7d6246889dbb5b6a0de2babc724d14d144e1bb",
+          "state": [
+            [
+              0,
+              10,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "bf1d0c4f963110fec5cb1fc68c7d6246889dbb5b6a0de2babc724d14d144e1bb",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "0133ca816846caaa43342f258517435129ff78431dc1a525707330052e053fc5",
+        "split": 1,
+        "tokens": [
+          2,
+          9
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "bf1d0c4f963110fec5cb1fc68c7d6246889dbb5b6a0de2babc724d14d144e1bb",
+          "state": [
+            [
+              0,
+              10,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "bf1d0c4f963110fec5cb1fc68c7d6246889dbb5b6a0de2babc724d14d144e1bb",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 2,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "bd688353b4f735bed47cc664490f797a73affeb836470d7fe0d85866da836043",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "bd688353b4f735bed47cc664490f797a73affeb836470d7fe0d85866da836043",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "bdccadc05d5fbd81ebcfdc0eb58520a6f269ea55201f9acbb11ab312ba7094cb",
+        "split": 2,
+        "tokens": [
+          1,
+          3,
+          4
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "bd688353b4f735bed47cc664490f797a73affeb836470d7fe0d85866da836043",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "bd688353b4f735bed47cc664490f797a73affeb836470d7fe0d85866da836043",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 2,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "740cd1847a243bc4abaa518be37ac05db7ff9c2603f3d2e295abb26553d991b1",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "740cd1847a243bc4abaa518be37ac05db7ff9c2603f3d2e295abb26553d991b1",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "ff513af7809c51c3ab31b4428e786c56e409d84eecada76044330a7a1306c93b",
+        "split": 1,
+        "tokens": [
+          3,
+          4
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "740cd1847a243bc4abaa518be37ac05db7ff9c2603f3d2e295abb26553d991b1",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "740cd1847a243bc4abaa518be37ac05db7ff9c2603f3d2e295abb26553d991b1",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 2,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "90e71a37284845e965b87bd0d7abb4a06d471ea4a904ecd929e2a0bf84d2c144",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "90e71a37284845e965b87bd0d7abb4a06d471ea4a904ecd929e2a0bf84d2c144",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "9b94cf4bd259d7b871eeef304973e30ed3c4340d7e3e61a7e7f3361a7c92cd32",
+        "split": 2,
+        "tokens": [
+          2,
+          3,
+          4
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "90e71a37284845e965b87bd0d7abb4a06d471ea4a904ecd929e2a0bf84d2c144",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "90e71a37284845e965b87bd0d7abb4a06d471ea4a904ecd929e2a0bf84d2c144",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 2,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "62189860b8b7b656a151712588552a659b38c30425454dd267a3c0a30e7f0012",
+        "split": 2,
+        "tokens": [
+          1,
+          9,
+          10
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 2,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "62189860b8b7b656a151712588552a659b38c30425454dd267a3c0a30e7f0012",
+        "split": 1,
+        "tokens": [
+          9,
+          10
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 2,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "8e441c40fce6339b1d8164c0124310d610c2db94ddcb342d29c85d5a70193cef",
+        "split": 2,
+        "tokens": [
+          2,
+          9,
+          10
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "568124d65b91e80a81b58320470062372563e7cced110b0de9775612b418723a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 4,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "readout_sha256": "4c999e1c103a3a7d2f83d3e4fa8b0bf77fcd03be501b5983996a9ab899919305",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "state_sha256": "4c999e1c103a3a7d2f83d3e4fa8b0bf77fcd03be501b5983996a9ab899919305",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "b63b613ab703560c0dba2ccd9ca971ae646fd38d84232c68dd26ed506b55f3aa",
+        "split": 3,
+        "tokens": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "readout_sha256": "4c999e1c103a3a7d2f83d3e4fa8b0bf77fcd03be501b5983996a9ab899919305",
+          "state": [
+            [
+              0,
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "state_sha256": "4c999e1c103a3a7d2f83d3e4fa8b0bf77fcd03be501b5983996a9ab899919305",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 4,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "readout_sha256": "e92d6b99f1702013658c2aa3708f4543c80adaee513ecd836669b4626d2693d9",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "state_sha256": "e92d6b99f1702013658c2aa3708f4543c80adaee513ecd836669b4626d2693d9",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "564844165c677d3892a8fd84ae28d0bcb693a1cc5819d714067819e1082dd266",
+        "split": 2,
+        "tokens": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "readout_sha256": "e92d6b99f1702013658c2aa3708f4543c80adaee513ecd836669b4626d2693d9",
+          "state": [
+            [
+              0,
+              0,
+              0,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "state_sha256": "e92d6b99f1702013658c2aa3708f4543c80adaee513ecd836669b4626d2693d9",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 4,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "readout_sha256": "413cca3df5896bfb69cd877da9a1f1b0eb5e51734d28abf6d1e000a2251ffa57",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "state_sha256": "413cca3df5896bfb69cd877da9a1f1b0eb5e51734d28abf6d1e000a2251ffa57",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "c775a617096778eeb5d4d594006064215a946e29344ff019c7e7dc54c5735c33",
+        "split": 3,
+        "tokens": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "readout_sha256": "413cca3df5896bfb69cd877da9a1f1b0eb5e51734d28abf6d1e000a2251ffa57",
+          "state": [
+            [
+              0,
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ],
+          "state_sha256": "413cca3df5896bfb69cd877da9a1f1b0eb5e51734d28abf6d1e000a2251ffa57",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 4,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "2710cd6b5a9bb75a832c5dd31a57faa587c57e6e6e05f15ca46c383d84595911",
+        "split": 3,
+        "tokens": [
+          1,
+          9,
+          10,
+          11,
+          12
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 4,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "2710cd6b5a9bb75a832c5dd31a57faa587c57e6e6e05f15ca46c383d84595911",
+        "split": 2,
+        "tokens": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 4,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "2710cd6b5a9bb75a832c5dd31a57faa587c57e6e6e05f15ca46c383d84595911",
+        "split": 3,
+        "tokens": [
+          2,
+          9,
+          10,
+          11,
+          12
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "readout_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "state_sha256": "8ed673918d27f6a6771825b21f526672379728732c2a31842707eb8d18dfd848",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 8,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "state": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "5b1e77d7df7ef8b679ad571ff384a9901348cc2253b46a244744ddbcfb283691",
+        "split": 5,
+        "tokens": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "state": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 8,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "311836957ed8f853f4e46ffb53e97e2ba1fc9c2f59b5a285f503f5050c58580a",
+        "split": 4,
+        "tokens": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 8,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "595cde19b079a3050d31870198926d60c05bbdced166a856a8acb21a8e94c85d",
+        "split": 5,
+        "tokens": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 8,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "674c0bfa90cff33adb15ace10bfc627b46e2b7ff0ebc01c9f4215aa12f6493b8",
+        "split": 5,
+        "tokens": [
+          1,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 8,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "674c0bfa90cff33adb15ace10bfc627b46e2b7ff0ebc01c9f4215aa12f6493b8",
+        "split": 4,
+        "tokens": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 8,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "674c0bfa90cff33adb15ace10bfc627b46e2b7ff0ebc01c9f4215aa12f6493b8",
+        "split": 5,
+        "tokens": [
+          2,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 16,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "state": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "934a04092196bb1094bc01eac1ca48e0a35de145baf85069e0528dd393c51f93",
+        "split": 9,
+        "tokens": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3,
+          4
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": true,
+            "occupancy_only": true,
+            "value_only": true
+          },
+          "readout": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "state": [
+            [
+              9,
+              2,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "f3ccc4e5b134f273db906ebe0d3b36fc5ef7e8fe81667599703f2d315e5e8750",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 16,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "f9223d1f350432a2c9fc62ded1900cfe57e9e0ea39dbbddb3b7c07644c865269",
+        "split": 8,
+        "tokens": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3,
+          4
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 16,
+      "distractor_set": "standard",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "f9223d1f350432a2c9fc62ded1900cfe57e9e0ea39dbbddb3b7c07644c865269",
+        "split": 9,
+        "tokens": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          3,
+          4
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": false,
+            "value_only": false
+          },
+          "readout": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "state": [
+            [
+              9,
+              0,
+              11,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "564ce536e01181c3320289d2ccd292eaaceb40699f55869d66731f0d487dc07a",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "correct_packet",
+      "delay": 16,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "861d5718b51723cbd35c02604b72f8b8d45d470099dc0bdc5d03c2840abe77de",
+        "split": 9,
+        "tokens": [
+          1,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9,
+          10
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "no_packet",
+      "delay": 16,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "861d5718b51723cbd35c02604b72f8b8d45d470099dc0bdc5d03c2840abe77de",
+        "split": 8,
+        "tokens": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9,
+          10
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    },
+    {
+      "condition": "wrong_packet",
+      "delay": 16,
+      "distractor_set": "altered",
+      "query_target": "p000",
+      "result": {
+        "restart_equal": true,
+        "restarted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        },
+        "serialization_bytes": 137,
+        "serialization_sha256": "861d5718b51723cbd35c02604b72f8b8d45d470099dc0bdc5d03c2840abe77de",
+        "split": 9,
+        "tokens": [
+          2,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          9,
+          10
+        ],
+        "uninterrupted": {
+          "decoders": {
+            "full_state": false,
+            "occupancy_only": true,
+            "value_only": false
+          },
+          "readout": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "readout_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "state": [
+            [
+              0,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "state_sha256": "4029a0b9557cdf8cd8a2c2f0ed70fe3e497a2d88c46631a504484f2b42a4736d",
+          "target_slot": 1,
+          "target_value": 2
+        }
+      }
+    }
+  ],
+  "config_sha256": "bf116743a8a568e41efbd3dc81d051affac5ddeceec989d0c1ff40d184705309",
+  "controls": [
+    "correct_packet",
+    "no_packet",
+    "wrong_packet"
+  ],
+  "delay_summary": [
+    {
+      "delay": 0,
+      "query_recoverability": {
+        "correct_packet": true,
+        "no_packet": false,
+        "wrong_packet": false
+      },
+      "specificity": {
+        "full_state_correct_minus_no": 1,
+        "full_state_correct_minus_wrong": 1
+      },
+      "state_differentiation_l1": {
+        "correct_vs_no": 3,
+        "correct_vs_wrong": 7,
+        "wrong_vs_no": 4
+      }
+    },
+    {
+      "delay": 1,
+      "query_recoverability": {
+        "correct_packet": true,
+        "no_packet": false,
+        "wrong_packet": false
+      },
+      "specificity": {
+        "full_state_correct_minus_no": 1,
+        "full_state_correct_minus_wrong": 1
+      },
+      "state_differentiation_l1": {
+        "correct_vs_no": 3,
+        "correct_vs_wrong": 7,
+        "wrong_vs_no": 4
+      }
+    },
+    {
+      "delay": 2,
+      "query_recoverability": {
+        "correct_packet": true,
+        "no_packet": false,
+        "wrong_packet": false
+      },
+      "specificity": {
+        "full_state_correct_minus_no": 1,
+        "full_state_correct_minus_wrong": 1
+      },
+      "state_differentiation_l1": {
+        "correct_vs_no": 3,
+        "correct_vs_wrong": 7,
+        "wrong_vs_no": 4
+      }
+    },
+    {
+      "delay": 4,
+      "query_recoverability": {
+        "correct_packet": true,
+        "no_packet": false,
+        "wrong_packet": false
+      },
+      "specificity": {
+        "full_state_correct_minus_no": 1,
+        "full_state_correct_minus_wrong": 1
+      },
+      "state_differentiation_l1": {
+        "correct_vs_no": 3,
+        "correct_vs_wrong": 7,
+        "wrong_vs_no": 4
+      }
+    },
+    {
+      "delay": 8,
+      "query_recoverability": {
+        "correct_packet": true,
+        "no_packet": false,
+        "wrong_packet": false
+      },
+      "specificity": {
+        "full_state_correct_minus_no": 1,
+        "full_state_correct_minus_wrong": 1
+      },
+      "state_differentiation_l1": {
+        "correct_vs_no": 3,
+        "correct_vs_wrong": 3,
+        "wrong_vs_no": 0
+      }
+    },
+    {
+      "delay": 16,
+      "query_recoverability": {
+        "correct_packet": true,
+        "no_packet": false,
+        "wrong_packet": false
+      },
+      "specificity": {
+        "full_state_correct_minus_no": 1,
+        "full_state_correct_minus_wrong": 1
+      },
+      "state_differentiation_l1": {
+        "correct_vs_no": 3,
+        "correct_vs_wrong": 3,
+        "wrong_vs_no": 0
+      }
+    }
+  ],
+  "delays": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "metrics": [
+    "state_differentiation",
+    "query_recoverability",
+    "specificity",
+    "decay_curve",
+    "serialization_interruption"
+  ],
+  "note": "Development characterization only; no retention threshold or scientific claim is assigned.",
+  "readout_ablations": [
+    "full_state",
+    "value_only",
+    "occupancy_only"
+  ],
+  "replay_pass": true,
+  "restart_pass": true,
+  "row_count": 36,
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "unit": "KC-1B-D",
+  "verdict": "KC_1B_DEV_COMPLETE"
+}

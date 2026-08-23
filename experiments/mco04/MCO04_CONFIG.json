@@ -1,0 +1,138 @@
+{
+  "experiment_id": "MCO-04",
+  "title": "Opaque real-telemetry state-compiler replication gate",
+  "benchmark": {
+    "name": "RCAEval RE3",
+    "repository": "https://github.com/phamquiluan/RCAEval",
+    "repository_commit": "4695aa69f4f1f57b9094ca04ff235908b73a8e24",
+    "dataset_repository": "https://huggingface.co/datasets/phamquiluan/RCAEval",
+    "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "index_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "license": "MIT",
+    "suite": "RE3",
+    "expected_cases": 90,
+    "engineering_rule": "repetition == 1",
+    "scientific_rule": "repetition != 1",
+    "scientific_scope": "unseen_runs_of_engineering_service_fault_strata",
+    "expected_engineering_cases": 27,
+    "expected_scientific_cases": 63,
+    "expected_systems": ["RE3-OB", "RE3-SS", "RE3-TT"],
+    "opaque_id_namespace": "mco04-rcaeval-re3-v1"
+  },
+  "task": {
+    "primary": "root_cause_service_top1",
+    "secondary": [
+      "root_cause_service_top3",
+      "fault_class_exact",
+      "evidence_provenance_exact",
+      "bounded_diagnosis"
+    ],
+    "fault_classes": {
+      "f1": "incorrect_parameter_values",
+      "f2": "missing_parameters",
+      "f3": "missing_function_call",
+      "f4": "incorrect_return_values",
+      "f5": "missing_exception_handlers"
+    }
+  },
+  "compiler": {
+    "name": "transparent_resource_corroboration_v1",
+    "pre_window_seconds": 300,
+    "post_window_seconds": 300,
+    "minimum_points_per_window": 20,
+    "feature_score_cap": 30.0,
+    "relative_scale_floor": 0.01,
+    "magnitude_scale_floor": 0.001,
+    "absolute_scale_floor": 1e-08,
+    "resource_metric_suffixes": ["cpu", "mem", "socket", "diskio"],
+    "service_score": {
+      "top_resource_weights": [1.0, 1.0, 0.25, 0.25],
+      "top_symptom_weights": [0.2, 0.2]
+    },
+    "packet_capacity_records": 16,
+    "top_candidate_resource_records": 4,
+    "top_candidate_symptom_records": 2,
+    "other_candidate_records": 2
+  },
+  "baselines": {
+    "author_style_baro": {
+      "description": "Metric BARO adapted from the pinned RCAEval implementation to the same 300-second windows",
+      "source_file": "RCAEval/e2e/baro.py",
+      "source_commit": "4695aa69f4f1f57b9094ca04ff235908b73a8e24"
+    },
+    "single_feature_robust": {
+      "description": "Highest individual absolute robust feature shift"
+    },
+    "post_error_volume": {
+      "description": "Service with the largest post-onset error-like log volume"
+    },
+    "hybrid_rag_16": {
+      "description": "Equally informed lexical+dense retrieval over fixed telemetry chunks",
+      "capacity_records": 16,
+      "rrf_k": 60,
+      "embedding_model": "embeddinggemma:300m",
+      "embedding_blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+      "embedding_batch_size": 256,
+      "embedding_context_limit": 2048
+    },
+    "max_context": {
+      "description": "Same frozen reasoner with a deterministic fixed-document prefix capped at 20000 UTF-8 prompt bytes and verified below the context limit by the model receipt",
+      "context_limit_tokens": 8192,
+      "prompt_byte_limit": 20000
+    }
+  },
+  "reasoner": {
+    "model": "llama3.1:8b",
+    "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+    "temperature": 0,
+    "seed": 20260822,
+    "max_output_tokens": 384,
+    "variant_call_order": "sha256_rank_then_round_robin_rotation_over_compiler_packet_hybrid_rag_16_max_context",
+    "repeat_fraction": 0.1,
+    "repeat_selection": "ceil_fraction_lowest_sha256_of_seed_and_opaque_id",
+    "semantic_repeat_fields": ["valid", "root_cause_service", "fault_class"]
+  },
+  "execution": {
+    "engineering_mechanical_run_id": "engineering_v4",
+    "engineering_reasoning_run_id": "engineering_reasoning_v2",
+    "scientific_mechanical_live_run_id": "live_mechanical",
+    "scientific_mechanical_replay_run_id": "replay_mechanical",
+    "scientific_reasoning_live_run_id": "live_reasoning",
+    "scientific_reasoning_replay_run_id": "replay_reasoning",
+    "scientific_stability_run_id": "stability_repeat"
+  },
+  "criteria": {
+    "compiler_minimum_top1": 0.9,
+    "compiler_minimum_top3": 0.98,
+    "compiler_minimum_per_system_top1": 0.8,
+    "compiler_minimum_wilson95_lower_top1": 0.8,
+    "model_packet_minimum_top1": 0.85,
+    "model_packet_maximum_drop_from_compiler": 0.05,
+    "minimum_semantic_repeat_agreement": 0.95,
+    "required_provenance_exact": 1.0,
+    "required_packet_capacity_compliance": 1.0,
+    "minimum_median_raw_to_packet_byte_reduction": 1000.0,
+    "minimum_case_raw_to_packet_byte_reduction": 100.0,
+    "minimum_quality_advantage": 0.05,
+    "quality_equivalence_margin": 0.02,
+    "minimum_model_token_reduction_at_equivalent_quality": 10.0,
+    "minimum_latency_reduction_at_equivalent_quality": 2.0
+  },
+  "accounting": {
+    "local_billed_usd": 0.0,
+    "estimated_usd": null,
+    "cache_hits_are_not_fresh_inference": true,
+    "pretrained_model_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "runtime": {
+    "ollama_version": "0.21.2"
+  },
+  "outcome_precedence": [
+    "MCO_04_BENCHMARK_INVALID",
+    "MCO_04_REAL_WORKLOAD_FAILURE",
+    "MCO_04_CONVENTIONAL_RCA_DOMINATES",
+    "MCO_04_BOUNDED_INFERENCE_REPLICATION_ADVANCE",
+    "MCO_04_TRANSPARENT_STATE_COMPILER_REPLICATION_ADVANCE",
+    "MCO_04_INCOMPLETE"
+  ]
+}

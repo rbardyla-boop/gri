@@ -1,0 +1,254 @@
+{
+  "experiment_id": "MCO-02",
+  "title": "LANGUAGE / INFERENCE BOUNDARY",
+  "status": "PREREGISTERED_BEFORE_LANGUAGE_CORPUS_AND_SCIENTIFIC_INFERENCE",
+  "preregistered_at_utc": "2026-08-22T00:00:00Z",
+  "pre_scientific_engineering_amendments": [
+    {
+      "id": "MCO02-ENG-01",
+      "recorded_at_utc": "2026-08-22T12:39:10Z",
+      "trigger": "The first explicitly unscored 100-record engineering smoke exposed malformed oversized extraction batches and signed-temperature instruction ambiguity.",
+      "changes": [
+        "reduce relation classification batches from 96 to 12 records",
+        "isolate the deterministic semantic sentence from renderer administration and irrelevant narrative before relation classification",
+        "clarify signed-integer comparison, answer completeness, and provenance protocol instructions"
+      ],
+      "unchanged": [
+        "semantic population",
+        "language corpus",
+        "systems",
+        "model and tokenizer",
+        "capacity and context limits",
+        "acceptance thresholds",
+        "verdict precedence"
+      ],
+      "scientific_runs_before_amendment": 0,
+      "receipt": "MCO02_ENGINEERING_AMENDMENT_01.json"
+    },
+    {
+      "id": "MCO02-ENG-02",
+      "recorded_at_utc": "2026-08-22T12:48:05Z",
+      "trigger": "The second explicitly unscored 100-record smoke showed that free-form relation labels remained structurally unstable and that an unconstrained model-only NEED protocol hallucinated answers before retrieval.",
+      "changes": [
+        "replace free-form relation labels with schema-constrained ordered JSON labels",
+        "restore the transparent MCO-01 retrieval controller while requiring the frozen model to choose the winning record and next entity from schema-constrained visible candidates",
+        "replace delimiter-sensitive final answers with one shared evidence-grounded JSON schema for all six systems",
+        "derive inspection for all six systems with one shared transparent integer comparison after model threshold extraction"
+      ],
+      "unchanged": [
+        "semantic population",
+        "language corpus",
+        "systems and persistent representations",
+        "model and tokenizer",
+        "capacity and context limits",
+        "acceptance thresholds",
+        "verdict precedence"
+      ],
+      "scientific_runs_before_amendment": 0,
+      "receipt": "MCO02_ENGINEERING_AMENDMENT_02.json"
+    }
+  ],
+  "claim": "Complete externally stored natural-language history can preserve equivalent task quality with bounded model-visible state and materially lower total expensive inference than context-heavy or conventional retrieval after ingestion is amortized.",
+  "frozen_scope": {
+    "learned_retention": false,
+    "dmc_changes": false,
+    "multiple_reasoning_models": false,
+    "agent_framework": false,
+    "latent_memory": false,
+    "active_record_cap": 16
+  },
+  "semantic_worlds": {
+    "generator": "frozen scripts/run_mco01.py",
+    "history_sizes": [100, 1000, 5000, 10000],
+    "seeds": [2601, 2602],
+    "queries_per_history": 8,
+    "expected_histories": 8,
+    "expected_queries": 64,
+    "expected_semantic_records": 32200,
+    "dependency_hops": [2, 3, 4, 5]
+  },
+  "language_renderer": {
+    "frozen_before_scientific_inference": true,
+    "minimum_templates_per_relation": 4,
+    "features": [
+      "paraphrase",
+      "local_pronoun_coreference",
+      "correction language",
+      "rename language",
+      "supersession language",
+      "source-ranked contradiction language",
+      "irrelevant narrative",
+      "temporal statements"
+    ],
+    "record_ids_and_entity_ids_remain_opaque_and_explicit_for_provenance": true,
+    "semantic_relation_labels_in_language": false,
+    "utility_or_answer_labels": false
+  },
+  "model": {
+    "provider": "local Ollama",
+    "ollama_version": "0.21.2",
+    "name": "llama3.1:8b",
+    "ollama_list_id": "46e0c10c039e",
+    "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+    "parameter_size": "8.0B",
+    "quantization": "Q4_K_M",
+    "native_context_length": 131072,
+    "deployed_full_context_limit": 32768,
+    "bounded_context_limit": 8192,
+    "tokenizer": "embedded llama-bpe from the frozen Ollama model blob",
+    "temperature": 0,
+    "seed": 20260822,
+    "selection_note": "Selected before corpus generation on a 12-item benchmark-independent relation-classification smoke; llama3.1:8b scored 12/12 and qwen2.5:3b did not.",
+    "selection_smokes_are_scientifically_unscored": true
+  },
+  "shared_extraction": {
+    "systems_receiving_it": [
+      "structured_exact_planner",
+      "iterative_need_retrieval"
+    ],
+    "pipeline": "deterministic provenance/entity scaffold plus frozen-model semantic relation classification",
+    "relation_batch_size": 12,
+    "relation_input": "deterministically isolated semantic sentence; no oracle fields, queries, or answers",
+    "relation_output": "schema-constrained ordered JSON array over depends_on, renamed_to, and failure_threshold",
+    "relation_context_limit": 8192,
+    "structural_retry": "recursively split only when JSON shape, output count, or relation vocabulary is invalid; no oracle-based semantic retry",
+    "no_query_or_expected_answer_access": true
+  },
+  "systems": [
+    {
+      "id": "full_context",
+      "persistent_representation": "raw language",
+      "model_visible_history": "all when measured tokens fit 32768",
+      "overflow_state": "FULL_CONTEXT_INFEASIBLE"
+    },
+    {
+      "id": "recent_window",
+      "persistent_representation": "raw language",
+      "model_visible_records": 16
+    },
+    {
+      "id": "rolling_summary",
+      "persistent_representation": "model-selected summary records plus recent records",
+      "summary_records": 8,
+      "recent_records": 8,
+      "ingestion_chunk_records": 256,
+      "ingestion_context_limit": 16384
+    },
+    {
+      "id": "conventional_rag",
+      "persistent_representation": "raw language plus TF-IDF word and character index",
+      "top_k": 16,
+      "retrieval_rounds": 1
+    },
+    {
+      "id": "structured_exact_planner",
+      "persistent_representation": "shared extracted structured store",
+      "model_visible_records_max": 16
+    },
+    {
+      "id": "iterative_need_retrieval",
+      "persistent_representation": "same shared extracted structured store",
+      "model_visible_records_max": 16,
+      "interface": "schema-constrained NEED(record_id, entity_id) over visible candidates",
+      "controller": "transparent relation precedence and indexed bundle retrieval inherited from MCO-01; frozen model resolves each nonterminal candidate bundle"
+    }
+  ],
+  "shared_answer_interface": {
+    "applies_to_all_six_systems": true,
+    "format": "schema-constrained evidence-grounded JSON",
+    "candidate_values_derived_only_from_model_visible_evidence": true,
+    "model_selects_terminal_threshold_and_ordered_provenance": true,
+    "inspection_postprocessor": "deployment_temperature < model_selected_threshold"
+  },
+  "amortization": {
+    "query_counts": [1, 2, 8, 32, 128],
+    "primary_expensive_token_units": "input_tokens + 4 * output_tokens",
+    "output_token_weight": 4,
+    "sensitivity_output_token_weights": [1, 10],
+    "billed_cost": "LOCAL_MODEL_NO_BILLED_API_COST",
+    "estimated_usd_cost": null,
+    "break_even_requires_quality_equivalence": true,
+    "quality_equivalence_answer_delta": 0.05
+  },
+  "metrics": [
+    "answer_accuracy",
+    "critical_recall",
+    "dependency_chain_accuracy",
+    "temporal_update_accuracy",
+    "provenance_accuracy",
+    "extraction_precision",
+    "extraction_recall",
+    "retrieval_precision",
+    "retrieval_recall",
+    "maximum_model_visible_records",
+    "maximum_model_visible_tokens",
+    "ingestion_input_tokens",
+    "ingestion_output_tokens",
+    "query_input_tokens",
+    "query_output_tokens",
+    "model_calls",
+    "embedding_or_extraction_calls",
+    "wall_time_seconds",
+    "persistent_bytes",
+    "retrieved_records",
+    "retrieval_rounds",
+    "break_even_query_count"
+  ],
+  "failure_classes": [
+    "LANGUAGE_EXTRACTION_FAILURE",
+    "INDEXING_FAILURE",
+    "RETRIEVAL_FAILURE",
+    "ACQUISITION_PLANNING_FAILURE",
+    "REASONING_FAILURE",
+    "PROVENANCE_FAILURE"
+  ],
+  "acceptance_criteria": {
+    "minimum_extraction_precision": 0.95,
+    "minimum_extraction_recall": 0.95,
+    "minimum_structured_answer_accuracy_overall": 0.9,
+    "minimum_structured_answer_accuracy_each_load": 0.85,
+    "minimum_structured_critical_recall": 0.95,
+    "minimum_structured_provenance_accuracy": 0.9,
+    "maximum_model_visible_records": 16,
+    "maximum_bounded_model_visible_tokens": 8192,
+    "minimum_live_response_stability": 0.95,
+    "planner_iterative_equivalence_delta": 0.02,
+    "planner_cost_advantage_ratio": 0.9,
+    "rag_dominance_quality_delta": 0.03,
+    "rag_dominance_cost_ratio": 0.8,
+    "material_total_cost_ratio": 0.8,
+    "extraction_cost_dominance_ratio": 1.25,
+    "amortization_horizon": 128
+  },
+  "verdict_precedence": [
+    "MCO_02_ACCOUNTING_INVALID",
+    "MCO_02_LANGUAGE_TRANSFER_FAILS",
+    "MCO_02_RAG_DOMINATES",
+    "MCO_02_EXTRACTION_COST_DOMINATES",
+    "MCO_02_STRUCTURED_PLANNER_DOMINATES",
+    "MCO_02_LANGUAGE_BOUNDARY_ADVANCES",
+    "MCO_02_INCONCLUSIVE"
+  ],
+  "run_policy": {
+    "one_complete_live_model_run": true,
+    "freeze_every_raw_model_response": true,
+    "stratified_live_determinism_recheck_fraction": 0.1,
+    "two_byte_identical_full_replays_from_frozen_model_responses": true,
+    "wall_clock_fields_excluded_from_replay_identity": true,
+    "full_context_infeasible_is_not_an_incorrect_answer": true,
+    "stop_after_terminal_verdict": true
+  },
+  "world_impact_claim": {
+    "claim": "this project will change the world",
+    "status_before_mco02": "UNFALSIFIABLE_HERE_AND_NOT_ESTABLISHED",
+    "mco02_can_establish": "controlled language-boundary mechanism evidence only",
+    "mco02_cannot_establish": [
+      "scientific novelty",
+      "independent replication",
+      "real-world demand",
+      "production reliability",
+      "economic adoption",
+      "long-horizon societal impact"
+    ]
+  }
+}

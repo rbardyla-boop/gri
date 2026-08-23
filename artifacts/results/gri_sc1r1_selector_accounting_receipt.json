@@ -1,0 +1,107 @@
+{
+  "audit_verdict": "PASS",
+  "budget": {
+    "candidate_recurrent": 57,
+    "candidate_recurrent_plus_query": 78,
+    "parent_recurrent_ceiling": 97,
+    "parent_recurrent_plus_query_ceiling": 118,
+    "recurrent_budget_pass": true,
+    "recurrent_plus_query_budget_pass": true
+  },
+  "candidate_freeze": false,
+  "checks": {
+    "budget_pass": true,
+    "constructor_only_validation_is_not_transition_dispatch": true,
+    "event_is_transforming": true,
+    "fixed_code_is_declared_parameter": true,
+    "manifest_declares_zero_selector_comparisons": true,
+    "manifest_recurrent_count_matches_audit": true,
+    "parameter_and_state_budget_pass": true,
+    "step_has_no_branch": true,
+    "step_has_no_comparison": true,
+    "step_has_no_forbidden_metadata_names": true,
+    "wait_is_exact_identity": true
+  },
+  "counterexample_admissible": true,
+  "formal_consequence": {
+    "extra_explicit_selector_operation": "NOT NECESSARY UNDER FROZEN MODEL",
+    "selector_cost_lower_bound": "DISPROVED BY CONSTRUCTION",
+    "token_class_dependence": "NECESSARY"
+  },
+  "hashes": {
+    "audit_source_sha256": "746b7e19009d96116d522c0ecf0e76d4fafed54f8955258a75e25ab8024db1b8",
+    "candidate_manifest_sha256": "f7e6e9617ef810a22aed9c097021ab41a88b32609cfaac2857e0d63fd65f9584",
+    "candidate_source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+    "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+    "sc0_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+    "sc1r_representability_receipt_sha256": "efdce8201193e52931cbbc88c703c2a199ebcfc5cef0b178c13aa22251e831bc"
+  },
+  "next_state": {
+    "sc2": "NOT AUTHORIZED",
+    "scientific_ledger": "UNCHANGED",
+    "successor": "NOT AUTHORIZED"
+  },
+  "operation_ledger": {
+    "diagonal_state_multiply": 8,
+    "embedding_value_copy": 8,
+    "query_readout_total": 21,
+    "recurrent_plus_query_total": 78,
+    "recurrent_total": 57,
+    "residual_state_add": 8,
+    "residual_subtract": 8,
+    "semantic_residual_multiply": 8,
+    "state_embedding_add": 8,
+    "tanh": 8,
+    "token_lookup": 1
+  },
+  "parameter_and_state_accounting": {
+    "embedding_total_slots": 80,
+    "fixed_semantic_code_slots": 10,
+    "fixed_total": 10,
+    "parameter_budget_pass": true,
+    "persistent_state_slots": 8,
+    "state_budget_pass": true,
+    "trainable_diagonal_slots": 8,
+    "trainable_embedding_slots": 70,
+    "trainable_readout_slots": 18,
+    "trainable_total": 96
+  },
+  "runtime_checks": {
+    "event_transition_changes_sample_state": true,
+    "fixed_semantic_code_exact": true,
+    "runtime_state_shape": [
+      1,
+      8
+    ],
+    "wait_transition_exact_identity": true
+  },
+  "scientific_run": false,
+  "scientific_verdict": "FORBIDDEN",
+  "selector_interpretation": {
+    "constructor_wait_index": "used only to initialize fixed parameters; not supplied per token and not executed in step()",
+    "embedding_slice_extra_operation": false,
+    "embedding_slice_reason": "the eight embedding value copies already include the reused first coordinate; slicing is a view, not a comparison or dispatch",
+    "gradient_hook": "training-time freeze of fixed semantic coordinates; no recurrent runtime state or transition operation",
+    "runtime_selector_comparisons": 0,
+    "semantic_source": "fixed first coordinate in the existing token embedding lookup"
+  },
+  "source_evidence": {
+    "constructor_branch_lines": [
+      21
+    ],
+    "constructor_code_initialization": "fixed semantic embedding coordinate at source lines 27-33; initialization/training setup, not runtime dispatch",
+    "constructor_comparison_interpretation": "state-width validation only; not a recurrent transition operation",
+    "constructor_comparison_lines": [
+      21
+    ],
+    "step_branch_lines": [],
+    "step_comparison_lines": [],
+    "step_forbidden_names": [],
+    "step_lines": [
+      38,
+      42
+    ]
+  },
+  "status": "CLOSED",
+  "unit": "GRI-SC-1R.1-BRANCH-FREE-COUNTEREXAMPLE-ACCOUNTING-AUDIT"
+}

@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "mechanical_live_seal_valid": true,
+    "mechanical_predictions_identical": true,
+    "mechanical_replay_seal_valid": true,
+    "reasoning_live_seal_valid": true,
+    "reasoning_predictions_identical": true,
+    "reasoning_replay_seal_valid": true
+  },
+  "pass": true
+}

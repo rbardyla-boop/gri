@@ -1,0 +1,78 @@
+{
+  "schema": "GRI-SC-3E-ONE-RUN-EXECUTION-AUTHORIZATION-1",
+  "unit": "GRI-SC-3E-ONE-RUN-EXECUTION-AUTHORIZATION",
+  "status": "ONE_EXECUTION_AUTHORIZED_BEFORE_RUN",
+  "scientific_run_started": false,
+  "scientific_result": "NONE",
+  "executions_authorized": 1,
+  "development_runs": 0,
+  "retries": 0,
+  "post_result_tuning": false,
+  "parent_contract": {
+    "machine_contract_sha256": "590d6606ff23cdfb02e9285f71772c9fab52d5b46fdd693a842ad83b5a242987",
+    "record_sha256": "5606d312b5148debb9e1cac223bd00bbd1bd530c2ed08901b0d037dac36bdeb2",
+    "verification_receipt_sha256": "d5cff851674232b3829ee0f7083655c07d11d7c749779c811c5398bf30fb74f4",
+    "sc2_freeze_manifest_sha256": "03ec6bc36c8b5d4d764bdbef3bccf875294c1b9b8512d23614643beef0638e9d"
+  },
+  "preflight": {
+    "required_before_execution": true,
+    "required_anchor_verification": [
+      "SC-3 machine contract",
+      "SC-3 record",
+      "SC-3 verification receipt",
+      "SC-2 freeze manifest",
+      "Candidate B source and manifest",
+      "GRI-02B fixture bank",
+      "GRI-02B operation rules",
+      "GRI-02B config, harness, contract, and receipt",
+      "SC-1R.1 accounting receipt",
+      "SC-1L authorization and result"
+    ],
+    "required_dependency_verification": [
+      "candidate source imports and exposes the frozen protocol",
+      "simulator/reference harness is available",
+      "decoder and solver dependencies are available",
+      "serialization/restart implementation is available",
+      "environment receipt is captured before execution"
+    ],
+    "failure_behavior": "preflight failure refuses execution, emits no scientific verdict, and does not consume the one execution authorization",
+    "preflight_receipt_path": "artifacts/results/gri_sc3e_preflight_receipt.json",
+    "environment_receipt_path": "artifacts/results/gri_sc3_environment_receipt.json"
+  },
+  "execution_path": {
+    "command": "python3 experiments/run_gri_sc3.py --authorization experiments/candidates/GRI-SC-3E-one-run-execution-authorization.json",
+    "steps": [
+      "preflight",
+      "immutable environment receipt",
+      "single frozen scientific execution",
+      "controls and causal ablations",
+      "full serialization/restart verification",
+      "deterministic replay",
+      "mechanical verdict"
+    ],
+    "result_receipt_path": "artifacts/results/gri_sc3_scientific_run_receipt.json",
+    "replay_receipt_path": "artifacts/results/gri_sc3_replay_receipt.json"
+  },
+  "verdict_source": {
+    "sc3_contract_sha256": "590d6606ff23cdfb02e9285f71772c9fab52d5b46fdd693a842ad83b5a242987",
+    "allowed_values": ["GRI_SC3_ADVANTAGE", "GRI_SC3_NO_ADVANTAGE", "GRI_SC3_INCONCLUSIVE"],
+    "human_verdict_selection": false,
+    "finite_state_oracle_role": "reference_not_opponent"
+  },
+  "consumption": {
+    "preflight_failure_consumes_authorization": false,
+    "preflight_pass_consumes_authorization_before_execution": true,
+    "execution_failure_allows_retry": false,
+    "post_result_tuning": "forbidden",
+    "second_scientific_run": "forbidden"
+  },
+  "boundary": {
+    "architecture_changes": "forbidden",
+    "fixture_changes": "forbidden",
+    "budget_changes": "forbidden",
+    "optimizer_changes": "forbidden",
+    "development_search": "forbidden",
+    "scientific_execution_now": "not_started"
+  },
+  "authorized_at_utc": "2026-08-20T23:13:20Z"
+}

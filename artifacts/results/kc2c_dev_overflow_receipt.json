@@ -1,0 +1,386 @@
+{
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "9e1fe6d6989437d64295e959f6a137c2d61a0b1d2814a44415c48c8940a43ef5",
+  "cell_candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "collision_stream_16": {
+      "a_tokens": [
+        16,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "b_tokens": [
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "expected_pair_tokens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "pair_current": 16,
+      "pair_tokens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "concentrated_collision_recency": {
+      "a_tokens": [
+        24
+      ],
+      "b_tokens": [
+        16
+      ],
+      "expected_a_newest": true,
+      "expected_b_previous": true,
+      "newest_present": true,
+      "oldest_lost": true,
+      "trace": [
+        {
+          "a": [
+            8
+          ],
+          "b": [],
+          "incoming": 8,
+          "index": 0
+        },
+        {
+          "a": [
+            16
+          ],
+          "b": [
+            8
+          ],
+          "incoming": 16,
+          "index": 1
+        },
+        {
+          "a": [
+            24
+          ],
+          "b": [
+            16
+          ],
+          "incoming": 24,
+          "index": 2
+        }
+      ]
+    },
+    "different_slot_traffic": {
+      "a_receives_second": true,
+      "a_retains_first": true,
+      "b_empty": true
+    },
+    "duplicate_incoming": {
+      "unchanged_a": true,
+      "unchanged_b": true
+    },
+    "incoming_already_held_by_b": {
+      "both_identities_retained": true,
+      "incoming_now_in_a": true,
+      "previous_now_in_b": true
+    },
+    "loss_of_a": {
+      "b_retains_displaced_wave": true,
+      "retained_tokens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "loss_of_b": {
+      "a_retains_newest_wave": true,
+      "retained_tokens": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "malformed_state": {
+      "malformed_a_failed_closed": true,
+      "malformed_b_failed_closed": true
+    },
+    "midstream_restart": {
+      "same_a": true,
+      "same_b": true,
+      "same_pair": true
+    },
+    "replay_snapshot": {
+      "collision_stream_pair": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "concentrated_pair": [
+        16,
+        24
+      ],
+      "different_slot_pair": [
+        1,
+        8
+      ],
+      "duplicate_states": [
+        "b87df8c557cdb036f4008e402dafcd9c6d9be4fd497815ff039d668317ccbfd6",
+        "64216f86553d6c429126d9c39cbc31a20df47dfc9f0c05baa83763e2a1723ae9"
+      ],
+      "held_by_b_pair": [
+        8,
+        16
+      ],
+      "loss_a_b_tokens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_b_a_tokens": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "malformed": {
+        "malformed_a_failed_closed": true,
+        "malformed_b_failed_closed": true
+      },
+      "restart_states": [
+        "4f50b4e53c135ac4d7b6a42a70a322c0619a59df1b225eb7c1122c9b9905c713",
+        "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22",
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "seventeenth_pair": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "single_overflow_trace": [
+        {
+          "a": [
+            8
+          ],
+          "b": [],
+          "incoming": 8,
+          "index": 0
+        },
+        {
+          "a": [
+            16
+          ],
+          "b": [
+            8
+          ],
+          "incoming": 16,
+          "index": 1
+        }
+      ]
+    },
+    "seventeenth_packet_saturation": {
+      "incoming": 17,
+      "new_present": true,
+      "oldest_same_slot_lost": true,
+      "pair_current": 16,
+      "pair_tokens": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "retained_second_wave_same_slot": true
+    },
+    "single_overflow": {
+      "a_has_new": true,
+      "b_has_displaced": true,
+      "trace": [
+        {
+          "a": [
+            8
+          ],
+          "b": [],
+          "incoming": 8,
+          "index": 0
+        },
+        {
+          "a": [
+            16
+          ],
+          "b": [
+            8
+          ],
+          "incoming": 16,
+          "index": 1
+        }
+      ]
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "collision_stream_16": true,
+    "concentrated_collision_recency": true,
+    "coordinator_state_zero": true,
+    "different_slot_traffic": true,
+    "duplicate_incoming": true,
+    "incoming_already_held_by_b": true,
+    "loss_of_a": true,
+    "loss_of_b": true,
+    "malformed_state_fail_closed": true,
+    "midstream_restart": true,
+    "replay": true,
+    "seventeenth_packet_saturation": true,
+    "single_overflow": true,
+    "source_signature_audit": true
+  },
+  "config_sha256": "8d5e56b804800d2da35957851bef117afdb33f9986d275b6f5f5a856b4e99ed1",
+  "coordinator_resource": {
+    "coordinator_persistent_fields": [],
+    "coordinator_state_bytes": 0,
+    "transfer_payload_persistent": false,
+    "uses_global_memory": false,
+    "uses_packet_history": false,
+    "uses_population_logic": false,
+    "uses_replication": false,
+    "uses_shadow_slot_table": false
+  },
+  "export_source_sha256": "e52eeca7266584c7ee963a2a0d2b4ca8da2c63530dd6337a3fb7008bb76b4264",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "note": "Development cooperative overflow characterization only; reproduction, population, and scientific conclusions are forbidden.",
+  "protocol_source_audit": {
+    "class_count": 0,
+    "forbidden_names": [],
+    "global_statement_count": 0,
+    "runtime_signature": [
+      "incoming_token",
+      "cell_a",
+      "state_a",
+      "cell_b",
+      "state_b"
+    ],
+    "signature_ok": true,
+    "source_signature": [
+      "incoming_token",
+      "cell_a",
+      "state_a",
+      "cell_b",
+      "state_b"
+    ],
+    "status": "PASS"
+  },
+  "protocol_source_sha256": "f7c50f104578716d5780a63a5ff039c5ccc3a75603443d990e3f981a409d6f51",
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "unit": "KC-2C-D",
+  "verdict": "KC_2C_DEV_COMPLETE"
+}

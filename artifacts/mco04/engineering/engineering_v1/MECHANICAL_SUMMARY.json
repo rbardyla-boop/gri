@@ -1,0 +1,11 @@
+{
+  "all_capacity_pass": true,
+  "all_provenance_pass": true,
+  "case_count": 27,
+  "median_raw_to_packet_byte_reduction": 1338.9221144823273,
+  "minimum_raw_to_packet_byte_reduction": 238.71143958868893,
+  "run_id": "engineering_v1",
+  "sealed_predictions_sha256": "279001d07bdac563bcc00272f1a4b23787897fd6ffe332bff087a2c7e89c2ad2",
+  "split": "engineering",
+  "wall_seconds": 9.646281952038407
+}

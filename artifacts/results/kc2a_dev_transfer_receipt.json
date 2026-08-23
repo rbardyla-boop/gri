@@ -1,0 +1,93 @@
+{
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "e9cd3807b69a1bbef09e25ad70af0d0a44965f019c7699fff72bb8ac8532383a",
+  "cell_candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "collision_delivery": {
+      "source_contains_new": true,
+      "target_contains_new": true,
+      "target_contains_old": false
+    },
+    "destination_loss_before_transfer": {
+      "replacement_target_receives": true,
+      "source_survives_before_transfer": true
+    },
+    "distributed_capacity": {
+      "pair_current": 16,
+      "source_current": 8,
+      "source_occupied_slots": 8,
+      "target_current": 8,
+      "target_occupied_slots": 8
+    },
+    "duplicate_delivery": {
+      "contains": true,
+      "first_state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+      "second_state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+      "unchanged": true
+    },
+    "explicit_transfer": {
+      "packet": "p000",
+      "payload_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "separate_state": true,
+      "source_contains": true,
+      "source_state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf",
+      "target_contains": true,
+      "target_state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf"
+    },
+    "isolation": {
+      "separate_state": true,
+      "source_contains": true,
+      "target_empty": true
+    },
+    "restart_during_transfer": {
+      "source_contains": true,
+      "source_state_bytes": 137,
+      "target_contains": true,
+      "target_state_bytes": 137
+    },
+    "source_loss_survival": {
+      "target_survives": true
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "collision_delivery": true,
+    "coordinator_state_zero": true,
+    "destination_loss_before_transfer": true,
+    "distributed_capacity": true,
+    "duplicate_delivery": true,
+    "explicit_transfer": true,
+    "isolation": true,
+    "replay": true,
+    "restart_during_transfer": true,
+    "source_loss_survival": true,
+    "transfer_source_audit": true
+  },
+  "config_sha256": "2997f22119e55001ad81e1225df427876b5bdb94b7e0ae23870eb742256d59fd",
+  "coordinator_resource": {
+    "coordinator_persistent_fields": [],
+    "coordinator_state_bytes": 0,
+    "transfer_payload_persistent": false,
+    "uses_global_memory": false,
+    "uses_packet_history": false,
+    "uses_population_logic": false,
+    "uses_replication": false,
+    "uses_shadow_slot_table": false
+  },
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "note": "Development two-cell transfer characterization only; replication, population, and scientific conclusions are forbidden.",
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "transfer_source_audit": {
+    "class_count": 0,
+    "forbidden_names": [],
+    "global_statement_count": 0,
+    "status": "PASS"
+  },
+  "transfer_source_sha256": "d5268e31af73822c5e86acded3b579054114d58f9f05c86e32ce5b404a17c6d6",
+  "unit": "KC-2A-D",
+  "verdict": "KC_2A_DEV_COMPLETE"
+}

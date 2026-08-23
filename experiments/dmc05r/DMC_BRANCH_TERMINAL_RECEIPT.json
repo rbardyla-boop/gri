@@ -1,0 +1,54 @@
+{
+  "receipt_type": "terminal_branch_receipt",
+  "branch": "DMC learned retention",
+  "status": "TERMINAL_BRANCH_STOP",
+  "issued_at_utc": "2026-08-22T00:00:00Z",
+  "scientific_chain": [
+    {
+      "experiment": "DMC-04B",
+      "result": "PASS",
+      "claim": "bounded learned-memory composition works"
+    },
+    {
+      "experiment": "DMC-05A",
+      "result": "FAIL",
+      "verdict": "DMC_05A_CONVENTIONAL_RETRIEVAL_DOMINATES",
+      "cause": "benchmark-ordering confound"
+    },
+    {
+      "experiment": "DMC-05R",
+      "result": "PASS_NONRECENT_RECOGNITION_FAIL_SELECTION_ADVANTAGE",
+      "verdict": "DMC_05R_TRANSPARENT_INDEX_DOMINATES"
+    }
+  ],
+  "terminal_interpretation": {
+    "learned_retention": "internally useful but externally unnecessary on the frozen synthetic family",
+    "architecture_advantage": false,
+    "authorized_successor": "MCO-01 — STORE ALL, THINK SMALL",
+    "prohibited_successor_actions": [
+      "DMC retraining",
+      "DMC threshold changes",
+      "DMC capacity changes",
+      "new DMC retention features",
+      "DMC-05B language, tokenizer, or model-cost work"
+    ]
+  },
+  "surprise_dependency_warning": {
+    "observation": "FIFO scored 100 percent on the DMC-05R SURPRISE_DEPENDENCY subset",
+    "interpretation": "likely residual ordering artifact",
+    "use": "preserve as an observation; do not use as evidence for a FIFO mechanism"
+  },
+  "training_cost_accounting": {
+    "reconstructed_historical_optimizer_steps": 10880,
+    "label": "TRAINING_COST_UNKNOWN",
+    "online_optimizer_calls": 0,
+    "accounting_rule": "zero online optimizer calls must not be described as free learned memory"
+  },
+  "anchors": {
+    "dmc05r_verdict_sha256": "9f1e8ab0c118b4ddbcabc7b71034a072f437fb1ea4b8653e5b4a42eabd1f52bb",
+    "dmc05r_aggregate_sha256": "671bc1cd8a3df0b6583f42de894ab9f0f416b084a0796c70e55a439da2f043de",
+    "dmc05r_report_sha256": "cc383c6e35fc238bc21909b88f8fc062bf1494d15ec7bdc5f030464f6201d165",
+    "dmc05r_manifest_sha256": "fa1c8b79dd75a3b3eb2bfbbfd4b1e291317847e3a2be1e3b4013afe59181d7fd",
+    "dmc05r_freeze_sha256": "060054f09fa1dce23277e37559a984db902a811d7f0c92de131978a624336548"
+  }
+}

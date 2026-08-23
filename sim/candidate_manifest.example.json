@@ -1,0 +1,35 @@
+{
+  "schema": "GRI-SIM-0-CANDIDATE-1",
+  "candidate_id": "UNAUTHORIZED-TEMPLATE",
+  "authorization_id": null,
+  "status": "NOT_AUTHORIZED",
+  "source_sha256": null,
+  "state": {
+    "persistent_slots": 8,
+    "auxiliary_slots": 0,
+    "history_buffer": 0,
+    "step_counter": 0,
+    "phase_variable": 0,
+    "rng_as_state": false
+  },
+  "parameters": {
+    "trainable": null,
+    "fixed": null
+  },
+  "operations": {
+    "recurrent": null,
+    "query": null,
+    "selector_comparisons": null,
+    "lookups": null,
+    "copies": null,
+    "nonlinearities": null,
+    "accounting_audit": "NOT_RUN"
+  },
+  "transition_class": {
+    "external_input": false,
+    "internally_computed": null
+  },
+  "serialization_fields": ["persistent_state"],
+  "authorized_ablations": [],
+  "optimizer_mode": "FROZEN_PROTOCOL"
+}

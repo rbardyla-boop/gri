@@ -1,0 +1,127 @@
+{
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "2830b538e74d29a89ed53cb596f94a241995d16522d5d99961e17d441741c096",
+  "cell_candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "destination_loss_before_transfer": {
+      "replacement_receives": true,
+      "source_retains_before_transfer": true
+    },
+    "empty_slot": {
+      "returns_empty": true
+    },
+    "full_bank_export": {
+      "exact_state_copy": true,
+      "exported_payloads": [
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22",
+      "target_slots": [
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "target_state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+    },
+    "interruption_restart": {
+      "matches_uninterrupted": true,
+      "source_state_bytes": 137,
+      "target_state_bytes": 137,
+      "target_state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+    },
+    "single_export": {
+      "payload": 1,
+      "source_slot": 1,
+      "target_contains": true
+    },
+    "source_destruction": {
+      "source_state_sha256_before_destruction": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22",
+      "target_retains_all": true,
+      "target_state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+    },
+    "tampered_state": [
+      {
+        "case": "empty_slot_nonzero_value",
+        "failed_closed": true
+      },
+      {
+        "case": "occupied_slot_zero_value",
+        "failed_closed": true
+      },
+      {
+        "case": "invalid_occupancy_bit",
+        "failed_closed": true
+      },
+      {
+        "case": "value_slot_mismatch",
+        "failed_closed": true
+      }
+    ],
+    "wrong_slot_request": {
+      "returns_empty": true,
+      "source_slot": 1
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "coordinator_state_zero": true,
+    "destination_loss_before_transfer": true,
+    "empty_slot": true,
+    "full_bank_export": true,
+    "interruption_restart": true,
+    "no_oracle_interface": true,
+    "replay": true,
+    "single_export": true,
+    "source_destruction": true,
+    "tampered_state": true,
+    "wrong_slot_request": true
+  },
+  "config_sha256": "ad68f96d789d07471b33f3a2cdbae201c510226ea1a536ca8e7c69c52f0d22ed",
+  "coordinator_resource": {
+    "coordinator_persistent_fields": [],
+    "coordinator_state_bytes": 0,
+    "transfer_payload_persistent": false,
+    "uses_global_memory": false,
+    "uses_packet_history": false,
+    "uses_population_logic": false,
+    "uses_replication": false,
+    "uses_shadow_slot_table": false
+  },
+  "export_source_audit": {
+    "class_count": 0,
+    "forbidden_names": [],
+    "global_statement_count": 0,
+    "runtime_signature": [
+      "source_state",
+      "slot_id"
+    ],
+    "signature_ok": true,
+    "source_signature": [
+      "source_state",
+      "slot_id"
+    ],
+    "status": "PASS"
+  },
+  "export_source_sha256": "e52eeca7266584c7ee963a2a0d2b4ca8da2c63530dd6337a3fb7008bb76b4264",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "note": "Development oracle-free state export characterization only; reproduction, population, and scientific conclusions are forbidden.",
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "unit": "KC-2B-D",
+  "verdict": "KC_2B_DEV_COMPLETE"
+}

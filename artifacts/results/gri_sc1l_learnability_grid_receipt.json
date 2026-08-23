@@ -1,0 +1,1369 @@
+{
+  "authorization_sha256": "25142cc2d044d3d07c1459ea9e345d6c2f87141876c6ac8588c8149d420712d4",
+  "candidate_declaration": {
+    "authorization_id": "GRI-SC-1-DEV_SMOKE-B",
+    "authorized_ablations": [],
+    "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+    "operations": {
+      "accounting_audit": "PASS",
+      "audit_scope": "DEV_SMOKE_STATIC_ONLY",
+      "copies": 8,
+      "elementwise_add": 16,
+      "elementwise_multiply": 16,
+      "elementwise_subtract": 8,
+      "lookups": 1,
+      "nonlinearities": 8,
+      "query": 21,
+      "recurrent": 57,
+      "selector_comparisons": 0
+    },
+    "optimizer_mode": "DEV_SMOKE",
+    "parameters": {
+      "fixed": 10,
+      "trainable": 96
+    },
+    "parent_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+    "run_class": "DEV_SMOKE",
+    "schema": "GRI-SIM-0-CANDIDATE-1",
+    "scientific_verdict": "FORBIDDEN",
+    "serialization_fields": [
+      "persistent_state"
+    ],
+    "source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+    "state": {
+      "auxiliary_slots": 0,
+      "history_buffer": 0,
+      "persistent_slots": 8,
+      "phase_variable": 0,
+      "rng_as_state": false,
+      "step_counter": 0
+    },
+    "status": "IMPLEMENTATION_AUTHORIZED_BEFORE_RUN",
+    "transition_class": {
+      "encoding": "fixed 0/1 token-embedding coefficient; branch-free residual arithmetic",
+      "external_input": false,
+      "internally_computed": false
+    }
+  },
+  "candidate_freeze": false,
+  "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+  "candidate_manifest_sha256": "f7e6e9617ef810a22aed9c097021ab41a88b32609cfaac2857e0d63fd65f9584",
+  "candidate_source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+  "development_result": "LEARNABILITY_SIGNAL",
+  "fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960",
+  "fixture_counts": {
+    "all": 558,
+    "fit": 350,
+    "held_out": 208,
+    "restart_smoke": 32
+  },
+  "grid": {
+    "adam_learning_rates": [
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "epoch_cap": 400,
+    "lbfgs_iteration_cap": 100,
+    "post_result_tuning": "forbidden",
+    "seeds": [
+      20260820,
+      20260821,
+      20260822
+    ],
+    "sgd_learning_rates": [
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "training_split": "fit only"
+  },
+  "interpretation": "Development signal only; no candidate promotion, SC-2 authorization, or scientific claim.",
+  "lbfgs_constructive_diagnostic": {
+    "iterations": 100,
+    "receipt_path": "/home/thebackhand/Downloads/grok/new-ai/gri-research/artifacts/results/gri_sc1l_lbfgs_diagnostic_receipt.json",
+    "receipt_sha256": "efdce8201193e52931cbbc88c703c2a199ebcfc5cef0b178c13aa22251e831bc",
+    "representability_result": "REPRESENTABLE",
+    "runs": [
+      {
+        "final_loss": 2.023605112344669,
+        "lp_decoder_summary": {
+          "correction": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.8093314775911279,
+            "separator_found": true
+          },
+          "delayed_bit": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.28947803629057084,
+            "separator_found": true
+          },
+          "order": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.905269409015998,
+            "separator_found": true
+          }
+        },
+        "solver_metrics": {
+          "all": 1.0,
+          "fit": 1.0,
+          "held_out": 1.0
+        },
+        "start": 0
+      },
+      {
+        "final_loss": 1.9816929423722556,
+        "lp_decoder_summary": {
+          "correction": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.9181144267258934,
+            "separator_found": true
+          },
+          "delayed_bit": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.8334592678285286,
+            "separator_found": true
+          },
+          "order": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.9341929664471089,
+            "separator_found": true
+          }
+        },
+        "solver_metrics": {
+          "all": 1.0,
+          "fit": 1.0,
+          "held_out": 1.0
+        },
+        "start": 1
+      },
+      {
+        "final_loss": 2.009871644160868,
+        "lp_decoder_summary": {
+          "correction": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.9322510103044671,
+            "separator_found": true
+          },
+          "delayed_bit": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.8975419775270117,
+            "separator_found": true
+          },
+          "order": {
+            "accuracy": 1.0,
+            "fit_accuracy": 1.0,
+            "held_out_accuracy": 1.0,
+            "minimum_geometric_margin": 0.9360519338139529,
+            "separator_found": true
+          }
+        },
+        "solver_metrics": {
+          "all": 1.0,
+          "fit": 1.0,
+          "held_out": 1.0
+        },
+        "start": 2
+      }
+    ],
+    "scientific_verdict": "FORBIDDEN",
+    "status": "ANALYSIS_ONLY"
+  },
+  "next_state": {
+    "sc2": "NOT AUTHORIZED",
+    "scientific_ledger": "UNCHANGED"
+  },
+  "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+  "runs": [
+    {
+      "all_accuracy": 0.5,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.6780863404273987,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.16400526463985443,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.004298388957977295,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.5,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.704027533531189,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 0.5,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 0.5,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "train_accuracy": 0.5
+    },
+    {
+      "all_accuracy": 0.6612903225806451,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.1313554048538208,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8666414022445678,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.21629214286804196,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6634615384615384,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.5662103295326233,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 0.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 0.0
+      },
+      "train_accuracy": 0.66
+    },
+    {
+      "all_accuracy": 0.8387096774193549,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.46762239933013916,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.12813438475131989,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.2938046455383301,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.8365384615384616,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.6490272283554077,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.5
+      },
+      "train_accuracy": 0.84
+    },
+    {
+      "all_accuracy": 0.6612903225806451,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.6738047003746033,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.16552993655204773,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.014224737882614136,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6634615384615384,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.01,
+      "loss": {
+        "epochs": 400,
+        "final": 0.6696653366088867,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 0.75,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 0.75,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "train_accuracy": 0.66
+    },
+    {
+      "all_accuracy": 0.6774193548387096,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.16793242096900934,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8666607737541199,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.21436727046966556,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6730769230769231,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.01,
+      "loss": {
+        "epochs": 400,
+        "final": 0.46329882740974426,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.0
+      },
+      "train_accuracy": 0.68
+    },
+    {
+      "all_accuracy": 0.8225806451612904,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.22131085395812988,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.13978858292102814,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.3436878621578216,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.8269230769230769,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.01,
+      "loss": {
+        "epochs": 400,
+        "final": 0.5046535134315491,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "train_accuracy": 0.82
+    },
+    {
+      "all_accuracy": 0.8387096774193549,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.036137789487838745,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.1759072095155716,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.07651433348655694,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.8365384615384616,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.03,
+      "loss": {
+        "epochs": 400,
+        "final": 0.5166533589363098,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.5
+      },
+      "train_accuracy": 0.84
+    },
+    {
+      "all_accuracy": 0.6774193548387096,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.0544281005859375,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8673685193061829,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.17061811685562134,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6730769230769231,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.03,
+      "loss": {
+        "epochs": 400,
+        "final": 0.35237041115760803,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.0
+      },
+      "train_accuracy": 0.68
+    },
+    {
+      "all_accuracy": 0.9838709677419355,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.11078780889511108,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.20331306755542755,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.07237899303436279,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.9903846153846154,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.03,
+      "loss": {
+        "epochs": 400,
+        "final": 0.23567967116832733,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 1.0
+      },
+      "train_accuracy": 0.98
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5719993114471436,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.2243240475654602,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5316169261932373,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.1,
+      "loss": {
+        "epochs": 400,
+        "final": 0.07171738892793655,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.15803247690200806,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8694918751716613,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5989730358123779,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.1,
+      "loss": {
+        "epochs": 400,
+        "final": 0.04417247697710991,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.23151594400405884,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.3240606188774109,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.19307464361190796,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.1,
+      "loss": {
+        "epochs": 400,
+        "final": 0.023524103686213493,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "SGD",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 0.6612903225806451,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.6039106249809265,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.2837272584438324,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.007321715354919433,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6634615384615384,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.0003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.6793004274368286,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 0.75,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 0.75,
+        "delayed_bit": 0.5,
+        "order": 0.5
+      },
+      "train_accuracy": 0.66
+    },
+    {
+      "all_accuracy": 0.6612903225806451,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.014695465564727783,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8369406461715697,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.2291901111602783,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6634615384615384,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.0003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.5175990462303162,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 0.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 0.5,
+        "order": 0.0
+      },
+      "train_accuracy": 0.66
+    },
+    {
+      "all_accuracy": 0.8387096774193549,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5047850608825684,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.25527042150497437,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.3773042559623718,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.8365384615384616,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.0003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.602199137210846,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.5
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.5
+      },
+      "train_accuracy": 0.84
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.1520882248878479,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5600137114524841,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.13168293237686157,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.001,
+      "loss": {
+        "epochs": 400,
+        "final": 0.3881780505180359,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 0.6774193548387096,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.0713198184967041,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.800619900226593,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.25821429491043085,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 0.6730769230769231,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.001,
+      "loss": {
+        "epochs": 400,
+        "final": 0.33219113945961,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 0.0
+      },
+      "train_accuracy": 0.68
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.27388662099838257,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.4964505434036255,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.25481438636779785,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.001,
+      "loss": {
+        "epochs": 400,
+        "final": 0.3001476526260376,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.3050757646560669,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.7010917663574219,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.4087322950363159,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.02807064913213253,
+        "initial": 0.7392758727073669,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260820,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.3334948420524597,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.7973495125770569,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.3812994360923767,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.022048521786928177,
+        "initial": 0.6713926196098328,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260821,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    },
+    {
+      "all_accuracy": 1.0,
+      "fixed_decoder": {
+        "correction": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5838320851325989,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.6128599047660828,
+          "separator_found": true
+        },
+        "order": {
+          "all_accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.5776968002319336,
+          "separator_found": true
+        }
+      },
+      "held_out_accuracy": 1.0,
+      "initialization": "torch.manual_seed(seed); Candidate B module defaults; fixed semantic-code coordinate; no representability witness",
+      "learning_rate": 0.003,
+      "loss": {
+        "epochs": 400,
+        "final": 0.05172059312462807,
+        "initial": 0.738506019115448,
+        "name": "torch.nn.CrossEntropyLoss",
+        "reduction": "mean"
+      },
+      "optimizer": "Adam",
+      "restart": {
+        "cases": 192,
+        "failures": [],
+        "status": "PASS"
+      },
+      "seed": 20260822,
+      "task_held_out_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "task_train_accuracy": {
+        "correction": 1.0,
+        "delayed_bit": 1.0,
+        "order": 1.0
+      },
+      "train_accuracy": 1.0
+    }
+  ],
+  "scientific_run": false,
+  "scientific_verdict": "FORBIDDEN",
+  "sim_preflight": {
+    "result": {
+      "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+      "declared_recurrent_plus_query": 78,
+      "errors": [],
+      "note": "AST scan is advisory; formal accounting remains independently required.",
+      "source_scan": {
+        "branches": 1,
+        "comparisons": 1,
+        "flagged_names": []
+      },
+      "source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+      "status": "PASS"
+    },
+    "returncode": 0
+  },
+  "status": "DEV_LEARNABILITY_ONLY",
+  "training_protocol": {
+    "adam": {
+      "amsgrad": false,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0
+    },
+    "determinism": "torch.manual_seed(seed), one CPU thread, torch.use_deterministic_algorithms(True)",
+    "initialization": "Candidate B module defaults after fixed seed; no representability-witness initialization",
+    "loss": "torch.nn.CrossEntropyLoss(reduction='mean')",
+    "sgd": {
+      "momentum": 0.0,
+      "nesterov": false,
+      "weight_decay": 0.0
+    }
+  },
+  "unit": "GRI-SC-1L-LEARNABILITY-GRID"
+}

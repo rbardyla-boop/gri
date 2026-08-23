@@ -1,0 +1,84 @@
+{
+  "experiment_id": "MCO-03",
+  "files": {
+    "artifacts/mco02/MCO02_VERDICT.json": {
+      "bytes": 2091,
+      "sha256": "ce15b09191aa4ab052a9a22f2fe117ebdf216a574c1f8d9146e90e94672ea93e"
+    },
+    "artifacts/mco02/corpus/corpus_manifest.json": {
+      "bytes": 6472,
+      "sha256": "690a33eb90fc30dfeec0ff8ca32bd9a69b33b6411b33b96fbd6d25c4ace60000"
+    },
+    "artifacts/mco03/engineering/engineering_smoke.json": {
+      "bytes": 57652,
+      "sha256": "92a8c49e7b094e78f3667511c080e672750d9e215fd390ec5aa1a31c22814359"
+    },
+    "experiments/mco02/MCO02_FREEZE.json": {
+      "bytes": 3133,
+      "sha256": "1aa821c9135886ebdbc9ecc750146500c5f2f9839b9df0b63b2b427a0c8a5e3c"
+    },
+    "experiments/mco03/MCO03_CONFIG.json": {
+      "bytes": 6492,
+      "sha256": "d3c3feb2c20a4b86921a8e372791db61526fef8eb550c7932e23dc5681da16ab"
+    },
+    "experiments/mco03/MCO03_CONTRACT.md": {
+      "bytes": 6283,
+      "sha256": "7b5c80f251170815ab1e1c430ca46e78e7fa09a40c867cdd0732ae5fdc4fe698"
+    },
+    "scripts/run_mco03.py": {
+      "bytes": 98659,
+      "sha256": "020921fc8845d2d73a215d7f7f5326c2dcc0765d54562ee2bd255180c608ac16"
+    },
+    "tests/test_mco03.py": {
+      "bytes": 7627,
+      "sha256": "3447430243624e1a1b8fd62cecb4a819c65e72fe9bc7f807b710379855c16479"
+    }
+  },
+  "model_identities": {
+    "embedding": {
+      "blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+      "capabilities": [
+        "embedding"
+      ],
+      "details": {
+        "families": [
+          "gemma3"
+        ],
+        "family": "gemma3",
+        "format": "gguf",
+        "parameter_size": "307.58M",
+        "parent_model": "embeddinggemma:300m-bf16",
+        "quantization_level": "BF16"
+      },
+      "model": "embeddinggemma:300m",
+      "parameters": "num_batch                      2048\nnum_ctx                        2048"
+    },
+    "reasoning_and_extraction": {
+      "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "capabilities": [
+        "completion",
+        "tools"
+      ],
+      "details": {
+        "families": [
+          "llama"
+        ],
+        "family": "llama",
+        "format": "gguf",
+        "parameter_size": "8.0B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "model": "llama3.1:8b",
+      "parameters": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\""
+    }
+  },
+  "scientific_embedding_calls_before_freeze": 0,
+  "scientific_model_calls_before_freeze": 0,
+  "selected_extractor": {
+    "batch_size": 1,
+    "interface": "single",
+    "model": "llama3.1:8b"
+  },
+  "status": "FROZEN_BEFORE_SCIENTIFIC_INFERENCE"
+}

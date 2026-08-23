@@ -1,0 +1,277 @@
+{
+  "candidate_freeze": false,
+  "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+  "constructive_witness": {
+    "diagonal": [
+      0.9451045022800539,
+      -0.31065698037905287,
+      -0.24593804468253755,
+      -0.24747577681225114,
+      -0.3404000953294121,
+      1.4699594198879806,
+      0.09136813748358841,
+      -0.5169638530877699
+    ],
+    "embedding": [
+      [
+        1.0,
+        -1.152360200881958,
+        -0.2505785822868347,
+        -0.4338788092136383,
+        0.8487103581428528,
+        0.6920091509819031,
+        -0.31601276993751526,
+        -2.1152193546295166
+      ],
+      [
+        1.0,
+        -1.0350109928968767,
+        0.41437272142923964,
+        -0.2979964661757683,
+        -1.6367901638996984,
+        1.556057776818385,
+        1.6325180110096,
+        -1.6034912935682302
+      ],
+      [
+        1.0,
+        -1.7110437919003032,
+        0.535253923576301,
+        1.1810720711107916,
+        1.553578257892105,
+        -1.99253985065541,
+        -1.73478136075086,
+        2.089762182628849
+      ],
+      [
+        1.0,
+        -1.22538753127777,
+        1.3874780058073268,
+        -1.335866470079798,
+        1.8542245871854612,
+        1.5222096468344146,
+        1.8403420372868042,
+        -1.901809118206299
+      ],
+      [
+        1.0,
+        1.4036253501293359,
+        -1.606789341556032,
+        1.6367779443380206,
+        -1.0401689638988765,
+        0.5546469452086615,
+        -1.289836377822064,
+        3.1273837145331114
+      ],
+      [
+        1.0,
+        1.1933062129692666,
+        -0.29157586377218414,
+        0.14754391024845853,
+        0.4845361542625285,
+        2.3073177851111417,
+        -1.74487267189841,
+        -0.9914765544555648
+      ],
+      [
+        0.0,
+        0.8728312253952026,
+        1.0553574562072754,
+        0.17784371972084045,
+        -0.23033547401428223,
+        -0.3917543888092041,
+        0.5432947278022766,
+        -0.3951575458049774
+      ],
+      [
+        1.0,
+        0.7440207004547119,
+        1.5209795236587524,
+        3.4105026721954346,
+        -1.5311843156814575,
+        -1.2341350317001343,
+        1.8197252750396729,
+        -0.5515286922454834
+      ],
+      [
+        1.0,
+        0.9199714064598083,
+        1.1108161211013794,
+        1.2898740768432617,
+        -1.4781739711761475,
+        2.567232847213745,
+        -0.4731197953224182,
+        0.3355507552623749
+      ],
+      [
+        1.0,
+        -0.54974365234375,
+        -0.47983425855636597,
+        -0.4996815323829651,
+        -1.0669803619384766,
+        1.114939570426941,
+        -0.14067143201828003,
+        0.8057535886764526
+      ]
+    ],
+    "task_decoders": {
+      "correction": [
+        0.3490918378060602,
+        4.470849448376027,
+        -3.097217039647444,
+        2.1785322038074004,
+        -1.3246541091617643,
+        -0.4882763416855374,
+        -3.1361065013231495,
+        4.510881328628047,
+        0.5433171871091256
+      ],
+      "delayed_bit": [
+        -0.7651731047278343,
+        0.6003441247456583,
+        0.12944627708803674,
+        1.1322327989246255,
+        2.102107808840531,
+        -7.182691107393136,
+        -5.465051263128014,
+        4.750053374854383,
+        -1.329935859778913
+      ],
+      "order": [
+        -0.31351349780145804,
+        -2.5992847468286238,
+        3.0758222387479273,
+        -3.184083406603146,
+        2.581347426657,
+        0.4344735778425599,
+        1.6349795559913074,
+        -4.202552210155423,
+        -0.40410131309855246
+      ]
+    }
+  },
+  "fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960",
+  "formula": "u=tanh(D\u2299h+E[token]); h_next=h+E[token][semantic_code]\u00b7(u-h); semantic_code(WAIT)=0; semantic_code(other)=1",
+  "interpretation": "This establishes representability of the declared branch-free form under the bounded fixture/state-decoder test. It does not establish learnability, scientific advantage, minimality, or authorization for SC-2.",
+  "manifest_sha256": "f7e6e9617ef810a22aed9c097021ab41a88b32609cfaac2857e0d63fd65f9584",
+  "next_state": {
+    "sc2": "NOT AUTHORIZED",
+    "scientific_ledger": "UNCHANGED"
+  },
+  "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+  "representability_result": "REPRESENTABLE",
+  "runs": [
+    {
+      "final_loss": 2.023605112344669,
+      "lp_decoder_summary": {
+        "correction": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8093314775911279,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.28947803629057084,
+          "separator_found": true
+        },
+        "order": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.905269409015998,
+          "separator_found": true
+        }
+      },
+      "solver_metrics": {
+        "all": 1.0,
+        "fit": 1.0,
+        "held_out": 1.0
+      },
+      "start": 0
+    },
+    {
+      "final_loss": 1.9816929423722556,
+      "lp_decoder_summary": {
+        "correction": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.9181144267258934,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8334592678285286,
+          "separator_found": true
+        },
+        "order": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.9341929664471089,
+          "separator_found": true
+        }
+      },
+      "solver_metrics": {
+        "all": 1.0,
+        "fit": 1.0,
+        "held_out": 1.0
+      },
+      "start": 1
+    },
+    {
+      "final_loss": 2.009871644160868,
+      "lp_decoder_summary": {
+        "correction": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.9322510103044671,
+          "separator_found": true
+        },
+        "delayed_bit": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.8975419775270117,
+          "separator_found": true
+        },
+        "order": {
+          "accuracy": 1.0,
+          "fit_accuracy": 1.0,
+          "held_out_accuracy": 1.0,
+          "minimum_geometric_margin": 0.9360519338139529,
+          "separator_found": true
+        }
+      },
+      "solver_metrics": {
+        "all": 1.0,
+        "fit": 1.0,
+        "held_out": 1.0
+      },
+      "start": 2
+    }
+  ],
+  "sc0_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+  "scientific_run": false,
+  "scientific_verdict": "FORBIDDEN",
+  "solver": {
+    "decoder": "one fixed linear decoder per task, fit states only",
+    "max_iter": 100,
+    "method": "deterministic float64 LBFGS",
+    "starts": [
+      0,
+      1,
+      2
+    ]
+  },
+  "source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+  "status": "ANALYSIS_ONLY",
+  "unit": "GRI-SC-1R-BRANCH-FREE-REPRESENTABILITY-ANALYSIS"
+}

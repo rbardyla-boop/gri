@@ -1,0 +1,660 @@
+{
+  "extraction": {
+    "artifacts_identical_histories": 8,
+    "history_count": 8,
+    "learned": {
+      "by_history": {
+        "mco02_n10000_s2601": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 10000,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n10000_s2602": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 10000,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n1000_s2601": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 1000,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n1000_s2602": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 1000,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n100_s2601": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 100,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n100_s2602": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 100,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n5000_s2601": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 5000,
+          "relation_accuracy": 1.0
+        },
+        "mco02_n5000_s2602": {
+          "critical_relation_accuracy": 1.0,
+          "history_size": 5000,
+          "relation_accuracy": 1.0
+        }
+      },
+      "by_relation": {
+        "depends_on": {
+          "accuracy": 1.0,
+          "exact": 16151,
+          "n": 16151
+        },
+        "failure_threshold": {
+          "accuracy": 1.0,
+          "exact": 8063,
+          "n": 8063
+        },
+        "renamed_to": {
+          "accuracy": 1.0,
+          "exact": 7986,
+          "n": 7986
+        }
+      },
+      "critical_exact_records": 224,
+      "critical_record_count": 224,
+      "critical_relation_accuracy": 1.0,
+      "exact_records": 32200,
+      "minimum_history_relation_accuracy": 1.0,
+      "relation_accuracy": 1.0,
+      "unresolved_records": 0,
+      "usage": {
+        "expensive_token_units": 5642294,
+        "input_tokens": 4193550,
+        "model_calls": 32200,
+        "output_tokens": 362186,
+        "wall_time_seconds": 24146.472614319413
+      }
+    },
+    "record_count": 32200,
+    "transparent": {
+      "exact_records": 32200,
+      "expensive_token_units": 0,
+      "model_calls": 0,
+      "relation_accuracy": 1.0
+    }
+  },
+  "planner": {
+    "experiment_id": "MCO-03",
+    "extraction_run_id": "live_extraction",
+    "mode": "live",
+    "pass": true,
+    "population": {
+      "queries": 64,
+      "rows": 128,
+      "variants": [
+        "learned_single",
+        "transparent_compiler"
+      ]
+    },
+    "run_id": "live_planner",
+    "variants": {
+      "learned_single": {
+        "by_history_size": {
+          "100": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5625,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          },
+          "1000": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          },
+          "10000": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5625,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          },
+          "5000": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          }
+        },
+        "failure_counts": {
+          "PROVENANCE_COPY_FAILURE": 30
+        },
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 527,
+        "mean_query_expensive_token_units": 758.71875,
+        "mean_query_model_calls": 1.0,
+        "model_answer_accuracy": 1.0,
+        "model_generated_provenance_accuracy": 0.53125,
+        "n": 64,
+        "packet_answer_accuracy": 1.0,
+        "packet_critical_recall": 1.0,
+        "packet_precision": 1.0,
+        "packet_provenance_accuracy": 1.0
+      },
+      "transparent_compiler": {
+        "by_history_size": {
+          "100": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5625,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          },
+          "1000": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          },
+          "10000": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5625,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          },
+          "5000": {
+            "model_answer_accuracy": 1.0,
+            "model_generated_provenance_accuracy": 0.5,
+            "n": 16,
+            "packet_answer_accuracy": 1.0,
+            "packet_provenance_accuracy": 1.0
+          }
+        },
+        "failure_counts": {
+          "PROVENANCE_COPY_FAILURE": 30
+        },
+        "maximum_model_visible_records": 5,
+        "maximum_model_visible_tokens": 527,
+        "mean_query_expensive_token_units": 758.71875,
+        "mean_query_model_calls": 1.0,
+        "model_answer_accuracy": 1.0,
+        "model_generated_provenance_accuracy": 0.53125,
+        "n": 64,
+        "packet_answer_accuracy": 1.0,
+        "packet_critical_recall": 1.0,
+        "packet_precision": 1.0,
+        "packet_provenance_accuracy": 1.0
+      }
+    }
+  },
+  "rag": {
+    "embedding_histories": [
+      {
+        "dense_persistent_bytes": 307200,
+        "document_matrix_sha256": "4c11b44061a85cd306b472ce534beb2e41b970afa6118e050c6d74563f0c8098",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n100_s2601-documents-0-99__7e818e98162de818"
+          ],
+          "input_tokens": 9131,
+          "model_calls": 1,
+          "wall_time_seconds": 4.586599513073452
+        },
+        "history_id": "mco02_n100_s2601",
+        "query_matrix_sha256": "416ca9da28a69428528e41003dbe8ad09e1741de11b69db0f23f07378cd7dc4b",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n100_s2601-queries-0-7__d73b60bfe949ebea"
+          ],
+          "input_tokens": 531,
+          "model_calls": 1,
+          "wall_time_seconds": 0.34545200190041214
+        },
+        "sparse_persistent_bytes": 883289
+      },
+      {
+        "dense_persistent_bytes": 307200,
+        "document_matrix_sha256": "a42140c409bb2bbd746aa88d6a99075e4293e42065664962002d95698d3f7797",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n100_s2602-documents-0-99__3ce19d6395405f1d"
+          ],
+          "input_tokens": 9092,
+          "model_calls": 1,
+          "wall_time_seconds": 2.874566365033388
+        },
+        "history_id": "mco02_n100_s2602",
+        "query_matrix_sha256": "49b401a3c4333272f39d9cc146fd19cf311cde691e1e34d109e747f5fb75c651",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n100_s2602-queries-0-7__3dd294987605fb91"
+          ],
+          "input_tokens": 530,
+          "model_calls": 1,
+          "wall_time_seconds": 0.3337620709789917
+        },
+        "sparse_persistent_bytes": 866733
+      },
+      {
+        "dense_persistent_bytes": 3072000,
+        "document_matrix_sha256": "099f69f9687dedd4754499c383343e4c9f359e3eaed8be45a229e0f9e108429f",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n1000_s2601-documents-0-255__d024dc055af45524",
+            "mco02_n1000_s2601-documents-256-511__3e70fc9ddff548d4",
+            "mco02_n1000_s2601-documents-512-767__9a7e7f9c969370e9",
+            "mco02_n1000_s2601-documents-768-999__f1da5ed1f616a1f9"
+          ],
+          "input_tokens": 92926,
+          "model_calls": 4,
+          "wall_time_seconds": 27.192444763029926
+        },
+        "history_id": "mco02_n1000_s2601",
+        "query_matrix_sha256": "b35d48ee834ad328f4bcefc903236329dd8d476f3f960961d686a3c610798238",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n1000_s2601-queries-0-7__f679500c252d5f7a"
+          ],
+          "input_tokens": 525,
+          "model_calls": 1,
+          "wall_time_seconds": 0.32924037298653275
+        },
+        "sparse_persistent_bytes": 7240867
+      },
+      {
+        "dense_persistent_bytes": 3072000,
+        "document_matrix_sha256": "37bfcab4bde28002a5329ec22c3bed4499f2b301e3deef653f7f36ac47c46050",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n1000_s2602-documents-0-255__52d018f9325e4e00",
+            "mco02_n1000_s2602-documents-256-511__cf7d7186c01e7c0b",
+            "mco02_n1000_s2602-documents-512-767__80bec3c52b4106cc",
+            "mco02_n1000_s2602-documents-768-999__7ee3edf21878f9c0"
+          ],
+          "input_tokens": 92837,
+          "model_calls": 4,
+          "wall_time_seconds": 27.186066568945535
+        },
+        "history_id": "mco02_n1000_s2602",
+        "query_matrix_sha256": "47d5e6d71c7e11c0aa56e20613097c41fc99ce632509f28f94bd1f4d4bf145e9",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n1000_s2602-queries-0-7__4281d97547d3b75a"
+          ],
+          "input_tokens": 532,
+          "model_calls": 1,
+          "wall_time_seconds": 0.35773703700397164
+        },
+        "sparse_persistent_bytes": 7243813
+      },
+      {
+        "dense_persistent_bytes": 15360000,
+        "document_matrix_sha256": "324a504d20141f38891071c21f2a690a281d12c7af1d4b8a68a4eb997157cdd6",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n5000_s2601-documents-0-255__1d33b29471da3bf4",
+            "mco02_n5000_s2601-documents-256-511__5878b9c1f4b359ec",
+            "mco02_n5000_s2601-documents-512-767__4c7290cf85240c3c",
+            "mco02_n5000_s2601-documents-768-1023__a7b1a0b11c3ff3b6",
+            "mco02_n5000_s2601-documents-1024-1279__e61591ef92354c2d",
+            "mco02_n5000_s2601-documents-1280-1535__14bc09e1daec15e6",
+            "mco02_n5000_s2601-documents-1536-1791__b468258ef88f3fc5",
+            "mco02_n5000_s2601-documents-1792-2047__aef4da5e589a12cc",
+            "mco02_n5000_s2601-documents-2048-2303__8c809b2e3fd0b1cf",
+            "mco02_n5000_s2601-documents-2304-2559__6a5a257de927ec65",
+            "mco02_n5000_s2601-documents-2560-2815__0e859891f76c4b52",
+            "mco02_n5000_s2601-documents-2816-3071__0c7fd52d6df55edf",
+            "mco02_n5000_s2601-documents-3072-3327__5c147f15aff39de6",
+            "mco02_n5000_s2601-documents-3328-3583__5870a5036eb26c8d",
+            "mco02_n5000_s2601-documents-3584-3839__91aefa42ff521f7c",
+            "mco02_n5000_s2601-documents-3840-4095__b48e8fcd8c04273e",
+            "mco02_n5000_s2601-documents-4096-4351__4e82ba151c688ef9",
+            "mco02_n5000_s2601-documents-4352-4607__679a5e3e938a3ec1",
+            "mco02_n5000_s2601-documents-4608-4863__dbb18f6e12ba0952",
+            "mco02_n5000_s2601-documents-4864-4999__89c8b3f85e74f9c2"
+          ],
+          "input_tokens": 472260,
+          "model_calls": 20,
+          "wall_time_seconds": 135.96196306322236
+        },
+        "history_id": "mco02_n5000_s2601",
+        "query_matrix_sha256": "d78befd81fc4d31cab9a7b005c21eb41f676cd096c2b6da2df2d291a1a4f644c",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n5000_s2601-queries-0-7__293c0787397bbb0f"
+          ],
+          "input_tokens": 524,
+          "model_calls": 1,
+          "wall_time_seconds": 0.33962046494707465
+        },
+        "sparse_persistent_bytes": 31895826
+      },
+      {
+        "dense_persistent_bytes": 15360000,
+        "document_matrix_sha256": "4ff2fee5037b32a50fc75ba8d8fa37da3ed61b5802849dd41ec207ebbb95d312",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n5000_s2602-documents-0-255__dbe17fb19b406495",
+            "mco02_n5000_s2602-documents-256-511__310bfc7075fc6d8e",
+            "mco02_n5000_s2602-documents-512-767__ceabc3937479f1e8",
+            "mco02_n5000_s2602-documents-768-1023__8f45dd9926c383f2",
+            "mco02_n5000_s2602-documents-1024-1279__45be0d88c37f2b05",
+            "mco02_n5000_s2602-documents-1280-1535__c21fc7b3cceb8b12",
+            "mco02_n5000_s2602-documents-1536-1791__b6cbc51e6c755fd6",
+            "mco02_n5000_s2602-documents-1792-2047__08d4bf0c90c4ae41",
+            "mco02_n5000_s2602-documents-2048-2303__712fbd9bbc18f950",
+            "mco02_n5000_s2602-documents-2304-2559__972e19ecd6adcaa4",
+            "mco02_n5000_s2602-documents-2560-2815__c20acccc5eb8c5ab",
+            "mco02_n5000_s2602-documents-2816-3071__5358ad6175747cf1",
+            "mco02_n5000_s2602-documents-3072-3327__1d62e7a65203e425",
+            "mco02_n5000_s2602-documents-3328-3583__e35818ae729d45c3",
+            "mco02_n5000_s2602-documents-3584-3839__f57b2abd029d9ce6",
+            "mco02_n5000_s2602-documents-3840-4095__1c2b57833a82fe5c",
+            "mco02_n5000_s2602-documents-4096-4351__d78586fca384aaf8",
+            "mco02_n5000_s2602-documents-4352-4607__3e4f82ee3be7cfea",
+            "mco02_n5000_s2602-documents-4608-4863__dd755a5b041e2d68",
+            "mco02_n5000_s2602-documents-4864-4999__7bead3c71fad6a77"
+          ],
+          "input_tokens": 474242,
+          "model_calls": 20,
+          "wall_time_seconds": 136.20959634974133
+        },
+        "history_id": "mco02_n5000_s2602",
+        "query_matrix_sha256": "357b318016867d894be163b96d3dcc163c81060ffe0934c982d61298e7fd6af5",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n5000_s2602-queries-0-7__4b764f840c883332"
+          ],
+          "input_tokens": 530,
+          "model_calls": 1,
+          "wall_time_seconds": 0.4406032870756462
+        },
+        "sparse_persistent_bytes": 32004879
+      },
+      {
+        "dense_persistent_bytes": 30720000,
+        "document_matrix_sha256": "249576005bd2bc94a16eb5b1aea8058e6e8abf4070fa1b5705756c4affb98539",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n10000_s2601-documents-0-255__c55479c802e9d28a",
+            "mco02_n10000_s2601-documents-256-511__961fba110c1d8dfe",
+            "mco02_n10000_s2601-documents-512-767__01346a5ec80a86bc",
+            "mco02_n10000_s2601-documents-768-1023__3445b11c459e9777",
+            "mco02_n10000_s2601-documents-1024-1279__adf44ef23e778670",
+            "mco02_n10000_s2601-documents-1280-1535__a074ce4368deb338",
+            "mco02_n10000_s2601-documents-1536-1791__a60fc85f0476de9f",
+            "mco02_n10000_s2601-documents-1792-2047__4ec91a7f8cc628ed",
+            "mco02_n10000_s2601-documents-2048-2303__64ffce23d740ff8b",
+            "mco02_n10000_s2601-documents-2304-2559__992469b565f8227c",
+            "mco02_n10000_s2601-documents-2560-2815__6e3c400fd31e5b57",
+            "mco02_n10000_s2601-documents-2816-3071__691c944609799395",
+            "mco02_n10000_s2601-documents-3072-3327__9dbdbfef8f53d7ac",
+            "mco02_n10000_s2601-documents-3328-3583__e2cc89543552e3f8",
+            "mco02_n10000_s2601-documents-3584-3839__5b6913089cb196f8",
+            "mco02_n10000_s2601-documents-3840-4095__a3c6eeb52488902c",
+            "mco02_n10000_s2601-documents-4096-4351__455696d22f6319d1",
+            "mco02_n10000_s2601-documents-4352-4607__946768d357408092",
+            "mco02_n10000_s2601-documents-4608-4863__d9d5688642e11959",
+            "mco02_n10000_s2601-documents-4864-5119__644556126fe69d33",
+            "mco02_n10000_s2601-documents-5120-5375__202a05be36e70ed8",
+            "mco02_n10000_s2601-documents-5376-5631__5d18906800aeeed8",
+            "mco02_n10000_s2601-documents-5632-5887__d8451cd2736e3afd",
+            "mco02_n10000_s2601-documents-5888-6143__900494eb722eaaeb",
+            "mco02_n10000_s2601-documents-6144-6399__686dd344780c0a18",
+            "mco02_n10000_s2601-documents-6400-6655__da992327531d091d",
+            "mco02_n10000_s2601-documents-6656-6911__50a854c2743fc606",
+            "mco02_n10000_s2601-documents-6912-7167__37340f5b793dae75",
+            "mco02_n10000_s2601-documents-7168-7423__db1a20034963821e",
+            "mco02_n10000_s2601-documents-7424-7679__9c33190aff43411f",
+            "mco02_n10000_s2601-documents-7680-7935__18026c84cbd30c91",
+            "mco02_n10000_s2601-documents-7936-8191__e99654da81d2d1bd",
+            "mco02_n10000_s2601-documents-8192-8447__4bb761caaa196c6c",
+            "mco02_n10000_s2601-documents-8448-8703__e539b69d58d964b1",
+            "mco02_n10000_s2601-documents-8704-8959__b9b5d5228ddc5926",
+            "mco02_n10000_s2601-documents-8960-9215__fdcd2bcb676be705",
+            "mco02_n10000_s2601-documents-9216-9471__c50e0662e32d9ba9",
+            "mco02_n10000_s2601-documents-9472-9727__44c4e380dd90a2f0",
+            "mco02_n10000_s2601-documents-9728-9983__4f8968e752eed30f",
+            "mco02_n10000_s2601-documents-9984-9999__6dcf10259ce4e8af"
+          ],
+          "input_tokens": 949288,
+          "model_calls": 40,
+          "wall_time_seconds": 272.5228845484089
+        },
+        "history_id": "mco02_n10000_s2601",
+        "query_matrix_sha256": "b355301c616b349baf6da315ef0a9132b5c58307ff3c6e35d5277cf27ef737fa",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n10000_s2601-queries-0-7__f234bc62156835ab"
+          ],
+          "input_tokens": 529,
+          "model_calls": 1,
+          "wall_time_seconds": 0.3463056969922036
+        },
+        "sparse_persistent_bytes": 60935440
+      },
+      {
+        "dense_persistent_bytes": 30720000,
+        "document_matrix_sha256": "d91820fbefc20b199b1d481695899e38ad720b8f045d245e7a7d0880b09e0dd6",
+        "document_usage": {
+          "call_ids": [
+            "mco02_n10000_s2602-documents-0-255__6162f7a70dd507b5",
+            "mco02_n10000_s2602-documents-256-511__f2d04d52ea1d15c1",
+            "mco02_n10000_s2602-documents-512-767__7d01e6d2798ea66f",
+            "mco02_n10000_s2602-documents-768-1023__9a09b25ae6c79ed1",
+            "mco02_n10000_s2602-documents-1024-1279__c095fe00e3d62610",
+            "mco02_n10000_s2602-documents-1280-1535__573e247dd0ea20fc",
+            "mco02_n10000_s2602-documents-1536-1791__74e72b32fa3a2d73",
+            "mco02_n10000_s2602-documents-1792-2047__5220ebe472f1007d",
+            "mco02_n10000_s2602-documents-2048-2303__9bff0cbe56888276",
+            "mco02_n10000_s2602-documents-2304-2559__40daa191b3a4eb49",
+            "mco02_n10000_s2602-documents-2560-2815__c105a5f67cbb2f12",
+            "mco02_n10000_s2602-documents-2816-3071__b7907e4f5b10c6b1",
+            "mco02_n10000_s2602-documents-3072-3327__8ca7416b273bbe79",
+            "mco02_n10000_s2602-documents-3328-3583__3e4052d68bb20433",
+            "mco02_n10000_s2602-documents-3584-3839__e51f296d141df83e",
+            "mco02_n10000_s2602-documents-3840-4095__c40f244ddec67e4c",
+            "mco02_n10000_s2602-documents-4096-4351__1170367b45265c17",
+            "mco02_n10000_s2602-documents-4352-4607__8708babfda04f461",
+            "mco02_n10000_s2602-documents-4608-4863__a3d50032a9f7c776",
+            "mco02_n10000_s2602-documents-4864-5119__9f041a3f747070be",
+            "mco02_n10000_s2602-documents-5120-5375__d1445bd86ca5de28",
+            "mco02_n10000_s2602-documents-5376-5631__9a49bcb0ae261858",
+            "mco02_n10000_s2602-documents-5632-5887__dabc8b2fb1e1d6dc",
+            "mco02_n10000_s2602-documents-5888-6143__d26216984d18bc6f",
+            "mco02_n10000_s2602-documents-6144-6399__5d9698e137284da8",
+            "mco02_n10000_s2602-documents-6400-6655__59f8b6b7831ab098",
+            "mco02_n10000_s2602-documents-6656-6911__bc08d9a113f42693",
+            "mco02_n10000_s2602-documents-6912-7167__c29de01844bfce95",
+            "mco02_n10000_s2602-documents-7168-7423__70ec5c0ebd8d4bfb",
+            "mco02_n10000_s2602-documents-7424-7679__52661bf1e4b0d5fc",
+            "mco02_n10000_s2602-documents-7680-7935__3156b9873a7bca08",
+            "mco02_n10000_s2602-documents-7936-8191__175ecc6a2f1c75fd",
+            "mco02_n10000_s2602-documents-8192-8447__279acb30d4867909",
+            "mco02_n10000_s2602-documents-8448-8703__bc6be0ea02fafa79",
+            "mco02_n10000_s2602-documents-8704-8959__a7dfeaf9ea15439c",
+            "mco02_n10000_s2602-documents-8960-9215__1c5e00a4a7ef96a4",
+            "mco02_n10000_s2602-documents-9216-9471__66b2a02586f188ad",
+            "mco02_n10000_s2602-documents-9472-9727__2c9918d7b7367cc6",
+            "mco02_n10000_s2602-documents-9728-9983__99806942e2553f00",
+            "mco02_n10000_s2602-documents-9984-9999__2d777753145d5696"
+          ],
+          "input_tokens": 949106,
+          "model_calls": 40,
+          "wall_time_seconds": 272.51510499510914
+        },
+        "history_id": "mco02_n10000_s2602",
+        "query_matrix_sha256": "53e91847e3f0f334f9dea12e56033e143e13307c852c7a99817c5a862724418c",
+        "query_usage": {
+          "call_ids": [
+            "mco02_n10000_s2602-queries-0-7__8390bc50e8c36ae0"
+          ],
+          "input_tokens": 530,
+          "model_calls": 1,
+          "wall_time_seconds": 0.3310741879977286
+        },
+        "sparse_persistent_bytes": 60911670
+      }
+    ],
+    "embedding_model": {
+      "blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+      "capabilities": [
+        "embedding"
+      ],
+      "details": {
+        "families": [
+          "gemma3"
+        ],
+        "family": "gemma3",
+        "format": "gguf",
+        "parameter_size": "307.58M",
+        "parent_model": "embeddinggemma:300m-bf16",
+        "quantization_level": "BF16"
+      },
+      "model": "embeddinggemma:300m",
+      "parameters": "num_batch                      2048\nnum_ctx                        2048"
+    },
+    "experiment_id": "MCO-03",
+    "mode": "live",
+    "pass": true,
+    "population": {
+      "queries": 64,
+      "rows": 192,
+      "variants": [
+        "dense_rag",
+        "entity_hybrid_rag",
+        "hybrid_rag"
+      ]
+    },
+    "run_id": "live_rag",
+    "variants": {
+      "dense_rag": {
+        "by_history_size": {
+          "100": {
+            "model_answer_accuracy": 0.125,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.2625
+          },
+          "1000": {
+            "model_answer_accuracy": 0.0,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.07291666666666666
+          },
+          "10000": {
+            "model_answer_accuracy": 0.0625,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.0125
+          },
+          "5000": {
+            "model_answer_accuracy": 0.0,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.0
+          }
+        },
+        "failure_counts": {
+          "RETRIEVAL_FAILURE": 64
+        },
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1330,
+        "mean_query_reasoning_expensive_token_units": 1577.171875,
+        "model_answer_accuracy": 0.046875,
+        "model_generated_provenance_accuracy": 0.0,
+        "n": 64,
+        "retrieval_precision": 0.015625,
+        "retrieval_recall": 0.08697916666666666
+      },
+      "entity_hybrid_rag": {
+        "by_history_size": {
+          "100": {
+            "model_answer_accuracy": 0.75,
+            "model_generated_provenance_accuracy": 0.1875,
+            "n": 16,
+            "retrieval_recall": 1.0
+          },
+          "1000": {
+            "model_answer_accuracy": 0.6875,
+            "model_generated_provenance_accuracy": 0.25,
+            "n": 16,
+            "retrieval_recall": 1.0
+          },
+          "10000": {
+            "model_answer_accuracy": 0.6875,
+            "model_generated_provenance_accuracy": 0.1875,
+            "n": 16,
+            "retrieval_recall": 1.0
+          },
+          "5000": {
+            "model_answer_accuracy": 0.6875,
+            "model_generated_provenance_accuracy": 0.125,
+            "n": 16,
+            "retrieval_recall": 1.0
+          }
+        },
+        "failure_counts": {
+          "PROVENANCE_FAILURE": 34,
+          "REASONING_FAILURE": 19
+        },
+        "maximum_model_visible_records": 9,
+        "maximum_model_visible_tokens": 904,
+        "mean_query_reasoning_expensive_token_units": 993.90625,
+        "model_answer_accuracy": 0.703125,
+        "model_generated_provenance_accuracy": 0.1875,
+        "n": 64,
+        "retrieval_precision": 0.6930555555555555,
+        "retrieval_recall": 1.0
+      },
+      "hybrid_rag": {
+        "by_history_size": {
+          "100": {
+            "model_answer_accuracy": 0.125,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.37395833333333334
+          },
+          "1000": {
+            "model_answer_accuracy": 0.0,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.121875
+          },
+          "10000": {
+            "model_answer_accuracy": 0.0,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.03125
+          },
+          "5000": {
+            "model_answer_accuracy": 0.0,
+            "model_generated_provenance_accuracy": 0.0,
+            "n": 16,
+            "retrieval_recall": 0.11354166666666667
+          }
+        },
+        "failure_counts": {
+          "PROVENANCE_FAILURE": 1,
+          "REASONING_FAILURE": 1,
+          "RETRIEVAL_FAILURE": 62
+        },
+        "maximum_model_visible_records": 16,
+        "maximum_model_visible_tokens": 1374,
+        "mean_query_reasoning_expensive_token_units": 1605.171875,
+        "model_answer_accuracy": 0.03125,
+        "model_generated_provenance_accuracy": 0.0,
+        "n": 64,
+        "retrieval_precision": 0.029296875,
+        "retrieval_recall": 0.16015625
+      }
+    }
+  }
+}

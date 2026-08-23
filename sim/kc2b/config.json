@@ -1,0 +1,30 @@
+{
+  "schema": "KC-2B-D-ORACLE-FREE-STATE-EXPORT-1",
+  "unit": "KC-2B-D",
+  "status": "DEV_CHARACTERIZATION_ONLY",
+  "cell_candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "coordinator_state_bytes": 0,
+  "coordinator_persistent_fields": [],
+  "transfer_payload_persistent": false,
+  "exported_packets": ["p007", "p000", "p001", "p002", "p003", "p004", "p005", "p006"],
+  "required_slots": 8,
+  "metrics": [
+    "empty_slot",
+    "single_export",
+    "wrong_slot_request",
+    "tampered_state",
+    "full_bank_export",
+    "source_destruction",
+    "interruption_restart",
+    "destination_loss_before_transfer",
+    "no_oracle_interface",
+    "coordinator_state_zero",
+    "deterministic_replay"
+  ],
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "replication": "NOT_IMPLEMENTED",
+  "population": "NOT_IMPLEMENTED"
+}

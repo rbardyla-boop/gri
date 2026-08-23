@@ -1,0 +1,24 @@
+{
+  "unit": "GRI-01-NEXT-UNIT",
+  "status": "FROZEN_BEFORE_RUN",
+  "dimensions": [2, 4, 8],
+  "train_delays": [1, 2, 4],
+  "test_delays": [8, 16],
+  "seeds": [1337, 1338, 1339],
+  "epochs": 400,
+  "learning_rate": 0.03,
+  "weight_decay": 0.0,
+  "tasks": ["delayed_bit", "correction", "order"],
+  "input_alphabet": ["PAD", "BIT_0", "BIT_1", "A", "B", "CORRECT", "WAIT", "QUERY_DELAY", "QUERY_CORRECTION", "QUERY_ORDER"],
+  "optimizer": "SGD",
+  "loss": "cross_entropy",
+  "thresholds": {
+    "advantage_recurrent_accuracy_min": 0.95,
+    "advantage_stateless_accuracy_max": 0.60,
+    "advantage_reset_accuracy_max": 0.60,
+    "no_advantage_absolute_gap_max": 0.10
+  },
+  "capacity_rule": "recurrent tanh cell and stateless current-token MLP have identical embedding, hidden, and binary-readout parameter counts for each d",
+  "stateless_input_rule": "stateless baseline receives only the final query token, never the preceding sequence",
+  "forbidden": ["lookup tables", "natural-language intermediates", "post-result tuning", "SRI", "agents", "LLMs", "E8"]
+}

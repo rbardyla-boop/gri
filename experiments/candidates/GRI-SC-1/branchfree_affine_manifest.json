@@ -1,0 +1,40 @@
+{
+  "schema": "GRI-SIM-0-CANDIDATE-1",
+  "candidate_id": "GRI-SC-1-A-BRANCHFREE-AFFINE",
+  "authorization_id": "GRI-SC-1-DEV_SMOKE-A",
+  "status": "IMPLEMENTATION_AUTHORIZED_BEFORE_RUN",
+  "run_class": "DEV_SMOKE",
+  "source_sha256": "e59523da3b150ed1d19a9c21c7168e020bb7cfcadb5cf7409ccdd1c261ea03a5",
+  "parent_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+  "state": {
+    "persistent_slots": 8,
+    "auxiliary_slots": 0,
+    "history_buffer": 0,
+    "step_counter": 0,
+    "phase_variable": 0,
+    "rng_as_state": false
+  },
+  "parameters": {
+    "trainable": 170,
+    "fixed": 0
+  },
+  "operations": {
+    "recurrent": 97,
+    "query": 21,
+    "selector_comparisons": 0,
+    "lookups": 1,
+    "copies": 8,
+    "nonlinearities": 8,
+    "accounting_audit": "PASS",
+    "audit_scope": "DEV_SMOKE_STATIC_ONLY"
+  },
+  "transition_class": {
+    "external_input": false,
+    "internally_computed": false,
+    "encoding": "shared token-dependent affine transform; no explicit selector"
+  },
+  "serialization_fields": ["persistent_state"],
+  "authorized_ablations": [],
+  "optimizer_mode": "DEV_SMOKE",
+  "scientific_verdict": "FORBIDDEN"
+}

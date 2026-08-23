@@ -1,0 +1,61 @@
+{
+  "benchmark_head": "0c3c476e4627978dc54b5c047fd488d40561b4e5",
+  "experiment_id": "MCO-05",
+  "freeze_sha256": "573de8a0505557fb496d8dacbac13e0b535ae3964742fd701931b6fd7d881741",
+  "models": {
+    "embedding": {
+      "blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+      "capabilities": [
+        "embedding"
+      ],
+      "details": {
+        "families": [
+          "gemma3"
+        ],
+        "family": "gemma3",
+        "format": "gguf",
+        "parameter_size": "307.58M",
+        "parent_model": "embeddinggemma:300m-bf16",
+        "quantization_level": "BF16"
+      },
+      "model": "embeddinggemma:300m",
+      "parameters": "num_batch                      2048\nnum_ctx                        2048"
+    },
+    "reasoner": {
+      "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "capabilities": [
+        "completion",
+        "tools"
+      ],
+      "details": {
+        "families": [
+          "llama"
+        ],
+        "family": "llama",
+        "format": "gguf",
+        "parameter_size": "8.0B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "model": "llama3.1:8b",
+      "parameters": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\""
+    }
+  },
+  "ollama_version": "0.21.2",
+  "schema_version": 1,
+  "scientific_state_at_freeze": {
+    "model_call_files": 0,
+    "public_files": 0,
+    "scorer_files": 0,
+    "source_files": 0
+  },
+  "source_hashes": {
+    "experiments/mco05/MCO05_CONFIG.json": "8935d5bc87150e81b09beb35fff5a6f035b36a18fc11f588eb03f4952d927233",
+    "experiments/mco05/MCO05_CONTRACT.md": "5fbf637420d8686a898ebd191e5c82aa83c02662ba9e61dfd5988804abecd894",
+    "pyproject.toml": "8afcf7fd27b26327130cfc11deea512aba9465e93269cd9b87d18caa3a4f7194",
+    "scripts/run_mco03.py": "020921fc8845d2d73a215d7f7f5326c2dcc0765d54562ee2bd255180c608ac16",
+    "scripts/run_mco05.py": "070791d1edc51dd2136edcddbf6bb2ed30e64785c2a2d9a789600a6ed2257e52",
+    "tests/test_mco05.py": "946db582c028cdec0841071f9d19963b60ef1001c163ddf95370618556af917b",
+    "uv.lock": "35ae010249d86a4fb6f7474b03de4e6818c61666bf94253671a247851f19ccda"
+  }
+}

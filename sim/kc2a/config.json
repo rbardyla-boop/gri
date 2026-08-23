@@ -1,0 +1,19 @@
+{
+  "schema": "KC-2A-D-TWO-CELL-TRANSFER-1",
+  "unit": "KC-2A-D",
+  "status": "DEV_CHARACTERIZATION_ONLY",
+  "cell_candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "coordinator_state_bytes": 0,
+  "coordinator_persistent_fields": [],
+  "transfer_payload_persistent": false,
+  "base_packets": ["p007", "p000", "p001", "p002", "p003", "p004", "p005", "p006"],
+  "second_bank_packets": ["p008", "p009", "p010", "p011", "p012", "p013", "p014", "p015"],
+  "transfer_packets": ["p000", "p008"],
+  "metrics": ["isolation", "explicit_transfer", "duplicate_delivery", "collision_delivery", "restart_during_transfer", "distributed_capacity", "source_loss_survival", "destination_loss_before_transfer", "deterministic_replay"],
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "replication": "NOT_IMPLEMENTED",
+  "population": "NOT_IMPLEMENTED"
+}

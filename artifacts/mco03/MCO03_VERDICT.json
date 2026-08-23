@@ -1,0 +1,81 @@
+{
+  "authorized_successor": "MCO-04 \u2014 SOFTWARE INCIDENT STATE-COMPILER PRODUCT PROOF",
+  "experiment_id": "MCO-03",
+  "gate_pass": false,
+  "gates": {
+    "best_rag": {
+      "by_history_size": {
+        "100": {
+          "model_answer_accuracy": 0.75,
+          "model_generated_provenance_accuracy": 0.1875,
+          "n": 16,
+          "retrieval_recall": 1.0
+        },
+        "1000": {
+          "model_answer_accuracy": 0.6875,
+          "model_generated_provenance_accuracy": 0.25,
+          "n": 16,
+          "retrieval_recall": 1.0
+        },
+        "10000": {
+          "model_answer_accuracy": 0.6875,
+          "model_generated_provenance_accuracy": 0.1875,
+          "n": 16,
+          "retrieval_recall": 1.0
+        },
+        "5000": {
+          "model_answer_accuracy": 0.6875,
+          "model_generated_provenance_accuracy": 0.125,
+          "n": 16,
+          "retrieval_recall": 1.0
+        }
+      },
+      "failure_counts": {
+        "PROVENANCE_FAILURE": 34,
+        "REASONING_FAILURE": 19
+      },
+      "maximum_model_visible_records": 9,
+      "maximum_model_visible_tokens": 904,
+      "mean_query_reasoning_expensive_token_units": 993.90625,
+      "model_answer_accuracy": 0.703125,
+      "model_generated_provenance_accuracy": 0.1875,
+      "n": 64,
+      "retrieval_precision": 0.6930555555555555,
+      "retrieval_recall": 1.0
+    },
+    "best_rag_variant": "entity_hybrid_rag",
+    "frozen_downstream_quality": false,
+    "hybrid_rag_dominates": false,
+    "integrity_pass": true,
+    "learned_critical_relation_accuracy": 1.0,
+    "learned_extraction_quality": true,
+    "learned_model_answer_accuracy": 1.0,
+    "learned_model_generated_provenance_accuracy": 0.53125,
+    "learned_packet_answer_accuracy": 1.0,
+    "learned_packet_provenance_accuracy": 1.0,
+    "learned_packet_quality": true,
+    "learned_relation_accuracy": 1.0,
+    "stability_pass": true,
+    "state_compiler_quality": false,
+    "transparent_compiler_dominates": true
+  },
+  "maturity_status": "MATURE_CONTROLLED_SYNTHETIC_BOUNDARY_TEST; EARLY_UNVALIDATED_REAL_WORLD_PRODUCT; WORLD_IMPACT_CLAIM_NOT_MATURE",
+  "overall_verification": "FAIL",
+  "secondary_findings": {
+    "architecture_advantage": "FAIL",
+    "learned_language_normalization": "PASS",
+    "structured_state_compiler_mechanics": "PASS"
+  },
+  "status": "TERMINAL_VALID",
+  "stop_decision": "STOP learned extraction work on this synthetic family. CONTINUE only with MCO-04, a real software-incident state-compiler product proof using deterministic or constrained normalization, exact provenance, and a strong retrieval control.",
+  "training_accounting": {
+    "dmc_historical_optimizer_steps_preserved": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN",
+    "online_backward_calls": 0,
+    "online_optimizer_steps": 0,
+    "pretrained_model_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "verdict": "MCO_03_TRANSPARENT_COMPILER_DOMINATES",
+  "world_impact_disposition": "NOT_ESTABLISHED",
+  "world_impact_reason": "A controlled synthetic mechanism\u2014even if valid\u2014does not establish novelty, customer demand, independent replication, production reliability, adoption, or long-horizon societal impact."
+}

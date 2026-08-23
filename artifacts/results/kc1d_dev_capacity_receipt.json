@@ -1,0 +1,1906 @@
+{
+  "anchor_errors": [],
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "canonical_receipt_sha256": "87a44f4694df46d4d9ccc8ea909cc0ee84ca3c995202facbcb7e2e0e9142e309",
+  "characterization": {
+    "full_bank_restart": {
+      "collision_write_count": 0,
+      "restart_equal": true,
+      "restarted": {
+        "observed_unique_packets": 8,
+        "occupied_slots": 8,
+        "recoverable_current_values": 8,
+        "recoverable_historical_values": 8,
+        "recoverable_packet_tokens": [
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "state": [
+          [
+            9,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+      },
+      "serialization_bytes": 137,
+      "serialization_sha256": "c63607c5dd0516d071b87dd58b7b5321b3668ff951d733951f3017e046331a8e",
+      "tokens": [
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "uninterrupted": {
+        "observed_unique_packets": 8,
+        "occupied_slots": 8,
+        "recoverable_current_values": 8,
+        "recoverable_historical_values": 8,
+        "recoverable_packet_tokens": [
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "state": [
+          [
+            9,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+      }
+    },
+    "loads": [
+      {
+        "load": 1,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 1,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              8
+            ],
+            "state": [
+              [
+                9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "64216f86553d6c429126d9c39cbc31a20df47dfc9f0c05baa83763e2a1723ae9"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "273f6a90c5346ed98d474460ab02f6e4ed1902dc23788c20740edd2417e221d2",
+          "tokens": [
+            8
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 1,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              8
+            ],
+            "state": [
+              [
+                9,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "64216f86553d6c429126d9c39cbc31a20df47dfc9f0c05baa83763e2a1723ae9"
+          }
+        }
+      },
+      {
+        "load": 2,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 2,
+            "occupied_slots": 2,
+            "recoverable_current_values": 2,
+            "recoverable_historical_values": 2,
+            "recoverable_packet_tokens": [
+              8,
+              1
+            ],
+            "state": [
+              [
+                9,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "09c5c94f1b4fdd20ee47a0d87e6c1b39232ff115402a5c92542c32a51ec73241"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "33cf0dc0510e833e75ad18799e099813f9b571bd0b8cc7135e8a7326c54c0f05",
+          "tokens": [
+            8,
+            1
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 2,
+            "occupied_slots": 2,
+            "recoverable_current_values": 2,
+            "recoverable_historical_values": 2,
+            "recoverable_packet_tokens": [
+              8,
+              1
+            ],
+            "state": [
+              [
+                9,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "09c5c94f1b4fdd20ee47a0d87e6c1b39232ff115402a5c92542c32a51ec73241"
+          }
+        }
+      },
+      {
+        "load": 3,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "49e2df83da53be5389b72bf7d3f00f925804e6a1435ad5acf9750e1d53617e8d",
+          "tokens": [
+            8,
+            1,
+            2
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          }
+        }
+      },
+      {
+        "load": 4,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 4,
+            "occupied_slots": 4,
+            "recoverable_current_values": 4,
+            "recoverable_historical_values": 4,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "cbf0310197b47cabaa4f545b11a8ee78068793399cd9331d0a58395454cc8dd3"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "93ec9d98f799f55387ca7b2c41991e143d2032eb555f6824a391272f64c8c2cb",
+          "tokens": [
+            8,
+            1,
+            2,
+            3
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 4,
+            "occupied_slots": 4,
+            "recoverable_current_values": 4,
+            "recoverable_historical_values": 4,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "cbf0310197b47cabaa4f545b11a8ee78068793399cd9331d0a58395454cc8dd3"
+          }
+        }
+      },
+      {
+        "load": 5,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 5,
+            "occupied_slots": 5,
+            "recoverable_current_values": 5,
+            "recoverable_historical_values": 5,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "7eb92091706ad7c25deed193f4e9e40201866b90365c558cb6a12ca07d66f08c"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "f1ce205c3888d7dcb392f628899dd9af0818f79c0d98a19e59c79ab0256bfc10",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 5,
+            "occupied_slots": 5,
+            "recoverable_current_values": 5,
+            "recoverable_historical_values": 5,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "7eb92091706ad7c25deed193f4e9e40201866b90365c558cb6a12ca07d66f08c"
+          }
+        }
+      },
+      {
+        "load": 6,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 6,
+            "occupied_slots": 6,
+            "recoverable_current_values": 6,
+            "recoverable_historical_values": 6,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "af3390c7ca417e7685e8439da25343295ce5e19511108c82d94458989d6da93c"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "01c6537010c4004d91e201b77f1b6ef607ea75452537a5788d28eda8dc87fb21",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 6,
+            "occupied_slots": 6,
+            "recoverable_current_values": 6,
+            "recoverable_historical_values": 6,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "af3390c7ca417e7685e8439da25343295ce5e19511108c82d94458989d6da93c"
+          }
+        }
+      },
+      {
+        "load": 7,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 7,
+            "occupied_slots": 7,
+            "recoverable_current_values": 7,
+            "recoverable_historical_values": 7,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+              ]
+            ],
+            "state_sha256": "ffabf57ba7856be64aefbec088d8f45316d946bdb4a1fd35736b705c8ec702f4"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "3c558bb1082ab1ca53abb4694d9928964d569ddd8d14a6b6c3058ed68d9466f1",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 7,
+            "occupied_slots": 7,
+            "recoverable_current_values": 7,
+            "recoverable_historical_values": 7,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+              ]
+            ],
+            "state_sha256": "ffabf57ba7856be64aefbec088d8f45316d946bdb4a1fd35736b705c8ec702f4"
+          }
+        }
+      },
+      {
+        "load": 8,
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 8,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "c63607c5dd0516d071b87dd58b7b5321b3668ff951d733951f3017e046331a8e",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 8,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+          }
+        }
+      },
+      {
+        "load": 9,
+        "result": {
+          "collision_write_count": 1,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "state": [
+              [
+                9,
+                10,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "9a47f7a6a44b9307d44005bdfd140d79f475da60f65943baa0584b292e4fe3d6"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "b848ed3e4c52efd0136ea77da143af7f7a1164f04ad716b496dab757f215c608",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "state": [
+              [
+                9,
+                10,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "9a47f7a6a44b9307d44005bdfd140d79f475da60f65943baa0584b292e4fe3d6"
+          }
+        }
+      },
+      {
+        "load": 10,
+        "result": {
+          "collision_write_count": 2,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 10,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9,
+              10
+            ],
+            "state": [
+              [
+                9,
+                10,
+                11,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "832c106ea513487e06ec9df8e5b631944290f6c8d480e6f33523c04396be7649"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "7ef7e71e9515177b149bff203ca2d6731058d4281f174860e4390e94b9892e4e",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 10,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9,
+              10
+            ],
+            "state": [
+              [
+                9,
+                10,
+                11,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "832c106ea513487e06ec9df8e5b631944290f6c8d480e6f33523c04396be7649"
+          }
+        }
+      },
+      {
+        "load": 12,
+        "result": {
+          "collision_write_count": 4,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 12,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              5,
+              6,
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            "state": [
+              [
+                9,
+                10,
+                11,
+                12,
+                13,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "853366962a3efec880c013529ee9fc743be6b1045bf2b3d3f33eed5acf57f675"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "7b799b35d119a84b6ce0f7d778bde3269069b9fb5f73492c0352e07cdd7c38bc",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 12,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              5,
+              6,
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            "state": [
+              [
+                9,
+                10,
+                11,
+                12,
+                13,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "853366962a3efec880c013529ee9fc743be6b1045bf2b3d3f33eed5acf57f675"
+          }
+        }
+      },
+      {
+        "load": 16,
+        "result": {
+          "collision_write_count": 8,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 16,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "state": [
+              [
+                17,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "4f50b4e53c135ac4d7b6a42a70a322c0619a59df1b225eb7c1122c9b9905c713"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "8c874f8e0feff7254ca33398f18599b234a2c68927e12cbac6e8d5670ce6a1ef",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 16,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "state": [
+              [
+                17,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "4f50b4e53c135ac4d7b6a42a70a322c0619a59df1b225eb7c1122c9b9905c713"
+          }
+        }
+      }
+    ],
+    "over_capacity_order": [
+      {
+        "result": {
+          "collision_write_count": 1,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "c63607c5dd0516d071b87dd58b7b5321b3668ff951d733951f3017e046331a8e",
+          "tokens": [
+            9,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "a3569aebcde4328bc810fba332c1d9eff21ce66a653ae8cc9acc95fb2041ba22"
+          }
+        },
+        "variant": "collision_first"
+      },
+      {
+        "result": {
+          "collision_write_count": 1,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              2,
+              3,
+              9,
+              4,
+              5,
+              6,
+              7
+            ],
+            "state": [
+              [
+                9,
+                10,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "9a47f7a6a44b9307d44005bdfd140d79f475da60f65943baa0584b292e4fe3d6"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "b848ed3e4c52efd0136ea77da143af7f7a1164f04ad716b496dab757f215c608",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            9,
+            4,
+            5,
+            6,
+            7
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              2,
+              3,
+              9,
+              4,
+              5,
+              6,
+              7
+            ],
+            "state": [
+              [
+                9,
+                10,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "9a47f7a6a44b9307d44005bdfd140d79f475da60f65943baa0584b292e4fe3d6"
+          }
+        },
+        "variant": "collision_middle"
+      },
+      {
+        "result": {
+          "collision_write_count": 1,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "state": [
+              [
+                9,
+                10,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "9a47f7a6a44b9307d44005bdfd140d79f475da60f65943baa0584b292e4fe3d6"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "b848ed3e4c52efd0136ea77da143af7f7a1164f04ad716b496dab757f215c608",
+          "tokens": [
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 9,
+            "occupied_slots": 8,
+            "recoverable_current_values": 8,
+            "recoverable_historical_values": 8,
+            "recoverable_packet_tokens": [
+              8,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "state": [
+              [
+                9,
+                10,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "state_sha256": "9a47f7a6a44b9307d44005bdfd140d79f475da60f65943baa0584b292e4fe3d6"
+          }
+        },
+        "variant": "collision_last"
+      }
+    ],
+    "recency": [
+      {
+        "result": {
+          "collision_write_count": 2,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              17
+            ],
+            "state": [
+              [
+                0,
+                18,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "a1c7a703791aa12bb77c2336c1d327da8218cd106ddbe9ca6af25cc34bd8f561"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "8b74120d70f970a708db1ff36fc599a32b4e6e11963ed32e7403ff71fbb08d6a",
+          "tokens": [
+            1,
+            9,
+            17
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              17
+            ],
+            "state": [
+              [
+                0,
+                18,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "a1c7a703791aa12bb77c2336c1d327da8218cd106ddbe9ca6af25cc34bd8f561"
+          }
+        },
+        "variant": "a1_a2_a3"
+      },
+      {
+        "result": {
+          "collision_write_count": 3,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              1
+            ],
+            "state": [
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "ba53a248b0c361c41a83925aac85e2fc15dadf8524dd383d703052bb816370a4",
+          "tokens": [
+            1,
+            9,
+            17,
+            1
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              1
+            ],
+            "state": [
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf"
+          }
+        },
+        "variant": "a1_a2_a3_a1"
+      },
+      {
+        "result": {
+          "collision_write_count": 2,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              1
+            ],
+            "state": [
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "ba53a248b0c361c41a83925aac85e2fc15dadf8524dd383d703052bb816370a4",
+          "tokens": [
+            17,
+            9,
+            1
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 1,
+            "recoverable_current_values": 1,
+            "recoverable_historical_values": 1,
+            "recoverable_packet_tokens": [
+              1
+            ],
+            "state": [
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "cc6cd18b4c108f4c37830a4bfb8f1f7c6d3adc0e7db3cce2855bf872e0daf5cf"
+          }
+        },
+        "variant": "a3_a2_a1"
+      }
+    ],
+    "under_capacity_order": [
+      {
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "49e2df83da53be5389b72bf7d3f00f925804e6a1435ad5acf9750e1d53617e8d",
+          "tokens": [
+            8,
+            1,
+            2
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              8,
+              1,
+              2
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          }
+        },
+        "variant": "abc"
+      },
+      {
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              2,
+              1,
+              8
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "49e2df83da53be5389b72bf7d3f00f925804e6a1435ad5acf9750e1d53617e8d",
+          "tokens": [
+            2,
+            1,
+            8
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              2,
+              1,
+              8
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          }
+        },
+        "variant": "cba"
+      },
+      {
+        "result": {
+          "collision_write_count": 0,
+          "restart_equal": true,
+          "restarted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              1,
+              8,
+              2
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          },
+          "serialization_bytes": 137,
+          "serialization_sha256": "49e2df83da53be5389b72bf7d3f00f925804e6a1435ad5acf9750e1d53617e8d",
+          "tokens": [
+            1,
+            8,
+            2
+          ],
+          "uninterrupted": {
+            "observed_unique_packets": 3,
+            "occupied_slots": 3,
+            "recoverable_current_values": 3,
+            "recoverable_historical_values": 3,
+            "recoverable_packet_tokens": [
+              1,
+              8,
+              2
+            ],
+            "state": [
+              [
+                9,
+                2,
+                3,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "state_sha256": "2dc62f32ee8e757defc4a7e26613c6a34e1351cd8727743a8b10e34513c4af25"
+          }
+        },
+        "variant": "bac"
+      }
+    ]
+  },
+  "checks": {
+    "anchors": true,
+    "load_bank_complete": true,
+    "replay": true,
+    "restart": true
+  },
+  "config_sha256": "e7c999af85a81022c70981074a8ca4cf14a2c0b66d99a7afa6f5352bc19d9864",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "note": "Development capacity/saturation characterization only; no capacity threshold or scientific conclusion is assigned.",
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "unit": "KC-1D-D",
+  "verdict": "KC_1D_DEV_COMPLETE"
+}

@@ -1,0 +1,39 @@
+{
+  "experiment_id": "MCO-01",
+  "receipt_type": "terminal_experiment_receipt",
+  "status": "PERMANENTLY_FROZEN",
+  "verdict": "MCO_01_ITERATIVE_ACQUISITION_ADVANCES",
+  "issued_at_utc": "2026-08-22T00:00:00Z",
+  "result": {
+    "complete_history_max_records": 100000,
+    "iterative_answer_accuracy": 1.0,
+    "iterative_maximum_active_records": 6,
+    "one_shot_answer_accuracy": 0.05,
+    "recent_16_answer_accuracy": 0.0,
+    "exact_structured_answer_accuracy": 1.0,
+    "exact_structured_maximum_active_records": 5
+  },
+  "credit_assignment": "complete external storage plus exact indexing plus bounded demand-driven acquisition",
+  "credit_denied": [
+    "learned memory",
+    "natural-language robustness",
+    "model inference efficiency",
+    "tokenizer savings",
+    "production economics",
+    "world-changing impact"
+  ],
+  "authorized_successor": "MCO-02 — LANGUAGE / INFERENCE BOUNDARY",
+  "anchors": {
+    "verdict_sha256": "40b923614f270f9c81692a695faf1a23c4df89826cd293ad504751691c070781",
+    "aggregate_sha256": "1c8c9b3f10212ab4e50a6f5a3cc9606b9c991fe2b79357ee63402e01b2959a04",
+    "report_sha256": "9d68ba08d864c755f7af7d23f589bb586aa24de2569d4358e493999b8bc1b222",
+    "verification_sha256": "3cb87ffd25209506cdac2de6b4ac6aa7a9b40e6068e0659b6d81bbd37318003f",
+    "manifest_sha256": "6ce1be6e611d4d928dc675a591c63ee246c62479bfa150339462d8b950394d5a",
+    "freeze_sha256": "86bbd6ee0211b1eb199c33d4c9b8dfff2e696263f9c9606674332ef5ee1d3b8d"
+  },
+  "training_accounting": {
+    "mco01_optimizer_steps": 0,
+    "dmc_historical_optimizer_steps_preserved": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN"
+  }
+}

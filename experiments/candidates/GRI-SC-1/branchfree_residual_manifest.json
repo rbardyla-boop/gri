@@ -1,0 +1,43 @@
+{
+  "schema": "GRI-SIM-0-CANDIDATE-1",
+  "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+  "authorization_id": "GRI-SC-1-DEV_SMOKE-B",
+  "status": "IMPLEMENTATION_AUTHORIZED_BEFORE_RUN",
+  "run_class": "DEV_SMOKE",
+  "source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+  "parent_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+  "state": {
+    "persistent_slots": 8,
+    "auxiliary_slots": 0,
+    "history_buffer": 0,
+    "step_counter": 0,
+    "phase_variable": 0,
+    "rng_as_state": false
+  },
+  "parameters": {
+    "trainable": 96,
+    "fixed": 10
+  },
+  "operations": {
+    "recurrent": 57,
+    "query": 21,
+    "selector_comparisons": 0,
+    "lookups": 1,
+    "copies": 8,
+    "nonlinearities": 8,
+    "elementwise_multiply": 16,
+    "elementwise_subtract": 8,
+    "elementwise_add": 16,
+    "accounting_audit": "PASS",
+    "audit_scope": "DEV_SMOKE_STATIC_ONLY"
+  },
+  "transition_class": {
+    "external_input": false,
+    "internally_computed": false,
+    "encoding": "fixed 0/1 token-embedding coefficient; branch-free residual arithmetic"
+  },
+  "serialization_fields": ["persistent_state"],
+  "authorized_ablations": [],
+  "optimizer_mode": "DEV_SMOKE",
+  "scientific_verdict": "FORBIDDEN"
+}

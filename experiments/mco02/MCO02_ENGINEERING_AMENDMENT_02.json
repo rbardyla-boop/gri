@@ -1,0 +1,62 @@
+{
+  "experiment_id": "MCO-02",
+  "amendment_id": "MCO02-ENG-02",
+  "status": "PRE_SCIENTIFIC_ENGINEERING_AMENDMENT",
+  "recorded_at_utc": "2026-08-22T12:48:05Z",
+  "scientific_runs_before_amendment": 0,
+  "corpus_materialized_before_amendment": false,
+  "trigger": {
+    "artifact": "artifacts/mco02/engineering/dev_smoke_run2_failure/dev_smoke.json",
+    "artifact_sha256": "74f3a1030b4fb0149bd75e64b3c36ce1ea7a9475c242a7c594644be6abfce42e",
+    "results_artifact": "artifacts/mco02/engineering/dev_smoke_run2_failure/results.jsonl",
+    "results_sha256": "0452b6e5cda1a6480d491d5341cd05fbd184e7d423e795080c9956d93a338719",
+    "runner_sha256_before_amendment": "994303bbdcc58ba3856be5b6a0f91862c116e732b9bcebad411cc879a3d936c7",
+    "config_sha256_before_amendment": "da9552330959a47842aaa4c9c5dac99e66a6d2d43eb04b485b1e35d1384be8e8",
+    "contract_sha256_before_amendment": "e53abd6fe273e27af27f7e245550d541784c80245efdb250b6826a460413b53b",
+    "classification_exact_records": 88,
+    "classification_record_count": 100,
+    "malformed_model_calls": 4,
+    "structured_exact_planner_answer_accuracy_on_two_queries": 0.5,
+    "iterative_answer_accuracy_on_two_queries": 0.0,
+    "observed_failures": [
+      "free-form ordered labels remained malformed or semantically unstable",
+      "free-form model-only acquisition returned fabricated answers before reading any external record",
+      "signed-number examples overlapped one engineering query's actual values and therefore could leak its threshold"
+    ]
+  },
+  "schema_probe": {
+    "status": "ENGINEERING_ONLY_NOT_SCIENTIFIC",
+    "artifact_directory": "artifacts/mco02/engineering/schema_probe_calls",
+    "response_file_count": 9,
+    "sorted_sha256_list_sha256": "a51af7e85eb7d3a0219bd36f14647a87ba0a7a0563e1707cd532ddaf33e6378a",
+    "exact_relations": 98,
+    "record_count": 100,
+    "relation_accuracy": 0.98,
+    "semantic_retries": 0,
+    "interpretation": "Schema-constrained ordered JSON cleared the frozen 0.95 extraction threshold on the engineering fixture; this is interface-selection evidence only."
+  },
+  "authorized_changes": [
+    "replace free-form relation labels with a schema-constrained ordered JSON array over the same three relations",
+    "restore the transparent indexed-bundle controller inherited from MCO-01 while requiring the frozen model to select the winning nonterminal record and next entity from visible schema-constrained candidates",
+    "replace delimiter-sensitive final responses with one schema-constrained evidence-grounded JSON answer interface shared by all six systems",
+    "remove signed-number examples from prompts and derive inspection with one shared transparent integer comparison after threshold extraction for every system"
+  ],
+  "frozen_unchanged": [
+    "semantic generator, seeds, loads, and queries",
+    "language templates and renderer distribution",
+    "all six comparison systems and their persistent representations",
+    "llama3.1:8b model blob and tokenizer",
+    "16-record and token capacity limits",
+    "all quality and accounting thresholds",
+    "verdict precedence and stop rules"
+  ],
+  "oracle_firewall": {
+    "relation_schema_contains_oracle_labels": false,
+    "candidate_enums_come_only_from_current_extracted_index_bundle": true,
+    "model_selects_winning_candidate": true,
+    "classifier_receives_queries": false,
+    "classifier_receives_expected_answers": false,
+    "semantic_retry_allowed": false
+  },
+  "scientific_interpretation": "The failed smoke and successful schema probe are engineering observations only. Neither supports nor refutes the MCO-02 scientific claim; both remain archived for auditability."
+}

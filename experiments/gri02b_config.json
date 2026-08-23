@@ -1,0 +1,87 @@
+{
+  "unit": "GRI-02B-EXECUTABLE-PRE-REGISTRATION",
+  "status": "FROZEN_BEFORE_RUN",
+  "contract_file": "../docs/GRI-02-AUTHORIZATION-CONTRACT.md",
+  "contract_sha256": "22d2a4a147d7e829f9cbcab246f6dba05bebffea6abdfa5b377aeef3171d660c",
+  "operation_rules_file": "gri02b_operation_rules.json",
+  "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+  "fixture_bank_file": "gri02b_fixture_bank.json",
+  "fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960",
+  "alphabet": [
+    "PAD", "BIT_0", "BIT_1", "A", "B", "CORRECT", "WAIT",
+    "QUERY_DELAY", "QUERY_CORRECTION", "QUERY_ORDER"
+  ],
+  "delay_set": [0, 1, 2, 4, 8, 16, 32, 64, 128],
+  "decoder_protocol": {
+    "method": "scipy.optimize.linprog",
+    "solver": "highs",
+    "constraint": "y * (w dot h + b) >= 1.0",
+    "fit_delays": [0, 1, 2, 4, 8, 16, 32],
+    "held_out_delays": [64, 128],
+    "fit_transform_pairs": "cartesian product of fit_delays with fit_delays",
+    "held_out_transform_pairs": "all delay pairs not in fit_transform_pairs",
+    "state_snapshot": "persistent state immediately before the task query transition",
+    "scope": "one fixed decoder per task across preserve and transform fixtures",
+    "evaluation": "fit only on split=fit states; evaluate only on split=held_out states; never fit on held-out labels or states",
+    "wait_specific_decoders": "forbidden"
+  },
+  "quantization": {
+    "bits": 8,
+    "signed_levels": [-127, 127],
+    "state_range": [-1.0, 1.0],
+    "scale": "1 / 127",
+    "zero_representation": 0,
+    "rounding": "round-to-nearest-even",
+    "clipping": "clip real state to [-1,1] before scaling and integer state to [-127,127] after rounding",
+    "execution": "quantize persistent state after every recurrent step and before every subsequent step, serialization, and query readout",
+    "arithmetic": "float32 transition arithmetic in q8-state mode",
+    "input_and_parameters": "not quantized by this q8-state rule"
+  },
+  "serialization": {
+    "schema": "GRI-02B-STATE-1",
+    "encoding": "UTF-8",
+    "json": "json.dumps(sort_keys=True, separators=(\",\",\":\"), ensure_ascii=True, allow_nan=False)",
+    "terminator": "one LF byte",
+    "restart_splits": "every token boundary, including empty prefix and the boundary immediately before QUERY"
+  },
+  "budgets": {
+    "persistent_state_slots_max": 8,
+    "trainable_parameters_max": 170,
+    "matched_gru_trainable_parameters": 506,
+    "parent_recurrent_operations_max": 97,
+    "parent_recurrent_plus_query_operations_max": 118,
+    "matched_gru_recurrent_plus_query_operations": 526,
+    "matched_gru_must_be_strictly_greater_in_state_and_parameter_machinery": true
+  },
+  "training_protocol": {
+    "seeds": [20260820, 20260821, 20260822],
+    "optimizer": "SGD",
+    "learning_rate": 0.03,
+    "weight_decay": 0.0,
+    "epochs": 400,
+    "training_data": "split=fit fixtures only",
+    "post_result_tuning": false,
+    "nonlearned_candidate": "optimizer is NONE only if declared before implementation authorization"
+  },
+  "verdict_logic": {
+    "required_true_fields": [
+      "harness_pass",
+      "oracle_pass",
+      "replay_pass",
+      "budget_pass",
+      "candidate_preserve_pass",
+      "candidate_transform_pass",
+      "candidate_fixed_decoder_pass",
+      "candidate_precision_pass",
+      "parent_opponent_pass",
+      "stateless_opponent_pass",
+      "no_preserve_ablation_failed",
+      "no_transform_ablation_failed",
+      "no_recurrence_ablation_failed"
+    ],
+    "oracle_match_is_not_an_opponent_failure": true,
+    "missing_or_nonboolean_field": "INCONCLUSIVE",
+    "all_required_true": "GRI02_ADVANTAGE",
+    "otherwise": "GRI02_NO_ADVANTAGE"
+  }
+}

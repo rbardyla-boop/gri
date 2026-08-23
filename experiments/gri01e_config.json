@@ -1,0 +1,18 @@
+{
+  "unit": "GRI-01E-CONSTRUCTIVE-REPRESENTABILITY",
+  "status": "FROZEN_BEFORE_RUN",
+  "parent_config": "gri01_recurrence_config.json",
+  "parent_config_sha256": "9e5df90abc3daff267256a52f4d033728a030d6b651c1bc2a308d21b1ff0dc80",
+  "solver": {
+    "method": "torch_lbfgs",
+    "max_iter": 800,
+    "learning_rate": 1.0,
+    "tolerance_grad": 1e-09,
+    "tolerance_change": 1e-12,
+    "line_search": "strong_wolfe",
+    "target_logit_margin": 6.0,
+    "initialization_seed_base": 20260820
+  },
+  "decision_rule": "fit train delays only; REPRESENTABLE requires 1.0 train and held-out accuracy for every d; PARTIAL_GENERALIZATION requires 1.0 train and less than 1.0 held-out for at least one d; otherwise NO_CONSTRUCTION_FOUND",
+  "forbidden": ["SGD tuning", "new dimensions", "geometry", "memory additions", "agents", "LLMs", "E8"]
+}

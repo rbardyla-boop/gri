@@ -1,0 +1,127 @@
+{
+  "experiment_id": "MCO-01",
+  "title": "STORE ALL, THINK SMALL",
+  "status": "PREREGISTERED_BEFORE_DATASET_GENERATION",
+  "preregistered_at_utc": "2026-08-22T00:00:00Z",
+  "research_question": "Can a complete cheap external event history support a fixed active reasoning set, especially when relevance becomes visible only after later evidence?",
+  "frozen_scope": {
+    "benchmark_only": true,
+    "learned_retention": false,
+    "utility_labels_at_ingestion": false,
+    "language_model_inference": false,
+    "tokenizer_accounting": false,
+    "active_record_cap": 16
+  },
+  "dataset": {
+    "history_sizes": [100, 1000, 10000, 100000],
+    "seeds": [2601, 2602, 2603, 2604, 2605],
+    "queries_per_history": 8,
+    "expected_history_count": 20,
+    "expected_query_count": 160,
+    "expected_total_event_records": 555500,
+    "dependency_hops": [2, 3, 4, 5],
+    "queries_per_hop_per_history": 2,
+    "families": [
+      "delayed_dependency",
+      "correction",
+      "rename",
+      "supersession",
+      "contradiction",
+      "distractor_hard"
+    ],
+    "source_priority": {
+      "AUTHORITY": 3,
+      "CURATED": 2,
+      "UNVERIFIED": 1
+    },
+    "placement_rules": {
+      "stream_order_is_semantic_time": true,
+      "superseded_record_precedes_its_replacement": true,
+      "query_occurs_after_complete_history": true,
+      "required_records_are_randomized_subject_to_semantic_constraints": true,
+      "no_query_path_may_fit_inside_any_contiguous_16_record_window": true,
+      "no_query_path_may_be_fully_contained_in_the_first_or_last_16_records": true,
+      "records_expose_no_query_id_chain_id_utility_label_or_answer_label": true
+    }
+  },
+  "systems": [
+    {
+      "id": "full_history_oracle",
+      "stored_records": "all",
+      "active_records": "all"
+    },
+    {
+      "id": "recent_16",
+      "stored_records": 16,
+      "active_records": 16
+    },
+    {
+      "id": "exact_structured_lookup",
+      "stored_records": "all",
+      "active_records_max": 16
+    },
+    {
+      "id": "conventional_one_shot_retrieval",
+      "stored_records": "all",
+      "active_records_max": 16,
+      "retrieval_rounds": 1
+    },
+    {
+      "id": "iterative_need_retrieval",
+      "stored_records": "all",
+      "active_records_max": 16,
+      "interface": "NEED(subject, relation)"
+    }
+  ],
+  "metrics": [
+    "answer_accuracy",
+    "critical_recall",
+    "dependency_chain_accuracy",
+    "temporal_update_accuracy",
+    "provenance_accuracy",
+    "maximum_active_records",
+    "records_retrieved_per_question",
+    "retrieval_rounds",
+    "external_bytes",
+    "external_reads",
+    "wall_time_seconds"
+  ],
+  "acceptance_criteria": {
+    "dataset_integrity_required": true,
+    "oracle_min_answer_accuracy_each_load": 1.0,
+    "bounded_system_min_answer_accuracy_each_load": 0.99,
+    "bounded_system_min_critical_recall_each_load": 0.99,
+    "bounded_system_min_dependency_chain_accuracy_each_load": 0.99,
+    "bounded_system_min_temporal_update_accuracy_each_load": 0.99,
+    "bounded_system_min_provenance_accuracy_each_load": 0.99,
+    "bounded_system_max_active_records": 16,
+    "bounded_system_max_accuracy_drop_100_to_100000": 0.01,
+    "one_shot_sufficient_min_answer_accuracy_each_load": 0.99,
+    "one_shot_sufficient_max_gap_to_iterative": 0.01,
+    "iterative_advance_min_answer_accuracy_each_load": 0.99,
+    "iterative_advance_min_overall_answer_gap_vs_one_shot": 0.15,
+    "iterative_advance_min_hop_3_to_5_answer_gap_vs_one_shot": 0.2,
+    "external_store_failure_accuracy_floor": 0.9
+  },
+  "verdict_precedence": [
+    "MCO_01_ACCOUNTING_INVALID",
+    "MCO_01_EXTERNAL_STORE_FAILS",
+    "MCO_01_ONE_SHOT_RETRIEVAL_SUFFICIENT",
+    "MCO_01_ITERATIVE_ACQUISITION_ADVANCES",
+    "MCO_01_BOUNDED_ATTENTION_ADVANCES"
+  ],
+  "verdict_rules": {
+    "MCO_01_ACCOUNTING_INVALID": "Any frozen identity, dataset integrity, active-cap, metric-denominator, or replay check fails.",
+    "MCO_01_EXTERNAL_STORE_FAILS": "Neither exact structured lookup nor iterative NEED retrieval clears 0.90 answer accuracy at every load while respecting the 16-record cap and the scaling criterion.",
+    "MCO_01_ONE_SHOT_RETRIEVAL_SUFFICIENT": "One-shot retrieval clears all bounded-system quality criteria at every load and remains within 0.01 answer accuracy of iterative retrieval.",
+    "MCO_01_ITERATIVE_ACQUISITION_ADVANCES": "Iterative NEED retrieval clears all bounded-system quality criteria and beats one-shot by at least 0.15 overall and 0.20 on 3-to-5-hop cases.",
+    "MCO_01_BOUNDED_ATTENTION_ADVANCES": "At least one non-oracle store-all system clears all bounded-system quality, cap, and scaling criteria, but neither more specific retrieval verdict applies."
+  },
+  "run_policy": {
+    "minimum_valid_scientific_runs": 2,
+    "replay_must_be_byte_identical_except_declared_runtime_fields": true,
+    "engineering_failures_before_valid_run": "archive separately and do not score",
+    "stop_after_terminal_verdict": true,
+    "downstream_language_work_blocked_unless_bounded_attention_passes": true
+  }
+}

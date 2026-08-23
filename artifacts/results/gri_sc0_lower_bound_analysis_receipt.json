@@ -1,0 +1,30 @@
+{
+  "unit": "GRI-SC-0-SELECTOR-COST-LOWER-BOUND-ANALYSIS",
+  "status": "ANALYZED",
+  "result": "SELECTOR_COST_LOWER_BOUND_INCONCLUSIVE",
+  "candidate_present": false,
+  "scientific_run": false,
+  "simulator_search": false,
+  "training": false,
+  "ledger_changed": false,
+  "conclusion": {
+    "semantic_token_class_dependence_required": true,
+    "additional_comparison_or_dispatch_proved_unavoidable": false,
+    "lower_bound_settled_by_current_model": false
+  },
+  "references": {
+    "sc0_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+    "analysis_sha256": "4eec18ec632a80c69895e1dae12cc7002951cd327bdc690661818b4a571e974a",
+    "gri02b_operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+    "gri02b_fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960",
+    "gri_sim0_experiment_manifest_sha256": "26bf08851e52c48caa7cc2c5340641f7e82c3be097d1a4e0f215c1b9353849ce"
+  },
+  "authorization_consequence": "A separate request for GRI-SC-1 bounded DEV_SMOKE search may be considered; no candidate or scientific run is authorized by this receipt.",
+  "current_state": {
+    "gri01": "CLOSED — BOUNDED NEGATIVE",
+    "gri02c": "ALGORITHMIC FINDING SUPPORTED",
+    "gri02c1": "FORMAL GRI02_NO_ADVANTAGE",
+    "minimality": "NOT ESTABLISHED",
+    "successor": "NOT AUTHORIZED"
+  }
+}

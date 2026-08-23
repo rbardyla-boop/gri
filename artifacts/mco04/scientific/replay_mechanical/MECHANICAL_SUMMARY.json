@@ -1,0 +1,34 @@
+{
+  "all_capacity_pass": true,
+  "all_provenance_pass": true,
+  "case_count": 63,
+  "median_raw_to_packet_byte_reduction": 1331.739414694894,
+  "minimum_raw_to_packet_byte_reduction": 215.19289176090467,
+  "run_id": "replay_mechanical",
+  "scorer_read_guard_active": true,
+  "sealed_predictions_sha256": "a37c42171e12846fd264a8eedd8143074c9ea5cd032df503f20b9e1e6b0b9104",
+  "split": "scientific",
+  "timing": {
+    "author_style_baro_seconds": {
+      "median_seconds": 0.03930324094835669,
+      "sum_seconds": 4.357118442305364
+    },
+    "compiler_seconds": {
+      "median_seconds": 0.07929760299157351,
+      "sum_seconds": 8.61853279301431
+    },
+    "post_error_volume_seconds": {
+      "median_seconds": 0.039405902032740414,
+      "sum_seconds": 2.7906501325778663
+    },
+    "provenance_recomputation_seconds": {
+      "median_seconds": 0.08304793294519186,
+      "sum_seconds": 9.479927729116753
+    },
+    "single_feature_robust_seconds": {
+      "median_seconds": 0.06249230005778372,
+      "sum_seconds": 7.153954917914234
+    }
+  },
+  "wall_seconds": 32.52664934203494
+}

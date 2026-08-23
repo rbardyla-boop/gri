@@ -1,0 +1,149 @@
+{
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "4369ebd44978bcba76c6040b4736590920e0a8199c4fffe05ce3191c2613c6fd",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "cell_death": {
+      "founder_dead": true,
+      "survivor_alive": true,
+      "survivor_unchanged": true
+    },
+    "exact_inheritance": {
+      "child_id": "C1",
+      "child_state_tokens": [
+        8
+      ],
+      "equal_at_birth": true,
+      "parent_id": "C0",
+      "parent_state_tokens": [
+        8
+      ]
+    },
+    "founder_creation": {
+      "founder_id": "C0",
+      "live_count": 1,
+      "registry_safe": true
+    },
+    "founder_death_descendant_survival": {
+      "founder_dead": true,
+      "survivor_alive": true,
+      "survivor_unchanged": true
+    },
+    "generation_cap": {
+      "failed_closed": true,
+      "lineage": [
+        "C0",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "max_generation": 3
+    },
+    "independent_divergence": {
+      "child_diverged": true,
+      "child_unchanged": true,
+      "parent_unchanged": true
+    },
+    "knowledge_containment": {
+      "knowledge_not_reconstructable": true,
+      "no_live_cells": true,
+      "no_live_state_payloads": true,
+      "registry_has_no_state_fields": true,
+      "registry_safe": true
+    },
+    "lineage": {
+      "first_child_generation": 1,
+      "founder_generation": 0,
+      "grandchild_generation": 2,
+      "parent_links_present": true
+    },
+    "multi_parent": {
+      "distinct_children": true,
+      "first_child_parent": "C0",
+      "second_parent": "C1"
+    },
+    "no_automatic_spawn": {
+      "count": 1,
+      "count_unchanged_by_consume": true
+    },
+    "population_cap": {
+      "cap_children": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "failed_closed": true,
+      "live_count_before_attempt": 8,
+      "unchanged": true
+    },
+    "population_restart": {
+      "live_ids_equal": true,
+      "live_states_equal": true,
+      "registry_equal": true,
+      "survivor_id": "C1"
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "cell_death": true,
+    "exact_inheritance": true,
+    "explicit_spawn": true,
+    "founder": true,
+    "founder_death": true,
+    "generation_cap": true,
+    "independent_divergence": true,
+    "knowledge_containment_audit": true,
+    "knowledge_disappears_with_last_cell": true,
+    "lineage": true,
+    "multi_parent": true,
+    "no_automatic_spawn": true,
+    "population_cap": true,
+    "population_restart": true,
+    "replay": true,
+    "resource_boundary": true
+  },
+  "child_creation_source_sha256": "f3fdf0d4ae6bda8d103549c22c20f7a8d4e53fcf7b54700b6aedc1198b900046",
+  "config_sha256": "ddbfc6155f248c227503acf9504b0789874e89a6dc446f4d5369ec9162cb8b5f",
+  "export_source_sha256": "e52eeca7266584c7ee963a2a0d2b4ca8da2c63530dd6337a3fb7008bb76b4264",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "manager_source_audit": {
+    "forbidden_names_or_imports": [],
+    "manager_signature": [],
+    "registry_fields": [
+      "cell_id",
+      "parent_id",
+      "generation",
+      "alive"
+    ],
+    "registry_fields_exact": true,
+    "status": "PASS"
+  },
+  "manager_source_sha256": "af28edf692724d3bdc4a4737cd546f055f42832c6ae854898f7c7cf6b595f8f7",
+  "note": "Development bounded population lifecycle characterization only; fitness, selection, mutation-at-birth, autonomous reproduction, and scientific conclusions are forbidden.",
+  "resource_manifest": {
+    "automatic_spawn_calls": 0,
+    "external_infrastructure": false,
+    "knowledge_state_in_registry": false,
+    "max_generation": 3,
+    "max_population": 8,
+    "registry_fields": [
+      "cell_id",
+      "parent_id",
+      "generation",
+      "alive"
+    ],
+    "uses_fitness": false,
+    "uses_mutation_at_birth": false,
+    "uses_selection": false
+  },
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "unit": "KC-3A-D",
+  "verdict": "KC_3A_DEV_COMPLETE"
+}

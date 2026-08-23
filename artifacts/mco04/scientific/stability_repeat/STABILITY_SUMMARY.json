@@ -1,0 +1,25 @@
+{
+  "all_repeat_citations_valid": true,
+  "all_repeat_outputs_valid": true,
+  "comparison_count": 21,
+  "exact_structured_agreement": 0.9523809523809523,
+  "exact_structured_matches": 20,
+  "population_case_count": 63,
+  "run_id": "stability_repeat",
+  "scorer_read_guard_active": true,
+  "seal_sha256": "d2d482246e7d3dba850e43bb79d8bb5b666d897ad1e36f5036102ee4d91c965b",
+  "selected_case_count": 7,
+  "selected_ids": [
+    "incident_c52614ae3b922b4ef63b",
+    "incident_f90960e8a4984b205989",
+    "incident_42be13d6d62d1ef46e19",
+    "incident_c7e63daf7a0eccca7b57",
+    "incident_dbd33cee8b3151cd0774",
+    "incident_c5c1c4e268c21775089a",
+    "incident_0e0c7a31e360da8150a1"
+  ],
+  "semantic_agreement": 1.0,
+  "semantic_matches": 21,
+  "variant_count": 3,
+  "wall_seconds": 299.3649617449846
+}

@@ -1,0 +1,1215 @@
+{
+  "bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "candidate_present": false,
+  "fixture_validation": {
+    "bank_id": "KC-0-DEV-TRIAL-BANK",
+    "errors": [],
+    "note": "Development fixtures only; no candidate or scientific verdict is present.",
+    "packet_count": 21,
+    "query_count": 8,
+    "sequence_count": 24,
+    "sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+    "status": "PASS",
+    "trial_ids": [
+      "KC-0A",
+      "KC-0B",
+      "KC-0C",
+      "KC-0D",
+      "KC-0E",
+      "KC-0F",
+      "KC-0G",
+      "KC-0H",
+      "KC-0I",
+      "KC-0J"
+    ]
+  },
+  "mode": "DEV_SMOKE",
+  "note": "Fixture/event-path smoke only; no candidate behavior was executed.",
+  "receipt_sha256": "a0a1893e1176dab28c7180fe1c2b2f707e0fd05203bd7e1b6587dbe568396713",
+  "replay": {
+    "first_trace_sha256": "6019cf8ee488e2d8675d812c71e6e51377ba014f97488129f0fbddcaf2e4fdae",
+    "matched": true,
+    "second_trace_sha256": "6019cf8ee488e2d8675d812c71e6e51377ba014f97488129f0fbddcaf2e4fdae",
+    "status": "PASS"
+  },
+  "scientific_execution": "FORBIDDEN",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "trial_count": 10,
+  "trials": [
+    {
+      "consume_count": 28,
+      "divide_count": 0,
+      "event_count": 28,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p008"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p009"
+            }
+          ],
+          "sequence_id": "eat_fit_novel",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p009"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p009"
+            }
+          ],
+          "sequence_id": "eat_fit_redundant",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p011"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p012"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p013"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p014"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p015"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p016"
+            }
+          ],
+          "sequence_id": "eat_heldout_novel",
+          "split": "held_out"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p012"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p012"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p014"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p014"
+            }
+          ],
+          "sequence_id": "eat_heldout_redundant",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 0,
+      "share_count": 0,
+      "trace_sha256": "c8d03cec63b399118d7bea2812d03532e68d73616c8ed2ca5500158f9a6a9fe2",
+      "trial_id": "KC-0A"
+    },
+    {
+      "consume_count": 8,
+      "divide_count": 0,
+      "event_count": 136,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_robin_animal"
+            }
+          ],
+          "sequence_id": "remember_fit_delay_0",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_robin_animal"
+            }
+          ],
+          "sequence_id": "remember_fit_delay_4",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_penguin_fly"
+            }
+          ],
+          "sequence_id": "remember_heldout_delay_16",
+          "split": "held_out"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p005"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p006"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            },
+            {
+              "kind": "RESET"
+            }
+          ],
+          "sequence_id": "remember_heldout_delay_64",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 3,
+      "share_count": 0,
+      "trace_sha256": "42c96b0f9b5ae85249973c56ab1491c25269d4f74b9bc551f3f39a1ce76a6d7c",
+      "trial_id": "KC-0B"
+    },
+    {
+      "consume_count": 12,
+      "divide_count": 0,
+      "event_count": 16,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p005"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p006"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_penguin_fly"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_ostrich_fly"
+            }
+          ],
+          "sequence_id": "pressure_fit_exceptions",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p011"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p016"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p017"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p019"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p020"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_salmon_swim"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_iron_conducts"
+            }
+          ],
+          "sequence_id": "pressure_heldout_collisions",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 4,
+      "share_count": 0,
+      "trace_sha256": "563cbee55aec8f056feebaedf8839e99ebe99b6b1bcf0ab9e204edf23572aa6c",
+      "trial_id": "KC-0C"
+    },
+    {
+      "consume_count": 12,
+      "divide_count": 2,
+      "event_count": 14,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p008"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p009"
+            },
+            {
+              "kind": "DIVIDE"
+            }
+          ],
+          "sequence_id": "divide_fit_mixed",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p011"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p014"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p015"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p018"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p020"
+            },
+            {
+              "kind": "DIVIDE"
+            }
+          ],
+          "sequence_id": "divide_heldout_mixed",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 0,
+      "share_count": 0,
+      "trace_sha256": "0ee346a32d655dbb32078d668206f169b31af4fa9181d3d12a2411630cf3233e",
+      "trial_id": "KC-0D"
+    },
+    {
+      "consume_count": 12,
+      "divide_count": 2,
+      "event_count": 16,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p008"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p009"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p012"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p013"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "SHARE"
+            }
+          ],
+          "sequence_id": "specialize_fit_mixed",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p011"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p016"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p017"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "SHARE"
+            }
+          ],
+          "sequence_id": "specialize_heldout_mixed",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 0,
+      "share_count": 2,
+      "trace_sha256": "f43c053070f073a4f2529091a4d16628773cbefb133c74867e6a67b9e6a4418e",
+      "trial_id": "KC-0E"
+    },
+    {
+      "consume_count": 4,
+      "divide_count": 0,
+      "event_count": 8,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_robin_animal"
+            }
+          ],
+          "sequence_id": "share_fit_neighbor",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p014"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p015"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_quartz_solid"
+            }
+          ],
+          "sequence_id": "share_heldout_neighbor",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 2,
+      "share_count": 2,
+      "trace_sha256": "80fc38cf19245558cafa268a29364e224f1d048b536784e4b8c68b981478242a",
+      "trial_id": "KC-0F"
+    },
+    {
+      "consume_count": 6,
+      "divide_count": 2,
+      "event_count": 12,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_robin_animal"
+            }
+          ],
+          "sequence_id": "lineage_fit_parent",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p006"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_ostrich_fly"
+            }
+          ],
+          "sequence_id": "lineage_heldout_descendant",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 2,
+      "share_count": 2,
+      "trace_sha256": "21eb74007c7343115bfabc17ec3f2f9b001a46d797265c05c9f224175084f069",
+      "trial_id": "KC-0G"
+    },
+    {
+      "consume_count": 6,
+      "divide_count": 4,
+      "event_count": 14,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p001"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p008"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "DIVIDE"
+            }
+          ],
+          "sequence_id": "ecology_fit",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p010"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p011"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p016"
+            },
+            {
+              "kind": "SHARE"
+            },
+            {
+              "kind": "DIVIDE"
+            }
+          ],
+          "sequence_id": "ecology_heldout",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 0,
+      "share_count": 4,
+      "trace_sha256": "80ddd6b9ea4782d8179a3848b44ada92899a1a952963cc8ff935baec99d664d3",
+      "trial_id": "KC-0H"
+    },
+    {
+      "consume_count": 10,
+      "divide_count": 2,
+      "event_count": 14,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "SHARE"
+            }
+          ],
+          "sequence_id": "adversarial_fit",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p012"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p012"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p013"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p013"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p014"
+            },
+            {
+              "kind": "DIVIDE"
+            },
+            {
+              "kind": "SHARE"
+            }
+          ],
+          "sequence_id": "adversarial_heldout",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 0,
+      "share_count": 2,
+      "trace_sha256": "df052bd95cc0342227e9b703b19078f79002308a39b64c3d32c676471a165f73",
+      "trial_id": "KC-0I"
+    },
+    {
+      "consume_count": 7,
+      "divide_count": 0,
+      "event_count": 9,
+      "fixture_sequences": [
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p000"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p002"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p003"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p004"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_penguin_fly"
+            }
+          ],
+          "sequence_id": "counterfactual_fit",
+          "split": "fit"
+        },
+        {
+          "events": [
+            {
+              "kind": "CONSUME",
+              "packet_id": "p005"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p006"
+            },
+            {
+              "kind": "CONSUME",
+              "packet_id": "p007"
+            },
+            {
+              "kind": "QUERY",
+              "query_id": "q_ostrich_fly"
+            }
+          ],
+          "sequence_id": "counterfactual_heldout",
+          "split": "held_out"
+        }
+      ],
+      "query_count": 2,
+      "share_count": 0,
+      "trace_sha256": "d29ea15736d9e307dc692185541f8a4280a23fbbac750d677572aa78e039dc5d",
+      "trial_id": "KC-0J"
+    }
+  ],
+  "unit": "KC-0-FIXTURE-DEV-SMOKE"
+}

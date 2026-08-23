@@ -1,0 +1,74 @@
+{
+  "all_citation_subsets_valid": true,
+  "all_outputs_valid": true,
+  "all_retrieval_integrity_pass": true,
+  "case_count": 27,
+  "embedding_usage": {
+    "input_tokens": 9792233,
+    "model_calls": 340,
+    "wall_seconds": 2254.867598799523
+  },
+  "mode": "live",
+  "run_id": "engineering_reasoning_v1",
+  "scorer_read_guard_active": true,
+  "seal_sha256": "e482c15bf6d0a8d680693c42dafb2b983117c91d91058f433c4978a1d9382a04",
+  "shared_client_contract": {
+    "checks": {
+      "embedding_batch_size": true,
+      "embedding_context_limit": true,
+      "model_seed": true
+    },
+    "pass": true
+  },
+  "split": "engineering",
+  "timing": {
+    "call_order_first_counts": {
+      "compiler_packet": 9,
+      "hybrid_rag_16": 9,
+      "max_context": 9
+    },
+    "document_embedding_wall_seconds": 2250.261665258673,
+    "fixed_document_build_seconds": 25.396128493128344,
+    "max_context_selection_seconds": 0.033987098722718656,
+    "online_query_seconds": {
+      "compiler_packet": 309.4889187718509,
+      "hybrid_rag_16": 285.49687033577356,
+      "max_context": 420.95026550034527
+    },
+    "query_embedding_wall_seconds": 4.605933540849946,
+    "retrieval_cpu_seconds": 5.8355651698075235
+  },
+  "usage": {
+    "compiler_packet": {
+      "maximum_output_tokens": 230,
+      "maximum_prompt_tokens": 1462,
+      "model_calls": 27,
+      "model_compute_seconds": 96.29155596500001,
+      "model_load_seconds": 4.596432334999999,
+      "output_tokens": 4173,
+      "prompt_tokens": 33083,
+      "wall_seconds": 309.4889187718509
+    },
+    "hybrid_rag_16": {
+      "maximum_output_tokens": 212,
+      "maximum_prompt_tokens": 2446,
+      "model_calls": 27,
+      "model_compute_seconds": 93.192228607,
+      "model_load_seconds": 4.507409172999999,
+      "output_tokens": 3631,
+      "prompt_tokens": 47090,
+      "wall_seconds": 275.0553716251161
+    },
+    "max_context": {
+      "maximum_output_tokens": 155,
+      "maximum_prompt_tokens": 8192,
+      "model_calls": 27,
+      "model_compute_seconds": 217.00115383999992,
+      "model_load_seconds": 4.557785291000001,
+      "output_tokens": 3060,
+      "prompt_tokens": 217939,
+      "wall_seconds": 420.91627840162255
+    }
+  },
+  "wall_seconds": 3310.3659477829933
+}

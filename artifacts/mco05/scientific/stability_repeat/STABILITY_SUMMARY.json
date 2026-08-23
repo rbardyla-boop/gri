@@ -1,0 +1,22 @@
+{
+  "all_repeat_citations_valid": true,
+  "all_repeat_outputs_valid": true,
+  "comparison_count": 12,
+  "exact_structured_agreement": 0.08333333333333333,
+  "exact_structured_matches": 1,
+  "experiment_id": "MCO-05",
+  "population_case_count": 36,
+  "run_id": "stability_repeat",
+  "scorer_read_guard_active": true,
+  "seal_sha256": "6d0a32f1d35b697ef08349c904ea5337d27f3a0375a597bffa08bb09792a280e",
+  "selected_case_count": 4,
+  "selected_ids": [
+    "incident_36543081ad4c4e526bd1",
+    "incident_c2ce064bf9041f633465",
+    "incident_75effa334500c3272815",
+    "incident_458a214115e52150427f"
+  ],
+  "semantic_agreement": 1.0,
+  "semantic_matches": 12,
+  "wall_seconds": 146.9253533160081
+}

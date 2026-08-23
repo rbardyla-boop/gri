@@ -1,0 +1,91 @@
+{
+  "schema": "GRI-02B-OPERATION-RULES-1",
+  "state_width": 8,
+  "counting_convention": {
+    "mac": "one fused multiply-add counts as one MAC",
+    "scalar_add": "one scalar addition, including a bias addition",
+    "constant_load": "one consumed scalar fixed or learned constant",
+    "token_lookup": "one token-to-vector embedding-table lookup",
+    "embedding_value_copy": "one scalar copied from the looked-up input vector",
+    "state_copy": "one scalar copied between state buffers",
+    "comparison": "one scalar comparison or branch predicate",
+    "nonlinearity": "one scalar activation evaluation",
+    "elementwise_mul": "one scalar multiplication outside a MAC",
+    "elementwise_one_minus": "one scalar subtraction from one",
+    "round": "one scalar round-to-nearest-even operation",
+    "quantization_clip": "one scalar clip comparison at one bound",
+    "quantization_scale_mul": "one scalar multiply by the frozen q8 scale or reciprocal",
+    "parameter_loads_inside_mac": "not counted separately; included in the MAC"
+  },
+  "parent_gri01_d8": {
+    "parameter_count": {
+      "input_embedding": 80,
+      "state_transform": 64,
+      "state_bias": 8,
+      "binary_readout": 16,
+      "readout_bias": 2,
+      "total_trainable_parameters": 170
+    },
+    "recurrent_step": {
+      "matrix_vector_mac": 64,
+      "token_lookup": 1,
+      "embedding_value_copy": 8,
+      "state_input_add": 8,
+      "bias_add": 8,
+      "bias_constant_load": 8,
+      "nonlinearity": 8,
+      "total_counted_operations": 97
+    },
+    "query_readout": {
+      "readout_mac": 16,
+      "readout_bias_add": 2,
+      "readout_bias_constant_load": 2,
+      "argmax_comparison": 1,
+      "total_counted_operations": 21
+    },
+    "recurrent_plus_query_total": 118
+  },
+  "matched_gru_d8": {
+    "equations": "z=sigmoid(W_z x+U_z h+b_z); r=sigmoid(W_r x+U_r h+b_r); n=tanh(W_n x+U_n(r*h)+b_n); h_next=z*h+(1-z)*n",
+    "parameter_count": {
+      "input_embedding": 80,
+      "three_input_gate_matrices": 192,
+      "three_recurrent_gate_matrices": 192,
+      "three_gate_biases": 24,
+      "binary_readout": 16,
+      "readout_bias": 2,
+      "total_trainable_parameters": 506,
+      "bias_convention": "one bias vector per GRU gate; no duplicate framework bias"
+    },
+    "recurrent_step": {
+      "six_matrix_vector_mac": 384,
+      "token_lookup": 1,
+      "embedding_value_copy": 8,
+      "bias_add": 24,
+      "bias_constant_load": 24,
+      "elementwise_mul": 24,
+      "elementwise_one_minus": 8,
+      "elementwise_add": 8,
+      "sigmoid": 16,
+      "tanh": 8,
+      "total_counted_operations": 505
+    },
+    "query_readout": {
+      "readout_mac": 16,
+      "readout_bias_add": 2,
+      "readout_bias_constant_load": 2,
+      "argmax_comparison": 1,
+      "total_counted_operations": 21
+    },
+    "recurrent_plus_query_total": 526
+  },
+  "q8_state_storage_overhead_reported_separately": {
+    "state_clip_comparisons": 16,
+    "reciprocal_scale_mul": 8,
+    "round_to_even": 8,
+    "integer_clip_comparisons": 16,
+    "dequantize_scale_mul": 8,
+    "scale_constant_load": 1,
+    "total_counted_operations": 57
+  }
+}

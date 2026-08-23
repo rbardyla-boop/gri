@@ -1,0 +1,36 @@
+{
+  "schema": "KC-3F-D-SCHEDULER-COUNTERFACTUAL-1",
+  "unit": "KC-3F-D",
+  "status": "DEV_CHARACTERIZATION_ONLY",
+  "population_tick_source_sha256": "290ad31ad658318f10e14a39aa0be6a7de684d8f527061447a44ed4fa7bf5502",
+  "population_tick_config_sha256": "0eeb04cf496d4bd77c5a1ecf9e81286bc57a8508daa9577eb929694fef2bbb6e",
+  "kc3e_characterization_source_sha256": "797f089a9b696a16a08309cbd164cbc6af1646d14fa3ffc05d41c00dadd668be",
+  "activation_source_sha256": "780c9209cb1cf199e1a719edbad24ce873b4fe33e24874a2387cda1561ad567d",
+  "manager_source_sha256": "af28edf692724d3bdc4a4737cd546f055f42832c6ae854898f7c7cf6b595f8f7",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "max_ticks": 4,
+  "max_activations_per_tick": 8,
+  "max_slot_contacts_per_tick": 112,
+  "max_total_activations": 32,
+  "max_total_slot_contacts": 448,
+  "order_names": ["ascending", "descending", "even_odd", "odd_even"],
+  "order_definitions": {
+    "ascending": "canonical numeric cell-id ascending",
+    "descending": "canonical numeric cell-id descending",
+    "even_odd": "even numeric cell ids followed by odd numeric cell ids",
+    "odd_even": "odd numeric cell ids followed by even numeric cell ids"
+  },
+  "random_source": false,
+  "adaptive_order": false,
+  "scheduler_state_bytes": 0,
+  "automatic_runner": false,
+  "background_execution": false,
+  "population_mutation": false,
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "fitness": "NOT_IMPLEMENTED",
+  "selection": "NOT_IMPLEMENTED",
+  "learning": "NOT_IMPLEMENTED"
+}
+

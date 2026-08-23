@@ -1,0 +1,167 @@
+{
+  "activate_source_audit": {
+    "class_count": 0,
+    "direct_state_snapshot_calls_in_activate": 1,
+    "forbidden_names_or_imports": [],
+    "global_statement_count": 0,
+    "runtime_signature": [
+      "population",
+      "source_id"
+    ],
+    "signature_ok": true,
+    "source_signature": [
+      "population",
+      "source_id"
+    ],
+    "status": "PASS"
+  },
+  "activate_source_sha256": "780c9209cb1cf199e1a719edbad24ce873b4fe33e24874a2387cda1561ad567d",
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "16874e7caa02c14191fc20e3b670e1338adb6e942aa89ad8b3cedd3853cb4a57",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "branching_wave": {
+      "branch_parent_activation": true,
+      "left_has_packet": true,
+      "parent_activation_targets_children": true,
+      "right_has_packet": true,
+      "tail_empty_before_secondary": true
+    },
+    "collision": {
+      "one_slot_contact": true,
+      "shared_replaces_conflict": true
+    },
+    "dead_neighbor": {
+      "dead_not_resurrected": true,
+      "dead_parent_or_child_ignored": true,
+      "survivors_unchanged_lifecycle": true
+    },
+    "duplicate_activation": {
+      "state_unchanged": true
+    },
+    "empty_source": {
+      "contact_count": true,
+      "population_unchanged": true
+    },
+    "last_copy_death": {
+      "no_live_cell_contains_packet": true,
+      "registry_cannot_reconstruct": true,
+      "registry_fields_only": true
+    },
+    "linear_wave": {
+      "activation_neighbors": [
+        [
+          "C1"
+        ],
+        [
+          "C0",
+          "C2"
+        ],
+        [
+          "C1",
+          "C3"
+        ]
+      ],
+      "c0_to_c1": true,
+      "c1_to_c2": true,
+      "c2_to_c3": true,
+      "c3_empty_before_c2": true
+    },
+    "mid_wave_restart": {
+      "live_ids_equal": true,
+      "registry_equal": true,
+      "state_digests_equal": true,
+      "tail_has_packet": true
+    },
+    "multi_packet_source": {
+      "target_has_both": true,
+      "two_slots_discovered": true
+    },
+    "no_automatic_activation": {
+      "explicit_only_count_unchanged": true,
+      "uncontacted_tail_empty": true
+    },
+    "partial_source": {
+      "one_slot": true,
+      "registry_unchanged": true,
+      "target_has_only_packet": true
+    },
+    "population_cap": {
+      "at_cap": true,
+      "cap_rejected": true,
+      "live_ids_unchanged": true,
+      "registry_unchanged": true
+    },
+    "population_immutability": {
+      "live_ids_unchanged": true,
+      "population_count": 4
+    },
+    "post_birth_acquisition": {
+      "all_empty_before": true,
+      "only_source_after": true
+    },
+    "registry_immutability": {
+      "generation_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "registry_unchanged": true
+    },
+    "secondary_propagation": {
+      "tail_contacted_by_received_child": true,
+      "tail_receives_from_branch": true
+    },
+    "source_death": {
+      "descendant_continues": true,
+      "source_dead": true
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "branching_wave": true,
+    "collision": true,
+    "dead_neighbor": true,
+    "duplicate_activation": true,
+    "empty_source": true,
+    "last_copy_death": true,
+    "linear_wave": true,
+    "mid_wave_restart": true,
+    "multi_packet_source": true,
+    "no_automatic_activation": true,
+    "partial_source": true,
+    "population_cap": true,
+    "population_immutability": true,
+    "post_birth_acquisition": true,
+    "registry_immutability": true,
+    "replay": true,
+    "secondary_propagation": true,
+    "source_death": true,
+    "source_signature_audit": true,
+    "zero_policy_state": true
+  },
+  "child_creation_source_sha256": "f3fdf0d4ae6bda8d103549c22c20f7a8d4e53fcf7b54700b6aedc1198b900046",
+  "config_sha256": "ea0f4a36388fbb0e5a6d250cbff489648bffa7f990eb027d4be38aa8f1c746aa",
+  "export_source_sha256": "e52eeca7266584c7ee963a2a0d2b4ca8da2c63530dd6337a3fb7008bb76b4264",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "manager_source_sha256": "af28edf692724d3bdc4a4737cd546f055f42832c6ae854898f7c7cf6b595f8f7",
+  "note": "Development local contact-selection characterization only; automatic activation, selection, and scientific conclusions are forbidden.",
+  "resource_manifest": {
+    "automatic_activation": 0,
+    "automatic_contacts": 0,
+    "creates_children": false,
+    "knowledge_map": false,
+    "persistent_policy_fields": [],
+    "policy_state_bytes": 0,
+    "registry_mutation": false,
+    "target_state_policy_inspection": false
+  },
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "share_source_sha256": "45a1e6f76721f6e5988323276dce2defb8463dafbd491da34974263b2728b223",
+  "status": "PASS",
+  "unit": "KC-3C-D",
+  "verdict": "KC_3C_DEV_COMPLETE"
+}

@@ -1,0 +1,52 @@
+{
+  "unit": "GRI-SC-3E-ONE-RUN-EXECUTION-AUTHORIZATION",
+  "status": "AUTHORIZATION_VERIFIED_BEFORE_RUN",
+  "executions_authorized": 1,
+  "development_runs": 0,
+  "retries": 0,
+  "post_result_tuning": false,
+  "scientific_run_started": false,
+  "scientific_result": "NONE",
+  "authorization_manifest_path": "experiments/candidates/GRI-SC-3E-one-run-execution-authorization.json",
+  "authorization_manifest_sha256": "82a20e72a663dd7301a636e3d034533b3050c39fe28dccd29c118cc0100bb8cb",
+  "authorization_record_path": "docs/GRI-SC-3E-ONE-RUN-EXECUTION-AUTHORIZATION.md",
+  "authorization_record_sha256": "dbdd5ddc492963d69caf6c7bbe64b165b46f1451f42cda0ba81822cbe43eec22",
+  "anchors": {
+    "sc3_machine_contract_sha256": "590d6606ff23cdfb02e9285f71772c9fab52d5b46fdd693a842ad83b5a242987",
+    "sc3_record_sha256": "5606d312b5148debb9e1cac223bd00bbd1bd530c2ed08901b0d037dac36bdeb2",
+    "sc3_verification_sha256": "d5cff851674232b3829ee0f7083655c07d11d7c749779c811c5398bf30fb74f4",
+    "sc2_freeze_sha256": "03ec6bc36c8b5d4d764bdbef3bccf875294c1b9b8512d23614643beef0638e9d"
+  },
+  "verification": {
+    "authorization_manifest_json_valid": true,
+    "authorization_record_hash_matches": true,
+    "sc3_machine_contract_anchor_matches": true,
+    "sc3_record_anchor_matches": true,
+    "sc3_verification_anchor_matches": true,
+    "sc2_freeze_anchor_matches": true,
+    "one_execution_limit_present": true,
+    "zero_development_runs_present": true,
+    "zero_retries_present": true,
+    "preflight_failure_does_not_consume_authorization": true,
+    "mechanical_verdicts_only": true,
+    "finite_state_oracle_reference_rule_present": true,
+    "scientific_preflight_executed": false,
+    "scientific_run_started": false,
+    "scientific_result_created": false
+  },
+  "execution": {
+    "command": "python3 experiments/run_gri_sc3.py --authorization experiments/candidates/GRI-SC-3E-one-run-execution-authorization.json",
+    "entrypoint_invoked": false,
+    "execution_token_consumed": false,
+    "preflight_receipt_path": "artifacts/results/gri_sc3e_preflight_receipt.json",
+    "environment_receipt_path": "artifacts/results/gri_sc3_environment_receipt.json",
+    "result_receipt_path": "artifacts/results/gri_sc3_scientific_run_receipt.json"
+  },
+  "next_state": {
+    "sc3e": "ONE EXECUTION AUTHORIZED",
+    "scientific_run": "NOT STARTED",
+    "scientific_result": "NONE",
+    "human_verdict_selection": "FORBIDDEN"
+  },
+  "authorized_at_utc": "2026-08-20T23:13:20Z"
+}

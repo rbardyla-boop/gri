@@ -1,0 +1,297 @@
+{
+  "benchmark_commit": "0c3c476e4627978dc54b5c047fd488d40561b4e5",
+  "case_count": 36,
+  "claim_verification": "FAIL",
+  "embedding_usage": {
+    "input_tokens": 559119,
+    "model_calls": 285,
+    "wall_seconds": 220.2003101266455
+  },
+  "experiment_id": "MCO-05",
+  "gates": {
+    "best_reasoning_control": "hybrid_rag_16",
+    "best_reasoning_control_accuracy": 0.2777777777777778,
+    "bounded_inference_advance": false,
+    "candidate_recall": 0.8214285714285714,
+    "candidate_recall_count": 23,
+    "candidate_recall_n": 28,
+    "compiler_transfer": false,
+    "conventional_dominates": false,
+    "integrity_pass": true,
+    "packet_accuracy": 0.3333333333333333,
+    "packet_adversarial_accuracy": 0.0,
+    "packet_no_code_accuracy": 0.125,
+    "packet_quality": false,
+    "packet_quality_advantage": 0.055555555555555525,
+    "packet_wilson95": [
+      0.2021461882430531,
+      0.4966600212884348
+    ]
+  },
+  "mechanical_metrics": {
+    "alert_service_deploy": {
+      "accuracy": 0.1388888888888889,
+      "correct": 5,
+      "decoy_hits": 26,
+      "n": 36,
+      "wilson95": [
+        0.06081815009132838,
+        0.286595303893562
+      ]
+    },
+    "always_none": {
+      "accuracy": 0.2222222222222222,
+      "correct": 8,
+      "decoy_hits": 0,
+      "n": 36,
+      "wilson95": [
+        0.11716331975796462,
+        0.3808470294611818
+      ]
+    },
+    "candidate_coverage": {
+      "accuracy": 0.8214285714285714,
+      "correct": 23,
+      "n": 28,
+      "wilson95": [
+        0.6440857521065705,
+        0.9212149805439572
+      ]
+    },
+    "direct_compiler": {
+      "accuracy": 0.3055555555555556,
+      "correct": 11,
+      "n": 36,
+      "wilson95": [
+        0.1800445159482992,
+        0.4685627285051034
+      ]
+    },
+    "earliest_deploy": {
+      "accuracy": 0.16666666666666666,
+      "correct": 6,
+      "decoy_hits": 11,
+      "n": 36,
+      "wilson95": [
+        0.07870447595018114,
+        0.31890794311279463
+      ]
+    },
+    "latest_commit": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "decoy_hits": 0,
+      "n": 36,
+      "wilson95": [
+        0.0,
+        0.09641862859446367
+      ]
+    },
+    "latest_deploy": {
+      "accuracy": 0.027777777777777776,
+      "correct": 1,
+      "decoy_hits": 30,
+      "n": 36,
+      "wilson95": [
+        0.004920407139810443,
+        0.14169718653273855
+      ]
+    },
+    "scripted_rca": {
+      "accuracy": 0.19444444444444445,
+      "correct": 7,
+      "decoy_hits": 26,
+      "n": 36,
+      "wilson95": [
+        0.09753095418928728,
+        0.3502804299517739
+      ]
+    }
+  },
+  "overall_integrity": "PASS",
+  "reasoning_metrics": {
+    "hybrid_rag_16": {
+      "accuracy": 0.2777777777777778,
+      "adversarial_accuracy": 0.25,
+      "citation_subset_valid": 1.0,
+      "correct": 10,
+      "decoy_hits": 19,
+      "failure_classes": {
+        "ABSTENTION_FAILURE": 8,
+        "NONE": 10,
+        "REASONING_FAILURE": 18
+      },
+      "n": 36,
+      "no_code_accuracy": 0.0,
+      "validity": 1.0,
+      "wilson95": [
+        0.1584833794013461,
+        0.43992489997397105
+      ]
+    },
+    "max_context": {
+      "accuracy": 0.2222222222222222,
+      "adversarial_accuracy": 0.08333333333333333,
+      "citation_subset_valid": 1.0,
+      "correct": 8,
+      "decoy_hits": 7,
+      "failure_classes": {
+        "ABSTENTION_FAILURE": 1,
+        "NONE": 8,
+        "REASONING_FAILURE": 27
+      },
+      "n": 36,
+      "no_code_accuracy": 0.875,
+      "validity": 1.0,
+      "wilson95": [
+        0.11716331975796462,
+        0.3808470294611818
+      ]
+    },
+    "state_packet": {
+      "accuracy": 0.3333333333333333,
+      "adversarial_accuracy": 0.0,
+      "citation_subset_valid": 1.0,
+      "correct": 12,
+      "decoy_hits": 15,
+      "failure_classes": {
+        "ABSTENTION_FAILURE": 7,
+        "NONE": 12,
+        "REASONING_FAILURE": 12,
+        "SELECTION_FAILURE": 5
+      },
+      "n": 36,
+      "no_code_accuracy": 0.125,
+      "validity": 1.0,
+      "wilson95": [
+        0.2021461882430531,
+        0.4966600212884348
+      ]
+    }
+  },
+  "reasoning_timing": {
+    "call_order_first_counts": {
+      "hybrid_rag_16": 12,
+      "max_context": 12,
+      "state_packet": 12
+    },
+    "document_embedding_wall_seconds": 193.37369545118418,
+    "max_context_selection_seconds": 0.06876829895190895,
+    "online_query_seconds": {
+      "hybrid_rag_16": 464.0303962727776,
+      "max_context": 390.3549908729037,
+      "state_packet": 360.1361498538172
+    },
+    "query_embedding_wall_seconds": 26.826614675461315,
+    "retrieval_cpu_seconds": 0.41187976067885756
+  },
+  "reasoning_usage": {
+    "hybrid_rag_16": {
+      "maximum_output_tokens": 296,
+      "maximum_prompt_tokens": 4671,
+      "model_calls": 36,
+      "output_tokens": 7698,
+      "prompt_tokens": 143556,
+      "wall_seconds": 436.7919018366374
+    },
+    "max_context": {
+      "maximum_output_tokens": 241,
+      "maximum_prompt_tokens": 4428,
+      "model_calls": 36,
+      "output_tokens": 6569,
+      "prompt_tokens": 153615,
+      "wall_seconds": 390.2862225739518
+    },
+    "state_packet": {
+      "maximum_output_tokens": 281,
+      "maximum_prompt_tokens": 4394,
+      "model_calls": 36,
+      "output_tokens": 6888,
+      "prompt_tokens": 111613,
+      "wall_seconds": 360.1361498538172
+    }
+  },
+  "stability_semantic_agreement": 1.0,
+  "training_accounting": {
+    "dmc_historical_optimizer_steps_preserved": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN",
+    "mco05_online_optimizer_steps": 0,
+    "pretrained_model_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "verdict": "MCO_05_DISJOINT_COMPILER_TRANSFER_FAILURE",
+  "verification": {
+    "checks": {
+      "all_variants_below_context_limit": true,
+      "call_order_balanced": true,
+      "case_count": true,
+      "expected_adversarial_count": true,
+      "expected_no_code_count": true,
+      "freeze": true,
+      "live_receipts": true,
+      "mechanical_capacity": true,
+      "mechanical_live_recomputation": true,
+      "mechanical_replay_recomputation": true,
+      "mechanical_replay_scorer_guard": true,
+      "mechanical_scorer_guard": true,
+      "opacity": true,
+      "preflight": true,
+      "reasoning_citations": true,
+      "reasoning_outputs": true,
+      "reasoning_replay_scorer_guard": true,
+      "reasoning_scorer_guard": true,
+      "replay": true,
+      "replay_receipts": true,
+      "stability_citations": true,
+      "stability_outputs": true,
+      "stability_receipts": true,
+      "stability_scorer_guard": true,
+      "stability_selection": true,
+      "stability_semantic": true
+    },
+    "freeze": {
+      "checks": {
+        "benchmark_commit": true,
+        "embedding_identity": true,
+        "freeze_digest": true,
+        "ollama_version": true,
+        "reasoner_identity": true,
+        "source_hashes": true,
+        "zero_data_at_freeze": true
+      },
+      "mismatches": [],
+      "pass": true
+    },
+    "live_receipts": {
+      "checked_calls": 108,
+      "failures": [],
+      "pass": true,
+      "run_id": "live_reasoning"
+    },
+    "mechanical_live_recomputation": {
+      "checked_cases": 36,
+      "failures": [],
+      "pass": true,
+      "run_id": "live_mechanical"
+    },
+    "mechanical_replay_recomputation": {
+      "checked_cases": 36,
+      "failures": [],
+      "pass": true,
+      "run_id": "replay_mechanical"
+    },
+    "pass": true,
+    "replay_receipts": {
+      "checked_calls": 108,
+      "failures": [],
+      "pass": true,
+      "run_id": "replay_reasoning"
+    },
+    "stability_receipts": {
+      "checked_calls": 12,
+      "failures": [],
+      "pass": true,
+      "run_id": "stability_repeat"
+    }
+  },
+  "world_impact_disposition": "NOT_ESTABLISHED"
+}

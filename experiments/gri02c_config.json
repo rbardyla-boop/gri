@@ -1,0 +1,98 @@
+{
+  "unit": "GRI-02C-IDENTITY-PRESERVE-CELL",
+  "status": "IMPLEMENTATION_AUTHORIZED_BEFORE_RUN",
+  "authorization": "GRI-02C implementation authorized by project decision; training was not authorized until this frozen declaration",
+  "parent_b_config": "gri02b_config.json",
+  "parent_b_config_sha256": "a8bf002449646151e32474b0b88d88f37e1cd9893bc4c9a90080c4495b1c693b",
+  "parent_b_receipt": "../artifacts/results/gri02b_preregistration_receipt.json",
+  "parent_b_receipt_sha256": "b950588c82b1b6ca77a90d769362fdeb6ddb24750b7d0390a5c1f3ec861cc56f",
+  "parent_b_harness": "gri02b_preregistration.py",
+  "parent_b_harness_sha256": "3d17031568614e6ec8043af10c7f71443f4ddfd8d35dea4bbcf578c12d38f217",
+  "state_width": 8,
+  "persistent_state_slots": 8,
+  "hidden_auxiliary_state": 0,
+  "history_buffer": 0,
+  "step_counter": 0,
+  "phase_variable": 0,
+  "preserve_parameters": 0,
+  "input_alphabet": [
+    "PAD", "BIT_0", "BIT_1", "A", "B", "CORRECT", "WAIT",
+    "QUERY_DELAY", "QUERY_CORRECTION", "QUERY_ORDER"
+  ],
+  "transition_class": {
+    "preserve_tokens": ["WAIT"],
+    "transform_tokens": [
+      "PAD", "BIT_0", "BIT_1", "A", "B", "CORRECT",
+      "QUERY_DELAY", "QUERY_CORRECTION", "QUERY_ORDER"
+    ],
+    "selection_source": "frozen token semantics only",
+    "selection_forbidden_sources": ["hidden state", "elapsed step", "task identity", "label", "sequence position"]
+  },
+  "architecture": {
+    "preserve": "h_next = h",
+    "transform": "h_next = tanh(W h + E[token] + b)",
+    "readout": "logits = O h + c after the query transition",
+    "tied_transform": true,
+    "parameter_count": 170,
+    "parameter_breakdown": {
+      "input_embedding": 80,
+      "state_transform": 64,
+      "state_bias": 8,
+      "binary_readout": 16,
+      "readout_bias": 2
+    }
+  },
+  "operation_counting": {
+    "transition_selector": "frozen external token-semantic dispatch; counted as 0 candidate state operations",
+    "preserve_state_operations": 0,
+    "transform_state_operations": 97,
+    "query_readout_operations": 21,
+    "transform_plus_query_operations": 118,
+    "q8_storage_overhead": 57,
+    "budget_reference": "GRI-02B operation rules"
+  },
+  "training": {
+    "seeds": [20260820, 20260821, 20260822],
+    "optimizer": "SGD",
+    "learning_rate": 0.03,
+    "weight_decay": 0.0,
+    "epochs": 400,
+    "arithmetic": "float32",
+    "fixtures": "split=fit only",
+    "post_result_tuning": false
+  },
+  "evaluation_modes": {
+    "required": ["float64", "float32", "q8"],
+    "stress_only": ["float16", "bfloat16"],
+    "q8": "frozen B rule: float32 transition arithmetic; quantize state after every recurrent step"
+  },
+  "ablations": {
+    "no_preserve": "same trained parameters; every token uses the ordinary tanh transform",
+    "no_transform": "same trained parameters; every token uses identity, including information-changing tokens",
+    "no_recurrence": "same trained parameters; reset h to zero before every active token, then apply candidate token semantics",
+    "credit_rule": "each ablation must fail its named held-out criterion for every seed"
+  },
+  "verdict_inputs": {
+    "candidate_preserve_pass": "required-mode output accuracy is 1.0 on all preserve fixtures for every seed",
+    "candidate_transform_pass": "required-mode output accuracy is 1.0 on all transform fixtures for every seed",
+    "candidate_fixed_decoder_pass": "one LP decoder per task, fit on fit states only, is perfect with positive margin on fit and held-out states in every required mode and seed",
+    "candidate_precision_pass": "candidate output and fixed-decoder gates pass in float64, float32, and q8",
+    "parent_opponent_pass": "candidate required-mode held-out output passes while the same-seed parent fails at least one required-mode held-out output for every seed",
+    "stateless_opponent_pass": "candidate required-mode held-out output passes while the same-seed stateless baseline fails at least one required-mode held-out output for every seed",
+    "no_preserve_ablation_failed": "no-preserve fails a held-out preserve or transform output criterion for every seed",
+    "no_transform_ablation_failed": "no-transform fails a held-out transform output criterion for every seed",
+    "no_recurrence_ablation_failed": "no-recurrence fails a held-out recurrence-dependent output criterion for every seed"
+  },
+  "forbidden": [
+    "GRU gates",
+    "extra memory vector",
+    "clock",
+    "phase counter",
+    "geometry",
+    "dimensional memory",
+    "routing network",
+    "learned connection graph",
+    "post-result redesign",
+    "post-result tuning"
+  ]
+}

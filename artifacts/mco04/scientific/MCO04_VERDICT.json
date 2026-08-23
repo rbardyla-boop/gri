@@ -1,0 +1,196 @@
+{
+  "case_count": 63,
+  "compiler_ingestion_seconds": 8.138185914838687,
+  "cost_accounting": {
+    "cache_hits_are_not_fresh_inference": true,
+    "estimated_usd": null,
+    "local_billed_usd": 0.0,
+    "pretrained_model_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "embedding_usage": {
+    "input_tokens": 22661620,
+    "model_calls": 777,
+    "wall_seconds": 5151.980931812548
+  },
+  "experiment_id": "MCO-04",
+  "freeze_sha256": "3f908467720c30f0f2fec23726c95fa7970590e302e8e32f59756b163cb13acd",
+  "gates": {
+    "best_mechanical_control": "single_feature_robust",
+    "best_mechanical_top1": 0.31746031746031744,
+    "best_reasoning_control": "max_context",
+    "best_reasoning_top1": 0.2698412698412698,
+    "bounded_inference_advance": false,
+    "capacity": true,
+    "compiler_quality": true,
+    "compiler_quality_advantage": 0.6825396825396826,
+    "compiler_top1": 1.0,
+    "compiler_top3": 1.0,
+    "compiler_wilson95": [
+      0.9425288004111484,
+      1.0
+    ],
+    "compression": true,
+    "conventional_dominates": false,
+    "direct_compiler_gate": true,
+    "integrity_pass": true,
+    "packet_hybrid_cost_win": false,
+    "packet_hybrid_quality_equivalent": false,
+    "packet_max_context_cost_win": false,
+    "packet_max_context_quality_equivalent": false,
+    "packet_quality": true,
+    "packet_quality_advantage": 0.0,
+    "packet_top1": 1.0,
+    "packet_vs_hybrid_model_latency_reduction": 0.8969538331973047,
+    "packet_vs_hybrid_online_latency_reduction": 0.9307087285607676,
+    "packet_vs_hybrid_prompt_token_reduction": 1.44527139740793,
+    "packet_vs_max_context_model_latency_reduction": 1.5814234931742532,
+    "packet_vs_max_context_online_latency_reduction": 1.581524341125471,
+    "packet_vs_max_context_prompt_token_reduction": 5.510342615167458,
+    "provenance": true,
+    "stability_pass": true
+  },
+  "median_compression": 1331.739414694894,
+  "minimum_compression": 215.19289176090467,
+  "overall_verification": "PASS",
+  "packet_fault_exact": 0.0,
+  "reasoning_timing": {
+    "call_order_first_counts": {
+      "compiler_packet": 21,
+      "hybrid_rag_16": 21,
+      "max_context": 21
+    },
+    "document_embedding_wall_seconds": 5140.823961565155,
+    "fixed_document_build_seconds": 60.681177529739216,
+    "max_context_selection_seconds": 0.07452296395786107,
+    "online_query_seconds": {
+      "compiler_packet": 738.9635888291523,
+      "hybrid_rag_16": 687.7598622118821,
+      "max_context": 1168.6889029387385
+    },
+    "query_embedding_wall_seconds": 11.156970247393474,
+    "retrieval_cpu_seconds": 13.786668370943516
+  },
+  "reasoning_usage": {
+    "compiler_packet": {
+      "maximum_output_tokens": 208,
+      "maximum_prompt_tokens": 1469,
+      "model_calls": 63,
+      "model_compute_seconds": 222.29168985899994,
+      "model_load_seconds": 10.771362132,
+      "output_tokens": 9858,
+      "prompt_tokens": 77930,
+      "wall_seconds": 738.9635888291523
+    },
+    "hybrid_rag_16": {
+      "maximum_output_tokens": 173,
+      "maximum_prompt_tokens": 2463,
+      "model_calls": 63,
+      "model_compute_seconds": 222.167191031,
+      "model_load_seconds": 10.634262213,
+      "output_tokens": 8590,
+      "prompt_tokens": 112630,
+      "wall_seconds": 662.8162235935451
+    },
+    "max_context": {
+      "maximum_output_tokens": 216,
+      "maximum_prompt_tokens": 7698,
+      "model_calls": 63,
+      "model_compute_seconds": 474.1620924409999,
+      "model_load_seconds": 10.462794804000001,
+      "output_tokens": 9055,
+      "prompt_tokens": 429421,
+      "wall_seconds": 1168.6143799747806
+    }
+  },
+  "stability_semantic_agreement": 1.0,
+  "training_accounting": {
+    "dmc_historical_optimizer_steps_preserved": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN",
+    "mco04_online_optimizer_steps": 0,
+    "pretrained_model_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "verdict": "MCO_04_TRANSPARENT_STATE_COMPILER_REPLICATION_ADVANCE",
+  "verification": {
+    "checks": {
+      "freeze": true,
+      "live_receipts": true,
+      "max_context_below_limit": true,
+      "mechanical_live_recomputation": true,
+      "mechanical_replay_count": true,
+      "mechanical_replay_recomputation": true,
+      "mechanical_replay_scorer_guard": true,
+      "mechanical_score_count": true,
+      "mechanical_scorer_guard": true,
+      "mechanical_scoring_binding": true,
+      "opacity": true,
+      "preflight": true,
+      "reasoning_call_order_balanced": true,
+      "reasoning_case_count": true,
+      "reasoning_replay_call_order_balanced": true,
+      "reasoning_replay_count": true,
+      "reasoning_replay_scorer_guard": true,
+      "reasoning_replay_shared_client_contract": true,
+      "reasoning_scorer_guard": true,
+      "reasoning_scoring_binding": true,
+      "reasoning_shared_client_contract": true,
+      "replay": true,
+      "replay_receipts": true,
+      "retrieval_integrity": true,
+      "scientific_case_count": true,
+      "stability_citations": true,
+      "stability_outputs": true,
+      "stability_receipts": true,
+      "stability_scorer_guard": true,
+      "stability_seal": true,
+      "stability_selection": true
+    },
+    "freeze": {
+      "checks": {
+        "embedding_identity": true,
+        "freeze_digest": true,
+        "ollama_version": true,
+        "reasoner_identity": true,
+        "source_hashes": true,
+        "zero_scientific_calls_at_freeze": true,
+        "zero_scientific_telemetry_at_freeze": true
+      },
+      "mismatches": [],
+      "pass": true
+    },
+    "live_receipts": {
+      "checked_calls": 189,
+      "failures": [],
+      "pass": true,
+      "run_id": "live_reasoning",
+      "split": "scientific"
+    },
+    "mechanical_live_recomputation": {
+      "checked_cases": 63,
+      "failures": [],
+      "pass": true,
+      "run_id": "live_mechanical",
+      "split": "scientific"
+    },
+    "mechanical_replay_recomputation": {
+      "checked_cases": 63,
+      "failures": [],
+      "pass": true,
+      "run_id": "replay_mechanical",
+      "split": "scientific"
+    },
+    "replay_receipts": {
+      "checked_calls": 189,
+      "failures": [],
+      "pass": true,
+      "run_id": "replay_reasoning",
+      "split": "scientific"
+    },
+    "stability_receipts": {
+      "checked_calls": 21,
+      "failures": [],
+      "pass": true,
+      "run_id": "stability_repeat"
+    }
+  },
+  "world_impact_disposition": "NOT_ESTABLISHED"
+}

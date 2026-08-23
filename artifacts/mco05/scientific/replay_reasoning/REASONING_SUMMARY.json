@@ -1,0 +1,58 @@
+{
+  "all_citation_subsets_valid": true,
+  "all_outputs_valid": true,
+  "case_count": 36,
+  "embedding_usage": {
+    "input_tokens": 559119,
+    "model_calls": 285,
+    "wall_seconds": 220.2003101266455
+  },
+  "experiment_id": "MCO-05",
+  "mechanical_run_id": "replay_mechanical",
+  "mode": "replay",
+  "run_id": "replay_reasoning",
+  "scorer_read_guard_active": true,
+  "seal_sha256": "31ec668aedef147e50e372762671030e210a1b8bba1e66b22458a26a625a2e66",
+  "timing": {
+    "call_order_first_counts": {
+      "hybrid_rag_16": 12,
+      "max_context": 12,
+      "state_packet": 12
+    },
+    "document_embedding_wall_seconds": 193.37369545118418,
+    "max_context_selection_seconds": 0.0881607485935092,
+    "online_query_seconds": {
+      "hybrid_rag_16": 464.2879285950912,
+      "max_context": 390.3743833225453,
+      "state_packet": 360.1361498538172
+    },
+    "query_embedding_wall_seconds": 26.826614675461315,
+    "retrieval_cpu_seconds": 0.6694120829924941
+  },
+  "usage": {
+    "hybrid_rag_16": {
+      "maximum_output_tokens": 296,
+      "maximum_prompt_tokens": 4671,
+      "model_calls": 36,
+      "output_tokens": 7698,
+      "prompt_tokens": 143556,
+      "wall_seconds": 436.7919018366374
+    },
+    "max_context": {
+      "maximum_output_tokens": 241,
+      "maximum_prompt_tokens": 4428,
+      "model_calls": 36,
+      "output_tokens": 6569,
+      "prompt_tokens": 153615,
+      "wall_seconds": 390.2862225739518
+    },
+    "state_packet": {
+      "maximum_output_tokens": 281,
+      "maximum_prompt_tokens": 4394,
+      "model_calls": 36,
+      "output_tokens": 6888,
+      "prompt_tokens": 111613,
+      "wall_seconds": 360.1361498538172
+    }
+  }
+}

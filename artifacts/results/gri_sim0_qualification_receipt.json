@@ -1,0 +1,58 @@
+{
+  "budget_regression": {
+    "errors": [
+      "experiment.budgets: missing key recurrent_plus_query_operations_max",
+      "experiment.budgets: invalid budget recurrent_plus_query_operations_max"
+    ],
+    "status": "PASS"
+  },
+  "candidate_preflight": {
+    "error_count": 6,
+    "errors": [
+      "candidate: no implementation authorization",
+      "candidate: authorization_id missing",
+      "candidate: source hash mismatch",
+      "candidate: parameter budget missing/exceeded",
+      "candidate: recurrent operation budget missing/exceeded",
+      "candidate: independent accounting audit not PASS"
+    ],
+    "status": "FAIL"
+  },
+  "candidate_present": false,
+  "checks": {
+    "deterministic_replay": true,
+    "fit_only_decoder": true,
+    "kc0_fixture_smoke": true,
+    "missing_budget_fails_closed": true,
+    "reference_manifest": true,
+    "restart_trace": true,
+    "unauthorized_candidate_fails_closed": true
+  },
+  "kc0_fixture_smoke": {
+    "bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+    "status": "PASS",
+    "trial_count": 10
+  },
+  "note": "Infrastructure qualification only; the probe cell is not a research candidate.",
+  "receipt_sha256": "1e51c46290b85e8df971990911f69740c08b03bab51b62f8dbe27ce12e14e6e6",
+  "reference_preflight": {
+    "errors": [],
+    "experiment_id": "GRI-02B-REFERENCE-ENVIRONMENT",
+    "sha256": "26bf08851e52c48caa7cc2c5340641f7e82c3be097d1a4e0f215c1b9353849ce",
+    "status": "PASS"
+  },
+  "runtime_replay": {
+    "matched": true,
+    "status": "PASS",
+    "trace_sha256": "5adc8bbfa2e2be9bd5400e41b6761b79628f71c6d3d4800a52855dbcd10fb1bd"
+  },
+  "runtime_trace": {
+    "restart_cases": 4,
+    "status": "PASS",
+    "trace_sha256": "5adc8bbfa2e2be9bd5400e41b6761b79628f71c6d3d4800a52855dbcd10fb1bd"
+  },
+  "scientific_execution": "FORBIDDEN",
+  "scientific_verdict": "FORBIDDEN",
+  "status": "PASS",
+  "unit": "GRI-SIM-0-QUALIFICATION"
+}

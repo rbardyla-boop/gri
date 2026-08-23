@@ -1,0 +1,79 @@
+{
+  "schema": "GRI-SC-2-CANDIDATE-FREEZE-1",
+  "unit": "GRI-SC-2-CANDIDATE-FREEZE",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_RUN",
+  "scientific_execution": false,
+  "scientific_verdict": "FORBIDDEN",
+  "candidate": {
+    "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+    "source_path": "experiments/candidates/GRI-SC-1/branchfree_residual.py",
+    "source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+    "manifest_path": "experiments/candidates/GRI-SC-1/branchfree_residual_manifest.json",
+    "manifest_sha256": "f7e6e9617ef810a22aed9c097021ab41a88b32609cfaac2857e0d63fd65f9584",
+    "formula": "u=tanh(D⊙h+E[token]); h_next=h+E[token][semantic_code]·(u-h); semantic_code(WAIT)=0; semantic_code(event)=1",
+    "persistent_state_slots": 8,
+    "trainable_parameters": 96,
+    "fixed_semantic_code_slots": 10,
+    "auxiliary_state_slots": 0,
+    "history_buffer": 0,
+    "step_counter": 0,
+    "phase_variable": 0,
+    "recurrent_operations": 57,
+    "recurrent_plus_query_operations": 78,
+    "runtime_selector_comparisons": 0,
+    "serialization_fields": ["persistent_state"]
+  },
+  "training": {
+    "optimizer": "SGD",
+    "learning_rate": 0.1,
+    "epochs": 400,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "seeds": [20260820, 20260821, 20260822],
+    "training_split": "fit only",
+    "arithmetic": "float32",
+    "initialization": "default seeded Candidate B initialization",
+    "representability_witness_initialization": false,
+    "post_result_tuning": false,
+    "selection_reason": "Both SGD 0.1 and Adam 0.003 met the SC-1L three-seed development criterion; SGD is selected for the simpler procedure and continuity with the parent protocol."
+  },
+  "scientific_inputs": {
+    "fixture_bank_path": "experiments/gri02b_fixture_bank.json",
+    "fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960",
+    "operation_rules_path": "experiments/gri02b_operation_rules.json",
+    "operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+    "gri02b_config_path": "experiments/gri02b_config.json",
+    "gri02b_config_sha256": "a8bf002449646151e32474b0b88d88f37e1cd9893bc4c9a90080c4495b1c693b",
+    "gri02b_harness_path": "experiments/gri02b_preregistration.py",
+    "gri02b_harness_sha256": "3d17031568614e6ec8043af10c7f71443f4ddfd8d35dea4bbcf578c12d38f217",
+    "gri02b_receipt_sha256": "b950588c82b1b6ca77a90d769362fdeb6ddb24750b7d0390a5c1f3ec861cc56f",
+    "gri02b_contract_sha256": "22d2a4a147d7e829f9cbcab246f6dba05bebffea6abdfa5b377aeef3171d660c"
+  },
+  "development_anchors": {
+    "sc1r_representability_receipt_sha256": "efdce8201193e52931cbbc88c703c2a199ebcfc5cef0b178c13aa22251e831bc",
+    "sc1r1_accounting_receipt_sha256": "50e35bff74a0918342ee58b339bfc74e9dfb7f6462f59a302eff79335706135e",
+    "sc1l_authorization_sha256": "25142cc2d044d3d07c1459ea9e345d6c2f87141876c6ac8588c8149d420712d4",
+    "sc1l_result_sha256": "b91a3fd10e3df7a1f24f301bd199a1d27b3938720f0fc8a635de51fb476df0af"
+  },
+  "evaluation": {
+    "required_precision_modes": ["float64", "float32", "q8"],
+    "stress_precision_modes": ["float16", "bfloat16"],
+    "q8_rule": "float32 transition arithmetic; symmetric state quantization after every recurrent step with scale 1/127, round-to-nearest-even, and clipping as frozen by GRI-02B",
+    "decoder": "one fixed scipy.optimize.linprog decoder per task, fit only on fit states before the query transition, evaluated on held-out states; wait-specific decoders forbidden",
+    "fixtures": {"total": 558, "fit": 350, "held_out": 208, "held_out_delays": [64, 128]},
+    "serialization_restart": "full restart verification at every token boundary, including empty prefix and boundary before QUERY",
+    "required_comparisons": ["unchanged GRI-01 parent", "finite-state oracle/reference", "matched stateless baseline", "no-preserve ablation", "no-transform ablation", "no-recurrence ablation"],
+    "replay": "deterministic replay receipt required",
+    "scientific_run": false
+  },
+  "forbidden": [
+    "architecture changes",
+    "new optimizer search",
+    "new fixtures",
+    "new budgets",
+    "representability-witness initialization",
+    "post-result tuning",
+    "scientific execution before SC-3 authorization"
+  ],
+  "frozen_at_utc": "2026-08-20T22:53:02Z"
+}

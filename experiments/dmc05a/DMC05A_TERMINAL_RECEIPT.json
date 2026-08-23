@@ -1,0 +1,64 @@
+{
+  "unit": "DMC-05A",
+  "status": "TERMINAL_FROZEN",
+  "terminal_state": "DMC_05A_CONVENTIONAL_RETRIEVAL_DOMINATES",
+  "scientific_disposition": {
+    "architecture_advantage_on_frozen_benchmark": "FAIL",
+    "cause": "BENCHMARK_ORDERING_CONFOUND",
+    "dmc04b_status": "SCIENTIFIC_ADVANCE_BOUNDED_LEARNED_MEMORY_COMPOSITION_WORKS",
+    "learned_retention": "INTERNALLY_USEFUL_EXTERNALLY_UNNECESSARY_ON_THIS_TASK"
+  },
+  "strongest_finding": {
+    "claim": "DMC-04B and Recent-16 retained exactly the same record set in every frozen DMC-05A case and evidence seed.",
+    "case_count_per_seed": 592,
+    "evidence_seed_count": 5,
+    "paired_set_comparisons": 2960,
+    "matching_set_comparisons": 2960,
+    "source": "artifacts/dmc05a/benchmark_ordering.json",
+    "source_sha256": "faca17577e013660e11dc285a8dd2f1cb78f5c0b65456170daada54b52cd932d"
+  },
+  "frozen_evidence": {
+    "runner": {
+      "path": "scripts/run_dmc05a.py",
+      "sha256": "ab32d7b6bb8ec48b98d109499b4543a80e0de15130a4b113fa31fbb3d4695a13"
+    },
+    "tests": {
+      "path": "tests/test_dmc05a.py",
+      "sha256": "5096d6b9a4a8d22b2b38e8977744735140cbd397c294fdbf727c38f1f96a2613"
+    },
+    "freeze": {
+      "path": "experiments/dmc05a/DMC05A_FREEZE.json",
+      "sha256": "d4a6f0e3c25b64a67f84fbfef46cadcc27667468706652926ba8037a6737c3a0"
+    },
+    "verdict": {
+      "path": "artifacts/dmc05a/DMC05A_VERDICT.json",
+      "sha256": "7a86a756603f61b4d6f4c02385af850e919a06788c4f9b94f1d684808982b225"
+    },
+    "aggregate": {
+      "path": "artifacts/dmc05a/aggregate.json",
+      "sha256": "26dfdc54c58261472ab9ee46a29743827d4645f345928c0540b5bc1c8f8daa0c"
+    },
+    "report": {
+      "path": "artifacts/dmc05a/DMC05A_REPORT.md",
+      "sha256": "4d030c546451ece0ea1dc60247ea20453a84ea9c9ce619626994e45a20270651"
+    },
+    "artifact_manifest": {
+      "path": "artifacts/dmc05a/SHA256SUMS.json",
+      "sha256": "7889f8b567096c2f7620563885fd1937c6f2e1ca00ec32a5297d262d32ea5075"
+    }
+  },
+  "training_accounting": {
+    "unique_suite_optimizer_steps": 10880,
+    "historical_wall_time": "TRAINING_COST_UNKNOWN",
+    "historical_energy": "TRAINING_COST_UNKNOWN",
+    "historical_dollar_cost": "TRAINING_COST_UNKNOWN",
+    "source": "artifacts/dmc05a/training_accounting.json",
+    "source_sha256": "62b3c0360c05dc6151693297ea0081e176a5c2e20aa686407107872ed6d684c0"
+  },
+  "successor_policy": {
+    "next_gate": "DMC-05R_RECENCY_CONFOUND_REPAIR",
+    "dmc05b_status": "BLOCKED_PENDING_DMC05R",
+    "dmc05b_release_condition": "Frozen DMC-04B must survive the equally informed transparent utility-aware indexing baseline in DMC-05R."
+  },
+  "changes_to_dmc05a_after_terminal_freeze_authorized": false
+}

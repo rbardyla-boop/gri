@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "case_count": true,
+    "file_hashes": true,
+    "freeze": true,
+    "opacity": true
+  },
+  "freeze": {
+    "checks": {
+      "benchmark_commit": true,
+      "embedding_identity": true,
+      "freeze_digest": true,
+      "ollama_version": true,
+      "reasoner_identity": true,
+      "source_hashes": true,
+      "zero_data_at_freeze": true
+    },
+    "mismatches": [],
+    "pass": true
+  },
+  "pass": true
+}

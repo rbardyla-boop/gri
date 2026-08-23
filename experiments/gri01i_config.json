@@ -1,0 +1,42 @@
+{
+  "unit": "GRI-01I-PRECISION-ROBUSTNESS-BOUND",
+  "status": "FROZEN_BEFORE_RUN",
+  "parent_config": "gri01h_config.json",
+  "parent_config_sha256": "4ae3f5aebfa9aeb25ddd91f2a371dd24277e4503e689d51a9f732ee557aa7efa",
+  "parent_receipt": "../artifacts/results/gri01h_information_location_receipt.json",
+  "parent_receipt_sha256": "c4fa21a2673c710f93826e08f14c0f3bf6e9d52f7906578599a3b703237b921b",
+  "reference_representation": "dtype_float64",
+  "dtype_representations": ["float64", "float32", "float16", "bfloat16"],
+  "fixed_point_bits": [16, 12, 8, 6, 4],
+  "fixed_point_quantizer": {
+    "method": "symmetric_uniform",
+    "range": [-1.0, 1.0],
+    "scale": "1 / (2**(bits - 1) - 1)",
+    "scope": "hidden state only; frozen H separator retained in float64"
+  },
+  "dtype_quantizer": {
+    "scope": "hidden state and frozen H separator coefficients",
+    "score_accumulation": "the selected torch dtype"
+  },
+  "geometric_margin": "minimum signed distance divided by ||w||",
+  "usable": "the exact H wait-specific separator exists, all scores are finite, accuracy is 1.0, and normalized geometric margin is strictly positive after representation",
+  "classification": {
+    "robust_state": "every configured representation has the same usable wait window as float64 for every task",
+    "immediate_loss": "a task has no usable wait beyond the configured immediate_loss_wait_max in every modest representation",
+    "precision_fragile": "float64 has usable information and at least one configured representation loses usable waits",
+    "task_specific": "tasks receive different classifications"
+  },
+  "modest_representations": ["dtype_float32", "dtype_float16", "dtype_bfloat16", "quantized_8", "quantized_6", "quantized_4"],
+  "immediate_loss_wait_max": 1,
+  "forbidden": [
+    "GRI retraining",
+    "optimizer changes",
+    "new dimensions",
+    "new transition or readout",
+    "new memory mechanism",
+    "geometry",
+    "agents",
+    "LLMs",
+    "E8"
+  ]
+}

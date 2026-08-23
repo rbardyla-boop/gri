@@ -1,0 +1,151 @@
+{
+  "experiment_id": "MCO-03",
+  "title": "RELATION BOUNDARY / STATE COMPILER",
+  "status": "PREREGISTERED_BEFORE_SCIENTIFIC_INFERENCE",
+  "prior_terminal_state": {
+    "mco02_verdict": "MCO_02_ACCOUNTING_INVALID",
+    "mco02_planner_answer_accuracy": 0.8125,
+    "mco02_planner_provenance_accuracy": 0.421875,
+    "mco02_relation_accuracy": 0.9532919254658385,
+    "mco02_live_raw_response_stability": 0.8253012048192772,
+    "dmc_status": "TERMINAL_DEAD_BRANCH",
+    "dmc_historical_optimizer_steps": 10880,
+    "dmc_historical_training_label": "TRAINING_COST_UNKNOWN"
+  },
+  "claim_under_test": "A frozen single-record constrained language normalizer can repair MCO-02's relation boundary and produce exact bounded state packets that retain quality against equally informed transparent compilation and strong dense/hybrid RAG controls.",
+  "scientific_population": {
+    "source": "unchanged frozen MCO-02 corpus",
+    "history_sizes": [100, 1000, 5000, 10000],
+    "seeds": [2601, 2602],
+    "histories": 8,
+    "records": 32200,
+    "queries": 64,
+    "capacity": 16,
+    "no_generator_changes": true,
+    "no_query_or_answer_access_during_extraction": true
+  },
+  "pre_scientific_engineering": {
+    "fixture_seed": 2701,
+    "fixture_records": 120,
+    "scientific_population_overlap": 0,
+    "report": "artifacts/mco03/engineering/engineering_smoke.json",
+    "report_sha256_at_preregistration": "92a8c49e7b094e78f3667511c080e672750d9e215fd390ec5aa1a31c22814359",
+    "positional_relation_accuracy": 0.975,
+    "keyed_relation_accuracy": 0.9916666666666667,
+    "keyed_critical_relation_accuracy": 0.9642857142857143,
+    "single_relation_accuracy": 1.0,
+    "single_critical_relation_accuracy": 1.0,
+    "transparent_relation_accuracy": 1.0,
+    "amendment": {
+      "id": "MCO03-ENG-01",
+      "change": "keyed output allowance increased after preserved receipts proved response truncation",
+      "scientific_calls_before_change": 0,
+      "thresholds_changed": false
+    }
+  },
+  "learned_extractor": {
+    "model": "llama3.1:8b",
+    "interface": "single",
+    "batch_size": 1
+  },
+  "models": {
+    "extraction_and_reasoning": {
+      "name": "llama3.1:8b",
+      "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "parameter_size": "8.0B",
+      "quantization": "Q4_K_M",
+      "temperature": 0,
+      "seed": 20260822,
+      "context_limit": 8192
+    },
+    "embedding": {
+      "name": "embeddinggemma:300m",
+      "blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+      "parameter_size": "307.58M",
+      "quantization": "BF16",
+      "embedding_dimensions": 768,
+      "context_limit": 2048,
+      "batch_size": 256
+    },
+    "ollama_version": "0.21.2"
+  },
+  "variants": {
+    "learned_single": "single-record schema-constrained relation normalization followed by the frozen exact planner",
+    "transparent_compiler": "finite-template deterministic relation normalization with identical public input and frozen exact planner",
+    "dense_rag": "EmbeddingGemma cosine retrieval over complete raw evidence, top 16",
+    "hybrid_rag": "word/character TF-IDF plus EmbeddingGemma reciprocal-rank fusion, top 16",
+    "entity_hybrid_rag": "hybrid ranking plus deterministic public subject/entity expansion, at most 16 records",
+    "mco02_positional": "frozen MCO-02 result; no fresh calls and no rewritten verdict"
+  },
+  "frozen_downstream": {
+    "planner": "MCO-02 exact structured traversal and conflict-resolution rules",
+    "reasoner_model": "llama3.1:8b",
+    "reasoner_system_prompt": "unchanged MCO-02 FINAL_REASONING_SYSTEM_PROMPT",
+    "reasoner_schema": "unchanged MCO-02 final_format_schema",
+    "compiler_owned_provenance": "ordered exact-planner packet IDs",
+    "model_generated_provenance": "model-regenerated path IDs, scored separately",
+    "inspection_rule": "unchanged transparent signed integer comparison",
+    "maximum_visible_records": 16,
+    "maximum_visible_tokens": 8192
+  },
+  "acceptance_criteria": {
+    "minimum_relation_accuracy_overall": 0.99,
+    "minimum_critical_relation_accuracy": 0.99,
+    "minimum_relation_accuracy_each_history": 0.98,
+    "minimum_packet_answer_accuracy": 0.95,
+    "minimum_packet_provenance_accuracy": 0.95,
+    "minimum_packet_critical_recall": 0.99,
+    "minimum_packet_answer_accuracy_each_load": 0.9,
+    "minimum_packet_provenance_accuracy_each_load": 0.9,
+    "minimum_model_answer_accuracy": 0.9,
+    "minimum_model_generated_provenance_accuracy": 0.9,
+    "minimum_raw_response_stability": 0.95,
+    "minimum_semantic_relation_stability": 0.99,
+    "rag_quality_equivalence_delta": 0.03,
+    "minimum_rag_critical_recall_for_dominance": 0.95,
+    "maximum_model_visible_records": 16,
+    "maximum_model_visible_tokens": 8192
+  },
+  "stability": {
+    "live_repeat_fraction": 0.1,
+    "selection": "deterministic per-history strata over relation, template, and query-critical status",
+    "raw_exact_string_reported": true,
+    "semantic_relation_exact_reported": true
+  },
+  "accounting": {
+    "output_token_weight": 4,
+    "learned_ingestion_calls_are_charged": true,
+    "embedding_ingestion_calls_are_charged": true,
+    "cache_hits_are_not_fresh_inference": true,
+    "local_billed_usd": 0.0,
+    "estimated_usd": null,
+    "pretrained_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "outcome_precedence": [
+    "MCO_03_ACCOUNTING_INVALID",
+    "MCO_03_RELATION_EXTRACTION_FAILS",
+    "MCO_03_TRANSPARENT_COMPILER_DOMINATES",
+    "MCO_03_HYBRID_RAG_DOMINATES",
+    "MCO_03_STATE_COMPILER_ADVANCES",
+    "MCO_03_LANGUAGE_BOUNDARY_INCOMPLETE"
+  ],
+  "stop_rules": {
+    "transparent_dominance": "stop learned extraction on this synthetic family; structured product path may continue only to a real workload",
+    "hybrid_dominance": "stop architecture claim and use retrieval",
+    "extraction_failure": "stop language expansion; do not tune on scientific failures",
+    "state_compiler_advance": "stop synthetic work and run one real software-incident product proof"
+  },
+  "authorized_successor_if_structured_packet_gates_pass": "MCO-04 — SOFTWARE INCIDENT STATE-COMPILER PRODUCT PROOF",
+  "world_impact_claim": {
+    "status_before_mco03": "NOT_ESTABLISHED",
+    "mco03_can_establish": "controlled mechanism evidence only",
+    "mco03_cannot_establish": [
+      "scientific novelty",
+      "independent replication",
+      "customer demand",
+      "production reliability",
+      "adoption",
+      "societal impact"
+    ]
+  }
+}

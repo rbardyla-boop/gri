@@ -1,0 +1,14 @@
+{
+  "all_capacity_pass": true,
+  "case_count": 36,
+  "compiler_seconds": {
+    "median": 0.2678822035668418,
+    "sum": 46.20286581502296
+  },
+  "experiment_id": "MCO-05",
+  "median_raw_to_packet_byte_reduction": 11.693865539655242,
+  "minimum_raw_to_packet_byte_reduction": 2.652543332955704,
+  "run_id": "replay_mechanical",
+  "scorer_read_guard_active": true,
+  "seal_sha256": "7e57e692cc0a946dd07feac77667f52fe22a9bc8387adbe44dee37d3ebed1fdf"
+}

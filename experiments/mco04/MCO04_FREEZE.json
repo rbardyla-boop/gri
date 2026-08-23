@@ -1,0 +1,77 @@
+{
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.2",
+    "pyarrow": "25.0.1",
+    "python": "3.11.15 (main, Aug  7 2026, 02:25:55) [Clang 22.1.3 ]",
+    "scikit-learn": "1.8.0"
+  },
+  "engineering_verification_sha256": "b4a8bc24e8438e587e9e567123a5b2148e22aaea57a78177e1ae802e492ea73d",
+  "experiment_id": "MCO-04",
+  "freeze_sha256": "3f908467720c30f0f2fec23726c95fa7970590e302e8e32f59756b163cb13acd",
+  "models": {
+    "embedding": {
+      "blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+      "capabilities": [
+        "embedding"
+      ],
+      "details": {
+        "families": [
+          "gemma3"
+        ],
+        "family": "gemma3",
+        "format": "gguf",
+        "parameter_size": "307.58M",
+        "parent_model": "embeddinggemma:300m-bf16",
+        "quantization_level": "BF16"
+      },
+      "model": "embeddinggemma:300m",
+      "parameters": "num_batch                      2048\nnum_ctx                        2048"
+    },
+    "reasoner": {
+      "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+      "capabilities": [
+        "completion",
+        "tools"
+      ],
+      "details": {
+        "families": [
+          "llama"
+        ],
+        "family": "llama",
+        "format": "gguf",
+        "parameter_size": "8.0B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "model": "llama3.1:8b",
+      "parameters": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\""
+    }
+  },
+  "ollama_version": "0.21.2",
+  "schema_version": 1,
+  "scientific_state_at_freeze": {
+    "model_call_files": 0,
+    "telemetry_files": 0
+  },
+  "source_hashes": {
+    "artifacts/mco04/data/scorer_only/source_manifest.json": "88b7339c642838f8955c1d0f28ed14de6984772325617129422a6a64e73a56cb",
+    "artifacts/mco04/engineering/ENGINEERING_VERIFICATION.json": "b4a8bc24e8438e587e9e567123a5b2148e22aaea57a78177e1ae802e492ea73d",
+    "artifacts/mco04/engineering/engineering_reasoning_v2/REASONING_SUMMARY.json": "15bc0d1b48121b7f908c344e43ca568a01734c5c0ca1cc2ed4902ae63f0c4d36",
+    "artifacts/mco04/engineering/engineering_reasoning_v2/SCORED_REASONING.json": "77654e8ab61d878b282d607f8b3fb242f7909cb5bf96a78738eab4a76d161660",
+    "artifacts/mco04/engineering/engineering_reasoning_v2/SEALED_REASONING_PREDICTIONS.json": "d7dcc73be9652699d6db8c73c7c793437d1bcc8ad3ff8964c2675ae093cab716",
+    "artifacts/mco04/engineering/engineering_v4/MECHANICAL_SUMMARY.json": "f48d80170781e6e1bb903be055beb9465358168e0ff1377742e55604272f4c36",
+    "artifacts/mco04/engineering/engineering_v4/SCORED_MECHANICAL.json": "c622af52770c9f16bd189b139cc0ba75d9479527cb87c665c8290c9c2593eb5c",
+    "artifacts/mco04/engineering/engineering_v4/SEALED_PREDICTIONS.json": "e2e85c817be5cee1c8c64bf2a399cd051b965a227dc0515038024e7744f0a608",
+    "artifacts/mco04/engineering_opacity_receipt.json": "d715aa1e95026b1423de7cf555efb017d41d45b690417243b3ea9c1d5938e042",
+    "artifacts/mco04/engineering_staging_receipt.json": "04af0655a41504df2df92b7e68917804f431d63dcf31af392f3d08e07701fe72",
+    "experiments/mco04/MCO04_CONFIG.json": "8c916d20ee88d8cab17350747cd2693e1ec8f224adf756301158a045101c7bc0",
+    "experiments/mco04/MCO04_CONTRACT.md": "199645d1858afc024aab204d7dae5da16f3b88edf21405bf402e088cd1cf0802",
+    "pyproject.toml": "8afcf7fd27b26327130cfc11deea512aba9465e93269cd9b87d18caa3a4f7194",
+    "scripts/run_mco03.py": "020921fc8845d2d73a215d7f7f5326c2dcc0765d54562ee2bd255180c608ac16",
+    "scripts/run_mco04.py": "56014ebaf947643ad9346e2d19428286ea30ba18a8431747cac6199acab7d687",
+    "tests/test_mco04.py": "2a516001900f6a8be009167fc1e0a776bc6c3847be25225ffecbcf549a679c65",
+    "uv.lock": "35ae010249d86a4fb6f7474b03de4e6818c61666bf94253671a247851f19ccda"
+  },
+  "source_manifest_sha256": "88b7339c642838f8955c1d0f28ed14de6984772325617129422a6a64e73a56cb"
+}

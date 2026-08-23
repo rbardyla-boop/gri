@@ -1,0 +1,106 @@
+{
+  "bank_validation": {
+    "bank_id": "KC-0-DEV-TRIAL-BANK",
+    "errors": [],
+    "note": "Development fixtures only; no candidate or scientific verdict is present.",
+    "packet_count": 21,
+    "query_count": 8,
+    "sequence_count": 24,
+    "sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+    "status": "PASS",
+    "trial_ids": [
+      "KC-0A",
+      "KC-0B",
+      "KC-0C",
+      "KC-0D",
+      "KC-0E",
+      "KC-0F",
+      "KC-0G",
+      "KC-0H",
+      "KC-0I",
+      "KC-0J"
+    ]
+  },
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_manifest_sha256": "157b7a4629bfa82720e95185cf5fcbbccadcc5e78f6416a1bb70b8f255d8ec51",
+  "candidate_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "checks": {
+    "accounting": true,
+    "cold_start": true,
+    "containment": true,
+    "determinism": true,
+    "kc0_mount": true,
+    "restart": true
+  },
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "note": "Lifecycle qualification only; no retention, superiority, learning, replication, or population claim is evaluated.",
+  "receipt_sha256": "0a17fc7fdc18fd40c26abf3630709c8f56366917330b5eb2240ee809426225db",
+  "scientific_execution": "FORBIDDEN",
+  "scientific_verdicts": [
+    "ADVANTAGE",
+    "NO_ADVANTAGE",
+    "LEARNED",
+    "GENERALIZED",
+    "REPLICATED"
+  ],
+  "sequence_count": 24,
+  "sequence_trace_sha256": "79ce6fe8402cfeeeae00159f5c692c35a135e42ffc1ec095e126afd00c70fd09",
+  "source_audit": {
+    "declared_resource": {
+      "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+      "candidate_version": "0.1.0",
+      "has_history_buffer": false,
+      "has_population_logic": false,
+      "has_step_counter": false,
+      "occupancy_bits": 8,
+      "persistent_scalar_count": 16,
+      "readout_operation_budget": 16,
+      "state_bytes_max": 128,
+      "step_operation_budget": 12,
+      "uses_environment": false,
+      "uses_external_model": false,
+      "uses_filesystem": false,
+      "uses_network": false,
+      "uses_optimizer": false,
+      "uses_rng": false,
+      "uses_wall_clock": false,
+      "value_slots": 8
+    },
+    "declared_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+    "forbidden_names": [],
+    "imports": [
+      "__future__",
+      "numpy",
+      "struct",
+      "torch"
+    ],
+    "runtime_resource": {
+      "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+      "candidate_version": "0.1.0",
+      "has_history_buffer": false,
+      "has_population_logic": false,
+      "has_step_counter": false,
+      "occupancy_bits": 8,
+      "persistent_scalar_count": 16,
+      "readout_operation_budget": 16,
+      "state_bytes_max": 128,
+      "step_operation_budget": 12,
+      "uses_environment": false,
+      "uses_external_model": false,
+      "uses_filesystem": false,
+      "uses_network": false,
+      "uses_optimizer": false,
+      "uses_rng": false,
+      "uses_wall_clock": false,
+      "value_slots": 8
+    },
+    "source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+    "status": "PASS",
+    "step_signatures": [
+      3
+    ]
+  },
+  "status": "PASS",
+  "unit": "KC-1A-LIFECYCLE",
+  "verdict": "KC_1A_LIFECYCLE_PASS"
+}

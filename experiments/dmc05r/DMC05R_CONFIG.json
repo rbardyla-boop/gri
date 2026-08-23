@@ -1,0 +1,132 @@
+{
+  "unit": "DMC-05R",
+  "title": "RECENCY CONFOUND REPAIR",
+  "status": "PREREGISTERED_BEFORE_IMPLEMENTATION_AND_EXECUTION",
+  "claim": "When certified irrelevant writes are deterministically relocated behind the last task-relevant write, frozen DMC-04B preserves useful older state materially better than Recent-16.",
+  "source": {
+    "dataset_manifest": "artifacts/dmc04ba/dataset_manifest.json",
+    "dataset_manifest_sha256": "ee4afa55326205030a8600b079a0a484b6bfa39312d6127a80633e00c93274fc",
+    "history_sizes": [32, 64, 128, 256, 1024],
+    "source_case_count": 592,
+    "splits": ["train", "iid", "extrapolation"]
+  },
+  "counterfactual": {
+    "tail_sizes": [0, 8, 16, 32, 64, 256],
+    "expected_variant_count_by_tail": {
+      "0": 592,
+      "8": 512,
+      "16": 512,
+      "32": 416,
+      "64": 256,
+      "256": 88
+    },
+    "expected_total_variants": 2376,
+    "primary_adversarial_tail_sizes": [16, 32, 64, 256],
+    "insufficient_safe_records": "SKIP_VARIANT_WITH_MACHINE_READABLE_REASON_NO_PADDING",
+    "moved_record_selection": "LAST_K_CERTIFIED_IRRELEVANT_RECORDS_IN_SOURCE_ORDER",
+    "field_mutations_authorized": false
+  },
+  "certified_irrelevant_predicate": {
+    "record_absent_from_oracle_records": true,
+    "record_is_not_target": true,
+    "entity_absent_from_every_scope_event": true,
+    "record_supersedes_nothing": true,
+    "record_is_not_referenced_by_supersedes": true,
+    "salience_is_not_high": true,
+    "frozen_retention_features_equal": [0.0, 0.0]
+  },
+  "systems": [
+    "recent_window_16",
+    "frozen_fifo_16",
+    "random_16",
+    "exact_structured",
+    "conventional_retrieval",
+    "transparent_utility_index_16",
+    "dmc04b"
+  ],
+  "system_notes": {
+    "frozen_fifo_16": "The historical DMC control retains the first 16 admitted writes and rejects later writes; a standard evict-oldest FIFO window is behaviorally identical to Recent-16.",
+    "random_16": "Hash selection is keyed by source case ID and record ID, so the selected set is invariant to counterfactual order.",
+    "transparent_utility_index_16": "Its utility classifier receives exactly the two frozen retention features and active scope available to DMC-04B, plus the same update semantics; it receives no target, answer, query, value, descriptor, record ID, or oracle decision. Record ID is available only to the deterministic tie-break resolver, exactly as in DMC-04B."
+  },
+  "capacity": 16,
+  "evidence_seeds": [1337, 1338, 1339, 1340, 1341],
+  "random_control_seed": 20260202,
+  "optimized_dmc_equivalence": {
+    "tail_zero": "COMPARE_ALL_592_CASES_FOR_ALL_FIVE_SEEDS_TO_FROZEN_DMC05A_RECEIPTS_USING_PERSISTENT_SET_HASH_SELECTED_RECORD_AND_CAPABILITY_FIELDS",
+    "nonzero_boundary_sample": "LEXICOGRAPHICALLY_FIRST_AND_LAST_VALID_VARIANT_AT_EACH_OF_8_16_32_64_256_FOR_ALL_FIVE_SEEDS",
+    "tail_zero_required_fields": [
+      "persistent_record_ids_sha256",
+      "selected_record_id",
+      "critical_recall",
+      "retrieval_accuracy",
+      "answer_accuracy",
+      "logical_retention_score_evaluations"
+    ],
+    "nonzero_required_fields": [
+      "ordered_persistent_record_ids",
+      "selected_record_id",
+      "critical_recall",
+      "retrieval_accuracy",
+      "answer_accuracy",
+      "logical_retention_score_evaluations"
+    ]
+  },
+  "gates": {
+    "tail_zero_anchor_accuracy_min": 0.99,
+    "primary_dmc_survival_critical_recall_min": 0.90,
+    "primary_dmc_survival_answer_accuracy_min": 0.90,
+    "strong_capability_min": 0.99,
+    "recent_primary_critical_recall_max": 0.01,
+    "material_nonrecency_critical_recall_gap_min": 0.50,
+    "transparent_capability_match_gap_max": 0.01,
+    "selection_advantage_critical_recall_gap_min": 0.05,
+    "selection_advantage_answer_accuracy_gap_min": 0.05,
+    "bounded_persistent_records_max": 16,
+    "online_training_calls_max": 0
+  },
+  "transparent_dominance_dimensions": [
+    "answer_accuracy",
+    "critical_recall",
+    "persistent_records",
+    "persistent_serialized_bytes",
+    "maximum_working_set_records",
+    "working_set_serialized_bytes",
+    "records_inspected_query",
+    "online_wall_ns",
+    "learned_forward_calls",
+    "historical_training_required"
+  ],
+  "allowed_terminal_states_in_precedence_order": [
+    "DMC_05R_ACCOUNTING_INVALID",
+    "DMC_05R_RECENCY_ONLY_FAILURE",
+    "DMC_05R_SELECTION_ADVANTAGE",
+    "DMC_05R_TRANSPARENT_INDEX_DOMINATES",
+    "DMC_05R_NONRECENCY_RETENTION_ADVANCE"
+  ],
+  "surprise_dependency": {
+    "status": "EXPLORATORY_NONTERMINAL",
+    "source_family": "mission_set",
+    "source_split": "extrapolation",
+    "history_sizes": [128, 256, 1024],
+    "expected_case_count": 24,
+    "late_event": "After ingestion, replace one initially relevant entity with one old certified-irrelevant record's entity in the explicit active scope, then issue a history query for that old record.",
+    "equal_information_rule": "DMC-04B and transparent utility indexing receive the identical late scope event at the identical time.",
+    "terminal_effect": false,
+    "redesign_on_failure_authorized": false
+  },
+  "training_accounting": {
+    "dmc_unique_suite_optimizer_steps": 10880,
+    "historical_wall_time": "TRAINING_COST_UNKNOWN",
+    "historical_energy": "TRAINING_COST_UNKNOWN",
+    "historical_dollar_cost": "TRAINING_COST_UNKNOWN",
+    "online_training_authorized": false
+  },
+  "architecture_changes_authorized": false,
+  "dmc_retraining_authorized": false,
+  "threshold_changes_authorized": false,
+  "capacity_changes_authorized": false,
+  "feature_changes_authorized": false,
+  "real_language_evaluation_authorized": false,
+  "dmc05b_status": "BLOCKED_PENDING_DMC05R_TRANSPARENT_BASELINE_SURVIVAL"
+}

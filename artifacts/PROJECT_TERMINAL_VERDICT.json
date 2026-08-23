@@ -1,0 +1,83 @@
+{
+  "answer": "NO_CURRENT_EVIDENCE_OF_WORLD_CHANGE",
+  "claim_under_test": "A learned memory system, or its transparent state-compiler successor, can reliably provide a materially superior bounded working set on unseen long-history tasks versus equally informed conventional methods.",
+  "date": "2026-08-23",
+  "gates": [
+    {
+      "experiment": "DMC-04B",
+      "result": "DMC_04B_COMBINED_LEARNED_MEMORY_ADVANCES",
+      "verification": "PASS",
+      "scope": "bounded synthetic mechanism"
+    },
+    {
+      "experiment": "DMC-05A",
+      "result": "DMC_05A_CONVENTIONAL_RETRIEVAL_DOMINATES",
+      "verification": "FAIL_ARCHITECTURE_ADVANTAGE",
+      "scope": "original synthetic generator"
+    },
+    {
+      "experiment": "DMC-05R",
+      "result": "DMC_05R_TRANSPARENT_INDEX_DOMINATES",
+      "verification": "PASS_NEGATIVE",
+      "scope": "recency-confound repair"
+    },
+    {
+      "experiment": "MCO-01",
+      "result": "MCO_01_ITERATIVE_ACQUISITION_ADVANCES",
+      "verification": "PASS",
+      "scope": "complete structured synthetic history"
+    },
+    {
+      "experiment": "MCO-02",
+      "result": "MCO_02_ACCOUNTING_INVALID",
+      "verification": "FAIL",
+      "scope": "natural-language boundary"
+    },
+    {
+      "experiment": "MCO-03",
+      "result": "MCO_03_TRANSPARENT_COMPILER_DOMINATES",
+      "verification": "PASS_NEGATIVE",
+      "scope": "learned versus transparent synthetic extraction"
+    },
+    {
+      "experiment": "MCO-04",
+      "result": "MCO_04_TRANSPARENT_STATE_COMPILER_REPLICATION_ADVANCE",
+      "verification": "PASS",
+      "scope": "narrow root-service localization on RCAEval telemetry"
+    },
+    {
+      "experiment": "MCO-05",
+      "result": "MCO_05_DISJOINT_COMPILER_TRANSFER_FAILURE",
+      "verification": "PASS_INTEGRITY_FAIL_CLAIM",
+      "scope": "exact causal-commit attribution on RootCauseBench"
+    }
+  ],
+  "mco05_decisive_metrics": {
+    "candidate_recall": {
+      "correct": 23,
+      "n": 28,
+      "rate": 0.8214285714285714,
+      "required": 0.9
+    },
+    "hybrid_rag_accuracy": 0.2777777777777778,
+    "maximum_context_accuracy": 0.2222222222222222,
+    "packet_accuracy": 0.3333333333333333,
+    "packet_adversarial_accuracy": 0.0,
+    "packet_no_code_accuracy": 0.125,
+    "packet_wilson95": [
+      0.2021461882430531,
+      0.4966600212884348
+    ],
+    "semantic_stability": 1.0
+  },
+  "maturity_status": "TERMINAL_NEGATIVE_TRANSFER; NARROW_BENCHMARK_MECHANISMS_ONLY; PRODUCT_AND_WORLD_IMPACT_NOT_ESTABLISHED",
+  "research_harness_integrity": "PASS",
+  "stop_decision": "STOP_TESTED_ARCHITECTURE_BRANCH",
+  "tested_architecture_claim": "FAIL",
+  "training_accounting": {
+    "dmc_historical_optimizer_steps_reconstructed": 10880,
+    "dmc_historical_training_cost": "TRAINING_COST_UNKNOWN",
+    "zero_online_optimizer_steps_means_free": false
+  },
+  "world_impact": "NOT_ESTABLISHED"
+}

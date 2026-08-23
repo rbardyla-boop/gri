@@ -1,0 +1,14 @@
+{
+  "unit": "GRI-01G-WAIT-SEMANTICS-DIAGNOSTIC",
+  "status": "FROZEN_BEFORE_RUN",
+  "parent_config": "gri01f_config.json",
+  "parent_config_sha256": "53a430d6053e07e8b84e0b6692baf4f50a4858fdb8964ddb4462557b09f249bc",
+  "dimension": 8,
+  "horizon": 32,
+  "identity_wait_counterfactual": "h_next = h",
+  "classification": {
+    "identity_wait_works": "identity accuracy is 1.0 for every task and wait count while normal WAIT has at least one failure",
+    "transient_coding": "normal WAIT has at least one success and at least one failure, while identity WAIT is not perfect across the matrix",
+    "neither": "normal WAIT never succeeds or identity WAIT is also entirely unsuccessful"
+  }
+}

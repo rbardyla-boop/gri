@@ -1,0 +1,32 @@
+{
+  "experiment": "GAUNTLET-INITIAL-AUDIT",
+  "claim": "DMC-04B-A tests whether independently trained bounded retention and retrieval compose under a hard 16-record external memory.",
+  "selected_experiment": "DMC-04B-A",
+  "command": "python3 scripts/run_dmc04b.py",
+  "baseline_modes": [
+    "oracle_oracle",
+    "fifo_learned",
+    "random_retention_learned",
+    "learned_random_retrieval"
+  ],
+  "active_context_budget_records": 16,
+  "frozen_case_count": 600,
+  "evidence_seeds": [1337, 1338, 1339, 1340, 1341],
+  "status": "DMC_04B_RECEIPT_VERIFIED",
+  "bounded_claim_verdict": "SCIENTIFIC_ADVANCE",
+  "program_level_verdict": "ADVANTAGE_NOT_ESTABLISHED",
+  "claim_allowed": false,
+  "dmc04b_terminal_state": "DMC_04B_COMBINED_LEARNED_MEMORY_ADVANCES",
+  "learned_learned_integrated_retrieval_mean": 1.0,
+  "learned_learned_integrated_answer_mean": 1.0,
+  "fifo_learned_integrated_retrieval_mean": 0.0,
+  "random_retention_learned_integrated_retrieval_mean": 0.0,
+  "learned_random_retrieval_integrated_retrieval_mean": 0.0725,
+  "integrity_checks_pass": true,
+  "capacity_bound_pass": true,
+  "replay_pass": true,
+  "cost_advantage_measured": false,
+  "history_scaling_measured": false,
+  "model_swap_measured": false,
+  "source_of_truth": "docs/GAUNTLET-INITIAL-AUDIT.md"
+}

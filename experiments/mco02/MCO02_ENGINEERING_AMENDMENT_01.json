@@ -1,0 +1,44 @@
+{
+  "experiment_id": "MCO-02",
+  "amendment_id": "MCO02-ENG-01",
+  "status": "PRE_SCIENTIFIC_ENGINEERING_AMENDMENT",
+  "recorded_at_utc": "2026-08-22T12:39:10Z",
+  "scientific_runs_before_amendment": 0,
+  "corpus_materialized_before_amendment": false,
+  "trigger": {
+    "artifact": "artifacts/mco02/engineering/dev_smoke_run1_failure/dev_smoke.json",
+    "artifact_sha256": "c3250b574719a776a8dabf96188ad5f0fa7e6bbeefaacd86febfbf89c9bc92eb",
+    "results_artifact": "artifacts/mco02/engineering/dev_smoke_run1_failure/results.jsonl",
+    "results_sha256": "afc003a8e742c7f1e89c18fb769eabc693d8e5f74398abef33cbde9a9944b853",
+    "runner_sha256_before_amendment": "ed1136bd2c55b6a6c681b6727d08e45117663fad2363be8b4190d78ea2c161ea",
+    "classification_exact_records": 72,
+    "classification_record_count": 100,
+    "malformed_model_calls": 14,
+    "structured_exact_planner_answer_accuracy_on_two_queries": 0.5,
+    "observed_failures": [
+      "oversized noisy relation batches produced malformed or incomplete protocol output",
+      "one otherwise correct structured answer reversed a negative-number comparison"
+    ]
+  },
+  "authorized_changes": [
+    "reduce relation classification batch size from 96 to 12",
+    "remove deterministic administrative and irrelevant-narrative scaffolding from relation-classifier input while retaining the natural-language semantic sentence",
+    "clarify signed-number comparison, complete-evidence, one-line protocol, and record-ID provenance instructions"
+  ],
+  "frozen_unchanged": [
+    "semantic generator, seeds, loads, and queries",
+    "language templates and renderer distribution",
+    "all six comparison systems",
+    "llama3.1:8b model blob and tokenizer",
+    "16-record and token capacity limits",
+    "all quality and accounting thresholds",
+    "verdict precedence and stop rules"
+  ],
+  "oracle_firewall": {
+    "semantic_clause_isolation_uses_oracle": false,
+    "classifier_receives_queries": false,
+    "classifier_receives_expected_answers": false,
+    "semantic_retry_allowed": false
+  },
+  "scientific_interpretation": "The failed smoke is an engineering observation only. It neither supports nor refutes the MCO-02 claim and remains archived for auditability."
+}

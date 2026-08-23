@@ -1,0 +1,43 @@
+{
+  "unit": "GRI-SC-3-SCIENTIFIC-RUN-AUTHORIZATION",
+  "status": "CONTRACT_VERIFIED_BEFORE_EXECUTION",
+  "scientific_execution": false,
+  "scientific_verdict": "NOT_RUN",
+  "contract_path": "experiments/candidates/GRI-SC-3-scientific-run-authorization.json",
+  "contract_sha256": "590d6606ff23cdfb02e9285f71772c9fab52d5b46fdd693a842ad83b5a242987",
+  "record_path": "docs/GRI-SC-3-SCIENTIFIC-RUN-AUTHORIZATION.md",
+  "record_sha256": "5606d312b5148debb9e1cac223bd00bbd1bd530c2ed08901b0d037dac36bdeb2",
+  "parent_freeze": {
+    "manifest_sha256": "03ec6bc36c8b5d4d764bdbef3bccf875294c1b9b8512d23614643beef0638e9d",
+    "record_sha256": "1288acfa52cae4410246dc457eef7291754f1196db47b1fd735dceefc31038f4",
+    "verification_receipt_sha256": "469667f77a4adb4af0adaeb1d8f7dbeb49813712e2705e64230852c7bd4bbaa6"
+  },
+  "verification": {
+    "candidate_source_anchor_matches": true,
+    "candidate_manifest_anchor_matches": true,
+    "sc1r1_anchor_matches": true,
+    "sc1l_anchor_matches": true,
+    "gri02b_fixture_anchor_matches": true,
+    "gri02b_operation_rules_anchor_matches": true,
+    "gri02b_config_anchor_matches": true,
+    "gri02b_harness_anchor_matches": true,
+    "gri02b_contract_anchor_matches": true,
+    "contract_json_valid": true,
+    "verdict_function_present": true,
+    "finite_state_oracle_exempted_from_opponent_rule": true,
+    "fail_closed_rules_present": true,
+    "scientific_run_started": false,
+    "scientific_result_created": false,
+    "architecture_changed": false,
+    "fixture_or_budget_changed": false
+  },
+  "execution_boundary": {
+    "contract_only": true,
+    "scientific_run_authorization": "NOT_GRANTED",
+    "sc3_advantage": "NOT_EVALUATED",
+    "sc3_no_advantage": "NOT_EVALUATED",
+    "sc3_inconclusive": "NOT_EVALUATED",
+    "next_decision": "separate authorization of exactly one scientific run"
+  },
+  "frozen_at_utc": "2026-08-20T23:00:00Z"
+}

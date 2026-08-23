@@ -1,0 +1,20 @@
+{
+  "unit": "GRI-01F-RECURRENT-STATE-STABILITY",
+  "status": "FROZEN_BEFORE_RUN",
+  "parent_config": "gri01e_config.json",
+  "parent_config_sha256": "a91c7b9cd26eb7b5593ae8ecc7d708a64e6d7ac4fbecf6595417a6f244916dfd",
+  "dimension": 8,
+  "horizon": 128,
+  "pairs": {
+    "delayed_bit": {"prefix_0": ["BIT_0"], "prefix_1": ["BIT_1"], "query": "QUERY_DELAY", "label_0": 0, "label_1": 1},
+    "correction": {"prefix_0": ["A", "CORRECT", "A"], "prefix_1": ["A", "CORRECT", "B"], "query": "QUERY_CORRECTION", "label_0": 0, "label_1": 1},
+    "order": {"prefix_0": ["A", "B"], "prefix_1": ["B", "A"], "query": "QUERY_ORDER", "label_0": 0, "label_1": 1}
+  },
+  "thresholds": {
+    "collapse_final_separation_ratio_max": 0.10,
+    "stable_min_separation_ratio_min": 0.50,
+    "unstable_growth_ratio_min": 2.0,
+    "jacobian_spectral_radius_stable_max": 1.0
+  },
+  "control": "explicit finite-state control preserves one relevant bit exactly across the same horizon"
+}

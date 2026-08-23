@@ -1,0 +1,18 @@
+{
+  "affected_file": "experiments/mco04/MCO04_FINAL_REPORT.md",
+  "correction": "The maximum-safe-context baseline was capped at 20,000 UTF-8 prompt bytes, not 24 KB.",
+  "corrected_report_sha256": "340516f2b3e8285ea30585c330f10e9dd2b589ca60239d93b00fda03c4de3eba",
+  "experiment_id": "MCO-04",
+  "freeze_sha256": "3f908467720c30f0f2fec23726c95fa7970590e302e8e32f59756b163cb13acd",
+  "frozen_evidence": {
+    "config_sha256": "8c916d20ee88d8cab17350747cd2693e1ec8f224adf756301158a045101c7bc0",
+    "contract_sha256": "199645d1858afc024aab204d7dae5da16f3b88edf21405bf402e088cd1cf0802",
+    "runner_sha256": "56014ebaf947643ad9346e2d19428286ea30ba18a8431747cac6199acab7d687"
+  },
+  "methodology_or_scientific_artifacts_changed": false,
+  "original_report_sha256": "8c62cb29371ae9293839b708e2db1db88f25793a4f5ac1fca5f330c4d26b9e83",
+  "scope": "DOCUMENTATION_ONLY",
+  "schema_version": 1,
+  "source_of_error": "The frozen report renderer retained a pre-freeze hard-coded 24 KB prose label after the engineering context-safety repair changed the frozen cap to 20,000 bytes.",
+  "verdict_changed": false
+}

@@ -1,0 +1,594 @@
+{
+  "count": 27,
+  "labels_path": "artifacts/mco04/data/scorer_only/engineering_labels.json",
+  "public_manifest_sha256": "5b4c7e0f4de8d451d9a122e90a602b18dc32b058c3d63ccc07948f1a08b514d9",
+  "public_root": "artifacts/mco04/data/public/engineering",
+  "receipts": [
+    {
+      "alert_time": 1731903960,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "cbe30ff13bb6f3da75dcc04cf201c3a5bef0a9cda7cd18ebd0f028d170487716"
+        },
+        "logs.parquet": {
+          "bytes": 129908,
+          "sha256": "d8fb490a359db7cda3ce618ce51251ceec89b90026839f90a891391e3d51b197"
+        },
+        "metrics.parquet": {
+          "bytes": 149939,
+          "sha256": "79548b07b082297d85b061ff8a9269e85f7522bd721c167274eb748b36d4b084"
+        },
+        "traces.parquet": {
+          "bytes": 4516189,
+          "sha256": "6ec516a79bbd427766b02d0d87f06ea9ec15d0b990f4d65f74283e341e70eda7"
+        }
+      },
+      "opaque_id": "incident_75d963b1a1708199050d"
+    },
+    {
+      "alert_time": 1731905504,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "c81bebc12ab5bcedfeec566430752ec960b5223a7724bb35dc3f59acd4e77556"
+        },
+        "logs.parquet": {
+          "bytes": 151683,
+          "sha256": "aa74767943d1ef59532c937bbfdfe18ff5ca5da2ea1a52e0a6b828077bb9cce9"
+        },
+        "metrics.parquet": {
+          "bytes": 151193,
+          "sha256": "f2424ed8833079d157d5af2887d31ce577847ed6ff772d853b3f5795b152f317"
+        },
+        "traces.parquet": {
+          "bytes": 4486425,
+          "sha256": "d7c3bf926bc5e31bd50cce0edc022709ea3bd72140b7bed9bf33c6be28157596"
+        }
+      },
+      "opaque_id": "incident_c19a4c3216755ad36189"
+    },
+    {
+      "alert_time": 1731907048,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "b9cbe318eba267533abe6431d857667dfdea38629fa5a15f388778a4cec00fb8"
+        },
+        "logs.parquet": {
+          "bytes": 116184,
+          "sha256": "f10ea63acf66d664616de4bd66e8edea9d04c938759b891ea83fff9067094189"
+        },
+        "metrics.parquet": {
+          "bytes": 145063,
+          "sha256": "6e78412645c74fcccb26cec29bc9703eb5955c2e1ae12e706f291d6d713b3298"
+        },
+        "traces.parquet": {
+          "bytes": 4435700,
+          "sha256": "1b1ff83c81a540827ae957ed47c0bb980d07c308caa454c239760d41d15bd598"
+        }
+      },
+      "opaque_id": "incident_83f39614c61b28c9d818"
+    },
+    {
+      "alert_time": 1731908592,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "3acf7c7b4c1388a39a895006b4963c0ae10f60eba4efc6590f5728e60d5a0567"
+        },
+        "logs.parquet": {
+          "bytes": 117073,
+          "sha256": "daba5217f71f5a595e28cf9d5a3bda414d6e0cfaf19aa754a24aad9c14677a63"
+        },
+        "metrics.parquet": {
+          "bytes": 148622,
+          "sha256": "f48dbce429636dfabb33f5695f0992d91c92b97c4b3031cfe0606a37bf49221c"
+        },
+        "traces.parquet": {
+          "bytes": 4094874,
+          "sha256": "13bb4dfddce23145579f9189e125d72463b5045348dfb6f6cf247b21b4f43cfa"
+        }
+      },
+      "opaque_id": "incident_e8c3b5029ee25ad7eecf"
+    },
+    {
+      "alert_time": 1731910135,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "bd04244df10f69f126e08c9df6bda413a1ce8a774e3ac80b7e5f017025779c77"
+        },
+        "logs.parquet": {
+          "bytes": 88094,
+          "sha256": "ee8ab1e09786ce9e6f917f1e847f395918f101a10af505b3da05d2f3f37b2662"
+        },
+        "metrics.parquet": {
+          "bytes": 145408,
+          "sha256": "098251f8162ff109e401a04ab231e97ad3f42c31df859b654e74e8019e4b1ed4"
+        },
+        "traces.parquet": {
+          "bytes": 3365634,
+          "sha256": "4fe4f35bd2560ff05a410aa78a2cc4f664299f8dd47eef9035a354f768ae23a8"
+        }
+      },
+      "opaque_id": "incident_ac60e313f91a253af262"
+    },
+    {
+      "alert_time": 1731911680,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "87eeb5dd93d04217cedf832dcc31b8c03219af10d992585c88cb1f7e333bf7f4"
+        },
+        "logs.parquet": {
+          "bytes": 127951,
+          "sha256": "463675c417315ef5538c4b728698e6964bf0fe618daa94f06693f4f54989d511"
+        },
+        "metrics.parquet": {
+          "bytes": 142151,
+          "sha256": "eaab590e8a3716ccf57fa8b34f7e2e9bd25dbff26316e5d287888d8ce5d69cef"
+        },
+        "traces.parquet": {
+          "bytes": 4496249,
+          "sha256": "e590180f245af1cc1e550f63bd791cb7e1488d77a39837e55a6f015f54a860ac"
+        }
+      },
+      "opaque_id": "incident_b380aba5c8208c2c5c1c"
+    },
+    {
+      "alert_time": 1731913224,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "ec8e32bad6160a3698afc72c77b01f2cf70d78c568edc339b15863869e3be855"
+        },
+        "logs.parquet": {
+          "bytes": 128884,
+          "sha256": "d757fe9f0b7c6a6cde4914ccd9eb7fb820ed0c52a134b41d3e2f0f2821893541"
+        },
+        "metrics.parquet": {
+          "bytes": 143009,
+          "sha256": "6a7f8b6e407552a15040a046118ea32acdc0e077837092b8e8bf2b530a4b7fdd"
+        },
+        "traces.parquet": {
+          "bytes": 4515053,
+          "sha256": "1299b20b28f154a3a9029c350a410cc53302b87d0ffe1540e2b68533bc4bd4a0"
+        }
+      },
+      "opaque_id": "incident_976f319fe02c8839e4cf"
+    },
+    {
+      "alert_time": 1731914768,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "d04498564b7bc85276055ac0602e988738c77c0c04094f4b19043f1f8049bab9"
+        },
+        "logs.parquet": {
+          "bytes": 127910,
+          "sha256": "a39136d0d3c7e4f48a09ab024269a9e6861909c65e1af600f1931a561f2f6174"
+        },
+        "metrics.parquet": {
+          "bytes": 149103,
+          "sha256": "c418e4518966038415e457f74570f399f69fc035f60f7b09312d6ee66df168bf"
+        },
+        "traces.parquet": {
+          "bytes": 4425120,
+          "sha256": "87883b0e1057eaab9122570dc24532da447db89d86abddd36bfe1e2bd41c4707"
+        }
+      },
+      "opaque_id": "incident_3db6cd2d785ce634913a"
+    },
+    {
+      "alert_time": 1731916312,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "085252e21202afa4d91b452bec5bcfd631a4d20d6759f473ae88e309ead90e7f"
+        },
+        "logs.parquet": {
+          "bytes": 127754,
+          "sha256": "e7eb6d63fdc6e183348c2fd5db326b88a2db71f677597a01df43072b643bbfde"
+        },
+        "metrics.parquet": {
+          "bytes": 145336,
+          "sha256": "dcaf9818cfd4c74973dbaede2a635754db70008139a8b560727ec66dabf6ff5a"
+        },
+        "traces.parquet": {
+          "bytes": 4495674,
+          "sha256": "3d1470087ec2d35b205158caadccbabfc110b2b4565e683225701f5f00d73b13"
+        }
+      },
+      "opaque_id": "incident_20719fb09d1bc57382e1"
+    },
+    {
+      "alert_time": 1731917856,
+      "dataset": "RE3-OB",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "604d5727ac3acadeb232c166837f07c7e4fb08f013cee57a4e23c1b0076a0204"
+        },
+        "logs.parquet": {
+          "bytes": 126741,
+          "sha256": "b0e75b2d814dd783d3901b8d208ab32fc694a625d41fa4c4c4bebd8f8658d341"
+        },
+        "metrics.parquet": {
+          "bytes": 143458,
+          "sha256": "ff395160e766f1b9b1154135803f82f961c31fb2c4b8b7a7f17ac6f20a98d65f"
+        },
+        "traces.parquet": {
+          "bytes": 4459257,
+          "sha256": "8ca73585fb58aeb1936ebae4c2f2f5fb77c30a3eb802cf02b0f3f56570e97ab3"
+        }
+      },
+      "opaque_id": "incident_1d78aab44d7de16f3b3f"
+    },
+    {
+      "alert_time": 1732243203,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "a130a8d9d14b547fe9a14b4858f82958380ce8a796bf7bc4fa8b482a14316ed8"
+        },
+        "logs.parquet": {
+          "bytes": 1003956,
+          "sha256": "eea9d351ff71dbd1eb2bf77a39db60dc8dc1cead962d8672ffb41627dae9bfbb"
+        },
+        "metrics.parquet": {
+          "bytes": 187614,
+          "sha256": "8a20a7caba8f268e725d4921ccae887ab1b30c1741019ccd06992ea784e7ff32"
+        }
+      },
+      "opaque_id": "incident_0c0508f30c0019a1610d"
+    },
+    {
+      "alert_time": 1732244765,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "1225a331d8b2fa45d4523985e72830c8de2a1bf63b48bc31e8ef0c3d63e82066"
+        },
+        "logs.parquet": {
+          "bytes": 985877,
+          "sha256": "c72c766c9c8e31bb86b31335f9ead45b8cbd02d8a740533acd6aaddfa637ac64"
+        },
+        "metrics.parquet": {
+          "bytes": 169866,
+          "sha256": "5704a3f2c44990dca1a0208f3cc034af08961caa50b66a636190f514615c0f91"
+        }
+      },
+      "opaque_id": "incident_bf857be70cc791420478"
+    },
+    {
+      "alert_time": 1732246326,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "c277cef9a510614cde46b1576e9dbb34dffe1fa15f05005ea15be6b72f94350f"
+        },
+        "logs.parquet": {
+          "bytes": 1013870,
+          "sha256": "600f7aebe187acf42ac28702964e320326fb1a549068501dd92362d8a831795c"
+        },
+        "metrics.parquet": {
+          "bytes": 169818,
+          "sha256": "8f8d31df259c08aada1dd2c745bdddf5389fc975aca7f0a890a7be377ad62ad2"
+        }
+      },
+      "opaque_id": "incident_bdd38758288d19107a27"
+    },
+    {
+      "alert_time": 1732247889,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "b75c26194480e2382ea901ce5f9280f083ac4f83984c680ec07ee4199e0232cc"
+        },
+        "logs.parquet": {
+          "bytes": 1032895,
+          "sha256": "6ed259a535292904a22ff8b3a3d73cd81a8aadc83b795d2f26349e7909620e2c"
+        },
+        "metrics.parquet": {
+          "bytes": 173727,
+          "sha256": "fe60caec950d42a392af5025c0941b0b63ccbb9b4cdb877c5f2416fac0d69fea"
+        }
+      },
+      "opaque_id": "incident_769884b29cc12cd932f5"
+    },
+    {
+      "alert_time": 1732249439,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "e8d797439c27d7732db0e356febb431ba40956539367cf07285d1c8921ef2059"
+        },
+        "logs.parquet": {
+          "bytes": 1038086,
+          "sha256": "2172b7ebc80200690a053649d5143a1dea5d8ff53d2df010c774b9d2e893cd9f"
+        },
+        "metrics.parquet": {
+          "bytes": 172344,
+          "sha256": "4d1ecbf6b845a19e29b86de447bb94b37a47f61ba0f96a1d12db67335c6dcac0"
+        }
+      },
+      "opaque_id": "incident_9351bbca74f2b4e23e2f"
+    },
+    {
+      "alert_time": 1732349836,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "71819bd4bf383d810e7a76df4741792cbd818c66bd31e09276c4f3729f1b49bb"
+        },
+        "logs.parquet": {
+          "bytes": 569982,
+          "sha256": "2411812d6a1bc89f000895e8c834e82ad1f115849dea21276ab43f7a6e7d0cdd"
+        },
+        "metrics.parquet": {
+          "bytes": 172878,
+          "sha256": "7f92d00b0b5c60ac4e2aaf5e28e77210e261dbbd3d544cf1d9d5e2122bfbb8e2"
+        }
+      },
+      "opaque_id": "incident_bc1092f8a1774f45fe49"
+    },
+    {
+      "alert_time": 1732352938,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "42642572f72cbc6b55de7541d53c569ee4eb8f5ea2e81d43588251e1ff99b3a6"
+        },
+        "logs.parquet": {
+          "bytes": 982594,
+          "sha256": "54d62c4b081217436c2337a46d052ea1769fc2cbb2e1af6ae41f8553507c647a"
+        },
+        "metrics.parquet": {
+          "bytes": 168340,
+          "sha256": "19559d195a24fb1484fa3b18136261546d386b9504b815148bdc6d0b101dbad7"
+        }
+      },
+      "opaque_id": "incident_8abb02a78535a782254f"
+    },
+    {
+      "alert_time": 1732356055,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "802b145b8fe17abacdb2e5555a7c6fcd007cbaf14301c6f136a7d5a2a08007b4"
+        },
+        "logs.parquet": {
+          "bytes": 959807,
+          "sha256": "e2878c34bda3ec4c05077d893a3acff728a92fc742d4cc66031d59c902c6faa9"
+        },
+        "metrics.parquet": {
+          "bytes": 171142,
+          "sha256": "30d71849bdc74411f45fbcd5362e9e75f7220293e3cbc48514818bf1634b2428"
+        }
+      },
+      "opaque_id": "incident_81ec2b3e7321d21bb0cb"
+    },
+    {
+      "alert_time": 1732359171,
+      "dataset": "RE3-SS",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "cee5b59e8dc31f6cb076d004a78e2bfb066874433ed14869793d5de071ea2a25"
+        },
+        "logs.parquet": {
+          "bytes": 623367,
+          "sha256": "4ed6948e9dc0bd8b7eae379dc8d0108c9b67aec5df247dd68c1bf9b0048dbd89"
+        },
+        "metrics.parquet": {
+          "bytes": 163026,
+          "sha256": "2c9f9b8d68d1f1fe302729c61e88591c05617820471bc6fda2f7b5958572ed37"
+        }
+      },
+      "opaque_id": "incident_494442ede429f9d8bed3"
+    },
+    {
+      "alert_time": 1733591947,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "ab6f5cef15bc3b8468c961f6ab6d467731fd71fa05d928cc7f3579b02157e179"
+        },
+        "logs.parquet": {
+          "bytes": 412495,
+          "sha256": "fd2f60e54a4e826e673531ea7aba7a46f0858b7983c720bb83a1517a0aec9baf"
+        },
+        "metrics.parquet": {
+          "bytes": 820880,
+          "sha256": "af69748890750682c0c65117d83baa6229f30988ae4c52074d89ecde6a4ee220"
+        },
+        "traces.parquet": {
+          "bytes": 2676070,
+          "sha256": "6b1588cac9ec8e92fc3d0c0b3292d9fc1d3ec654d411dbd794f3f9fbdb363cee"
+        }
+      },
+      "opaque_id": "incident_50c93049340645e8791e"
+    },
+    {
+      "alert_time": 1733594074,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "e4b8b4ec5bae4d22864861f67145331b3c553f023cd87ead1b1375ef053c4711"
+        },
+        "logs.parquet": {
+          "bytes": 465911,
+          "sha256": "22d54b90b55439dd8b06677fc683c65ad0057c7b729eef2eb8b28390107b4131"
+        },
+        "metrics.parquet": {
+          "bytes": 820014,
+          "sha256": "6d9a1286bc42a31e6c9886cc34305d817dd278a51c932672310682d866536322"
+        },
+        "traces.parquet": {
+          "bytes": 2994599,
+          "sha256": "29794e1bbc32d9d4e6dc63a1f0a3f3385b3f278f8f94554a2ca5a09559fb24f4"
+        }
+      },
+      "opaque_id": "incident_599a5b43ee4dd80eea59"
+    },
+    {
+      "alert_time": 1733596193,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "6f10be25270abfcd9262d25b9e86b05ef18296b00be91cacb4d428c70bb1db6a"
+        },
+        "logs.parquet": {
+          "bytes": 458476,
+          "sha256": "4e03e1eb06c19b8d98974a28f34e47e0b999abb8e755e7ca945234706ad3e917"
+        },
+        "metrics.parquet": {
+          "bytes": 845591,
+          "sha256": "0532cdefe78c0e292656259d8975201f132bddb5a16c369bc9f2ac5ae56aa7f3"
+        },
+        "traces.parquet": {
+          "bytes": 2760182,
+          "sha256": "b8fb7a0c926e1365bee01b8973cf2b62b0e82d1ffe5f21ccc869a89b16334585"
+        }
+      },
+      "opaque_id": "incident_e842518383f13309e1df"
+    },
+    {
+      "alert_time": 1733598330,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "66b591530d0fdfec7f154cd07cb4972219462a5ac0f4752d318f0be56f069019"
+        },
+        "logs.parquet": {
+          "bytes": 457229,
+          "sha256": "f6bb3bb339dfea6e8dcd5dd5f31567cbbea232710e9da4c217c57a900ac6b8ff"
+        },
+        "metrics.parquet": {
+          "bytes": 811386,
+          "sha256": "b4f43f37d06edd58130175a8bad767713f12e8ecf4817bc1a60a43ba4287487c"
+        },
+        "traces.parquet": {
+          "bytes": 2844637,
+          "sha256": "2e6344da6b5d3ba58e2dd7363c8493a8eeb17b76fafcac5fa2b9fa4757009aab"
+        }
+      },
+      "opaque_id": "incident_35605aa79c6138999999"
+    },
+    {
+      "alert_time": 1733600467,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "2216c54330305a988d52072c5255046eb904616b9da94f4ed60f76e0f6ef2885"
+        },
+        "logs.parquet": {
+          "bytes": 760817,
+          "sha256": "89c290caeff07ef2ba06289f4da96cbde091ed864d772e95f6b2185f911c2aa9"
+        },
+        "metrics.parquet": {
+          "bytes": 875302,
+          "sha256": "90e36caa4c3d819052e30116d6afb5d74f8f51d9fe170db281b87678481562ab"
+        },
+        "traces.parquet": {
+          "bytes": 4903164,
+          "sha256": "a59da222b7f5bc0516cfe23dccd2d10221cefd5df19e14795203a8ae863e1043"
+        }
+      },
+      "opaque_id": "incident_0b70927f5ee80a788343"
+    },
+    {
+      "alert_time": 1733602594,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "fd441db6e6ad1c7933e39035e187685aef14e2872b7fd5d333ee324862512ca9"
+        },
+        "logs.parquet": {
+          "bytes": 802575,
+          "sha256": "e9a2788629b3be0caf08f61526a90e6952f1d2ea9daf9a8bef6bae568c9b4027"
+        },
+        "metrics.parquet": {
+          "bytes": 880108,
+          "sha256": "8fe8833ff936578fa19e589ec68cd42e64a99754cc442db1454026377889a561"
+        },
+        "traces.parquet": {
+          "bytes": 5154778,
+          "sha256": "c1418912e5e4f48b928cf6c344e30c5a157857c2ab5eda272b93cd4d5eb68984"
+        }
+      },
+      "opaque_id": "incident_2b3b307b9a7228a6ad3d"
+    },
+    {
+      "alert_time": 1733604722,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "fbd47b9d24d5625a50eba1a88c2516ae94028972dd5eab808482408851524227"
+        },
+        "logs.parquet": {
+          "bytes": 824003,
+          "sha256": "5d5a48f47b660744ce685c4ee61a5adf2f8f1c3f00d350c82cab01340834e967"
+        },
+        "metrics.parquet": {
+          "bytes": 886727,
+          "sha256": "5a0ee8a46a185b269c339ef83e33bf5a3c89b53cc3d5527b090ef2384a9da115"
+        },
+        "traces.parquet": {
+          "bytes": 5282589,
+          "sha256": "1b1aebe062e77f8d283facd9da52b662a1fa8d39ecc5b4c80f6c4320c4341b26"
+        }
+      },
+      "opaque_id": "incident_1af1e09c4a6ed5b179cf"
+    },
+    {
+      "alert_time": 1733606851,
+      "dataset": "RE3-TT",
+      "files": {
+        "inject_time.txt": {
+          "bytes": 10,
+          "sha256": "bef87c251f930451fd59623ddb851af6bee1a81fe717a4e229d916d5107884f1"
+        },
+        "logs.parquet": {
+          "bytes": 761739,
+          "sha256": "45b4f019b5e52d560525fb1202a25483eab95a3b6751ba08f141f4c87755c18c"
+        },
+        "metrics.parquet": {
+          "bytes": 881613,
+          "sha256": "447147ee77e052e0b815678a659aa97b9053134a15ee924b006ce63a75a34663"
+        },
+        "traces.parquet": {
+          "bytes": 4984290,
+          "sha256": "d55245d5f623f25f2dd47cf6d2e7d20bb21a8f1b4d3712bf9c03a4a5ccb9ac3a"
+        }
+      },
+      "opaque_id": "incident_b6d5950b081bdef93fb6"
+    }
+  ],
+  "split": "engineering"
+}

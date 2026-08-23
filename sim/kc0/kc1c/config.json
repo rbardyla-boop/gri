@@ -1,0 +1,35 @@
+{
+  "schema": "KC-1C-D-INTERFERENCE-TOPOLOGY-1",
+  "unit": "KC-1C-D",
+  "status": "DEV_CHARACTERIZATION_ONLY",
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "target_packet": "p000",
+  "collision_packet": "p008",
+  "noncolliding_distractors": ["p002", "p003", "p004", "p005", "p006", "p007", "p009"],
+  "total_distractors": 16,
+  "single_collision_positions": [0, 1, 2, 4, 7, 8, 12, 15],
+  "collision_count_positions": {
+    "1": [0],
+    "2": [0, 8],
+    "4": [0, 4, 8, 12]
+  },
+  "reobserve_sequence": ["collision", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "noncolliding", "target"],
+  "stored_packets_by_slot": {
+    "0": "p007",
+    "1": "p000",
+    "2": "p001",
+    "3": "p002",
+    "4": "p003",
+    "5": "p004",
+    "6": "p005",
+    "7": "p006"
+  },
+  "matrix_incoming_packets": ["p000", "p001", "p002", "p003", "p004", "p005", "p006", "p007", "p008", "p009", "p010", "p011", "p012", "p013", "p014", "p015", "p016", "p017", "p018", "p019", "p020"],
+  "metrics": ["state_differentiation", "collision_presence", "collision_count", "collision_position", "reobservation_recovery", "interference_matrix", "serialization_interruption"],
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "post_result_cell_modification": false
+}
+

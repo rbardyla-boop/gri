@@ -1,8 +1,144 @@
+# ============================================================
+# GRI / MCO research repository
+# Keep source, tests, contracts, reports, verdicts and manifests.
+# Exclude local environments, caches, model blobs and bulky raw runs.
+# ============================================================
+
+# Python
 __pycache__/
 *.py[cod]
+*.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
 .venv/
-dist/
+venv/
+env/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+credentials/
+secrets/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Build output
 build/
+dist/
 *.egg-info/
-artifacts/generated/
+target/
+
+# Generic caches / temporary files
+.cache/
+cache/
+tmp/
+temp/
+*.tmp
+*.log
+
+# Large ML model files
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Local Ollama/model state
+.ollama/
+ollama/
+
+# Downloaded/external datasets and benchmark clones
+downloads/
+datasets/
+external/
+vendor-data/
+benchmark-data/
+
+# Large/raw experiment runtime state.
+# Reports, verdicts, manifests and aggregate evidence remain trackable.
+artifacts/**/model_calls/
+artifacts/**/live_extraction/
+artifacts/**/live_planner/
+artifacts/**/live_reasoning/
+artifacts/**/live_retrieval/
+artifacts/**/single_extraction/
+artifacts/**/single_repeat/
+artifacts/**/hybrid_embeddings/
+artifacts/**/runtime_cache/
+artifacts/**/staged/
+artifacts/**/downloads/
+artifacts/**/tmp/
+
+# Local databases/runtime stores
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Large temporary archives
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Raw scientific model-call receipts / runtime evidence
+artifacts/**/model_calls/**
+artifacts/**/*model_call*.json
+artifacts/**/*reasoning*.json
+artifacts/**/*single_extraction*.json
+artifacts/**/*single_repeat*.json
+artifacts/**/*hybrid_embedding*.json
+
+# MCO raw per-query/per-step receipts
+artifacts/**/*-step-*.json
+artifacts/**/reasoning/**
+artifacts/**/embeddings/**
+artifacts/**/extraction_cache/**
+artifacts/**/replay_cache/**
+
+# ------------------------------------------------------------
+# Generated benchmark / scientific runtime material
+# Keep canonical reports, verdicts, freezes and summaries;
+# do not publish entire regenerated datasets and per-case state.
+# ------------------------------------------------------------
+
+# MCO-04 generated cases
+artifacts/mco04/engineering/**/cases/
+artifacts/mco04/scientific/**/cases/
+
+# MCO-05 downloaded/staged benchmark material
+artifacts/mco05/data/
+artifacts/mco05/source/
+
+# Never publish scorer-only ground truth
+artifacts/**/scorer_only/
+
+# Generated per-case scientific/replay/stability records
+artifacts/**/live_mechanical/cases/
+artifacts/**/replay_mechanical/cases/
+artifacts/**/live_reasoning/cases/
+artifacts/**/replay_reasoning/cases/
+artifacts/**/stability_repeat/cases/
+
+# Large generated runtime trees
+artifacts/**/engineering/**/cases/

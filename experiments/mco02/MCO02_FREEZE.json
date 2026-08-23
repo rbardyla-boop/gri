@@ -1,0 +1,57 @@
+{
+  "experiment_id": "MCO-02",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_INFERENCE",
+  "frozen_at_utc": "2026-08-22T13:03:43Z",
+  "scientific_model_runs_before_freeze": 0,
+  "scientific_results_rows_before_freeze": 0,
+  "terminal_scientific_verdicts_before_freeze": 0,
+  "model": {
+    "name": "llama3.1:8b",
+    "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+    "ollama_version": "0.21.2",
+    "tokenizer": "llama-bpe",
+    "temperature": 0,
+    "seed": 20260822
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.2.6",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "corpus": {
+    "status": "FROZEN",
+    "digest": "07630824709f3f1da291ebec512b361dc7c6788ab36b3ad23622c1ca47419bff",
+    "manifest_sha256": "690a33eb90fc30dfeec0ff8ca32bd9a69b33b6411b33b96fbd6d25c4ace60000",
+    "histories": 8,
+    "queries": 64,
+    "semantic_records": 32200,
+    "independent_regeneration_match": true,
+    "regeneration_receipt_sha256": "78c97fb598fc3f81bbb0b38a05290ed51ec57732c807b87069c31cfa93a37877"
+  },
+  "engineering_boundary": {
+    "status": "ENGINEERING_ONLY_NOT_SCIENTIFIC",
+    "terminal_smoke_sha256": "194023d4e34013e88f6626ffdbcfa0045793f181c0ff673add34d585bc4612aa",
+    "terminal_smoke_results_sha256": "f0960394450a1ac4874a69db92f438266d3d80905f91bedf1f28eb95eb1c5267",
+    "terminal_smoke_extraction_precision": 0.96,
+    "terminal_smoke_structured_exact_accuracy": 1.0,
+    "terminal_smoke_iterative_accuracy": 1.0,
+    "failed_smokes_preserved": 2,
+    "engineering_amendments_preserved": 2
+  },
+  "files": {
+    "scripts/run_mco01.py": "28b4eeec55713b923bf6da2c725db81803e1c616770b3ad508e90dfc09bcba92",
+    "scripts/run_mco02.py": "17752a6ef8a63001c02ffa9903de59068d746a10e5a0db8144197308f77044d6",
+    "tests/test_mco02.py": "38c70fbfdee98d2fbea5d400fcba1b2241de0402418a32ab5a2f18155ab3810c",
+    "experiments/mco01/MCO01_TERMINAL_RECEIPT.json": "0eb46d1f269f8dc7b0fd2eba78566faff4e10f448612a6c10d4afcbf40578235",
+    "experiments/mco02/MCO02_CONFIG.json": "2b490e04835850412f80a7db12ff848e4c1c7c2f33894ca0094d3bca8da690e8",
+    "experiments/mco02/MCO02_CONTRACT.md": "c3be937ce887b78bb1c8cbdeab58f1298b17473fddb63180dc40be289a15a6fd",
+    "experiments/mco02/MCO02_ENGINEERING_AMENDMENT_01.json": "5422900c2a412edc8cd039d0935142e4d59a49fbb7fda3fafce1d3ebf1a45466",
+    "experiments/mco02/MCO02_ENGINEERING_AMENDMENT_02.json": "c8b9af8c42dacd4276fb8fdbbec794466381ab37bbb62c5f1ad219af6133a239",
+    "artifacts/mco02/corpus/corpus_manifest.json": "690a33eb90fc30dfeec0ff8ca32bd9a69b33b6411b33b96fbd6d25c4ace60000",
+    "artifacts/mco02/corpus_replay.json": "78c97fb598fc3f81bbb0b38a05290ed51ec57732c807b87069c31cfa93a37877",
+    "artifacts/mco02/engineering/dev_smoke/dev_smoke.json": "194023d4e34013e88f6626ffdbcfa0045793f181c0ff673add34d585bc4612aa",
+    "artifacts/mco02/engineering/dev_smoke/results.jsonl": "f0960394450a1ac4874a69db92f438266d3d80905f91bedf1f28eb95eb1c5267"
+  },
+  "stop_rule": "No source, corpus, model, threshold, capacity, system, prompt, parser, or verdict-rule changes after this receipt until the terminal MCO-02 verdict is finalized."
+}

@@ -1,0 +1,34 @@
+{
+  "unit": "GRI-01H-INFORMATION-LOCATION-DIAGNOSTIC",
+  "status": "FROZEN_BEFORE_RUN",
+  "parent_config": "gri01g_config.json",
+  "parent_config_sha256": "0abd1700df55a405e38c8631ed98616da19ecf4b6ebade89ffa74b1dbefe4b30",
+  "dimension": 8,
+  "horizon": 32,
+  "hidden_state_location": "state immediately before the task-specific query transition",
+  "decoder_scope": "fit independently per task; one separator must cover all wait counts",
+  "decoder": {
+    "method": "scipy.optimize.linprog",
+    "solver": "highs",
+    "constraint": "y * (w dot h + b) >= 1.0",
+    "margin": 1.0,
+    "feasibility_tolerance": 1e-7
+  },
+  "classification": {
+    "fixed_decoder": "the fixed per-task separator is perfect across every case and wait count",
+    "phase_rotated": "fixed separator fails, but every wait-specific per-task separator is perfect",
+    "phase_localized_loss": "fixed separator fails, and wait-specific separators are perfect only for a proper subset of wait counts",
+    "decoder_failure": "no wait-specific separator is perfect at any wait count",
+    "task_specific": "different tasks receive different classifications"
+  },
+  "forbidden": [
+    "GRI retraining",
+    "optimizer changes",
+    "new dimensions",
+    "geometry",
+    "memory additions",
+    "agents",
+    "LLMs",
+    "E8"
+  ]
+}

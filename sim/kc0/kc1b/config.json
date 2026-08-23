@@ -1,0 +1,31 @@
+{
+  "schema": "KC-1B-D-CHARACTERIZATION-1",
+  "unit": "KC-1B-D",
+  "status": "DEV_CHARACTERIZATION_ONLY",
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "delays": [0, 1, 2, 4, 8, 16],
+  "primary_packet": "p000",
+  "wrong_packet": "p001",
+  "standard_distractors": ["p002", "p003", "p004", "p005", "p006", "p007", "p009"],
+  "altered_distractors": ["p008", "p009", "p010", "p011", "p012", "p013", "p014"],
+  "conditions": ["correct_packet", "no_packet", "wrong_packet"],
+  "readout_ablations": ["full_state", "value_only", "occupancy_only"],
+  "restart": {
+    "required": true,
+    "split_rule": "after_prefix_plus_floor(delay/2)",
+    "comparison": "byte_identical_final_state_and_readout"
+  },
+  "metrics": [
+    "state_differentiation",
+    "query_recoverability",
+    "specificity",
+    "decay_curve",
+    "serialization_interruption"
+  ],
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "post_result_cell_modification": false
+}
+

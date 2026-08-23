@@ -1,0 +1,37 @@
+{
+  "schema": "KC-1A-LIFECYCLE-MANIFEST-1",
+  "candidate_id": "KC-1A-ISOLATED-KNOWLEDGE-CELL",
+  "candidate_version": "0.1.0",
+  "status": "LIFECYCLE_ONLY_NO_SCIENTIFIC_VERDICT",
+  "authorization_id": "KC-1A-LIFECYCLE-AUTHORIZED",
+  "source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "state": {
+    "state_bytes_max": 128,
+    "persistent_scalar_count": 16,
+    "value_slots": 8,
+    "occupancy_bits": 8,
+    "has_step_counter": false,
+    "has_history_buffer": false,
+    "has_population_logic": false
+  },
+  "operations": {
+    "step_operation_budget": 12,
+    "readout_operation_budget": 16,
+    "accounting_method": "DECLARED_STATIC_COST_MODEL_V1"
+  },
+  "containment": {
+    "inputs": ["token_ids", "persistent_state"],
+    "forbidden_inputs": ["fixture_id", "sequence_length", "query_id", "target_answer", "held_out_status", "trial_name", "future_tokens", "simulator_counter", "verdict_state"],
+    "uses_rng": false,
+    "uses_wall_clock": false,
+    "uses_filesystem": false,
+    "uses_network": false,
+    "uses_environment": false,
+    "uses_optimizer": false,
+    "uses_external_model": false
+  },
+  "scientific_execution": "FORBIDDEN",
+  "scientific_verdict": "FORBIDDEN",
+  "population_and_replication": "NOT_IMPLEMENTED"
+}

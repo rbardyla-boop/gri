@@ -1,0 +1,99 @@
+{
+  "accounting": {
+    "cache_hits_are_not_fresh_inference": true,
+    "dmc_historical_optimizer_steps": 10880,
+    "dmc_historical_training_cost": "TRAINING_COST_UNKNOWN",
+    "local_billed_usd": 0.0,
+    "pretrained_model_training_cost": "UNKNOWN_NOT_ZERO"
+  },
+  "baselines": {
+    "deterministic": [
+      "latest_commit",
+      "always_none",
+      "latest_deploy",
+      "earliest_deploy",
+      "alert_service_deploy",
+      "scripted_rca"
+    ],
+    "hybrid_rag": {
+      "capacity": 16,
+      "description": "TF-IDF plus frozen EmbeddingGemma reciprocal-rank fusion over the same compiled visible documents"
+    },
+    "max_context": {
+      "context_limit_tokens": 8192,
+      "description": "Deterministic source-priority prefix over the same visible documents, capped at 15000 UTF-8 complete user-prompt bytes and receipt-verified below context",
+      "prompt_byte_limit": 15000
+    }
+  },
+  "benchmark": {
+    "commit": "0c3c476e4627978dc54b5c047fd488d40561b4e5",
+    "expected_adversarial_cases": 12,
+    "expected_cases": 36,
+    "expected_no_code_cases": 8,
+    "license": "Apache-2.0",
+    "name": "RootCauseBench v3",
+    "repository": "https://github.com/edgedelta/root-cause-bench.git",
+    "split": "all scenarios scientific-only; zero benchmark engineering cases"
+  },
+  "compiler": {
+    "candidate_capacity": 10,
+    "document_text_byte_limit": 5000,
+    "log_signature_capacity": 128,
+    "max_documents": 512,
+    "metric_document_capacity": 128,
+    "packet_capacity": 16,
+    "packet_prompt_byte_limit": 15000,
+    "packet_telemetry_capacity": 5,
+    "trace_document_capacity": 96
+  },
+  "criteria": {
+    "maximum_packet_records": 16,
+    "minimum_adversarial_accuracy": 0.25,
+    "minimum_candidate_recall": 0.9,
+    "minimum_no_code_accuracy": 0.5,
+    "minimum_packet_accuracy": 0.5,
+    "minimum_packet_advantage": 0.05,
+    "minimum_provenance": 1.0,
+    "minimum_reasoning_validity": 1.0,
+    "minimum_semantic_stability": 0.95,
+    "minimum_wilson95_lower": 0.35,
+    "quality_equivalence_margin": 0.02
+  },
+  "execution": {
+    "mechanical_live_run_id": "live_mechanical",
+    "mechanical_replay_run_id": "replay_mechanical",
+    "reasoning_live_run_id": "live_reasoning",
+    "reasoning_replay_run_id": "replay_reasoning",
+    "stability_run_id": "stability_repeat"
+  },
+  "experiment_id": "MCO-05",
+  "outcome_precedence": [
+    "MCO_05_BENCHMARK_INVALID",
+    "MCO_05_DISJOINT_COMPILER_TRANSFER_FAILURE",
+    "MCO_05_DISJOINT_REASONING_FAILURE",
+    "MCO_05_CONVENTIONAL_RETRIEVAL_DOMINATES",
+    "MCO_05_DISJOINT_BOUNDED_INFERENCE_ADVANCE",
+    "MCO_05_INCOMPLETE"
+  ],
+  "reasoner": {
+    "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+    "max_output_tokens": 384,
+    "model": "llama3.1:8b",
+    "repeat_fraction": 0.1,
+    "seed": 20260823,
+    "temperature": 0,
+    "variant_call_order": "sha256_rank_then_round_robin_rotation_over_state_packet_hybrid_rag_16_max_context"
+  },
+  "retrieval": {
+    "batch_size": 16,
+    "blob_sha256": "0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515",
+    "context_limit_tokens": 2048,
+    "model": "embeddinggemma:300m",
+    "rrf_k": 60
+  },
+  "runtime": {
+    "ollama_version": "0.21.2",
+    "scorer_guard": "Python audit hook blocks scorer-only and benchmark-source reads during mechanical, reasoning, and stability runs"
+  },
+  "title": "Disjoint Change-Attribution State-Compiler Gate"
+}

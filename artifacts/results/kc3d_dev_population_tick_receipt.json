@@ -1,0 +1,149 @@
+{
+  "activation_resource_manifest": {
+    "automatic_activation": 0,
+    "automatic_contacts": 0,
+    "creates_children": false,
+    "knowledge_map": false,
+    "persistent_policy_fields": [],
+    "policy_state_bytes": 0,
+    "registry_mutation": false,
+    "target_state_policy_inspection": false
+  },
+  "activation_source_sha256": "780c9209cb1cf199e1a719edbad24ce873b4fe33e24874a2387cda1561ad567d",
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "b2ada418b783c7423939e17603ae8de31927a3485a680a6ae6e34d519021b7e1",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "between_tick_restart": {
+      "final_state_equal": true,
+      "first_tick_schedule_equal": true,
+      "live_ids_equal": true,
+      "registry_equal": true,
+      "replayed_tick_count": true
+    },
+    "branching": {
+      "activation_count": true,
+      "all_live_cells_receive": true,
+      "canonical_order": true,
+      "secondary_child_forwarded": true
+    },
+    "collision_order": {
+      "ancestor_value_wins_deterministically": true,
+      "canonical_contact_order": true,
+      "descendant_was_overwritten_before_turn": true
+    },
+    "dead_cells": {
+      "dead_excluded": true,
+      "dead_not_resurrected": true,
+      "knowledge_reaches_live_branch": true,
+      "live_cells_each_once": true,
+      "registry_unchanged": true
+    },
+    "empty_population": {
+      "unchanged": true,
+      "zero_activations": true,
+      "zero_contacts": true
+    },
+    "exactly_once": {
+      "count_matches_schedule": true,
+      "one_record_per_source": true,
+      "unique_sources": true
+    },
+    "forward_cascade": {
+      "activation_order": true,
+      "all_cells_receive": true,
+      "secondary_forwarding": true
+    },
+    "hard_budget": {
+      "activation_bound": true,
+      "contact_bound": true,
+      "maximum_case_reached": true
+    },
+    "malformed_state_preflight": {
+      "no_mutation_before_failure": true,
+      "rejected": true
+    },
+    "multi_packet": {
+      "source_has_both": true,
+      "tail_has_both": true,
+      "tick_completed": true
+    },
+    "no_conflict_repeat": {
+      "same_schedule": true,
+      "state_stable": true
+    },
+    "registry_immutability": {
+      "generation_unchanged": true,
+      "live_population_unchanged": true,
+      "registry_unchanged": true,
+      "tick_had_no_creation_or_death": true
+    },
+    "reverse_cascade": {
+      "three_explicit_ticks": true,
+      "tick_one_reaches_previous_cell": true,
+      "tick_three_reaches_founder": true,
+      "tick_two_reaches_next_previous_cell": true
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "between_tick_restart": true,
+    "branching": true,
+    "canonical_order": true,
+    "collision_order": true,
+    "dead_cells": true,
+    "empty_population": true,
+    "exactly_once": true,
+    "forward_cascade": true,
+    "hard_budget": true,
+    "malformed_state_preflight": true,
+    "multi_packet": true,
+    "no_conflict_repeat": true,
+    "registry_immutability": true,
+    "replay": true,
+    "reverse_cascade": true,
+    "source_signature_audit": true,
+    "zero_scheduler_state": true
+  },
+  "config_sha256": "0eeb04cf496d4bd77c5a1ecf9e81286bc57a8508daa9577eb929694fef2bbb6e",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "hard_bounds": {
+    "max_activations_per_tick": 8,
+    "max_slot_contacts_per_tick": 112
+  },
+  "manager_source_sha256": "af28edf692724d3bdc4a4737cd546f055f42832c6ae854898f7c7cf6b595f8f7",
+  "note": "Development bounded population-tick characterization only; no automatic loop, population dynamics, or scientific conclusion is authorized.",
+  "resource_manifest": {
+    "automatic_ticks": 0,
+    "background_execution": false,
+    "creates_children": false,
+    "kills_cells": false,
+    "max_activations_per_tick": 8,
+    "max_slot_contacts_per_tick": 112,
+    "persistent_scheduler_fields": [],
+    "registry_mutation": false,
+    "scheduler_state_bytes": 0
+  },
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "share_source_sha256": "45a1e6f76721f6e5988323276dce2defb8463dafbd491da34974263b2728b223",
+  "status": "PASS",
+  "tick_source_audit": {
+    "class_count": 0,
+    "direct_activate_cell_calls": 1,
+    "forbidden_names_or_imports": [],
+    "global_statement_count": 0,
+    "runtime_signature": [
+      "population"
+    ],
+    "signature_ok": true,
+    "source_signature": [
+      "population"
+    ],
+    "status": "PASS"
+  },
+  "tick_source_sha256": "290ad31ad658318f10e14a39aa0be6a7de684d8f527061447a44ed4fa7bf5502",
+  "unit": "KC-3D-D",
+  "verdict": "KC_3D_DEV_COMPLETE"
+}

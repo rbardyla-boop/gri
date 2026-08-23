@@ -1,0 +1,37 @@
+{
+  "experiment_id": "MCO-01",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_EXECUTION",
+  "frozen_at_utc": "2026-08-22T00:00:00Z",
+  "scientific_runs_completed_at_freeze": 0,
+  "engineering_scope_completed_at_freeze": [
+    "unit tests",
+    "100-record smoke reconstruction",
+    "disposable dataset-generation rehearsal",
+    "frozen dataset generation",
+    "deep dataset integrity audit"
+  ],
+  "dataset": {
+    "dataset_digest": "187a72913a1a48ca35fd791ed096df325992a0fe1bb1957c08ceff445633cf00",
+    "history_count": 20,
+    "query_count": 160,
+    "record_count": 555500,
+    "history_sizes": [100, 1000, 10000, 100000],
+    "seeds": [2601, 2602, 2603, 2604, 2605]
+  },
+  "files": {
+    "experiments/dmc05r/DMC_BRANCH_TERMINAL_RECEIPT.json": "86b5949377d763d2dd62b9e639f17a164c222e3aec2715036947f9f637894a5b",
+    "experiments/mco01/MCO01_CONFIG.json": "0e344cc8bbc4c37f4e48e42734019a25c8e58c929e8d3d0b2579f2a5f6078d9f",
+    "experiments/mco01/MCO01_CONTRACT.md": "9fcd4077ae99a93cbbe1bf3f7dbf71451b01a585021c630b5bfc21f8da3f0bfb",
+    "scripts/run_mco01.py": "28b4eeec55713b923bf6da2c725db81803e1c616770b3ad508e90dfc09bcba92",
+    "tests/test_mco01.py": "ee0edd8bba5c748bcf6d6bb1fde915e15066bfc9cf2b4cfc6a9495380b3395a0",
+    "artifacts/mco01/dataset/dataset_manifest.json": "734ba76ffe0ec1ce88bc6996a71da27a6556d6d15d19ce8779a0b281d335f4a3"
+  },
+  "execution_policy": {
+    "minimum_valid_runs": 2,
+    "normalized_replay_required": true,
+    "threshold_changes_after_freeze": false,
+    "system_changes_after_freeze": false,
+    "dataset_changes_after_freeze": false,
+    "stop_after_terminal_verdict": true
+  }
+}

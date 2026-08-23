@@ -1,0 +1,58 @@
+{
+  "unit": "GRI-SC-1-BOUNDED-DEV-SMOKE-SEARCH",
+  "status": "DEV_SMOKE_COMPLETE",
+  "scientific_verdict": "FORBIDDEN",
+  "candidate_freeze": false,
+  "scientific_run": false,
+  "search_result": "NO_PROMISING_CONSTRUCTION_IN_BOUNDED_SMOKE",
+  "search_result_boundary": "This does not prove impossibility and does not authorize SC-2.",
+  "parent_anchors": {
+    "sc0_contract_sha256": "5174be19336f0f30597a22f78917b189708fe406f4f588dccc2989bd4b642e50",
+    "sc0_analysis_sha256": "4eec18ec632a80c69895e1dae12cc7002951cd327bdc690661818b4a571e974a",
+    "sim_experiment_manifest_sha256": "26bf08851e52c48caa7cc2c5340641f7e82c3be097d1a4e0f215c1b9353849ce",
+    "gri02b_operation_rules_sha256": "166f269d77c0e9f7bb95daa2a4bc376418c43ed59666bdd5d9ee90c47b1442d3",
+    "gri02b_fixture_bank_sha256": "f555336cc86745a5a28c17fee1d7886f8ed78a277d1fe9f00df7aa0ce43a7960"
+  },
+  "candidates": [
+    {
+      "candidate_id": "GRI-SC-1-A-BRANCHFREE-AFFINE",
+      "source_sha256": "e59523da3b150ed1d19a9c21c7168e020bb7cfcadb5cf7409ccdd1c261ea03a5",
+      "manifest_sha256": "2b0e95bcff9e9dda371f99b5347ff6dbcb591639466a702717b9e17c49e49514",
+      "recurrent_operations": 97,
+      "trainable_parameters": 170,
+      "sim_preflight": "PASS",
+      "fit_accuracy": 0.5714285714285714,
+      "held_out_accuracy": 0.5288461538461539,
+      "restart_smoke": "PASS"
+    },
+    {
+      "candidate_id": "GRI-SC-1-B-BRANCHFREE-RESIDUAL",
+      "source_sha256": "64732bbaebc5c52de3344c7c9387f0a688c6210e5638dd61736dcadc0f5af218",
+      "manifest_sha256": "f7e6e9617ef810a22aed9c097021ab41a88b32609cfaac2857e0d63fd65f9584",
+      "recurrent_operations": 57,
+      "trainable_parameters": 96,
+      "fixed_parameters": 10,
+      "sim_preflight": "PASS",
+      "fit_accuracy": 0.5,
+      "held_out_accuracy": 0.5,
+      "restart_smoke": "PASS"
+    }
+  ],
+  "development_protocol": {
+    "seed": 20260820,
+    "epochs": 80,
+    "learning_rate": 0.03,
+    "restart_fixture_subset": 32,
+    "all_fixture_smoke_count": 558,
+    "held_out_fixture_count": 208
+  },
+  "individual_receipts": {
+    "candidate_a": "e34b74b70c6044e4ec0993baed2976272137812e6952961abdc300269013d92f",
+    "candidate_b": "cca1cf0aad5632c0721cb5aaa2925b44886ec329319a8fab06591f3807eed158"
+  },
+  "next_state": {
+    "sc2": "NOT AUTHORIZED",
+    "successor_mechanism": "NOT AUTHORIZED",
+    "scientific_ledger": "UNCHANGED"
+  }
+}

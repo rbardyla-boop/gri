@@ -1,0 +1,213 @@
+{
+  "anchor_errors": [],
+  "canonical_receipt_sha256": "7fd8e6829fb3e8499accb446429dfeb13f333cb6f70a75c6cf6126b4ba023653",
+  "cell_source_sha256": "2ec7c17fdfd384fd110367a74f912752bb7289a98829a0e64cf1453aef9c4173",
+  "characterization": {
+    "branching": {
+      "left_contact": true,
+      "left_has_packet": true,
+      "right_contact": true,
+      "right_has_packet": true
+    },
+    "contact_order": {
+      "a_final_tokens": [
+        16
+      ],
+      "b_final_tokens": [
+        8
+      ],
+      "orders_are_explicitly_distinguishable": true
+    },
+    "duplicate_contact": {
+      "accepted": true,
+      "state_unchanged": true
+    },
+    "empty_slot": {
+      "accepted": false,
+      "target_unchanged": true
+    },
+    "generation_metadata_unchanged": {
+      "generations": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "registry_unchanged": true
+    },
+    "last_copy_death": {
+      "no_live_cell_contains_packet": true,
+      "no_live_state_contains_packet": true,
+      "packet_not_in_registry": true,
+      "registry_fields_only": true
+    },
+    "mid_spread_restart": {
+      "same_live_ids": true,
+      "same_live_state_digests": true,
+      "same_registry": true
+    },
+    "multi_hop": {
+      "contacts": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ]
+      ],
+      "last_has_packet": true,
+      "second_hop_accepted": true,
+      "source_never_directly_contacted_later_cells": true,
+      "third_hop_accepted": true
+    },
+    "no_automatic_contact": {
+      "population_count": 4,
+      "uncontacted_empty": true
+    },
+    "one_hop": {
+      "contact_accepted": true,
+      "source_retains_packet": true,
+      "target_has_packet": true
+    },
+    "population_cap_unchanged": {
+      "at_cap_unchanged": true,
+      "live_count": 4,
+      "registry_unchanged": true
+    },
+    "post_birth_acquisition": {
+      "only_source_has_packet": true,
+      "others_empty": true,
+      "pre_acquisition": {
+        "C0": [],
+        "C1": [],
+        "C2": [],
+        "C3": []
+      }
+    },
+    "registry_audit": {
+      "fields_exact": true,
+      "population_resource": {
+        "automatic_spawn_calls": 0,
+        "external_infrastructure": false,
+        "knowledge_state_in_registry": false,
+        "max_generation": 3,
+        "max_population": 8,
+        "registry_fields": [
+          "cell_id",
+          "parent_id",
+          "generation",
+          "alive"
+        ],
+        "uses_fitness": false,
+        "uses_mutation_at_birth": false,
+        "uses_selection": false
+      }
+    },
+    "same_slot_collision": {
+      "accepted": true,
+      "source_unchanged": true,
+      "target_has_shared": true,
+      "target_old_conflict_replaced": true
+    },
+    "secondary_forwarding": {
+      "contacts": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ]
+      ],
+      "last_has_packet": true,
+      "second_hop_accepted": true,
+      "source_never_directly_contacted_later_cells": true,
+      "third_hop_accepted": true
+    },
+    "source_death": {
+      "forwarded_after_source_death": true,
+      "last_has_packet": true,
+      "source_dead": true
+    },
+    "wrong_slot": {
+      "accepted": false,
+      "packet_not_revealed": true,
+      "target_unchanged": true
+    }
+  },
+  "checks": {
+    "anchors": true,
+    "bank_validation": true,
+    "branching": true,
+    "contact_order": true,
+    "duplicate_contact": true,
+    "empty_slot": true,
+    "generation_metadata_unchanged": true,
+    "last_copy_death": true,
+    "mid_spread_restart": true,
+    "multi_hop": true,
+    "no_automatic_contact": true,
+    "one_hop": true,
+    "population_cap_unchanged": true,
+    "post_birth_acquisition": true,
+    "registry_audit": true,
+    "replay": true,
+    "resource_boundary": true,
+    "same_slot_collision": true,
+    "secondary_forwarding": true,
+    "source_death": true,
+    "source_signature_audit": true,
+    "wrong_slot": true
+  },
+  "child_creation_source_sha256": "f3fdf0d4ae6bda8d103549c22c20f7a8d4e53fcf7b54700b6aedc1198b900046",
+  "config_sha256": "eda0e4ec0dee04590f85073400193066f6955cff11320c5bd3cf41e5c9d8934b",
+  "export_source_sha256": "e52eeca7266584c7ee963a2a0d2b4ca8da2c63530dd6337a3fb7008bb76b4264",
+  "fixture_bank_sha256": "0eff453e68c0c38f9f85e040f42ad87b8de0c5ec03557ecba1dbc077135caef5",
+  "manager_source_sha256": "af28edf692724d3bdc4a4737cd546f055f42832c6ae854898f7c7cf6b595f8f7",
+  "note": "Development bounded knowledge-spread characterization only; automatic propagation, selection, and scientific conclusions are forbidden.",
+  "resource_manifest": {
+    "automatic_contacts": 0,
+    "coordinator_state_bytes": 0,
+    "creates_children": false,
+    "knowledge_map": false,
+    "persistent_coordinator_fields": [],
+    "registry_mutation": false,
+    "transfer_payload_persistent": false
+  },
+  "scientific_thresholds": "UNDEFINED_IN_DEVELOPMENT",
+  "scientific_verdict": "FORBIDDEN",
+  "share_source_audit": {
+    "class_count": 0,
+    "forbidden_names_or_imports": [],
+    "global_statement_count": 0,
+    "runtime_signature": [
+      "population",
+      "source_id",
+      "target_id",
+      "slot_id"
+    ],
+    "signature_ok": true,
+    "source_signature": [
+      "population",
+      "source_id",
+      "target_id",
+      "slot_id"
+    ],
+    "status": "PASS"
+  },
+  "share_source_sha256": "45a1e6f76721f6e5988323276dce2defb8463dafbd491da34974263b2728b223",
+  "status": "PASS",
+  "unit": "KC-3B-D",
+  "verdict": "KC_3B_DEV_COMPLETE"
+}
