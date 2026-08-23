@@ -1,0 +1,66 @@
+name: ERC-2AR Data Binding
+
+on:
+  pull_request:
+    branches: [erc2a-damadics-structural-transfer, erc1b-mco04-verified-data-binding, main]
+    paths:
+      - 'experiments/erc2ar/qualify_data_binding.py'
+      - '.github/workflows/erc2ar-data-binding.yml'
+  workflow_dispatch:
+
+jobs:
+  bind-days:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Assert ERC-1B compiler remains byte-identical
+        run: |
+          expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
+          actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
+          test "$actual" = "$expected"
+      - name: Compile data-binding qualifier
+        run: python -m py_compile experiments/erc2ar/qualify_data_binding.py
+      - name: Verify archive identities and four fault-day file shapes
+        run: |
+          python -m experiments.erc2ar.qualify_data_binding \
+            --output /tmp/ERC2AR_DATA_BINDING.json \
+            | tee /tmp/ERC2AR_DATA_BINDING_STDOUT.txt
+      - name: Assert pre-score data boundary
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ERC2AR_DATA_BINDING.json'))
+          assert p['status'] == 'ERC2AR_DATA_BINDING_PASS'
+          assert p['telemetry_archives_downloaded'] is True
+          assert p['telemetry_member_values_read_as_text'] is True
+          assert p['telemetry_signal_values_numeric_parsed'] is False
+          assert p['event_windows_constructed'] is False
+          assert p['feature_scores_computed'] is False
+          assert p['scientific_predictions'] == 0
+          assert p['scorer_opened_after_prediction'] is False
+          assert p['selected_day_count'] == 4
+          for row in p['selected_days']:
+              assert row['row_count'] == 86400
+              assert row['column_count'] == 33
+              assert row['first_timestamp'] == 0
+              assert row['last_timestamp'] == 86399
+              assert row['timestamps_strict_0_86399'] is True
+              assert row['signal_values_numeric_parsed'] is False
+              assert row['signal_values_scored'] is False
+          print('ERC2AR_PRE_SCORE_DATA_BOUNDARY_PASS')
+          PY
+      - name: Preserve data-binding evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC2AR_DATA_BINDING
+          path: |
+            /tmp/ERC2AR_DATA_BINDING.json
+            /tmp/ERC2AR_DATA_BINDING_STDOUT.txt
