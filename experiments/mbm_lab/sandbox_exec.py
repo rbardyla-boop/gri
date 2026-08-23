@@ -20,6 +20,7 @@ def limits(memory_mb: int, cpu_seconds: int, pids: int = 0):
     PID namespace. Applying a small value before launching bwrap can therefore
     prevent bwrap itself from creating namespaces on a normal desktop session.
     """
+
     def apply() -> None:
         if memory_mb > 0:
             cap = memory_mb * 1024 * 1024
@@ -28,6 +29,7 @@ def limits(memory_mb: int, cpu_seconds: int, pids: int = 0):
             resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds, cpu_seconds))
         if pids > 0 and hasattr(resource, "RLIMIT_NPROC"):
             resource.setrlimit(resource.RLIMIT_NPROC, (pids, pids))
+
     return apply
 
 
@@ -40,12 +42,20 @@ def build_bwrap(workspace: Path, command: list[str], network: bool) -> list[str]
         "--unshare-pid",
         "--unshare-uts",
         "--unshare-ipc",
-        "--ro-bind", "/", "/",
-        "--bind", str(workspace), str(workspace),
-        "--proc", "/proc",
-        "--dev", "/dev",
-        "--tmpfs", "/tmp",
-        "--chdir", str(workspace),
+        "--ro-bind",
+        "/",
+        "/",
+        "--bind",
+        str(workspace),
+        str(workspace),
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--tmpfs",
+        "/tmp",
+        "--chdir",
+        str(workspace),
     ]
     if not network:
         cmd.append("--unshare-net")
@@ -66,23 +76,44 @@ def probe_bwrap(workspace: Path) -> tuple[bool, str]:
     return False, detail[:2000]
 
 
-def build_podman(workspace: Path, command: list[str], network: bool, image: str, memory_mb: int, pids: int) -> list[str]:
+def build_podman(
+    workspace: Path,
+    command: list[str],
+    network: bool,
+    image: str,
+    memory_mb: int,
+    pids: int,
+) -> list[str]:
     cmd = [
-        "podman", "run", "--rm",
+        "podman",
+        "run",
+        "--rm",
         "--read-only",
         "--userns=keep-id",
         "--security-opt=no-new-privileges",
         "--cap-drop=ALL",
-        "--pids-limit", str(pids),
-        "--memory", f"{memory_mb}m",
-        "-v", f"{workspace}:{workspace}:rw,Z",
-        "-w", str(workspace),
+        "--pids-limit",
+        str(pids),
+        "--memory",
+        f"{memory_mb}m",
+        "-v",
+        f"{workspace}:{workspace}:rw,Z",
+        "-w",
+        str(workspace),
     ]
     broker = os.environ.get("TE0_MODEL_BROKER")
     if broker:
         cmd += ["-e", f"TE0_MODEL_BROKER={broker}"]
     cmd += ["--network", "slirp4netns"] if network else ["--network", "none"]
     return cmd + [image] + command
+
+
+def as_text(value: str | bytes | None) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, bytes):
+        return value.decode("utf-8", errors="replace")
+    return value
 
 
 def main() -> None:
@@ -152,11 +183,32 @@ def main() -> None:
 
     started = datetime.now(timezone.utc).isoformat()
     t0 = time.monotonic()
-    proc = subprocess.run(full, text=True, capture_output=True, timeout=args.timeout, check=False, preexec_fn=preexec)
-    elapsed = time.monotonic() - t0
+    timed_out = False
+    returncode: int | None
+    try:
+        proc = subprocess.run(
+            full,
+            text=True,
+            capture_output=True,
+            timeout=args.timeout,
+            check=False,
+            preexec_fn=preexec,
+        )
+        elapsed = time.monotonic() - t0
+        stdout = proc.stdout
+        stderr = proc.stderr
+        returncode = proc.returncode
+        status = "MBM_SANDBOX_EXECUTION"
+    except subprocess.TimeoutExpired as exc:
+        elapsed = time.monotonic() - t0
+        stdout = as_text(exc.stdout)
+        stderr = as_text(exc.stderr)
+        returncode = None
+        timed_out = True
+        status = "MBM_SANDBOX_TIMEOUT"
 
     receipt = {
-        "status": "MBM_SANDBOX_EXECUTION",
+        "status": status,
         "backend": backend,
         "backend_selection": selection,
         "workspace": str(workspace),
@@ -165,11 +217,13 @@ def main() -> None:
         "model_broker_socket": os.environ.get("TE0_MODEL_BROKER"),
         "started_at": started,
         "elapsed_seconds": elapsed,
-        "returncode": proc.returncode,
-        "stdout_sha256": hashlib.sha256(proc.stdout.encode()).hexdigest(),
-        "stderr_sha256": hashlib.sha256(proc.stderr.encode()).hexdigest(),
-        "stdout": proc.stdout,
-        "stderr": proc.stderr,
+        "timeout_seconds": args.timeout,
+        "timed_out": timed_out,
+        "returncode": returncode,
+        "stdout_sha256": hashlib.sha256(stdout.encode()).hexdigest(),
+        "stderr_sha256": hashlib.sha256(stderr.encode()).hexdigest(),
+        "stdout": stdout,
+        "stderr": stderr,
         "limits": {
             "memory_mb": args.memory_mb,
             "cpu_seconds": args.cpu_seconds,
@@ -180,8 +234,28 @@ def main() -> None:
     }
     args.receipt.parent.mkdir(parents=True, exist_ok=True)
     args.receipt.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({k: receipt[k] for k in ["status", "backend", "backend_selection", "returncode", "elapsed_seconds", "network", "limits"]}, indent=2))
-    raise SystemExit(proc.returncode)
+    print(
+        json.dumps(
+            {
+                key: receipt[key]
+                for key in [
+                    "status",
+                    "backend",
+                    "backend_selection",
+                    "returncode",
+                    "elapsed_seconds",
+                    "timeout_seconds",
+                    "timed_out",
+                    "network",
+                    "limits",
+                ]
+            },
+            indent=2,
+        )
+    )
+    if timed_out:
+        raise SystemExit(124)
+    raise SystemExit(returncode or 0)
 
 
 if __name__ == "__main__":
