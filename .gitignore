@@ -159,3 +159,6 @@ artifacts/mco05/**/SEALED_*.json
 
 artifacts/results/*_run1_inconclusive.json
 artifacts/results/*_dev_smoke.json
+
+# Gauntlet local freeze/run/replay receipts
+.gauntlet/
