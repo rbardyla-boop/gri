@@ -1,0 +1,7 @@
+{
+  "model_id": "TO_BE_BOUND",
+  "artifact_sha256": "TO_BE_BOUND_64_HEX_SHA256",
+  "runtime": "openai_compatible_local",
+  "base_url": "http://127.0.0.1:1234/v1",
+  "notes": "Copy to SEM0_MODEL_IDENTITY.json only after selecting one exact frozen local model artifact. The scientific run is unauthorized while this is a placeholder."
+}
