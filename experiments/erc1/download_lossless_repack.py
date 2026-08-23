@@ -19,10 +19,11 @@ def main() -> None:
         repo_id=REPO_ID,
         repo_type="dataset",
         revision=REVISION,
-        allow_patterns=[
-            "re3*/metrics.parquet",
-            "re3*/inject_time.txt",
-        ],
+        # Use the dataset maintainer's documented suite-level selector.  The
+        # earlier nested file glob selected zero files under huggingface_hub
+        # 1.28.0.  Staging below still copies only metrics.parquet and
+        # inject_time.txt into the candidate/scorer split.
+        allow_patterns="re3*",
         local_dir=str(args.output),
     )
     case_count = sum(1 for _ in args.output.glob("re3*/metrics.parquet"))
