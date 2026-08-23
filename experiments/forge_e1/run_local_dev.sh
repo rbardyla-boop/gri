@@ -4,18 +4,23 @@ set -euo pipefail
 repo="$(git rev-parse --show-toplevel)"
 cd "$repo"
 
-expected_branch="te0-e1-interface-repair"
-branch="$(git branch --show-current)"
-if [[ "$branch" != "$expected_branch" ]]; then
-  echo "TE0_E1_WRONG_BRANCH: expected $expected_branch, got $branch" >&2
+# Operator runs should happen from a disposable clean worktree. A detached
+# worktree is allowed; what matters is that its bytes exactly match the fetched
+# remote experiment head, not that a particular local branch name is checked out.
+remote_ref="${TE0_E1_REMOTE_REF:-refs/remotes/origin/te0-e1-interface-repair}"
+if ! git show-ref --verify --quiet "$remote_ref"; then
+  echo "TE0_E1_REMOTE_REF_MISSING: fetch origin before running ($remote_ref)" >&2
   exit 2
 fi
-if [[ -n "$(git status --porcelain)" ]]; then
+head_sha="$(git rev-parse HEAD)"
+expected_sha="$(git rev-parse "$remote_ref")"
+if [[ "$head_sha" != "$expected_sha" ]]; then
+  echo "TE0_E1_HEAD_MISMATCH: HEAD=$head_sha expected=$expected_sha" >&2
+  exit 2
+fi
+if [[ -n "$(git status --porcelain --untracked-files=all)" ]]; then
   echo "TE0_E1_WORKTREE_NOT_CLEAN" >&2
-  exit 2
-fi
-if ! command -v bwrap >/dev/null 2>&1; then
-  echo "TE0_E1_BWRAP_REQUIRED" >&2
+  git status --short >&2 || true
   exit 2
 fi
 
@@ -74,7 +79,9 @@ if [[ ! -S "$broker_socket" ]]; then
 fi
 
 export FORGE_MODEL_BROKER="$broker_socket"
-export FORGE_SANDBOX_BACKEND=bwrap
+# Let the qualified sandbox choose Bubblewrap first, then Podman/Docker. The
+# caller may still pin FORGE_SANDBOX_BACKEND explicitly.
+export FORGE_SANDBOX_BACKEND="${FORGE_SANDBOX_BACKEND:-auto}"
 export FORGE_SCRATCH="$(dirname "$scratch")"
 
 bash experiments/forge/sandbox.sh \
@@ -127,15 +134,20 @@ result = {
     'unit': 'TE0-E1',
     'status': status,
     'phase': 'LOCAL_BUILD_DEV_COMPLETE',
+    'source_head_sha': subprocess_head if False else None,
     'vault_created': False,
     'vault_seen': False,
     'scientific_semantic_claim': False,
     'artifacts': {p.name: sha(p) for p in paths if p.exists()},
 }
+# source_head_sha is bound outside this inline Python by the shell summary line;
+# keep this payload focused on generated artifacts.
+result.pop('source_head_sha', None)
 summary_path.write_text(json.dumps(result, indent=2, sort_keys=True) + '\n')
 print(json.dumps(result, indent=2, sort_keys=True))
 PY
 
 echo
 echo "TE0-E1 BUILD/DEV complete: $scratch"
+echo "Source head: $head_sha"
 echo "No Vault was generated or opened."
