@@ -1,0 +1,67 @@
+name: TE0-E1 Interface Repair
+
+on:
+  push:
+    branches: [te0-e1-interface-repair]
+  pull_request:
+    branches: [forge-sandbox-v0, main]
+
+jobs:
+  pre-execution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install tests
+        run: python -m pip install -e '.[test]'
+      - name: Run TE0 foundation and E1 tests
+        run: |
+          pytest \
+            tests/test_forge.py \
+            tests/test_forge_ecology.py \
+            tests/test_forge_model_broker.py \
+            tests/test_forge_controller.py \
+            tests/test_forge_project_tools.py \
+            tests/test_te0_e1_interface.py \
+            -q
+      - name: Verify deterministic public pool generation
+        run: |
+          rm -rf /tmp/te0-e1
+          mkdir -p /tmp/te0-e1
+          python -B -m experiments.forge_e1.generate_te0_e1 \
+            --seed-text TE0-E1-PUBLIC-BUILD-v1 \
+            --count 24 --prefix B \
+            --output /tmp/te0-e1/build.jsonl
+          python -B -m experiments.forge_e1.generate_te0_e1 \
+            --seed-text TE0-E1-PUBLIC-DEV-v1 \
+            --count 24 --prefix D \
+            --output /tmp/te0-e1/dev.jsonl
+          sha256sum /tmp/te0-e1/build.jsonl /tmp/te0-e1/dev.jsonl
+      - name: Verify development surfaces have no Vault input
+        run: |
+          python -B -m experiments.forge_e1.develop_te0_e1 --help > /tmp/e1-dev-help.txt
+          python -B -m experiments.forge_e1.collect_te0_e1 --help > /tmp/e1-collect-help.txt
+          if grep -Eiq -- '(^|[[:space:]])--vault([[:space:]=]|$)' /tmp/e1-dev-help.txt /tmp/e1-collect-help.txt; then
+            echo TE0_E1_DEVELOPMENT_EXPOSES_VAULT >&2
+            exit 1
+          fi
+      - name: Verify E1 repair surface cannot invent missing semantic content
+        run: |
+          python - <<'PY'
+          from experiments.forge_e1.interface_tools import InterfaceRepairToolFactory
+          allowed = InterfaceRepairToolFactory.EXTRA_OPS
+          assert allowed == {
+              'extract_json_object',
+              'json_parse_object',
+              'normalize_label_field',
+              'dedupe_sort_list_field',
+              'require_exact_keys',
+          }
+          print(sorted(allowed))
+          PY
+      - name: Preserve TE0 foundation and terminal research verdict
+        run: |
+          pytest tests/test_project_terminal_verdict.py -q
+          grep -q 'SCIENTIFIC MODEL CALLS:     0' docs/TE0-CURRENT-STATE-2026-08-23.md
