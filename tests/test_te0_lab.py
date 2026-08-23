@@ -36,6 +36,7 @@ def test_failure_classifier_localizes_interface_and_resource():
 def test_fixture_forge_set_target_matches_extractor_contract():
     forge = load_module("te0_fixture_forge", LAB / "fixture_forge.py")
     import random
+
     row = forge.make_fixture(random.Random(1), 0, "set")
     assert set(row["target"]) == {"selected"}
     assert json.dumps(row["target"], sort_keys=True) in row["prompt"]
@@ -77,10 +78,16 @@ def test_recipe_tool_never_receives_gold(tmp_path: Path):
 
 
 def test_consensus_tie_fails_closed(tmp_path: Path):
-    payload = {"fixture": {"id":"x","kind":"copy","prompt":"p"}, "state": {"parsed_candidates": [{"value":"A"},{"value":"B"}]}}
+    payload = {
+        "fixture": {"id": "x", "kind": "copy", "prompt": "p"},
+        "state": {"parsed_candidates": [{"value": "A"}, {"value": "B"}]},
+    }
     proc = subprocess.run(
         [sys.executable, str(LAB / "tools" / "consensus.py")],
-        input=json.dumps(payload), text=True, capture_output=True, check=False,
+        input=json.dumps(payload),
+        text=True,
+        capture_output=True,
+        check=False,
     )
     assert proc.returncode != 0
     assert "consensus tie" in proc.stderr
@@ -91,3 +98,28 @@ def test_starter_catalog_has_no_harness_tools():
     assert cat["tools"]
     assert all(tool.get("promotable") is True for tool in cat["tools"])
     assert all("echo_target" not in tool["command"] for tool in cat["tools"])
+
+
+def test_grinder_resume_requires_exact_execution_prefix():
+    lab_path = str(LAB)
+    if lab_path not in sys.path:
+        sys.path.insert(0, lab_path)
+    grinder = load_module("te0_recipe_grinder", LAB / "recipe_grinder.py")
+    fixtures = [{"id": "a"}, {"id": "b"}]
+
+    valid_prefix = [
+        {"replay": 0, "ordinal": 0, "fixture_id": "a"},
+        {"replay": 0, "ordinal": 1, "fixture_id": "b"},
+        {"replay": 1, "ordinal": 0, "fixture_id": "a"},
+    ]
+    grinder.validate_prefix(valid_prefix, fixtures, replays=2)
+
+    invalid_prefix = [
+        {"replay": 0, "ordinal": 0, "fixture_id": "b"},
+    ]
+    try:
+        grinder.validate_prefix(invalid_prefix, fixtures, replays=2)
+    except ValueError as exc:
+        assert "not an exact execution prefix" in str(exc)
+    else:
+        raise AssertionError("invalid grinder checkpoint prefix was accepted")
