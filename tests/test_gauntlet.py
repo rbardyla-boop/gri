@@ -141,7 +141,9 @@ minimum_delta = 0.20
     verdict = verdict_frozen(manifest, run["receipt_path"], replay["replay_path"])
     assert all(verdict["integrity"].values())
     assert verdict["state"] == "ADVANCE"
-    assert verdict["evidence_class"] == "PREREGISTERED_RUN"
+    assert verdict["evidence_class"] == "FROZEN_RUN"
+    assert verdict["audit"]["evidence_class"] == "FROZEN_RUN"
+    assert verdict["boundary"]["public_preregistration"] == "NOT_ESTABLISHED"
 
 
 def test_python_guard_blocks_holdout_read(tmp_path: Path) -> None:

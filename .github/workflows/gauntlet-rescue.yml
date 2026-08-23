@@ -201,7 +201,8 @@ jobs:
           python - <<'PY'
           import json
           value = json.load(open('/tmp/verdict.json'))
-          assert value['evidence_class'] == 'PREREGISTERED_RUN'
+          assert value['evidence_class'] == 'FROZEN_RUN'
+          assert value['boundary']['public_preregistration'] == 'NOT_ESTABLISHED'
           assert value['state'] == 'ADVANCE'
           assert all(value['integrity'].values())
           PY

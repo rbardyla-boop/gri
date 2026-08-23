@@ -96,6 +96,28 @@ def test_human_approval_materializes_evidence_then_unchanged_engine_can_advance(
     assert verdict["boundary"]["prospective_credit"] is False
 
 
+def test_minimum_improvement_is_inclusive(tmp_path: Path) -> None:
+    source = tmp_path / "source.md"
+    draft_path = tmp_path / "draft.json"
+    approval_path = tmp_path / "approval.json"
+    output_dir = tmp_path / "generated"
+    source.write_text(MARKDOWN, encoding="utf-8")
+    draft = scan_markdown(source, output=draft_path, source_revision="deadbeef")
+    approval = _approval(draft)
+    approval["metrics"][0]["minimum_improvement"] = 66.2 - 61.9
+    approval["metrics"][1]["minimum_improvement"] = 65.7 - 61.1
+    approval_path.write_text(json.dumps(approval, indent=2) + "\n", encoding="utf-8")
+
+    materialize_approved_markdown_claim(draft_path, approval_path, output_dir=output_dir)
+    verdict = autopsy_claim(output_dir / "autopsy.toml")
+
+    assert verdict["outcome"] == "ADVANCE"
+    advance = next(signal for signal in verdict["signals"] if signal["kind"] == "advance")
+    metric_rows = [row for row in advance["predicates"] if row["path"].endswith(".improvement")]
+    assert metric_rows
+    assert all(row["op"] == "gte" and row["pass"] for row in metric_rows)
+
+
 def test_human_approved_source_fact_can_override_raw_advance_with_generic_negative_signal(tmp_path: Path) -> None:
     source = tmp_path / "source.md"
     draft_path = tmp_path / "draft.json"
