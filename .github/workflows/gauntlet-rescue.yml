@@ -57,3 +57,30 @@ jobs:
           assert value['state'] == 'ADVANCE'
           assert all(value['integrity'].values())
           PY
+      - name: Generate and audit a real Inspect AI log
+        run: |
+          python -m pip install 'inspect-ai==0.3.257'
+          rm -rf /tmp/inspect-logs /tmp/inspect-run.json /tmp/inspect-audit.json
+          inspect eval examples/gauntlet/inspect_foreign_eval.py \
+            --model mockllm/model \
+            --log-format json \
+            --log-dir /tmp/inspect-logs \
+            --display none
+          LOG="$(find /tmp/inspect-logs -type f -name '*.json' | head -n 1)"
+          test -n "$LOG"
+          inspect log export-config "$LOG" --format json --output /tmp/inspect-run.json
+          gauntlet audit-inspect "$LOG" --run-config /tmp/inspect-run.json > /tmp/inspect-audit.json
+          python - <<'PY'
+          import json
+          value = json.load(open('/tmp/inspect-audit.json'))
+          assert value['adapter'] == 'inspect_ai_json'
+          assert value['evidence_class'] == 'FOREIGN_LOG_AUDIT'
+          assert value['classification'] == 'FOREIGN_LOG_STRUCTURALLY_STRONG'
+          assert value['concerns'] == []
+          assert value['evidence']['successful_completion']['status'] == 'VERIFIED_FROM_LOG'
+          assert value['evidence']['run_config_artifact']['status'] == 'VERIFIED_FROM_LOG'
+          assert value['evidence']['dataset_content_identity']['status'] == 'NOT_ESTABLISHED'
+          assert value['evidence']['holdout_isolation']['status'] == 'NOT_ESTABLISHED'
+          assert value['evidence']['preregistration']['status'] == 'NOT_ESTABLISHED'
+          assert value['boundary']['claim_admissibility'] == 'NOT_ESTABLISHED'
+          PY
