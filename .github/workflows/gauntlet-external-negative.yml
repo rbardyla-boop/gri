@@ -2,7 +2,7 @@ name: Gauntlet External Negative Gate
 
 on:
   push:
-    branches: [mechanism-autopsy-external-gate]
+    branches: [main, mechanism-autopsy-external-gate]
   pull_request:
     branches: [main]
 
