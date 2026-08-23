@@ -44,6 +44,28 @@ args=(
   -w /repo
 )
 
+# Optional narrow local-model capability. The broker socket must live inside
+# the already-mounted scratch directory; the sandbox still receives no IP
+# network. The host-side broker validates model name/request schema and only
+# forwards approved /api/chat requests to local Ollama.
+if [[ -n "${FORGE_MODEL_BROKER:-}" ]]; then
+  broker="$(readlink -f "$FORGE_MODEL_BROKER")"
+  scratch_real="$(readlink -f "$scratch")"
+  case "$broker" in
+    "$scratch_real"/*) ;;
+    *)
+      echo "FORGE_BROKER_OUTSIDE_SCRATCH: $broker" >&2
+      exit 4
+      ;;
+  esac
+  if [[ ! -S "$broker" ]]; then
+    echo "FORGE_BROKER_SOCKET_MISSING: $broker" >&2
+    exit 5
+  fi
+  container_broker="/scratch/${broker#"$scratch_real"/}"
+  args+=(--env="FORGE_MODEL_BROKER=$container_broker")
+fi
+
 if [[ "$engine" == podman ]]; then
   args+=(--userns=keep-id)
 fi
