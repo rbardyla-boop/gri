@@ -39,18 +39,30 @@ def normalized(text: str) -> str:
     return " ".join(text.split())
 
 
+def layer1_section(readme: str) -> str:
+    start_marker = "**Layer 1 (3s store delay)**"
+    end_marker = "**Layer 2 (multi-step)**"
+    start = readme.find(start_marker)
+    end = readme.find(end_marker, start + len(start_marker)) if start >= 0 else -1
+    if start < 0 or end < 0 or end <= start:
+        raise RuntimeError("could not isolate the pinned README Layer 1 score section")
+    return readme[start:end]
+
+
 def published_layer1_score(readme: str, provider: str) -> int:
-    # Match only a markdown table row beginning with the requested provider.
+    section = layer1_section(readme)
     row_pattern = re.compile(
         rf"^\|\s*{re.escape(provider)}\s*\|\s*\**(?P<score>\d+(?:\.\d+)?)\**\s*\|",
         flags=re.MULTILINE,
     )
-    matches = list(row_pattern.finditer(readme))
+    matches = list(row_pattern.finditer(section))
     if len(matches) != 1:
-        raise RuntimeError(f"expected exactly one published row for {provider!r}, got {len(matches)}")
+        raise RuntimeError(
+            f"expected exactly one Layer 1 published row for {provider!r}, got {len(matches)}"
+        )
     score = float(matches[0].group("score"))
     if not score.is_integer():
-        raise RuntimeError(f"expected integer headline score for {provider!r}, got {score}")
+        raise RuntimeError(f"expected integer Layer 1 headline score for {provider!r}, got {score}")
     return int(score)
 
 
