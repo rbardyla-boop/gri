@@ -19,6 +19,10 @@ All variants use the same model and evaluation protocol. Each block changes only
 | --- | --- | ---: | ---: |
 | Memory | Full history | 61.9 | 61.1 |
 |  | Full AT-Mem | 66.2 | 65.7 |
+
+## Limitations
+
+The baseline is a floor, not a meaningful semantic comparison.
 """
 
 
@@ -57,7 +61,10 @@ def test_scan_markdown_catalogs_tables_without_credit_authority(tmp_path: Path) 
     assert draft["tables"][0]["heading"] == "Controlled memory ablation"
     assert draft["boundary"]["candidate_not_inferred"] is True
     assert draft["boundary"]["baseline_not_inferred"] is True
+    assert draft["boundary"]["negative_signal_not_inferred"] is True
     assert draft["boundary"]["credit_decision_not_run"] is True
+    assert draft["evidence_requests"]["baseline_strength"]["status"] == "UNRESOLVED"
+    assert draft["evidence_requests"]["source_lineage"]["status"] == "UNRESOLVED"
     assert "Full AT-Mem" in [row["clean_cells"][1] for row in draft["tables"][0]["rows"]]
 
 
@@ -89,6 +96,53 @@ def test_human_approval_materializes_evidence_then_unchanged_engine_can_advance(
     assert verdict["boundary"]["prospective_credit"] is False
 
 
+def test_human_approved_source_fact_can_override_raw_advance_with_generic_negative_signal(tmp_path: Path) -> None:
+    source = tmp_path / "source.md"
+    draft_path = tmp_path / "draft.json"
+    approval_path = tmp_path / "approval.json"
+    output_dir = tmp_path / "generated"
+    source.write_text(MARKDOWN, encoding="utf-8")
+    draft = scan_markdown(source, output=draft_path, source_revision="deadbeef")
+    approval = _approval(draft)
+    approval["approved_facts"] = [
+        {
+            "name": "baseline_is_floor",
+            "value": True,
+            "source_phrase": "The baseline is a floor, not a meaningful semantic comparison.",
+        },
+        {
+            "name": "baseline_is_meaningful_semantic_comparison",
+            "value": False,
+            "source_phrase": "The baseline is a floor, not a meaningful semantic comparison.",
+        },
+    ]
+    approval["signals"] = [
+        {
+            "id": "weak-baseline",
+            "kind": "strong_baseline_missing",
+            "mode": "all",
+            "predicates": [
+                {"fact": "baseline_is_floor", "equals": True},
+                {"fact": "baseline_is_meaningful_semantic_comparison", "equals": False},
+            ],
+        }
+    ]
+    approval["claim_if_not_advance"] = "score lead survives, but requested superiority credit is withheld because the approved source calls the comparator a floor"
+    approval_path.write_text(json.dumps(approval, indent=2) + "\n", encoding="utf-8")
+
+    receipt = materialize_approved_markdown_claim(draft_path, approval_path, output_dir=output_dir)
+    evidence = json.loads((output_dir / "evidence.json").read_text(encoding="utf-8"))
+    verdict = autopsy_claim(output_dir / "autopsy.toml")
+
+    assert receipt["approved_fact_count"] == 2
+    assert receipt["approved_signal_count"] == 1
+    assert evidence["facts"]["baseline_is_floor"]["source_phrase_verified"] is True
+    assert "ADVANCE" in verdict["triggered_outcomes"]
+    assert "STRONG_BASELINE_MISSING" in verdict["triggered_outcomes"]
+    assert verdict["outcome"] == "STRONG_BASELINE_MISSING"
+    assert verdict["credit_disposition"] == "WITHHELD"
+
+
 def test_materialization_fails_without_explicit_approval(tmp_path: Path) -> None:
     source = tmp_path / "source.md"
     draft_path = tmp_path / "draft.json"
@@ -115,7 +169,7 @@ def test_materialization_fails_if_human_approval_is_bound_to_wrong_source(tmp_pa
         materialize_approved_markdown_claim(draft_path, approval_path, output_dir=tmp_path / "out")
 
 
-def test_materialization_fails_if_approved_control_text_is_not_in_source_context(tmp_path: Path) -> None:
+def test_materialization_fails_if_approved_source_text_is_absent(tmp_path: Path) -> None:
     source = tmp_path / "source.md"
     draft_path = tmp_path / "draft.json"
     approval_path = tmp_path / "approval.json"
@@ -124,5 +178,20 @@ def test_materialization_fails_if_approved_control_text_is_not_in_source_context
     approval = _approval(draft)
     approval["required_source_phrases"] = ["This sentence does not exist in the source."]
     approval_path.write_text(json.dumps(approval), encoding="utf-8")
-    with pytest.raises(ValueError, match="control phrase missing"):
+    with pytest.raises(ValueError, match="approved source phrase missing"):
+        materialize_approved_markdown_claim(draft_path, approval_path, output_dir=tmp_path / "out")
+
+
+def test_materialization_fails_if_approved_fact_phrase_is_absent(tmp_path: Path) -> None:
+    source = tmp_path / "source.md"
+    draft_path = tmp_path / "draft.json"
+    approval_path = tmp_path / "approval.json"
+    source.write_text(MARKDOWN, encoding="utf-8")
+    draft = scan_markdown(source, output=draft_path, source_revision="deadbeef")
+    approval = _approval(draft)
+    approval["approved_facts"] = [
+        {"name": "made_up_fact", "value": True, "source_phrase": "This fact is not in the source."}
+    ]
+    approval_path.write_text(json.dumps(approval), encoding="utf-8")
+    with pytest.raises(ValueError, match="approved fact source phrase missing"):
         materialize_approved_markdown_claim(draft_path, approval_path, output_dir=tmp_path / "out")
