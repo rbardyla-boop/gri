@@ -16,67 +16,44 @@ def token(rng: random.Random, prefix: str, width: int = 8) -> str:
     return prefix + "_" + "".join(rng.choice(alphabet) for _ in range(width))
 
 
+def fixture(index: int, kind: str, target: dict[str, Any], extra: str = "") -> dict[str, Any]:
+    prompt = "Return exactly this JSON object, preserving every key and value: " + json.dumps(target, sort_keys=True)
+    if extra:
+        prompt += "\n" + extra
+    return {"id": f"fx-{index:06d}", "kind": kind, "prompt": prompt, "target": target}
+
+
 def make_fixture(rng: random.Random, index: int, kind: str) -> dict[str, Any]:
     if kind == "enum":
-        target = rng.choice(LABELS)
-        return {
-            "id": f"fx-{index:06d}",
-            "kind": kind,
-            "prompt": f"Return exactly the requested label: {target}",
-            "target": {"label": target},
-        }
+        return fixture(index, kind, {"label": rng.choice(LABELS)})
 
     if kind == "copy":
-        value = token(rng, "Q")
-        return {
-            "id": f"fx-{index:06d}",
-            "kind": kind,
-            "prompt": f"Copy this identifier exactly: {value}",
-            "target": {"value": value},
-        }
+        return fixture(index, kind, {"value": token(rng, "Q")})
 
     if kind == "mapping":
         keys = [token(rng, "Q", 6) for _ in range(rng.randint(3, 8))]
         mapping = {k: rng.choice(LABELS) for k in keys}
-        return {
-            "id": f"fx-{index:06d}",
-            "kind": kind,
-            "prompt": "Reproduce this mapping exactly: " + json.dumps(mapping, sort_keys=True),
-            "target": {"mapping": mapping},
-        }
+        return fixture(index, kind, {"mapping": mapping})
 
     if kind == "set":
         universe = [token(rng, "S", 6) for _ in range(rng.randint(4, 10))]
         chosen = sorted(rng.sample(universe, rng.randint(0, len(universe))))
-        return {
-            "id": f"fx-{index:06d}",
-            "kind": kind,
-            "prompt": "Return exactly this selected set from the supplied universe. Universe="
-            + json.dumps(universe)
-            + " Selected="
-            + json.dumps(chosen),
-            "target": {"universe": universe, "selected": chosen},
-        }
+        return fixture(
+            index,
+            kind,
+            {"selected": chosen},
+            "Reference universe (do not add it to the returned object): " + json.dumps(universe),
+        )
 
     if kind == "binary_matrix":
         rows = [token(rng, "Q", 5) for _ in range(rng.randint(2, 5))]
         cols = [token(rng, "S", 5) for _ in range(rng.randint(3, 7))]
         matrix = {r: {c: bool(rng.getrandbits(1)) for c in cols} for r in rows}
-        return {
-            "id": f"fx-{index:06d}",
-            "kind": kind,
-            "prompt": "Reproduce this boolean matrix exactly: " + json.dumps(matrix, sort_keys=True),
-            "target": {"matrix": matrix},
-        }
+        return fixture(index, kind, {"matrix": matrix})
 
     if kind == "ordered_vector":
         values = [rng.choice(LABELS) for _ in range(rng.randint(4, 12))]
-        return {
-            "id": f"fx-{index:06d}",
-            "kind": kind,
-            "prompt": "Return this ordered label vector exactly: " + json.dumps(values),
-            "target": {"values": values},
-        }
+        return fixture(index, kind, {"values": values})
 
     raise ValueError(f"unknown fixture kind: {kind}")
 
@@ -116,6 +93,7 @@ def main() -> None:
         "kinds": kinds,
         "content_sha256": canonical_sha256(rows),
         "scientific_content": False,
+        "task_type": "exact_json_serialization",
     }
     manifest_path = args.output.with_suffix(args.output.suffix + ".manifest.json")
     manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
