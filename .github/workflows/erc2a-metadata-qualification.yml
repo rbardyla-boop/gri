@@ -2,7 +2,7 @@ name: ERC-2A Metadata Qualification
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, erc1b-mco04-verified-data-binding]
     paths:
       - 'docs/ERC2A-DAMADICS-STRUCTURAL-TRANSFER.md'
       - 'experiments/erc2a/**'
