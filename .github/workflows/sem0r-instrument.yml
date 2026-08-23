@@ -1,0 +1,55 @@
+name: SEM-0R Instrument Gate
+
+on:
+  push:
+    branches:
+      - sem-0r-meaning-before-mind
+    paths:
+      - 'experiments/sem0r/**'
+      - 'tests/test_sem0r_instrument.py'
+      - '.github/workflows/sem0r-instrument.yml'
+  pull_request:
+    paths:
+      - 'experiments/sem0r/**'
+      - 'tests/test_sem0r_instrument.py'
+      - '.github/workflows/sem0r-instrument.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  instrument:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Validate deterministic instrument structure
+        run: python experiments/sem0r/validate_sem0r_instrument.py
+      - name: Run transparent baselines
+        run: python experiments/sem0r/shortcut_baselines.py | tee /tmp/SEM0R_BASELINES.json
+      - name: Run fail-closed regression suite
+        run: pytest -q tests/test_sem0r_instrument.py
+      - name: Build freeze candidate only
+        run: |
+          python experiments/sem0r/freeze_sem0r.py \
+            --out-dir /tmp/sem0r-generated \
+            --manifest /tmp/SEM0R_FREEZE_CANDIDATE.json
+      - name: Verify CI cannot authorize a scientific freeze
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/SEM0R_FREEZE_CANDIDATE.json'))
+          assert p['status']=='SEM0R_FREEZE_CANDIDATE'
+          assert p['freeze_authorized'] is False
+          assert p['scientific_model_calls_observed_by_builder']==0
+          assert p['structural_validation']['status']=='PASS'
+          assert p['structural_validation']['case_count']==72
+          assert p['structural_validation']['decision_count']==457
+          assert p['structural_validation']['label_patterns']==47
+          assert p['baseline']['effective_macro_f1_floor_from_margin'] >= 0.84
+          print('SEM-0R pre-science CI gate PASS')
+          PY
