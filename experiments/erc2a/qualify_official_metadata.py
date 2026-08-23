@@ -50,12 +50,13 @@ def iso_date(value: str) -> str:
 
 
 def _table_rows(text: str) -> list[tuple[str, str]]:
-    """Reconstruct logical fault-table rows from PDF-extracted wrapped lines.
+    """Reconstruct only the parse-relevant prefix of each PDF table row.
 
-    The official PDF wraps ordinary descriptions and, for item 10, even
-    separates the item/fault prefix from the sample/date onto the next line.
-    A logical row therefore begins only at an item-number + fault-tag prefix
-    and continues until another such prefix or a new actuator table begins.
+    The official PDF wraps item 10 between its `10 f19(4)` prefix and the
+    sample/date line. Ordinary descriptions also wrap after their dates. The
+    schedule parser needs only item, fault, sample, and date, so a logical row
+    closes immediately once one of the four expected dates has been captured.
+    This prevents later prose from contaminating the final row of a table.
     """
     rows: list[tuple[str, str]] = []
     actuator: str | None = None
@@ -68,6 +69,9 @@ def _table_rows(text: str) -> list[tuple[str, str]]:
             if any(date in row for date in DATES):
                 rows.append((actuator, row))
         pending = []
+
+    def complete() -> bool:
+        return bool(pending) and any(date in " ".join(pending) for date in DATES)
 
     for raw in text.splitlines():
         line = " ".join(raw.split())
@@ -92,8 +96,12 @@ def _table_rows(text: str) -> list[tuple[str, str]]:
         if is_new_row:
             flush()
             pending = [line]
+            if complete():
+                flush()
         elif pending:
             pending.append(line)
+            if complete():
+                flush()
 
     flush()
     return rows
