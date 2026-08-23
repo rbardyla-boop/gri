@@ -1,0 +1,54 @@
+name: SEM-0R3 Interface Gate
+
+on:
+  push:
+    branches:
+      - sem-0r3-object-keyed-evidence
+    paths:
+      - 'experiments/sem0r3/**'
+      - 'tests/test_sem0r3_interface.py'
+      - '.github/workflows/sem0r3-interface.yml'
+  pull_request:
+    paths:
+      - 'experiments/sem0r3/**'
+      - 'tests/test_sem0r3_interface.py'
+      - '.github/workflows/sem0r3-interface.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  interface-repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Verify frozen parent SEM-0R sources are unchanged
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          manifest=json.load(open('experiments/sem0r/SEM0R_INSTRUMENT_MANIFEST.json'))
+          assert manifest['status']=='SEM0R_INSTRUMENT_FROZEN'
+          bad={}
+          base=Path('experiments/sem0r')
+          for name, expected in manifest['source_sha256'].items():
+              p=base/name
+              observed=hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else None
+              if observed != expected:
+                  bad[name]=(expected, observed)
+          assert not bad, bad
+          print('frozen SEM-0R parent source hashes unchanged')
+          PY
+      - name: Compile successor execution layer
+        run: python -m py_compile experiments/sem0r3/*.py
+      - name: Run successor interface regressions
+        run: pytest -q tests/test_sem0r3_interface.py
+      - name: Verify no scientific authorization artifact is committed
+        run: |
+          test ! -e experiments/sem0r3/SEM0R3_ONE_RUN_AUTHORIZATION.json
+          echo 'no SEM-0R3 scientific authorization artifact committed'
