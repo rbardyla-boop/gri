@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import itertools
 import json
 import os
 import subprocess
@@ -125,14 +124,35 @@ def load_catalog(path: Path) -> dict[str, Any]:
         raise ValueError("catalog requires tools array")
     out = {}
     for tool in tools:
-        if not isinstance(tool, dict) or set(tool) < {"name", "command", "promotable"}:
+        if not isinstance(tool, dict) or set(tool) < {"name", "command", "promotable", "requires", "provides"}:
             raise ValueError("invalid tool contract")
         if tool["name"] in out:
             raise ValueError("duplicate tool name")
         if type(tool["promotable"]) is not bool:
             raise ValueError("promotable must be boolean")
+        if not isinstance(tool["requires"], list) or not all(isinstance(x, str) for x in tool["requires"]):
+            raise ValueError("requires must be string array")
+        if not isinstance(tool["provides"], list) or not all(isinstance(x, str) for x in tool["provides"]):
+            raise ValueError("provides must be string array")
         out[tool["name"]] = tool
     return out
+
+
+def available_after(recipe: tuple[str, ...] | list[str], catalog: dict[str, Any]) -> set[str] | None:
+    available: set[str] = set()
+    for name in recipe:
+        tool = catalog[name]
+        if not set(tool["requires"]).issubset(available):
+            return None
+        available.update(tool["provides"])
+    return available
+
+
+def extension_valid(prefix: tuple[str, ...], name: str, catalog: dict[str, Any]) -> bool:
+    available = available_after(prefix, catalog)
+    if available is None:
+        return False
+    return set(catalog[name]["requires"]).issubset(available)
 
 
 def main() -> None:
@@ -159,21 +179,32 @@ def main() -> None:
     seen = set()
     counter = 0
     for depth in range(1, args.max_depth + 1):
-        candidates = []
+        scored_candidates = []
+        expansion_candidates: list[tuple[str, ...]] = []
         for prefix in frontier:
             for name in promotable_names:
+                if not extension_valid(prefix, name, catalog):
+                    continue
                 recipe = prefix + (name,)
                 if recipe in seen:
                     continue
                 seen.add(recipe)
+                expansion_candidates.append(recipe)
+                available = available_after(recipe, catalog)
+                if available is None or "prediction" not in available:
+                    continue
                 trace_path = args.out_dir / f"recipe_{counter:06d}_{digest(recipe)[:12]}.jsonl"
                 counter += 1
                 result = evaluate(list(recipe), catalog, fixtures, args.timeout, args.tool_penalty, args.latency_penalty, trace_path)
-                candidates.append(result)
+                scored_candidates.append(result)
                 all_results.append(result)
                 print(json.dumps({k: result[k] for k in ("recipe", "exact_rate", "structural_failures", "objective")}, sort_keys=True))
-        ranked = sorted(candidates, key=lambda r: (-r["objective"], r["tool_count"], r["mean_latency_seconds"]))
-        frontier = [tuple(row["recipe"]) for row in ranked[:args.beam]]
+
+        ranked = sorted(scored_candidates, key=lambda r: (-r["objective"], r["tool_count"], r["mean_latency_seconds"]))
+        ranked_recipes = [tuple(row["recipe"]) for row in ranked[:args.beam]]
+        incomplete = [r for r in expansion_candidates if "prediction" not in (available_after(r, catalog) or set())]
+        frontier = ranked_recipes + incomplete[:args.beam]
+        frontier = frontier[: max(args.beam, 1) * 2]
         if not frontier:
             break
 
