@@ -1,0 +1,6 @@
+{
+  "status": "TEMPLATE_ONLY_NOT_AUTHORIZED",
+  "executions_authorized": 0,
+  "consumed": null,
+  "note": "A real one-run authorization may be generated only after the exact SEM-0R instrument manifest and exact local model preflight are both verified."
+}
