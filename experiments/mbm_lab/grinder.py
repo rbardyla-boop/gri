@@ -23,9 +23,14 @@ def sha(value: Any) -> str:
     return hashlib.sha256(canonical(value).encode()).hexdigest()
 
 
+def candidate_view(fixture: dict[str, Any]) -> dict[str, Any]:
+    return {k: fixture[k] for k in ("id", "kind", "prompt")}
+
+
 def expand_candidates(spec: dict[str, Any]) -> list[dict[str, Any]]:
     axes = spec.get("axes", {})
     command_template = spec.get("command_template")
+    harness_only = bool(spec.get("harness_only", False))
     if not isinstance(axes, dict) or not axes:
         raise ValueError("candidate spec requires non-empty axes")
     if not isinstance(command_template, list) or not command_template:
@@ -41,21 +46,23 @@ def expand_candidates(spec: dict[str, Any]) -> list[dict[str, Any]]:
     for combo in itertools.product(*values):
         params = dict(zip(names, combo))
         command = [str(part).format(**params) for part in command_template]
-        out.append({"params": params, "command": command, "id": sha(params)[:16]})
+        identity = {"params": params, "command": command, "harness_only": harness_only}
+        out.append({**identity, "id": sha(identity)[:16]})
     return out
 
 
-def run_one(command: list[str], fixture: dict[str, Any], timeout: float) -> tuple[dict[str, Any] | None, dict[str, Any]]:
+def run_one(command: list[str], fixture: dict[str, Any], timeout: float, harness_only: bool) -> tuple[dict[str, Any] | None, dict[str, Any]]:
     started = time.monotonic()
+    input_value = fixture if harness_only else candidate_view(fixture)
     try:
         proc = subprocess.run(
             command,
-            input=json.dumps(fixture),
+            input=json.dumps(input_value),
             text=True,
             capture_output=True,
             timeout=timeout,
             check=False,
-            env={**os.environ, "MBM_LAB": "1"},
+            env={**os.environ, "MBM_LAB": "1", "MBM_GOLD_VISIBLE": "1" if harness_only else "0"},
         )
         elapsed = time.monotonic() - started
     except subprocess.TimeoutExpired as exc:
@@ -95,7 +102,7 @@ def evaluate_candidate(candidate: dict[str, Any], fixtures: list[dict[str, Any]]
 
     with raw_path.open("x", encoding="utf-8") as raw:
         for ordinal, fixture in enumerate(fixtures):
-            prediction, meta = run_one(candidate["command"], fixture, timeout)
+            prediction, meta = run_one(candidate["command"], fixture, timeout, candidate["harness_only"])
             target = fixture["target"]
             is_exact = prediction == target if prediction is not None else False
             exact += int(is_exact)
@@ -114,6 +121,7 @@ def evaluate_candidate(candidate: dict[str, Any], fixtures: list[dict[str, Any]]
                 "target_sha256": sha(target),
                 "prediction_sha256": sha(prediction) if prediction is not None else None,
                 "exact": is_exact,
+                "harness_only": candidate["harness_only"],
                 "meta": meta,
             }, sort_keys=True) + "\n")
 
@@ -122,6 +130,7 @@ def evaluate_candidate(candidate: dict[str, Any], fixtures: list[dict[str, Any]]
         "candidate_id": candidate["id"],
         "params": candidate["params"],
         "command": candidate["command"],
+        "harness_only": candidate["harness_only"],
         "n": n,
         "exact": exact,
         "exact_rate": exact / n if n else 0.0,
@@ -159,6 +168,7 @@ def main() -> None:
             "id": result["candidate_id"],
             "exact_rate": result["exact_rate"],
             "structural_failures": result["structural_failures"],
+            "harness_only": result["harness_only"],
             "params": result["params"],
         }, sort_keys=True))
 
@@ -166,6 +176,7 @@ def main() -> None:
     report = {
         "status": "MBM_GRINDER_COMPLETE",
         "scientific_content": False,
+        "gold_visible_to_promotable_candidates": False,
         "fixture_file": str(args.fixtures),
         "fixture_sha256": hashlib.sha256(args.fixtures.read_bytes()).hexdigest(),
         "candidate_spec_sha256": hashlib.sha256(args.candidate_spec.read_bytes()).hexdigest(),
