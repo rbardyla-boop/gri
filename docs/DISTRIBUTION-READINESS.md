@@ -19,11 +19,11 @@ PRODUCT PACKAGE:              gri-gauntlet
 PREFERRED CLI:                gri-gauntlet
 LEGACY CLI ALIAS:             gauntlet
 VERSION TARGET:               0.1.0
-STATUS:                       RELEASE CANDIDATE WORK
+STATUS:                       FINAL HARDENING
 PRODUCT-MARKET FIT:           NOT ESTABLISHED
 AUTONOMOUS SCIENCE AUTHORITY: NO
-LICENSE:                      OWNER DECISION REQUIRED
-PUBLIC PACKAGE RELEASE:       BLOCKED UNTIL LICENSE DECISION
+LICENSE:                      APACHE-2.0
+PUBLIC PACKAGE RELEASE:       BLOCKED UNTIL FINAL EXACT-BYTE CI + TAG
 ```
 
 The distribution name deliberately uses `gri-gauntlet` because several unrelated projects already use “Gauntlet” as a package or product name. The shorter `gauntlet` command remains as a compatibility alias for the research repository, but public documentation should prefer `gri-gauntlet`.
@@ -47,21 +47,25 @@ These are retrospective mechanism-credit demonstrations, not independent reprodu
 The release candidate must satisfy all of the following on the exact merge/tag commit:
 
 1. **Source regression** — Gauntlet regression, manipulation, foreign-log, autopsy, claim-draft, and terminal-verdict tests pass.
-2. **Wheel isolation** — the wheel contains `gauntlet/` and distribution metadata only; historical DMC/GRI model packages are not shipped.
-3. **Build validation** — both wheel and source distribution build successfully and pass `twine check`.
-4. **Fresh install** — the wheel installs into a new virtual environment with no undeclared runtime dependency.
-5. **Python compatibility** — fresh-install smoke tests pass on Python 3.11, 3.12, and 3.13.
-6. **CLI availability** — `gri-gauntlet`, legacy `gauntlet`, and `python -m gauntlet` report the same package version.
-7. **Authority boundary** — a fresh-installed Markdown scan still returns `HUMAN_APPROVAL_REQUIRED` and does not infer a winner.
-8. **Guard integrity** — target-project `src/gauntlet` shadowing cannot replace the installed guarded runner.
-9. **Security boundary documented** — subprocess mode is explicitly not a sandbox; Python audit-hook mode is explicitly not hostile-code containment.
-10. **License selected** — an explicit repository/package license exists before a public package release.
+2. **Wheel isolation** — the wheel contains `gauntlet/`, license, and distribution metadata only; historical DMC/GRI model packages are not shipped.
+3. **Source-archive isolation** — the source distribution excludes historical artifacts, experiments, simulator code, model packages, and non-product tests.
+4. **Build validation** — both wheel and source distribution build successfully and pass `twine check`.
+5. **Fresh install** — the wheel installs into a new virtual environment with no undeclared runtime dependency.
+6. **Python compatibility** — fresh-install smoke tests pass on Python 3.11, 3.12, and 3.13.
+7. **CLI availability** — `gri-gauntlet`, legacy `gauntlet`, and `python -m gauntlet` report the same package version.
+8. **Authority boundary** — a fresh-installed Markdown scan still returns `HUMAN_APPROVAL_REQUIRED` and does not infer a winner.
+9. **Guard loading integrity** — target-project `src/gauntlet` shadowing cannot replace the installed guarded runner.
+10. **Protected-path integrity** — common open/list/scandir/remove/rename operations against protected roots fail closed.
+11. **Evidence-language accuracy** — locally frozen runs emit `FROZEN_RUN`; public preregistration is `NOT_ESTABLISHED` unless separately evidenced.
+12. **Threshold semantics** — `minimum_improvement` is inclusive (`>=`).
+13. **Security boundary documented** — subprocess mode is explicitly not a sandbox; Python audit-hook mode is explicitly not hostile-code containment.
+14. **License bound** — Apache-2.0 exists in the repository and package metadata before public release.
 
-The first nine are mechanical/technical. Gate 10 is an owner/legal distribution decision and must not be silently invented by the tool builder.
+All fourteen are now mechanical release gates. None may be waived merely to ship on schedule.
 
 ## Packaging boundary
 
-The repository contains a large scientific history, but the product distribution intentionally includes only:
+The repository contains a large scientific history, but the product wheel intentionally includes only:
 
 ```text
 gauntlet/
@@ -75,9 +79,11 @@ gauntlet/
   adapters/...
 ```
 
+The source distribution additionally contains the product README/license/security/contribution files, product examples, and Gauntlet-focused tests. Historical experiments and evidence remain available in the GitHub repository but are not copied into the product archive.
+
 The package has no mandatory third-party runtime dependency. Historical research dependencies remain optional repository extras and are not required to use the distributed CLI.
 
-## Security decision made before release
+## Security decisions made before release
 
 A guarded Python experiment used to be launched after the target repository's `src/` directory had been placed on `PYTHONPATH`. A target project could therefore create its own `src/gauntlet/_guard_exec.py` and potentially shadow the installed guard.
 
@@ -97,6 +103,26 @@ experiment entrypoint runs
 
 A regression test places a hostile-name-collision `src/gauntlet/_guard_exec.py` in the target experiment and requires the real guard to remain authoritative while ordinary target imports continue to work.
 
+The protected-root audit hook also blocks common filesystem metadata/mutation events on protected paths, not only ordinary file opens. This improves the experiment-integrity boundary but does **not** convert Python audit hooks into an operating-system sandbox.
+
+## Evidence-language correction before release
+
+A local freeze demonstrates that exact configuration/input bytes were bound before the corresponding Gauntlet run and can be replay-checked. That is useful evidence, but it is not enough to establish that hypotheses or thresholds were publicly preregistered before results were observed.
+
+Therefore the 0.1.0 machine evidence class is:
+
+```text
+FROZEN_RUN
+```
+
+and the verdict explicitly records:
+
+```text
+public_preregistration: NOT_ESTABLISHED
+```
+
+External preregistration evidence can be added later as a separate evidence source rather than inferred from a local freeze.
+
 ## Known limitations accepted for 0.1.0
 
 These are not release blockers if they remain explicit:
@@ -110,15 +136,28 @@ These are not release blockers if they remain explicit:
 - No customer-demand or willingness-to-pay evidence exists yet.
 - No durable-moat claim is justified yet.
 
+## License decision
+
+**Apache License 2.0** is selected for `gri-gauntlet` 0.1.0.
+
+Reasons for the selection:
+
+- permissive use and redistribution;
+- explicit patent grant;
+- standard open-source tooling compatibility;
+- no requirement to open-source unrelated downstream applications merely because they use Gauntlet.
+
+The license selection does not imply warranty, scientific endorsement, or trademark permission beyond the license terms.
+
 ## Distribution plan
 
 ### Stage 1 — GitHub beta
 
-After the license decision and all release gates are green:
+After all final hardening gates are green:
 
-1. merge the release-candidate branch into `main`;
+1. merge `gauntlet-0.1.0-final-hardening` into `main`;
 2. rerun all required CI on the merge commit;
-3. create tag `v0.1.0`;
+3. create tag `v0.1.0` on that exact proven commit;
 4. create a GitHub release containing the exact release notes and commit/tag identity;
 5. attach or reproducibly build the wheel and source distribution;
 6. publish the SHA-256 hashes of those files;
@@ -162,14 +201,6 @@ Stop or narrow the product if external users show that:
 - generic extraction introduces too many false evidence links;
 - users primarily want ordinary experiment tracking rather than mechanism-credit analysis.
 
-## Owner decision still required
+## Release authority
 
-Before a public package release, choose the legal distribution model. The technical build should not guess this.
-
-Common choices to discuss are:
-
-- **Apache-2.0** — permissive open source with an explicit patent grant;
-- **MIT** — very short permissive open-source license;
-- **proprietary / source-available terms** — if commercial control is more important than unrestricted reuse.
-
-Once that decision is made, add the exact license, update `pyproject.toml`, and make the release tag only after CI reruns on those final bytes.
+Public release is authorized only when the final hardening branch is merged and the exact resulting `main` commit passes the full release gates above. The tag and attached hashes must identify those final bytes. No later code change inherits that authorization automatically.
