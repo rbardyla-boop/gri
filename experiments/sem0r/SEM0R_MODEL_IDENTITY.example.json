@@ -1,0 +1,20 @@
+{
+  "artifact_sha256": "TO_BE_BOUND_BY_PREFLIGHT",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "checks": {},
+  "historical_source": {
+    "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+    "model": "llama3.1:8b",
+    "ollama_version": "0.21.2",
+    "path": "experiments/mco05/MCO05_CONFIG.json"
+  },
+  "identity_record_sha256": "TO_BE_BOUND_BY_PREFLIGHT",
+  "model_id": "llama3.1:8b",
+  "next_gate": "run exact local preflight before any scientific execution",
+  "ollama_version": "TO_BE_BOUND_BY_PREFLIGHT",
+  "runtime": "TO_BE_BOUND_BY_PREFLIGHT",
+  "scientific_run_authorized": false,
+  "selection_basis": "pre-existing MCO-05 frozen reasoner; no SEM-0R model shopping",
+  "status": "SEM0R_MODEL_IDENTITY_PLACEHOLDER",
+  "tag_digest": "TO_BE_BOUND_BY_PREFLIGHT"
+}
