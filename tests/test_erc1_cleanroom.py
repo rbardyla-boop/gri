@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import json
 from pathlib import Path
 
@@ -8,10 +9,8 @@ import pandas as pd
 
 from experiments.erc1.compiler import (
     PACKET_CAPACITY,
-    build_packet,
     compile_case,
     score_feature,
-    service_rank,
 )
 from experiments.erc1.stage import parse_case_name, read_metrics
 
@@ -104,9 +103,28 @@ def test_resource_aggregation_and_packet_capacity(tmp_path: Path):
     assert result["packet_count"] <= PACKET_CAPACITY
 
 
-def test_cleanroom_python_does_not_reference_original_mco04_runner():
-    root = Path("experiments/erc1")
-    for path in root.glob("*.py"):
+def test_cleanroom_executable_modules_do_not_import_original_mco04_code():
+    # Governance metadata is intentionally allowed to *name* the forbidden
+    # historical files. The firewall applies to executable staging/compiler/
+    # scoring/data-loading code, which must neither import nor reference them.
+    runtime_modules = (
+        Path("experiments/erc1/stage.py"),
+        Path("experiments/erc1/compiler.py"),
+        Path("experiments/erc1/score.py"),
+        Path("experiments/erc1/download_lossless_repack.py"),
+    )
+    forbidden_literals = ("run_mco04", "test_mco04")
+    forbidden_import_roots = {"scripts.run_mco04", "tests.test_mco04"}
+
+    for path in runtime_modules:
         text = path.read_text(encoding="utf-8")
-        assert "run_mco04" not in text
-        assert "test_mco04" not in text
+        for literal in forbidden_literals:
+            assert literal not in text, f"{path} references forbidden historical implementation {literal}"
+
+        tree = ast.parse(text, filename=str(path))
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                imported = {alias.name for alias in node.names}
+                assert not (imported & forbidden_import_roots), f"{path} imports historical MCO-04 code"
+            elif isinstance(node, ast.ImportFrom):
+                assert node.module not in forbidden_import_roots, f"{path} imports historical MCO-04 code"
