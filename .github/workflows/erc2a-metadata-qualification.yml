@@ -21,33 +21,50 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install metadata-only PDF extractor
+        run: python -m pip install pypdf==6.0.0
       - name: Assert ERC-1B compiler remains byte-identical
         run: |
           expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
           actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
           test "$actual" = "$expected"
-      - name: Compile metadata probe
-        run: python -m py_compile experiments/erc2a/probe_official_metadata.py
+      - name: Compile metadata tools
+        run: |
+          python -m py_compile \
+            experiments/erc2a/probe_official_metadata.py \
+            experiments/erc2a/extract_official_metadata.py
       - name: Capture official DAMADICS metadata archive inventory
         run: |
           python -m experiments.erc2a.probe_official_metadata \
             --output /tmp/ERC2A_METADATA_INVENTORY.json \
             | tee /tmp/ERC2A_METADATA_STDOUT.txt
+      - name: Extract exact-hash official metadata PDFs to text
+        run: |
+          python -m experiments.erc2a.extract_official_metadata \
+            --output-dir /tmp/erc2a-metadata \
+            | tee /tmp/ERC2A_METADATA_EXTRACTION_STDOUT.txt
       - name: Assert no plant telemetry was downloaded by this qualification
         run: |
           python - <<'PY'
           import json
-          p=json.load(open('/tmp/ERC2A_METADATA_INVENTORY.json'))
-          assert p['status'] == 'ERC2A_METADATA_INVENTORY_CAPTURED'
-          assert p['telemetry_downloaded'] is False
-          assert p['scientific_predictions'] == 0
-          assert p['scorer_opened'] is False
+          inv=json.load(open('/tmp/ERC2A_METADATA_INVENTORY.json'))
+          ext=json.load(open('/tmp/erc2a-metadata/ERC2A_METADATA_EXTRACTION.json'))
+          assert inv['status'] == 'ERC2A_METADATA_INVENTORY_CAPTURED'
+          assert ext['status'] == 'ERC2A_OFFICIAL_METADATA_TEXT_EXTRACTED'
+          for p in (inv, ext):
+              assert p['telemetry_downloaded'] is False
+              assert p['scientific_predictions'] == 0
+              assert p['scorer_opened'] is False
           print('ERC2A_METADATA_BOUNDARY_PASS')
           PY
-      - name: Preserve metadata inventory
+      - name: Preserve metadata qualification evidence
         uses: actions/upload-artifact@v4
         with:
-          name: ERC2A_METADATA_INVENTORY
+          name: ERC2A_METADATA_QUALIFICATION
           path: |
             /tmp/ERC2A_METADATA_INVENTORY.json
             /tmp/ERC2A_METADATA_STDOUT.txt
+            /tmp/ERC2A_METADATA_EXTRACTION_STDOUT.txt
+            /tmp/erc2a-metadata/ERC2A_METADATA_EXTRACTION.json
+            /tmp/erc2a-metadata/benchmark_definition.txt
+            /tmp/erc2a-metadata/data_file_description.txt
