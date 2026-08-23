@@ -1,0 +1,3 @@
+{"case_id":"V01","input":"\tPaSs\n","expected":"PASS"}
+{"case_id":"V02","input":" fail   ","expected":"FAIL"}
+{"case_id":"V03","input":"INCONCLUSIVE ","expected":"INCONCLUSIVE"}
