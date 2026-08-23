@@ -95,11 +95,12 @@ outputs = []
 def test_replay_detects_non_deterministic_declared_output(tmp_path: Path) -> None:
     _write(
         tmp_path / "runner.py",
+        "import json\n"
         "from pathlib import Path\n"
         "p=Path('counter.txt')\n"
         "n=int(p.read_text())+1 if p.exists() else 1\n"
         "p.write_text(str(n))\n"
-        "Path('result.json').write_text('{\\"n\\": %d}\\n' % n)\n",
+        "Path('result.json').write_text(json.dumps({'n': n}) + '\\n')\n",
     )
     spec = tmp_path / "gauntlet.toml"
     _write(
