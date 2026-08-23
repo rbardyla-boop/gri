@@ -45,6 +45,20 @@ def build_bwrap(workspace: Path, command: list[str], network: bool) -> list[str]
     return cmd + ["--"] + command
 
 
+def probe_bwrap(workspace: Path) -> tuple[bool, str]:
+    if not shutil.which("bwrap"):
+        return False, "bwrap_not_found"
+    probe = build_bwrap(workspace, ["/usr/bin/true"], network=False)
+    try:
+        proc = subprocess.run(probe, text=True, capture_output=True, timeout=5.0, check=False)
+    except Exception as exc:
+        return False, f"{type(exc).__name__}: {exc}"
+    if proc.returncode == 0:
+        return True, "ok"
+    detail = (proc.stderr or proc.stdout or f"returncode={proc.returncode}").strip()
+    return False, detail[:2000]
+
+
 def build_podman(workspace: Path, command: list[str], network: bool, image: str, memory_mb: int, pids: int) -> list[str]:
     cmd = [
         "podman", "run", "--rm",
@@ -87,18 +101,32 @@ def main() -> None:
     if args.receipt.exists():
         raise FileExistsError(args.receipt)
 
-    backend = args.backend
+    requested_backend = args.backend
+    backend = requested_backend
+    selection = {"requested": requested_backend, "bwrap_probe": None, "fallback": False}
+
     if backend == "auto":
-        if shutil.which("bwrap"):
+        bwrap_ok, bwrap_detail = probe_bwrap(workspace)
+        selection["bwrap_probe"] = {"ok": bwrap_ok, "detail": bwrap_detail}
+        if bwrap_ok:
             backend = "bwrap"
         elif shutil.which("podman"):
             backend = "podman"
+            selection["fallback"] = True
         else:
-            raise RuntimeError("no sandbox backend found; install bubblewrap or rootless Podman")
+            raise RuntimeError(
+                "no usable sandbox backend: bwrap preflight failed and podman is unavailable; "
+                f"bwrap detail: {bwrap_detail}"
+            )
 
     if backend == "bwrap":
         if not shutil.which("bwrap"):
             raise RuntimeError("bwrap not found")
+        if requested_backend == "bwrap":
+            bwrap_ok, bwrap_detail = probe_bwrap(workspace)
+            selection["bwrap_probe"] = {"ok": bwrap_ok, "detail": bwrap_detail}
+            if not bwrap_ok:
+                raise RuntimeError(f"bwrap preflight failed: {bwrap_detail}")
         full = build_bwrap(workspace, command, args.network)
         preexec = limits(args.memory_mb, args.cpu_seconds, args.pids)
     else:
@@ -115,6 +143,7 @@ def main() -> None:
     receipt = {
         "status": "MBM_SANDBOX_EXECUTION",
         "backend": backend,
+        "backend_selection": selection,
         "workspace": str(workspace),
         "command": command,
         "network": args.network,
@@ -130,7 +159,7 @@ def main() -> None:
     }
     args.receipt.parent.mkdir(parents=True, exist_ok=True)
     args.receipt.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({k: receipt[k] for k in ["status", "backend", "returncode", "elapsed_seconds", "network"]}, indent=2))
+    print(json.dumps({k: receipt[k] for k in ["status", "backend", "backend_selection", "returncode", "elapsed_seconds", "network"]}, indent=2))
     raise SystemExit(proc.returncode)
 
 
