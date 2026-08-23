@@ -65,5 +65,5 @@ jobs:
           PY
       - name: Assert development command cannot accept Vault
         run: |
-          python experiments/forge/te0_dev.py --help > /tmp/te0-dev-help.txt
+          python -m experiments.forge.te0_dev --help > /tmp/te0-dev-help.txt
           ! grep -q -- '--vault' /tmp/te0-dev-help.txt
