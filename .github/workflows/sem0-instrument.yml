@@ -1,0 +1,49 @@
+name: SEM-0 Instrument
+
+on:
+  push:
+    branches: [sem-0-meaning-before-mind]
+  pull_request:
+    branches: [main]
+
+jobs:
+  instrument-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test environment
+        run: python -m pip install -e '.[test]'
+      - name: Run SEM-0 instrument tests
+        run: pytest tests/test_sem0_instrument.py -q
+      - name: Regenerate and verify frozen synthetic instrument hashes
+        run: |
+          rm -rf /tmp/sem0
+          mkdir -p /tmp/sem0/scorer_only
+          python experiments/sem0/generate_sem0.py \
+            --cases /tmp/sem0/SEM0_CASES.jsonl \
+            --gold /tmp/sem0/scorer_only/SEM0_GOLD.jsonl
+          python experiments/sem0/make_replay_subset.py \
+            --cases /tmp/sem0/SEM0_CASES.jsonl \
+            --output /tmp/sem0/SEM0_REPLAY_CASES.jsonl
+          printf '%s  %s\n' \
+            74be062f249dabea4a2fef2aa5837438dcff8bd03115cff993e607dd398262f2 \
+            /tmp/sem0/SEM0_CASES.jsonl \
+            > /tmp/sem0/SHA256SUMS
+          printf '%s  %s\n' \
+            01a4bee6a7ad70fa93f96a10fc4e5b5e62a86a3fb8e653b1af55c7c61b573aa0 \
+            /tmp/sem0/scorer_only/SEM0_GOLD.jsonl \
+            >> /tmp/sem0/SHA256SUMS
+          printf '%s  %s\n' \
+            cc091f871755b80c52e767c8d39a878aa2944f5080bed6b5c0531ddadb449906 \
+            /tmp/sem0/SEM0_REPLAY_CASES.jsonl \
+            >> /tmp/sem0/SHA256SUMS
+          sha256sum -c /tmp/sem0/SHA256SUMS
+      - name: Preserve canonical project terminal verdict
+        run: pytest tests/test_project_terminal_verdict.py -q
+      - name: Confirm no real model identity is committed
+        run: |
+          test ! -e experiments/sem0/SEM0_MODEL_IDENTITY.json
+          grep -q 'TO_BE_BOUND' experiments/sem0/SEM0_MODEL_IDENTITY.example.json
