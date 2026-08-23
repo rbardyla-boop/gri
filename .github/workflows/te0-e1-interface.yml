@@ -25,6 +25,7 @@ jobs:
             tests/test_forge_controller.py \
             tests/test_forge_project_tools.py \
             tests/test_te0_e1_interface.py \
+            tests/test_te0_e1_development.py \
             -q
       - name: Verify deterministic public pool generation
         run: |
@@ -60,6 +61,18 @@ jobs:
               'require_exact_keys',
           }
           print(sorted(allowed))
+          PY
+      - name: Verify Vault Judge is isolated from search code
+        run: |
+          python -B -m experiments.forge_e1.judge_te0_e1 --help > /tmp/e1-judge-help.txt
+          grep -q -- '--vault-seed-file' /tmp/e1-judge-help.txt
+          python - <<'PY'
+          from pathlib import Path
+          text = Path('experiments/forge_e1/judge_te0_e1.py').read_text()
+          assert 'Composer(' not in text
+          assert 'ToolSmith(' not in text
+          assert '.search(' not in text
+          print('Judge contains no development-search calls')
           PY
       - name: Preserve TE0 foundation and terminal research verdict
         run: |
