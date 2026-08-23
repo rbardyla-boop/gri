@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "tools": [
+    {
+      "name": "ollama_exp_json_s0",
+      "description": "Frozen local model, explicit serialization prompt, Ollama JSON mode, seed offset 0.",
+      "command": ["python", "experiments/mbm_lab/tools/ollama_worker.py", "--style", "explicit", "--json-mode", "--seed-offset", "0"],
+      "promotable": true
+    },
+    {
+      "name": "ollama_min_json_s0",
+      "description": "Frozen local model, minimal prompt, Ollama JSON mode, seed offset 0.",
+      "command": ["python", "experiments/mbm_lab/tools/ollama_worker.py", "--style", "minimal", "--json-mode", "--seed-offset", "0"],
+      "promotable": true
+    },
+    {
+      "name": "ollama_exp_plain_s0",
+      "description": "Frozen local model, explicit prompt, unconstrained text output, seed offset 0.",
+      "command": ["python", "experiments/mbm_lab/tools/ollama_worker.py", "--style", "explicit", "--seed-offset", "0"],
+      "promotable": true
+    },
+    {
+      "name": "ollama_exp_json_s1",
+      "description": "Frozen local model, explicit serialization prompt, Ollama JSON mode, independent deterministic seed offset 1.",
+      "command": ["python", "experiments/mbm_lab/tools/ollama_worker.py", "--style", "explicit", "--json-mode", "--seed-offset", "1"],
+      "promotable": true
+    },
+    {
+      "name": "strict_extract",
+      "description": "Strictly parse the most recent raw model candidate into the requested synthetic result shape.",
+      "command": ["python", "experiments/mbm_lab/tools/strict_extract.py"],
+      "promotable": true
+    },
+    {
+      "name": "consensus",
+      "description": "Deterministically select a unique modal parsed candidate; ties fail closed.",
+      "command": ["python", "experiments/mbm_lab/tools/consensus.py"],
+      "promotable": true
+    },
+    {
+      "name": "state_memory",
+      "description": "Store a bounded snapshot of non-gold task state for later recipe nodes.",
+      "command": ["python", "experiments/mbm_lab/tools/state_memory.py", "--max-entries", "8"],
+      "promotable": true
+    }
+  ]
+}
