@@ -26,10 +26,16 @@ def seed_from_text(text: str) -> int:
 
 
 def make_pool(*, seed_text: str, count: int, prefix: str) -> list[dict]:
-    rng = random.Random(seed_from_text(seed_text))
+    seed = seed_from_text(seed_text)
+    rng = random.Random(seed)
+    label_offset = seed % len(LABELS)
+    template_offset = (seed // len(LABELS)) % len(TEMPLATES)
     rows: list[dict] = []
     for i in range(count):
-        label = rng.choice(LABELS)
+        # Balance the tiny nonce vocabulary by construction. Random evidence and
+        # pool-specific offsets retain variety without allowing an unlucky BUILD
+        # draw to omit a valid label from ToolSmith's observed contract.
+        label = LABELS[(i + label_offset) % len(LABELS)]
         unique_count = rng.randint(1, 4)
         unique_ids = sorted({f"E{rng.randrange(0, 10000):04d}" for _ in range(unique_count * 3)})[:unique_count]
         if not unique_ids:
@@ -39,7 +45,7 @@ def make_pool(*, seed_text: str, count: int, prefix: str) -> list[dict]:
         for _ in range(rng.randint(0, 3)):
             multiset.append(rng.choice(unique_ids))
         rng.shuffle(multiset)
-        template_index = rng.randrange(len(TEMPLATES))
+        template_index = (i + template_offset + rng.randrange(len(TEMPLATES))) % len(TEMPLATES)
         prompt = TEMPLATES[template_index].format(
             label=label,
             evidence=json.dumps(multiset, separators=(",", ":")),
@@ -56,7 +62,7 @@ def make_pool(*, seed_text: str, count: int, prefix: str) -> list[dict]:
     return rows
 
 
-def write_jsonl(path: Path, rows: list[dict]) -> None:
+def write_jsonl(path: Path, rows) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
 
@@ -80,18 +86,14 @@ def main() -> None:
         seed_text = args.seed_text
     rows = make_pool(seed_text=seed_text, count=args.count, prefix=args.prefix)
     write_jsonl(args.output, rows)
-    print(
-        json.dumps(
-            {
-                "status": "TE0_E1_POOL_GENERATED",
-                "count": len(rows),
-                "output": str(args.output),
-                "sha256": hashlib.sha256(args.output.read_bytes()).hexdigest(),
-                "seed_sha256": hashlib.sha256(seed_text.encode("utf-8")).hexdigest(),
-            },
-            sort_keys=True,
-        )
-    )
+    print(json.dumps({
+        "status": "TE0_E1_POOL_GENERATED",
+        "count": len(rows),
+        "output": str(args.output),
+        "sha256": hashlib.sha256(args.output.read_bytes()).hexdigest(),
+        "seed_sha256": hashlib.sha256(seed_text.encode("utf-8")).hexdigest(),
+        "label_counts": {label: sum(row["target"]["label"] == label for row in rows) for label in LABELS},
+    }, sort_keys=True))
 
 
 if __name__ == "__main__":
