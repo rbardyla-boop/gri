@@ -23,5 +23,5 @@ kind = "advance"
 mode = "all"
 note = "This signal records the raw comparison only; fixed precedence prevents it from overriding transfer failure."
 predicates = [
-  { source = "verdict", path = "gates.packet_advantage_over_hybrid", op = "gte", value = 0.05 },
+  { source = "verdict", path = "gates.packet_quality_advantage", op = "gte", value = 0.05 },
 ]
