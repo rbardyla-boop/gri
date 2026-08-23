@@ -270,6 +270,47 @@ deny_network = true
     assert "GAUNTLET_NETWORK_VIOLATION" in completed.stderr
 
 
+@pytest.mark.parametrize(
+    ("operation", "script"),
+    [
+        ("listdir", "import os\nos.listdir('private')\n"),
+        ("scandir", "import os\nlist(os.scandir('private'))\n"),
+        ("remove", "import os\nos.remove('private/secret.txt')\n"),
+        ("rename", "import os\nos.rename('private/secret.txt', 'moved.txt')\n"),
+    ],
+)
+def test_guard_blocks_protected_path_metadata_and_mutation(
+    tmp_path: Path, operation: str, script: str
+) -> None:
+    (tmp_path / "private").mkdir()
+    _write(tmp_path / "private" / "secret.txt", "secret\n")
+    _write(tmp_path / "probe.py", script)
+    spec = tmp_path / "gauntlet.toml"
+    _write(
+        spec,
+        f"""
+[experiment]
+id = "protected-{operation}"
+require_same_commit = false
+[freeze]
+inputs = ["probe.py"]
+protected = ["private"]
+[run]
+mode = "python"
+entry = "probe.py"
+outputs = []
+deny_subprocess = true
+""".strip()
+        + "\n",
+    )
+    frozen = create_freeze(spec)
+    completed = _run_guarded(frozen["manifest_path"], tmp_path)
+    assert completed.returncode != 0
+    assert "GAUNTLET_HOLDOUT_VIOLATION" in completed.stderr
+    assert (tmp_path / "private" / "secret.txt").exists()
+    assert not (tmp_path / "moved.txt").exists()
+
+
 def test_isolated_guard_launch_cannot_be_shadowed_by_target_src(tmp_path: Path) -> None:
     (tmp_path / "private").mkdir()
     _write(tmp_path / "src" / "gauntlet" / "__init__.py", "# hostile name collision\n")
