@@ -1,0 +1,53 @@
+{
+  "balanced_B": 197038.89622436796,
+  "balanced_binary_point": {
+    "B": 197038.89622436796,
+    "channel_resolved_epr_kB_per_time": 2567.848714870691,
+    "cycle_flux_from_epr_over_affinity": 926.4337040191613,
+    "dimensionless_cycle_affinity": 2.771756579807658,
+    "high_basin_mass": 0.5000000000000017,
+    "high_mode": 561,
+    "low_basin_mass": 0.49999999999999833,
+    "low_mode": 80,
+    "mfpt_high_to_separator": 53552.6438695149,
+    "mfpt_low_to_separator": 67064.88870717523,
+    "separator": 260
+  },
+  "canonical_benchmark_B_200000": {
+    "B": 200000.0,
+    "channel_resolved_epr_kB_per_time": 3837.562362650283,
+    "cycle_flux_from_epr_over_affinity": 1392.0147176429466,
+    "dimensionless_cycle_affinity": 2.7568403652716422,
+    "high_basin_mass": 0.7797393680008391,
+    "high_mode": 563,
+    "low_basin_mass": 0.22026063199916085,
+    "low_mode": 82,
+    "mfpt_high_to_separator": 79894.72121581796,
+    "mfpt_low_to_separator": 27735.106131396078,
+    "separator": 256
+  },
+  "chemical_detailed_balance_B": 3149999.9999999995,
+  "epr_at_detailed_balance_numerical": 3.907950765143635e-23,
+  "interpretation": {
+    "bistability": "powered nonequilibrium fixed-point memory baseline",
+    "claim_boundary": "does not establish a hardware energy advantage or a new primitive",
+    "energy_withdrawal": "literature establishes bistability requires nonequilibrium chemostatting; a closed detailed-balanced system has unique equilibrium",
+    "entropy_production": "channel-resolved continuous-time Markov jump entropy production in k_B per model time"
+  },
+  "parameters": {
+    "A": 100000.0,
+    "k1": 3e-07,
+    "k2": 0.0001,
+    "k3": 3.5,
+    "k4": 0.001,
+    "state_truncation": 1200
+  },
+  "purpose": "thermodynamically explicit active fixed-point baseline; not novelty",
+  "reaction_scheme": [
+    "A + 2X -> 3X",
+    "3X -> A + 2X",
+    "X -> B",
+    "B -> X"
+  ],
+  "schema_version": 1
+}
