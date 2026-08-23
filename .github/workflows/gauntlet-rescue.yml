@@ -16,13 +16,14 @@ jobs:
           python-version: "3.11"
       - name: Install targeted test dependencies
         run: python -m pip install -e '.[test]'
-      - name: Run Gauntlet regression, manipulation, foreign-log, and autopsy tests
+      - name: Run Gauntlet regression, manipulation, foreign-log, autopsy, and claim-draft tests
         run: |
           pytest \
             tests/test_gauntlet.py \
             tests/test_gauntlet_manipulations.py \
             tests/test_gauntlet_inspect_adapter.py \
             tests/test_gauntlet_autopsy.py \
+            tests/test_gauntlet_claim_draft.py \
             -q
       - name: Preserve project terminal-verdict verifier
         run: pytest tests/test_project_terminal_verdict.py -q
@@ -117,6 +118,45 @@ jobs:
           assert value['triggered_outcomes'] == ['ADVANCE']
           assert 'does not establish general memory superiority' in value['strongest_claim']
           assert value['boundary']['prospective_credit'] is False
+          PY
+      - name: Semi-automatic human-approved Markdown claim gate
+        run: |
+          python - <<'PY'
+          import urllib.request
+          url = 'https://raw.githubusercontent.com/ZJU-OmniAI/Embodied-Navigator/2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d/README.md'
+          req = urllib.request.Request(url, headers={'User-Agent': 'gri-gauntlet-ci/1'})
+          with urllib.request.urlopen(req, timeout=60) as response:
+              data = response.read()
+          open('/tmp/embodied-readme.md', 'wb').write(data)
+          PY
+          gauntlet draft-markdown /tmp/embodied-readme.md \
+            --output .gauntlet/embodied-draft.json \
+            --source-uri https://github.com/ZJU-OmniAI/Embodied-Navigator/blob/2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d/README.md \
+            --source-revision 2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d \
+            --expected-git-blob-sha1 404bc01c1d55eba1d644b742361ec356f3257ded \
+            > /tmp/embodied-draft-output.json
+          gauntlet approve-markdown \
+            .gauntlet/embodied-draft.json \
+            examples/gauntlet/drafts/embodied_navigator_approval.json \
+            --output-dir .gauntlet/generated/embodied \
+            > /tmp/embodied-approval-receipt.json
+          gauntlet autopsy .gauntlet/generated/embodied/autopsy.toml > /tmp/embodied-generated-autopsy.json
+          python - <<'PY'
+          import json
+          draft = json.load(open('.gauntlet/embodied-draft.json'))
+          evidence = json.load(open('.gauntlet/generated/embodied/evidence.json'))
+          verdict = json.load(open('/tmp/embodied-generated-autopsy.json'))
+          assert draft['authority_status'] == 'HUMAN_APPROVAL_REQUIRED'
+          assert draft['boundary']['candidate_not_inferred'] is True
+          assert draft['boundary']['baseline_not_inferred'] is True
+          assert evidence['evidence_class'] == 'HUMAN_APPROVED_MARKDOWN_EXTRACTION'
+          assert evidence['comparison']['metrics']['r2r_sr']['candidate'] == 66.2
+          assert evidence['comparison']['metrics']['r2r_sr']['baseline'] == 61.9
+          assert evidence['comparison']['metrics']['rxr_sr']['candidate'] == 65.7
+          assert evidence['comparison']['metrics']['rxr_sr']['baseline'] == 61.1
+          assert verdict['outcome'] == 'ADVANCE'
+          assert verdict['credit_disposition'] == 'PROVISIONAL'
+          assert verdict['boundary']['prospective_credit'] is False
           PY
       - name: External PRO-LONG lineage autopsy
         run: |
