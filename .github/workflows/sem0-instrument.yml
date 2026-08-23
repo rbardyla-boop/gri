@@ -16,8 +16,12 @@ jobs:
           python-version: "3.11"
       - name: Install test environment
         run: python -m pip install -e '.[test]'
-      - name: Run SEM-0 instrument tests
-        run: pytest tests/test_sem0_instrument.py -q
+      - name: Run SEM-0 instrument and model-preflight tests
+        run: |
+          pytest \
+            tests/test_sem0_instrument.py \
+            tests/test_sem0_model_preflight.py \
+            -q
       - name: Regenerate and verify frozen synthetic instrument hashes
         run: |
           rm -rf /tmp/sem0
