@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "unit": "LCB_FAILURE_MAP_V0",
+  "purpose": "failure discovery only",
+  "source_recovery": "LCB_breakthrough_recovery_v1.zip",
+  "simulation_seed": 20260823,
+  "canonical_parametron": {
+    "gamma": 1.0,
+    "pump": 1.4,
+    "g": 1.0,
+    "mu": 0.4,
+    "attractor_amplitude": 0.6324555320336759,
+    "rotating_frame_barrier": 0.04,
+    "analytic_bias_saddle_node_abs": 0.09737289911202954
+  },
+  "kramers_comparison": [
+    {"sigma": 0.10, "barrier_over_D": 8.0, "k_empirical": 0.0000239122175455265, "k_kramers": 0.00003020224773615715, "ratio": 0.7917363553342279},
+    {"sigma": 0.12, "barrier_over_D": 5.555555555555557, "k_empirical": 0.0003324107458984008, "k_kramers": 0.0003480550978527718, "ratio": 0.9550520821246854},
+    {"sigma": 0.15, "barrier_over_D": 3.5555555555555562, "k_empirical": 0.002610845878909494, "k_kramers": 0.00257179864355293, "ratio": 1.0151828509025964},
+    {"sigma": 0.18, "barrier_over_D": 2.4691358024691366, "k_empirical": 0.0074895422664043336, "k_kramers": 0.007621896844990631, "ratio": 0.9826349554083397}
+  ],
+  "canonical_noise_accuracy": {
+    "0.10": 0.9992857142857143,
+    "0.12": 0.9792857142857143,
+    "0.15": 0.8400000000000001,
+    "0.18": 0.6642857142857143,
+    "0.20": 0.5442857142857143,
+    "0.25": 0.49,
+    "0.30": 0.49142857142857144
+  },
+  "hold_failures": {
+    "sigma_0.15_accuracy_below_0.9_first_observed_hold": 80,
+    "sigma_0.18_accuracy_below_0.9_first_observed_hold": 20
+  },
+  "write_observation": {
+    "smallest_sampled_impulse_with_accuracy_ge_0.95": 0.06,
+    "example": {"duration": 0.1, "force": 0.6, "accuracy": 0.9671428571428571},
+    "warning": "impulse alone is not a physical write-energy metric"
+  },
+  "bias_observation": {
+    "analytic_abs_threshold": 0.09737289911202954,
+    "at_bias_minus_0.10": {"minus_write_accuracy": 1.0, "plus_write_accuracy": 0.03333333333333333},
+    "at_bias_plus_0.10": {"minus_write_accuracy": 0.057777777777777775, "plus_write_accuracy": 1.0}
+  },
+  "withdrawal_observation": {
+    "dpo_mean_amplitude": {"0.0": 0.6320, "0.5": 0.3406, "1.0": 0.1989, "2.0": 0.0732},
+    "finding": "erase is finite-rate, not instantaneous"
+  },
+  "powered_static_latch_counterexample": {
+    "attractor_type": "two powered fixed points",
+    "sigma_0.12_accuracy": 0.9792857142857143,
+    "sigma_0.15_accuracy": 0.8514285714285714,
+    "sigma_0.18_accuracy": 0.6699999999999999,
+    "power_off_fraction_abs_state_gt_0.2_after_2_time_units": 0.0,
+    "finding": "finite-write, hold, intrinsic relaxation, and energy-withdrawal erasure do not uniquely identify an LCB-specific primitive"
+  },
+  "frame_equivalence": {
+    "rotating_frame_states": [0.6324555320336759, -0.6324555320336759],
+    "rotating_frame_state_derivative": 0.0,
+    "lab_frame": "oscillations separated by pi phase",
+    "finding": "dx/dt motion-versus-stasis is not a frame-invariant ontology for the parametron control"
+  },
+  "same_landscape_nonequilibrium_D_0.10": [
+    {"epsilon": 0.0, "no_flip_survival": 0.14785714285714285, "sign_autocorr_lag10": 0.6955555555555556, "estimated_epr": 0.0},
+    {"epsilon": 0.25, "no_flip_survival": 0.15642857142857142, "sign_autocorr_lag10": 0.7111111111111111, "estimated_epr": 0.16614342385971856},
+    {"epsilon": 0.5, "no_flip_survival": 0.13857142857142857, "sign_autocorr_lag10": 0.6377777777777778, "estimated_epr": 0.6581585124732047},
+    {"epsilon": 1.0, "no_flip_survival": 0.10428571428571429, "sign_autocorr_lag10": 0.5444444444444444, "estimated_epr": 2.645984110259541},
+    {"epsilon": 2.0, "no_flip_survival": 0.027142857142857142, "sign_autocorr_lag10": 0.4022222222222222, "estimated_epr": 10.854236830880367},
+    {"epsilon": 3.0, "no_flip_survival": 0.01, "sign_autocorr_lag10": 0.26666666666666666, "estimated_epr": 24.942023868864627},
+    {"epsilon": 4.0, "no_flip_survival": 0.0035714285714285713, "sign_autocorr_lag10": 0.14444444444444443, "estimated_epr": 46.37182527924064}
+  ],
+  "same_landscape_basin_recovery_radius_1.5": {
+    "epsilon_0": 0.905,
+    "epsilon_1": 0.856,
+    "epsilon_2": 0.754,
+    "epsilon_3": 0.616,
+    "epsilon_4": 0.558
+  },
+  "terminal": {
+    "energy_withdrawal_test_sufficient": "FAIL",
+    "intrinsic_recovery_unique_to_lcb": "FAIL",
+    "dxdt_motion_as_frame_invariant_ontology": "FAIL",
+    "dissipation_alone_improves_memory": "FAIL",
+    "parametron_noise_robustness_new_persistence_law": "FAIL",
+    "new_primitive": "NOT_ESTABLISHED",
+    "surviving_question": "Does irreversible dynamical flow provide a measurable capability or matched cost-robustness advantage over both powered static latches and parametrons?"
+  },
+  "nonclaims": ["new primitive", "thermodynamic advantage", "hardware validation", "living ontology"]
+}
