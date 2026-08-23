@@ -109,13 +109,14 @@ bash experiments/forge/sandbox.sh \
   --output "$champion" \
   --ledger "$ledger"
 
-python - "$identity" "$build_pool" "$dev_pool" "$build_raw" "$dev_raw" "$build_receipt" "$dev_receipt" "$champion" "$ledger" "$summary" <<'PY'
+python - "$head_sha" "$identity" "$build_pool" "$dev_pool" "$build_raw" "$dev_raw" "$build_receipt" "$dev_receipt" "$champion" "$ledger" "$summary" <<'PY'
 import hashlib
 import json
 import sys
 from pathlib import Path
 
-paths = [Path(x) for x in sys.argv[1:-1]]
+source_head = sys.argv[1]
+paths = [Path(x) for x in sys.argv[2:-1]]
 summary_path = Path(sys.argv[-1])
 champion = json.loads(paths[7].read_text())
 status = champion['status']
@@ -134,15 +135,12 @@ result = {
     'unit': 'TE0-E1',
     'status': status,
     'phase': 'LOCAL_BUILD_DEV_COMPLETE',
-    'source_head_sha': subprocess_head if False else None,
+    'source_head_sha': source_head,
     'vault_created': False,
     'vault_seen': False,
     'scientific_semantic_claim': False,
     'artifacts': {p.name: sha(p) for p in paths if p.exists()},
 }
-# source_head_sha is bound outside this inline Python by the shell summary line;
-# keep this payload focused on generated artifacts.
-result.pop('source_head_sha', None)
 summary_path.write_text(json.dumps(result, indent=2, sort_keys=True) + '\n')
 print(json.dumps(result, indent=2, sort_keys=True))
 PY
