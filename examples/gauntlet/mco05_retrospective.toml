@@ -1,0 +1,76 @@
+[experiment]
+id = "mco05-retrospective-import"
+require_same_commit = false
+
+# This example does NOT preregister MCO-05. It demonstrates that the generic
+# Gauntlet gate engine can ingest an already-existing verdict and reproduce the
+# correct disposition without any MCO-specific code.
+[freeze]
+inputs = []
+
+[run]
+mode = "subprocess"
+command = ["python", "-c", "pass"]
+outputs = []
+
+[[gates]]
+name = "integrity"
+path = "overall_integrity"
+op = "=="
+value = "PASS"
+required = true
+
+[[gates]]
+name = "candidate_recall"
+path = "gates.candidate_recall"
+op = ">="
+value = 0.90
+required = true
+
+[[gates]]
+name = "packet_accuracy"
+path = "gates.packet_accuracy"
+op = ">="
+value = 0.50
+required = true
+
+[[gates]]
+name = "adversarial_accuracy"
+path = "gates.packet_adversarial_accuracy"
+op = ">="
+value = 0.25
+required = true
+
+[[gates]]
+name = "no_code_accuracy"
+path = "gates.packet_no_code_accuracy"
+op = ">="
+value = 0.50
+required = true
+
+[[gates]]
+name = "semantic_stability"
+path = "stability_semantic_agreement"
+op = ">="
+value = 0.95
+required = true
+
+[[gates]]
+name = "reasoning_validity"
+path = "reasoning_metrics.state_packet.validity"
+op = ">="
+value = 1.0
+required = true
+
+[[gates]]
+name = "citation_subset_valid"
+path = "reasoning_metrics.state_packet.citation_subset_valid"
+op = ">="
+value = 1.0
+required = true
+
+[comparison]
+candidate_path = "reasoning_metrics.state_packet.accuracy"
+baseline_path = "reasoning_metrics.hybrid_rag_16.accuracy"
+direction = "greater"
+minimum_delta = 0.05
