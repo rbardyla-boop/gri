@@ -4,11 +4,11 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
-from experiments.forge.controller import DiscoveryPolicy, DiscoveryStatus
+from experiments.forge.controller import DiscoveryPolicy
 from experiments.forge.ecology import Ablator, Composer, Ledger, NullSmith, classify_failure
-from experiments.forge.forge import Case, Forge, Registry, SearchConfig, canonical_json
+from experiments.forge.forge import Case, Forge, Grinder, Mutation, Registry, SearchConfig, canonical_json
 from experiments.forge.te0_io import file_sha256
 from experiments.forge_e1.interface_tools import InterfaceRepairToolSmith
 
@@ -44,15 +44,10 @@ def raw_metrics(cases: tuple[Case, ...]) -> dict[str, float | int]:
             is_object = False
         structural += int(is_object)
         if is_object:
-            try:
-                if canonical_json(value) == canonical_json(case.expected):
-                    exact += 1
-                # Valid here means it is already an exact canonical answer; a
-                # repair is required to leave those answers unchanged.
-                if value == case.expected:
-                    canonically_valid += 1
-            except Exception:
-                pass
+            if canonical_json(value) == canonical_json(case.expected):
+                exact += 1
+            if value == case.expected:
+                canonically_valid += 1
     n = len(cases)
     return {
         "n": n,
@@ -90,10 +85,57 @@ def chain_structural_rate(forge: Forge, chain, cases: tuple[Case, ...]) -> float
     for case in cases:
         try:
             observed = forge.run_chain(chain, case.input)
-            valid += int(isinstance(observed, dict) and set(observed) == {"label", "evidence"})
+            valid += int(
+                isinstance(observed, dict)
+                and set(observed) == {"label", "evidence"}
+                and isinstance(observed.get("label"), str)
+                and isinstance(observed.get("evidence"), list)
+            )
         except Exception:
             pass
     return valid / len(cases) if cases else 0.0
+
+
+def mutation_canonical(case: Case) -> Iterable[Case]:
+    yield Case(case.case_id + "-canonical", json.dumps(case.expected, separators=(",", ":")), case.expected)
+
+
+def mutation_wrapper(case: Case) -> Iterable[Case]:
+    payload = json.dumps(case.expected, separators=(",", ":"))
+    yield Case(case.case_id + "-wrapped", f"Result follows: {payload} End.", case.expected)
+
+
+def mutation_case_and_duplicates(case: Case) -> Iterable[Case]:
+    if not isinstance(case.expected, dict):
+        return
+    label = case.expected.get("label")
+    evidence = case.expected.get("evidence")
+    if not isinstance(label, str) or not isinstance(evidence, list):
+        return
+    noisy_evidence = list(reversed(evidence))
+    if evidence:
+        noisy_evidence.append(evidence[0])
+    payload = {
+        "label": f" {label.lower()} ",
+        "evidence": noisy_evidence,
+    }
+    yield Case(case.case_id + "-case-dupes", json.dumps(payload), case.expected)
+
+
+def registered_mutations() -> tuple[Mutation, ...]:
+    return (
+        Mutation("canonical_preservation", mutation_canonical),
+        Mutation("prose_wrapper", mutation_wrapper),
+        Mutation("case_and_duplicate_normalization", mutation_case_and_duplicates),
+    )
+
+
+def expanded_attack_cases(cases: tuple[Case, ...]) -> tuple[Case, ...]:
+    out: list[Case] = []
+    for mutation in registered_mutations():
+        for case in cases:
+            out.extend(mutation.fn(case))
+    return tuple(out)
 
 
 def main() -> None:
@@ -111,11 +153,10 @@ def main() -> None:
     raw = raw_metrics(dev)
 
     if float(raw["exact_rate"]) >= 0.98:
-        status = "TE0_E1_REPAIR_NOT_NEEDED"
         report = {
             "schema_version": 1,
             "unit": "TE0-E1",
-            "status": status,
+            "status": "TE0_E1_REPAIR_NOT_NEEDED",
             "authority": False,
             "vault_seen": False,
             "bindings": {"build_sha256": file_sha256(args.build), "dev_sha256": file_sha256(args.dev)},
@@ -152,20 +193,17 @@ def main() -> None:
         cost_penalty=policy.cost_penalty,
     )
     if not ranked:
-        status = "TE0_E1_INTERFACE_REPAIR_FAIL"
-        champion = None
-        reason = "no valid repair recipe"
         best_null = max((n.score for n in list(NullSmith.constant_null(dev)) + [NullSmith.identity_null(dev)]), default=0.0)
         report = {
             "schema_version": 1,
             "unit": "TE0-E1",
-            "status": status,
+            "status": "TE0_E1_INTERFACE_REPAIR_FAIL",
             "authority": False,
             "vault_seen": False,
             "bindings": {"build_sha256": file_sha256(args.build), "dev_sha256": file_sha256(args.dev)},
             "raw_dev": raw,
             "best_null_score": best_null,
-            "reason": reason,
+            "reason": "no valid repair recipe",
         }
     else:
         champion = ranked[0]
@@ -175,14 +213,28 @@ def main() -> None:
         preservation = preservation_rate(forge, champion.chain, dev)
         improvement = champion.dev_score - float(raw["exact_rate"])
         null_margin = champion.dev_score - best_null
-        ablations = Ablator(forge).single_tool_ablations(champion.chain, dev, champion.dev_score)
-        unnecessary = [a.removed_tool for a in ablations if a.valid and a.delta_from_full is not None and a.delta_from_full <= 0.0]
+
+        grinder_failures = Grinder(forge, registered_mutations()).grind(
+            champion.chain,
+            dev,
+            max_failures=1,
+        )
+        attack_cases = expanded_attack_cases(dev)
+        attack_full_score = forge.score_chain(champion.chain, attack_cases).score if attack_cases else 0.0
+        ablations = Ablator(forge).single_tool_ablations(champion.chain, attack_cases, attack_full_score)
+        unnecessary = [
+            a.removed_tool
+            for a in ablations
+            if a.valid and a.delta_from_full is not None and a.delta_from_full <= 0.0
+        ]
         gates = {
             "dev_exact": champion.dev_score >= 0.95,
             "structural_validity": structural_rate >= 0.98,
             "raw_improvement": improvement >= 0.10,
             "null_margin": null_margin >= 0.20,
             "preserve_already_valid": preservation == 1.0,
+            "grinder_zero_failures": len(grinder_failures) == 0,
+            "attack_set_exact": attack_full_score == 1.0,
             "all_components_earn_credit": not unnecessary,
         }
         status = "TE0_E1_DEVELOPMENT_CHAMPION_FROZEN" if all(gates.values()) else "TE0_E1_INTERFACE_REPAIR_FAIL"
@@ -201,6 +253,8 @@ def main() -> None:
                 "best_null_score": best_null,
                 "margin_over_null": null_margin,
                 "preservation_rate": preservation,
+                "attack_set_exact_rate": attack_full_score,
+                "grinder_failure_count": len(grinder_failures),
             },
             "gates": gates,
             "champion": {
@@ -222,6 +276,17 @@ def main() -> None:
                     "blueprint_id": bp.blueprint_id,
                 }
                 for bp in blueprints
+            ],
+            "registered_mutations": [m.name for m in registered_mutations()],
+            "grinder_failures": [
+                {
+                    "mutation": f.mutation,
+                    "source_case": f.source_case,
+                    "mutated_case": f.mutated_case,
+                    "observed": f.observed,
+                    "expected": f.expected,
+                }
+                for f in grinder_failures
             ],
             "ablations": [
                 {
