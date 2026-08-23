@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from experiments.sem1.generate_sem1 import FAMILIES, build_dataset, dataset_summary
+from experiments.sem1.build_sem1_instrument import FAMILIES, build_dataset, dataset_summary
 from experiments.sem1.make_sem1_subsets import build_subsets
 from experiments.sem1.validate_sem1_instrument import validate
 
