@@ -6,23 +6,21 @@ import sys
 import tempfile
 from pathlib import Path
 
-import pytest
-
 from experiments.forge.ecology import Ledger
 
 ROOT = Path(__file__).resolve().parents[1]
 FIX = ROOT / "experiments" / "forge" / "fixtures" / "te0_e0"
-DEV = ROOT / "experiments" / "forge" / "te0_dev.py"
-AUTH = ROOT / "experiments" / "forge" / "te0_authorize.py"
-JUDGE = ROOT / "experiments" / "forge" / "te0_judge.py"
+DEV = "experiments.forge.te0_dev"
+AUTH = "experiments.forge.te0_authorize"
+JUDGE = "experiments.forge.te0_judge"
 
 
-def run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
-    return subprocess.run([sys.executable, *args], cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=check)
+def run(module: str, *args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+    return subprocess.run([sys.executable, "-m", module, *args], cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=check)
 
 
 def test_development_cli_has_no_vault_argument() -> None:
-    p = run(str(DEV), "--help")
+    p = run(DEV, "--help")
     assert "--vault" not in p.stdout
 
 
@@ -37,7 +35,7 @@ def test_te0_e0_public_pipeline_qualification() -> None:
         ledger = t / "ledger.jsonl"
 
         run(
-            str(DEV),
+            DEV,
             "--build", str(FIX / "build.jsonl"),
             "--dev", str(FIX / "dev.jsonl"),
             "--signals", str(FIX / "signals.json"),
@@ -58,7 +56,7 @@ def test_te0_e0_public_pipeline_qualification() -> None:
         assert any(x in manifest["champion"]["tools"] for x in ("ts_strip", "ts_normalize_space"))
 
         run(
-            str(AUTH),
+            AUTH,
             "--champion", str(champion),
             "--vault", str(FIX / "public_test_vault.jsonl"),
             "--threshold", "1.0",
@@ -67,7 +65,7 @@ def test_te0_e0_public_pipeline_qualification() -> None:
         )
 
         p = run(
-            str(JUDGE),
+            JUDGE,
             "--champion", str(champion),
             "--vault", str(FIX / "public_test_vault.jsonl"),
             "--authorization", str(auth),
@@ -84,7 +82,7 @@ def test_te0_e0_public_pipeline_qualification() -> None:
         assert Ledger(ledger).verify()
 
         second = run(
-            str(JUDGE),
+            JUDGE,
             "--champion", str(champion),
             "--vault", str(FIX / "public_test_vault.jsonl"),
             "--authorization", str(auth),
@@ -105,7 +103,7 @@ def test_authorization_fails_if_vault_changes_after_binding() -> None:
         vault.write_text((FIX / "public_test_vault.jsonl").read_text())
 
         run(
-            str(DEV),
+            DEV,
             "--build", str(FIX / "build.jsonl"),
             "--dev", str(FIX / "dev.jsonl"),
             "--signals", str(FIX / "signals.json"),
@@ -114,7 +112,7 @@ def test_authorization_fails_if_vault_changes_after_binding() -> None:
             "--output", str(champion),
         )
         run(
-            str(AUTH),
+            AUTH,
             "--champion", str(champion),
             "--vault", str(vault),
             "--threshold", "1.0",
@@ -122,7 +120,7 @@ def test_authorization_fails_if_vault_changes_after_binding() -> None:
         )
         vault.write_text(vault.read_text() + '{"case_id":"tamper","input":"x","expected":"PASS"}\n')
         p = run(
-            str(JUDGE),
+            JUDGE,
             "--champion", str(champion),
             "--vault", str(vault),
             "--authorization", str(auth),
