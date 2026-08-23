@@ -16,8 +16,8 @@ jobs:
           python-version: "3.11"
       - name: Install targeted test dependencies
         run: python -m pip install -e '.[test]'
-      - name: Run Gauntlet regression tests
-        run: pytest tests/test_gauntlet.py -q
+      - name: Run Gauntlet regression and manipulation tests
+        run: pytest tests/test_gauntlet.py tests/test_gauntlet_manipulations.py -q
       - name: Preserve project terminal-verdict verifier
         run: pytest tests/test_project_terminal_verdict.py -q
       - name: Retrospective MCO-05 self-audit
