@@ -12,6 +12,7 @@ from experiments.erc1.compiler import (
     compile_case,
     score_feature,
 )
+from experiments.erc1.download_lossless_repack import required_paths
 from experiments.erc1.stage import parse_case_name, read_metrics
 
 
@@ -101,6 +102,28 @@ def test_resource_aggregation_and_packet_capacity(tmp_path: Path):
     result = compile_case(metrics, meta_path)
     assert result["root_cause_service_ranking"][0] == "root"
     assert result["packet_count"] <= PACKET_CAPACITY
+
+
+def test_explicit_re3_transport_inventory_selection():
+    repo_files = [
+        "README.md",
+        "re2ob_x_cpu_1/metrics.parquet",
+        "re3ob_checkoutservice_f1_1/metrics.parquet",
+        "re3ob_checkoutservice_f1_1/inject_time.txt",
+        "re3ob_checkoutservice_f1_1/logs.parquet",
+        "re3tt_ts-order-service_f3_4/inject_time.txt",
+        "re3tt_ts-order-service_f3_4/metrics.parquet",
+        "re3tt_ts-order-service_f3_4/traces.parquet",
+    ]
+    metrics, inject = required_paths(repo_files)
+    assert metrics == [
+        "re3ob_checkoutservice_f1_1/metrics.parquet",
+        "re3tt_ts-order-service_f3_4/metrics.parquet",
+    ]
+    assert inject == [
+        "re3ob_checkoutservice_f1_1/inject_time.txt",
+        "re3tt_ts-order-service_f3_4/inject_time.txt",
+    ]
 
 
 def test_cleanroom_executable_modules_do_not_import_original_mco04_code():
