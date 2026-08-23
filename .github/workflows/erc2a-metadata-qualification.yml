@@ -32,7 +32,8 @@ jobs:
         run: |
           python -m py_compile \
             experiments/erc2a/probe_official_metadata.py \
-            experiments/erc2a/extract_official_metadata.py
+            experiments/erc2a/extract_official_metadata.py \
+            experiments/erc2a/qualify_official_metadata.py
       - name: Capture official DAMADICS metadata archive inventory
         run: |
           python -m experiments.erc2a.probe_official_metadata \
@@ -43,19 +44,37 @@ jobs:
           python -m experiments.erc2a.extract_official_metadata \
             --output-dir /tmp/erc2a-metadata \
             | tee /tmp/ERC2A_METADATA_EXTRACTION_STDOUT.txt
-      - name: Assert no plant telemetry was downloaded by this qualification
+      - name: Execute preregistered schedule and signal-map qualification
+        run: |
+          python -m experiments.erc2a.qualify_official_metadata \
+            --description-text /tmp/erc2a-metadata/data_file_description.txt \
+            --output /tmp/erc2a-metadata/ERC2A_OFFICIAL_METADATA_QUALIFICATION.json \
+            | tee /tmp/ERC2A_OFFICIAL_METADATA_QUALIFICATION_STDOUT.txt
+      - name: Assert terminal metadata result and no telemetry boundary
         run: |
           python - <<'PY'
           import json
           inv=json.load(open('/tmp/ERC2A_METADATA_INVENTORY.json'))
           ext=json.load(open('/tmp/erc2a-metadata/ERC2A_METADATA_EXTRACTION.json'))
+          qual=json.load(open('/tmp/erc2a-metadata/ERC2A_OFFICIAL_METADATA_QUALIFICATION.json'))
           assert inv['status'] == 'ERC2A_METADATA_INVENTORY_CAPTURED'
           assert ext['status'] == 'ERC2A_OFFICIAL_METADATA_TEXT_EXTRACTED'
-          for p in (inv, ext):
+          assert qual['status'] in {
+              'ERC2A_METADATA_QUALIFICATION_PASS',
+              'ERC2A_SCHEDULE_QUALIFICATION_FAIL',
+              'ERC2A_COLUMN_MAP_QUALIFICATION_FAIL',
+          }
+          for p in (inv, ext, qual):
               assert p['telemetry_downloaded'] is False
               assert p['scientific_predictions'] == 0
               assert p['scorer_opened'] is False
-          print('ERC2A_METADATA_BOUNDARY_PASS')
+          print('ERC2A_METADATA_TERMINAL_BOUNDARY_PASS')
+          print('STATUS:', qual['status'])
+          print('EVENTS:', qual['event_count'])
+          print('CLEAN:', qual['clean_event_count'])
+          print('CONFOUNDED:', qual['confounded_event_count'])
+          print('CLEAN_ITEMS:', [x['item'] for x in qual['clean_events']])
+          print('CONFOUNDED_ITEMS:', [x['item'] for x in qual['confounded_events']])
           PY
       - name: Preserve metadata qualification evidence
         uses: actions/upload-artifact@v4
@@ -65,6 +84,8 @@ jobs:
             /tmp/ERC2A_METADATA_INVENTORY.json
             /tmp/ERC2A_METADATA_STDOUT.txt
             /tmp/ERC2A_METADATA_EXTRACTION_STDOUT.txt
+            /tmp/ERC2A_OFFICIAL_METADATA_QUALIFICATION_STDOUT.txt
             /tmp/erc2a-metadata/ERC2A_METADATA_EXTRACTION.json
+            /tmp/erc2a-metadata/ERC2A_OFFICIAL_METADATA_QUALIFICATION.json
             /tmp/erc2a-metadata/benchmark_definition.txt
             /tmp/erc2a-metadata/data_file_description.txt
