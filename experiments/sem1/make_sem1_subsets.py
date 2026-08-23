@@ -6,7 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from experiments.sem1.generate_sem1 import FAMILIES, build_dataset, write_jsonl
+from experiments.sem1.build_sem1_instrument import FAMILIES, build_dataset, write_jsonl
 
 
 def build_subsets() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
