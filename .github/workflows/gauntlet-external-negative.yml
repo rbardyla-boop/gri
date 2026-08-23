@@ -1,0 +1,82 @@
+name: Gauntlet External Negative Gate
+
+on:
+  push:
+    branches: [main, mechanism-autopsy-external-gate]
+  pull_request:
+    branches: [main]
+
+jobs:
+  amb-semi-automatic-negative:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Gauntlet
+        run: python -m pip install -e '.[test]'
+      - name: Regression-test human-gated claim extraction
+        run: pytest tests/test_gauntlet_claim_draft.py -q
+      - name: Download pinned AMB README
+        run: |
+          python - <<'PY'
+          import urllib.request
+          url = 'https://raw.githubusercontent.com/AlekseiMarchenko/agent-memory-benchmark/9146ffa044109166b5d61146ebbf1c89fa544608/README.md'
+          req = urllib.request.Request(url, headers={'User-Agent': 'gri-gauntlet-ci/1'})
+          with urllib.request.urlopen(req, timeout=60) as response:
+              data = response.read()
+          open('/tmp/amb-readme.md', 'wb').write(data)
+          PY
+      - name: Draft without decision authority
+        run: |
+          gauntlet draft-markdown /tmp/amb-readme.md \
+            --output .gauntlet/amb-draft.json \
+            --source-uri https://github.com/AlekseiMarchenko/agent-memory-benchmark/blob/9146ffa044109166b5d61146ebbf1c89fa544608/README.md \
+            --source-revision 9146ffa044109166b5d61146ebbf1c89fa544608 \
+            --expected-git-blob-sha1 2abd5bf6edef93c6ec7db7684a780576d6f4762b \
+            > /tmp/amb-draft-output.json
+          python - <<'PY'
+          import json
+          draft = json.load(open('.gauntlet/amb-draft.json'))
+          assert draft['authority_status'] == 'HUMAN_APPROVAL_REQUIRED'
+          assert draft['boundary']['candidate_not_inferred'] is True
+          assert draft['boundary']['baseline_not_inferred'] is True
+          assert draft['boundary']['negative_signal_not_inferred'] is True
+          assert draft['boundary']['credit_decision_not_run'] is True
+          assert draft['evidence_requests']['baseline_strength']['status'] == 'UNRESOLVED'
+          assert draft['evidence_requests']['source_lineage']['status'] == 'UNRESOLVED'
+          PY
+      - name: Apply content-bound human approval and unchanged engine
+        run: |
+          gauntlet approve-markdown \
+            .gauntlet/amb-draft.json \
+            examples/gauntlet/drafts/amb_approval.json \
+            --output-dir .gauntlet/generated/amb \
+            > /tmp/amb-approval-receipt.json
+          gauntlet autopsy .gauntlet/generated/amb/autopsy.toml > /tmp/amb-generated-autopsy.json
+          python - <<'PY'
+          import json
+          receipt = json.load(open('/tmp/amb-approval-receipt.json'))
+          evidence = json.load(open('.gauntlet/generated/amb/evidence.json'))
+          verdict = json.load(open('/tmp/amb-generated-autopsy.json'))
+
+          assert receipt['authority_status'] == 'READY_FOR_UNCHANGED_AUTOPSY_ENGINE'
+          assert receipt['approved_fact_count'] == 2
+          assert receipt['approved_signal_count'] == 1
+          assert evidence['evidence_class'] == 'HUMAN_APPROVED_MARKDOWN_EXTRACTION'
+          assert evidence['comparison']['metrics']['overall']['candidate'] == 90.0
+          assert evidence['comparison']['metrics']['overall']['baseline'] == 55.0
+          assert evidence['comparison']['metrics']['semantic']['candidate'] == 100.0
+          assert evidence['comparison']['metrics']['semantic']['baseline'] == 0.0
+          assert evidence['facts']['baseline_is_floor']['source_phrase_verified'] is True
+          assert evidence['facts']['baseline_is_meaningful_semantic_comparison']['value'] is False
+          assert evidence['boundary']['automatic_credit_authority'] is False
+
+          assert 'ADVANCE' in verdict['triggered_outcomes']
+          assert 'STRONG_BASELINE_MISSING' in verdict['triggered_outcomes']
+          assert verdict['outcome'] == 'STRONG_BASELINE_MISSING'
+          assert verdict['credit_disposition'] == 'WITHHELD'
+          assert 'strong semantic-memory baseline' in verdict['strongest_claim']
+          assert verdict['boundary']['prospective_credit'] is False
+          PY

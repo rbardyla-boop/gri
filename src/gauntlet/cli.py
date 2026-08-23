@@ -8,6 +8,7 @@ from typing import Any, Sequence
 from . import __version__
 from .adapters.inspect_ai import audit_inspect_log
 from .autopsy import autopsy_claim
+from .claim_draft import materialize_approved_markdown_claim, scan_markdown
 from .core import audit_result, create_freeze, replay_run, run_frozen, verify_freeze, verdict_frozen
 
 
@@ -52,6 +53,24 @@ def _parser() -> argparse.ArgumentParser:
     )
     autopsy.add_argument("spec")
 
+    draft_markdown = sub.add_parser(
+        "draft-markdown",
+        help="catalog Markdown comparison tables without assigning candidate, baseline, direction, or credit",
+    )
+    draft_markdown.add_argument("source")
+    draft_markdown.add_argument("--output", required=True)
+    draft_markdown.add_argument("--source-uri")
+    draft_markdown.add_argument("--source-revision")
+    draft_markdown.add_argument("--expected-git-blob-sha1")
+
+    approve_markdown = sub.add_parser(
+        "approve-markdown",
+        help="materialize a content-bound comparison only after explicit human approval",
+    )
+    approve_markdown.add_argument("draft")
+    approve_markdown.add_argument("approval")
+    approve_markdown.add_argument("--output-dir", required=True)
+
     inspect_audit = sub.add_parser(
         "audit-inspect",
         help="conservatively audit a JSON Inspect AI EvalLog created outside Gauntlet",
@@ -95,6 +114,24 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0
         if args.command == "autopsy":
             value = autopsy_claim(Path(args.spec))
+            _emit(value)
+            return 0
+        if args.command == "draft-markdown":
+            value = scan_markdown(
+                Path(args.source),
+                output=Path(args.output),
+                source_uri=args.source_uri,
+                source_revision=args.source_revision,
+                expected_git_blob_sha1=args.expected_git_blob_sha1,
+            )
+            _emit(value)
+            return 0
+        if args.command == "approve-markdown":
+            value = materialize_approved_markdown_claim(
+                Path(args.draft),
+                Path(args.approval),
+                output_dir=Path(args.output_dir),
+            )
             _emit(value)
             return 0
         if args.command == "audit-inspect":

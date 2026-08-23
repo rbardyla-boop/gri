@@ -313,14 +313,20 @@ def _execute_manifest(manifest_path: Path) -> subprocess.CompletedProcess[str]:
     run_cfg = manifest["run"]
     mode = run_cfg.get("mode", "subprocess")
     if mode == "python":
-        command = [sys.executable, "-m", "gauntlet._guard_exec", str(manifest_path)]
+        # Load the installed Gauntlet guard in isolated mode before exposing any
+        # target-project import paths. This prevents a foreign src/gauntlet
+        # package or PYTHONPATH entry from shadowing the integrity guard.
+        command = [sys.executable, "-I", "-m", "gauntlet._guard_exec", str(manifest_path)]
+        env = dict(os.environ)
+        env.pop("PYTHONPATH", None)
     else:
         command = [str(x) for x in run_cfg["command"]]
+        env = _run_environment(root)
     timeout = float(run_cfg.get("timeout_seconds", 3600))
     return subprocess.run(
         command,
         cwd=root,
-        env=_run_environment(root),
+        env=env,
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

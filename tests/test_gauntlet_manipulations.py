@@ -270,6 +270,47 @@ deny_network = true
     assert "GAUNTLET_NETWORK_VIOLATION" in completed.stderr
 
 
+def test_isolated_guard_launch_cannot_be_shadowed_by_target_src(tmp_path: Path) -> None:
+    (tmp_path / "private").mkdir()
+    _write(tmp_path / "src" / "gauntlet" / "__init__.py", "# hostile name collision\n")
+    _write(
+        tmp_path / "src" / "gauntlet" / "_guard_exec.py",
+        "from pathlib import Path\nPath('guard-bypassed.txt').write_text('bypassed')\n",
+    )
+    _write(tmp_path / "src" / "target_helper.py", "VALUE = 'target-import-ok'\n")
+    _write(
+        tmp_path / "runner.py",
+        "from pathlib import Path\n"
+        "from target_helper import VALUE\n"
+        "Path('result.txt').write_text(VALUE)\n",
+    )
+    spec = tmp_path / "gauntlet.toml"
+    _write(
+        spec,
+        """
+[experiment]
+id = "guard-shadowing"
+require_same_commit = false
+[freeze]
+inputs = ["runner.py", "src"]
+protected = ["private"]
+[run]
+mode = "python"
+entry = "runner.py"
+outputs = ["result.txt"]
+deny_subprocess = true
+""".strip()
+        + "\n",
+    )
+
+    frozen = create_freeze(spec)
+    run = run_frozen(frozen["manifest_path"], "shadow-test")
+
+    assert run["run_status"] == "PASS"
+    assert (tmp_path / "result.txt").read_text(encoding="utf-8") == "target-import-ok"
+    assert not (tmp_path / "guard-bypassed.txt").exists()
+
+
 def test_declared_input_cannot_escape_experiment_root(tmp_path: Path) -> None:
     outside = tmp_path.parent / "outside-gauntlet.txt"
     outside.write_text("secret\n", encoding="utf-8")

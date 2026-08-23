@@ -1,0 +1,33 @@
+{
+  "approved": true,
+  "reviewer_statement": "Human-reviewed against the pinned Embodied-Navigator README: selected the controlled Memory block, Full AT-Mem as candidate, Full history as baseline, and SR as the higher-is-better metric on both reported benchmarks. No automatic system is authorized to change this selection.",
+  "source_git_blob_sha1": "404bc01c1d55eba1d644b742361ec356f3257ded",
+  "source_revision": "2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d",
+  "table_heading_contains": "Controlled component attribution",
+  "row_label_column": 1,
+  "candidate_label": "Full AT-Mem",
+  "baseline_label": "Full history",
+  "required_source_phrases": [
+    "All variants below use the same Qwen2.5-VL-7B policy, sensing inputs, validation-unseen splits, fixed non-learned SLAM controller, and evaluation protocol. Each block changes only its named component."
+  ],
+  "metrics": [
+    {
+      "name": "r2r_sr",
+      "column": 2,
+      "value_index": 2,
+      "direction": "greater",
+      "minimum_improvement": 0.0
+    },
+    {
+      "name": "rxr_sr",
+      "column": 3,
+      "value_index": 1,
+      "direction": "greater",
+      "minimum_improvement": 0.0
+    }
+  ],
+  "autopsy_id": "generated-external-embodied-navigator-memory-credit",
+  "credit_target": "Anchor-Trajectory Memory contribution within the authors' controlled Memory ablation block",
+  "claim_if_advance": "on the pinned reported matched-policy validation-unseen ablation, Full Anchor-Trajectory Memory retains provisional conditional credit over full-history memory, with positive SR deltas on both R2R-CE and RxR-CE; this does not establish general memory superiority or independent replication",
+  "claim_if_not_advance": "the human-approved pinned controlled comparison does not establish conditional credit for Full Anchor-Trajectory Memory"
+}

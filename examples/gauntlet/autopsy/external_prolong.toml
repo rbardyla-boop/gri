@@ -1,0 +1,30 @@
+[autopsy]
+id = "external-prolong-matched-budget-lineage-credit"
+credit_target = "full programmatic-log contribution in the published GPT-5.5 500-action comparison"
+claim_if_advance = "the pinned matched-budget comparison retains provisional credit for full-log access over the no-log/in-prompt condition"
+claim_if_not_advance = "the published 500-action comparison reports a positive full-log score gap, but the scorecard's claimed truncation lineage does not reconcile with the pinned 1,000-action source scorecard; mechanism credit remains unassessed until that provenance is reconciled"
+
+[sources]
+evidence = ".gauntlet/external-prolong-evidence.json"
+
+[[signals]]
+id = "published-matched-budget-lead"
+kind = "advance"
+mode = "all"
+note = "The 500-action full-log scorecard reports a substantial lead over the 500-action no-log/in-prompt scorecard under matching common settings."
+predicates = [
+  { source = "evidence", path = "matched_budget.action_budget_equal", op = "eq", value = true },
+  { source = "evidence", path = "matched_budget.action_cap_equal", op = "eq", value = true },
+  { source = "evidence", path = "matched_budget.all_common_settings_equal", op = "eq", value = true },
+  { source = "evidence", path = "published.matched_gap_points", op = "gt", value = 0.0 },
+]
+
+[[signals]]
+id = "claimed-rescore-lineage-does-not-reconcile"
+kind = "integrity_failure"
+mode = "all"
+note = "The 500-action scorecard describes itself as a truncation of the 1,000-action run, but game-level replay/full-score correspondence is not internally consistent with the pinned source scorecard. This blocks credit without asserting the reported result is false."
+predicates = [
+  { source = "evidence", path = "lineage.claimed_truncation_of_1000_action_run", op = "eq", value = true },
+  { source = "evidence", path = "lineage.pass", op = "eq", value = false },
+]

@@ -3,17 +3,40 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "gri-research"
+name = "gri-gauntlet"
 version = "0.1.0"
-description = "Geometric Recurrent Intelligence research scaffold and WORLD-0 benchmark"
+description = "Fail-closed evaluation-integrity and mechanism-credit tooling for AI experiments"
+readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["numpy>=1.26"]
+dependencies = []
+keywords = [
+    "ai-evaluation",
+    "evaluation-integrity",
+    "reproducibility",
+    "mechanism-credit",
+    "research-tooling",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Repository = "https://github.com/rbardyla-boop/gri"
+Issues = "https://github.com/rbardyla-boop/gri/issues"
 
 [project.scripts]
+gri-gauntlet = "gauntlet.cli:main"
 gauntlet = "gauntlet.cli:main"
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
+research = ["numpy>=1.26"]
 model = ["torch>=2.0"]
 incident = [
     "pandas==3.0.2",
@@ -23,6 +46,7 @@ incident = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["gauntlet*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "."]

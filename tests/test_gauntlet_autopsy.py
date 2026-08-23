@@ -17,6 +17,7 @@ def test_outcome_precedence_is_generic_and_negative_signals_beat_advance() -> No
     assert OUTCOME_PRECEDENCE.index("CONFOUND_EXPLAINS_ADVANTAGE") < OUTCOME_PRECEDENCE.index("ADVANCE")
     assert OUTCOME_PRECEDENCE.index("TRANSPARENT_NULL_DOMINATES") < OUTCOME_PRECEDENCE.index("ADVANCE")
     assert OUTCOME_PRECEDENCE.index("COMPONENT_UNNECESSARY") < OUTCOME_PRECEDENCE.index("ADVANCE")
+    assert OUTCOME_PRECEDENCE.index("STRONG_BASELINE_MISSING") < OUTCOME_PRECEDENCE.index("ADVANCE")
 
 
 def test_dmc05a_is_diagnosed_as_confound_without_experiment_specific_engine_code() -> None:

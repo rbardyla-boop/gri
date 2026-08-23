@@ -2,7 +2,7 @@ name: Gauntlet Rescue
 
 on:
   push:
-    branches: [gauntlet-rescue-v0]
+    branches: [main, gauntlet-rescue-v0, mechanism-autopsy-external-gate]
   pull_request:
     branches: [main]
 
@@ -16,13 +16,14 @@ jobs:
           python-version: "3.11"
       - name: Install targeted test dependencies
         run: python -m pip install -e '.[test]'
-      - name: Run Gauntlet regression, manipulation, foreign-log, and autopsy tests
+      - name: Run Gauntlet regression, manipulation, foreign-log, autopsy, and claim-draft tests
         run: |
           pytest \
             tests/test_gauntlet.py \
             tests/test_gauntlet_manipulations.py \
             tests/test_gauntlet_inspect_adapter.py \
             tests/test_gauntlet_autopsy.py \
+            tests/test_gauntlet_claim_draft.py \
             -q
       - name: Preserve project terminal-verdict verifier
         run: pytest tests/test_project_terminal_verdict.py -q
@@ -62,6 +63,129 @@ jobs:
           mco05 = json.load(open('/tmp/mco05.json'))
           assert 'ADVANCE' in mco05['triggered_outcomes']
           assert mco05['outcome'] == 'TRANSFER_FAILURE'
+          PY
+      - name: External AMB mechanism-credit autopsy
+        run: |
+          python scripts/probe_external_amb.py > /tmp/amb-probe.json
+          if ! gauntlet autopsy examples/gauntlet/autopsy/external_amb.toml > /tmp/amb-autopsy.json; then
+            echo 'Gauntlet external autopsy failed:'
+            cat /tmp/amb-autopsy.json
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          probe = json.load(open('/tmp/amb-probe.json'))
+          value = json.load(open('/tmp/amb-autopsy.json'))
+          assert probe['source']['commit'] == '9146ffa044109166b5d61146ebbf1c89fa544608'
+          assert probe['published']['candidate']['overall'] == 90.0
+          assert probe['published']['baseline']['overall'] == 55.0
+          assert probe['published']['candidate']['semantic'] == 100.0
+          assert probe['published']['baseline']['semantic'] == 0.0
+          assert probe['comparison']['overall_advantage_points'] == 35.0
+          assert probe['comparison']['semantic_advantage_points'] == 100.0
+          assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
+          assert value['outcome'] == 'STRONG_BASELINE_MISSING'
+          assert value['credit_disposition'] == 'WITHHELD'
+          assert 'ADVANCE' in value['triggered_outcomes']
+          assert 'STRONG_BASELINE_MISSING' in value['triggered_outcomes']
+          assert 'strong semantic-memory baseline' in value['strongest_claim']
+          assert value['boundary']['prospective_credit'] is False
+          PY
+      - name: External controlled positive mechanism-credit autopsy
+        run: |
+          python scripts/probe_external_embodied_navigator.py > /tmp/embodied-probe.json
+          if ! gauntlet autopsy examples/gauntlet/autopsy/external_embodied_navigator.toml > /tmp/embodied-autopsy.json; then
+            echo 'Gauntlet positive external autopsy failed:'
+            cat /tmp/embodied-autopsy.json
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          probe = json.load(open('/tmp/embodied-probe.json'))
+          value = json.load(open('/tmp/embodied-autopsy.json'))
+          assert probe['source']['commit'] == '2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d'
+          assert probe['controls']['same_policy'] is True
+          assert probe['controls']['authors_state_each_block_changes_only_named_component'] is True
+          assert probe['memory_block']['full_atmem']['r2r_sr'] == 66.2
+          assert probe['memory_block']['full_history']['r2r_sr'] == 61.9
+          assert probe['memory_block']['full_atmem']['rxr_sr'] == 65.7
+          assert probe['memory_block']['full_history']['rxr_sr'] == 61.1
+          assert probe['memory_block']['full_atmem_minus_full_history']['r2r_sr_points'] == 4.3
+          assert probe['memory_block']['full_atmem_minus_full_history']['rxr_sr_points'] == 4.6
+          assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
+          assert value['outcome'] == 'ADVANCE'
+          assert value['credit_disposition'] == 'PROVISIONAL'
+          assert value['triggered_outcomes'] == ['ADVANCE']
+          assert 'does not establish general memory superiority' in value['strongest_claim']
+          assert value['boundary']['prospective_credit'] is False
+          PY
+      - name: Semi-automatic human-approved Markdown claim gate
+        run: |
+          python - <<'PY'
+          import urllib.request
+          url = 'https://raw.githubusercontent.com/ZJU-OmniAI/Embodied-Navigator/2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d/README.md'
+          req = urllib.request.Request(url, headers={'User-Agent': 'gri-gauntlet-ci/1'})
+          with urllib.request.urlopen(req, timeout=60) as response:
+              data = response.read()
+          open('/tmp/embodied-readme.md', 'wb').write(data)
+          PY
+          gauntlet draft-markdown /tmp/embodied-readme.md \
+            --output .gauntlet/embodied-draft.json \
+            --source-uri https://github.com/ZJU-OmniAI/Embodied-Navigator/blob/2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d/README.md \
+            --source-revision 2f82cbd5ae4cd3abe0c15da0d70dc8f1adb6f04d \
+            --expected-git-blob-sha1 404bc01c1d55eba1d644b742361ec356f3257ded \
+            > /tmp/embodied-draft-output.json
+          gauntlet approve-markdown \
+            .gauntlet/embodied-draft.json \
+            examples/gauntlet/drafts/embodied_navigator_approval.json \
+            --output-dir .gauntlet/generated/embodied \
+            > /tmp/embodied-approval-receipt.json
+          gauntlet autopsy .gauntlet/generated/embodied/autopsy.toml > /tmp/embodied-generated-autopsy.json
+          python - <<'PY'
+          import json
+          draft = json.load(open('.gauntlet/embodied-draft.json'))
+          evidence = json.load(open('.gauntlet/generated/embodied/evidence.json'))
+          verdict = json.load(open('/tmp/embodied-generated-autopsy.json'))
+          assert draft['authority_status'] == 'HUMAN_APPROVAL_REQUIRED'
+          assert draft['boundary']['candidate_not_inferred'] is True
+          assert draft['boundary']['baseline_not_inferred'] is True
+          assert evidence['evidence_class'] == 'HUMAN_APPROVED_MARKDOWN_EXTRACTION'
+          assert evidence['comparison']['metrics']['r2r_sr']['candidate'] == 66.2
+          assert evidence['comparison']['metrics']['r2r_sr']['baseline'] == 61.9
+          assert evidence['comparison']['metrics']['rxr_sr']['candidate'] == 65.7
+          assert evidence['comparison']['metrics']['rxr_sr']['baseline'] == 61.1
+          assert verdict['outcome'] == 'ADVANCE'
+          assert verdict['credit_disposition'] == 'PROVISIONAL'
+          assert verdict['boundary']['prospective_credit'] is False
+          PY
+      - name: External PRO-LONG lineage autopsy
+        run: |
+          python scripts/probe_external_prolong.py > /tmp/prolong-probe.json
+          if ! gauntlet autopsy examples/gauntlet/autopsy/external_prolong.toml > /tmp/prolong-autopsy.json; then
+            echo 'Gauntlet PRO-LONG autopsy failed:'
+            cat /tmp/prolong-autopsy.json
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          probe = json.load(open('/tmp/prolong-probe.json'))
+          value = json.load(open('/tmp/prolong-autopsy.json'))
+          assert probe['source']['commit'] == '9d2f2d46fea8759ed494ce5b0166c7004a2e97c4'
+          assert probe['published']['candidate_500_rescore_mean'] == 45.6
+          assert probe['published']['baseline_500_mean'] == 24.7
+          assert probe['published']['matched_gap_points'] == 20.9
+          assert probe['matched_budget']['action_budget_equal'] is True
+          assert probe['matched_budget']['all_common_settings_equal'] is True
+          assert probe['lineage']['claimed_truncation_of_1000_action_run'] is True
+          assert probe['lineage']['pass'] is False
+          assert len(probe['lineage']['replay_mismatches']) > 0 or len(probe['lineage']['reported_full_score_mismatches']) > 0
+          assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
+          assert 'ADVANCE' in value['triggered_outcomes']
+          assert 'INTEGRITY_INVALID' in value['triggered_outcomes']
+          assert value['outcome'] == 'INTEGRITY_INVALID'
+          assert value['credit_disposition'] == 'UNASSESSED'
+          assert 'provenance is reconciled' in value['strongest_claim']
+          assert value['boundary']['prospective_credit'] is False
           PY
       - name: End-to-end frozen demo
         run: |

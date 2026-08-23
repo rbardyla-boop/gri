@@ -1,0 +1,26 @@
+[autopsy]
+id = "external-embodied-navigator-memory-credit"
+credit_target = "Anchor-Trajectory Memory contribution within the authors' controlled Memory ablation block"
+claim_if_advance = "on the pinned reported matched-policy validation-unseen ablation, Full Anchor-Trajectory Memory retains provisional conditional credit over full-history memory, with positive SR deltas on both R2R-CE and RxR-CE; this does not establish general memory superiority or independent replication"
+claim_if_not_advance = "the pinned reported controlled ablation does not establish conditional credit for Full Anchor-Trajectory Memory"
+
+[sources]
+evidence = ".gauntlet/external-embodied-navigator-evidence.json"
+
+[[signals]]
+id = "matched-controlled-memory-ablation"
+kind = "advance"
+mode = "all"
+note = "Authors state the controlled block shares policy, sensing inputs, validation splits, fixed SLAM controller, and evaluation protocol, with only the named component changing; Full AT-Mem beats full history on SR in both reported benchmarks."
+predicates = [
+  { source = "evidence", path = "controls.same_policy", op = "eq", value = true },
+  { source = "evidence", path = "controls.same_sensing_inputs", op = "eq", value = true },
+  { source = "evidence", path = "controls.same_validation_splits", op = "eq", value = true },
+  { source = "evidence", path = "controls.same_fixed_slam_controller", op = "eq", value = true },
+  { source = "evidence", path = "controls.same_evaluation_protocol", op = "eq", value = true },
+  { source = "evidence", path = "controls.authors_state_each_block_changes_only_named_component", op = "eq", value = true },
+  { source = "evidence", path = "memory_block.full_atmem_minus_full_history.r2r_sr_points", op = "gt", value = 0.0 },
+  { source = "evidence", path = "memory_block.full_atmem_minus_full_history.rxr_sr_points", op = "gt", value = 0.0 },
+  { source = "evidence", path = "memory_block.full_atmem_minus_no_sti.r2r_sr_points", op = "gt", value = 0.0 },
+  { source = "evidence", path = "memory_block.full_atmem_minus_no_sti.rxr_sr_points", op = "gt", value = 0.0 },
+]
