@@ -2,7 +2,7 @@ name: Gauntlet Rescue
 
 on:
   push:
-    branches: [gauntlet-rescue-v0, mechanism-autopsy-external-gate]
+    branches: [main, gauntlet-rescue-v0, mechanism-autopsy-external-gate]
   pull_request:
     branches: [main]
 
