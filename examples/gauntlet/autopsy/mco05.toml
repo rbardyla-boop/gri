@@ -1,0 +1,27 @@
+[autopsy]
+id = "mco05-retrospective-credit"
+credit_target = "transferable bounded state-packet architecture"
+claim_if_advance = "bounded state-packet architecture retains provisional disjoint-transfer credit"
+claim_if_not_advance = "the implementation fails its disjoint transfer gate, so architecture/product credit is withheld despite a small raw lead over hybrid retrieval"
+
+[sources]
+verdict = "artifacts/mco05/scientific/MCO05_VERDICT.json"
+
+[[signals]]
+id = "disjoint-transfer-gate-failed"
+kind = "transfer_failure"
+mode = "all"
+note = "Integrity is valid, but the preregistered compiler-transfer gate fails."
+predicates = [
+  { source = "verdict", path = "overall_integrity", op = "eq", value = "PASS" },
+  { source = "verdict", path = "gates.compiler_transfer", op = "eq", value = false },
+]
+
+[[signals]]
+id = "small-relative-lead-is-not-enough"
+kind = "advance"
+mode = "all"
+note = "This signal records the raw comparison only; fixed precedence prevents it from overriding transfer failure."
+predicates = [
+  { source = "verdict", path = "gates.packet_quality_advantage", op = "gte", value = 0.05 },
+]

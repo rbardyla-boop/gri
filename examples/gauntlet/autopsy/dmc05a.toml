@@ -1,0 +1,19 @@
+[autopsy]
+id = "dmc05a-retrospective-credit"
+credit_target = "learned bounded-memory selection architecture"
+claim_if_advance = "learned bounded-memory selection retains architecture credit"
+claim_if_not_advance = "the apparent bounded-memory advantage is explained by the benchmark ordering/control result; learned architecture credit is removed"
+
+[sources]
+verdict = "artifacts/dmc05a/DMC05A_VERDICT.json"
+
+[[signals]]
+id = "ordering-control-explains-win"
+kind = "confound"
+mode = "all"
+note = "A bounded conventional recency control retains exactly the same persistent set and Pareto-dominates the learned system."
+predicates = [
+  { source = "verdict", path = "benchmark_ordering.recent_window_16_equals_dmc04b_persistent_set", op = "eq", value = true },
+  { source = "verdict", path = "gates.conventional_pareto_dominance", op = "eq", value = true },
+  { source = "verdict", path = "gates.bounded_advantage", op = "eq", value = false },
+]

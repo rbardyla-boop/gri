@@ -1,0 +1,30 @@
+[autopsy]
+id = "external-agent-memory-benchmark-credit"
+credit_target = "semantic-memory architecture superiority from the published Layer-1 headline comparison"
+claim_if_advance = "published comparison provides provisional architecture credit"
+claim_if_not_advance = "the published scores establish performance over the benchmark's lexical in-memory floor, but this comparison alone does not establish superiority over a strong semantic-memory baseline"
+
+[sources]
+evidence = ".gauntlet/external-amb-evidence.json"
+
+[[signals]]
+id = "headline-score-lead"
+kind = "advance"
+mode = "all"
+note = "The candidate has a large published overall and semantic score lead over the disclosed in-memory comparator."
+predicates = [
+  { source = "evidence", path = "comparison.overall_advantage_points", op = "gt", value = 0.0 },
+  { source = "evidence", path = "comparison.semantic_advantage_points", op = "gt", value = 0.0 },
+]
+
+[[signals]]
+id = "semantic-comparator-is-explicitly-a-floor"
+kind = "strong_baseline_missing"
+mode = "all"
+note = "The benchmark itself states that the in-memory comparator is a floor rather than a meaningful semantic comparison, and its implementation uses lexical word overlap."
+predicates = [
+  { source = "evidence", path = "baseline.self_described_floor", op = "eq", value = true },
+  { source = "evidence", path = "baseline.meaningful_semantic_comparator", op = "eq", value = false },
+  { source = "evidence", path = "baseline.lexical_overlap_search", op = "eq", value = true },
+  { source = "evidence", path = "baseline.semantic_score", op = "eq", value = 0.0 },
+]
