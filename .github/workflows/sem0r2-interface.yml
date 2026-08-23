@@ -1,0 +1,55 @@
+name: SEM-0R2 Interface Gate
+
+on:
+  push:
+    branches:
+      - sem-0r2-interface-qualified-replication
+    paths:
+      - 'experiments/sem0r2/**'
+      - 'tests/test_sem0r2_interface.py'
+      - '.github/workflows/sem0r2-interface.yml'
+  pull_request:
+    paths:
+      - 'experiments/sem0r2/**'
+      - 'tests/test_sem0r2_interface.py'
+      - '.github/workflows/sem0r2-interface.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  interface-repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Verify frozen parent SEM-0R sources are unchanged
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path('.')
+          manifest=json.load(open('experiments/sem0r/SEM0R_INSTRUMENT_MANIFEST.json'))
+          assert manifest['status']=='SEM0R_INSTRUMENT_FROZEN'
+          bad={}
+          for name,expected in manifest['source_sha256'].items():
+              p=root/'experiments'/'sem0r'/name
+              observed=hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else None
+              if observed!=expected:
+                  bad[name]={'expected':expected,'observed':observed}
+          assert not bad, bad
+          print('Frozen SEM-0R source hashes unchanged')
+          PY
+      - name: Compile successor execution layer
+        run: python -m py_compile experiments/sem0r2/*.py
+      - name: Run successor interface regressions
+        run: pytest -q tests/test_sem0r2_interface.py
+      - name: Verify successor does not contain a scientific authorization artifact
+        run: |
+          test ! -e experiments/sem0r2/SEM0R2_ONE_RUN_AUTHORIZATION.json
+          test ! -e experiments/sem0r2/SEM0R2_INTERFACE_QUALIFICATION.json
+          echo 'No local scientific authorization or qualification result committed'
