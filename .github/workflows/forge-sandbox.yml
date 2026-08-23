@@ -1,0 +1,64 @@
+name: TE0 Forge Sandbox
+
+on:
+  push:
+    branches: [forge-sandbox-v0]
+  pull_request:
+    branches: [main]
+
+jobs:
+  forge-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test environment
+        run: python -m pip install -e '.[test]'
+      - name: Run Forge core and ecology tests
+        run: |
+          pytest \
+            tests/test_forge.py \
+            tests/test_forge_ecology.py \
+            -q
+      - name: Qualify public TE0-E0 pipeline
+        run: |
+          rm -rf /tmp/te0-e0
+          python -B -m experiments.forge.qualify_te0_e0 --scratch /tmp/te0-e0 > /tmp/te0-e0-output.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          summary = json.loads(Path('/tmp/te0-e0/TE0_E0_QUALIFICATION.json').read_text())
+          assert summary['status'] == 'TE0_E0_PIPELINE_QUALIFIED'
+          assert summary['scientific'] is False
+          assert summary['qualification_only'] is True
+          assert summary['candidate_model_calls'] == 0
+          assert summary['development_vault_access'] is False
+          assert summary['judge_verdict'] == 'PASS'
+          assert summary['judge_score'] == 1.0
+          assert summary['second_vault_attempt_blocked'] is True
+          assert len(summary['champion_tools']) >= 2
+          print(json.dumps(summary, indent=2, sort_keys=True))
+          PY
+      - name: Check sandbox launcher fail-closed flags
+        run: |
+          bash -n experiments/forge/sandbox.sh
+          grep -q -- '--network=none' experiments/forge/sandbox.sh
+          grep -q -- '--read-only' experiments/forge/sandbox.sh
+          grep -q -- '--cap-drop=ALL' experiments/forge/sandbox.sh
+          grep -q -- '--security-opt=no-new-privileges' experiments/forge/sandbox.sh
+          grep -q -- '--pull=never' experiments/forge/sandbox.sh
+          grep -q -- '--pids-limit=128' experiments/forge/sandbox.sh
+          grep -q -- 'FORGE_IMAGE_MISSING' experiments/forge/sandbox.sh
+      - name: Verify development command exposes no Vault argument
+        run: |
+          python -B -m experiments.forge.te0_dev --help > /tmp/te0-dev-help.txt
+          if grep -Eiq -- '(^|[[:space:]])--vault([[:space:]=]|$)' /tmp/te0-dev-help.txt; then
+            echo 'TE0_DEV_EXPOSES_VAULT' >&2
+            cat /tmp/te0-dev-help.txt >&2
+            exit 1
+          fi
+      - name: Preserve original terminal research verdict
+        run: pytest tests/test_project_terminal_verdict.py -q
