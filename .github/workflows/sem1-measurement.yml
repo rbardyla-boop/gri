@@ -1,0 +1,106 @@
+name: SEM-1 Pre-Science Gate
+
+on:
+  push:
+    branches:
+      - sem1-measurement-qualified-semantic-control
+    paths:
+      - 'experiments/sem1/**'
+      - 'tests/test_sem1_measurement_adapter.py'
+      - 'tests/test_sem1_instrument.py'
+      - '.github/workflows/sem1-measurement.yml'
+  pull_request:
+    paths:
+      - 'experiments/sem1/**'
+      - 'tests/test_sem1_measurement_adapter.py'
+      - 'tests/test_sem1_instrument.py'
+      - '.github/workflows/sem1-measurement.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  pre-science:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Compile SEM-1 pre-science code
+        run: python -m py_compile experiments/sem1/*.py
+      - name: Emit diagnostic-only label-pattern breakdown
+        run: python -m experiments.sem1.diagnose_label_patterns | tee /tmp/SEM1_LABEL_PATTERN_DIAGNOSTIC.json
+      - name: Run SEM-1 regressions
+        run: pytest -q tests/test_sem1_measurement_adapter.py tests/test_sem1_instrument.py
+      - name: Run public non-semantic measurement qualification
+        run: python -m experiments.sem1.qualify_measurement_adapter --output /tmp/SEM1_MEASUREMENT_QUALIFICATION.json
+      - name: Generate fresh semantic instrument in temporary workspace
+        run: |
+          python -m experiments.sem1.build_sem1_instrument --cases /tmp/SEM1_CASES.jsonl --gold /tmp/SEM1_GOLD.jsonl | tee /tmp/SEM1_GENERATOR_SUMMARY.json
+          python -m experiments.sem1.make_sem1_subsets --replay /tmp/SEM1_REPLAY.jsonl --context-ablation /tmp/SEM1_CONTEXT_ABLATION.jsonl
+          python -m experiments.sem1.validate_sem1_instrument | tee /tmp/SEM1_STRUCTURE_REPORT.json
+      - name: Run preregistered transparent shortcut audit
+        run: python -m experiments.sem1.shortcut_baselines | tee /tmp/SEM1_SHORTCUT_AUDIT.json
+      - name: Emit diagnostic-only proposition leakage breakdown
+        run: python -m experiments.sem1.diagnose_shortcut_leakage | tee /tmp/SEM1_SHORTCUT_DIAGNOSTIC.json
+      - name: Verify pre-science boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          lp = json.load(open('/tmp/SEM1_LABEL_PATTERN_DIAGNOSTIC.json'))
+          assert lp['status'] == 'SEM1_LABEL_PATTERN_DIAGNOSTIC_ONLY'
+          assert lp['scientific_model_calls'] == 0
+          assert lp['changes_registered_gate'] is False
+
+          q = json.load(open('/tmp/SEM1_MEASUREMENT_QUALIFICATION.json'))
+          assert q['status'] == 'SEM1_MEASUREMENT_QUALIFICATION_PASS'
+          assert q['scientific_semantic_content'] is False
+          assert q['scientific_model_calls'] == 0
+          assert q['positive']['n'] == 72 and q['positive']['rate'] == 1.0
+          assert q['negative']['n'] == 72 and q['negative']['rate'] == 1.0
+
+          s = json.load(open('/tmp/SEM1_STRUCTURE_REPORT.json'))
+          assert s['status'] == 'SEM1_INSTRUMENT_STRUCTURE_PASS'
+          assert s['case_count'] == 96
+          assert s['pair_count'] == 48
+          assert s['decision_count'] == 576
+          assert s['revision_pairs'] == 24
+          assert s['invariance_pairs'] == 24
+          assert s['replay_count'] == 24
+          assert s['context_ablation_count'] == 24
+          assert s['one_each_label_cases'] == 0
+          assert s['max_label_pattern_frequency'] <= 12
+          assert s['scientific_model_calls'] == 0
+
+          d = json.load(open('/tmp/SEM1_SHORTCUT_DIAGNOSTIC.json'))
+          assert d['status'] == 'SEM1_SHORTCUT_DIAGNOSTIC_ONLY'
+          assert d['scientific_model_calls'] == 0
+          assert d['changes_registered_gate'] is False
+
+          b = json.load(open('/tmp/SEM1_SHORTCUT_AUDIT.json'))
+          assert b['scientific_model_calls'] == 0
+          assert b['candidate_execution'] is False
+          assert b['bindings']['cases_record_sha256'] == s['case_record_sha256']
+          assert b['bindings']['gold_record_sha256'] == s['gold_record_sha256']
+          assert b['status'] == 'SEM1_SHORTCUT_AUDIT_PASS', b
+          assert all(b['shortcut_gates'].values()), b['shortcut_gates']
+          assert b['effective_candidate_macro_f1_floor'] >= 0.72
+
+          root = Path('experiments/sem1')
+          forbidden_names = []
+          for path in root.iterdir():
+              if not path.is_file():
+                  continue
+              name = path.name.lower()
+              if any(token in name for token in ('authorization', 'run_sem1', 'freeze_sem1')):
+                  forbidden_names.append(path.name)
+              if 'gold' in name and name != 'generate_sem1.py':
+                  forbidden_names.append(path.name)
+          assert not forbidden_names, forbidden_names
+          print('SEM-1 pre-science instrument + shortcut gate PASS')
+          PY
