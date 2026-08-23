@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Pin and conservatively extract the public AMB comparison used by Gauntlet.
 
-This probe is deliberately narrow. It verifies only the published Layer-1
-headline scores and the benchmark author's own description of the in-memory
-baseline. It does not re-run AMB and does not establish product superiority.
+This probe verifies only the published Layer-1 headline comparison and the
+benchmark author's own description/implementation of the in-memory baseline.
+It does not re-run AMB and does not establish product superiority.
 """
 
 from __future__ import annotations
@@ -20,7 +20,7 @@ COMMIT = "9146ffa044109166b5d61146ebbf1c89fa544608"
 RAW_ROOT = f"https://raw.githubusercontent.com/{REPO}/{COMMIT}"
 README_URL = f"{RAW_ROOT}/README.md"
 ADAPTER_URL = f"{RAW_ROOT}/src/adapters/in-memory.ts"
-OUTPUT = Path("artifacts/gauntlet/external/amb_9146ffa_probe.json")
+OUTPUT = Path(".gauntlet/external-amb-evidence.json")
 
 
 def fetch(url: str) -> bytes:
@@ -49,21 +49,27 @@ def layer1_section(readme: str) -> str:
     return readme[start:end]
 
 
-def published_layer1_score(readme: str, provider: str) -> int:
+def layer1_scores(readme: str, provider: str) -> dict[str, float]:
     section = layer1_section(readme)
-    row_pattern = re.compile(
-        rf"^\|\s*{re.escape(provider)}\s*\|\s*\**(?P<score>\d+(?:\.\d+)?)\**\s*\|",
-        flags=re.MULTILINE,
-    )
+    row_pattern = re.compile(rf"^\|\s*{re.escape(provider)}\s*\|(?P<cells>.+)$", flags=re.MULTILINE)
     matches = list(row_pattern.finditer(section))
     if len(matches) != 1:
         raise RuntimeError(
             f"expected exactly one Layer 1 published row for {provider!r}, got {len(matches)}"
         )
-    score = float(matches[0].group("score"))
-    if not score.is_integer():
-        raise RuntimeError(f"expected integer Layer 1 headline score for {provider!r}, got {score}")
-    return int(score)
+
+    cells = [cell.strip().replace("**", "") for cell in matches[0].group("cells").split("|")]
+    cells = [cell for cell in cells if cell]
+    if len(cells) < 8:
+        raise RuntimeError(f"unexpected Layer 1 score row shape for {provider!r}: {cells}")
+
+    try:
+        values = [float(cell) for cell in cells[:8]]
+    except ValueError as exc:
+        raise RuntimeError(f"non-numeric Layer 1 score cell for {provider!r}: {cells[:8]}") from exc
+
+    names = ("overall", "factual", "semantic", "temporal", "conflict", "forgetting", "cross_session", "cost")
+    return dict(zip(names, values, strict=True))
 
 
 def main() -> int:
@@ -73,8 +79,8 @@ def main() -> int:
     adapter = adapter_bytes.decode("utf-8")
     flat_readme = normalized(readme)
 
-    central_score = published_layer1_score(readme, "Central Intelligence")
-    baseline_score = published_layer1_score(readme, "In-Memory Baseline")
+    candidate = layer1_scores(readme, "Central Intelligence")
+    baseline_scores = layer1_scores(readme, "In-Memory Baseline")
 
     baseline_disclosure = (
         "The in-memory baseline uses exact keyword matching, not embeddings. "
@@ -90,8 +96,6 @@ def main() -> int:
     if normalized(same_author_disclosure) not in flat_readme:
         raise RuntimeError("pinned README no longer contains the expected same-author disclosure")
 
-    # Source-level evidence for the lexical baseline. These checks are kept
-    # explicit so a materially different adapter implementation fails closed.
     lexical_markers = (
         "const queryWords = queryLower.split(/\\s+/).filter(w => w.length > 2);",
         "if (contentLower.includes(word))",
@@ -100,6 +104,17 @@ def main() -> int:
     missing_markers = [marker for marker in lexical_markers if marker not in adapter]
     if missing_markers:
         raise RuntimeError(f"pinned in-memory adapter is missing expected lexical markers: {missing_markers}")
+
+    if candidate["overall"] != 90.0 or baseline_scores["overall"] != 55.0:
+        raise RuntimeError(
+            "published pinned overall scores changed: "
+            f"Central Intelligence={candidate['overall']}, In-Memory Baseline={baseline_scores['overall']}"
+        )
+    if candidate["semantic"] != 100.0 or baseline_scores["semantic"] != 0.0:
+        raise RuntimeError(
+            "published pinned semantic scores changed: "
+            f"Central Intelligence={candidate['semantic']}, In-Memory Baseline={baseline_scores['semantic']}"
+        )
 
     result = {
         "schema_version": 1,
@@ -113,13 +128,18 @@ def main() -> int:
             "adapter_sha256": sha256(adapter_bytes),
         },
         "published": {
-            "central_intelligence_overall": central_score,
-            "in_memory_overall": baseline_score,
+            "candidate": {"name": "Central Intelligence", **candidate},
+            "baseline": {"name": "In-Memory Baseline", **baseline_scores},
+        },
+        "comparison": {
+            "overall_advantage_points": candidate["overall"] - baseline_scores["overall"],
+            "semantic_advantage_points": candidate["semantic"] - baseline_scores["semantic"],
         },
         "baseline": {
-            "keyword_overlap_only": True,
-            "author_calls_floor": True,
-            "author_says_not_meaningful_semantic_comparison": True,
+            "self_described_floor": True,
+            "meaningful_semantic_comparator": False,
+            "lexical_overlap_search": True,
+            "semantic_score": baseline_scores["semantic"],
         },
         "disclosures": {
             "same_author": True,
@@ -127,16 +147,10 @@ def main() -> int:
         },
         "boundary": {
             "benchmark_rerun": False,
-            "semantic_baseline_tested": False,
+            "strong_semantic_baseline_tested": False,
             "architecture_superiority_established": False,
         },
     }
-
-    if central_score != 90 or baseline_score != 55:
-        raise RuntimeError(
-            f"published pinned headline scores changed: Central Intelligence={central_score}, "
-            f"In-Memory Baseline={baseline_score}"
-        )
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
