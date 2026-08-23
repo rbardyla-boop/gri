@@ -15,6 +15,7 @@ from typing import Any, Iterable, Sequence
 
 
 SCHEMA_VERSION = 1
+FROZEN_RUN_EVIDENCE_CLASS = "FROZEN_RUN"
 
 
 def canonical(value: Any) -> str:
@@ -581,17 +582,25 @@ def verdict_frozen(
         "replay": replay_ok,
         "replay_binding": replay_binding,
     }
-    audit = audit_result(spec_path, result_path, evidence_class="PREREGISTERED_RUN") if result_path.is_file() else None
+    audit = (
+        audit_result(spec_path, result_path, evidence_class=FROZEN_RUN_EVIDENCE_CLASS)
+        if result_path.is_file()
+        else None
+    )
     if all(integrity.values()) and audit is not None:
         state = audit["state"]
     else:
         state = "INTEGRITY_FAIL"
     verdict: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
-        "evidence_class": "PREREGISTERED_RUN",
+        "evidence_class": FROZEN_RUN_EVIDENCE_CLASS,
         "integrity": integrity,
         "audit": audit,
         "state": state,
+        "boundary": {
+            "public_preregistration": "NOT_ESTABLISHED",
+            "reason": "a local freeze proves specification and input binding for this run; it does not by itself prove that hypotheses or thresholds were publicly preregistered before results were observed",
+        },
     }
     verdict["verdict_sha256"] = digest(verdict)
     return verdict
