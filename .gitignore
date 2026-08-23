@@ -142,3 +142,20 @@ artifacts/**/stability_repeat/cases/
 
 # Large generated runtime trees
 artifacts/**/engineering/**/cases/
+
+# Additional generated scientific runtime outputs
+artifacts/mco02/replays/
+artifacts/mco02/runtime_incidents/
+artifacts/mco03/engineering/
+artifacts/mco03/scientific/
+artifacts/mco04/data/
+
+artifacts/mco04/**/SCORED_*.json
+artifacts/mco04/**/SEALED_*.json
+artifacts/mco04/engineering/ENGINEERING_VERIFICATION.json
+
+artifacts/mco05/**/SCORED_*.json
+artifacts/mco05/**/SEALED_*.json
+
+artifacts/results/*_run1_inconclusive.json
+artifacts/results/*_dev_smoke.json
