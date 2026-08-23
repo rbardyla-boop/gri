@@ -74,6 +74,14 @@ jobs:
           assert '.search(' not in text
           print('Judge contains no development-search calls')
           PY
+      - name: Verify local BUILD DEV operator cannot create or open Vault
+        run: |
+          bash -n experiments/forge_e1/run_local_dev.sh
+          ! grep -q 'judge_te0_e1' experiments/forge_e1/run_local_dev.sh
+          ! grep -q 'authorize_te0_e1' experiments/forge_e1/run_local_dev.sh
+          ! grep -q 'vault-seed-file' experiments/forge_e1/run_local_dev.sh
+          grep -q 'vault_created.*False' experiments/forge_e1/run_local_dev.sh
+          grep -q 'FORGE_SANDBOX_BACKEND=bwrap' experiments/forge_e1/run_local_dev.sh
       - name: Preserve TE0 foundation and terminal research verdict
         run: |
           pytest tests/test_project_terminal_verdict.py -q
