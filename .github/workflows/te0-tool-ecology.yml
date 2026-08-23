@@ -7,6 +7,7 @@ on:
       - 'experiments/forge/**'
       - 'tests/test_forge.py'
       - 'tests/test_te0_ecology.py'
+      - 'tests/test_te0_pipeline.py'
       - 'docs/FORGE-SANDBOX-V0.md'
       - '.github/workflows/te0-tool-ecology.yml'
   push:
@@ -16,6 +17,7 @@ on:
       - 'experiments/forge/**'
       - 'tests/test_forge.py'
       - 'tests/test_te0_ecology.py'
+      - 'tests/test_te0_pipeline.py'
       - 'docs/FORGE-SANDBOX-V0.md'
       - '.github/workflows/te0-tool-ecology.yml'
 
@@ -36,7 +38,7 @@ jobs:
       - name: Run Forge and TE0 regression tests
         run: |
           python -m pip install --disable-pip-version-check pytest
-          pytest -q tests/test_forge.py tests/test_te0_ecology.py
+          pytest -q tests/test_forge.py tests/test_te0_ecology.py tests/test_te0_pipeline.py
       - name: Assert sandbox defaults stay fail-closed
         run: |
           python - <<'PY'
@@ -61,3 +63,7 @@ jobs:
           forbidden = {'exec', 'eval', 'shell', 'subprocess', 'network', 'import'}
           assert not (DeclarativeToolFactory.ALLOWED_OPS & forbidden)
           PY
+      - name: Assert development command cannot accept Vault
+        run: |
+          python experiments/forge/te0_dev.py --help > /tmp/te0-dev-help.txt
+          ! grep -q -- '--vault' /tmp/te0-dev-help.txt
