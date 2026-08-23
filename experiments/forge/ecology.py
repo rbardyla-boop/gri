@@ -1,13 +1,12 @@
 from __future__ import annotations
 
 import json
-import math
 from dataclasses import asdict, dataclass
 from enum import Enum
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any, Sequence
 
-from experiments.forge.forge import Case, Chain, ChainScore, Forge, Registry, SearchConfig, Tool, sha256_json
+from experiments.forge.forge import Case, Chain, Forge, Registry, SearchConfig, Tool, sha256_json
 
 Json = Any
 
@@ -35,9 +34,9 @@ class FailureDiagnosis:
 def classify_failure(signals: dict[str, Any]) -> FailureDiagnosis:
     """Conservative rule-based failure classification.
 
-    The classifier is deliberately simple and transparent. Multiple severe signals
-    resolve by precedence: integrity -> resource -> measurement -> interface -> task
-    definition -> retrieval -> state -> tool -> model -> unknown.
+    Multiple severe signals resolve by precedence: integrity -> resource ->
+    measurement -> interface -> task definition -> retrieval -> state -> tool ->
+    model -> unknown.
     """
     rules = [
         (FailureClass.INTEGRITY, ("hash_mismatch", "holdout_leak", "replay_mismatch", "unauthorized_retry"), "stop; invalidate the run"),
@@ -133,8 +132,8 @@ class ToolSmith:
             for op in ("strip", "lower", "normalize_space"):
                 out.append(ToolBlueprint(f"ts_{op}", op, "text", "text", 1, {}, diagnosis.failure_class))
 
-        # Exact BUILD lookup is allowed as an intentionally embarrassing baseline/tool.
-        # DEV/Vault determine whether it generalizes; no hidden evidence is used here.
+        # Exact BUILD lookup is intentionally embarrassing. DEV/Vault decide whether
+        # it generalizes; no hidden evidence is used here.
         mapping: dict[str, Any] = {}
         consistent = True
         for case in build_cases:
@@ -145,6 +144,21 @@ class ToolSmith:
             mapping[key] = case.expected
         if build_cases and consistent:
             out.append(ToolBlueprint("ts_build_lookup", "lookup", input_kind, output_kind, 1, {"mapping": mapping}, diagnosis.failure_class))
+
+        # For interface-like text failures, ToolSmith may also infer a canonical
+        # BUILD dictionary. The canonicalization itself remains separate tools, so
+        # Composer must discover the needed recipe and DEV/Vault can kill it.
+        if build_cases and input_kind == "text" and diagnosis.failure_class in {FailureClass.INTERFACE, FailureClass.MEASUREMENT, FailureClass.TOOL}:
+            canonical: dict[str, Any] = {}
+            canonical_ok = True
+            for case in build_cases:
+                key = " ".join(str(case.input).split()).lower()
+                if key in canonical and canonical[key] != case.expected:
+                    canonical_ok = False
+                    break
+                canonical[key] = case.expected
+            if canonical_ok:
+                out.append(ToolBlueprint("ts_build_lookup_canonical", "lookup", "text", output_kind, 1, {"mapping": canonical}, diagnosis.failure_class))
 
         return tuple(out)
 
@@ -282,7 +296,27 @@ class Judge:
     def __init__(self, forge: Forge) -> None:
         self.forge = forge
 
-    def evaluate_once(self, champion: Chain, vault_cases: Sequence[Case], *, threshold: float, min_margin_over_null: float = 0.0, receipt_path: Path | None = None) -> JudgeReceipt:
+    def evaluate_once(
+        self,
+        champion: Chain,
+        vault_cases: Sequence[Case],
+        *,
+        threshold: float,
+        min_margin_over_null: float = 0.0,
+        receipt_path: Path | None = None,
+        consumption_path: Path | None = None,
+    ) -> JudgeReceipt:
+        # Persistent burn-before-score option. A crash still consumes the Vault run.
+        if consumption_path is not None:
+            consumption_path.parent.mkdir(parents=True, exist_ok=True)
+            try:
+                with consumption_path.open("x", encoding="utf-8") as handle:
+                    handle.write(json.dumps({"status": "VAULT_CONSUMED", "chain_id": champion.chain_id}, sort_keys=True) + "\n")
+            except FileExistsError as exc:
+                raise RuntimeError("FORGE_VAULT_ALREADY_CONSUMED") from exc
+        if receipt_path is not None and receipt_path.exists():
+            raise RuntimeError("FORGE_VAULT_RECEIPT_ALREADY_EXISTS")
+
         nulls = list(NullSmith.constant_null(vault_cases)) + [NullSmith.identity_null(vault_cases)]
         best_null = max((n.score for n in nulls), default=0.0)
         holdout = self.forge.evaluate_holdout_once(champion, vault_cases)
@@ -304,8 +338,6 @@ class Judge:
         }
         receipt = JudgeReceipt(verdict, champion.chain_id, holdout.holdout_digest, holdout.score, threshold, min_margin_over_null, best_null, sha256_json(body))
         if receipt_path is not None:
-            if receipt_path.exists():
-                raise FileExistsError(f"refusing to overwrite judge receipt: {receipt_path}")
             receipt_path.parent.mkdir(parents=True, exist_ok=True)
             receipt_path.write_text(json.dumps({**body, "receipt_sha256": receipt.receipt_sha256}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         return receipt
