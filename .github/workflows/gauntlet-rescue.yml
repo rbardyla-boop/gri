@@ -118,6 +118,35 @@ jobs:
           assert 'does not establish general memory superiority' in value['strongest_claim']
           assert value['boundary']['prospective_credit'] is False
           PY
+      - name: External PRO-LONG lineage autopsy
+        run: |
+          python scripts/probe_external_prolong.py > /tmp/prolong-probe.json
+          if ! gauntlet autopsy examples/gauntlet/autopsy/external_prolong.toml > /tmp/prolong-autopsy.json; then
+            echo 'Gauntlet PRO-LONG autopsy failed:'
+            cat /tmp/prolong-autopsy.json
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          probe = json.load(open('/tmp/prolong-probe.json'))
+          value = json.load(open('/tmp/prolong-autopsy.json'))
+          assert probe['source']['commit'] == '9d2f2d46fea8759ed494ce5b0166c7004a2e97c4'
+          assert probe['published']['candidate_500_rescore_mean'] == 45.6
+          assert probe['published']['baseline_500_mean'] == 24.7
+          assert probe['published']['matched_gap_points'] == 20.9
+          assert probe['matched_budget']['action_budget_equal'] is True
+          assert probe['matched_budget']['all_common_settings_equal'] is True
+          assert probe['lineage']['claimed_truncation_of_1000_action_run'] is True
+          assert probe['lineage']['pass'] is False
+          assert len(probe['lineage']['replay_mismatches']) > 0 or len(probe['lineage']['reported_full_score_mismatches']) > 0
+          assert value['evidence_class'] == 'RETROSPECTIVE_MECHANISM_AUTOPSY'
+          assert 'ADVANCE' in value['triggered_outcomes']
+          assert 'INTEGRITY_INVALID' in value['triggered_outcomes']
+          assert value['outcome'] == 'INTEGRITY_INVALID'
+          assert value['credit_disposition'] == 'UNASSESSED'
+          assert 'provenance is reconciled' in value['strongest_claim']
+          assert value['boundary']['prospective_credit'] is False
+          PY
       - name: End-to-end frozen demo
         run: |
           gauntlet freeze examples/gauntlet/demo.toml
