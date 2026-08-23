@@ -77,6 +77,20 @@ jobs:
           assert draft['boundary']['candidate_not_inferred'] is True
           assert draft['boundary']['credit_decision_not_run'] is True
           PY
+      - name: Freeze release-candidate hashes
+        if: matrix.python-version == '3.11'
+        run: |
+          cd dist
+          sha256sum *.whl *.tar.gz | sort > SHA256SUMS
+          cat SHA256SUMS
+      - name: Upload release-candidate distributions
+        if: matrix.python-version == '3.11'
+        uses: actions/upload-artifact@v4
+        with:
+          name: gri-gauntlet-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
 
   source-regression:
     runs-on: ubuntu-latest
