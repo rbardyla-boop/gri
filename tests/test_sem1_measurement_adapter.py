@@ -8,13 +8,13 @@ from experiments.sem1.qualify_measurement_adapter import run_qualification
 
 def test_snake_case_evidence_alias_recovers() -> None:
     raw = json.dumps({
-        "P1": {"MIR": {"evidence_multiset": ["S2", "S1", "S1"]}},
+        "P1": {"ASSERTED": {"evidence_multiset": ["S2", "S1", "S1"]}},
         "P2": {"label": "UNKNOWN", "evidence": []},
     })
     result = adapt_candidate_output(raw, proposition_ids=("P1", "P2"), statement_ids=("S1", "S2"))
     assert result.status == "RESOLVED"
     assert result.canonical == {
-        "P1": {"label": "MIR", "evidence": ["S1", "S2"]},
+        "P1": {"label": "ASSERTED", "evidence": ["S1", "S2"]},
         "P2": {"label": "UNKNOWN", "evidence": []},
     }
 
