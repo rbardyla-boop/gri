@@ -40,6 +40,8 @@ jobs:
           python -m experiments.sem1.build_sem1_instrument --cases /tmp/SEM1_CASES.jsonl --gold /tmp/SEM1_GOLD.jsonl | tee /tmp/SEM1_GENERATOR_SUMMARY.json
           python -m experiments.sem1.make_sem1_subsets --replay /tmp/SEM1_REPLAY.jsonl --context-ablation /tmp/SEM1_CONTEXT_ABLATION.jsonl
           python -m experiments.sem1.validate_sem1_instrument | tee /tmp/SEM1_STRUCTURE_REPORT.json
+      - name: Run preregistered transparent shortcut audit
+        run: python -m experiments.sem1.shortcut_baselines | tee /tmp/SEM1_SHORTCUT_AUDIT.json
       - name: Verify pre-science boundary
         run: |
           python - <<'PY'
@@ -66,6 +68,15 @@ jobs:
           assert s['max_label_pattern_frequency'] <= 12
           assert s['scientific_model_calls'] == 0
 
+          b = json.load(open('/tmp/SEM1_SHORTCUT_AUDIT.json'))
+          assert b['scientific_model_calls'] == 0
+          assert b['candidate_execution'] is False
+          assert b['bindings']['cases_record_sha256'] == s['case_record_sha256']
+          assert b['bindings']['gold_record_sha256'] == s['gold_record_sha256']
+          assert b['status'] == 'SEM1_SHORTCUT_AUDIT_PASS', b
+          assert all(b['shortcut_gates'].values()), b['shortcut_gates']
+          assert b['effective_candidate_macro_f1_floor'] >= 0.72
+
           root = Path('experiments/sem1')
           forbidden_names = []
           for path in root.iterdir():
@@ -77,5 +88,5 @@ jobs:
               if 'gold' in name and name != 'generate_sem1.py':
                   forbidden_names.append(path.name)
           assert not forbidden_names, forbidden_names
-          print('SEM-1 pre-science instrument gate PASS')
+          print('SEM-1 pre-science instrument + shortcut gate PASS')
           PY
