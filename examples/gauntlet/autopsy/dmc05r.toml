@@ -1,0 +1,19 @@
+[autopsy]
+id = "dmc05r-retrospective-credit"
+credit_target = "learned nonrecent-state selector"
+claim_if_advance = "learned selector retains mechanism credit beyond a transparent null"
+claim_if_not_advance = "a transparent equally informed selector matches capability with lower resource cost; learned selector credit is removed"
+
+[sources]
+verdict = "artifacts/dmc05r/DMC05R_VERDICT.json"
+
+[[signals]]
+id = "transparent-null-matches-and-dominates"
+kind = "transparent_null"
+mode = "all"
+note = "The transparent utility index matches DMC capability and is resource-superior while the learned selection-advantage gate fails."
+predicates = [
+  { source = "verdict", path = "gates.gates.transparent_capability_match.pass", op = "eq", value = true },
+  { source = "verdict", path = "gates.gates.transparent_resource_dominance.pass", op = "eq", value = true },
+  { source = "verdict", path = "gates.gates.selection_advantage.pass", op = "eq", value = false },
+]
