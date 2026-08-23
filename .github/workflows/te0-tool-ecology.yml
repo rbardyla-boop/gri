@@ -1,0 +1,83 @@
+name: TE0 Tool Ecology
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/forge/**'
+      - 'tests/test_forge.py'
+      - 'tests/test_te0_ecology.py'
+      - 'tests/test_te0_pipeline.py'
+      - 'docs/FORGE-SANDBOX-V0.md'
+      - '.github/workflows/te0-tool-ecology.yml'
+  push:
+    branches:
+      - forge-sandbox-v0
+    paths:
+      - 'experiments/forge/**'
+      - 'tests/test_forge.py'
+      - 'tests/test_te0_ecology.py'
+      - 'tests/test_te0_pipeline.py'
+      - 'docs/FORGE-SANDBOX-V0.md'
+      - '.github/workflows/te0-tool-ecology.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  te0:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Forge and TE0 regression tests
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          pytest -q tests/test_forge.py tests/test_te0_ecology.py tests/test_te0_pipeline.py
+      - name: Run dependency-free TE0-E0 qualification
+        run: |
+          rm -rf /tmp/te0-e0-ci
+          python -B -m experiments.forge.qualify_te0_e0 --scratch /tmp/te0-e0-ci > /tmp/te0-e0-output.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result=json.loads(Path('/tmp/te0-e0-output.json').read_text())
+          assert result['status']=='TE0_E0_PIPELINE_QUALIFIED', result
+          assert result['scientific'] is False
+          assert result['candidate_model_calls']==0
+          assert result['second_vault_attempt_blocked'] is True
+          PY
+      - name: Assert sandbox defaults stay fail-closed
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          text = Path('experiments/forge/sandbox.sh').read_text()
+          required = [
+              '--network=none',
+              '--read-only',
+              '--cap-drop=ALL',
+              '--security-opt=no-new-privileges',
+              '--pull=never',
+              'dst=/repo,ro',
+              'dst=/scratch,rw',
+              'PYTHONDONTWRITEBYTECODE=1',
+          ]
+          missing = [x for x in required if x not in text]
+          assert not missing, missing
+          PY
+      - name: Assert declarative ToolSmith has no arbitrary execution primitive
+        run: |
+          python - <<'PY'
+          from experiments.forge.ecology import DeclarativeToolFactory
+          forbidden = {'exec', 'eval', 'shell', 'subprocess', 'network', 'import'}
+          assert not (DeclarativeToolFactory.ALLOWED_OPS & forbidden)
+          PY
+      - name: Assert development command cannot accept Vault
+        run: |
+          python -m experiments.forge.te0_dev --help > /tmp/te0-dev-help.txt
+          ! grep -q -- '--vault' /tmp/te0-dev-help.txt
