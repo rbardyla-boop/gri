@@ -37,7 +37,7 @@ jobs:
         run: python -m experiments.sem1.qualify_measurement_adapter --output /tmp/SEM1_MEASUREMENT_QUALIFICATION.json
       - name: Generate fresh semantic instrument in temporary workspace
         run: |
-          python -m experiments.sem1.generate_sem1 --cases /tmp/SEM1_CASES.jsonl --gold /tmp/SEM1_GOLD.jsonl | tee /tmp/SEM1_GENERATOR_SUMMARY.json
+          python -m experiments.sem1.build_sem1_instrument --cases /tmp/SEM1_CASES.jsonl --gold /tmp/SEM1_GOLD.jsonl | tee /tmp/SEM1_GENERATOR_SUMMARY.json
           python -m experiments.sem1.make_sem1_subsets --replay /tmp/SEM1_REPLAY.jsonl --context-ablation /tmp/SEM1_CONTEXT_ABLATION.jsonl
           python -m experiments.sem1.validate_sem1_instrument | tee /tmp/SEM1_STRUCTURE_REPORT.json
       - name: Verify pre-science boundary
@@ -63,6 +63,7 @@ jobs:
           assert s['replay_count'] == 24
           assert s['context_ablation_count'] == 24
           assert s['one_each_label_cases'] == 0
+          assert s['max_label_pattern_frequency'] <= 12
           assert s['scientific_model_calls'] == 0
 
           root = Path('experiments/sem1')
