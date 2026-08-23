@@ -1,0 +1,26 @@
+SRI-1A-alpha.4.1R — TRUST-ANCHOR & EXECUTABLE-GATE REPAIR
+
+STATUS: SRI_ALPHA4_1R_TOOLCHAIN_READY
+SRI_ALPHA4_1R_TOOLCHAIN_READY
+RECRUITMENT_NOT_AUTHORIZED
+PACKAGE_STATE: SRI_ALPHA4_TOOLCHAIN_READY / RECRUITMENT_NOT_AUTHORIZED
+RECRUITMENT: SRI_ALPHA4_RECRUITMENT_NOT_AUTHORIZED
+
+Verification:
+- pytest: 19 passed
+- untouched SRI-1A-alpha.4 live package: exit 2, SRI_ALPHA4_RECRUITMENT_NOT_AUTHORIZED
+- fabricated self-consistent trust files: fail closed
+- fake boolean replay/invariant claims: fail closed
+- mutated stimulus, scoring, randomization, parser, and schema: fail closed
+- non-authority synthetic end-to-end path: test-only PASS; no production receipt
+- missing operational configuration: fail closed
+
+No human operational values were selected. No frozen scientific artifact was
+modified. No participant was recruited and no human data was collected.
+
+The verifier independently anchors the α.4 package, freeze, and manifest;
+recomputes invariant files; renders consent from the frozen skeleton; executes
+the frozen parser on an exact zero-human export; and structurally checks ethics
+evidence. Authoritative α.2 parser/schema hashes and human operational values
+remain unresolved. A package identity hash is never accepted as a substitute
+for parser or schema hashes.

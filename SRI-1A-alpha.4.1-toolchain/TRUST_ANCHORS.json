@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "trust_status": "FROZEN_UPSTREAM_VALUES_ONLY",
+  "alpha4_parent_package_sha256": "40f281e3705d5dc35c1e2ded3c3cf31a12a656bda66e1982eafd0f196cfd291d",
+  "alpha4_freeze_sha256": "a41f899be22dd47b1d0340481f6d20827dd4be16f96748dfa018e61ba4d121a2",
+  "alpha4_manifest_sha256": "67c8dad2328d8bba3cf9439ead8b18990077c5ea84f227cc2cfc209a7ec5c3c7",
+  "bindings": {
+    "operational_config_sha256": "UNRESOLVED",
+    "consent_sha256": "UNRESOLVED",
+    "recruitment_config_sha256": "UNRESOLVED",
+    "alpha2_parser_sha256": "UNRESOLVED",
+    "export_schema_sha256": "UNRESOLVED",
+    "scientific_invariant_manifest_sha256": "UNRESOLVED",
+    "zero_human_ingestion_receipt_sha256": "UNRESOLVED",
+    "ethics_evidence_sha256": "UNRESOLVED"
+  },
+  "scientific_invariants": {
+    "stimulus": {"path": "UNRESOLVED", "sha256": "UNRESOLVED", "upstream_receipt": "UNRESOLVED"},
+    "scoring": {"path": "UNRESOLVED", "sha256": "UNRESOLVED", "upstream_receipt": "UNRESOLVED"},
+    "randomization": {"path": "UNRESOLVED", "sha256": "UNRESOLVED", "upstream_receipt": "UNRESOLVED"},
+    "parser": {"path": "UNRESOLVED", "sha256": "UNRESOLVED", "upstream_receipt": "UNRESOLVED"},
+    "schema": {"path": "UNRESOLVED", "sha256": "UNRESOLVED", "upstream_receipt": "UNRESOLVED"}
+  },
+  "validator_source_sha256": "UNRESOLVED"
+}

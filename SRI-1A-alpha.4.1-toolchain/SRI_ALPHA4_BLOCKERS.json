@@ -1,0 +1,10 @@
+{
+  "status": "RECRUITMENT_NOT_AUTHORIZED",
+  "exit_code": 2,
+  "blockers": [
+    "missing operational_config.json"
+  ],
+  "checks": {},
+  "timestamp": "2026-08-20T09:06:41.674043+00:00",
+  "validator_result": "FAIL"
+}

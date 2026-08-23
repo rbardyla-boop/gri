@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "required": ["recruitment_source", "platform_configuration", "inclusion_criteria", "exclusion_criteria", "target_n_or_fixed_stop_rule", "attrition_rule", "incomplete_response_rule", "compensation", "data_retention_rule", "withdrawal_rule", "research_contact", "ethics_reb_disposition", "consent_skeleton", "consent", "recruitment_config", "alpha2_parser", "export_schema", "scientific_invariant_manifest", "zero_human_export", "zero_human_ingestion_receipt"],
+  "additionalProperties": true,
+  "description": "Paths and human values only. Expected SHA-256 bindings belong in TRUST_ANCHORS.json, never here."
+}

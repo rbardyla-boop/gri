@@ -1,0 +1,11 @@
+{
+  "toolchain": "SRI-1A-α.4.1R",
+  "status": "SRI_ALPHA4_1R_TOOLCHAIN_READY",
+  "recruitment": "SRI_ALPHA4_RECRUITMENT_NOT_AUTHORIZED",
+  "parent_package_sha256": "40f281e3705d5dc35c1e2ded3c3cf31a12a656bda66e1982eafd0f196cfd291d",
+  "parent_freeze_sha256": "a41f899be22dd47b1d0340481f6d20827dd4be16f96748dfa018e61ba4d121a2",
+  "parent_manifest_sha256": "67c8dad2328d8bba3cf9439ead8b18990077c5ea84f227cc2cfc209a7ec5c3c7",
+  "alpha2_parser_sha256": "UNRESOLVED",
+  "export_schema_sha256": "UNRESOLVED",
+  "reason": "Trust-anchor and executable-gate repair passes; authoritative parser/schema and human operational values remain unresolved."
+}

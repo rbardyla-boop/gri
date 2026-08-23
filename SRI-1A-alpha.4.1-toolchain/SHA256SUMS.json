@@ -1,0 +1,21 @@
+{
+  "toolchain": "SRI-1A-α.4.1R",
+  "status": "SRI_ALPHA4_1R_TOOLCHAIN_READY",
+  "files": [
+    {"name":"FREEZE_RECEIPT.json","sha256":"393b19fac4e6f01e7b825de8929e04e56e51901ed242209303d511dc9c2dd67b"},
+    {"name":"README.md","sha256":"2199b6672ccb7821528a0346ba8421e428335221a13b85971b5c34d5e40546b2"},
+    {"name":"SRI_ALPHA4_BLOCKERS.json","sha256":"a3f5fe5b3f4de22d56b520f7dc83c88e2ecbd37240bddede1ecff909293cf737"},
+    {"name":"TERMINAL_REPORT.txt","sha256":"3fd243c58168fc45579d042877d274736942f1b2320bcf79fb581652f62cc7a6"},
+    {"name":"TRUST_ANCHORS.json","sha256":"c14211d70bb28141498a47de83eaeed9a2237f10c56715403e4e30b7d93a1edf"},
+    {"name":"consent_renderer.py","sha256":"de07f4dc25b7327876f214ba1418f61cefb9663488d898558f0de37525a5571b"},
+    {"name":"schemas/operational_config.schema.json","sha256":"491c3187a3e575101fd5f302648ca0659ff774b10a2a3c71fa03e7b00be6aa56"},
+    {"name":"schemas/scientific_invariants.schema.json","sha256":"9df4d4dcbd051020a2f48f306d201c0f4ad5b4d6a4a2eabe3cb16c1e1066ecca"},
+    {"name":"schemas/zero_human_replay_receipt.schema.json","sha256":"fd1d07473b9418e1b4c0c84341f517840dbcc187910db231d4ce9a4e57bd3b81"},
+    {"name":"tests/README.md","sha256":"40be978b708eb0dad8b501f76fb8d62ac708fb61feed6adae3291f6bd1e67798"},
+    {"name":"tests/test_toolchain.py","sha256":"186cbdfe4cc6af688e911b4994ecdc4b4835bd82d042cab9be94c2394a500486"},
+    {"name":"validate_authorization.py","sha256":"5215e2780923980bd2f3cdcbea70006fea101638d7cad481b44fd40b66fb2bff"},
+    {"name":"verify_scientific_invariants.py","sha256":"ee1dd508168710d4f1ef3b861ae7e4af136ad868af5627eaddee4595c4a444db"},
+    {"name":"zero_human_replay.py","sha256":"8df459924d4a21a51677e5498b23883fddd7eb1f56837beadbb3ba1c8c7c9734"}
+  ],
+  "note": "This manifest intentionally excludes itself; the ZIP package SHA is the package-level identity."
+}

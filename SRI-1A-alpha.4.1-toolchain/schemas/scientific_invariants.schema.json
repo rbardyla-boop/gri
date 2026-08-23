@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["invariants"],
+  "properties": {
+    "invariants": {
+      "type": "array",
+      "items": {
+        "required": ["name", "artifact_path", "observed_sha256", "trusted_expected_sha256", "upstream_receipt", "status"]
+      }
+    }
+  }
+}
