@@ -6,7 +6,7 @@ import re
 from collections import Counter, defaultdict
 from typing import Any
 
-from experiments.sem1.generate_sem1 import FAMILIES, LABELS, build_dataset, dataset_summary
+from experiments.sem1.build_sem1_instrument import FAMILIES, LABELS, build_dataset, dataset_summary
 from experiments.sem1.make_sem1_subsets import build_subsets
 
 OPAQUE_ID = re.compile(r"^[SP]_[A-F0-9]{12}$")
@@ -36,8 +36,6 @@ def validate() -> dict[str, Any]:
     family_pair_kinds: dict[str, Counter[str]] = defaultdict(Counter)
     family_labels: dict[str, set[str]] = defaultdict(set)
     pair_rows: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    all_context_text: set[str] = set()
-    all_prop_text: set[str] = set()
 
     for case, meta in zip(cases, gold):
         if set(case) & FORBIDDEN_CASE_KEYS:
@@ -63,11 +61,9 @@ def validate() -> dict[str, Any]:
         for item in case["context"]:
             if not isinstance(item["text"], str) or not item["text"].strip():
                 raise AssertionError(f"blank context text: {case['id']}")
-            all_context_text.add(item["text"])
         for item in case["propositions"]:
             if not isinstance(item["text"], str) or not item["text"].strip():
                 raise AssertionError(f"blank proposition text: {case['id']}")
-            all_prop_text.add(item["text"])
 
         for pid, answer in meta["gold"].items():
             if answer["label"] not in LABELS:
