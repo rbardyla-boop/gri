@@ -1,12 +1,22 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 from pathlib import Path
 
+import numpy as np
+import pandas as pd
 import pytest
 
-from experiments.erc3a.channel_schema import CHANNEL_SCHEMA, CURRENT_CHANNELS_BY_RELAY, LINE_ENDPOINTS
+from experiments.erc3a.channel_schema import (
+    CHANNEL_SCHEMA,
+    CURRENT_CHANNELS_BY_RELAY,
+    LINE_ENDPOINTS,
+    SAMPLE_COUNT,
+    SAMPLE_RATE_HZ,
+    TIME_COLUMN,
+)
 from experiments.erc3a.locator import (
     BASELINE_WINDOW_SAMPLES,
     POST_WINDOW_SAMPLES,
@@ -16,6 +26,7 @@ from experiments.erc3a.locator import (
 )
 from experiments.erc3a.producer_boundary import assert_clean
 from experiments.erc3a.scoring import score_after_prediction_seals, verify_prediction_seals
+from experiments.erc3a.stage_waveforms import waveform_from_published_pickle
 
 ERC3A_ROOT = Path(__file__).parents[1] / "experiments" / "erc3a"
 SELECTED_IDS_SHA256 = "aef9418b6ee352f0c2ab96ac6ecb7e097aa834662a646453495905a1c6dcf6db"
@@ -33,12 +44,9 @@ def _fixture() -> dict:
         for channel in CURRENT_CHANNELS_BY_RELAY[relay]:
             waveform[channel][event_index + start_delta :] = [amplitude] * (length - event_index - start_delta)
 
-    # Both endpoints of Line_2_3_a respond, with the receiving end later.
     step("Bus_2_Line_02_03A", 40, 2.0)
     step("Bus_3_Line_02_03A", 90, 2.0)
-    # A one-ended, high-magnitude distractor has no receiving-end support.
     step("Bus_1_Line_01_02B", 5, 100.0)
-    # A valid but later two-ended line checks the primary later-of rule.
     step("Bus_1_Line_01_02A", 20, 1.5)
     step("Bus_2_Line_01_02A", 110, 1.5)
     return {
@@ -48,6 +56,30 @@ def _fixture() -> dict:
         "channel_schema": list(CHANNEL_SCHEMA),
         "waveform": waveform,
     }
+
+
+def _synthetic_published_pickle() -> bytes:
+    values: dict[str, object] = {TIME_COLUMN: np.arange(SAMPLE_COUNT, dtype=np.float64) / SAMPLE_RATE_HZ}
+    for offset, channel in enumerate(CHANNEL_SCHEMA):
+        values[channel] = np.full(SAMPLE_COUNT, float(offset + 1), dtype=np.float64)
+    frame = pd.DataFrame(values, columns=[TIME_COLUMN, *CHANNEL_SCHEMA])
+    buffer = io.BytesIO()
+    frame.to_pickle(buffer)
+    return buffer.getvalue()
+
+
+def test_published_pickle_bridge_requires_exact_frozen_shape_schema_and_time_grid() -> None:
+    waveform = waveform_from_published_pickle(_synthetic_published_pickle())
+    assert tuple(waveform) == CHANNEL_SCHEMA
+    assert all(len(values) == SAMPLE_COUNT for values in waveform.values())
+    assert waveform[CHANNEL_SCHEMA[0]][0] == 1.0
+
+    frame = pd.read_pickle(io.BytesIO(_synthetic_published_pickle()))
+    frame.loc[1, TIME_COLUMN] += 1e-4
+    buffer = io.BytesIO()
+    frame.to_pickle(buffer)
+    with pytest.raises(ValueError, match="time axis"):
+        waveform_from_published_pickle(buffer.getvalue())
 
 
 def test_selected_sample_ids_are_frozen_and_public_files_are_opaque_only() -> None:
@@ -137,4 +169,3 @@ def test_manifest_has_64_bindings_and_no_payload_was_opened() -> None:
 def test_all_fixed_line_endpoints_are_registered() -> None:
     assert len(LINE_ENDPOINTS) == 4
     assert len({relay for endpoints in LINE_ENDPOINTS.values() for relay in endpoints}) == 8
-
