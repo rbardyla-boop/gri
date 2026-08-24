@@ -1,0 +1,84 @@
+name: ERC-3C Index-Time Calibration
+
+on:
+  pull_request:
+    branches: [erc3b-protect90-timebase-fresh-transfer]
+    paths:
+      - 'experiments/erc3c/**'
+      - 'tests/test_erc3c_phase1.py'
+      - '.github/workflows/erc3c-index-time-calibration.yml'
+  workflow_dispatch:
+
+jobs:
+  calibration-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.16'
+      - name: Install exact calibration runtime
+        run: python -m pip install --disable-pip-version-check 'numpy==2.2.6' 'pandas==2.3.2' 'pytest>=8'
+      - name: Verify runtime and synthetic calibration contract
+        run: |
+          python - <<'PY'
+          import numpy, pandas, platform
+          assert platform.python_version()=='3.11.16'
+          assert numpy.__version__=='2.2.6'
+          assert pandas.__version__=='2.3.2'
+          print(platform.python_version(),numpy.__version__,pandas.__version__)
+          PY
+          pytest -q tests/test_erc3c_phase1.py
+      - name: Scan committed producer-visible JSON
+        run: |
+          python -m experiments.erc3c.producer_boundary \
+            experiments/erc3c/ERC3C_PUBLIC_SELECTION.json \
+            experiments/erc3c/ERC3C_CALIBRATION_PUBLIC_SELECTION.json \
+            experiments/erc3c/ERC3C_METADATA_SELECTION_RECORD.json \
+            experiments/erc3c/ERC3C_CALIBRATION_PRODUCER_MANIFEST.json \
+            experiments/erc3c/ERC3C_SCIENCE_PRODUCER_MANIFEST.json
+      - name: Open only eight calibration members and preserve all diagnostics
+        shell: bash
+        run: |
+          set +e
+          python -m experiments.erc3c.timebase_calibration \
+            --calibration-map experiments/erc3c/ERC3C_CALIBRATION_ACQUISITION_MAP.json \
+            --index experiments/erc3c/ERC3C_ACQUISITION_INDEX.json \
+            --output-dir /tmp/erc3c-calibration \
+            | tee /tmp/ERC3C_INDEX_TIME_CALIBRATION_STDOUT.txt
+          rc=${PIPESTATUS[0]}
+          set -e
+          python - "$rc" <<'PY'
+          import json,sys
+          rc=int(sys.argv[1])
+          contract=json.load(open('/tmp/erc3c-calibration/ERC3C_INDEX_TIME_CONTRACT.json'))
+          receipt=json.load(open('/tmp/erc3c-calibration/ERC3C_INDEX_TIME_CALIBRATION_RECEIPT.json'))
+          assert contract['status'] in {'ERC3C_INDEX_TIME_QUALIFICATION_PASS','ERC3C_INDEX_TIME_QUALIFICATION_FAIL'}
+          assert len(receipt['cases'])==8
+          assert contract['calibration_waveforms_opened']==8
+          assert contract['science_waveforms_opened']==0
+          assert contract['science_signal_columns_read']==0
+          assert contract['scientific_predictions']==0
+          assert contract['scorer_opened'] is False
+          assert contract['same_set_rescue_authorized'] is False
+          required={'first_time_s','last_time_s','median_dt_s','effective_rate_hz','max_interval_jitter_s','max_normalized_grid_residual_s','raw_time_vector_sha256','normalized_time_vector_sha256'}
+          for case in receipt['cases']:
+              assert required == set(case['timing'])
+              assert case['payload_sha256'] is not None
+              assert case['status'] in {'PASS','FAIL'}
+              assert case['reasons']
+          assert (contract['status'].endswith('PASS') and rc==0) or (contract['status'].endswith('FAIL') and rc==1)
+          print('ERC3C_INDEX_TIME_QUALIFICATION_TERMINAL',contract['status'])
+          PY
+      - name: Preserve contract and per-case timing receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3C_INDEX_TIME_CALIBRATION
+          path: |
+            /tmp/erc3c-calibration/ERC3C_INDEX_TIME_CONTRACT.json
+            /tmp/erc3c-calibration/ERC3C_INDEX_TIME_CALIBRATION_RECEIPT.json
+            /tmp/ERC3C_INDEX_TIME_CALIBRATION_STDOUT.txt

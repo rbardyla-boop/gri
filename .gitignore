@@ -169,3 +169,6 @@ experiments/erc3a/ERC3A_SCORER_MAP.json
 
 # ERC-3B scorer truth is reconstructed privately only after live/replay seals.
 experiments/erc3b/ERC3B_SCORER_MAP.json
+
+# ERC-3C scorer truth is reconstructed privately only after live/replay seals.
+experiments/erc3c/ERC3C_SCORER_MAP.json

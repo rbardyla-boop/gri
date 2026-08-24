@@ -1,0 +1,70 @@
+name: ERC-3C Metadata Selection
+
+on:
+  pull_request:
+    branches: [erc3b-protect90-timebase-fresh-transfer]
+    paths:
+      - 'docs/ERC3C-PROTECT90-INDEX-TIME-FRESH-TRANSFER.md'
+      - 'experiments/erc3a/ERC3A_ACQUISITION_MAP.json'
+      - 'experiments/erc3b/ERC3B_CALIBRATION_ACQUISITION_MAP.json'
+      - 'experiments/erc3b/ERC3B_SCIENCE_ACQUISITION_MAP.json'
+      - 'experiments/erc3c/**'
+      - '.github/workflows/erc3c-metadata-selection.yml'
+  workflow_dispatch:
+
+jobs:
+  metadata-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile ERC-3C Phase 1 code
+        run: python -m py_compile experiments/erc3c/*.py
+      - name: Reconstruct exclusions and select fresh IDs from labels only
+        run: |
+          mkdir -p /tmp/erc3c-metadata
+          python -m experiments.erc3c.select_metadata --out-dir /tmp/erc3c-metadata \
+            | tee /tmp/ERC3C_METADATA_SELECTION_STDOUT.txt
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/erc3c-metadata/ERC3C_METADATA_SELECTION_RECORD.json'))
+          assert p['status']=='ERC3C_METADATA_SELECTION_FROZEN'
+          assert p['labels_row_count']==9022
+          assert p['permanent_exclusion_count']==136
+          assert p['exclusion_union_sha256']=='ac93b5739b745c8729304b240e5a58895a8d9ca1fb7d3f618261b57937d48b23'
+          assert p['calibration_selection_count']==8
+          assert p['calibration_ids_sha256']=='0659bbd0bded89a50e569f79e097ee8489e74961b4a4d8c0c28ab12657432781'
+          assert p['science_selection_count']==64
+          assert p['science_ids_sha256']=='e0d79911fa5fba0fdceed5f8ab1d67116b3f12c35f322f8b11e4f5b80799ec95'
+          assert p['stratum_count']==16 and p['per_stratum']==4
+          assert p['calibration_science_overlap']==0
+          assert p['waveform_archive_downloaded'] is False
+          assert p['calibration_waveforms_opened']==0
+          assert p['science_waveforms_opened']==0
+          assert p['science_signal_columns_read']==0
+          assert p['scientific_predictions']==0
+          assert p['scorer_opened'] is False
+          assert p['same_set_rescue_authorized'] is False
+          print('ERC3C_EXCLUSION_METADATA_GATE_PASS')
+          PY
+      - name: Recursively scan producer-visible JSON
+        run: |
+          python -m experiments.erc3c.producer_boundary \
+            /tmp/erc3c-metadata/ERC3C_PUBLIC_SELECTION.json \
+            /tmp/erc3c-metadata/ERC3C_CALIBRATION_PUBLIC_SELECTION.json \
+            /tmp/erc3c-metadata/ERC3C_METADATA_SELECTION_RECORD.json
+      - name: Preserve producer-visible metadata only
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3C_METADATA_SELECTION
+          path: |
+            /tmp/erc3c-metadata/ERC3C_PUBLIC_SELECTION.json
+            /tmp/erc3c-metadata/ERC3C_CALIBRATION_PUBLIC_SELECTION.json
+            /tmp/erc3c-metadata/ERC3C_METADATA_SELECTION_RECORD.json
+            /tmp/ERC3C_METADATA_SELECTION_STDOUT.txt
