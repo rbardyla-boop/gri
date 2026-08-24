@@ -1,0 +1,104 @@
+name: ERC-2AR Frozen Live Transfer
+
+on:
+  pull_request:
+    branches: [erc2a-damadics-structural-transfer]
+    paths:
+      - 'experiments/erc2ar/ERC2AR_FREEZE.json'
+  workflow_dispatch:
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen mechanical runtime
+        run: python -m pip install numpy==2.0.2 pandas==2.2.2 pyarrow==17.0.0
+      - name: Verify one-shot live authorization
+        run: python -m experiments.erc2ar.verify_freeze
+      - name: Stage 13 truth-blind DAMADICS windows
+        run: |
+          rm -rf /tmp/erc2ar-live
+          mkdir -p /tmp/erc2ar-live
+          python -m experiments.erc2ar.stage_live --output-dir /tmp/erc2ar-live \
+            | tee /tmp/erc2ar-live/STAGE_STDOUT.txt
+      - name: Generate frozen ERC live predictions
+        run: |
+          python -m experiments.erc1.compiler \
+            --candidate-dir /tmp/erc2ar-live/candidate \
+            --output /tmp/erc2ar-live/ERC2AR_LIVE.json \
+            | tee /tmp/erc2ar-live/ERC2AR_LIVE_STDOUT.txt
+      - name: Generate deterministic replay
+        run: |
+          python -m experiments.erc1.compiler \
+            --candidate-dir /tmp/erc2ar-live/candidate \
+            --output /tmp/erc2ar-live/ERC2AR_REPLAY.json \
+            | tee /tmp/erc2ar-live/ERC2AR_REPLAY_STDOUT.txt
+      - name: Seal live before any scorer invocation
+        run: |
+          python - <<'PY'
+          import json
+          live=json.load(open('/tmp/erc2ar-live/ERC2AR_LIVE.json'))
+          replay=json.load(open('/tmp/erc2ar-live/ERC2AR_REPLAY.json'))
+          assert live['case_count']==13 and replay['case_count']==13
+          assert live['prediction_seal_sha256']==replay['prediction_seal_sha256']
+          assert live['predictions']==replay['predictions']
+          open('/tmp/erc2ar-live/LIVE_PREDICTION_SEAL.txt','w').write(live['prediction_seal_sha256']+'\n')
+          print('ERC2AR_LIVE_AND_REPLAY_SEALED', live['prediction_seal_sha256'])
+          PY
+      - name: Run preregistered largest-single-shift control
+        run: |
+          python -m experiments.erc2ar.baseline \
+            --candidate-dir /tmp/erc2ar-live/candidate \
+            --output /tmp/erc2ar-live/ERC2AR_BASELINE.json \
+            | tee /tmp/erc2ar-live/ERC2AR_BASELINE_STDOUT.txt
+      - name: Preserve sealed producer evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC2AR_SEALED_PRODUCER_EVIDENCE
+          path: /tmp/erc2ar-live
+
+  score:
+    needs: produce
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen mechanical runtime
+        run: python -m pip install numpy==2.0.2 pandas==2.2.2 pyarrow==17.0.0
+      - name: Verify the same live authorization
+        run: python -m experiments.erc2ar.verify_freeze
+      - uses: actions/download-artifact@v4
+        with:
+          name: ERC2AR_SEALED_PRODUCER_EVIDENCE
+          path: /tmp/erc2ar-live
+      - name: Open actuator truth only after producer job has sealed predictions
+        run: |
+          python -m experiments.erc2ar.score_live \
+            --live /tmp/erc2ar-live/ERC2AR_LIVE.json \
+            --replay /tmp/erc2ar-live/ERC2AR_REPLAY.json \
+            --baseline /tmp/erc2ar-live/ERC2AR_BASELINE.json \
+            --manifest /tmp/erc2ar-live/PUBLIC_STAGE_MANIFEST.json \
+            --output /tmp/erc2ar-live/ERC2AR_RESULT.json \
+            | tee /tmp/erc2ar-live/ERC2AR_RESULT_STDOUT.txt
+      - name: Preserve terminal ERC-2AR evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC2AR_TERMINAL_EVIDENCE
+          path: /tmp/erc2ar-live
