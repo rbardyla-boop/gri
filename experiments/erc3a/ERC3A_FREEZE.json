@@ -1,0 +1,91 @@
+{
+  "status": "ERC3A_LIVE_AUTHORIZED",
+  "unit": "ERC-3A",
+  "qualified_head_sha": "306e54b4a27bfba680827247f31a1c2c7e1c5a41",
+  "freeze_candidate_sha256": "c975dbf7469eac810789fc24f2802062abcce2edaf7c6a21b47b01faff62cbe9",
+  "candidate_artifact_id": 9511005845,
+  "candidate_artifact_zip_sha256": "ddd6dab09fdd86561d1e67d784ac00b6109e6cf3cd79d16c242b2bc32af1b0f4",
+  "qualification_runs": {
+    "metadata_selection": 32702445822,
+    "remote_zip_index": 32702445879,
+    "prelive_freeze": 32702445857
+  },
+  "authorization": {
+    "scientific_cases": 64,
+    "first_shot_only": true,
+    "same_set_rescue_authorized": false,
+    "waveform_payload_access_authorized": true,
+    "scorer_access_before_live_replay_seals": false
+  },
+  "candidate": {
+    "freeze_candidate_sha256": "c975dbf7469eac810789fc24f2802062abcce2edaf7c6a21b47b01faff62cbe9",
+    "hashes": {
+      "acquisition_mapping_rule": {
+        "experiments/erc3a/acquire_member.py": "ada02dd8c36deacba2583a7dad048c07c0246a52b45bffd135a1de9c2908297e"
+      },
+      "batch_runner": {
+        "experiments/erc3a/run_batch.py": "a479e07f6ca40bfe866aced3d9dde6fd6b579a5a889148a55c9a9920c07b04fb"
+      },
+      "executable_source": {
+        "experiments/erc3a/__init__.py": "6e4e98dcf9576c2483c96d9b8d1f9128aea4ace1a8e2099f51608091eda4bae2",
+        "experiments/erc3a/acquire_member.py": "ada02dd8c36deacba2583a7dad048c07c0246a52b45bffd135a1de9c2908297e",
+        "experiments/erc3a/channel_schema.py": "7259bca2654d19eccb385e96acecc302ab5134cd58711d5889fe8866438a0a07",
+        "experiments/erc3a/locator.py": "375b63daad32c6aa3b39160bac83529b4fbd18cf2865863472781e84bfe63c0c",
+        "experiments/erc3a/manifest.py": "1ffda1f3d373c3da453b1f511e4f8a0058277fefd2146663efc8adef896967ea",
+        "experiments/erc3a/prelive_freeze.py": "363016c4e33651a7c3aa6b3bad428bf8374a045752e951d122d635ad1f559509",
+        "experiments/erc3a/producer_boundary.py": "a5b6e7308df75b944d592a6af989b8a836387929a586e53606bee5aab8a1bb9a",
+        "experiments/erc3a/remote_zip_index.py": "e5d2872ca19535f0fa501c961e43fbdd7b6eb56b760449862a39da0947cfe8c0",
+        "experiments/erc3a/run_batch.py": "a479e07f6ca40bfe866aced3d9dde6fd6b579a5a889148a55c9a9920c07b04fb",
+        "experiments/erc3a/scoring.py": "58ec9241873dd992fb1b3863b2403f05548bf8d1944dedce5f5728d13259ee28",
+        "experiments/erc3a/select_metadata.py": "ace32b32f959a8dc74e835cc4411ead77519d86adc9ed08601ed7fe3542d6f35",
+        "experiments/erc3a/stage_waveforms.py": "38b599eb3984746347ac251d0f7eba871bf3810b868a048ad62e73acb6b9a8f5",
+        "tests/test_erc3a_prelive.py": "f8f2d95dbfaf03773479d475087caa017e87f5be3606b857f86ec3b440dfb967"
+      },
+      "locator": {
+        "experiments/erc3a/locator.py": "375b63daad32c6aa3b39160bac83529b4fbd18cf2865863472781e84bfe63c0c"
+      },
+      "payload_bridge": {
+        "experiments/erc3a/stage_waveforms.py": "38b599eb3984746347ac251d0f7eba871bf3810b868a048ad62e73acb6b9a8f5"
+      },
+      "producer_manifest_rule": {
+        "experiments/erc3a/manifest.py": "1ffda1f3d373c3da453b1f511e4f8a0058277fefd2146663efc8adef896967ea"
+      },
+      "protocol": {
+        "docs/ERC3A-PROTECT90-ONSET-PRECEDENCE.md": "5c34e3561b98c82212aca7b2aea3d8bb44beed197446ba7afbc040b53a0ad651"
+      },
+      "scorer": {
+        "experiments/erc3a/scoring.py": "58ec9241873dd992fb1b3863b2403f05548bf8d1944dedce5f5728d13259ee28"
+      },
+      "scorer_map_receipt": {
+        "external/ERC3A_SCORER_MAP.json": "77251e8a7a17634928cd513f414a47ed8c33fef7e80de9c112cff57f7e860535"
+      },
+      "selection_and_bindings": {
+        "experiments/erc3a/ERC3A_ACQUISITION_INDEX.json": "4609c3d801175c0bc9b201693a9f8147ab3eb7af8d4b469664e2295716b9d8c4",
+        "experiments/erc3a/ERC3A_ACQUISITION_MAP.json": "1bef3ee113e1824ed7b897529b704067e1da40d2a573202b837f745fae243c2b",
+        "experiments/erc3a/ERC3A_METADATA_SELECTION_RECORD.json": "df0604e4973066d85877b23a7f9848e76af816b70f845fc2e636b97a6e5923c1",
+        "experiments/erc3a/ERC3A_PRODUCER_MANIFEST.json": "0b049a4e789dba49599ac7e58579da38cf0b4fb984719afb39cce12d42b33214",
+        "experiments/erc3a/ERC3A_PUBLIC_SELECTION.json": "f36431394c8c9b17e7816101099e7cfd545f2a7bc607f43acf647535f276d8f9"
+      },
+      "workflow": {
+        ".github/workflows/erc3a-live.yml": "a5ce06360414e8c4e82e5c9a73a40a6fafbd851a309672bd6f47dc3dceff2c3d",
+        ".github/workflows/erc3a-metadata-selection.yml": "a2be02f739354c1d817714b990f6cd396dea604d594c2899efbfa181b87a4b4e",
+        ".github/workflows/erc3a-prelive-freeze.yml": "6bcefd6597fced9b7dcaa199459200f91d2fd863e5e4babda78ded8a38b0967b",
+        ".github/workflows/erc3a-remote-zip-index.yml": "a115219e36998988c574d0458544b22ad3347edac655b2f813aab1048d272c13"
+      }
+    },
+    "real_waveform_episodes_executed": 0,
+    "runtime_binding": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.2",
+      "python": "3.11.16"
+    },
+    "same_set_rescue_authorized": false,
+    "scientific_predictions": 0,
+    "selected_member_payload_bytes_read": 0,
+    "status": "ERC3A_PRELIVE_FREEZE_CANDIDATE_READY",
+    "synthetic_fixture_predictions_only": true,
+    "unit": "ERC-3A",
+    "waveform_archive_downloaded": false,
+    "waveform_members_opened": 0
+  }
+}
