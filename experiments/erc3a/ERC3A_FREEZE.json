@@ -1,24 +1,15 @@
 {
-  "status": "ERC3A_LIVE_AUTHORIZED",
-  "unit": "ERC-3A",
-  "qualified_head_sha": "306e54b4a27bfba680827247f31a1c2c7e1c5a41",
-  "freeze_candidate_sha256": "c975dbf7469eac810789fc24f2802062abcce2edaf7c6a21b47b01faff62cbe9",
-  "candidate_artifact_id": 9511005845,
-  "candidate_artifact_zip_sha256": "ddd6dab09fdd86561d1e67d784ac00b6109e6cf3cd79d16c242b2bc32af1b0f4",
-  "qualification_runs": {
-    "metadata_selection": 32702445822,
-    "remote_zip_index": 32702445879,
-    "prelive_freeze": 32702445857
-  },
   "authorization": {
-    "scientific_cases": 64,
+    "attempt_1_status": "PRE_PREDICTION_SCHEMA_ORDER_FAILURE",
+    "attempt_number": 2,
     "first_shot_only": true,
     "same_set_rescue_authorized": false,
-    "waveform_payload_access_authorized": true,
-    "scorer_access_before_live_replay_seals": false
+    "scientific_cases": 64,
+    "scorer_access_before_live_replay_seals": false,
+    "waveform_payload_access_authorized": true
   },
   "candidate": {
-    "freeze_candidate_sha256": "c975dbf7469eac810789fc24f2802062abcce2edaf7c6a21b47b01faff62cbe9",
+    "freeze_candidate_sha256": "717b93be95976551bf128bf848227638f60c5b2ab0869566b8c60fb6ec901d84",
     "hashes": {
       "acquisition_mapping_rule": {
         "experiments/erc3a/acquire_member.py": "ada02dd8c36deacba2583a7dad048c07c0246a52b45bffd135a1de9c2908297e"
@@ -38,14 +29,14 @@
         "experiments/erc3a/run_batch.py": "a479e07f6ca40bfe866aced3d9dde6fd6b579a5a889148a55c9a9920c07b04fb",
         "experiments/erc3a/scoring.py": "58ec9241873dd992fb1b3863b2403f05548bf8d1944dedce5f5728d13259ee28",
         "experiments/erc3a/select_metadata.py": "ace32b32f959a8dc74e835cc4411ead77519d86adc9ed08601ed7fe3542d6f35",
-        "experiments/erc3a/stage_waveforms.py": "38b599eb3984746347ac251d0f7eba871bf3810b868a048ad62e73acb6b9a8f5",
-        "tests/test_erc3a_prelive.py": "f8f2d95dbfaf03773479d475087caa017e87f5be3606b857f86ec3b440dfb967"
+        "experiments/erc3a/stage_waveforms.py": "e6153319dd04ca3f43e7435da916f630b99435614f779c9da8cf1b950ebef847",
+        "tests/test_erc3a_prelive.py": "3477ddc985e42241a71732127d31736545de8daaf507874cf3439851a1468deb"
       },
       "locator": {
         "experiments/erc3a/locator.py": "375b63daad32c6aa3b39160bac83529b4fbd18cf2865863472781e84bfe63c0c"
       },
       "payload_bridge": {
-        "experiments/erc3a/stage_waveforms.py": "38b599eb3984746347ac251d0f7eba871bf3810b868a048ad62e73acb6b9a8f5"
+        "experiments/erc3a/stage_waveforms.py": "e6153319dd04ca3f43e7435da916f630b99435614f779c9da8cf1b950ebef847"
       },
       "producer_manifest_rule": {
         "experiments/erc3a/manifest.py": "1ffda1f3d373c3da453b1f511e4f8a0058277fefd2146663efc8adef896967ea"
@@ -67,7 +58,7 @@
         "experiments/erc3a/ERC3A_PUBLIC_SELECTION.json": "f36431394c8c9b17e7816101099e7cfd545f2a7bc607f43acf647535f276d8f9"
       },
       "workflow": {
-        ".github/workflows/erc3a-live.yml": "a5ce06360414e8c4e82e5c9a73a40a6fafbd851a309672bd6f47dc3dceff2c3d",
+        ".github/workflows/erc3a-live.yml": "6eb5a92bf0233f00c80073d1b78cb413c30402cc37be12824ef296f66b403baa",
         ".github/workflows/erc3a-metadata-selection.yml": "a2be02f739354c1d817714b990f6cd396dea604d594c2899efbfa181b87a4b4e",
         ".github/workflows/erc3a-prelive-freeze.yml": "6bcefd6597fced9b7dcaa199459200f91d2fd863e5e4babda78ded8a38b0967b",
         ".github/workflows/erc3a-remote-zip-index.yml": "a115219e36998988c574d0458544b22ad3347edac655b2f813aab1048d272c13"
@@ -87,5 +78,16 @@
     "unit": "ERC-3A",
     "waveform_archive_downloaded": false,
     "waveform_members_opened": 0
-  }
+  },
+  "candidate_artifact_id": 9511209062,
+  "candidate_artifact_zip_sha256": "330a89abc5fca9e5dfb8d95300aba5ffcafa96689bd82766d5112f9d10fb878b",
+  "freeze_candidate_sha256": "717b93be95976551bf128bf848227638f60c5b2ab0869566b8c60fb6ec901d84",
+  "qualification_runs": {
+    "metadata_selection": 32703016083,
+    "prelive_freeze": 32703016174,
+    "remote_zip_index": 32703016080
+  },
+  "qualified_head_sha": "5c7053a3380aee6b2cc71c96f928e0f8ef5cb96e",
+  "status": "ERC3A_LIVE_AUTHORIZED",
+  "unit": "ERC-3A"
 }
