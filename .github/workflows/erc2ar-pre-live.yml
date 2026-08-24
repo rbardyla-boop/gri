@@ -1,0 +1,72 @@
+name: ERC-2AR Pre-Live Gate
+
+on:
+  pull_request:
+    branches: [erc2a-damadics-structural-transfer]
+    paths:
+      - 'experiments/erc2ar/contract.py'
+      - 'experiments/erc2ar/stage_live.py'
+      - 'experiments/erc2ar/baseline.py'
+      - 'experiments/erc2ar/score_live.py'
+      - 'experiments/erc2ar/test_pre_live.py'
+      - 'experiments/erc2ar/freeze_common.py'
+      - 'experiments/erc2ar/freeze_candidate.py'
+      - 'experiments/erc2ar/verify_freeze.py'
+      - '.github/workflows/erc2ar-pre-live.yml'
+      - '.github/workflows/erc2ar-live.yml'
+  workflow_dispatch:
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen mechanical runtime
+        run: python -m pip install numpy==2.0.2 pandas==2.2.2 pyarrow==17.0.0
+      - name: Assert ERC-1B compiler remains byte-identical
+        run: |
+          expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
+          actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
+          test "$actual" = "$expected"
+      - name: Compile pre-live source
+        run: |
+          python -m py_compile \
+            experiments/erc2ar/contract.py \
+            experiments/erc2ar/stage_live.py \
+            experiments/erc2ar/baseline.py \
+            experiments/erc2ar/score_live.py \
+            experiments/erc2ar/test_pre_live.py \
+            experiments/erc2ar/freeze_common.py \
+            experiments/erc2ar/freeze_candidate.py \
+            experiments/erc2ar/verify_freeze.py
+      - name: Run synthetic adapter and frozen-compiler qualification
+        run: python -m experiments.erc2ar.test_pre_live
+      - name: Emit exact-head freeze candidate
+        run: |
+          python -m experiments.erc2ar.freeze_candidate --output /tmp/ERC2AR_FREEZE_CANDIDATE.json \
+            | tee /tmp/ERC2AR_FREEZE_CANDIDATE_STDOUT.txt
+      - name: Assert candidate is pre-live only
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ERC2AR_FREEZE_CANDIDATE.json'))
+          assert p['status']=='ERC2AR_FREEZE_CANDIDATE'
+          assert p['scientific_case_count']==13
+          assert p['same_set_rescue_authorized'] is False
+          assert p['llm_calls']==0
+          print('ERC2AR_PRE_LIVE_GATE_PASS')
+          PY
+      - name: Preserve freeze candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC2AR_FREEZE_CANDIDATE
+          path: |
+            /tmp/ERC2AR_FREEZE_CANDIDATE.json
+            /tmp/ERC2AR_FREEZE_CANDIDATE_STDOUT.txt
