@@ -2,7 +2,7 @@
   "compiler_sha256": "2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d",
   "data_binding_record_sha256": "d9cb7cd9220efc2e1214010d3febc289fbf011678fb74e85d086649f16dcedf1",
   "llm_calls": 0,
-  "qualified_head": "4f4e314b4da877d115bdbedd28910b2bc774471f",
+  "qualified_head": "765407f3f53f2547e038d2e8bdf60346985f8906",
   "runtime": {
     "numpy": "2.0.2",
     "pandas": "2.2.2",
@@ -12,7 +12,7 @@
   "same_set_rescue_authorized": false,
   "scientific_case_count": 13,
   "source_hashes": {
-    ".github/workflows/erc2ar-live.yml": "6705ddb88b521f27edaf7927fcb7b0bdf2bbdfdaa6b67512a4e1f9286c15f7ea",
+    ".github/workflows/erc2ar-live.yml": "230cbb7c5b800bfa0b5c20c857e6c53e5bcf0e9156dec0008ef2323eae04c0a0",
     ".github/workflows/erc2ar-pre-live.yml": "781d245363b5d074b14f669a19bb15434482e18c54d4ac0baca901a38dd4283d",
     "experiments/erc1/compiler.py": "2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d",
     "experiments/erc2ar/baseline.py": "357c9d17fa9a8c1b21e4449f026a0ebfd205b17dfd03555587d65b36e446f170",
