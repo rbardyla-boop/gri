@@ -1,8 +1,8 @@
 name: ERC-3A Frozen Live
 
 on:
-  pull_request:
-    branches: [erc2ar-damadics-nonoverlap-transfer]
+  push:
+    branches: [erc3a-protect90-onset-precedence]
     paths:
       - 'experiments/erc3a/ERC3A_FREEZE.json'
 
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.sha }}
           fetch-depth: 2
       - uses: actions/setup-python@v5
         with:
