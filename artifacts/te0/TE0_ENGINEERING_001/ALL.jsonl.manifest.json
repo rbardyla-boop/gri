@@ -1,0 +1,16 @@
+{
+  "content_sha256": "d91cb9183d34a0c453c8bd950bb2c8b15a0ac393eb6cdbf374083e641954b973",
+  "count": 60,
+  "kinds": [
+    "enum",
+    "copy",
+    "mapping",
+    "set",
+    "binary_matrix",
+    "ordered_vector"
+  ],
+  "scientific_content": false,
+  "seed": 20260823,
+  "status": "MBM_SYNTHETIC_FIXTURES",
+  "task_type": "exact_json_serialization"
+}

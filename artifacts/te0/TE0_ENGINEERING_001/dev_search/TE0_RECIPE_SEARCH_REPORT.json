@@ -1,0 +1,73 @@
+{
+  "beam": 4,
+  "catalog_sha256": "60b0130889399ad69521694ba7b0482079b729ded52ad7c1ab33ac5b09b71d2a",
+  "fixtures_sha256": "02277708529f6a5c3816bb6c85d4bb11aef9be5c57e437b75a15ab8431d00073",
+  "gold_visible_to_tools": false,
+  "latency_penalty": 0.0001,
+  "max_depth": 2,
+  "ranking": [
+    {
+      "exact": 12,
+      "exact_rate": 1.0,
+      "mean_latency_seconds": 1.334655099915229,
+      "n": 12,
+      "objective": 0.9958665344900085,
+      "recipe": [
+        "ollama_exp_plain_s0",
+        "strict_extract"
+      ],
+      "recipe_sha256": "b52dc85959a95a1adbdcf01a24a9d415cfa839dafb5b5e15f91eac304c9dd7e2",
+      "structural_failures": 0,
+      "tool_count": 2,
+      "trace_path": "artifacts/te0/TE0_ENGINEERING_001/dev_search/recipe_000002_b52dc85959a9.jsonl"
+    },
+    {
+      "exact": 12,
+      "exact_rate": 1.0,
+      "mean_latency_seconds": 2.4751469621663396,
+      "n": 12,
+      "objective": 0.9957524853037834,
+      "recipe": [
+        "ollama_min_json_s0",
+        "strict_extract"
+      ],
+      "recipe_sha256": "da5be37f5cfd9feaff3628d269ed50fcee8944cf2e8ec0fc54ee2c0c94d606b9",
+      "structural_failures": 0,
+      "tool_count": 2,
+      "trace_path": "artifacts/te0/TE0_ENGINEERING_001/dev_search/recipe_000003_da5be37f5cfd.jsonl"
+    },
+    {
+      "exact": 12,
+      "exact_rate": 1.0,
+      "mean_latency_seconds": 2.794335799499398,
+      "n": 12,
+      "objective": 0.99572056642005,
+      "recipe": [
+        "ollama_exp_json_s1",
+        "strict_extract"
+      ],
+      "recipe_sha256": "1beb8bf78cbaf878dee0b1aefa57ecb2caa2249ef8dc7b836bf571621db9e9cb",
+      "structural_failures": 0,
+      "tool_count": 2,
+      "trace_path": "artifacts/te0/TE0_ENGINEERING_001/dev_search/recipe_000001_1beb8bf78cba.jsonl"
+    },
+    {
+      "exact": 12,
+      "exact_rate": 1.0,
+      "mean_latency_seconds": 3.4151982388329998,
+      "n": 12,
+      "objective": 0.9956584801761167,
+      "recipe": [
+        "ollama_exp_json_s0",
+        "strict_extract"
+      ],
+      "recipe_sha256": "9563fd1638fbeb79b5e6fff8e625f3582a7701e9d8bb08e455fb2344069d4851",
+      "structural_failures": 0,
+      "tool_count": 2,
+      "trace_path": "artifacts/te0/TE0_ENGINEERING_001/dev_search/recipe_000000_9563fd1638fb.jsonl"
+    }
+  ],
+  "scientific_content": false,
+  "status": "TE0_RECIPE_SEARCH_COMPLETE",
+  "tool_penalty": 0.002
+}

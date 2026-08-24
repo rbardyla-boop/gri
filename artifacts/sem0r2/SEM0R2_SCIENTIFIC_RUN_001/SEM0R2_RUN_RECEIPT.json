@@ -1,0 +1,12 @@
+{
+  "authorization_sha256_after_consumption": "7bcdabb6be4805c88ea4583c2c8b2a0960958b4bb70c2e383c36d51b6aec42e7",
+  "ended_at": "2026-08-23T17:38:23.101212+00:00",
+  "error": "LIVE malformed model output at ordinal 15: ['prediction_3_duplicate_evidence']",
+  "error_type": "ValueError",
+  "last_case_ordinal": 15,
+  "last_phase": "LIVE",
+  "model_requests_attempted": 16,
+  "started_at": "2026-08-23T17:35:45.099672+00:00",
+  "status": "SEM0R2_EXECUTION_TERMINATED",
+  "unit": "SEM-0R2"
+}

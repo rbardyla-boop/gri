@@ -1,0 +1,25 @@
+{
+  "artifact_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "checks": {
+    "historical_blob_exact": true,
+    "historical_runtime_exact": true,
+    "model_name_exact": true,
+    "tag_digest_present": true
+  },
+  "historical_source": {
+    "blob_sha256": "667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29",
+    "model": "llama3.1:8b",
+    "ollama_version": "0.21.2",
+    "path": "experiments/mco05/MCO05_CONFIG.json"
+  },
+  "identity_record_sha256": "732deaeb891565c554870bdc9f9cf106b840078927b273efa863d91b8a933cc7",
+  "model_id": "llama3.1:8b",
+  "next_gate": "bind exact instrument hashes and create one-run authorization",
+  "ollama_version": "0.21.2",
+  "runtime": "ollama-0.21.2-openai-compatible",
+  "scientific_run_authorized": false,
+  "selection_basis": "pre-existing MCO-05 frozen reasoner selected before any SEM-0R real-model execution; no SEM-0R model shopping",
+  "status": "SEM0R_MODEL_PREFLIGHT_PASS",
+  "tag_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e"
+}

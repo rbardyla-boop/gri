@@ -1,0 +1,36 @@
+{
+  "policy": {
+    "composer_may_read": [
+      "BUILD",
+      "DEV"
+    ],
+    "grinder_may_read": [
+      "BUILD",
+      "DEV"
+    ],
+    "judge_only": [
+      "VAULT"
+    ],
+    "toolsmith_may_read": [
+      "BUILD"
+    ]
+  },
+  "pools": {
+    "BUILD": {
+      "count": 36,
+      "sha256": "5e92af688ea5c39ec946ff8c0ada490a34d97ffd65acd156bb2c93e8079e43ed"
+    },
+    "DEV": {
+      "count": 12,
+      "sha256": "02277708529f6a5c3816bb6c85d4bb11aef9be5c57e437b75a15ab8431d00073"
+    },
+    "VAULT": {
+      "count": 12,
+      "sha256": "a4c6a4714a360e7566c14cd5f5a8813cdf9874843f89e471e8ec5745d7f54e9b"
+    }
+  },
+  "scientific_content": false,
+  "seed": 20260823,
+  "source_fixture_sha256": "7b27693c620b306477c5ae0af7f7a514f5fb68a6202f32d3a8e7bb6e33f5322e",
+  "status": "TE0_POOLS_FROZEN"
+}

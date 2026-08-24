@@ -1,0 +1,15 @@
+{
+  "candidate_manifest_sha256": "880a03abe439381e6b7ffe4b4af74fc829b7e6272f3b6830bc2ce2f2047989f2",
+  "case_count": 90,
+  "engineering_count": 27,
+  "evidence_class": "LOSSLESS_REPACK_REPRODUCTION",
+  "record_sha256": "e22f25bb75b51dd1761d7d8c11910f0f990acc5c25c06ae3730ea7b03f8fb1e7",
+  "representations": [
+    ".parquet"
+  ],
+  "scientific_count": 63,
+  "scorer_map_sha256": "8c609e260c387079ea70933cc37fa5fa5d5106cdafe7d9e1b4f4691973fdee3b",
+  "source_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "status": "ERC1_STAGED",
+  "unit": "ERC-1"
+}

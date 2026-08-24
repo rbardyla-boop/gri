@@ -1,0 +1,65 @@
+{
+  "capacity_failures": [],
+  "engineering_diagnostic": {
+    "by_system": {
+      "ob": {
+        "n": 10,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "ss": {
+        "n": 9,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "tt": {
+        "n": 8,
+        "top1": 1.0,
+        "top3": 1.0
+      }
+    },
+    "n": 27,
+    "top1": 1.0,
+    "top1_count": 27,
+    "top3": 1.0,
+    "top3_count": 27
+  },
+  "evidence_class": "LOSSLESS_REPACK_REPRODUCTION",
+  "historical_target": "MCO-04 direct transparent compiler 63/63 scientific root-service top1",
+  "live_file_sha256": "ff2c55d318c39a0e7a1eaeb47c9adf1dcc0a2551a71112d312894258437f515d",
+  "opacity_provenance_ok": true,
+  "prediction_seal_sha256": "77ddb6e98facad0d5862234de69b64a92dc56951e28dae656e0b18bd3c760196",
+  "provenance_failures": [],
+  "record_sha256": "6abc9b0c1687ed68fc2ba844c58912a9f7a17d5b564f855c84a5e76eeae29138",
+  "replay_exact": true,
+  "replay_file_sha256": "ff2c55d318c39a0e7a1eaeb47c9adf1dcc0a2551a71112d312894258437f515d",
+  "scientific": {
+    "by_system": {
+      "ob": {
+        "n": 20,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "ss": {
+        "n": 21,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "tt": {
+        "n": 22,
+        "top1": 1.0,
+        "top3": 1.0
+      }
+    },
+    "n": 63,
+    "top1": 1.0,
+    "top1_count": 63,
+    "top3": 1.0,
+    "top3_count": 63
+  },
+  "source_identity_ok": true,
+  "source_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "staging_manifest_record_sha256": "e22f25bb75b51dd1761d7d8c11910f0f990acc5c25c06ae3730ea7b03f8fb1e7",
+  "status": "ERC1_MCO04_DIRECT_REPRODUCED_LOSSLESS_REPACK",
+  "unit": "ERC-1"
+}

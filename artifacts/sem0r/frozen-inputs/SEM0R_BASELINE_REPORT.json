@@ -1,0 +1,47 @@
+{
+  "best_shortcut_macro_f1": 0.3620957478408556,
+  "best_transparent_baseline_macro_f1": 0.69251524243837,
+  "shortcut_strategies": {
+    "all_unknown": {
+      "accuracy": 0.29321663019693656,
+      "macro_f1": 0.07557811618725324,
+      "prediction_counts": {
+        "UNKNOWN": 457
+      }
+    },
+    "exact_overlap": {
+      "accuracy": 0.37199124726477023,
+      "macro_f1": 0.18392875634254946,
+      "prediction_counts": {
+        "ASSERTED": 36,
+        "UNKNOWN": 421
+      }
+    },
+    "leave_one_pair_out_nb": {
+      "accuracy": 0.4048140043763676,
+      "macro_f1": 0.3620957478408556,
+      "prediction_counts": {
+        "ASSERTED": 114,
+        "CONTRADICTED": 58,
+        "ENTAILED": 122,
+        "IMPLICATED": 61,
+        "PRESUPPOSED": 18,
+        "UNKNOWN": 84
+      }
+    }
+  },
+  "symbolic_red_team": {
+    "surface_rules": {
+      "accuracy": 0.5820568927789934,
+      "macro_f1": 0.69251524243837,
+      "prediction_counts": {
+        "ASSERTED": 50,
+        "CONTRADICTED": 46,
+        "ENTAILED": 33,
+        "IMPLICATED": 9,
+        "PRESUPPOSED": 9,
+        "UNKNOWN": 310
+      }
+    }
+  }
+}

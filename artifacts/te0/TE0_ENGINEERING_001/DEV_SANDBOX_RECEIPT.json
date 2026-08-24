@@ -1,0 +1,35 @@
+{
+  "backend": "bwrap",
+  "command": [
+    "python",
+    "experiments/mbm_lab/recipe_search.py",
+    "--fixtures",
+    "artifacts/te0/TE0_ENGINEERING_001/pools/DEV.jsonl",
+    "--catalog",
+    "experiments/mbm_lab/starter_catalog.json",
+    "--out-dir",
+    "artifacts/te0/TE0_ENGINEERING_001/dev_search",
+    "--max-depth",
+    "2",
+    "--beam",
+    "4",
+    "--timeout",
+    "300"
+  ],
+  "elapsed_seconds": 0.0019124870013911277,
+  "limits": {
+    "cpu_seconds": 900,
+    "memory_mb": 4096,
+    "pids": 128
+  },
+  "model_broker_socket": "/home/thebackhand/Downloads/grok/new-ai/artifacts/te0/TE0_ENGINEERING_001/model.sock",
+  "network": false,
+  "returncode": 1,
+  "started_at": "2026-08-23T18:16:19.998058+00:00",
+  "status": "MBM_SANDBOX_EXECUTION",
+  "stderr": "bwrap: Creating new namespace failed: Resource temporarily unavailable\n",
+  "stderr_sha256": "4c3f257165f772a36b3ab46ed42d9202c9d1108dd374053c9971c37780338fa3",
+  "stdout": "",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "workspace": "/home/thebackhand/Downloads/grok/new-ai"
+}
