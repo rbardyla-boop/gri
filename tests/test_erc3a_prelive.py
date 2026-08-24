@@ -58,14 +58,21 @@ def _fixture() -> dict:
     }
 
 
-def _synthetic_published_pickle() -> bytes:
+def _synthetic_frame() -> pd.DataFrame:
     values: dict[str, object] = {TIME_COLUMN: np.arange(SAMPLE_COUNT, dtype=np.float64) / SAMPLE_RATE_HZ}
     for offset, channel in enumerate(CHANNEL_SCHEMA):
         values[channel] = np.full(SAMPLE_COUNT, float(offset + 1), dtype=np.float64)
-    frame = pd.DataFrame(values, columns=[TIME_COLUMN, *CHANNEL_SCHEMA])
+    return pd.DataFrame(values, columns=[TIME_COLUMN, *CHANNEL_SCHEMA])
+
+
+def _pickle_frame(frame: pd.DataFrame) -> bytes:
     buffer = io.BytesIO()
     frame.to_pickle(buffer)
     return buffer.getvalue()
+
+
+def _synthetic_published_pickle() -> bytes:
+    return _pickle_frame(_synthetic_frame())
 
 
 def test_published_pickle_bridge_requires_exact_frozen_shape_schema_and_time_grid() -> None:
@@ -74,12 +81,27 @@ def test_published_pickle_bridge_requires_exact_frozen_shape_schema_and_time_gri
     assert all(len(values) == SAMPLE_COUNT for values in waveform.values())
     assert waveform[CHANNEL_SCHEMA[0]][0] == 1.0
 
-    frame = pd.read_pickle(io.BytesIO(_synthetic_published_pickle()))
+    frame = _synthetic_frame()
     frame.loc[1, TIME_COLUMN] += 1e-4
-    buffer = io.BytesIO()
-    frame.to_pickle(buffer)
     with pytest.raises(ValueError, match="time axis"):
-        waveform_from_published_pickle(buffer.getvalue())
+        waveform_from_published_pickle(_pickle_frame(frame))
+
+
+def test_published_pickle_bridge_accepts_same_named_schema_in_different_source_order() -> None:
+    frame = _synthetic_frame()
+    shuffled_columns = [TIME_COLUMN, *reversed(CHANNEL_SCHEMA)]
+    waveform = waveform_from_published_pickle(_pickle_frame(frame.loc[:, shuffled_columns]))
+    assert tuple(waveform) == CHANNEL_SCHEMA
+    assert waveform[CHANNEL_SCHEMA[0]][0] == 1.0
+    assert waveform[CHANNEL_SCHEMA[-1]][0] == float(len(CHANNEL_SCHEMA))
+
+
+def test_published_pickle_bridge_rejects_missing_or_extra_column_even_when_shape_is_49() -> None:
+    frame = _synthetic_frame()
+    broken = frame.drop(columns=[CHANNEL_SCHEMA[-1]]).copy()
+    broken["NOT_A_FROZEN_CHANNEL"] = 0.0
+    with pytest.raises(ValueError, match="column schema mismatch"):
+        waveform_from_published_pickle(_pickle_frame(broken))
 
 
 def test_selected_sample_ids_are_frozen_and_public_files_are_opaque_only() -> None:
