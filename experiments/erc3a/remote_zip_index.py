@@ -6,6 +6,7 @@ import re
 import struct
 import urllib.request
 from pathlib import Path
+from urllib.parse import urlparse
 
 ARCHIVE_URL = "https://zenodo.org/records/21109169/files/hv_double_line_90kv_preprocessed_data.zip?download=1"
 EXPECTED_ARCHIVE_MD5 = "7cf176f169299b825ba6a6be102edca8"
@@ -16,13 +17,18 @@ ZIP64_EOCD = b"PK\x06\x06"
 CD_FILE = b"PK\x01\x02"
 
 
-def head_size(url: str) -> tuple[int, str | None, str]:
+def head_size(url: str) -> tuple[int, str | None, str, dict[str, str]]:
     req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "gri-erc3a/1.0"})
     with urllib.request.urlopen(req, timeout=300) as response:
         length = response.headers.get("Content-Length")
         if not length:
             raise ValueError("archive HEAD missing Content-Length")
-        return int(length), response.headers.get("Accept-Ranges"), response.geturl()
+        identity_headers = {
+            key.lower(): value
+            for key in ("ETag", "Last-Modified", "Content-MD5", "Content-Type")
+            if (value := response.headers.get(key)) is not None
+        }
+        return int(length), response.headers.get("Accept-Ranges"), response.geturl(), identity_headers
 
 
 def fetch_range(url: str, start: int, end: int) -> bytes:
@@ -148,13 +154,16 @@ def parse_central_directory(blob: bytes, expected_entries: int) -> list[dict]:
     return rows
 
 
-def selected_index(rows: list[dict], selection: list[dict]) -> tuple[list[dict], int]:
+def selected_index(rows: list[dict], acquisition_map: list[dict]) -> tuple[list[dict], int]:
     pkl_rows = [row for row in rows if row["path"].endswith("_sample_hv_double_line_90kv.pkl")]
     by_basename = {Path(row["path"]).name: row for row in pkl_rows}
     if len(pkl_rows) != EXPECTED_DATA_MEMBERS or len(by_basename) != EXPECTED_DATA_MEMBERS:
         raise ValueError(f"expected {EXPECTED_DATA_MEMBERS} unique pkl members, got {len(pkl_rows)} / {len(by_basename)}")
+    sample_ids = [int(case["sample_id"]) for case in acquisition_map]
+    if len(set(sample_ids)) != len(sample_ids):
+        raise ValueError("acquisition map contains duplicate sample ids")
     selected = []
-    for case in selection:
+    for case in acquisition_map:
         basename = f"{case['sample_id']}_sample_hv_double_line_90kv.pkl"
         row = by_basename.get(basename)
         if row is None:
@@ -170,19 +179,19 @@ def selected_index(rows: list[dict], selection: list[dict]) -> tuple[list[dict],
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--selection", type=Path, required=True)
+    parser.add_argument("--acquisition-map", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    selection = json.loads(args.selection.read_text(encoding="utf-8"))
-    if len(selection) != 64:
-        raise ValueError("public selection must contain 64 cases")
+    acquisition_map = json.loads(args.acquisition_map.read_text(encoding="utf-8"))
+    if len(acquisition_map) != 64:
+        raise ValueError("acquisition map must contain 64 cases")
 
-    archive_size, accept_ranges, final_url = head_size(ARCHIVE_URL)
+    archive_size, accept_ranges, final_url, identity_headers = head_size(ARCHIVE_URL)
     cd_offset, cd_size, entry_count, structural_bytes = central_directory_location(ARCHIVE_URL, archive_size)
     cd_blob = fetch_range(ARCHIVE_URL, cd_offset, cd_offset + cd_size - 1)
     structural_bytes += len(cd_blob)
     rows = parse_central_directory(cd_blob, entry_count)
-    selected, pkl_count = selected_index(rows, selection)
+    selected, pkl_count = selected_index(rows, acquisition_map)
 
     record = {
         "unit": "ERC-3A",
@@ -192,7 +201,9 @@ def main() -> None:
         "archive_published_md5": EXPECTED_ARCHIVE_MD5,
         "archive_size_bytes": archive_size,
         "accept_ranges_header": accept_ranges,
-        "resolved_url_host": urllib.request.urlparse(final_url).netloc if hasattr(urllib.request, 'urlparse') else None,
+        "resolved_url": final_url,
+        "resolved_url_host": urlparse(final_url).netloc,
+        "archive_identity_headers": identity_headers,
         "zip_entry_count": entry_count,
         "pkl_member_count": pkl_count,
         "central_directory_offset": cd_offset,
@@ -201,6 +212,7 @@ def main() -> None:
         "selected_members": selected,
         "range_structure_bytes_read": structural_bytes,
         "selected_member_payload_bytes_read": 0,
+        "selected_member_payload_ranges_requested": 0,
         "waveform_members_opened": 0,
         "scientific_predictions": 0,
         "same_set_rescue_authorized": False,

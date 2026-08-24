@@ -5,7 +5,10 @@ on:
     branches: [erc2ar-damadics-nonoverlap-transfer]
     paths:
       - 'experiments/erc3a/ERC3A_PUBLIC_SELECTION.json'
+      - 'experiments/erc3a/ERC3A_ACQUISITION_MAP.json'
       - 'experiments/erc3a/remote_zip_index.py'
+      - 'experiments/erc3a/manifest.py'
+      - 'experiments/erc3a/producer_boundary.py'
       - '.github/workflows/erc3a-remote-zip-index.yml'
   workflow_dispatch:
 
@@ -21,24 +24,36 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Verify frozen public selection hash
+      - name: Verify frozen opaque selection and acquisition map
         run: |
           python - <<'PY'
           import hashlib,json
           p=json.load(open('experiments/erc3a/ERC3A_PUBLIC_SELECTION.json'))
           body=json.dumps(p,sort_keys=True,separators=(',',':'),ensure_ascii=True)
-          assert hashlib.sha256(body.encode()).hexdigest()=='10b3ab004488d4129a52b74172a2e7d1c4206d05e44af1744ebc79fbb6e4ed1d'
+          assert hashlib.sha256(body.encode()).hexdigest()=='e4e857c23ea0cc3c818509c65a4b2b7e5042893c93153c942ee8dced47dbf407'
           assert len(p)==64
+          assert all(set(row)=={'opaque_id','t_evnt_start'} for row in p)
+          acquisition=json.load(open('experiments/erc3a/ERC3A_ACQUISITION_MAP.json'))
+          assert len(acquisition)==64
           print('ERC3A_PUBLIC_SELECTION_HASH_PASS')
           PY
       - name: Compile remote ZIP indexer
-        run: python -m py_compile experiments/erc3a/remote_zip_index.py
+        run: python -m py_compile experiments/erc3a/remote_zip_index.py experiments/erc3a/manifest.py
       - name: Index remote ZIP64 central directory without member payload access
         run: |
           python -m experiments.erc3a.remote_zip_index \
-            --selection experiments/erc3a/ERC3A_PUBLIC_SELECTION.json \
+            --acquisition-map experiments/erc3a/ERC3A_ACQUISITION_MAP.json \
             --output /tmp/ERC3A_REMOTE_ZIP_INDEX.json \
             | tee /tmp/ERC3A_REMOTE_ZIP_INDEX_STDOUT.txt
+      - name: Build opaque producer manifest
+        run: |
+          python -m experiments.erc3a.manifest \
+            --acquisition-map experiments/erc3a/ERC3A_ACQUISITION_MAP.json \
+            --index /tmp/ERC3A_REMOTE_ZIP_INDEX.json \
+            --output /tmp/ERC3A_PRODUCER_MANIFEST.json
+          python -m experiments.erc3a.producer_boundary \
+            experiments/erc3a/ERC3A_PUBLIC_SELECTION.json \
+            /tmp/ERC3A_PRODUCER_MANIFEST.json
       - name: Assert archive-structure-only boundary
         run: |
           python - <<'PY'
@@ -48,15 +63,17 @@ jobs:
           assert p['pkl_member_count']==9022
           assert p['selected_member_count']==64
           assert p['selected_member_payload_bytes_read']==0
+          assert p['selected_member_payload_ranges_requested']==0
           assert p['waveform_members_opened']==0
           assert p['scientific_predictions']==0
           assert p['same_set_rescue_authorized'] is False
           print('ERC3A_REMOTE_ZIP_STRUCTURE_GATE_PASS')
           PY
-      - name: Preserve selected-member offset index
+      - name: Preserve acquisition-layer index and producer manifest
         uses: actions/upload-artifact@v4
         with:
           name: ERC3A_REMOTE_ZIP_INDEX
           path: |
             /tmp/ERC3A_REMOTE_ZIP_INDEX.json
             /tmp/ERC3A_REMOTE_ZIP_INDEX_STDOUT.txt
+            /tmp/ERC3A_PRODUCER_MANIFEST.json

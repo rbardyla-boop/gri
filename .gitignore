@@ -162,3 +162,7 @@ artifacts/results/*_dev_smoke.json
 
 # Gauntlet local freeze/run/replay receipts
 .gauntlet/
+
+# ERC-3A scorer truth is generated in a private runtime directory and is never
+# a producer-visible or committed artifact.
+experiments/erc3a/ERC3A_SCORER_MAP.json

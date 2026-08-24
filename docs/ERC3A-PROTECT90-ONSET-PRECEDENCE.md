@@ -45,7 +45,15 @@ Expected selected cases: 16 × 4 = 64.
 
 If any stratum has fewer than four eligible rows, ERC-3A terminates pre-waveform.
 
-The producer receives only opaque case id, selected waveform bytes, channel names, and `t_evnt_start`. It must not receive `fault_target`, `sc_type`, `sc_location`, or a scorer-derived line label.
+The identity boundary is split into three mechanically separate artifacts:
+
+1. `ACQUISITION_MAP`: `opaque_id -> sample_id -> t_evnt_start`. This is an acquisition-layer provenance artifact used only to resolve a selected archive member. It is never passed to the locator.
+2. `PRODUCER_MANIFEST`: `opaque_id`, `t_evnt_start`, a ZIP central-directory waveform binding, and the frozen channel schema. It contains no `sample_id`, `fault_target`, `sc_type`, `sc_location`, or scorer-derived field. The pre-waveform binding is the SHA-256 of the archive identity and central-directory member tuple; the payload SHA-256 is populated only by the separately authorized acquisition step.
+3. `SCORER_MAP`: `opaque_id -> truth`, held outside the locator process until live and replay prediction serializations have sealed identically.
+
+The producer receives only opaque case id, selected waveform bytes, channel names, and `t_evnt_start`. A regression scans every producer-visible JSON artifact and fails on the forbidden fields `sample_id`, `fault_target`, `sc_type`, and `sc_location`.
+
+The remote ZIP qualification reads only the archive tail, ZIP64 records when present, and the central directory using HTTP Range. It must prove exactly 9,022 waveform members and all 64 selected member bindings while reading zero selected payload bytes. Member acquisition is a separate layer from locator input construction.
 
 ## Primary method: two-ended onset precedence
 
@@ -74,6 +82,19 @@ Lines are ranked by:
 3. final deterministic tie-break: lexical line id.
 
 No learned weights, fitted threshold, waveform normalization learned from other cases, or per-line calibration is allowed.
+
+## Pre-waveform qualification terminal state
+
+Before any of the 64 real episodes is executed, the repository may emit `ERC3A_PRELIVE_FREEZE_CANDIDATE_READY` only after:
+
+- the 64-case identity split and producer-visible JSON scan pass;
+- the remote archive range index proves 9,022 members and 64 selected bindings with zero payload reads;
+- acquisition and locator code are separately compiled;
+- the locator and all controls pass synthetic waveform fixtures only;
+- live/replay prediction serialization is byte-identical on those synthetic fixtures; and
+- the freeze candidate hashes all executable ERC-3A source, ERC-3A workflows, selection records, acquisition mapping rule, producer-manifest rule, and scorer.
+
+This state records `waveform_members_opened = 0`, `scientific_predictions = 0`, and `same_set_rescue_authorized = false`. It does not authorize a scientific waveform run.
 
 ## Simplicity controls
 

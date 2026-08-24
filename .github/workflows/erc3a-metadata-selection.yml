@@ -6,6 +6,7 @@ on:
     paths:
       - 'docs/ERC3A-PROTECT90-ONSET-PRECEDENCE.md'
       - 'experiments/erc3a/select_metadata.py'
+      - 'experiments/erc3a/producer_boundary.py'
       - '.github/workflows/erc3a-metadata-selection.yml'
   workflow_dispatch:
 
@@ -25,29 +26,36 @@ jobs:
         run: python -m py_compile experiments/erc3a/select_metadata.py
       - name: Freeze balanced 64-case selection without waveform access
         run: |
-          rm -rf /tmp/erc3a-metadata
-          python -m experiments.erc3a.select_metadata --out-dir /tmp/erc3a-metadata \
+          metadata_dir=/tmp/erc3a-metadata
+          mkdir -p "$metadata_dir"
+          export metadata_dir
+          python -m experiments.erc3a.select_metadata --out-dir "$metadata_dir" \
             | tee /tmp/ERC3A_METADATA_STDOUT.txt
+          echo "metadata_dir=$metadata_dir" >> "$GITHUB_ENV"
       - name: Assert pre-waveform boundary
         run: |
           python - <<'PY'
-          import json
-          p=json.load(open('/tmp/erc3a-metadata/ERC3A_METADATA_SELECTION_RECORD.json'))
+          import json, os
+          p=json.load(open(os.environ['metadata_dir']+'/ERC3A_METADATA_SELECTION_RECORD.json'))
           assert p['status']=='ERC3A_METADATA_SELECTION_FROZEN'
           assert p['labels_row_count']==9022
           assert p['scientific_case_count']==64
           assert p['stratum_count']==16
           assert p['per_stratum']==4
+          assert p['selected_sample_ids_sha256']=='aef9418b6ee352f0c2ab96ac6ecb7e097aa834662a646453495905a1c6dcf6db'
           assert p['waveform_archive_downloaded'] is False
           assert p['waveform_members_opened']==0
           assert p['scientific_predictions']==0
           assert p['same_set_rescue_authorized'] is False
           print('ERC3A_PRE_WAVEFORM_METADATA_GATE_PASS')
           PY
-      - name: Preserve metadata selection
+      - name: Assert public selection is producer-clean
+        run: python -m experiments.erc3a.producer_boundary "$metadata_dir/ERC3A_PUBLIC_SELECTION.json"
+      - name: Preserve producer-visible metadata only
         uses: actions/upload-artifact@v4
         with:
           name: ERC3A_METADATA_SELECTION
           path: |
-            /tmp/erc3a-metadata
+            /tmp/erc3a-metadata/ERC3A_PUBLIC_SELECTION.json
+            /tmp/erc3a-metadata/ERC3A_METADATA_SELECTION_RECORD.json
             /tmp/ERC3A_METADATA_STDOUT.txt

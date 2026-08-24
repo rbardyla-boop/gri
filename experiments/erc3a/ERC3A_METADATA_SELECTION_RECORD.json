@@ -1,0 +1,21 @@
+{
+  "acquisition_map_sha256": "10b3ab004488d4129a52b74172a2e7d1c4206d05e44af1744ebc79fbb6e4ed1d",
+  "labels_md5": "5f015330f77ed53b76bd5db26e83c48d",
+  "labels_row_count": 9022,
+  "labels_sha256": "c1f35ae428894fea893514986d0e55685b66e96bec2d15299f1c7ba3ec93a402",
+  "labels_url": "https://zenodo.org/records/21109169/files/hv_double_line_90kv_labels.csv?download=1",
+  "per_stratum": 4,
+  "public_selection_sha256": "e4e857c23ea0cc3c818509c65a4b2b7e5042893c93153c942ee8dced47dbf407",
+  "record_sha256": "1ae2a6264604db0ef915544143095071c930b6d2c21beaaf55cac7cb2abe71ce",
+  "same_set_rescue_authorized": false,
+  "scientific_case_count": 64,
+  "scientific_predictions": 0,
+  "scorer_map_sha256": "6f6b6052c6c61774a21e2316f5c13b324eea503fe03e9803f89859816cbe7e6b",
+  "selected_sample_ids_sha256": "aef9418b6ee352f0c2ab96ac6ecb7e097aa834662a646453495905a1c6dcf6db",
+  "status": "ERC3A_METADATA_SELECTION_FROZEN",
+  "stratum_count": 16,
+  "unit": "ERC-3A",
+  "waveform_archive_downloaded": false,
+  "waveform_members_opened": 0,
+  "zenodo_record": "10.5281/zenodo.21109169"
+}

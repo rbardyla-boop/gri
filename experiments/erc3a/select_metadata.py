@@ -60,7 +60,7 @@ def parse_rows(blob: bytes) -> list[dict]:
     return rows
 
 
-def select(rows: list[dict]) -> tuple[list[dict], list[dict]]:
+def select(rows: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
     groups: dict[tuple[str, int], list[dict]] = defaultdict(list)
     for row in rows:
         key = (row["fault_target"], row["sc_type"])
@@ -85,22 +85,28 @@ def select(rows: list[dict]) -> tuple[list[dict], list[dict]]:
         )
         chosen.extend(candidates[:PER_STRATUM])
 
+    acquisition = []
     public = []
     scorer = []
     for row in sorted(chosen, key=lambda r: r["sample_id"]):
         opaque_id = "P90-" + sha256_text(f"ERC3A-CASE|{row['sample_id']}")[:16]
-        public.append({
+        acquisition.append({
             "opaque_id": opaque_id,
             "sample_id": row["sample_id"],
             "t_evnt_start": row["t_evnt_start"],
         })
+        public.append({
+            "opaque_id": opaque_id,
+            "t_evnt_start": row["t_evnt_start"],
+        })
         scorer.append({
             "opaque_id": opaque_id,
-            "sample_id": row["sample_id"],
-            "fault_target": row["fault_target"],
-            "sc_type": row["sc_type"],
+            "truth": {
+                "fault_target": row["fault_target"],
+                "sc_type": row["sc_type"],
+            },
         })
-    return public, scorer
+    return acquisition, public, scorer
 
 
 def main() -> None:
@@ -118,17 +124,19 @@ def main() -> None:
     if len(rows) != EXPECTED_ROWS:
         raise ValueError(f"expected {EXPECTED_ROWS} eligible rows, got {len(rows)}")
 
-    public, scorer = select(rows)
-    if len(public) != 64 or len(scorer) != 64:
+    acquisition, public, scorer = select(rows)
+    if len(acquisition) != 64 or len(public) != 64 or len(scorer) != 64:
         raise ValueError("selected case count mismatch")
-    if len({row["sample_id"] for row in public}) != 64:
+    if len({row["sample_id"] for row in acquisition}) != 64:
         raise ValueError("duplicate sample id")
-    counts = Counter((row["fault_target"], row["sc_type"]) for row in scorer)
+    counts = Counter((row["truth"]["fault_target"], row["truth"]["sc_type"]) for row in scorer)
     if set(counts.values()) != {PER_STRATUM} or len(counts) != 16:
         raise ValueError(f"selection balance mismatch: {counts}")
 
+    acquisition_path = out / "ERC3A_ACQUISITION_MAP.json"
     public_path = out / "ERC3A_PUBLIC_SELECTION.json"
     scorer_path = out / "ERC3A_SCORER_MAP.json"
+    acquisition_path.write_text(json.dumps(acquisition, sort_keys=True, indent=2) + "\n", encoding="utf-8")
     public_path.write_text(json.dumps(public, sort_keys=True, indent=2) + "\n", encoding="utf-8")
     scorer_path.write_text(json.dumps(scorer, sort_keys=True, indent=2) + "\n", encoding="utf-8")
 
@@ -144,7 +152,9 @@ def main() -> None:
         "stratum_count": len(counts),
         "per_stratum": PER_STRATUM,
         "public_selection_sha256": sha256_text(canonical_json(public)),
+        "acquisition_map_sha256": sha256_text(canonical_json(acquisition)),
         "scorer_map_sha256": sha256_text(canonical_json(scorer)),
+        "selected_sample_ids_sha256": sha256_text(canonical_json([row["sample_id"] for row in acquisition])),
         "waveform_archive_downloaded": False,
         "waveform_members_opened": 0,
         "scientific_predictions": 0,
