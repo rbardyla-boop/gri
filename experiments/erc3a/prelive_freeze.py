@@ -10,7 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 ERC3A_ROOT = REPO_ROOT / "experiments" / "erc3a"
 PROTOCOL_PATH = REPO_ROOT / "docs" / "ERC3A-PROTECT90-ONSET-PRECEDENCE.md"
 RUNTIME_BINDING = {
-    "python": "3.11",
+    "python": "3.11.16",
     "numpy": "2.2.6",
     "pandas": "2.3.2",
 }
