@@ -1,0 +1,53 @@
+name: ERC-3A Metadata Selection
+
+on:
+  pull_request:
+    branches: [erc2ar-damadics-nonoverlap-transfer]
+    paths:
+      - 'docs/ERC3A-PROTECT90-ONSET-PRECEDENCE.md'
+      - 'experiments/erc3a/select_metadata.py'
+      - '.github/workflows/erc3a-metadata-selection.yml'
+  workflow_dispatch:
+
+jobs:
+  metadata-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile metadata selector
+        run: python -m py_compile experiments/erc3a/select_metadata.py
+      - name: Freeze balanced 64-case selection without waveform access
+        run: |
+          rm -rf /tmp/erc3a-metadata
+          python -m experiments.erc3a.select_metadata --out-dir /tmp/erc3a-metadata \
+            | tee /tmp/ERC3A_METADATA_STDOUT.txt
+      - name: Assert pre-waveform boundary
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/erc3a-metadata/ERC3A_METADATA_SELECTION_RECORD.json'))
+          assert p['status']=='ERC3A_METADATA_SELECTION_FROZEN'
+          assert p['labels_row_count']==9022
+          assert p['scientific_case_count']==64
+          assert p['stratum_count']==16
+          assert p['per_stratum']==4
+          assert p['waveform_archive_downloaded'] is False
+          assert p['waveform_members_opened']==0
+          assert p['scientific_predictions']==0
+          assert p['same_set_rescue_authorized'] is False
+          print('ERC3A_PRE_WAVEFORM_METADATA_GATE_PASS')
+          PY
+      - name: Preserve metadata selection
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3A_METADATA_SELECTION
+          path: |
+            /tmp/erc3a-metadata
+            /tmp/ERC3A_METADATA_STDOUT.txt
