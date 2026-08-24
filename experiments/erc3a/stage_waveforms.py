@@ -33,7 +33,13 @@ def _by_opaque(rows: list[dict], label: str) -> dict[str, dict]:
 
 
 def waveform_from_published_pickle(payload: bytes) -> dict[str, list[float]]:
-    """Decode one trusted official PROTECT-90 pandas pickle and enforce the frozen schema."""
+    """Decode one trusted official PROTECT-90 pandas pickle and enforce the frozen schema.
+
+    The public dataset contract defines the 49 named columns but does not make
+    source DataFrame column order scientifically meaningful. We therefore
+    require the exact frozen name set, reject duplicates/missing/extra columns,
+    and reorder deterministically before numeric validation.
+    """
 
     frame = pd.read_pickle(io.BytesIO(payload))
     if not isinstance(frame, pd.DataFrame):
@@ -41,8 +47,15 @@ def waveform_from_published_pickle(payload: bytes) -> dict[str, list[float]]:
     expected_columns = (TIME_COLUMN, *CHANNEL_SCHEMA)
     if frame.shape != (SAMPLE_COUNT, len(expected_columns)):
         raise ValueError(f"waveform shape mismatch: {frame.shape} != {(SAMPLE_COUNT, len(expected_columns))}")
-    if tuple(str(column) for column in frame.columns) != expected_columns:
-        raise ValueError("waveform column order/schema mismatch")
+
+    actual_columns = tuple(str(column) for column in frame.columns)
+    if len(set(actual_columns)) != len(actual_columns):
+        raise ValueError("waveform contains duplicate column names")
+    if set(actual_columns) != set(expected_columns):
+        missing = sorted(set(expected_columns) - set(actual_columns))
+        extra = sorted(set(actual_columns) - set(expected_columns))
+        raise ValueError(f"waveform column schema mismatch: missing={missing}, extra={extra}")
+    frame = frame.loc[:, list(expected_columns)]
 
     times = pd.to_numeric(frame[TIME_COLUMN], errors="raise").to_numpy(dtype=np.float64)
     expected_times = np.arange(SAMPLE_COUNT, dtype=np.float64) / float(SAMPLE_RATE_HZ)
