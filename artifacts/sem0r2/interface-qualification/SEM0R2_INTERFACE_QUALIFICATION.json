@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-08-23T17:28:57.795961+00:00",
+  "interface_model_calls": 3,
+  "model_identity_record_sha256": "732deaeb891565c554870bdc9f9cf106b840078927b273efa863d91b8a933cc7",
+  "model_identity_sha256": "83a5c369ab252a0d44deeb7eb94ca23eb77b2b6dc46f899db829111f0e37cc22",
+  "probe_results": [
+    {
+      "probe": 0,
+      "response_sha256": "ff5c14bd9ae683f81b406ddd3839dfab1a55aaee16459a31d3bf4bb9fb80d7be",
+      "status": "PASS"
+    },
+    {
+      "probe": 1,
+      "response_sha256": "53d9dfad9b5e3bef25b6885ba3a58bbe6db4b5c049d5ad21ecbeded57b306573",
+      "status": "PASS"
+    },
+    {
+      "probe": 2,
+      "response_sha256": "11e05fb97e669f0ef056a97ae0619aa902f31c1012f26c731e7508d70fcc55b8",
+      "status": "PASS"
+    }
+  ],
+  "qualification_record_sha256": "c3640434d3438a2e79fbd5faab1f3b395a9632c93166f8b30aa602a635609333",
+  "raw_log_sha256": "2ff3de42f14c4a2cfe02ff730867b13cace39a20bec9cd60a92a9ad87dd626ba",
+  "schema_label_enum": [
+    "ASSERTED",
+    "ENTAILED",
+    "PRESUPPOSED",
+    "IMPLICATED",
+    "CONTRADICTED",
+    "UNKNOWN"
+  ],
+  "schema_version": 1,
+  "scientific_model_calls": 0,
+  "semantic_benchmark_content_exposed": false,
+  "status": "SEM0R2_INTERFACE_QUALIFICATION_PASS",
+  "unit": "SEM-0R2"
+}

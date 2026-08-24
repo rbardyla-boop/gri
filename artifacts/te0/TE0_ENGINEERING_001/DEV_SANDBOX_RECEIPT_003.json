@@ -1,0 +1,45 @@
+{
+  "backend": "bwrap",
+  "backend_selection": {
+    "bwrap_probe": {
+      "detail": "ok",
+      "ok": true
+    },
+    "fallback": false,
+    "requested": "auto"
+  },
+  "command": [
+    "python",
+    "experiments/mbm_lab/recipe_search.py",
+    "--fixtures",
+    "artifacts/te0/TE0_ENGINEERING_001/pools/DEV.jsonl",
+    "--catalog",
+    "experiments/mbm_lab/starter_catalog.json",
+    "--out-dir",
+    "artifacts/te0/TE0_ENGINEERING_001/dev_search",
+    "--max-depth",
+    "2",
+    "--beam",
+    "4",
+    "--timeout",
+    "300"
+  ],
+  "elapsed_seconds": 120.27923321499838,
+  "limits": {
+    "cpu_seconds": 900,
+    "memory_mb": 4096,
+    "pids_enforced": false,
+    "pids_mechanism": "not_enforced_for_bwrap; use cgroup/TasksMax in a later hardening pass",
+    "pids_requested": 128
+  },
+  "model_broker_socket": "/home/thebackhand/Downloads/grok/new-ai/artifacts/te0/TE0_ENGINEERING_001/model.sock",
+  "network": false,
+  "returncode": 0,
+  "started_at": "2026-08-23T18:22:03.443004+00:00",
+  "status": "MBM_SANDBOX_EXECUTION",
+  "stderr": "",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "{\"exact_rate\": 1.0, \"objective\": 0.9956584801761167, \"recipe\": [\"ollama_exp_json_s0\", \"strict_extract\"], \"structural_failures\": 0}\n{\"exact_rate\": 1.0, \"objective\": 0.99572056642005, \"recipe\": [\"ollama_exp_json_s1\", \"strict_extract\"], \"structural_failures\": 0}\n{\"exact_rate\": 1.0, \"objective\": 0.9958665344900085, \"recipe\": [\"ollama_exp_plain_s0\", \"strict_extract\"], \"structural_failures\": 0}\n{\"exact_rate\": 1.0, \"objective\": 0.9957524853037834, \"recipe\": [\"ollama_min_json_s0\", \"strict_extract\"], \"structural_failures\": 0}\n{\n  \"report\": \"artifacts/te0/TE0_ENGINEERING_001/dev_search/TE0_RECIPE_SEARCH_REPORT.json\",\n  \"winner\": {\n    \"exact\": 12,\n    \"exact_rate\": 1.0,\n    \"mean_latency_seconds\": 1.334655099915229,\n    \"n\": 12,\n    \"objective\": 0.9958665344900085,\n    \"recipe\": [\n      \"ollama_exp_plain_s0\",\n      \"strict_extract\"\n    ],\n    \"recipe_sha256\": \"b52dc85959a95a1adbdcf01a24a9d415cfa839dafb5b5e15f91eac304c9dd7e2\",\n    \"structural_failures\": 0,\n    \"tool_count\": 2,\n    \"trace_path\": \"artifacts/te0/TE0_ENGINEERING_001/dev_search/recipe_000002_b52dc85959a9.jsonl\"\n  }\n}\n",
+  "stdout_sha256": "6a37ed5238119e6a52edc4c9e824e3c6bbb3e3550fa001da6360e17596417282",
+  "workspace": "/home/thebackhand/Downloads/grok/new-ai"
+}

@@ -1,0 +1,30 @@
+{
+  "attacks": [
+    "plain",
+    "pretty",
+    "prefix_distractor",
+    "suffix_distractor",
+    "paraphrase",
+    "fence_pressure",
+    "duplicate_instruction",
+    "whitespace"
+  ],
+  "count": 144,
+  "kinds": [
+    "enum",
+    "copy",
+    "mapping",
+    "set",
+    "binary_matrix",
+    "ordered_vector"
+  ],
+  "scientific_content": false,
+  "seed": 20260824,
+  "sha256": "858aec8dbe64ba36655efe03f516ae96539d7efed81224ae1a80c21c36099e96",
+  "sizes": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "status": "TE0_STRESS_FIXTURES"
+}

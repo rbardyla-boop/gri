@@ -1,0 +1,40 @@
+{
+  "authorization_record_sha256": "d3c02e94940becb5089020ea04b0c28dc40de045882da4e31eaa03cd33c6eefb",
+  "bindings": {
+    "ablation_cases_sha256": "4b2c20988b51a225630352e57797b52eb61fd5de65974f30f37f53b90e198805",
+    "baseline_report_sha256": "c3f691ff78e2838417a6b1f0e3e3cd33735410423e790ff36e2120b1d1fd16b6",
+    "cases_sha256": "85272538c36f347a5b8a6df249aa1fc7b281d13cc0511a7f93a8ab485a7c929d",
+    "model_identity_record_sha256": "732deaeb891565c554870bdc9f9cf106b840078927b273efa863d91b8a933cc7",
+    "model_identity_sha256": "83a5c369ab252a0d44deeb7eb94ca23eb77b2b6dc46f899db829111f0e37cc22",
+    "parent_manifest_record_sha256": "bdbb5f774ec36e444e9bd147cae770554330431aa68b444fb25650cbbcea2d96",
+    "parent_manifest_sha256": "0975cef71fefbb1b606b7fcff5770eb18207efa4a7f55f31491fb0b01cec718b",
+    "qualification_record_sha256": "c3640434d3438a2e79fbd5faab1f3b395a9632c93166f8b30aa602a635609333",
+    "qualification_sha256": "f9536ceb1b04b400a99e7fba8d52429dab201d883340b1b6e4b20400d84d5b81",
+    "replay_cases_sha256": "e909bb214464396be55e7e92bdb34cdf04668597aee4b51860c618bf50b96674",
+    "successor_source_sha256": {
+      "SEM0R2_PROTOCOL.md": "126f91d2576e4c690fc9fb935576fb7a971f6f72d27b031776a75010ef1030a3",
+      "authorize_sem0r2.py": "1414c5042739b12eba64923dbbf336d1d7931eb3bb3bee342aae281fbf418c93",
+      "qualify_sem0r2_interface.py": "fcea47460e7d05c59b34c11338545052cda57a0e0581eae32a0c210329e9ab3b",
+      "run_sem0r2.py": "f064eb497f94c390941ba55817fbc1224931d3cdd07ffab22366ce2c35ee677d"
+    }
+  },
+  "consumed": true,
+  "consumed_at": "2026-08-23T17:35:45.099447+00:00",
+  "created_at": "2026-08-23T17:33:47.251335+00:00",
+  "executions_authorized": 1,
+  "prohibitions": {
+    "baseline_change": true,
+    "gold_change": true,
+    "label_alias_repair": true,
+    "model_substitution": true,
+    "per_case_retry": true,
+    "run001_continuation_claim": true,
+    "scientific_retry_after_consumption": true,
+    "semantic_case_change": true,
+    "threshold_change": true
+  },
+  "schema_version": 1,
+  "scientific_scope": "one complete SEM-0R2 interface-repaired replication using unchanged SEM-0R semantic content",
+  "status": "SEM0R2_ONE_RUN_CONSUMED",
+  "unit": "SEM-0R2"
+}

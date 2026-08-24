@@ -1,0 +1,27 @@
+{
+  "authorization_record_sha256": "578c20eb22ad44a91d60d2495e362ceb7467177af43f2bf10341902ada7e1a16",
+  "bindings": {
+    "ablation_cases_sha256": "4b2c20988b51a225630352e57797b52eb61fd5de65974f30f37f53b90e198805",
+    "cases_sha256": "85272538c36f347a5b8a6df249aa1fc7b281d13cc0511a7f93a8ab485a7c929d",
+    "instrument_manifest_record_sha256": "bdbb5f774ec36e444e9bd147cae770554330431aa68b444fb25650cbbcea2d96",
+    "instrument_manifest_sha256": "0975cef71fefbb1b606b7fcff5770eb18207efa4a7f55f31491fb0b01cec718b",
+    "model_identity_record_sha256": "732deaeb891565c554870bdc9f9cf106b840078927b273efa863d91b8a933cc7",
+    "model_identity_sha256": "83a5c369ab252a0d44deeb7eb94ca23eb77b2b6dc46f899db829111f0e37cc22",
+    "replay_cases_sha256": "e909bb214464396be55e7e92bdb34cdf04668597aee4b51860c618bf50b96674"
+  },
+  "consumed": true,
+  "consumed_at": "2026-08-23T17:19:07.000672+00:00",
+  "created_at": "2026-08-23T17:15:55.014728+00:00",
+  "executions_authorized": 1,
+  "prohibitions": {
+    "development_model_runs": 0,
+    "model_substitution": true,
+    "post_result_tuning": true,
+    "scientific_retries_after_consumption": true,
+    "threshold_or_scorer_change": true
+  },
+  "schema_version": 1,
+  "scientific_scope": "one complete SEM-0R live+replay+context-ablation execution under the frozen instrument",
+  "status": "SEM0R_ONE_RUN_CONSUMED",
+  "unit": "SEM-0R"
+}
