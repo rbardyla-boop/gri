@@ -1,0 +1,42 @@
+[
+  {
+    "opaque_id": "P90B-CAL-8746f1252d493c85fb348c2e",
+    "sample_id": 13,
+    "t_evnt_start": 0.386603507835547
+  },
+  {
+    "opaque_id": "P90B-CAL-7632cb304a4f889cf4b45c03",
+    "sample_id": 1666,
+    "t_evnt_start": 0.211121484615722
+  },
+  {
+    "opaque_id": "P90B-CAL-e41afec38fd45576237adc58",
+    "sample_id": 2512,
+    "t_evnt_start": 0.397728676102412
+  },
+  {
+    "opaque_id": "P90B-CAL-f8c1d1078bae6d6c81684609",
+    "sample_id": 2572,
+    "t_evnt_start": 0.200834575346026
+  },
+  {
+    "opaque_id": "P90B-CAL-3db2ac37ecc90ffe24ecd85a",
+    "sample_id": 4529,
+    "t_evnt_start": 0.477868579687427
+  },
+  {
+    "opaque_id": "P90B-CAL-654cd5880df3241edb072439",
+    "sample_id": 7619,
+    "t_evnt_start": 0.442665586837517
+  },
+  {
+    "opaque_id": "P90B-CAL-caff1368d23b035b9cf87206",
+    "sample_id": 8191,
+    "t_evnt_start": 0.262146258641079
+  },
+  {
+    "opaque_id": "P90B-CAL-8821f71ebc54c24de14faa37",
+    "sample_id": 8483,
+    "t_evnt_start": 0.381715439135156
+  }
+]

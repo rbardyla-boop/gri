@@ -1,0 +1,76 @@
+name: ERC-3B Timebase Calibration
+
+on:
+  pull_request:
+    branches: [erc3a-protect90-onset-precedence]
+    paths:
+      - 'experiments/erc3b/**'
+      - 'tests/test_erc3b_phase1.py'
+      - '.github/workflows/erc3b-timebase-calibration.yml'
+  workflow_dispatch:
+
+jobs:
+  calibration-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.16'
+      - name: Install the exact qualified runtime
+        run: python -m pip install --disable-pip-version-check 'numpy==2.2.6' 'pandas==2.3.2' 'pytest>=8'
+      - name: Assert exact runtime and synthetic-only regression suite
+        run: |
+          python - <<'PY'
+          import numpy, pandas, platform
+          assert platform.python_version()=='3.11.16', platform.python_version()
+          assert numpy.__version__=='2.2.6', numpy.__version__
+          assert pandas.__version__=='2.3.2', pandas.__version__
+          print({'python':platform.python_version(),'numpy':numpy.__version__,'pandas':pandas.__version__})
+          PY
+          pytest -q tests/test_erc3b_phase1.py
+      - name: Recursively scan committed producer-visible JSON artifacts
+        run: |
+          python -m experiments.erc3b.producer_boundary \
+            experiments/erc3b/ERC3B_PUBLIC_SELECTION.json \
+            experiments/erc3b/ERC3B_CALIBRATION_PUBLIC_SELECTION.json \
+            experiments/erc3b/ERC3B_METADATA_SELECTION_RECORD.json \
+            experiments/erc3b/ERC3B_CALIBRATION_PRODUCER_MANIFEST.json \
+            experiments/erc3b/ERC3B_SCIENCE_PRODUCER_MANIFEST.json
+      - name: Open only the eight calibration members
+        shell: bash
+        run: |
+          set +e
+          python -m experiments.erc3b.timebase_calibration \
+            --calibration-map experiments/erc3b/ERC3B_CALIBRATION_ACQUISITION_MAP.json \
+            --index experiments/erc3b/ERC3B_ACQUISITION_INDEX.json \
+            --output-dir /tmp/erc3b-calibration \
+            | tee /tmp/ERC3B_TIMEBASE_CALIBRATION_STDOUT.txt
+          rc=${PIPESTATUS[0]}
+          set -e
+          python - "$rc" <<'PY'
+          import json, sys
+          rc=int(sys.argv[1])
+          p=json.load(open('/tmp/erc3b-calibration/ERC3B_TIMEBASE_CONTRACT.json'))
+          assert p['status'] in {'ERC3B_TIMEBASE_QUALIFICATION_PASS','ERC3B_TIMEBASE_QUALIFICATION_FAIL'}
+          assert p['calibration_waveforms_opened']==8
+          assert p['waveform_members_opened']==8
+          assert p['scientific_waveforms_opened']==0
+          assert p['scientific_predictions']==0
+          assert p['scorer_opened'] is False
+          assert p['same_set_rescue_authorized'] is False
+          assert (p['status'].endswith('PASS') and rc==0) or (p['status'].endswith('FAIL') and rc==1)
+          print('ERC3B_TIMEBASE_QUALIFICATION_TERMINAL', p['status'])
+          PY
+      - name: Preserve calibration receipt and contract
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3B_TIMEBASE_CALIBRATION
+          path: |
+            /tmp/erc3b-calibration/ERC3B_TIMEBASE_CONTRACT.json
+            /tmp/erc3b-calibration/ERC3B_TIMEBASE_CALIBRATION_RECEIPT.json
+            /tmp/ERC3B_TIMEBASE_CALIBRATION_STDOUT.txt

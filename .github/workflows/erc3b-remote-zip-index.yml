@@ -1,0 +1,72 @@
+name: ERC-3B Remote ZIP Index
+
+on:
+  pull_request:
+    branches: [erc3a-protect90-onset-precedence]
+    paths:
+      - 'experiments/erc3b/**'
+      - '.github/workflows/erc3b-remote-zip-index.yml'
+  workflow_dispatch:
+
+jobs:
+  index-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile range indexer and manifest builder
+        run: python -m py_compile experiments/erc3b/*.py
+      - name: Index ZIP64 central directory without selected payload access
+        run: |
+          python -m experiments.erc3b.remote_zip_index \
+            --calibration-map experiments/erc3b/ERC3B_CALIBRATION_ACQUISITION_MAP.json \
+            --science-map experiments/erc3b/ERC3B_SCIENCE_ACQUISITION_MAP.json \
+            --output /tmp/ERC3B_ACQUISITION_INDEX.json \
+            | tee /tmp/ERC3B_REMOTE_ZIP_INDEX_STDOUT.txt
+      - name: Build and recursively scan opaque producer manifests
+        run: |
+          mkdir -p /tmp/erc3b-producer
+          python -m experiments.erc3b.manifest \
+            --index /tmp/ERC3B_ACQUISITION_INDEX.json \
+            --output-dir /tmp/erc3b-producer
+          python -m experiments.erc3b.producer_boundary \
+            experiments/erc3b/ERC3B_PUBLIC_SELECTION.json \
+            experiments/erc3b/ERC3B_CALIBRATION_PUBLIC_SELECTION.json \
+            experiments/erc3b/ERC3B_METADATA_SELECTION_RECORD.json \
+            /tmp/erc3b-producer
+      - name: Assert archive structure and no waveform bytes
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ERC3B_ACQUISITION_INDEX.json'))
+          assert p['status']=='ERC3B_REMOTE_ZIP_INDEX_CAPTURED'
+          assert p['zip_entry_count']==9022 and p['pkl_member_count']==9022
+          assert p['calibration_member_count']==8 and p['science_member_count']==64
+          assert p['selected_member_count']==72
+          assert p['selected_member_payload_bytes_read']==0
+          assert p['selected_member_payload_ranges_requested']==0
+          assert p['waveform_members_opened']==0
+          assert p['calibration_waveforms_opened']==0
+          assert p['scientific_waveforms_opened']==0
+          assert p['scientific_predictions']==0
+          assert p['scorer_opened'] is False
+          assert p['same_set_rescue_authorized'] is False
+          roles=[row['role'] for row in p['selected_members']]
+          assert roles.count('calibration')==8 and roles.count('science')==64
+          print('ERC3B_REMOTE_ZIP_STRUCTURE_GATE_PASS')
+          PY
+      - name: Preserve acquisition-layer index and producer manifests
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3B_REMOTE_ZIP_INDEX
+          path: |
+            /tmp/ERC3B_ACQUISITION_INDEX.json
+            /tmp/ERC3B_REMOTE_ZIP_INDEX_STDOUT.txt
+            /tmp/erc3b-producer/ERC3B_CALIBRATION_PRODUCER_MANIFEST.json
+            /tmp/erc3b-producer/ERC3B_SCIENCE_PRODUCER_MANIFEST.json

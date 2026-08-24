@@ -1,0 +1,71 @@
+name: ERC-3B Metadata Selection
+
+on:
+  pull_request:
+    branches: [erc3a-protect90-onset-precedence]
+    paths:
+      - 'docs/ERC3B-PROTECT90-TIMEBASE-FRESH-TRANSFER.md'
+      - 'experiments/erc3a/ERC3A_ACQUISITION_MAP.json'
+      - 'experiments/erc3b/**'
+      - '.github/workflows/erc3b-metadata-selection.yml'
+  workflow_dispatch:
+
+jobs:
+  metadata-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile metadata and identity gates
+        run: python -m py_compile experiments/erc3b/*.py
+      - name: Reproduce frozen calibration and fresh science IDs from labels only
+        run: |
+          metadata_dir=/tmp/erc3b-metadata
+          mkdir -p "$metadata_dir"
+          python -m experiments.erc3b.select_metadata --out-dir "$metadata_dir" \
+            | tee /tmp/ERC3B_METADATA_SELECTION_STDOUT.txt
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path('/tmp/erc3b-metadata')
+          record=json.loads((root/'ERC3B_METADATA_SELECTION_RECORD.json').read_text())
+          assert record['status']=='ERC3B_METADATA_SELECTION_FROZEN'
+          assert record['labels_row_count']==9022
+          assert record['inherited_erc3a_exclusion_count']==64
+          assert record['inherited_erc3a_exclusion_sha256']=='aef9418b6ee352f0c2ab96ac6ecb7e097aa834662a646453495905a1c6dcf6db'
+          assert record['calibration_selection_count']==8
+          assert record['calibration_ids_sha256']=='eb22af50794fd52b5dca50bfea97aeec733ef2b829c870299b261d2012f0cec1'
+          assert record['science_selection_count']==64
+          assert record['science_ids_sha256']=='2c7709b66306bd4f3c2b9bf5c7e0ee1aea0177a360ab29e4e1c12d0a7be8778e'
+          assert record['stratum_count']==16 and record['per_stratum']==4
+          assert record['calibration_science_overlap']==0
+          assert record['waveform_archive_downloaded'] is False
+          assert record['waveform_members_opened']==0
+          assert record['scientific_waveforms_opened']==0
+          assert record['scientific_predictions']==0
+          assert record['scorer_opened'] is False
+          assert record['same_set_rescue_authorized'] is False
+          assert not (root/'ERC3B_SCORER_MAP.json').is_symlink()
+          print('ERC3B_METADATA_SELECTION_GATE_PASS')
+          PY
+      - name: Recursively scan producer-visible JSON artifacts
+        run: |
+          python -m experiments.erc3b.producer_boundary \
+            /tmp/erc3b-metadata/ERC3B_PUBLIC_SELECTION.json \
+            /tmp/erc3b-metadata/ERC3B_CALIBRATION_PUBLIC_SELECTION.json \
+            /tmp/erc3b-metadata/ERC3B_METADATA_SELECTION_RECORD.json
+      - name: Preserve producer-visible metadata only
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3B_METADATA_SELECTION
+          path: |
+            /tmp/erc3b-metadata/ERC3B_PUBLIC_SELECTION.json
+            /tmp/erc3b-metadata/ERC3B_CALIBRATION_PUBLIC_SELECTION.json
+            /tmp/erc3b-metadata/ERC3B_METADATA_SELECTION_RECORD.json
+            /tmp/ERC3B_METADATA_SELECTION_STDOUT.txt

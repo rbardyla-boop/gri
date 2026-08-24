@@ -166,3 +166,6 @@ artifacts/results/*_dev_smoke.json
 # ERC-3A scorer truth is generated in a private runtime directory and is never
 # a producer-visible or committed artifact.
 experiments/erc3a/ERC3A_SCORER_MAP.json
+
+# ERC-3B scorer truth is reconstructed privately only after live/replay seals.
+experiments/erc3b/ERC3B_SCORER_MAP.json
