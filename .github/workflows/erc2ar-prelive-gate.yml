@@ -1,0 +1,78 @@
+name: ERC-2AR Pre-Live Gate
+
+on:
+  pull_request:
+    branches: [erc2a-damadics-structural-transfer]
+    paths:
+      - 'docs/ERC2AR-DAMADICS-NONOVERLAP-TRANSFER.md'
+      - 'experiments/erc2ar/**'
+      - 'tests/test_erc2ar_transfer.py'
+      - '.github/workflows/erc2ar-prelive-gate.yml'
+  workflow_dispatch:
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install qualified mechanical dependencies
+        run: python -m pip install numpy==2.3.2 pandas==2.3.2 pyarrow==21.0.0 pytest==8.4.1
+      - name: Assert frozen ERC compiler SHA
+        run: |
+          expected='2d7135512894736281d1d0381a07bd76e1eb0052cf61c61ae5359f02f2d1288d'
+          actual="$(sha256sum experiments/erc1/compiler.py | awk '{print $1}')"
+          test "$actual" = "$expected"
+      - name: Compile live-path modules
+        run: |
+          python -m py_compile \
+            experiments/erc2ar/stage_damadics.py \
+            experiments/erc2ar/largest_single_shift.py \
+            experiments/erc2ar/score_transfer.py
+      - name: Run adapter regressions
+        run: python -m pytest -q tests/test_erc2ar_transfer.py
+      - name: Assert no live output or authorization is committed
+        run: |
+          test ! -e experiments/erc2ar/ERC2AR_FREEZE.json
+          test ! -e artifacts/erc2ar
+      - name: Emit freeze candidate hashes
+        run: |
+          python - <<'PY' | tee /tmp/ERC2AR_FREEZE_CANDIDATE.json
+          import hashlib, json
+          from pathlib import Path
+          paths=[
+            'experiments/erc1/compiler.py',
+            'experiments/erc2ar/stage_damadics.py',
+            'experiments/erc2ar/largest_single_shift.py',
+            'experiments/erc2ar/score_transfer.py',
+            'tests/test_erc2ar_transfer.py',
+            '.github/workflows/erc2ar-prelive-gate.yml',
+          ]
+          hashes={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          out={
+            'unit':'ERC-2AR',
+            'status':'ERC2AR_FREEZE_CANDIDATE',
+            'scientific_n':13,
+            'event_items':[1,2,4,5,6,7,8,9,10,11,13,14,19],
+            'source_day_sha256':{
+              '2001-10-30':'75706a15cff60b132ae7fd291ce08a06bb0ef0df6ed65a15cb05fe18889363d1',
+              '2001-11-09':'b3af2f899fe23c2826a0821fd9024a9dcc6c1a7f99e2191b752bb6b4a218d488',
+              '2001-11-17':'2744046eedf781c157f0bc02db96be2b3651063112d04d2e80f56260594b1538',
+              '2001-11-20':'8ce1310dcfb8f4907aecc2414dc8dbd013b382cf9fc08e45b2e740b74f9fec79',
+            },
+            'source_hashes':hashes,
+            'scientific_predictions':0,
+          }
+          print(json.dumps(out,sort_keys=True,indent=2))
+          PY
+      - name: Preserve freeze candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC2AR_FREEZE_CANDIDATE
+          path: /tmp/ERC2AR_FREEZE_CANDIDATE.json
