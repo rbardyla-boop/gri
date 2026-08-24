@@ -1,0 +1,42 @@
+[
+  {
+    "opaque_id": "P90D-CAL-19f6417a98942f555e8245b2",
+    "sample_id": 299,
+    "t_evnt_start": 0.47698311443802
+  },
+  {
+    "opaque_id": "P90D-CAL-f1c6cf7857e86934c069a37f",
+    "sample_id": 766,
+    "t_evnt_start": 0.280180795606839
+  },
+  {
+    "opaque_id": "P90D-CAL-6013f8d17c2f599a65295baa",
+    "sample_id": 1416,
+    "t_evnt_start": 0.343370644653312
+  },
+  {
+    "opaque_id": "P90D-CAL-dfb336bfe0e4cc1a96998bcf",
+    "sample_id": 2530,
+    "t_evnt_start": 0.484271884685888
+  },
+  {
+    "opaque_id": "P90D-CAL-164f67f59fd4004127aa6589",
+    "sample_id": 2890,
+    "t_evnt_start": 0.495269167656564
+  },
+  {
+    "opaque_id": "P90D-CAL-0fae1f1413d2c90fce10a93f",
+    "sample_id": 4192,
+    "t_evnt_start": 0.401115017437024
+  },
+  {
+    "opaque_id": "P90D-CAL-89c819c60ca4e03ade99f371",
+    "sample_id": 7648,
+    "t_evnt_start": 0.46128232956282
+  },
+  {
+    "opaque_id": "P90D-CAL-d551e95a7e0698e3f60771ce",
+    "sample_id": 9100,
+    "t_evnt_start": 0.452273419087264
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "opaque_id": "P90D-SCI-71e7f53d6fa76091b30192a6",
+    "sample_id": 398,
+    "t_evnt_start": 0.469407875342414
+  },
+  {
+    "opaque_id": "P90D-SCI-758fa370f5a3d7ac3dc6670b",
+    "sample_id": 448,
+    "t_evnt_start": 0.48054081049545
+  },
+  {
+    "opaque_id": "P90D-SCI-5577dbafa5d8ad4cdd8a06a8",
+    "sample_id": 552,
+    "t_evnt_start": 0.356351540242019
+  },
+  {
+    "opaque_id": "P90D-SCI-be1912bba346216c141a45a7",
+    "sample_id": 559,
+    "t_evnt_start": 0.389886097845643
+  },
+  {
+    "opaque_id": "P90D-SCI-069b182e576bd19ccdb4c906",
+    "sample_id": 562,
+    "t_evnt_start": 0.218714067716814
+  },
+  {
+    "opaque_id": "P90D-SCI-f4613b97b949939525c05221",
+    "sample_id": 767,
+    "t_evnt_start": 0.297470282890471
+  },
+  {
+    "opaque_id": "P90D-SCI-93398dafb03c1a965f6acc51",
+    "sample_id": 826,
+    "t_evnt_start": 0.450453704513193
+  },
+  {
+    "opaque_id": "P90D-SCI-27ee0ed504a23b5ff1206d6b",
+    "sample_id": 964,
+    "t_evnt_start": 0.443376387796172
+  },
+  {
+    "opaque_id": "P90D-SCI-6f358e5b3bfb3eb64e7de0d3",
+    "sample_id": 1064,
+    "t_evnt_start": 0.468367430874905
+  },
+  {
+    "opaque_id": "P90D-SCI-3558a0a240ae99771946c577",
+    "sample_id": 1423,
+    "t_evnt_start": 0.362400218858456
+  },
+  {
+    "opaque_id": "P90D-SCI-363179253b19556fd427a0ca",
+    "sample_id": 1623,
+    "t_evnt_start": 0.415329026442302
+  },
+  {
+    "opaque_id": "P90D-SCI-dcbe7ca4388ebdee04e1eb88",
+    "sample_id": 1635,
+    "t_evnt_start": 0.447037850637968
+  },
+  {
+    "opaque_id": "P90D-SCI-23ff2e03d35e0561a54a4dc9",
+    "sample_id": 1743,
+    "t_evnt_start": 0.261746939449194
+  },
+  {
+    "opaque_id": "P90D-SCI-09fb6fb371a2665de0e82c1a",
+    "sample_id": 1838,
+    "t_evnt_start": 0.230055053988243
+  },
+  {
+    "opaque_id": "P90D-SCI-f054714ac365acf930fceff4",
+    "sample_id": 1842,
+    "t_evnt_start": 0.446480745993376
+  },
+  {
+    "opaque_id": "P90D-SCI-03dee2d40e9a8f38cc600eb3",
+    "sample_id": 2042,
+    "t_evnt_start": 0.42589289184119
+  },
+  {
+    "opaque_id": "P90D-SCI-e2502875c9bba91004b6e695",
+    "sample_id": 2463,
+    "t_evnt_start": 0.321989936846781
+  },
+  {
+    "opaque_id": "P90D-SCI-1a8dc96ff3e0baa1d76180e7",
+    "sample_id": 2471,
+    "t_evnt_start": 0.426523445860796
+  },
+  {
+    "opaque_id": "P90D-SCI-a05e04c30b5eeaa9456ae019",
+    "sample_id": 2632,
+    "t_evnt_start": 0.424509621170851
+  },
+  {
+    "opaque_id": "P90D-SCI-8a660511bd563c1d9a3ba9b2",
+    "sample_id": 3146,
+    "t_evnt_start": 0.230000201289046
+  },
+  {
+    "opaque_id": "P90D-SCI-22178c69bcee5b976aafd4a7",
+    "sample_id": 3175,
+    "t_evnt_start": 0.477141274223697
+  },
+  {
+    "opaque_id": "P90D-SCI-6a027831b192609cd7c1f6af",
+    "sample_id": 3578,
+    "t_evnt_start": 0.257127223320278
+  },
+  {
+    "opaque_id": "P90D-SCI-c7a1448f2dd6c50e5e9d8a50",
+    "sample_id": 3588,
+    "t_evnt_start": 0.267768703123383
+  },
+  {
+    "opaque_id": "P90D-SCI-63a177fa7079ff70520d8595",
+    "sample_id": 3596,
+    "t_evnt_start": 0.227828605980655
+  },
+  {
+    "opaque_id": "P90D-SCI-19548e0ccc81f76dd340c6b0",
+    "sample_id": 3882,
+    "t_evnt_start": 0.236887088281728
+  },
+  {
+    "opaque_id": "P90D-SCI-178934e93a74fb4d47a1a653",
+    "sample_id": 3938,
+    "t_evnt_start": 0.24313622775334
+  },
+  {
+    "opaque_id": "P90D-SCI-2b1556ec7fadd72a7a0f2b43",
+    "sample_id": 4178,
+    "t_evnt_start": 0.329734625505355
+  },
+  {
+    "opaque_id": "P90D-SCI-0dad2d55fc4a7d0566350639",
+    "sample_id": 4209,
+    "t_evnt_start": 0.303409052654918
+  },
+  {
+    "opaque_id": "P90D-SCI-0f05a421de7100c313111874",
+    "sample_id": 4318,
+    "t_evnt_start": 0.2984719137227
+  },
+  {
+    "opaque_id": "P90D-SCI-efb7dacf976d93c0786a63a2",
+    "sample_id": 4333,
+    "t_evnt_start": 0.32531847760028
+  },
+  {
+    "opaque_id": "P90D-SCI-4114ce9d8f856df2893e4a1e",
+    "sample_id": 4376,
+    "t_evnt_start": 0.275225252767765
+  },
+  {
+    "opaque_id": "P90D-SCI-acdad868cdfe39d8f9efdf7b",
+    "sample_id": 4636,
+    "t_evnt_start": 0.445387717310784
+  },
+  {
+    "opaque_id": "P90D-SCI-fae3ecce44977c9db45fc253",
+    "sample_id": 4686,
+    "t_evnt_start": 0.29311357407802
+  },
+  {
+    "opaque_id": "P90D-SCI-eb85f1fccdf4c633c566934a",
+    "sample_id": 4688,
+    "t_evnt_start": 0.238741736568862
+  },
+  {
+    "opaque_id": "P90D-SCI-d951b8be96ba7af68c5a6a56",
+    "sample_id": 4847,
+    "t_evnt_start": 0.328968581047502
+  },
+  {
+    "opaque_id": "P90D-SCI-97578bdf2b5c571e1ae9b326",
+    "sample_id": 4890,
+    "t_evnt_start": 0.284956395561987
+  },
+  {
+    "opaque_id": "P90D-SCI-1a633328cae19e0cd1999bcd",
+    "sample_id": 5195,
+    "t_evnt_start": 0.444401917239916
+  },
+  {
+    "opaque_id": "P90D-SCI-cd84bc96bade37950cf98d47",
+    "sample_id": 5460,
+    "t_evnt_start": 0.383315383724433
+  },
+  {
+    "opaque_id": "P90D-SCI-23e08350cd4248b4f7a8fa18",
+    "sample_id": 5573,
+    "t_evnt_start": 0.363703487455835
+  },
+  {
+    "opaque_id": "P90D-SCI-52e064bd1a546320fcd61d88",
+    "sample_id": 5876,
+    "t_evnt_start": 0.468786630618534
+  },
+  {
+    "opaque_id": "P90D-SCI-6e72b4e5bf45b4c0745de039",
+    "sample_id": 5969,
+    "t_evnt_start": 0.487361974054373
+  },
+  {
+    "opaque_id": "P90D-SCI-42f571dd60b4a6bd3aaf75b5",
+    "sample_id": 6251,
+    "t_evnt_start": 0.401611758274221
+  },
+  {
+    "opaque_id": "P90D-SCI-54109adb7b9f23c020fb6dad",
+    "sample_id": 6410,
+    "t_evnt_start": 0.275445493578549
+  },
+  {
+    "opaque_id": "P90D-SCI-0c07ff16458a7f625a5d39ff",
+    "sample_id": 6457,
+    "t_evnt_start": 0.21309361528389
+  },
+  {
+    "opaque_id": "P90D-SCI-9448aaa0f62fdfaa5743fe98",
+    "sample_id": 6511,
+    "t_evnt_start": 0.307906079107015
+  },
+  {
+    "opaque_id": "P90D-SCI-9f7cb7ea13b6b172392362f6",
+    "sample_id": 6573,
+    "t_evnt_start": 0.26202302946261
+  },
+  {
+    "opaque_id": "P90D-SCI-57d9337596755e8daa803d7c",
+    "sample_id": 6581,
+    "t_evnt_start": 0.464431595201587
+  },
+  {
+    "opaque_id": "P90D-SCI-ac0cb52903fd9dd189661867",
+    "sample_id": 6767,
+    "t_evnt_start": 0.484098774747892
+  },
+  {
+    "opaque_id": "P90D-SCI-c8852c14083254261c2e034d",
+    "sample_id": 6929,
+    "t_evnt_start": 0.467654097296177
+  },
+  {
+    "opaque_id": "P90D-SCI-ae2facadb2e7797e5ebc22df",
+    "sample_id": 6999,
+    "t_evnt_start": 0.487855579697367
+  },
+  {
+    "opaque_id": "P90D-SCI-38450fa8dc6156f014040e66",
+    "sample_id": 7280,
+    "t_evnt_start": 0.418107911387094
+  },
+  {
+    "opaque_id": "P90D-SCI-1e95acf89f64f938c6495c18",
+    "sample_id": 7443,
+    "t_evnt_start": 0.29088342628839
+  },
+  {
+    "opaque_id": "P90D-SCI-3d08626ce1e47810eeb2e480",
+    "sample_id": 7476,
+    "t_evnt_start": 0.404078252008755
+  },
+  {
+    "opaque_id": "P90D-SCI-7001078d9bd483c6d4a7b692",
+    "sample_id": 7558,
+    "t_evnt_start": 0.352952178274504
+  },
+  {
+    "opaque_id": "P90D-SCI-675f0878f81650a002798998",
+    "sample_id": 7577,
+    "t_evnt_start": 0.286621798662617
+  },
+  {
+    "opaque_id": "P90D-SCI-f321538d6a3d881892042238",
+    "sample_id": 7618,
+    "t_evnt_start": 0.254859721295138
+  },
+  {
+    "opaque_id": "P90D-SCI-b418b25518796b5f155a3de0",
+    "sample_id": 7659,
+    "t_evnt_start": 0.381165848159451
+  },
+  {
+    "opaque_id": "P90D-SCI-1e8d79cac7a0911a3c807476",
+    "sample_id": 7661,
+    "t_evnt_start": 0.485782239547622
+  },
+  {
+    "opaque_id": "P90D-SCI-410699a41cf4a248d7af4771",
+    "sample_id": 7701,
+    "t_evnt_start": 0.248684283509232
+  },
+  {
+    "opaque_id": "P90D-SCI-4db67fc2b500821e8eec154f",
+    "sample_id": 7716,
+    "t_evnt_start": 0.26044474524342
+  },
+  {
+    "opaque_id": "P90D-SCI-c7be3f0a348611d1d9e46258",
+    "sample_id": 8014,
+    "t_evnt_start": 0.282659948116114
+  },
+  {
+    "opaque_id": "P90D-SCI-b228da0946eedeb43bc5ed47",
+    "sample_id": 8307,
+    "t_evnt_start": 0.25858372191337
+  },
+  {
+    "opaque_id": "P90D-SCI-55bd3475ae5d4527499bfe41",
+    "sample_id": 8689,
+    "t_evnt_start": 0.342950248732786
+  },
+  {
+    "opaque_id": "P90D-SCI-3aa82946ac56d7017affaed7",
+    "sample_id": 9042,
+    "t_evnt_start": 0.374484355488257
+  }
+]

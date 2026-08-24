@@ -1,0 +1,51 @@
+{
+  "unit": "ERC-3D",
+  "phase": 1,
+  "status": "ERC3D_QUANTIZED_TIME_QUALIFICATION_PASS",
+  "protocol_head_sha": "f1543337605ed315fe40af92d27d4dc52a23298c",
+  "qualified_implementation_head_sha": "347380a0b5bcf7a39862dd47b49e3c215412e0b8",
+  "workflow_runs": {
+    "metadata_selection": 32721147250,
+    "remote_zip_index": 32721147468,
+    "quantized_time_calibration": 32721147201
+  },
+  "selection": {
+    "permanent_exclusion_count": 208,
+    "exclusion_union_sha256": "7f0104de7405323c954b7ebe688bc9f46ef07c8d133f6b6e1b01b8433105d3d2",
+    "calibration_8_sha256": "2db473e32f6d55adc9e00050f4da407db953f30f5aefee7a94e3a205a5f7fd95",
+    "reserved_science_64_sha256": "12d842682aa93f54a867e1194ad6e0c268ddebb04e076a7da8a4dc10c363fe9",
+    "zip_member_count": 9022,
+    "selected_binding_count": 72,
+    "selected_payload_bytes_during_index_gate": 0
+  },
+  "qualified_time_representation": {
+    "sample_count": 6400,
+    "published_sample_rate_hz": 6400,
+    "physical_endpoint_grid": "(arange(6400)+1)/6400",
+    "stored_first_time_s": 0.000156,
+    "stored_last_time_s": 1.0,
+    "min_raw_dt_s": 0.00015599999999993397,
+    "median_raw_dt_s": 0.000156000000000045,
+    "max_raw_dt_s": 0.00015700000000007375,
+    "max_integer_microsecond_residual_s": 0.0,
+    "max_endpoint_grid_residual_s": 5.00000000069889e-07,
+    "common_raw_float64_vector_sha256": "5fbf69daee8e11889b46cd483925a6b6b3dbbaf17ca17bd45254420f0fe0ee1f",
+    "common_integer_microsecond_vector_sha256": "82851c788ae37d3905a9f6f8d8cb732ddf83fd75b35242060999e6a7b151f5d2"
+  },
+  "boundary": {
+    "calibration_waveforms_opened": 8,
+    "science_waveforms_opened": 0,
+    "science_signal_columns_read": 0,
+    "scientific_predictions": 0,
+    "scorer_opened": false,
+    "same_set_rescue_authorized": false
+  },
+  "evidence": {
+    "artifact_id": 9517795027,
+    "artifact_zip_sha256": "662bf2193aeec978dddda6b5fcf0359837f7893171e13448f55e2198505fa820",
+    "contract_self_sha256": "c4e19b2add054d524e17835bd5a696b3c3bbc991b70169d643ac859971067e65",
+    "contract_file_sha256": "5734ad16f1d5bf468e588231c59e4993fe867190e72862696ebb025d8f8233b8",
+    "receipt_self_sha256": "60c40c6be05f63cfeb8fedf55ccc174ad8e9f5a71c369e33f6784f55ccda801e",
+    "receipt_file_sha256": "1a487f5e44033dddfd3791677dff15bb693238717d45afca9804fc4324ebfa5f"
+  }
+}
