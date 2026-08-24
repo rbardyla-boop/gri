@@ -1,0 +1,64 @@
+name: ERC-3D Remote ZIP Index
+
+on:
+  pull_request:
+    branches: [erc3c-protect90-index-time-fresh-transfer]
+    paths:
+      - 'experiments/erc3d/**'
+      - '.github/workflows/erc3d-remote-zip-index.yml'
+  workflow_dispatch:
+
+jobs:
+  index-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile range index and manifest code
+        run: python -m py_compile experiments/erc3d/*.py
+      - name: Index central directory without selected payload access
+        run: |
+          python -m experiments.erc3d.remote_zip_index \
+            --calibration-map experiments/erc3d/ERC3D_CALIBRATION_ACQUISITION_MAP.json \
+            --science-map experiments/erc3d/ERC3D_SCIENCE_ACQUISITION_MAP.json \
+            --output /tmp/ERC3D_ACQUISITION_INDEX.json \
+            | tee /tmp/ERC3D_REMOTE_ZIP_INDEX_STDOUT.txt
+      - name: Build and scan opaque manifests
+        run: |
+          mkdir -p /tmp/erc3d-producer
+          python -m experiments.erc3d.manifest --index /tmp/ERC3D_ACQUISITION_INDEX.json --output-dir /tmp/erc3d-producer
+          python -m experiments.erc3d.producer_boundary \
+            experiments/erc3d/ERC3D_PUBLIC_SELECTION.json \
+            experiments/erc3d/ERC3D_CALIBRATION_PUBLIC_SELECTION.json \
+            experiments/erc3d/ERC3D_METADATA_SELECTION_RECORD.json \
+            /tmp/erc3d-producer
+      - name: Assert archive count and zero selected payload reads
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ERC3D_ACQUISITION_INDEX.json'))
+          assert p['status']=='ERC3D_REMOTE_ZIP_INDEX_CAPTURED'
+          assert p['zip_entry_count']==9022 and p['pkl_member_count']==9022
+          assert p['calibration_member_count']==8 and p['science_member_count']==64 and p['selected_member_count']==72
+          assert p['selected_member_payload_bytes_read']==0 and p['selected_member_payload_ranges_requested']==0
+          assert p['waveform_members_opened']==0 and p['calibration_waveforms_opened']==0
+          assert p['science_waveforms_opened']==0 and p['science_signal_columns_read']==0
+          assert p['scientific_predictions']==0 and p['scorer_opened'] is False
+          assert p['same_set_rescue_authorized'] is False
+          print('ERC3D_REMOTE_ZIP_NO_PAYLOAD_GATE_PASS')
+          PY
+      - name: Preserve acquisition index and producer manifests
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3D_REMOTE_ZIP_INDEX
+          path: |
+            /tmp/ERC3D_ACQUISITION_INDEX.json
+            /tmp/ERC3D_REMOTE_ZIP_INDEX_STDOUT.txt
+            /tmp/erc3d-producer/ERC3D_CALIBRATION_PRODUCER_MANIFEST.json
+            /tmp/erc3d-producer/ERC3D_SCIENCE_PRODUCER_MANIFEST.json
