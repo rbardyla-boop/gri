@@ -8,6 +8,7 @@ on:
       - 'experiments/erc3a/**'
       - 'tests/test_erc3a_prelive.py'
       - '.github/workflows/erc3a-prelive-freeze.yml'
+      - '.github/workflows/erc3a-live.yml'
   workflow_dispatch:
 
 jobs:
@@ -21,12 +22,21 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Install test runner
-        run: python -m pip install --disable-pip-version-check pytest
+          python-version: '3.11.16'
+      - name: Install frozen test/runtime dependencies
+        run: python -m pip install --disable-pip-version-check pytest 'numpy==2.2.6' 'pandas==2.3.2'
+      - name: Assert exact runtime versions
+        run: |
+          python - <<'PY'
+          import platform,numpy,pandas
+          assert platform.python_version()=='3.11.16'
+          assert numpy.__version__=='2.2.6'
+          assert pandas.__version__=='2.3.2'
+          print('ERC3A_RUNTIME_BINDING_PASS')
+          PY
       - name: Compile ERC-3A pre-live source
         run: python -m compileall -q experiments/erc3a
-      - name: Run synthetic-only locator and isolation regression
+      - name: Run synthetic-only locator staging and isolation regression
         run: pytest -q tests/test_erc3a_prelive.py
       - name: Reconstruct private scorer map without exposing it to producer artifacts
         run: |
@@ -42,7 +52,7 @@ jobs:
           assert generated['acquisition_map_sha256']==committed['acquisition_map_sha256']
           assert generated['selected_sample_ids_sha256']==committed['selected_sample_ids_sha256']
           PY
-      - name: Emit pre-live freeze candidate
+      - name: Emit replacement pre-live freeze candidate
         run: |
           python -m experiments.erc3a.prelive_freeze \
             --index experiments/erc3a/ERC3A_ACQUISITION_INDEX.json \
@@ -54,14 +64,18 @@ jobs:
           import json
           p=json.load(open('/tmp/ERC3A_PRELIVE_FREEZE_CANDIDATE.json'))
           assert p['status']=='ERC3A_PRELIVE_FREEZE_CANDIDATE_READY'
+          assert p['runtime_binding']=={'python':'3.11.16','numpy':'2.2.6','pandas':'2.3.2'}
           assert p['waveform_members_opened']==0
           assert p['selected_member_payload_bytes_read']==0
           assert p['scientific_predictions']==0
           assert p['real_waveform_episodes_executed']==0
           assert p['same_set_rescue_authorized'] is False
+          assert 'protocol' in p['hashes']
+          assert 'payload_bridge' in p['hashes']
+          assert 'batch_runner' in p['hashes']
           print('ERC3A_PRELIVE_FREEZE_CANDIDATE_READY')
           PY
-      - name: Preserve candidate receipt
+      - name: Preserve replacement candidate receipt
         uses: actions/upload-artifact@v4
         with:
           name: ERC3A_PRELIVE_FREEZE_CANDIDATE
