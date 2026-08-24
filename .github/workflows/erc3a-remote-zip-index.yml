@@ -1,0 +1,62 @@
+name: ERC-3A Remote ZIP Index
+
+on:
+  pull_request:
+    branches: [erc2ar-damadics-nonoverlap-transfer]
+    paths:
+      - 'experiments/erc3a/ERC3A_PUBLIC_SELECTION.json'
+      - 'experiments/erc3a/remote_zip_index.py'
+      - '.github/workflows/erc3a-remote-zip-index.yml'
+  workflow_dispatch:
+
+jobs:
+  index-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen public selection hash
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          p=json.load(open('experiments/erc3a/ERC3A_PUBLIC_SELECTION.json'))
+          body=json.dumps(p,sort_keys=True,separators=(',',':'),ensure_ascii=True)
+          assert hashlib.sha256(body.encode()).hexdigest()=='10b3ab004488d4129a52b74172a2e7d1c4206d05e44af1744ebc79fbb6e4ed1d'
+          assert len(p)==64
+          print('ERC3A_PUBLIC_SELECTION_HASH_PASS')
+          PY
+      - name: Compile remote ZIP indexer
+        run: python -m py_compile experiments/erc3a/remote_zip_index.py
+      - name: Index remote ZIP64 central directory without member payload access
+        run: |
+          python -m experiments.erc3a.remote_zip_index \
+            --selection experiments/erc3a/ERC3A_PUBLIC_SELECTION.json \
+            --output /tmp/ERC3A_REMOTE_ZIP_INDEX.json \
+            | tee /tmp/ERC3A_REMOTE_ZIP_INDEX_STDOUT.txt
+      - name: Assert archive-structure-only boundary
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ERC3A_REMOTE_ZIP_INDEX.json'))
+          assert p['status']=='ERC3A_REMOTE_ZIP_INDEX_CAPTURED'
+          assert p['pkl_member_count']==9022
+          assert p['selected_member_count']==64
+          assert p['selected_member_payload_bytes_read']==0
+          assert p['waveform_members_opened']==0
+          assert p['scientific_predictions']==0
+          assert p['same_set_rescue_authorized'] is False
+          print('ERC3A_REMOTE_ZIP_STRUCTURE_GATE_PASS')
+          PY
+      - name: Preserve selected-member offset index
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3A_REMOTE_ZIP_INDEX
+          path: |
+            /tmp/ERC3A_REMOTE_ZIP_INDEX.json
+            /tmp/ERC3A_REMOTE_ZIP_INDEX_STDOUT.txt
