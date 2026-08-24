@@ -1,0 +1,157 @@
+name: ERC-3A Frozen Live
+
+on:
+  pull_request:
+    branches: [erc2ar-damadics-nonoverlap-transfer]
+    paths:
+      - 'experiments/erc3a/ERC3A_FREEZE.json'
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.16'
+      - name: Install frozen runtime
+        run: python -m pip install --disable-pip-version-check 'numpy==2.2.6' 'pandas==2.3.2'
+      - name: Verify freeze and exact source hashes before payload access
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          freeze_path=pathlib.Path('experiments/erc3a/ERC3A_FREEZE.json')
+          freeze=json.loads(freeze_path.read_text())
+          assert freeze['status']=='ERC3A_LIVE_AUTHORIZED'
+          candidate=freeze['candidate']
+          assert candidate['status']=='ERC3A_PRELIVE_FREEZE_CANDIDATE_READY'
+          observed=candidate['freeze_candidate_sha256']
+          body=dict(candidate); body.pop('freeze_candidate_sha256')
+          canonical=(json.dumps(body,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False)+'\n').encode()
+          assert hashlib.sha256(canonical).hexdigest()==observed
+          assert freeze['freeze_candidate_sha256']==observed
+          assert candidate['runtime_binding']=={'python':'3.11.16','numpy':'2.2.6','pandas':'2.3.2'}
+          parent=subprocess.check_output(['git','rev-parse','HEAD^'],text=True).strip()
+          assert parent==freeze['qualified_head_sha'], (parent, freeze['qualified_head_sha'])
+          changed=subprocess.check_output(['git','diff','--name-only','HEAD^','HEAD'],text=True).splitlines()
+          assert changed==['experiments/erc3a/ERC3A_FREEZE.json'], changed
+          for group, rows in candidate['hashes'].items():
+              for label, expected in rows.items():
+                  if label.startswith('external/'):
+                      continue
+                  path=pathlib.Path(label)
+                  assert path.is_file(), label
+                  actual=hashlib.sha256(path.read_bytes()).hexdigest()
+                  assert actual==expected, (group,label,actual,expected)
+          assert not pathlib.Path('experiments/erc3a/ERC3A_SCORER_MAP.json').exists()
+          print('ERC3A_FREEZE_HASH_GATE_PASS')
+          PY
+          python - <<'PY'
+          import numpy,pandas,platform
+          assert platform.python_version()=='3.11.16'
+          assert numpy.__version__=='2.2.6'
+          assert pandas.__version__=='2.3.2'
+          print('ERC3A_RUNTIME_BINDING_PASS')
+          PY
+      - name: Acquire and stage exactly 64 producer-clean waveforms
+        run: |
+          mkdir -p /tmp/erc3a/producer /tmp/erc3a/evidence
+          python -m experiments.erc3a.stage_waveforms \
+            --acquisition-map experiments/erc3a/ERC3A_ACQUISITION_MAP.json \
+            --index experiments/erc3a/ERC3A_ACQUISITION_INDEX.json \
+            --producer-dir /tmp/erc3a/producer \
+            --acquisition-receipt /tmp/erc3a/evidence/ERC3A_ACQUISITION_RECEIPT.json \
+            --stage-receipt /tmp/erc3a/evidence/ERC3A_STAGE_RECEIPT.json \
+            | tee /tmp/erc3a/evidence/ERC3A_STAGE_STDOUT.txt
+          python -m experiments.erc3a.producer_boundary /tmp/erc3a/producer
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/erc3a/evidence/ERC3A_STAGE_RECEIPT.json'))
+          assert p['status']=='ERC3A_WAVEFORMS_STAGED_PRODUCER_CLEAN'
+          assert p['case_count']==64
+          assert p['waveform_members_opened']==64
+          assert p['scientific_predictions']==0
+          assert p['producer_identity_boundary_pass'] is True
+          PY
+      - name: Emit live prediction seal
+        run: |
+          python -m experiments.erc3a.run_batch \
+            --producer-dir /tmp/erc3a/producer \
+            --output /tmp/erc3a/evidence/ERC3A_LIVE_PREDICTIONS.json \
+            | tee /tmp/erc3a/evidence/ERC3A_LIVE_STDOUT.txt
+      - name: Emit independent deterministic replay seal
+        run: |
+          python -m experiments.erc3a.run_batch \
+            --producer-dir /tmp/erc3a/producer \
+            --output /tmp/erc3a/evidence/ERC3A_REPLAY_PREDICTIONS.json \
+            | tee /tmp/erc3a/evidence/ERC3A_REPLAY_STDOUT.txt
+          cmp /tmp/erc3a/evidence/ERC3A_LIVE_PREDICTIONS.json /tmp/erc3a/evidence/ERC3A_REPLAY_PREDICTIONS.json
+          sha256sum /tmp/erc3a/evidence/ERC3A_LIVE_PREDICTIONS.json | tee /tmp/erc3a/evidence/ERC3A_PREDICTION_SEAL.txt
+      - name: Reconstruct frozen scorer only after prediction seals
+        run: |
+          scorer_dir=$(mktemp -d)
+          python -m experiments.erc3a.select_metadata --out-dir "$scorer_dir" >/tmp/erc3a/evidence/ERC3A_SCORER_RECONSTRUCT_STDOUT.txt
+          export SCORER_MAP="$scorer_dir/ERC3A_SCORER_MAP.json"
+          echo "SCORER_MAP=$SCORER_MAP" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import hashlib,json,os
+          freeze=json.load(open('experiments/erc3a/ERC3A_FREEZE.json'))
+          expected=freeze['candidate']['hashes']['scorer_map_receipt']['external/ERC3A_SCORER_MAP.json']
+          actual=hashlib.sha256(open(os.environ['SCORER_MAP'],'rb').read()).hexdigest()
+          assert actual==expected, (actual,expected)
+          print('ERC3A_SCORER_RECEIPT_MATCH')
+          PY
+      - name: Score only after live/replay equality
+        run: |
+          python -m experiments.erc3a.scoring \
+            --live /tmp/erc3a/evidence/ERC3A_LIVE_PREDICTIONS.json \
+            --replay /tmp/erc3a/evidence/ERC3A_REPLAY_PREDICTIONS.json \
+            --scorer-map "$SCORER_MAP" \
+            --output /tmp/erc3a/evidence/ERC3A_SCORE.json \
+            | tee /tmp/erc3a/evidence/ERC3A_SCORE_STDOUT.txt
+      - name: Seal terminal receipt
+        if: success()
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,platform,numpy,pandas
+          freeze=json.load(open('experiments/erc3a/ERC3A_FREEZE.json'))
+          stage=json.load(open('/tmp/erc3a/evidence/ERC3A_STAGE_RECEIPT.json'))
+          score=json.load(open('/tmp/erc3a/evidence/ERC3A_SCORE.json'))
+          receipt={
+            'unit':'ERC-3A',
+            'status':score['interpretation'],
+            'workflow_run_id':os.environ['GITHUB_RUN_ID'],
+            'source_head':os.environ['GITHUB_SHA'],
+            'qualified_head_sha':freeze['qualified_head_sha'],
+            'freeze_candidate_sha256':freeze['freeze_candidate_sha256'],
+            'prediction_seal_sha256':score['prediction_seal_sha256'],
+            'waveform_members_opened':stage['waveform_members_opened'],
+            'case_count':score['case_count'],
+            'top1':score['top1'],
+            'primary_per_line':score['primary_per_line'],
+            'primary_margin_over_magnitude':score['primary_margin_over_magnitude'],
+            'primary_margin_over_single_ended':score['primary_margin_over_single_ended'],
+            'gates':score['gates'],
+            'runtime':{'python':platform.python_version(),'numpy':numpy.__version__,'pandas':pandas.__version__},
+            'llm_calls':0,
+            'same_set_rescue_authorized':False,
+          }
+          canonical=json.dumps(receipt,sort_keys=True,separators=(',',':'),ensure_ascii=True).encode()
+          receipt['record_sha256']=hashlib.sha256(canonical).hexdigest()
+          open('/tmp/erc3a/evidence/ERC3A_TERMINAL_RECEIPT.json','w').write(json.dumps(receipt,sort_keys=True,indent=2)+'\n')
+          print(json.dumps(receipt,sort_keys=True,indent=2))
+          PY
+      - name: Preserve live evidence regardless of terminal outcome
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ERC3A_LIVE_EVIDENCE
+          if-no-files-found: warn
+          path: |
+            /tmp/erc3a/evidence/*
