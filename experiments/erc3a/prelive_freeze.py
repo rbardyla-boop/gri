@@ -8,6 +8,12 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 ERC3A_ROOT = REPO_ROOT / "experiments" / "erc3a"
+PROTOCOL_PATH = REPO_ROOT / "docs" / "ERC3A-PROTECT90-ONSET-PRECEDENCE.md"
+RUNTIME_BINDING = {
+    "python": "3.11",
+    "numpy": "2.2.6",
+    "pandas": "2.3.2",
+}
 
 
 def sha256_file(path: Path) -> str:
@@ -50,21 +56,15 @@ def build_candidate(
     ]
     if index is not None:
         selection_files.append(index)
-    rule_files = [
-        ERC3A_ROOT / "select_metadata.py",
-        ERC3A_ROOT / "producer_boundary.py",
-        ERC3A_ROOT / "acquire_member.py",
-        ERC3A_ROOT / "manifest.py",
-        ERC3A_ROOT / "locator.py",
-        ERC3A_ROOT / "scoring.py",
-        ERC3A_ROOT / "channel_schema.py",
-    ]
     hashes = {
+        "protocol": _file_hashes([PROTOCOL_PATH]),
         "executable_source": _file_hashes(source_files + test_files),
         "workflow": _file_hashes(workflow_files),
         "selection_and_bindings": _file_hashes(selection_files),
         "acquisition_mapping_rule": _file_hashes([ERC3A_ROOT / "acquire_member.py"]),
+        "payload_bridge": _file_hashes([ERC3A_ROOT / "stage_waveforms.py"]),
         "producer_manifest_rule": _file_hashes([ERC3A_ROOT / "manifest.py"]),
+        "batch_runner": _file_hashes([ERC3A_ROOT / "run_batch.py"]),
         "scorer": _file_hashes([ERC3A_ROOT / "scoring.py"]),
         "locator": _file_hashes([ERC3A_ROOT / "locator.py"]),
     }
@@ -74,6 +74,7 @@ def build_candidate(
     candidate = {
         "unit": "ERC-3A",
         "status": "ERC3A_PRELIVE_FREEZE_CANDIDATE_READY",
+        "runtime_binding": RUNTIME_BINDING,
         "waveform_archive_downloaded": False,
         "waveform_members_opened": 0,
         "selected_member_payload_bytes_read": 0,
