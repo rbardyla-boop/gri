@@ -39,8 +39,24 @@ Run the recurrent/multi-horizon failure probe:
 PYTHONPATH=. python run_recurrent_probe.py
 ```
 
-The current pre-lock verdict is **FAIL / CONTINUE ENGINEERING**. Bounded replay repairs the observed continual-forgetting failure, while the transition architecture remains unresolved: latent dynamics loses to a trivial one-step copy baseline; direct pixel dynamics beats that baseline but accumulates large open-loop rollout error; the first recurrent multi-horizon repair suppresses error growth only by collapsing into a poor predictor that loses simple controls.
+## Nursery-1 hidden-dynamics gate
 
-See `PRELOCK_FINDINGS.md` and `evidence/` for preserved receipts.
+Nursery-1 is the current harder pre-lock world. It adds three persistent objects, autonomous motion, collisions, boundary interactions, delayed action effects, and a hidden episode dynamics mode. Hidden mode and interaction flags are evaluator-only; the learner still receives numeric sensor/action data only.
+
+The generator now stratifies training and test episodes across all three hidden modes. This repairs an experiment-design defect found during the first attempted qualification, where a held-out mode could be absent from the training cohort.
+
+Run the balanced Nursery-1 engineering probe:
+
+```bash
+PYTHONPATH=. python run_nursery1_probe.py 160
+```
+
+The probe intentionally exits non-zero when any gate fails. The preserved seed-160 balanced probe fails all six conjunctive gates, so it is evidence against the current residual architecture, not a CI success target. CI runs only deterministic smoke checks; it does not reinterpret a scientific/engineering FAIL as a build failure.
+
+See `NURSERY1_FINDINGS.md` for the full pre-lock failure map and the next authorized successor.
+
+The current pre-lock verdict is **FAIL / CONTINUE ENGINEERING**. Bounded replay repairs the observed continual-forgetting failure, while the transition architecture remains unresolved: latent dynamics loses to a trivial one-step copy baseline; direct pixel dynamics beats that baseline but accumulates large open-loop rollout error; the first recurrent multi-horizon repair suppresses error growth only by collapsing into a poor predictor that loses simple controls; and the current balanced Nursery-1 residual model still fails its simple velocity-null gates.
+
+See `PRELOCK_FINDINGS.md`, `NURSERY1_FINDINGS.md`, and `evidence/` for preserved receipts.
 
 A passing engineering gate would still not establish grounded language, AGI, novelty, or superiority on a recognized external benchmark.
