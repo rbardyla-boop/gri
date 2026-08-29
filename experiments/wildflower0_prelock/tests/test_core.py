@@ -96,3 +96,16 @@ def test_pixel_variant_forward_shape_and_finite() -> None:
     assert out.shape == frame.shape
     assert torch.isfinite(out).all()
     assert bool((out >= 0).all()) and bool((out <= 1).all())
+
+
+def test_recurrent_world_model_shapes_and_kinematic_control() -> None:
+    from wildflower0.recurrent import RecurrentWorldModel, kinematic_baseline_rollout
+    model = RecurrentWorldModel()
+    pairs = collect_pairs(77, 40, (0,), switch_period=None)
+    frame = torch.tensor(pairs[0].current.frame[None])
+    state = model.state_from_observation(frame)
+    next_state = model.imagine_step(state, torch.tensor([pairs[0].current.action]))
+    assert state.shape == next_state.shape == (1, 64)
+    assert model.decode(next_state).shape == (1, 3, 12, 12)
+    assert torch.isfinite(next_state).all()
+    assert np.isfinite(kinematic_baseline_rollout(pairs, 4))
