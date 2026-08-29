@@ -12,8 +12,11 @@ on:
       - "experiments/wildflower0_prelock/run_dual_authority0.py"
       - "experiments/wildflower0_prelock/tests/test_dual_authority0.py"
       - "experiments/wildflower0_prelock/tests/test_dual_authority0_boundary.py"
+      - "experiments/wildflower0_prelock/tests/test_authority_boundary.py"
+      - "experiments/wildflower0_prelock/tests/test_nursery1.py"
       - "experiments/wildflower0_prelock/probe_innovation_model.py"
       - "experiments/wildflower0_prelock/qualify_authority190.py"
+      - "experiments/wildflower0_prelock/wildflower0/nursery1.py"
       - ".github/workflows/wildflower-dual-authority0-preflight.yml"
       - ".github/workflows/wildflower-dual-authority0-execution.yml"
   pull_request:
@@ -25,6 +28,11 @@ on:
       - "experiments/wildflower0_prelock/run_dual_authority0.py"
       - "experiments/wildflower0_prelock/tests/test_dual_authority0.py"
       - "experiments/wildflower0_prelock/tests/test_dual_authority0_boundary.py"
+      - "experiments/wildflower0_prelock/tests/test_authority_boundary.py"
+      - "experiments/wildflower0_prelock/tests/test_nursery1.py"
+      - "experiments/wildflower0_prelock/probe_innovation_model.py"
+      - "experiments/wildflower0_prelock/qualify_authority190.py"
+      - "experiments/wildflower0_prelock/wildflower0/nursery1.py"
       - ".github/workflows/wildflower-dual-authority0-preflight.yml"
       - ".github/workflows/wildflower-dual-authority0-execution.yml"
 
@@ -64,7 +72,7 @@ jobs:
             tests/test_dual_authority0_boundary.py \
             tests/test_authority_boundary.py \
             tests/test_nursery1.py
-      - name: Print deterministic source digests
+      - name: Print deterministic freeze digests
         run: |
           python - <<'PY'
           import hashlib
@@ -74,8 +82,15 @@ jobs:
               "DUAL_AUTHORITY_0_PACKET_CONTRACT.md",
               "dual_authority0.py",
               "run_dual_authority0.py",
+              "probe_innovation_model.py",
+              "qualify_authority190.py",
+              "wildflower0/nursery1.py",
               "tests/test_dual_authority0.py",
               "tests/test_dual_authority0_boundary.py",
+              "tests/test_authority_boundary.py",
+              "tests/test_nursery1.py",
+              "../../.github/workflows/wildflower-dual-authority0-preflight.yml",
+              "../../.github/workflows/wildflower-dual-authority0-execution.yml",
           ):
               print(name, hashlib.sha256(Path(name).read_bytes()).hexdigest())
           PY
