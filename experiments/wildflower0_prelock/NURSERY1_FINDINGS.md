@@ -1,6 +1,6 @@
 # WILDFLOWER-0 / Nursery-1 pre-lock findings
 
-Status: engineering shakeout only. Architecture freeze is blocked.
+Status: engineering shakeout only. The authority successor has now cleared a fresh hosted replication/promotion gate, but architecture freeze and `PRIMITIVE-0` remain separately unauthorized.
 
 ## Why Nursery-1 exists
 
@@ -68,7 +68,7 @@ Result: `QUALIFICATION_FAIL_WITH_LATENT_MODE_COVERAGE_DEFECT`.
 
 ## Balanced-mode repair
 
-The committed Nursery-1 instrument now selects training and test episode seeds using a deterministic generator-only stratifier. It guarantees equal counts for modes 0, 1 and 2 while never exposing mode to the learner.
+The committed Nursery-1 instrument selects training and test episode seeds using a deterministic generator-only stratifier. It guarantees equal counts for modes 0, 1 and 2 while never exposing mode to the learner.
 
 A balanced probe was then run with model seed 160 using two training and two test episodes per hidden mode. The residual model still failed the gates:
 
@@ -80,24 +80,101 @@ A balanced probe was then run with model seed 160 using two training and two tes
 
 The important correction is that this failure can no longer be blamed on missing hidden-mode coverage.
 
-## Current failure localization
+## Innovation-triggered authority successor
+
+The failure pattern suggested that the learned correction had useful information in some regimes but lacked a reliable right to override the transparent velocity null everywhere. The successor therefore separates **prediction** from **authority**.
+
+The base prediction remains constant velocity. Recent learner-visible numeric prediction innovation is summarized over a 12-step history. With a frozen threshold of `0.30` cells and width `0.30`, that history controls a convex blend between the transparent null and the learned proposal. Open-loop learned authority decays by `0.998` per predicted step. Hidden mode and evaluator-only event flags are not inputs to the authority calculation.
+
+Regression tests explicitly verify that changing evaluator-only mode metadata does not change the learner projection and that zero innovation gives the learned proposal zero external authority even when an adversarial model asks for full authority internally.
+
+### Seed-190 fresh qualification
+
+The candidate and authority constants were frozen before the fresh seed-190 qualification.
+
+Result versus the velocity null:
+
+| metric | mean | worst | gate |
+|---|---:|---:|---:|
+| h1 ratio | 0.9923 | 1.0575 | worst <= 1.10 |
+| h8 ratio | 0.7446 | 0.9969 | mean <= 0.90; worst <= 1.00 |
+| h32 ratio | 0.7823 | 0.9995 | mean <= 0.85; worst <= 1.00 |
+| event h8 ratio | 0.7445 | 0.9969 | mean <= 0.90 |
+
+All six core gates passed. The same learned model with the external authority boundary removed reached worst h1 ratio `1.4774`, demonstrating why a separate authority boundary was worth testing.
+
+Seed-190 semantic receipt:
+
+`44fd012e748897b20e5eb94998f33d7ba49fdc1af8439e0bd52a30520f001215`
+
+Exact preserved artifact SHA-256:
+
+`eec6229a4dae2f94917a8c942b64876e718386456c183332baa6a6b737fb66e0`
+
+This was a qualification PASS, not yet a promotion.
+
+## Preregistered replication 230
+
+Before opening the fresh replication set, the candidate source, seed-190 receipt, authority constants, model seed `230`, generator offsets, six core gates, three simple transparent controls, and mechanism-credit margins were frozen in `AUTHORITY_REPLICATION_230_PREREGISTRATION.md` and `AUTHORITY_FREEZE_MANIFEST.json`.
+
+The ordinary hosted pre-lock workflows were required to pass before a separate authorization-file commit could trigger the fresh run. The one-shot workflow verified the authorization parent SHA and all frozen source hashes before executing.
+
+Fresh mode-balanced training/test episode IDs were generated only inside that authorized run. The exact runner then executed twice and produced byte-identical JSON output.
+
+### Replication-230 result
+
+| metric | mean | worst | gate |
+|---|---:|---:|---:|
+| h1 ratio | **0.9689** | **1.0338** | worst <= 1.10 |
+| h8 ratio | **0.7817** | **0.9953** | mean <= 0.90; worst <= 1.00 |
+| h32 ratio | **0.7969** | **0.9959** | mean <= 0.85; worst <= 1.00 |
+| event h8 ratio | **0.7816** | **0.9952** | mean <= 0.90 |
+
+All six core replication gates passed.
+
+The preregistered transparent controls did not explain the effect. Their mean h8 ratio was about `1.02865` and mean h32 ratio about `1.00410`; the candidate beat the strongest simple control by more than the required `0.05` margin at both horizons. The ungated learned model again violated the one-step safety boundary with worst h1 ratio `1.45055`, while the authority-controlled candidate remained at `1.03377`.
+
+Therefore all three preregistered mechanism gates also passed:
+
+- `beats_best_simple_h8_by_0_05`: PASS
+- `beats_best_simple_h32_by_0_05`: PASS
+- `authority_restores_h1_safety`: PASS
+
+Hosted result states:
+
+- `replication_passed = true`
+- `mechanism_credit_passed = true`
+- `promotion_gate_passed = true`
+- `primitive0_authorized = false`
+
+Replication semantic receipt:
+
+`a9795b32fe17fb9af71e48e6f23849995404c514b853e6d58b8fa0b51df72a54`
+
+Exact canonical result-file SHA-256:
+
+`9c0c742229c471ca55f170c5ffdb3abda014450782612b4aac17dc1e5da261a9`
+
+Hosted artifact ZIP digest:
+
+`2a5e71d8eedb66165e99072dc8292fc45c8d6948a0cf5115c9fab1a82692a3f6`
+
+The surprise-injection suite remained descriptive only. It produced mean h8 ratio `0.6854` and mean h32 ratio `0.7884`; these values did not contribute to the registered promotion verdict.
+
+## Current interpretation
 
 1. Nursery-0 compounding error was real.
 2. Stable low-information prediction can masquerade as good rollout stability.
 3. A numeric object-state scaffold removes sparse-pixel and renderer ambiguity but does not by itself solve dynamics.
-4. Learned residual dynamics show a repeatable multi-horizon signal in some modes/seeds.
-5. The current residual model does not reliably know when to defer to the transparent velocity null.
-6. Hidden-mode coverage must be stratified by the generator, even though mode remains forbidden learner input.
+4. A learned residual can contain useful multi-horizon information while still being unsafe as the sole predictor.
+5. Separating **what the learned model predicts** from **when it has authority to override a transparent null** survived a fresh mode-balanced hosted replication under fixed source bytes and fixed gates.
+6. The positive result is currently evidence for this narrow mechanism in Nursery-1, not a claim about AGI, consciousness, general world modeling, or real-world superiority.
+7. The experiment still uses an explicit object-centroid scaffold. Removing that scaffold remains a later and materially harder developmental-learning question.
 
 ## Next gate
 
-Do not tune the spent seeds.
+Do not tune seed 230 or reopen the spent qualification sets.
 
-The next successor should test an **innovation-triggered authority boundary** on fresh seeds: the learned residual is allowed to override the transparent null only when recent numeric prediction innovations justify that authority. The gate must be derived from learner-visible numeric history, not hidden mode labels. Compare it against:
+The authority mechanism is now eligible for a separately reviewed `PRIMITIVE-0` gate because the preregistered promotion condition passed. Eligibility is not authorization: `PRIMITIVE-0` must remain unopened until its frozen representation exam, interfaces, baselines, and promotion semantics are re-read against the current WILDFLOWER objective and an explicit execution boundary is recorded.
 
-- velocity-only null;
-- residual model with no authority boundary;
-- direct multi-horizon forecast control;
-- surprise-injection trajectories kept separate from deterministic qualification.
-
-Until that successor clears every preregistered mode-balanced gate, WILDFLOWER-0 remains pre-lock and `PRIMITIVE-0` stays unopened.
+The next action is therefore review/qualification of the already-frozen `PRIMITIVE-0` machine-native interchange instrument, not more Nursery-1 parameter search.
