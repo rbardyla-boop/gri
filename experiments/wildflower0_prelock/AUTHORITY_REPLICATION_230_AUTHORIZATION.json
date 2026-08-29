@@ -1,0 +1,16 @@
+{
+  "status": "AUTHORIZED_ONE_SHOT_REPLICATION_230",
+  "authorized_parent_sha": "9011e0d0b5e408d616f79a4eda763f3ac68220bf",
+  "model_seed": 230,
+  "run_count": 1,
+  "primitive0_authorized": false,
+  "architecture_freeze_authorized": false,
+  "source_sha256": {
+    "probe_innovation_model.py": "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1",
+    "qualify_authority190.py": "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e",
+    "run_authority_replication230.py": "411e04af4dfca09bbc38722f2f46e301c239ee94c3ba86aed758d1dd7c589895",
+    "AUTHORITY_REPLICATION_230_PREREGISTRATION.md": "d39d00eca534162bf6baa17fdd3fb30a03b6faf780b608f9f635a3ae4e6701c2",
+    "AUTHORITY_FREEZE_MANIFEST.json": "63a823fb2b5f156e2e2d54d152a1676ae34ea5f48952ae59be0ff34e80b25ac7",
+    "wildflower0/nursery1.py": "a402e99c6374fffa23af4a2ef1e32a67141c41cf7ece020c12fe2974e65753d6"
+  }
+}
