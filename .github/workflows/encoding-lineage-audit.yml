@@ -6,6 +6,7 @@ on:
       - wildflower-0-prelock-shakeout
     paths:
       - "experiments/wildflower0_prelock/inspect_encoding_lineage.py"
+      - "experiments/wildflower0_prelock/extract_encoding_conclusions.py"
       - ".github/workflows/encoding-lineage-audit.yml"
       - "ENCODING-*.zip"
   workflow_dispatch:
@@ -24,6 +25,9 @@ jobs:
       - name: Inspect ENCODING archives without executing them
         working-directory: experiments/wildflower0_prelock
         run: python inspect_encoding_lineage.py
+      - name: Extract historical conclusion text without executing archived code
+        working-directory: experiments/wildflower0_prelock
+        run: python extract_encoding_conclusions.py
       - uses: actions/upload-artifact@v4
         with:
           name: encoding-lineage-static-audit
