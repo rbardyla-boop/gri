@@ -14,6 +14,7 @@ Current components:
 - latent action dynamics;
 - append-only hash-chained episodic history with bounded active memory;
 - direct pixel-dynamics alternative;
+- observation-corrected recurrent multi-horizon alternative;
 - deterministic replay/static dependency checks;
 - trivial baseline comparisons;
 - sequential forgetting and open-loop compounding tests.
@@ -21,7 +22,7 @@ Current components:
 Run the main shakeout:
 
 ```bash
-PYTHONPATH=. python -m compileall -q wildflower0 tests run_shakeout.py run_variant_probe.py
+PYTHONPATH=. python -m compileall -q wildflower0 tests run_shakeout.py run_variant_probe.py run_recurrent_probe.py
 PYTHONPATH=. python -m pytest -q -W error
 PYTHONPATH=. python run_shakeout.py --seeds 4 --train-steps 180
 ```
@@ -32,7 +33,13 @@ Run the materially different pixel-dynamics probe:
 PYTHONPATH=. python run_variant_probe.py
 ```
 
-The current pre-lock verdict is **FAIL / CONTINUE ENGINEERING**. Bounded replay repairs the observed continual-forgetting failure, while the transition architecture remains unresolved: latent dynamics loses to a trivial one-step copy baseline; direct pixel dynamics beats that baseline but accumulates large open-loop rollout error.
+Run the recurrent/multi-horizon failure probe:
+
+```bash
+PYTHONPATH=. python run_recurrent_probe.py
+```
+
+The current pre-lock verdict is **FAIL / CONTINUE ENGINEERING**. Bounded replay repairs the observed continual-forgetting failure, while the transition architecture remains unresolved: latent dynamics loses to a trivial one-step copy baseline; direct pixel dynamics beats that baseline but accumulates large open-loop rollout error; the first recurrent multi-horizon repair suppresses error growth only by collapsing into a poor predictor that loses simple controls.
 
 See `PRELOCK_FINDINGS.md` and `evidence/` for preserved receipts.
 
