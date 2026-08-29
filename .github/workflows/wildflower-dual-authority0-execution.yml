@@ -1,0 +1,107 @@
+name: Wildflower Dual Authority 0 scored execution
+
+on:
+  push:
+    branches:
+      - wildflower-0-prelock-shakeout
+    paths:
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_AUTHORIZATION.json"
+
+permissions:
+  contents: read
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/wildflower0_prelock
+    env:
+      PYTHONHASHSEED: "0"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install frozen runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==2.3.5 pytest==9.0.2
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Verify one-shot authorization, parent, manifest, and frozen bytes
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          import subprocess
+
+          auth = json.loads(Path("DUAL_AUTHORITY_0_AUTHORIZATION.json").read_text())
+          parent = subprocess.check_output(["git", "rev-parse", "HEAD^"], text=True).strip()
+          if auth["authorized_parent_sha"] != parent:
+              raise SystemExit(f"authorization parent mismatch: {parent}")
+          if auth["model_seed"] != 310 or auth["run_count"] != 1:
+              raise SystemExit("invalid one-shot authorization")
+
+          manifest_path = Path("DUAL_AUTHORITY_0_FREEZE_MANIFEST.json")
+          manifest_digest = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+          if auth["freeze_manifest_sha256"] != manifest_digest:
+              raise SystemExit("freeze manifest digest mismatch")
+
+          manifest = json.loads(manifest_path.read_text())
+          if manifest["status"] != "FROZEN_PRE_EXECUTION":
+              raise SystemExit("manifest is not frozen")
+          if manifest["scored_execution_authorized"] is not False:
+              raise SystemExit("manifest improperly self-authorizes execution")
+
+          for name, wanted in manifest["source_sha256"].items():
+              got = hashlib.sha256(Path(name).read_bytes()).hexdigest()
+              if got != wanted:
+                  raise SystemExit(f"source hash mismatch: {name}: {got}")
+          print("authorization_and_frozen_bytes: PASS")
+          PY
+      - name: Regression tests
+        run: |
+          python -m pytest -q -W error \
+            tests/test_dual_authority0.py \
+            tests/test_dual_authority0_boundary.py \
+            tests/test_authority_boundary.py \
+            tests/test_nursery1.py
+      - name: One-shot scored execution with exact replay
+        run: |
+          mkdir -p artifacts
+          python run_dual_authority0.py > artifacts/dual_authority0_stdout_run1.json
+          cp artifacts/dual_authority0.json artifacts/dual_authority0_run1.json
+          python run_dual_authority0.py > artifacts/dual_authority0_stdout_run2.json
+          cp artifacts/dual_authority0.json artifacts/dual_authority0_run2.json
+          cmp artifacts/dual_authority0_run1.json artifacts/dual_authority0_run2.json
+          cmp artifacts/dual_authority0_stdout_run1.json artifacts/dual_authority0_stdout_run2.json
+      - name: Validate completed result without converting scientific FAIL into CI loss
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          result = json.loads(Path("artifacts/dual_authority0_run1.json").read_text())
+          assert result["model_seed"] == 310
+          assert result["natural_language_in_cognitive_path"] is False
+          assert result["architecture_freeze_authorized"] is False
+          assert result["successor_authorized"] is False
+          assert isinstance(result["receipt_sha256"], str)
+          assert len(result["receipt_sha256"]) == 64
+          print("terminal_verdict", result["terminal_verdict"])
+          print("predictive_gate_passed", result["predictive_gate_passed"])
+          print("epistemic_gate_passed", result["epistemic_gate_passed"])
+          print("mechanism_credit_passed", result["mechanism_credit_passed"])
+          print("terminal_pass", result["terminal_pass"])
+          print("receipt_sha256", result["receipt_sha256"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wildflower-dual-authority-0
+          path: experiments/wildflower0_prelock/artifacts/dual_authority0*.json
+          if-no-files-found: error
