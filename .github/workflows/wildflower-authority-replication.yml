@@ -1,0 +1,87 @@
+name: Wildflower authority replication 230
+
+on:
+  push:
+    branches:
+      - wildflower-0-prelock-shakeout
+    paths:
+      - "experiments/wildflower0_prelock/AUTHORITY_REPLICATION_230_AUTHORIZATION.json"
+
+permissions:
+  contents: read
+
+jobs:
+  replication:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/wildflower0_prelock
+    env:
+      PYTHONHASHSEED: "0"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install frozen runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==2.3.5 pytest==9.0.2
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Verify authorization and frozen hashes
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          import subprocess
+
+          auth = json.loads(Path("AUTHORITY_REPLICATION_230_AUTHORIZATION.json").read_text())
+          parent = subprocess.check_output(["git", "rev-parse", "HEAD^"], text=True).strip()
+          if auth["authorized_parent_sha"] != parent:
+              raise SystemExit(f"authorization parent mismatch: {parent}")
+          expected = auth["source_sha256"]
+          for name, wanted in expected.items():
+              got = hashlib.sha256(Path(name).read_bytes()).hexdigest()
+              if got != wanted:
+                  raise SystemExit(f"source hash mismatch: {name}: {got}")
+          if auth["model_seed"] != 230 or auth["run_count"] != 1:
+              raise SystemExit("invalid one-shot authorization")
+          print("authorization: PASS")
+          PY
+      - name: Regression tests
+        run: python -m pytest -q -W error tests/test_authority_boundary.py tests/test_nursery1.py
+      - name: Fresh replication execution
+        run: |
+          mkdir -p artifacts
+          python run_authority_replication230.py > artifacts/authority_replication230_stdout_run1.json
+          cp artifacts/authority_replication230.json artifacts/authority_replication230_run1.json
+          python run_authority_replication230.py > artifacts/authority_replication230_stdout_run2.json
+          cp artifacts/authority_replication230.json artifacts/authority_replication230_run2.json
+          cmp artifacts/authority_replication230_run1.json artifacts/authority_replication230_run2.json
+          cmp artifacts/authority_replication230_stdout_run1.json artifacts/authority_replication230_stdout_run2.json
+      - name: Validate completed result
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          result = json.loads(Path("artifacts/authority_replication230_run1.json").read_text())
+          assert result["execution_integrity_passed"] is True
+          assert result["primitive0_authorized"] is False
+          assert result["model_seed"] == 230
+          assert isinstance(result["receipt_sha256"], str) and len(result["receipt_sha256"]) == 64
+          print("replication_passed", result["replication_passed"])
+          print("mechanism_credit_passed", result["mechanism_credit_passed"])
+          print("promotion_gate_passed", result["promotion_gate_passed"])
+          print("receipt_sha256", result["receipt_sha256"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wildflower-authority-replication-230
+          path: experiments/wildflower0_prelock/artifacts/authority_replication230*.json
+          if-no-files-found: error
