@@ -1,0 +1,134 @@
+{
+  "baseline": {
+    "best_shortcut_macro_f1": 0.3620957478408556,
+    "best_transparent_baseline_macro_f1": 0.69251524243837,
+    "effective_macro_f1_floor_from_margin": 0.8425152424383701
+  },
+  "construct": "semantic_control",
+  "execution_order": [
+    "LIVE",
+    "SEAL_LIVE",
+    "REPLAY",
+    "SEAL_REPLAY",
+    "CONTEXT_ABLATION",
+    "SEAL_CONTEXT_ABLATION",
+    "OPEN_GOLD",
+    "SCORE_ONCE"
+  ],
+  "freeze_authorized": true,
+  "generated_artifacts": {
+    "ablation_cases": {
+      "path": "/tmp/sem0r-generated/SEM0R_CONTEXT_ABLATION_CASES.jsonl",
+      "rows": 16,
+      "sha256": "4b2c20988b51a225630352e57797b52eb61fd5de65974f30f37f53b90e198805"
+    },
+    "baseline_report": {
+      "path": "/tmp/sem0r-generated/SEM0R_BASELINE_REPORT.json",
+      "sha256": "c3f691ff78e2838417a6b1f0e3e3cd33735410423e790ff36e2120b1d1fd16b6"
+    },
+    "cases": {
+      "path": "/tmp/sem0r-generated/SEM0R_CASES.jsonl",
+      "rows": 72,
+      "sha256": "85272538c36f347a5b8a6df249aa1fc7b281d13cc0511a7f93a8ab485a7c929d"
+    },
+    "gold": {
+      "path": "/tmp/sem0r-generated/SEM0R_GOLD.jsonl",
+      "rows": 72,
+      "sha256": "61150f09bec13b9628128c585a63d436a4c1096c4effedec3446749c57820bdf"
+    },
+    "replay_cases": {
+      "path": "/tmp/sem0r-generated/SEM0R_REPLAY_CASES.jsonl",
+      "rows": 16,
+      "sha256": "e909bb214464396be55e7e92bdb34cdf04668597aee4b51860c618bf50b96674"
+    }
+  },
+  "manifest_sha256": "bdbb5f774ec36e444e9bd147cae770554330431aa68b444fb25650cbbcea2d96",
+  "model_hidden_fields": [
+    "case id",
+    "family",
+    "pair_id",
+    "pair_kind",
+    "variant",
+    "renderer",
+    "focus_proposition",
+    "gold"
+  ],
+  "model_visible_fields": [
+    "context[].id",
+    "context[].text",
+    "propositions[].id",
+    "propositions[].text"
+  ],
+  "nonclaims": [
+    "consciousness",
+    "phenomenal experience",
+    "personhood",
+    "general human-like understanding"
+  ],
+  "schema_version": 1,
+  "scientific_model_calls_observed_by_builder": 0,
+  "source_sha256": {
+    "SEM0R_PREREGISTRATION.md": "82c618250ae840f22c8c730866caec1f0b0c76c6f4794f3ea5acfe995a84ce04",
+    "authorize_sem0r.py": "0274731240de59e85aa875de57fda55c8ebe4c1ecc3a1e9384f28d76bd405ef4",
+    "generate_sem0r.py": "87fa524d43153325f8e580fceb62b89732b83ade146da171a3902010aa77282a",
+    "make_sem0r_subsets.py": "ad992fa2e654fb79da0314b3762e115a964229ab71430288593291b9235fe704",
+    "preflight_sem0r_model.py": "ab64799d684402a3e748d5ab2be0052ac1f4e47ab669cb2bbd2288f0c40c0c32",
+    "run_sem0r.py": "5382a1cdb607572d44fc801faba16c4013c0160cacb06402157018ce843262e6",
+    "score_sem0r.py": "0d43c84378c4b1f9abddb33e8d054dffea7dea584b4c25780935c328e2ef9657",
+    "seal_sem0r_predictions.py": "aafa18863192b3831c15c8c71f9657cbce7c70ab87c812ac3beda186825c36c3",
+    "sem0r_contract.py": "099f8bbb19db7b6c44a238430eec7dd6bf9dd86709d978087dfea1f6cf82b74e",
+    "sem0r_families_1.py": "4f05c9d241395b40d5949d9cac0c79d58c05ad0c71c8630e11c917d410db81fc",
+    "sem0r_families_2.py": "68dc0dbeedaa15f01267f60ad61db40dfc9d723b345bd369d216574bc7e6d32e",
+    "sem0r_families_3.py": "c5955b5a49749e7329d998e027e69f2a5f000f0d4196bd6d8b5397700049673c",
+    "sem0r_families_4.py": "b755d1fec5dae06a5769863ce8f53764c894089f64dbc6cc2a0a2728ce95b105",
+    "sem0r_gen_core.py": "32e1d171aba4a948be2e4d8cee3c0a433d867f77df0775badb205395c525bd76",
+    "shortcut_baselines.py": "927a52eb3c88071559092ac365c1c25d4add572be4f5d542a7c8bb4d0ab74b0e",
+    "validate_sem0r_instrument.py": "1c1972b54e351454b891c1eb60094ff1a6593f65e62da9dc251722970a08d844"
+  },
+  "status": "SEM0R_INSTRUMENT_FROZEN",
+  "structural_validation": {
+    "case_count": 72,
+    "decision_count": 457,
+    "errors": [],
+    "family_count": 8,
+    "global_label_counts": {
+      "ASSERTED": 80,
+      "CONTRADICTED": 111,
+      "ENTAILED": 112,
+      "IMPLICATED": 9,
+      "PRESUPPOSED": 11,
+      "UNKNOWN": 134
+    },
+    "invariance_pairs": 18,
+    "label_patterns": 47,
+    "max_pattern_frequency": 4,
+    "one_of_each_cases": 0,
+    "pair_count": 36,
+    "prop_count_distribution": {
+      "5": 20,
+      "6": 17,
+      "7": 25,
+      "8": 10
+    },
+    "revision_pairs": 18,
+    "status": "PASS"
+  },
+  "thresholds": {
+    "abductive_restraint_accuracy": {"op": ">=", "value": 0.75},
+    "accuracy": {"op": ">=", "value": 0.78},
+    "context_dependency_gap": {"op": ">=", "value": 0.2},
+    "evidence_dependency_f1": {"op": ">=", "value": 0.65},
+    "exact_replay_rate": {"op": "=", "value": 1.0},
+    "integrity_errors": {"op": "=", "value": 0},
+    "invariance_pair_accuracy": {"op": ">=", "value": 0.78},
+    "macro_f1": {"op": ">=", "value": 0.72},
+    "nonce_world_accuracy": {"op": ">=", "value": 0.75},
+    "presupposition_accuracy": {"op": ">=", "value": 0.75},
+    "revision_pair_accuracy": {"op": ">=", "value": 0.78},
+    "scalar_pragmatics_accuracy": {"op": ">=", "value": 0.75},
+    "shortcut_margin": {"op": ">=", "value": 0.15},
+    "unknown_overclaim_rate": {"op": "<=", "value": 0.18},
+    "worst_family_accuracy": {"op": ">=", "value": 0.65}
+  },
+  "unit": "SEM-0R"
+}
