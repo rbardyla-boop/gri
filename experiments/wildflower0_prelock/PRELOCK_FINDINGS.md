@@ -96,12 +96,29 @@ Classification: **one-step sensor dynamics works; open-loop imagination is unsta
 
 A separate deterministic-world isolation probe (object identity held fixed) still showed substantial long-rollout growth, so the compounding problem is not explained only by the toy world's unannounced object switches.
 
+## Preserved run D — observation-corrected recurrent / multi-horizon candidate
+
+Fresh engineering seeds: `40,41,42`. Deterministic identity is held fixed within each core rollout; unannounced identity switches are scored separately as surprise trajectories.
+
+Receipt: `3eea837750427fd42d5a8256478eb34c766aa29d100e4d199e0d83c8b5e5245c`
+
+This candidate separates observation correction from open-loop imagination and trains over eight-step rollout sequences. It also records a transparent kinematic control.
+
+Result:
+
+- numerical/open-loop stability improved: 32-step / 1-step growth mean `0.986x`, worst `0.999x`;
+- but this stability is misleading because the model is already poor at one step;
+- one-step model/copy ratio mean `2.278`, worst `2.836` -> **FAIL**;
+- the transparent kinematic baseline is far stronger: model/kinematic one-step ratio mean `28.25x` worse.
+
+Classification: **stable bad prediction is not a compounding-error solution**. The recurrent candidate appears to settle toward a low-information average state rather than learning the simple transition. This is preserved as a baseline/collapse failure, not promoted because its long-horizon curve is flat.
+
 ## Lint / test status
 
 Current local package:
 
 - `python -m compileall`: PASS;
-- `pytest -W error`: **11 passed**;
+- `pytest -W error`: **12 passed**;
 - custom static checks: no tokenizer/LLM imports in cognitive core; no forbidden prose-routing fields; no tabs/trailing whitespace/>120-character style findings;
 - finite-value checks: PASS;
 - memory tamper injection: detected as intended.
@@ -115,7 +132,7 @@ Do not lock the model architecture yet.
 The experiments localize two different issues instead of producing one vague “didn't work” result:
 
 1. **Continual-learning interference:** bounded old-experience replay substantially repaired it in the tested seeds.
-2. **Prediction-horizon tradeoff:** compressed latent dynamics is stable but loses a trivial one-step baseline; direct sensor dynamics beats the baseline but compounds badly in open-loop rollout.
+2. **Prediction-horizon tradeoff:** compressed latent dynamics is stable but loses a trivial one-step baseline; direct sensor dynamics beats the baseline but compounds badly in open-loop rollout; the tested recurrent multi-horizon repair removes growth only by becoming a poor predictor that loses both copy and kinematic controls.
 
 That is enough evidence to reject a freeze but not enough evidence to reject the world-first/token-free thesis.
 
@@ -123,12 +140,12 @@ That is enough evidence to reject a freeze but not enough evidence to reject the
 
 Build and compare, without changing these preserved results:
 
-1. observation-corrected recurrent state for online learning;
-2. separate imagination state from perceptual state;
-3. multi-horizon dynamics training and uncertainty estimation;
-4. an EMA/slow target encoder as a second alternative to replay/frozen representation;
-5. fixed deterministic trajectories and surprise-injection trajectories as separate rollout tests;
-6. copy-frame, constant-frame, direct-pixel, and transparent kinematic controls;
-7. then execute the already-frozen `PRIMITIVE-0` machine-native representation exam.
+1. retire the tested recurrent candidate rather than tune seeds 40-42;
+2. add an EMA/slow target encoder as a fresh representation-stability alternative;
+3. test explicit object-centric state/delta prediction against the transparent kinematic control;
+4. freeze a harder multi-object Nursery-1 world before scoring so a trivial frame shift is not the whole task;
+5. keep deterministic trajectories and surprise-injection trajectories as separate rollout tests;
+6. keep copy-frame, constant-frame, direct-pixel, and transparent kinematic controls;
+7. execute the already-frozen `PRIMITIVE-0` machine-native representation exam only after a fresh candidate clears its pre-lock controls.
 
 No architecture is promoted until a candidate beats its simple controls on fresh seeds without reopening the current seed sets for threshold tuning.
