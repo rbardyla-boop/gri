@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN_PRE_EXECUTION",
+  "experiment": "WILDFLOWER_DUAL_AUTHORITY_0",
+  "frozen_parent_sha": "bc2fac7840cc05c96cacf8bbad5e596cd2575e1f",
+  "hosted_preflight_run_id": 33251557243,
+  "hosted_preflight_conclusion": "success",
+  "hosted_preflight_test_count": 31,
+  "model_seed": 310,
+  "one_shot": true,
+  "scored_execution_authorized": false,
+  "architecture_freeze_authorized": false,
+  "successor_authorized": false,
+  "runtime": {
+    "python": "3.13",
+    "numpy": "2.3.5",
+    "pytest": "9.0.2",
+    "torch": "2.10.0+cpu",
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "predictive_authority": {
+    "innovation_threshold_cells": 0.3,
+    "transition_width_cells": 0.3,
+    "rollout_decay": 0.998,
+    "burn_history": 12
+  },
+  "fresh_design": {
+    "train_per_mode": 2,
+    "ordinary_test_per_mode": 2,
+    "challenge_per_mode": 1,
+    "training_selector_root_offset": 9000,
+    "training_selector_start": 600000,
+    "ordinary_test_selector_root_offset": 19000,
+    "ordinary_test_selector_start": 650000,
+    "challenge_selector_root_offset": 29000,
+    "challenge_selector_start": 700000,
+    "training_episode_length": 420,
+    "ordinary_evaluation_length": 520,
+    "challenge_episode_length": 260,
+    "training_steps_per_episode": 80,
+    "max_active_claims": 8192,
+    "confidence_control_threshold": 0.5
+  },
+  "source_sha256": {
+    "DUAL_AUTHORITY_0_PREREGISTRATION.md": "4dc69e071df394cfa12bf34e8afd8d59fd1c2975281c72f25ba029c9353fcaba",
+    "DUAL_AUTHORITY_0_PACKET_CONTRACT.md": "c961e3377a4213c5f355073f3d6e1ec47904bd7479573a08115d215c27f558bc",
+    "dual_authority0.py": "36ef05d20d9fd32098f702ab55b7879e934c8a7ad4dc0dbd3fd8ceaecedaebd0",
+    "run_dual_authority0.py": "f195aac01b80d5795edcbff2b9a1fb5b540f9071c7bf7d5fadc33eb9e7e66306",
+    "probe_innovation_model.py": "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1",
+    "qualify_authority190.py": "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e",
+    "wildflower0/nursery1.py": "a402e99c6374fffa23af4a2ef1e32a67141c41cf7ece020c12fe2974e65753d6",
+    "tests/test_dual_authority0.py": "98fe5ed0dba8314bd93a59c483c6991543006269df113478469ea8bb635e7346",
+    "tests/test_dual_authority0_boundary.py": "129b58c38ffef679f0c65eef5f8135ac69eb5a7c27ac61ea99002a5f683dc609",
+    "tests/test_authority_boundary.py": "a711be370b1ac40ea6deff4418b300479401e8e06a7ea623e6bf10658a0e80d1",
+    "tests/test_nursery1.py": "04ddc05c274d8ce92fb83b233a7e7f033642266abe06b2797c91bfe91bf18460",
+    "../../.github/workflows/wildflower-dual-authority0-preflight.yml": "154eb30a9c09334e0ed514387525978364295a8de86032632d6f4558615bbbb6",
+    "../../.github/workflows/wildflower-dual-authority0-execution.yml": "1252b584a57575aa214077a1f6f8f2fd01931a0a5fb5de5b8938ae727876254b"
+  },
+  "scientific_boundary": {
+    "historical_primitive_results_reexecuted": false,
+    "historical_encoding_results_reexecuted": false,
+    "natural_language_in_cognitive_path": false,
+    "hidden_mode_available_to_cognitive_path": false,
+    "evaluator_event_flags_available_to_cognitive_path": false,
+    "relation_or_parity_truth_injected_as_world_witness": false,
+    "scored_result_exists": false
+  },
+  "authorization_rule": "A later separate commit must add DUAL_AUTHORITY_0_AUTHORIZATION.json containing this manifest's SHA-256 and the exact authorized parent commit before the one-shot scored workflow may execute."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_PRE_REPLICATION_230",
+  "architecture_freeze_authorized": false,
+  "primitive0_authorized": false,
+  "branch_base_commit": "ead9f993c4dc197689b5c4024e70c8f83f5687c5",
+  "nursery1_source_sha256": "a402e99c6374fffa23af4a2ef1e32a67141c41cf7ece020c12fe2974e65753d6",
+  "candidate_model_source_sha256": "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1",
+  "qualification_runner_source_sha256": "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e",
+  "qualification_artifact_file_sha256": "eec6229a4dae2f94917a8c942b64876e718386456c183332baa6a6b737fb66e0",
+  "qualification_semantic_receipt_sha256": "44fd012e748897b20e5eb94998f33d7ba49fdc1af8439e0bd52a30520f001215",
+  "replication_runner_source_sha256": "411e04af4dfca09bbc38722f2f46e301c239ee94c3ba86aed758d1dd7c589895",
+  "replication_preregistration_sha256": "d39d00eca534162bf6baa17fdd3fb30a03b6faf780b608f9f635a3ae4e6701c2",
+  "replication_model_seed": 230,
+  "replication_authorized": false
+}

@@ -1,0 +1,123 @@
+name: Wildflower pre-lock
+
+on:
+  pull_request:
+    paths:
+      - "experiments/wildflower0_prelock/**"
+      - ".github/workflows/wildflower-prelock.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prelock:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/wildflower0_prelock
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Compile
+        run: |
+          python -m compileall -q \
+            wildflower0 tests \
+            run_shakeout.py run_variant_probe.py run_recurrent_probe.py run_nursery1_probe.py \
+            probe_innovation_model.py qualify_authority190.py run_authority_replication230.py \
+            inspect_primitive0_archives.py
+      - name: Unit tests with warnings as errors
+        run: python -m pytest -q -W error
+      - name: Static dependency and style checks
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+
+          forbidden = {"transformers", "tiktoken", "openai", "whisper", "clip", "llama_cpp"}
+          imports = set()
+          findings = []
+          paths = [*Path("wildflower0").rglob("*.py"), *Path("tests").rglob("*.py")]
+          paths += list(Path(".").glob("run_*probe.py")) + [
+              Path("run_shakeout.py"),
+              Path("run_authority_replication230.py"),
+              Path("inspect_primitive0_archives.py"),
+          ]
+          for path in paths:
+              text = path.read_text()
+              tree = ast.parse(text)
+              for node in ast.walk(tree):
+                  if isinstance(node, ast.Import):
+                      imports.update(alias.name.split(".")[0] for alias in node.names)
+                  elif isinstance(node, ast.ImportFrom) and node.module:
+                      imports.add(node.module.split(".")[0])
+              for line_no, line in enumerate(text.splitlines(), 1):
+                  if "\t" in line or line.rstrip() != line or len(line) > 120:
+                      findings.append((str(path), line_no, len(line)))
+          bad_imports = sorted(forbidden & imports)
+          if bad_imports or findings:
+              raise SystemExit(f"forbidden_imports={bad_imports} style_findings={findings}")
+          print("static checks: PASS")
+          PY
+      - name: Verify frozen authority sources and receipt
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          expected = {
+              "probe_innovation_model.py": (
+                  "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1"
+              ),
+              "qualify_authority190.py": (
+                  "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e"
+              ),
+              "evidence/WILDFLOWER_AUTHORITY_FRESH_QUALIFICATION_SEED190.json": (
+                  "eec6229a4dae2f94917a8c942b64876e718386456c183332baa6a6b737fb66e0"
+              ),
+          }
+          for name, wanted in expected.items():
+              got = hashlib.sha256(Path(name).read_bytes()).hexdigest()
+              if got != wanted:
+                  raise SystemExit(f"frozen hash mismatch: {name}: {got}")
+          receipt = json.loads(
+              Path("evidence/WILDFLOWER_AUTHORITY_FRESH_QUALIFICATION_SEED190.json").read_text()
+          )
+          assert receipt["receipt_sha256"] == (
+              "44fd012e748897b20e5eb94998f33d7ba49fdc1af8439e0bd52a30520f001215"
+          )
+          assert receipt["passed"] is True
+          assert receipt["primitive0_authorized"] is False
+          print("frozen authority evidence: PASS")
+          PY
+      - name: Nursery-1 deterministic smoke
+        run: |
+          python - <<'PY'
+          import numpy as np
+          import torch
+          from wildflower0.nursery1 import DominanceResidual, collect_pairs, state_mae, velocity_baseline_mae
+
+          pairs = collect_pairs(321, 96)
+          model = DominanceResidual()
+          candidate = state_mae(model, pairs, 1, burn=5)
+          baseline = velocity_baseline_mae(pairs, 1, burn=5)
+          assert np.isfinite(candidate) and np.isfinite(baseline)
+          assert all(torch.isfinite(p).all() for p in model.parameters())
+          print("nursery1 smoke: PASS")
+          PY
+      - name: PRIMITIVE-0 archive static audit only
+        run: python inspect_primitive0_archives.py
+      - name: Upload PRIMITIVE-0 archive audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: primitive0-archive-static-audit
+          path: experiments/wildflower0_prelock/artifacts/primitive0_archive_audit.json
+          if-no-files-found: error

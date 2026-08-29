@@ -1,0 +1,106 @@
+{
+  "architecture_freeze_authorized": false,
+  "result": {
+    "aggregate": {
+      "event_h8_ratio_max": 1.131043760976652,
+      "event_h8_ratio_mean": 0.9329899417920254,
+      "h1_ratio_max": 1.1790769453666534,
+      "h1_ratio_mean": 1.0459698326981806,
+      "h32_ratio_max": 1.4549875242967933,
+      "h32_ratio_mean": 1.0940114100577008,
+      "h8_ratio_max": 1.131043760976652,
+      "h8_ratio_mean": 0.9333693484565219
+    },
+    "gates": {
+      "event_h8_mean_10pct": false,
+      "h1_noninferior_all": false,
+      "h32_better_all": false,
+      "h32_mean_15pct": false,
+      "h8_better_all": false,
+      "h8_mean_10pct": false
+    },
+    "model_seed": 160,
+    "passed": false,
+    "ratios_by_mode": {
+      "0": [
+        {
+          "episode_seed": 1916050000.0,
+          "event_h8_ratio": 1.0719042052374275,
+          "h1_ratio": 1.0706550031318354,
+          "h32_ratio": 1.2242824890083428,
+          "h8_ratio": 1.0741806452244067
+        },
+        {
+          "episode_seed": 1916050003.0,
+          "event_h8_ratio": 1.131043760976652,
+          "h1_ratio": 1.1790769453666534,
+          "h32_ratio": 1.0601666622858152,
+          "h8_ratio": 1.131043760976652
+        }
+      ],
+      "1": [
+        {
+          "episode_seed": 1916050004.0,
+          "event_h8_ratio": 0.9404690318741263,
+          "h1_ratio": 1.0324822371344609,
+          "h32_ratio": 0.9729033730713833,
+          "h8_ratio": 0.9404690318741263
+        },
+        {
+          "episode_seed": 1916050005.0,
+          "event_h8_ratio": 0.800059408741445,
+          "h1_ratio": 1.0314040070770738,
+          "h32_ratio": 0.8321831212603464,
+          "h8_ratio": 0.800059408741445
+        }
+      ],
+      "2": [
+        {
+          "episode_seed": 1916050001.0,
+          "event_h8_ratio": 0.8260642652624315,
+          "h1_ratio": 0.9830497998763195,
+          "h32_ratio": 1.4549875242967933,
+          "h8_ratio": 0.8260642652624315
+        },
+        {
+          "episode_seed": 1916050002.0,
+          "event_h8_ratio": 0.8283989786600707,
+          "h1_ratio": 0.9791510036027404,
+          "h32_ratio": 1.0195452904235236,
+          "h8_ratio": 0.8283989786600707
+        }
+      ]
+    },
+    "receipt_sha256": "2893b04398fe0c5d0cb214cf1e7e4cb2e62d9b0aec1cc8c20af8a56b8a58af4c",
+    "test_selection": {
+      "0": [
+        1916050000,
+        1916050003
+      ],
+      "1": [
+        1916050004,
+        1916050005
+      ],
+      "2": [
+        1916050001,
+        1916050002
+      ]
+    },
+    "train_selection": {
+      "0": [
+        916000000,
+        916000003
+      ],
+      "1": [
+        916000002,
+        916000005
+      ],
+      "2": [
+        916000001,
+        916000004
+      ]
+    }
+  },
+  "scientific_claim_authorized": false,
+  "status": "NURSERY1_PRELOCK_BALANCED_ENGINEERING_PROBE"
+}
