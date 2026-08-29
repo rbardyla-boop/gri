@@ -1,0 +1,32 @@
+name: PRIMITIVE-0 archive audit
+
+on:
+  push:
+    branches:
+      - wildflower-0-prelock-shakeout
+    paths:
+      - "experiments/wildflower0_prelock/inspect_primitive0_archives.py"
+      - ".github/workflows/primitive0-archive-audit.yml"
+      - "PRIMITIVE-0_REFERENCE_IMPLEMENTATION_v0.1.0.zip"
+      - "PRIMITIVE-0_C1_STABLE_REFERENCE_REPAIR_v0.1.0.zip"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Inspect frozen archives without executing them
+        working-directory: experiments/wildflower0_prelock
+        run: python inspect_primitive0_archives.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: primitive0-archive-static-audit-fast
+          path: experiments/wildflower0_prelock/artifacts/primitive0_archive_audit.json
+          if-no-files-found: error
