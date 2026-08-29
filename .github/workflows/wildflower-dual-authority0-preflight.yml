@@ -1,0 +1,81 @@
+name: Wildflower Dual Authority 0 preflight
+
+on:
+  push:
+    branches:
+      - wildflower-0-prelock-shakeout
+    paths:
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_PREREGISTRATION.md"
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_PACKET_CONTRACT.md"
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_FREEZE_MANIFEST.json"
+      - "experiments/wildflower0_prelock/dual_authority0.py"
+      - "experiments/wildflower0_prelock/run_dual_authority0.py"
+      - "experiments/wildflower0_prelock/tests/test_dual_authority0.py"
+      - "experiments/wildflower0_prelock/tests/test_dual_authority0_boundary.py"
+      - "experiments/wildflower0_prelock/probe_innovation_model.py"
+      - "experiments/wildflower0_prelock/qualify_authority190.py"
+      - ".github/workflows/wildflower-dual-authority0-preflight.yml"
+      - ".github/workflows/wildflower-dual-authority0-execution.yml"
+  pull_request:
+    paths:
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_PREREGISTRATION.md"
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_PACKET_CONTRACT.md"
+      - "experiments/wildflower0_prelock/DUAL_AUTHORITY_0_FREEZE_MANIFEST.json"
+      - "experiments/wildflower0_prelock/dual_authority0.py"
+      - "experiments/wildflower0_prelock/run_dual_authority0.py"
+      - "experiments/wildflower0_prelock/tests/test_dual_authority0.py"
+      - "experiments/wildflower0_prelock/tests/test_dual_authority0_boundary.py"
+      - ".github/workflows/wildflower-dual-authority0-preflight.yml"
+      - ".github/workflows/wildflower-dual-authority0-execution.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/wildflower0_prelock
+    env:
+      PYTHONHASHSEED: "0"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install frozen test runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==2.3.5 pytest==9.0.2
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Confirm scored authorization is absent
+        run: |
+          test ! -e DUAL_AUTHORITY_0_AUTHORIZATION.json
+      - name: Compile preflight sources
+        run: |
+          python -m compileall -q dual_authority0.py run_dual_authority0.py tests
+      - name: Dual-authority and inherited boundary regressions
+        run: |
+          python -m pytest -q -W error \
+            tests/test_dual_authority0.py \
+            tests/test_dual_authority0_boundary.py \
+            tests/test_authority_boundary.py \
+            tests/test_nursery1.py
+      - name: Print deterministic source digests
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          for name in (
+              "DUAL_AUTHORITY_0_PREREGISTRATION.md",
+              "DUAL_AUTHORITY_0_PACKET_CONTRACT.md",
+              "dual_authority0.py",
+              "run_dual_authority0.py",
+              "tests/test_dual_authority0.py",
+              "tests/test_dual_authority0_boundary.py",
+          ):
+              print(name, hashlib.sha256(Path(name).read_bytes()).hexdigest())
+          PY
