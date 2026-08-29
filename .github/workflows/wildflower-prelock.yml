@@ -31,7 +31,8 @@ jobs:
           python -m compileall -q \
             wildflower0 tests \
             run_shakeout.py run_variant_probe.py run_recurrent_probe.py run_nursery1_probe.py \
-            probe_innovation_model.py qualify_authority190.py run_authority_replication230.py
+            probe_innovation_model.py qualify_authority190.py run_authority_replication230.py \
+            inspect_primitive0_archives.py
       - name: Unit tests with warnings as errors
         run: python -m pytest -q -W error
       - name: Static dependency and style checks
@@ -47,6 +48,7 @@ jobs:
           paths += list(Path(".").glob("run_*probe.py")) + [
               Path("run_shakeout.py"),
               Path("run_authority_replication230.py"),
+              Path("inspect_primitive0_archives.py"),
           ]
           for path in paths:
               text = path.read_text()
@@ -111,3 +113,11 @@ jobs:
           assert all(torch.isfinite(p).all() for p in model.parameters())
           print("nursery1 smoke: PASS")
           PY
+      - name: PRIMITIVE-0 archive static audit only
+        run: python inspect_primitive0_archives.py
+      - name: Upload PRIMITIVE-0 archive audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: primitive0-archive-static-audit
+          path: experiments/wildflower0_prelock/artifacts/primitive0_archive_audit.json
+          if-no-files-found: error
