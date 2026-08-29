@@ -1,0 +1,10 @@
+{
+  "status": "AUTHORIZED_ONE_SHOT_DUAL_AUTHORITY_0",
+  "authorized_parent_sha": "ac6cf521a89b1869e1658f1b72d41f81303e0b0c",
+  "freeze_manifest_sha256": "7da29322a4bd009aacc86976218e48dc3fbe606d3f9d0389b592ce15553f6550",
+  "model_seed": 310,
+  "run_count": 1,
+  "scored_execution_authorized": true,
+  "architecture_freeze_authorized": false,
+  "successor_authorized": false
+}
