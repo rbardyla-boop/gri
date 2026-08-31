@@ -1,0 +1,10 @@
+{
+  "status": "AUTHORIZED",
+  "authorized_seeds": [361],
+  "run_id": "361-R1",
+  "scope": "one execution only; seed 361 only",
+  "authorized_by": "user",
+  "source_revision": "77d25c6a60ad1556d20ab5fbd82897f7b0e50fee",
+  "engineering_profile_sha256": "3ca2b2e1a4e5a0d19f32b7319df74dce45b8d029b1eab9aecaa84356ab0df928",
+  "frozen_340_r1_sha256": "b62e89e515d741235d3d6bb4433f654af0fed6ef98aa56810c48e7253c1c84be"
+}

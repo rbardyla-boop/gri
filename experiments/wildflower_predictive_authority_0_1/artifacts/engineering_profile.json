@@ -1,0 +1,1929 @@
+{
+  "degenerate_nontriviality_checks": {
+    "AUTHORITY_EPSILON_EVERYWHERE": {
+      "collapse_rejected": true,
+      "eligible_origins": 120,
+      "fraction_authority_gt_0_10": 0.0,
+      "mean_h8_authority_all_origins": 0.01,
+      "passed": false
+    },
+    "EASIEST_MODE_ONLY": {
+      "collapse_rejected": false,
+      "eligible_origins": 120,
+      "fraction_authority_gt_0_10": 0.3333333333333333,
+      "mean_h8_authority_all_origins": 0.16666666666666666,
+      "mode_concentration_warning": true,
+      "passed": true
+    },
+    "H1_ONLY_H8_ZERO": {
+      "collapse_rejected": true,
+      "eligible_origins": 120,
+      "fraction_authority_gt_0_10": 0.0,
+      "mean_h8_authority_all_origins": 0.0,
+      "passed": false
+    },
+    "NULL_ONLY": {
+      "collapse_rejected": true,
+      "eligible_origins": 120,
+      "fraction_authority_gt_0_10": 0.0,
+      "mean_h8_authority_all_origins": 0.0,
+      "passed": false
+    },
+    "PERMANENTLY_CAPPED_NEAR_ZERO": {
+      "collapse_rejected": true,
+      "eligible_origins": 120,
+      "fraction_authority_gt_0_10": 0.0,
+      "mean_h8_authority_all_origins": 0.01,
+      "passed": false
+    }
+  },
+  "diagnostic_comparators": [
+    "P0_NULL_ONLY",
+    "P1_LEARNED_ONLY",
+    "P2_CURRENT_POLICY",
+    "P3_DELAYED_AUTHORITY",
+    "P4_CAPPED_AUTHORITY",
+    "P5_HORIZON_AWARE_DIAGNOSTIC",
+    "DISAGREEMENT_GATED",
+    "P6_ORACLE_UPPER_BOUND"
+  ],
+  "experiment": "WILDFLOWER Predictive Authority 0.1",
+  "failure_type_matrix": {
+    "case_count": 14,
+    "cases": [
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 1.0,
+          "h8": 1.0
+        },
+        "expected_behavior": "use learned authority",
+        "name": "learned_better_h1_h8",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.76,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.696
+            },
+            "h32": {
+              "authority": 0.76,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8480000000000001
+            },
+            "h8": {
+              "authority": 0.76,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.696
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.6
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.6
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.8,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.6799999999999999
+            },
+            "h32": {
+              "authority": 0.8,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8400000000000001
+            },
+            "h8": {
+              "authority": 0.8,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.6799999999999999
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.74
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.87
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.74
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.8,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.6799999999999999
+            },
+            "h32": {
+              "authority": 0.27999999999999997,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.944
+            },
+            "h8": {
+              "authority": 0.44000000000000006,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.824
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "defer at H8",
+        "name": "learned_better_h1_worse_h8",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.585,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.766
+            },
+            "h32": {
+              "authority": 0.585,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0585
+            },
+            "h8": {
+              "authority": 0.585,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.117
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.6
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.1
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.2
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.64
+            },
+            "h32": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.09
+            },
+            "h8": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.1800000000000002
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.74
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.065
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.13
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.6,
+              "mixed_error": 0.64
+            },
+            "h32": {
+              "authority": 0.315,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0315
+            },
+            "h8": {
+              "authority": 0.49500000000000005,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.099
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 0.0,
+          "h32": 1.0,
+          "h8": 1.0
+        },
+        "expected_behavior": "do not infer H8 from H1",
+        "name": "learned_worse_h1_better_h8",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.595,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.119
+            },
+            "h32": {
+              "authority": 0.595,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 0.8512500000000001
+            },
+            "h8": {
+              "authority": 0.595,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 0.8215
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.2
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 0.75
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 0.7
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.7,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.1400000000000001
+            },
+            "h32": {
+              "authority": 0.7,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 0.825
+            },
+            "h8": {
+              "authority": 0.7,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 0.79
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.13
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 0.8375
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 0.8049999999999999
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.7,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.1400000000000001
+            },
+            "h32": {
+              "authority": 0.24499999999999997,
+              "learned_null_ratio": 0.75,
+              "mixed_error": 0.93875
+            },
+            "h8": {
+              "authority": 0.385,
+              "learned_null_ratio": 0.7,
+              "mixed_error": 0.8845
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 0.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "fail closed",
+        "name": "learned_worse_everywhere",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.2375,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0474999999999999
+            },
+            "h32": {
+              "authority": 0.2375,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0474999999999999
+            },
+            "h8": {
+              "authority": 0.2375,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0474999999999999
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.2
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.2
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.2
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.95,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.19
+            },
+            "h32": {
+              "authority": 0.95,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.19
+            },
+            "h8": {
+              "authority": 0.95,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.19
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.13
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.13
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.13
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.95,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.19
+            },
+            "h32": {
+              "authority": 0.33249999999999996,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0665
+            },
+            "h8": {
+              "authority": 0.5225,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.1044999999999998
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 0.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "avoid brittle switching",
+        "name": "near_tie",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h32": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h8": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.01
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.01
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.01
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h32": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h8": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h32": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h8": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.5,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.005
+            },
+            "h32": {
+              "authority": 0.175,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.00175
+            },
+            "h8": {
+              "authority": 0.275,
+              "learned_null_ratio": 1.01,
+              "mixed_error": 1.00275
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 1.0,
+          "h8": 1.0
+        },
+        "expected_behavior": "check nontrivial saturation",
+        "name": "authority_saturation",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.95,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.905
+            },
+            "h32": {
+              "authority": 0.95,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9525
+            },
+            "h8": {
+              "authority": 0.95,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9525
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.95
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.95
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.95
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.95
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.935
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9674999999999999
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9674999999999999
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h32": {
+              "authority": 0.35,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9824999999999999
+            },
+            "h8": {
+              "authority": 0.55,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9724999999999999
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "reduce authority",
+        "name": "innovation_spike",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.2700000000000001,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9730000000000001
+            },
+            "h32": {
+              "authority": 0.2700000000000001,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0135
+            },
+            "h8": {
+              "authority": 0.2700000000000001,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0270000000000001
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.05
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.1
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.91
+            },
+            "h32": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.045
+            },
+            "h8": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.09
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.935
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0325000000000002
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.065
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.91
+            },
+            "h32": {
+              "authority": 0.315,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0157500000000002
+            },
+            "h8": {
+              "authority": 0.49500000000000005,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0495
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 1.0,
+          "h8": 1.0
+        },
+        "expected_behavior": "recover useful authority",
+        "name": "innovation_decline",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.38,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.924
+            },
+            "h32": {
+              "authority": 0.38,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.962
+            },
+            "h8": {
+              "authority": 0.38,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9430000000000001
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.85
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.92
+            },
+            "h32": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.96
+            },
+            "h8": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.94
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.92
+            },
+            "h32": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.96
+            },
+            "h8": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.94
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.4,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.92
+            },
+            "h32": {
+              "authority": 0.13999999999999999,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.986
+            },
+            "h8": {
+              "authority": 0.22000000000000003,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9670000000000001
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "condition on current signals",
+        "name": "mode_transition",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.45,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9550000000000001
+            },
+            "h32": {
+              "authority": 0.45,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0225
+            },
+            "h8": {
+              "authority": 0.45,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0450000000000002
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.05
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.1
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.91
+            },
+            "h32": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.045
+            },
+            "h8": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.09
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.935
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0325000000000002
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.065
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.91
+            },
+            "h32": {
+              "authority": 0.315,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0157500000000002
+            },
+            "h8": {
+              "authority": 0.49500000000000005,
+              "learned_null_ratio": 1.1,
+              "mixed_error": 1.0495
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "do not use event truth",
+        "name": "event_rich_interval",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.51,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9235
+            },
+            "h32": {
+              "authority": 0.51,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.51,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0255
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.85
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.05
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.85,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.8724999999999999
+            },
+            "h32": {
+              "authority": 0.85,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.85,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0425
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9025
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0325000000000002
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.85,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.8724999999999999
+            },
+            "h32": {
+              "authority": 0.2975,
+              "learned_null_ratio": 1.0,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.4675,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0233750000000001
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "horizon-aware deference",
+        "name": "recursive_rollout_drift",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.3150000000000001,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.9369999999999999
+            },
+            "h32": {
+              "authority": 0.3150000000000001,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.126
+            },
+            "h8": {
+              "authority": 0.3150000000000001,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.0945
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.4
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.3
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8200000000000001
+            },
+            "h32": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.3599999999999999
+            },
+            "h8": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.27
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.87
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.2599999999999998
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.195
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.8,
+              "mixed_error": 0.8200000000000001
+            },
+            "h32": {
+              "authority": 0.315,
+              "learned_null_ratio": 1.4,
+              "mixed_error": 1.126
+            },
+            "h8": {
+              "authority": 0.49500000000000005,
+              "learned_null_ratio": 1.3,
+              "mixed_error": 1.1484999999999999
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "reduce authority under clipping",
+        "name": "clipping_heavy_rollout",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.36000000000000004,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.964
+            },
+            "h32": {
+              "authority": 0.36000000000000004,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.072
+            },
+            "h8": {
+              "authority": 0.36000000000000004,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.0539999999999998
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.2
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.15
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.91
+            },
+            "h32": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.1800000000000002
+            },
+            "h8": {
+              "authority": 0.9,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.1349999999999998
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.935
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.13
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.0975
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.9,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.91
+            },
+            "h32": {
+              "authority": 0.315,
+              "learned_null_ratio": 1.2,
+              "mixed_error": 1.0630000000000002
+            },
+            "h8": {
+              "authority": 0.49500000000000005,
+              "learned_null_ratio": 1.15,
+              "mixed_error": 1.07425
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 1.0,
+          "h8": 1.0
+        },
+        "expected_behavior": "allow horizon-specific crossover",
+        "name": "null_learned_crossover",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.5249999999999999,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.97375
+            },
+            "h32": {
+              "authority": 0.5249999999999999,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9475
+            },
+            "h8": {
+              "authority": 0.5249999999999999,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.92125
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.95
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.9
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.85
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.75,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9624999999999999
+            },
+            "h32": {
+              "authority": 0.75,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.925
+            },
+            "h8": {
+              "authority": 0.75,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.8875
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9674999999999999
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.935
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9025
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.75,
+              "learned_null_ratio": 0.95,
+              "mixed_error": 0.9624999999999999
+            },
+            "h32": {
+              "authority": 0.26249999999999996,
+              "learned_null_ratio": 0.9,
+              "mixed_error": 0.97375
+            },
+            "h8": {
+              "authority": 0.41250000000000003,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9381249999999999
+            }
+          }
+        }
+      },
+      {
+        "P6_ORACLE_UPPER_BOUND": {
+          "h1": 1.0,
+          "h32": 0.0,
+          "h8": 0.0
+        },
+        "expected_behavior": "avoid delayed drift",
+        "name": "delayed_recursive_failure",
+        "policies": {
+          "DISAGREEMENT_GATED": {
+            "h1": {
+              "authority": 0.38250000000000006,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.942625
+            },
+            "h32": {
+              "authority": 0.38250000000000006,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.095625
+            },
+            "h8": {
+              "authority": 0.38250000000000006,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.019125
+            }
+          },
+          "P0_NULL_ONLY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            }
+          },
+          "P1_LEARNED_ONLY": {
+            "h1": {
+              "authority": 1.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.85
+            },
+            "h32": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.25
+            },
+            "h8": {
+              "authority": 1.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.05
+            }
+          },
+          "P2_CURRENT_POLICY": {
+            "h1": {
+              "authority": 0.85,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.8724999999999999
+            },
+            "h32": {
+              "authority": 0.85,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.2125
+            },
+            "h8": {
+              "authority": 0.85,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0425
+            }
+          },
+          "P3_DELAYED_AUTHORITY": {
+            "h1": {
+              "authority": 0.0,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 1.0
+            },
+            "h32": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.0
+            },
+            "h8": {
+              "authority": 0.0,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0
+            }
+          },
+          "P4_CAPPED_AUTHORITY": {
+            "h1": {
+              "authority": 0.65,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.9025
+            },
+            "h32": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.1625
+            },
+            "h8": {
+              "authority": 0.65,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0325000000000002
+            }
+          },
+          "P5_HORIZON_AWARE_DIAGNOSTIC": {
+            "h1": {
+              "authority": 0.85,
+              "learned_null_ratio": 0.85,
+              "mixed_error": 0.8724999999999999
+            },
+            "h32": {
+              "authority": 0.2975,
+              "learned_null_ratio": 1.25,
+              "mixed_error": 1.0743749999999999
+            },
+            "h8": {
+              "authority": 0.4675,
+              "learned_null_ratio": 1.05,
+              "mixed_error": 1.0233750000000001
+            }
+          }
+        }
+      }
+    ],
+    "oracle_is_evaluator_only": true,
+    "truth_used_by_mechanism": false
+  },
+  "historical_artifact_audit": {
+    "diagnostic_conclusion": "new successor observability is required",
+    "full_h8_counterfactuals_available": false,
+    "historical_h8_prediction_present": true,
+    "learned_only_h32_present": false,
+    "learned_only_h8_present": false,
+    "path": "/home/thebackhand/Documents/AI/gri/experiments/wildflower_dual_authority_0_3/artifacts/development_seed340.json",
+    "trace_rows": 2988
+  },
+  "historical_artifact_sha256": "b62e89e515d741235d3d6bb4433f654af0fed6ef98aa56810c48e7253c1c84be",
+  "policies": [
+    "P0_NULL_ONLY",
+    "P1_LEARNED_ONLY",
+    "P2_CURRENT_POLICY",
+    "P3_DELAYED_AUTHORITY",
+    "P4_CAPPED_AUTHORITY",
+    "P5_HORIZON_AWARE_DIAGNOSTIC",
+    "DISAGREEMENT_GATED",
+    "P6_ORACLE_UPPER_BOUND"
+  ],
+  "runtime": {
+    "wall_seconds": 0.21256530901882797
+  },
+  "scientific_seed_executed": false,
+  "selector_namespace_used": false,
+  "source_hashes": {
+    "historical/probe_innovation_model.py": "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1",
+    "historical/qualify_authority190.py": "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e",
+    "historical/wildflower0/nursery1.py": "a402e99c6374fffa23af4a2ef1e32a67141c41cf7ece020c12fe2974e65753d6",
+    "successor/__init__.py": "e5454bca7e0125513ab587a75a0aaeff34afa7abff2da7537f5ebed97e656139",
+    "successor/authority.py": "b0679e3996ca8ed0ad73617b12c98f6d57b28f4e87c73ae6fdf432bcd999dbc2",
+    "successor/design.py": "789a2fb8f347123cbe2539ff5e3b23768992e9303fb7db333fc7e4b36ad107c0",
+    "successor/diagnostics.py": "91939706e5f77e1518b104a1b1941a7d081f93a7c12d9f9cb45b2d1b3417ace9",
+    "successor/gates.py": "985d58da242cf75deb2109376dd9dcfc50601dd83d5cc3641c452fbc6fa58dac",
+    "successor/legacy.py": "83ad65094d85b96c77667befe7d8cc9f0f95d353e1f750fdded038c8c564061f",
+    "successor/qualification_guard.py": "67f7a1178d5daf5dff3402b7fdda45ec5dd337a283e8d7e5ba44baeac60faad5",
+    "successor/rollout.py": "e3aa660ddca8aff457e9324705a6b7d58665049e056f8d40992bd6a4f1d3365d",
+    "successor/run_predictive_authority01.py": "ff59ae0068e39ce703b3f28646159a3790ae11ac22ce4dcf8d930bc2e1830795",
+    "successor/tests/test_authority.py": "d39ccd346f60335f8c04e49a486baf4b5d516d9d38717158de9dd326b8ec9f16",
+    "successor/tests/test_design_and_runner.py": "c3bbd0f01d09319c9e9e477a5f80658ebb15bfd0e58b080c88917ec475712500",
+    "successor/tests/test_frozen_integration.py": "f110acb40d7253d5e8adbc41c6ccfb234fbbf6654830732f7a95cdd76dc97a34",
+    "successor/tests/test_gate_contract.py": "e2ce3191a0c4548ba10a5c636f3aa5497334b40418c7576ace6df9e90e0037c3",
+    "successor/tests/test_gates.py": "ecc29cf9b9b764552ed6ff100708daf299da0f2aaf4e49c22e85532fba463624",
+    "successor/tests/test_schema_contract.py": "8d0d2e61095ff22b735c9c33d1a9bda17f9a7ae1915d20d77bff4007b960187d",
+    "successor/tests/test_trace_and_rollout.py": "7f76feba8823d08f200524fba5f353d959052b65f5cf4643f4a014bfd4fb30ee",
+    "successor/trace.py": "ac5ce71e11089ecffbd87a7a0db0cb97f79efad9b1e3ecb8c9dfef0aa9ffd4fa"
+  },
+  "status": "ENGINEERING_PROFILE_ONLY",
+  "successor_candidates": [
+    "HORIZON_CONDITIONED"
+  ]
+}

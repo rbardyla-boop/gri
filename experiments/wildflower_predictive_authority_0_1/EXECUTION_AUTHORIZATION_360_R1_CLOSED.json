@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETED_OPERATIONAL_FAILURE",
+  "authorized_seeds": [360],
+  "run_id": "360-R1",
+  "scope": "one execution only; no other scientific seeds",
+  "authorized_by": "user"
+}

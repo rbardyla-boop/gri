@@ -1,0 +1,98 @@
+{
+  "schema": "wildflower-engineering-gate-direction-audit-receipt-v0.1",
+  "status": "ENGINEERING_REPAIR_PASS",
+  "scope": {
+    "experiment": "WILDFLOWER Predictive Authority 0.1",
+    "repair_only": true,
+    "scientific_execution": false,
+    "candidate_changed": false,
+    "thresholds_changed": false,
+    "definitions_changed": false,
+    "future_seed_authorization_implied": false
+  },
+  "original_run": {
+    "run_id": "361-R1",
+    "operational_execution": "PASS",
+    "artifact_structure": "PASS",
+    "scientific_evaluator": "INVALID",
+    "scientific_candidate_verdict": "NONE",
+    "scientific_interpretation": "INCONCLUSIVE",
+    "permanently_closed": true,
+    "rerun_permitted": false,
+    "artifact": "artifacts/development_seed361.json",
+    "artifact_sha256": "99f4663212dade718e39b10c2d1df66d49b7bd7f50653d69702fbb3b6b6e2113"
+  },
+  "defect": {
+    "reported_gate": "h8_useful_learner_capture",
+    "required_comparator": ">=",
+    "required_threshold": 0.5,
+    "implemented_comparator": "<=",
+    "observed_capture_fraction": 0.09203745816983593,
+    "incorrect_observed_result": true,
+    "scientific_inference_from_361": false
+  },
+  "repair": {
+    "machine_readable_contract": "design.GATE_CONTRACT",
+    "shared_comparator": "design.gate_passes",
+    "useful_capture_comparator": ">=",
+    "denominator_policy": "zero or missing population fails closed",
+    "negative_captured_gain_policy": "retain numerator; gate evaluates the negative value",
+    "all_executable_comparators_routed_through_contract": true
+  },
+  "regression_coverage": [
+    "equality at 0.50 passes",
+    "capture below 0.50 fails",
+    "recorded 0.09203745816983593 fails",
+    "negative captured gain is retained and fails",
+    "zero available gain fails closed",
+    "every contract comparator has equality and direction tests",
+    "machine-readable contract matches the frozen gate table"
+  ],
+  "checks": {
+    "compileall": "PASS",
+    "ruff": "PASS",
+    "pytest_command": "PYTHONHASHSEED=0 python -m pytest -q -W error experiments/wildflower_predictive_authority_0_1/tests",
+    "pytest": "38 passed",
+    "engineering_profile": "PASS",
+    "engineering_profile_path": "artifacts/engineering_profile.json",
+    "engineering_profile_sha256": "022346889ce5c639eb3a1794b219c32388d358603fd6fcad1d192ab08481f4f9",
+    "source_hash_validation": "PASS",
+    "profile_scientific_seed_executed": false,
+    "profile_selector_namespace_used": false
+  },
+  "frozen_artifacts": {
+    "dual_authority_0_3_seed340": {
+      "path": "../wildflower_dual_authority_0_3/artifacts/development_seed340.json",
+      "sha256": "b62e89e515d741235d3d6bb4433f654af0fed6ef98aa56810c48e7253c1c84be",
+      "verification": "PASS"
+    },
+    "predictive_authority_0_1_seed361": {
+      "path": "artifacts/development_seed361.json",
+      "sha256": "99f4663212dade718e39b10c2d1df66d49b7bd7f50653d69702fbb3b6b6e2113",
+      "verification": "PASS; preserved unchanged"
+    }
+  },
+  "source_hashes": {
+    "historical/probe_innovation_model.py": "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1",
+    "historical/qualify_authority190.py": "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e",
+    "historical/wildflower0/nursery1.py": "a402e99c6374fffa23af4a2ef1e32a67141c41cf7ece020c12fe2974e65753d6",
+    "successor/__init__.py": "e5454bca7e0125513ab587a75a0aaeff34afa7abff2da7537f5ebed97e656139",
+    "successor/authority.py": "b0679e3996ca8ed0ad73617b12c98f6d57b28f4e87c73ae6fdf432bcd999dbc2",
+    "successor/design.py": "789a2fb8f347123cbe2539ff5e3b23768992e9303fb7db333fc7e4b36ad107c0",
+    "successor/diagnostics.py": "91939706e5f77e1518b104a1b1941a7d081f93a7c12d9f9cb45b2d1b3417ace9",
+    "successor/gates.py": "985d58da242cf75deb2109376dd9dcfc50601dd83d5cc3641c452fbc6fa58dac",
+    "successor/legacy.py": "83ad65094d85b96c77667befe7d8cc9f0f95d353e1f750fdded038c8c564061f",
+    "successor/qualification_guard.py": "67f7a1178d5daf5dff3402b7fdda45ec5dd337a283e8d7e5ba44baeac60faad5",
+    "successor/rollout.py": "e3aa660ddca8aff457e9324705a6b7d58665049e056f8d40992bd6a4f1d3365d",
+    "successor/run_predictive_authority01.py": "ff59ae0068e39ce703b3f28646159a3790ae11ac22ce4dcf8d930bc2e1830795",
+    "successor/tests/test_authority.py": "d39ccd346f60335f8c04e49a486baf4b5d516d9d38717158de9dd326b8ec9f16",
+    "successor/tests/test_design_and_runner.py": "c3bbd0f01d09319c9e9e477a5f80658ebb15bfd0e58b080c88917ec475712500",
+    "successor/tests/test_frozen_integration.py": "f110acb40d7253d5e8adbc41c6ccfb234fbbf6654830732f7a95cdd76dc97a34",
+    "successor/tests/test_gate_contract.py": "e2ce3191a0c4548ba10a5c636f3aa5497334b40418c7576ace6df9e90e0037c3",
+    "successor/tests/test_gates.py": "ecc29cf9b9b764552ed6ff100708daf299da0f2aaf4e49c22e85532fba463624",
+    "successor/tests/test_schema_contract.py": "8d0d2e61095ff22b735c9c33d1a9bda17f9a7ae1915d20d77bff4007b960187d",
+    "successor/tests/test_trace_and_rollout.py": "7f76feba8823d08f200524fba5f353d959052b65f5cf4643f4a014bfd4fb30ee",
+    "successor/trace.py": "ac5ce71e11089ecffbd87a7a0db0cb97f79efad9b1e3ecb8c9dfef0aa9ffd4fa"
+  },
+  "stop_condition": "No scientific seed was run. 362-R1 and all other future seeds require separate explicit authorization."
+}

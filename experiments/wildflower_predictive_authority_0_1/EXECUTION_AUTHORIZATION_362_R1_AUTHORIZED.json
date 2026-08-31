@@ -1,0 +1,36 @@
+{
+  "status": "AUTHORIZED_AND_EXECUTED",
+  "authorized_seeds": [362],
+  "run_id": "362-R1",
+  "scope": "one execution only; seed 362 only",
+  "authorized_by": "user",
+  "source_revision": "77d25c6a60ad1556d20ab5fbd82897f7b0e50fee",
+  "revision_description": "repaired schema and gate-contract revision",
+  "engineering_profile_sha256": "022346889ce5c639eb3a1794b219c32388d358603fd6fcad1d192ab08481f4f9",
+  "frozen_340_r1_sha256": "b62e89e515d741235d3d6bb4433f654af0fed6ef98aa56810c48e7253c1c84be",
+  "prior_361_r1_artifact_sha256": "99f4663212dade718e39b10c2d1df66d49b7bd7f50653d69702fbb3b6b6e2113",
+  "authorization_consumed": true,
+  "execution": {
+    "command": "/usr/bin/time -v env PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m experiments.wildflower_predictive_authority_0_1.run_predictive_authority01 --seed 362",
+    "start_time": "2026-08-30T19:02:18-03:00",
+    "end_time": "2026-08-30T19:09:07-03:00",
+    "exit_status": 0,
+    "wall_seconds": 299.92,
+    "user_seconds": 298.48,
+    "system_seconds": 1.29,
+    "maximum_resident_set_kb": 1042688
+  },
+  "artifact": "experiments/wildflower_predictive_authority_0_1/artifacts/development_seed362.json",
+  "artifact_sha256": "41443ab8793ffed1f2caf04e1fa92187a08ac713db52b9d9cb3fa2a599b53854",
+  "semantic_receipt_sha256": "8615d70794fe06408180ee723b952534c2452516247cf1abc977dfbadfdd20b3",
+  "artifact_validation": {
+    "schema": "PASS",
+    "selectors": "PASS",
+    "required_metrics": "PASS",
+    "finite_values": "PASS",
+    "semantic_receipt_replay": "PASS",
+    "source_hashes": "PASS",
+    "scientific_gate_result": "FAIL"
+  },
+  "rerun_permitted": false
+}

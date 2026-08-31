@@ -1,0 +1,77 @@
+{
+  "schema": "wildflower-engineering-repair-receipt-v0.1",
+  "status": "ENGINEERING_REPAIR_PASS",
+  "scope": "schema-contract-only",
+  "original_failure": {
+    "run_id": "360-R1",
+    "classification": "OPERATIONAL_FAILURE",
+    "cause": "serialized field was learned_local_error_evaluator_only; classifier required learned_only_local_error_evaluator_only",
+    "scientific_artifact": null,
+    "scientific_verdict": null,
+    "repaired_or_repeated": false,
+    "record_preserved": true
+  },
+  "field_contract": {
+    "canonical": "learned_only_local_error_evaluator_only",
+    "retired_alias": "learned_local_error_evaluator_only",
+    "producer": "trace.rollout_step_to_dict",
+    "consumers": [
+      "gates._error",
+      "run_predictive_authority01._aggregate_origins"
+    ],
+    "validator": "trace.validate_rollout_step_payload",
+    "alias_policy": "reject-fail-closed"
+  },
+  "guard_state": {
+    "authorization_status": "COMPLETED_OPERATIONAL_FAILURE",
+    "qualification_is_locked": true,
+    "seed_360_authorized": false,
+    "scientific_seeds_run": []
+  },
+  "checks": {
+    "compileall": "PASS",
+    "ruff": "PASS",
+    "pytest_warnings_as_errors": {
+      "status": "PASS",
+      "passed": 21,
+      "failed": 0
+    },
+    "engineering_profile": "PASS",
+    "scientific_execution": "NOT RUN",
+    "frozen_340_checksum": "PASS"
+  },
+  "frozen_artifacts": {
+    "experiments/wildflower_dual_authority_0_3/artifacts/development_seed340.json": {
+      "sha256": "b62e89e515d741235d3d6bb4433f654af0fed6ef98aa56810c48e7253c1c84be"
+    }
+  },
+  "engineering_profile": {
+    "path": "experiments/wildflower_predictive_authority_0_1/artifacts/engineering_profile.json",
+    "sha256": "3ca2b2e1a4e5a0d19f32b7319df74dce45b8d029b1eab9aecaa84356ab0df928",
+    "scientific_seed_executed": false,
+    "selector_namespace_used": false,
+    "source_hashes": {
+      "historical/probe_innovation_model.py": "97925c78ac50cf54b96cca05c4794b5b78465cf44e63d53dc7ed45673afedab1",
+      "historical/qualify_authority190.py": "13a39e6579d9e17c061e9cbaaa3d3635c723c897695f8f87c61634f191e1590e",
+      "historical/wildflower0/nursery1.py": "a402e99c6374fffa23af4a2ef1e32a67141c41cf7ece020c12fe2974e65753d6",
+      "successor/__init__.py": "e5454bca7e0125513ab587a75a0aaeff34afa7abff2da7537f5ebed97e656139",
+      "successor/authority.py": "b0679e3996ca8ed0ad73617b12c98f6d57b28f4e87c73ae6fdf432bcd999dbc2",
+      "successor/design.py": "bf4822c70aeca518ccfeebfaf196e5af0c0b2988216ed2d674888785f8016d96",
+      "successor/diagnostics.py": "91939706e5f77e1518b104a1b1941a7d081f93a7c12d9f9cb45b2d1b3417ace9",
+      "successor/gates.py": "32a52b8eb362121ec8884b1c6b27cc664dc1ffa31afcd15871600e39f7ae1c58",
+      "successor/legacy.py": "83ad65094d85b96c77667befe7d8cc9f0f95d353e1f750fdded038c8c564061f",
+      "successor/qualification_guard.py": "67f7a1178d5daf5dff3402b7fdda45ec5dd337a283e8d7e5ba44baeac60faad5",
+      "successor/rollout.py": "e3aa660ddca8aff457e9324705a6b7d58665049e056f8d40992bd6a4f1d3365d",
+      "successor/run_predictive_authority01.py": "aeeb6106036f29f97e8793a61c8a48c07661cf15543a5a03bf8d1b1832251d38",
+      "successor/tests/test_authority.py": "d39ccd346f60335f8c04e49a486baf4b5d516d9d38717158de9dd326b8ec9f16",
+      "successor/tests/test_design_and_runner.py": "c3bbd0f01d09319c9e9e477a5f80658ebb15bfd0e58b080c88917ec475712500",
+      "successor/tests/test_frozen_integration.py": "f110acb40d7253d5e8adbc41c6ccfb234fbbf6654830732f7a95cdd76dc97a34",
+      "successor/tests/test_gates.py": "2624f7c195812897d1779a241c90a529800f4a74baeb8b95d5d897f8230d7e86",
+      "successor/tests/test_schema_contract.py": "8d0d2e61095ff22b735c9c33d1a9bda17f9a7ae1915d20d77bff4007b960187d",
+      "successor/tests/test_trace_and_rollout.py": "7f76feba8823d08f200524fba5f353d959052b65f5cf4643f4a014bfd4fb30ee",
+      "successor/trace.py": "ac5ce71e11089ecffbd87a7a0db0cb97f79efad9b1e3ecb8c9dfef0aa9ffd4fa"
+    }
+  },
+  "no_github_activity": true,
+  "frozen_340_unchanged": true
+}

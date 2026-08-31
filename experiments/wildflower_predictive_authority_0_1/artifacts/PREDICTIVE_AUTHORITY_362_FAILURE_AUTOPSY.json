@@ -1,0 +1,136 @@
+{
+  "schema": "wildflower-predictive-authority-failure-autopsy-v0.1",
+  "status": "ENGINEERING_TRACE_AUTOPSY_COMPLETE",
+  "scientific_execution_during_autopsy": false,
+  "new_candidate_selected": false,
+  "new_seed_authorized": false,
+  "inputs": [
+    {
+      "run": "311-R2",
+      "path": "experiments/wildflower_dual_authority_0_1/artifacts/development_seed311.json",
+      "sha256": "b51de9e7e7221c23226f95507fea4464446445fc9279d5e99398049c81e78c58",
+      "semantic_receipt_sha256": "971852b2ae87a5a2985a3d4c499ac9b05f3b1ea6941dc856ab070929dd136582",
+      "ordinary_per_step_trace": false
+    },
+    {
+      "run": "340-R1",
+      "path": "experiments/wildflower_dual_authority_0_3/artifacts/development_seed340.json",
+      "sha256": "b62e89e515d741235d3d6bb4433f654af0fed6ef98aa56810c48e7253c1c84be",
+      "semantic_receipt_sha256": "c919672e69f3f0ae7221e3cb69bd2fe2209ce2d9d7516f29feac3ee155e5e05d",
+      "ordinary_per_step_trace": "partial; no complete alternate policy rollouts"
+    },
+    {
+      "run": "362-R1",
+      "path": "experiments/wildflower_predictive_authority_0_1/artifacts/development_seed362.json",
+      "sha256": "41443ab8793ffed1f2caf04e1fa92187a08ac713db52b9d9cb3fa2a599b53854",
+      "semantic_receipt_sha256": "8615d70794fe06408180ee723b952534c2452516247cf1abc977dfbadfdd20b3",
+      "ordinary_per_step_trace": true
+    }
+  ],
+  "method": {
+    "recorded_traces_only": true,
+    "runner_invoked": false,
+    "target_rehydration": false,
+    "alternate_policy_scientific_rerun": false,
+    "ratio_aggregation": "mean episode ratio for horizon tables; pooled terminal rows for gain-fraction diagnostics",
+    "counterfactual_policy_type": "evaluator-only terminal-error blend diagnostics",
+    "disagreement_proxy": "reconstruct gated-learned displacement from recorded vectors only when clipping_fraction is zero",
+    "disagreement_proxy_coverage_per_horizon": {
+      "available_origins": 2313,
+      "total_origins": 2844,
+      "unavailable_origins": 531
+    }
+  },
+  "362_summary": {
+    "candidate": "HORIZON_CONDITIONED",
+    "candidate_verdict": "FAIL",
+    "h8_useful_origins": 2054,
+    "h8_total_origins": 2844,
+    "h8_available_gain_sum": 3767.437644302845,
+    "h8_captured_gain_sum": 398.40485272556543,
+    "h8_capture_fraction": 0.10574955456211386,
+    "h8_learned_only_mean_episode_ratio": 0.7014164006260591,
+    "h8_current_mean_episode_ratio": 0.9549153440804871,
+    "h32_current_mean_episode_ratio": 0.9852925828960458,
+    "event_h8_current_mean_episode_ratio": 0.9549068493018446,
+    "classification_counts": {
+      "MODEL_GOOD_POLICY_GOOD": 2040,
+      "MODEL_GOOD_POLICY_HARMFUL": 14,
+      "MODEL_BAD_POLICY_PROTECTED": 696,
+      "MODEL_BAD_POLICY_HARMFUL": 94
+    }
+  },
+  "362_counterfactual_mean_episode_ratios": {
+    "H1": {
+      "NULL_ONLY": 1.0,
+      "LEARNED_ONLY": 1.0496418523999655,
+      "CURRENT_POLICY": 0.9662723524757045,
+      "DELAYED_AUTHORITY": 1.0,
+      "CAPPED_AUTHORITY": 0.9796304327678588,
+      "DISAGREEMENT_GATED_PARTIAL": 0.9736622950224069,
+      "ORACLE_UPPER_BOUND": 0.9232924260612879
+    },
+    "H8": {
+      "NULL_ONLY": 1.0,
+      "LEARNED_ONLY": 0.7014164006260591,
+      "CURRENT_POLICY": 0.9549153440804871,
+      "DELAYED_AUTHORITY": 0.7172334878629258,
+      "CAPPED_AUTHORITY": 0.8019619831646269,
+      "DISAGREEMENT_GATED_PARTIAL": 0.723465113472905,
+      "ORACLE_UPPER_BOUND": 0.6051199712561938
+    },
+    "H32": {
+      "NULL_ONLY": 1.0,
+      "LEARNED_ONLY": 0.61363402826063,
+      "CURRENT_POLICY": 0.9852925828960458,
+      "DELAYED_AUTHORITY": 0.7224485134513169,
+      "CAPPED_AUTHORITY": 0.7968490532949631,
+      "DISAGREEMENT_GATED_PARTIAL": 0.7154083451945282,
+      "ORACLE_UPPER_BOUND": 0.577452577649886
+    },
+    "EVENT_H8": {
+      "NULL_ONLY": 1.0,
+      "LEARNED_ONLY": 0.6935504877015682,
+      "CURRENT_POLICY": 0.9549068493018446,
+      "DELAYED_AUTHORITY": 0.7171750513446263,
+      "CAPPED_AUTHORITY": 0.8019036758989545,
+      "DISAGREEMENT_GATED_PARTIAL": 0.723292480183228,
+      "ORACLE_UPPER_BOUND": 0.6046571014911573
+    }
+  },
+  "362_h8_useful_capture_fraction": {
+    "NULL_ONLY": 0.0,
+    "LEARNED_ONLY": 1.0,
+    "CURRENT_POLICY": 0.10574955456211386,
+    "RECORDED_AUTHORITY_TERMINAL_BLEND": 0.43693853223747836,
+    "DELAYED_AUTHORITY_BLEND": 0.7960257464701737,
+    "CAPPED_AUTHORITY_BLEND": 0.5583133614231757,
+    "DISAGREEMENT_GATED_PARTIAL_PROXY": 0.823342070135446,
+    "ORACLE_UPPER_BOUND": 1.0
+  },
+  "hypotheses": {
+    "predictor_quality": "SUPPORTED_NOT_SUFFICIENT_ALONE",
+    "authority_allocation": "SUPPORTED",
+    "recursive_h8_h32_instability": "SUPPORTED",
+    "event_related_effect": "NOT_SUPPORTED",
+    "authority_overconfidence": "SUPPORTED_IN_311_340_CONDITIONAL_IN_362",
+    "excessive_conservatism": "SUPPORTED",
+    "ordinary_seed_variance": "CONTRIBUTOR_INSUFFICIENT_ALONE"
+  },
+  "decision": {
+    "recommended_repair": "D_DISAGREEMENT_UNCERTAINTY_REPAIR",
+    "required_companion": "explicit horizon-aware recursive rollout instrumentation",
+    "scalar_calibration_alone": false,
+    "predictor_abandonment": false,
+    "epistemic_subsystem_change": false
+  },
+  "integrity": {
+    "seed311_artifact_modified": false,
+    "seed340_artifact_modified": false,
+    "seed362_artifact_modified": false,
+    "new_scientific_artifact_created": false,
+    "github_activity": false,
+    "qualification_authorized": false
+  },
+  "stop": "Autopsy complete. No scientific seed authorization is implied."
+}
